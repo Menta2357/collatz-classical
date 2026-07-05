@@ -20,8 +20,8 @@
       }
     },
     "B_lambda_alpha_minus_2": {
-      "certification": "SPEC placeholder only: intended interval for lambda^(alpha-2), alpha=log_2(3); not certified here",
-      "certified": false,
+      "certification": "certified by scripts/kl2003_k2_lambda_power_interval_certification_v1.py; stronger interval 119/135 <= lambda^(alpha-2) <= 8/9 implies this target interval",
+      "certified": true,
       "hi": {
         "decimal": "0.890000000000000000",
         "den": 100,
@@ -34,8 +34,8 @@
       }
     },
     "D_lambda_alpha_minus_1": {
-      "certification": "SPEC placeholder only: intended interval for lambda^(alpha-1), alpha=log_2(3); not certified here",
-      "certified": false,
+      "certification": "certified by scripts/kl2003_k2_lambda_power_interval_certification_v1.py; D = lambda * B with lambda=27/20 and 119/135 <= B <= 8/9 gives [119/100, 6/5]",
+      "certified": true,
       "hi": {
         "decimal": "1.200000000000000000",
         "den": 5,
@@ -48,7 +48,7 @@
       }
     }
   },
-  "formal_certificate_status": "BLOCKED_ON_RATIONAL_INTERVALS_FOR_LAMBDA_BETA",
+  "formal_certificate_status": "PASS_FORMAL_INTERVAL_SKELETON",
   "guardrails": [
     "NO_LEAN_THEOREM",
     "NO_M0_PROOF",
@@ -66,15 +66,16 @@
     }
   },
   "rational_interval_policy": {
+    "certified_transcendental_interval_keys": [
+      "B_lambda_alpha_minus_2",
+      "D_lambda_alpha_minus_1"
+    ],
     "exact_interval_keys": [
       "A_lambda_minus_2"
     ],
-    "gap": "the script does not certify lambda^(alpha-2) or lambda^(alpha-1); a future verifier must replace placeholders by audited rational intervals",
+    "gap": "closed for the k=2 skeleton by outputs/KL2003_K2_LAMBDA_POWER_INTERVAL_CERTIFICATION_v1/interval_certificate.json; future Lean work must still formalize or import the listed real-power lemmas",
     "row_check_rule": "for nonnegative variables, verify lhs using exact/upper coefficients and rhs using lower coefficient endpoints, with positive rational slack",
-    "transcendental_placeholder_keys": [
-      "B_lambda_alpha_minus_2",
-      "D_lambda_alpha_minus_1"
-    ]
+    "transcendental_placeholder_keys": []
   },
   "rational_skeleton_status": "PASS_RATIONAL_SKELETON",
   "rows": [
@@ -243,9 +244,6 @@
     "float_evidence_detected": false,
     "missing_coefficient_intervals": [],
     "nonpositive_slacks": [],
-    "uncertified_transcendental_intervals": [
-      "B_lambda_alpha_minus_2",
-      "D_lambda_alpha_minus_1"
-    ]
+    "uncertified_transcendental_intervals": []
   }
 }

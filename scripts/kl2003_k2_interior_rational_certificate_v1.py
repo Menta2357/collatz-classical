@@ -95,19 +95,19 @@ def build_certificate() -> dict[str, Any]:
             lo=Fraction(22, 25),
             hi=Fraction(89, 100),
             certification=(
-                "SPEC placeholder only: intended interval for "
-                "lambda^(alpha-2), alpha=log_2(3); not certified here"
+                "certified by scripts/kl2003_k2_lambda_power_interval_certification_v1.py; "
+                "stronger interval 119/135 <= lambda^(alpha-2) <= 8/9 implies this target interval"
             ),
-            certified=False,
+            certified=True,
         ),
         "D_lambda_alpha_minus_1": Interval(
             lo=Fraction(119, 100),
             hi=Fraction(6, 5),
             certification=(
-                "SPEC placeholder only: intended interval for "
-                "lambda^(alpha-1), alpha=log_2(3); not certified here"
+                "certified by scripts/kl2003_k2_lambda_power_interval_certification_v1.py; "
+                "D = lambda * B with lambda=27/20 and 119/135 <= B <= 8/9 gives [119/100, 6/5]"
             ),
-            certified=False,
+            certified=True,
         ),
     }
 
@@ -185,7 +185,7 @@ def build_certificate() -> dict[str, Any]:
     formal_certificate_status = (
         "BLOCKED_ON_RATIONAL_INTERVALS_FOR_LAMBDA_BETA"
         if uncertified_coefficients
-        else rational_skeleton_status
+        else "PASS_FORMAL_INTERVAL_SKELETON"
     )
 
     certificate = {
@@ -213,13 +213,15 @@ def build_certificate() -> dict[str, Any]:
                 "and rhs using lower coefficient endpoints, with positive rational slack"
             ),
             "exact_interval_keys": ["A_lambda_minus_2"],
-            "transcendental_placeholder_keys": [
+            "certified_transcendental_interval_keys": [
                 "B_lambda_alpha_minus_2",
                 "D_lambda_alpha_minus_1",
             ],
+            "transcendental_placeholder_keys": [],
             "gap": (
-                "the script does not certify lambda^(alpha-2) or lambda^(alpha-1); "
-                "a future verifier must replace placeholders by audited rational intervals"
+                "closed for the k=2 skeleton by "
+                "outputs/KL2003_K2_LAMBDA_POWER_INTERVAL_CERTIFICATION_v1/interval_certificate.json; "
+                "future Lean work must still formalize or import the listed real-power lemmas"
             ),
         },
         "verifier_report": internal_report,
@@ -251,7 +253,10 @@ def main() -> None:
     print(f"rational_skeleton_status={certificate['rational_skeleton_status']}")
     print(f"formal_certificate_status={certificate['formal_certificate_status']}")
     print("positive rational slacks verified for the LP skeleton")
-    print("transcendental interval placeholders remain uncertified")
+    if certificate["verifier_report"]["uncertified_transcendental_intervals"]:
+        print("transcendental interval placeholders remain uncertified")
+    else:
+        print("lambda power intervals certified for the formal interval skeleton")
 
 
 if __name__ == "__main__":

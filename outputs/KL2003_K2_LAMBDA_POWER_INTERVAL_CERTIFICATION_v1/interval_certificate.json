@@ -1,0 +1,246 @@
+{
+  "alpha_bounds": {
+    "lower": {
+      "integer_witness": "2^19 < 3^12",
+      "value": {
+        "decimal": "1.583333333333333333333333",
+        "den": 12,
+        "num": 19
+      }
+    },
+    "upper": {
+      "integer_witness": "3^5 < 2^8",
+      "value": {
+        "decimal": "1.600000000000000000000000",
+        "den": 5,
+        "num": 8
+      }
+    }
+  },
+  "checks": [
+    {
+      "explanation": "2^19 < 3^12 implies 19/12 < log_2(3)",
+      "lhs": "524288",
+      "name": "alpha_lower_19_over_12",
+      "ok": true,
+      "op": "<",
+      "rhs": "531441"
+    },
+    {
+      "explanation": "3^5 < 2^8 implies log_2(3) < 8/5",
+      "lhs": "243",
+      "name": "alpha_upper_8_over_5",
+      "ok": true,
+      "op": "<",
+      "rhs": "256"
+    },
+    {
+      "explanation": "(119/135)^12 * (27/20)^5 <= 1 implies (27/20)^(-5/12) >= 119/135",
+      "lhs": {
+        "decimal": "0.986795492955060791053277",
+        "den": 8172150939843750000000000,
+        "num": 8064241715186276625588961
+      },
+      "margin": {
+        "decimal": "0.013204507044939208946722",
+        "den": 8172150939843750000000000,
+        "num": 107909224657473374411039
+      },
+      "name": "B_lower_reduced_rational_power",
+      "ok": true,
+      "op": "<=",
+      "rhs": {
+        "decimal": "1.000000000000000000000000",
+        "den": 1,
+        "num": 1
+      }
+    },
+    {
+      "explanation": "(8/9)^5 * (27/20)^2 >= 1 implies (27/20)^(-2/5) <= 8/9",
+      "lhs": {
+        "decimal": "1.011358024691358024691358",
+        "den": 2025,
+        "num": 2048
+      },
+      "margin": {
+        "decimal": "0.011358024691358024691358",
+        "den": 2025,
+        "num": 23
+      },
+      "name": "B_upper_reduced_rational_power",
+      "ok": true,
+      "op": ">=",
+      "rhs": {
+        "decimal": "1.000000000000000000000000",
+        "den": 1,
+        "num": 1
+      }
+    },
+    {
+      "explanation": "stronger B lower endpoint implies the requested B lower endpoint",
+      "lhs": {
+        "decimal": "0.881481481481481481481481",
+        "den": 135,
+        "num": 119
+      },
+      "margin": {
+        "decimal": "0.001481481481481481481481",
+        "den": 675,
+        "num": 1
+      },
+      "name": "B_strong_implies_target_lower",
+      "ok": true,
+      "op": ">=",
+      "rhs": {
+        "decimal": "0.880000000000000000000000",
+        "den": 25,
+        "num": 22
+      }
+    },
+    {
+      "explanation": "stronger B upper endpoint implies the requested B upper endpoint",
+      "lhs": {
+        "decimal": "0.888888888888888888888888",
+        "den": 9,
+        "num": 8
+      },
+      "margin": {
+        "decimal": "0.001111111111111111111111",
+        "den": 900,
+        "num": 1
+      },
+      "name": "B_strong_implies_target_upper",
+      "ok": true,
+      "op": "<=",
+      "rhs": {
+        "decimal": "0.890000000000000000000000",
+        "den": 100,
+        "num": 89
+      }
+    },
+    {
+      "explanation": "D = lambda*B and B >= 119/135 give D >= 119/100",
+      "lhs": {
+        "decimal": "1.190000000000000000000000",
+        "den": 100,
+        "num": 119
+      },
+      "margin": {
+        "decimal": "0.000000000000000000000000",
+        "den": 1,
+        "num": 0
+      },
+      "name": "D_derived_target_lower",
+      "ok": true,
+      "op": ">=",
+      "rhs": {
+        "decimal": "1.190000000000000000000000",
+        "den": 100,
+        "num": 119
+      }
+    },
+    {
+      "explanation": "D = lambda*B and B <= 8/9 give D <= 6/5",
+      "lhs": {
+        "decimal": "1.200000000000000000000000",
+        "den": 5,
+        "num": 6
+      },
+      "margin": {
+        "decimal": "0.000000000000000000000000",
+        "den": 1,
+        "num": 0
+      },
+      "name": "D_derived_target_upper",
+      "ok": true,
+      "op": "<=",
+      "rhs": {
+        "decimal": "1.200000000000000000000000",
+        "den": 5,
+        "num": 6
+      }
+    }
+  ],
+  "float_evidence_detected": false,
+  "formal_certificate_update": {
+    "recommended_status": "PASS_FORMAL_INTERVAL_SKELETON",
+    "update_target": "outputs/KL2003_K2_INTERIOR_RATIONAL_CERTIFICATE_v1/certificate.json"
+  },
+  "guardrails": [
+    "NO_LEAN_THEOREM",
+    "NO_M0_PROOF",
+    "NO_TARGET_REGISTRATION",
+    "NO_FLOAT_ONLY_CERTIFICATE",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "lambda": {
+    "decimal": "1.350000000000000000000000",
+    "den": 20,
+    "num": 27
+  },
+  "lemma_ledger": [
+    "If 2^p < 3^q, then p/q < log_2(3).",
+    "If 3^q < 2^p, then log_2(3) < p/q.",
+    "For lambda > 1, beta1 <= beta2 implies lambda^beta1 <= lambda^beta2.",
+    "For positive rationals and positive integer n, x <= y iff x^n <= y^n.",
+    "lambda^(alpha-1) = lambda * lambda^(alpha-2)."
+  ],
+  "power_intervals": {
+    "B_lambda_alpha_minus_2": {
+      "certified_stronger_interval": {
+        "hi": {
+          "decimal": "0.888888888888888888888888",
+          "den": 9,
+          "num": 8
+        },
+        "lo": {
+          "decimal": "0.881481481481481481481481",
+          "den": 135,
+          "num": 119
+        }
+      },
+      "status": "CERTIFIED_BY_RATIONAL_REDUCTION",
+      "target_interval": {
+        "hi": {
+          "decimal": "0.890000000000000000000000",
+          "den": 100,
+          "num": 89
+        },
+        "lo": {
+          "decimal": "0.880000000000000000000000",
+          "den": 25,
+          "num": 22
+        }
+      }
+    },
+    "D_lambda_alpha_minus_1": {
+      "derived_interval_from_lambda_times_B": {
+        "hi": {
+          "decimal": "1.200000000000000000000000",
+          "den": 5,
+          "num": 6
+        },
+        "lo": {
+          "decimal": "1.190000000000000000000000",
+          "den": 100,
+          "num": 119
+        }
+      },
+      "status": "CERTIFIED_BY_D_EQUALS_LAMBDA_TIMES_B",
+      "target_interval": {
+        "hi": {
+          "decimal": "1.200000000000000000000000",
+          "den": 5,
+          "num": 6
+        },
+        "lo": {
+          "decimal": "1.190000000000000000000000",
+          "den": 100,
+          "num": 119
+        }
+      }
+    }
+  },
+  "schema": "KL2003_K2_LAMBDA_POWER_INTERVAL_CERTIFICATION_v1",
+  "verifier_status": "PASS_RATIONAL_INTERVAL_VERIFIER"
+}
