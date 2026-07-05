@@ -3,18 +3,21 @@
 Fecha: 2026-07-06.
 
 Estado: borrador Lean privado data-only creado. No se registra CC Challenge y
-no se declara formalizacion publica.
+no se declara formalizacion publica. Scaffolding Lake minimo creado y build
+dirigido ejecutado.
 
 ## Clasificacion
 
 ```text
 PRIVATE_WORK_MODE_SELECTED
 DATA_ONLY_LEAN_PRIVATE_DRAFT_CREATED
+LEAN_PROJECT_SCAFFOLDING_CREATED
+DATA_ONLY_LEAN_BUILD_PASS
+DATA_ONLY_LEAN_AXIOM_AUDIT_PASS
 NO_CC_CHALLENGE_REGISTRATION
 NO_PUBLIC_FORMALISATION_CLAIM
 NO_M0_PROOF
 NO_GLOBAL_COLLATZ_CLAIM
-LEAN_PROJECT_SCAFFOLDING_REQUIRED
 ```
 
 ## Base
@@ -40,7 +43,7 @@ Modulo data-only:
 
 ```text
 CollatzClassical/KL2003/KL2003K2CertificateData.lean
-sha256 = a0134315230fb82593faf8081ddb360367386d5c08b1b78ce37c2c0a7aae022b
+sha256 = ed4f95a289a7a7aebe8de0b312e5299d5367c6afb300924a1a7c55c614056621
 ```
 
 Audit:
@@ -49,6 +52,24 @@ Audit:
 CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean
 sha256 = 6527d1ea403481e2391613c449cd19bf04142ce2292da48cd7e11e40f441165c
 ```
+
+Scaffolding Lean/Lake:
+
+```text
+lean-toolchain
+sha256 = d24fed434d3b13adfaab57724a0a7f270ea8bf1c818b5ae5cf25cbce24dd685c
+
+lakefile.lean
+sha256 = e31ac41ac108fbd7e30db1bc982a065949d359146e110ee04212378645e54fca
+
+lake-manifest.json
+sha256 = 230bd08edad607d89724784995cfb8750cebce677ea4563098991e6a1504849b
+```
+
+Nota tecnica:
+- el diseno inicial proponia `Mathlib.Data.Rat.Basic`;
+- en Mathlib `v4.21.0`, el import disponible usado para el build es
+  `Mathlib.Data.Rat.Defs`.
 
 ## Contenido del modulo data-only
 
@@ -148,38 +169,61 @@ para los facts enteros/racionales y las positividades de slack.
 
 ## Build
 
-Comprobacion de scaffolding:
+Scaffolding creado:
+
+```text
+lean-toolchain = leanprover/lean4:v4.21.0
+lakefile.lean imports Mathlib v4.21.0
+lake-manifest.json creado por lake update
+```
+
+Primera ejecucion:
+
+```text
+lake update
+```
+
+Resultado:
+- primer intento fallo por red/sandbox al clonar Mathlib;
+- segundo intento con red permitida fallo en post-hook por locale de `tar`;
+- tercer intento con `LC_ALL=C` completo correctamente y descargo cache de Mathlib.
+
+Build dirigido:
 
 ```bash
-find . -maxdepth 2 -type f \( -name 'lakefile.*' -o -name 'lean-toolchain' -o -name 'lake-manifest.json' \) -print
+env LC_ALL=C lake build CollatzClassical.KL2003.KL2003K2CertificateData
 ```
 
 Resultado:
 
 ```text
-sin archivos Lake/Lean de proyecto
+✔ [703/703] Built CollatzClassical.KL2003.KL2003K2CertificateData
+Build completed successfully.
 ```
 
-Por tanto no se ejecuto `lake build` ni `lake env lean`:
-
-```text
-LEAN_PROJECT_SCAFFOLDING_REQUIRED
-```
-
-Build/audit pendiente cuando existan:
-
-```text
-lakefile.lean o lakefile.toml
-lean-toolchain
-dependencia Mathlib
-modulo raiz que exponga CollatzClassical
-```
-
-Comandos futuros esperados:
+Audit:
 
 ```bash
-lake build CollatzClassical.KL2003.KL2003K2CertificateData
-lake env lean CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean
+env LC_ALL=C lake env lean CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean
+```
+
+Resultado:
+
+```text
+PASS
+```
+
+Todos los facts listados en el audit dependen de:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+No aparecen en el audit:
+
+```text
+Lean.ofReduceBool
+Lean.trustCompiler
 ```
 
 ## Lo que no se hizo
@@ -198,9 +242,11 @@ No se hizo claim global sobre Collatz.
 ```text
 PRIVATE_WORK_MODE_SELECTED = yes
 DATA_ONLY_LEAN_PRIVATE_DRAFT_CREATED = yes
+LEAN_PROJECT_SCAFFOLDING_CREATED = yes
+DATA_ONLY_LEAN_BUILD_PASS = yes
+DATA_ONLY_LEAN_AXIOM_AUDIT_PASS = yes
 NO_CC_CHALLENGE_REGISTRATION = yes
 NO_PUBLIC_FORMALISATION_CLAIM = yes
 NO_M0_PROOF = yes
 NO_GLOBAL_COLLATZ_CLAIM = yes
-LEAN_PROJECT_SCAFFOLDING_REQUIRED = yes
 ```
