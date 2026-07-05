@@ -94,6 +94,14 @@ Razon:
 - Tiene 2 reviews ya enlazadas en el catalogo, lo que puede ayudar al auditor.
 - El repo publico existe y se presenta como formalizacion Lean 4 de resultados de Eliahou. No se ejecuto build.
 
+Criterio dominante declarado:
+- Domino el criterio de aprendizaje/control de proceso: `Eliahou1993` es una
+  formalizacion Lean 4 ya lista para auditar, con alcance matematico acotado,
+  una sola formalizacion, 0 audit reports y 2 reviews existentes que permiten
+  calibrar rapidamente el flujo real del CC Challenge. No se eligio por impacto
+  maximo, sino por ser la mejor primera auditoria para aprender el proceso sin
+  pisar Terras ni los targets propios.
+
 Nota de sincronizacion:
 - Esta seleccion no es GO.
 - No se debe anunciar ni agregar audit link hasta que este hilo y el Hilo B sean revisados en el hilo de coordinacion.
