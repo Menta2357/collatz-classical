@@ -6,6 +6,12 @@ Estado: script/generator/verifier racional para el LP pequeno `k=2`
 `L_2^NT` de KL2003/M1-surrogate. No contiene prueba Lean, no abre M0 y no
 registra target.
 
+Actualizacion 2026-07-05: el bloqueo de intervalos para `lambda^beta` fue
+cerrado por `docs/KL2003_K2_LAMBDA_POWER_INTERVAL_CERTIFICATION_v1.md`. El
+certificado regenerado ahora marca
+`formal_certificate_status=PASS_FORMAL_INTERVAL_SKELETON`; esta nota conserva
+el historial del primer skeleton racional.
+
 ## Clasificacion
 
 ```text
