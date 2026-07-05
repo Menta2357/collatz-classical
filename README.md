@@ -1,0 +1,41 @@
+# collatz-classical
+
+Formalización en Lean 4 de resultados **clásicos y publicados** del problema 3x+1,
+y auditoría adversarial de formalizaciones de terceros (CC Challenge).
+
+Este proyecto sucede a un programa previo de certificación finita de ventanas
+dyádicas (drift/colas/momentos, [20M, 640M], axiom-clean). Aquel programa
+localizó con precisión un muro analítico (cota de decaimiento uniforme de la
+distribución de Syracuse) y se cerró honestamente en su residuo finito.
+Este repositorio redirige la infraestructura y el oficio acumulados hacia
+teoremas que **sí** son demostrables con matemática existente.
+
+## Carriles
+
+| # | Carril | Documento | Estado |
+|---|--------|-----------|--------|
+| 1 | Entrada como auditores al CC Challenge | `docs/CC_CHALLENGE_AUDIT_ENTRY_PLAN_v1.md` | ACTIVO |
+| 2 | Feasibility audit: Krasikov–Lagarias 2003 (x^0.84) | `docs/KL2003_FEASIBILITY_AUDIT_v1.md` | ACTIVO |
+| 3 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
+
+## Principios (heredados del programa anterior)
+
+1. **Build PASS ≠ resultado.** La unidad de cierre es el axiom audit más el
+   análisis de carga de hipótesis.
+2. **Verificador ≠ generador.** Un `∀ k` cuyo cuerpo se instancia por
+   enumeración no es un teorema universal.
+3. **Sin selección a posteriori.** Ninguna constante se fija después de ver
+   los datos que debe acotar.
+4. **Etiquetas calibradas.** CLOSED / CONDITIONAL / OPEN / NOT_CLAIMED,
+   sin inflación.
+
+El checklist operativo completo está en
+`audits/ADVERSARIAL_AUDIT_CHECKLIST_v1.md`.
+
+## Qué NO afirma este repositorio
+
+- No afirma progreso hacia la conjetura de Collatz completa.
+- No afirma supermartingalas globales ni productores all-k.
+- Los objetivos son formalizaciones de teoremas publicados
+  (Krasikov 1989, Applegate–Lagarias 1995, Krasikov–Lagarias 2003)
+  y auditorías con crédito explícito a los autores originales.
