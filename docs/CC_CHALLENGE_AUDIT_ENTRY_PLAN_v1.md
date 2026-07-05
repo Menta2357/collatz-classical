@@ -20,10 +20,20 @@ Estado verificado del sitio (julio 2026):
   NO asumir el proceso: leerlo. Este plan se actualiza con lo que diga.
 - Listar las 4 formalizaciones "ready to be audited": paper, autor de la
   formalización, toolchain (Lean/Isabelle/Coq), tamaño aproximado.
+- Verificar el estado de nuestros targets propios en el catálogo:
+  Krasikov1989, ApplegateLagarias1995a/b/c, KrasikovLagarias2003
+  (¿siguen en "Add formalisation"? ¿alguien los tomó?).
+- Localizar el mecanismo de registro: cómo se declara "being formalised",
+  cómo se anuncia intención y cómo se coordina con los maintainers.
+  NO registrar todavía (regla de sincronización); solo entender el proceso.
 - Criterio de selección de la primera auditoría:
   1. preferir Lean 4 (nuestro toolchain);
   2. preferir el paper cuyo enunciado matemático dominemos sin estudio nuevo;
   3. preferir tamaño mediano (ni trivial ni monstruo) para calibrar coste.
+- El reporte DEBE declarar qué criterio dominó la elección (Lean 4, tamaño,
+  facilidad matemática, valor de aprendizaje o impacto) y por qué. Elegir
+  "la más fácil" y "la que más enseña" son decisiones distintas; cuál se
+  tomó es parte del entregable (checklist §4 aplicado a nosotros).
 
 ## Fase 1 — Primera auditoría (1–3 sesiones)
 

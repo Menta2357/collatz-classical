@@ -4,11 +4,11 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          pre-Lean (dos hilos de reconocimiento abiertos)
+FASE ACTUAL:          pre-Lean (hilos de reconocimiento por abrir)
 
-HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   EN CURSO
-HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   EN CURSO
-COORDINACION:          esperando ambos reportes
+HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   PENDIENTE_DE_APERTURA
+HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   PENDIENTE_DE_APERTURA
+COORDINACION:          esperando apertura de hilos y ambos reportes
 CLAUDE:                revisor critico externo (no constructor)
 
 REGLA DE SINCRONIZACION:
