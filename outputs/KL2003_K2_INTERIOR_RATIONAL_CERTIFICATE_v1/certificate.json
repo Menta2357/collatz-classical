@@ -1,0 +1,251 @@
+{
+  "base_segment_placeholder": {
+    "intended_content": "future explicit initial segment lower bound, e.g. phi_k^m(y) >= 1 on the required base segment",
+    "name": "BaseSegmentLowerBound_phi_I2ELSystem_Y0",
+    "status": "SPEC_PLACEHOLDER_PRESENT_NOT_PROVED"
+  },
+  "coefficient_intervals": {
+    "A_lambda_minus_2": {
+      "certification": "exact rational: lambda is rational and exponent is -2",
+      "certified": true,
+      "hi": {
+        "decimal": "0.548696844993141289",
+        "den": 729,
+        "num": 400
+      },
+      "lo": {
+        "decimal": "0.548696844993141289",
+        "den": 729,
+        "num": 400
+      }
+    },
+    "B_lambda_alpha_minus_2": {
+      "certification": "SPEC placeholder only: intended interval for lambda^(alpha-2), alpha=log_2(3); not certified here",
+      "certified": false,
+      "hi": {
+        "decimal": "0.890000000000000000",
+        "den": 100,
+        "num": 89
+      },
+      "lo": {
+        "decimal": "0.880000000000000000",
+        "den": 25,
+        "num": 22
+      }
+    },
+    "D_lambda_alpha_minus_1": {
+      "certification": "SPEC placeholder only: intended interval for lambda^(alpha-1), alpha=log_2(3); not certified here",
+      "certified": false,
+      "hi": {
+        "decimal": "1.200000000000000000",
+        "den": 5,
+        "num": 6
+      },
+      "lo": {
+        "decimal": "1.190000000000000000",
+        "den": 100,
+        "num": 119
+      }
+    }
+  },
+  "formal_certificate_status": "BLOCKED_ON_RATIONAL_INTERVALS_FOR_LAMBDA_BETA",
+  "guardrails": [
+    "NO_LEAN_THEOREM",
+    "NO_M0_PROOF",
+    "NO_TARGET_REGISTRATION",
+    "NO_FLOAT_ONLY_CERTIFICATE",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "lambda": {
+    "frontier_check": "PASS: lambda = 27/20 is strictly below the reported frontier",
+    "reported_frontier_upper_bound_decimal": "1.353400093558369",
+    "value": {
+      "decimal": "1.350000000000000000",
+      "den": 20,
+      "num": 27
+    }
+  },
+  "rational_interval_policy": {
+    "exact_interval_keys": [
+      "A_lambda_minus_2"
+    ],
+    "gap": "the script does not certify lambda^(alpha-2) or lambda^(alpha-1); a future verifier must replace placeholders by audited rational intervals",
+    "row_check_rule": "for nonnegative variables, verify lhs using exact/upper coefficients and rhs using lower coefficient endpoints, with positive rational slack",
+    "transcendental_placeholder_keys": [
+      "B_lambda_alpha_minus_2",
+      "D_lambda_alpha_minus_1"
+    ]
+  },
+  "rational_skeleton_status": "PASS_RATIONAL_SKELETON",
+  "rows": [
+    {
+      "direction": "1 <= c_2^2",
+      "name": "lower_c_2_2",
+      "slack": {
+        "decimal": "0.825000000000000000",
+        "den": 40,
+        "num": 33
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^2 <= C_2^max",
+      "name": "upper_c_2_2",
+      "slack": {
+        "decimal": "0.175000000000000000",
+        "den": 40,
+        "num": 7
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "1 <= c_2^5",
+      "name": "lower_c_2_5",
+      "slack": {
+        "decimal": "0.001000000000000000",
+        "den": 1000,
+        "num": 1
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^5 <= C_2^max",
+      "name": "upper_c_2_5",
+      "slack": {
+        "decimal": "0.999000000000000000",
+        "den": 1000,
+        "num": 999
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "1 <= c_2^8",
+      "name": "lower_c_2_8",
+      "slack": {
+        "decimal": "0.725000000000000000",
+        "den": 40,
+        "num": 29
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^8 <= C_2^max",
+      "name": "upper_c_2_8",
+      "slack": {
+        "decimal": "0.275000000000000000",
+        "den": 40,
+        "num": 11
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^2 <= A*c_2^8 + B*c_1^2, checked with lower(A), lower(B)",
+      "name": "L2NT_D1",
+      "slack": {
+        "decimal": "0.001502057613168724",
+        "den": 48600,
+        "num": 73
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^5 <= A*c_2^2, checked with exact A",
+      "name": "L2NT_D2",
+      "slack": {
+        "decimal": "0.000371742112482853",
+        "den": 729000,
+        "num": 271
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_2^8 <= A*c_2^5 + D*c_1^2, checked with lower(A), lower(D)",
+      "name": "L2NT_D3",
+      "slack": {
+        "decimal": "0.014245541838134430",
+        "den": 145800,
+        "num": 2077
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_1^2 <= c_2^2",
+      "name": "aux_c_1_2_le_c_2_2",
+      "slack": {
+        "decimal": "0.825000000000000000",
+        "den": 40,
+        "num": 33
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_1^2 <= c_2^5",
+      "name": "aux_c_1_2_le_c_2_5",
+      "slack": {
+        "decimal": "0.001000000000000000",
+        "den": 1000,
+        "num": 1
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "c_1^2 <= c_2^8",
+      "name": "aux_c_1_2_le_c_2_8",
+      "slack": {
+        "decimal": "0.725000000000000000",
+        "den": 40,
+        "num": 29
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    },
+    {
+      "direction": "0 < c_1^2",
+      "name": "domain_c_1_2_positive",
+      "slack": {
+        "decimal": "1.000000000000000000",
+        "den": 1,
+        "num": 1
+      },
+      "status": "PASS_POSITIVE_RATIONAL_SLACK"
+    }
+  ],
+  "schema": "KL2003_K2_INTERIOR_RATIONAL_CERTIFICATE_v1",
+  "system": "L_2^NT",
+  "variables": {
+    "C_2_max": {
+      "decimal": "2.000000000000000000",
+      "den": 1,
+      "num": 2
+    },
+    "c_1_2": {
+      "decimal": "1.000000000000000000",
+      "den": 1,
+      "num": 1
+    },
+    "c_2_2": {
+      "decimal": "1.825000000000000000",
+      "den": 40,
+      "num": 73
+    },
+    "c_2_5": {
+      "decimal": "1.001000000000000000",
+      "den": 1000,
+      "num": 1001
+    },
+    "c_2_8": {
+      "decimal": "1.725000000000000000",
+      "den": 40,
+      "num": 69
+    }
+  },
+  "verifier_report": {
+    "base_segment_placeholder_present": true,
+    "float_evidence_detected": false,
+    "missing_coefficient_intervals": [],
+    "nonpositive_slacks": [],
+    "uncertified_transcendental_intervals": [
+      "B_lambda_alpha_minus_2",
+      "D_lambda_alpha_minus_1"
+    ]
+  }
+}
