@@ -196,7 +196,8 @@ I will not add an audit report link immediately. First I plan to do a Phase 1 st
 2. Check whether the formalisation is intentionally proving only the lower-bound consequence `17087915 <= L`, rather than the full linear form
    `Card Omega = 301994 a + 17087915 b + 85137581 c`.
 3. Check domain and cycle conventions: positive integers vs `Nat`, compressed map `T`, definition of cycle length, nontrivial cycle/minimum assumptions, and the role of the `n < 2^40` computational verification.
-4. Only after that, if there is no coordination objection, proceed to mechanical checks such as `lake build`, axiom/sorry audit, and review of `native_decide`-backed numerical facts.
+4. I noticed that the current repository history includes a commit removing an unused/unproven `precise` reformulation. If helpful, I would like to clarify whether the intended registered scope is the lower-bound corollary rather than the full linear-form Theorem 1.1.
+5. Only after that, if there is no coordination objection, proceed to mechanical checks such as `lake build`, axiom/sorry audit, and review of `native_decide`-backed numerical facts.
 
 Please let me know if someone is already auditing this formalisation, if there is preferred coordination etiquette, or if maintainers/authors would like the first pass scoped differently.
 
@@ -238,6 +239,8 @@ Filas iniciales:
 - Definicion de ciclo no trivial.
 - Theorem 1.1 forma lineal.
 - Consecuencia `Card Omega >= 17087915`.
+- Relacion entre `L` en `CollatzCycle L` y `Card Omega`.
+- Hipotesis Lean adicional `hk : 0 < c.numOdd`.
 - Theorem 2.1 sandwich.
 - Lemma 2.2 formula de producto.
 - Corollary 2.3 funciones `K(m)`/`L(m)`.
@@ -248,7 +251,11 @@ Filas iniciales:
 - Dominio: el paper usa `N = {1,2,...}`; Lean usa `Nat` con `collatzComp 0 = 0` fuera del dominio. Verificar que `CollatzCycle.pos` elimina `0`.
 - Ciclo: el paper define una trayectoria como conjunto/orbita; Lean usa una secuencia indexada por `Fin L`. Verificar si permite repeticiones internas que inflen `L` o si hay lemmas que fuerzan periodicidad simple/cardinalidad real.
 - Longitud: paper `Card Omega`; Lean concluye sobre el parametro `L`. Verificar que `L` coincide semanticamente con cardinalidad del ciclo, no solo con periodo parametrizado de una secuencia.
+- Verificar ambas direcciones del problema `L` vs `Card Omega`:
+  1. si Lean permite una instancia `CollatzCycle L` inflada recorriendo varias veces el mismo ciclo, comprobar que `17087915 <= L` no debilita indebidamente la consecuencia sobre el periodo/cardinalidad exacta;
+  2. construir o localizar la instancia de periodo exacto asociada a un ciclo del paper, que es la que convierte el theorem Lean en corolario del paper.
 - No trivialidad: paper "nontrivial cycle"; Lean theorem usa `2^40 < c.minElem`, no `isNontrivial`. Verificar si esto es intencional y suficiente dada la verificacion computacional externa.
+- Hipotesis `hk : 0 < c.numOdd`: el paper no la pide explicitamente. Documentarla como hipotesis Lean agregada; si se confirma que todo ciclo positivo real tiene un impar (sin impares la orbita decrece estrictamente por divisiones entre 2), clasificarla como `ADDED_BUT_BENIGN`.
 - Hipotesis `min Omega > 2^40`: paper la usa en Theorem 1.1; la consecuencia incondicional depende de la verificacion computacional previa. Lean statement no incorpora formalmente la verificacion de todos los `n < 2^40`.
 - Forma lineal: paper prueba forma exacta con `a,b,c`; Lean central visible solo prueba cota inferior. Clasificarlo como formalizacion parcial si no hay theorem lineal.
 - Desigualdades: paper tiene una desigualdad izquierda estricta en Theorem 2.1; Lean `eliahou_sandwich` usa `<=` a la izquierda, pero `log2_three_lt_ratio` recupera `log_2 3 < L/k1`. Verificar si la version usada basta para el bound.
@@ -263,6 +270,7 @@ Entregar un reporte corto con:
 - hypotheses added/removed;
 - whether a public audit should proceed to mechanical phase;
 - questions for `tangentstorm`/maintainers before adding audit link.
+- Encuadre recomendado si se confirma `consequence-only`: no tratarlo como rechazo automatico. La guia del CC Challenge acepta formalizaciones parciales; el veredicto natural seria aceptar o recomendar aceptacion como formalizacion parcial del corolario, siempre que la metadata/descripcion no la presente como Theorem 1.1 completo.
 
 ### Fase 1.4 - Gate antes de audit link
 

@@ -350,6 +350,7 @@ LP factible con holgura. Firma de objetivo:
 SPEC theorem feasible_retarded_LP_certificate_to_lower_bound :
   RetardedDifferenceSystem S ->
   PositiveMonotoneSolution Phi S ->
+  BaseSegmentLowerBound Phi S Y0 ->
   InteriorRationalLPCertificate S lambda gamma ->
   gamma = log_2(lambda) ->
   exists Delta > 0,
@@ -357,10 +358,23 @@ SPEC theorem feasible_retarded_LP_certificate_to_lower_bound :
       Phi_m(y) >= Delta * c_m * lambda^y
 ```
 
+`BaseSegmentLowerBound Phi S Y0` es una hipotesis explicita de anclaje para
+la induccion retardada. En el caso `pi_a_star` esperado, el candidato natural
+es la cota trivial de raiz:
+
+```text
+phi_k^m(y) >= 1
+```
+
+en el segmento inicial necesario, porque la raiz cuenta en su propio arbol
+inverso acotado. Esta hipotesis debe permanecer visible en la signature:
+sin un segmento base, el `Delta` del puente no se construye.
+
 Especializacion M1:
 
 ```text
 SPEC theorem M1_surrogate_KL2003_k2_lower_bound_signature :
+  BaseSegmentLowerBound phi I2ELSystem Y0 ->
   InteriorRationalLPCertificate I2ELSystem lambda gamma ->
   exists Delta > 0,
     for all m in {2,5,8} and all y >= 0,
