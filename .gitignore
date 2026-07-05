@@ -1,0 +1,17 @@
+# Lean / Lake (para cuando haya codigo)
+build/
+.lake/
+lakefile.olean
+*.olean
+lake-packages/
+
+# Python auxiliar (sanity checks numericos)
+__pycache__/
+*.pyc
+.venv/
+
+# Editor / SO
+.DS_Store
+*.swp
+.vscode/
+.idea/
