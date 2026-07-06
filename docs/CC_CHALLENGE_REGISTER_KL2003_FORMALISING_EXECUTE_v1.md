@@ -2,9 +2,8 @@
 
 Fecha: 2026-07-07.
 
-Estado: aprobacion humana explicita recibida; endpoint verificado; POST
-intentado; registro bloqueado por autenticacion CC Challenge (`401
-Unauthorized`).
+Estado: aprobacion humana explicita recibida; registro completado via UI tras
+autenticacion CC Challenge; confirmado por GET.
 
 ## Clasificacion
 
@@ -13,19 +12,17 @@ KL2003_STATUS_REFRESHED
 REGISTRATION_STILL_AVAILABLE
 REGISTRATION_ENDPOINT_VERIFIED
 KL2003_REGISTRATION_ATTEMPTED
-KL2003_REGISTRATION_BLOCKED_ON_CC_AUTH
-DATA_ONLY_LEAN_GATE_REMAINS_CLOSED
+KL2003_REGISTRATION_EXECUTED_VIA_UI
+KL2003_FORMALISING_CONFIRMED_BY_GET
+DATA_ONLY_LEAN_GATE_OPENED
 DATA_ONLY_LEAN_ALREADY_EXISTS_AS_PUBLIC_GITHUB_DRAFT
 NO_GLOBAL_COLLATZ_CLAIM
 ```
 
-Las clasificaciones siguientes no se declaran porque el POST no quedo
-autenticado/aceptado:
+La clasificacion siguiente queda historica pero ya no es el estado final:
 
 ```text
-KL2003_REGISTRATION_EXECUTED
-KL2003_FORMALISING_CONFIRMED_BY_GET
-DATA_ONLY_LEAN_GATE_OPENED
+KL2003_REGISTRATION_BLOCKED_ON_CC_AUTH
 ```
 
 ## Base
@@ -181,9 +178,9 @@ KL2003 registration executed = no
 blocking reason = CC Challenge authentication required
 ```
 
-## Estado operativo
+## Estado operativo tras el 401
 
-El gate publico no queda abierto todavia:
+El primer intento API sin sesion dejo el gate cerrado:
 
 ```text
 DATA_ONLY_LEAN_GATE_OPENED = no
@@ -206,6 +203,55 @@ Siguientes opciones:
    Challenge aun not_started.
 ```
 
+## Registro via UI y confirmacion GET
+
+Despues del 401, el usuario inicio sesion en `ccchallenge.org` con GitHub y
+registro manualmente la formalizacion desde la interfaz web.
+
+Snapshot posterior por GET:
+
+```text
+https://ccchallenge.org/api/papers/KrasikovLagarias2003
+```
+
+Resultado:
+
+```text
+formalisation_status = formalising
+formalisations_count = 1
+```
+
+Endpoint de formalizaciones:
+
+```text
+https://ccchallenge.org/api/papers/KrasikovLagarias2003/formalisations
+```
+
+Resultado:
+
+```json
+[
+  {
+    "id": 10,
+    "proof_assistant": "lean4",
+    "repository_url": "https://github.com/Menta2357/collatz-classical",
+    "ai_assisted": true,
+    "ai_models": "Codex (GPT-5-based agents); Claude Fable 5",
+    "status": "formalising",
+    "user_display_name": "Menta2357",
+    "created_at": "2026-07-06T22:48:55.468828"
+  }
+]
+```
+
+Interpretacion:
+
+```text
+KL2003_REGISTRATION_EXECUTED_VIA_UI = yes
+KL2003_FORMALISING_CONFIRMED_BY_GET = yes
+DATA_ONLY_LEAN_GATE_OPENED = yes
+```
+
 ## Resultado
 
 ```text
@@ -213,11 +259,10 @@ KL2003_STATUS_REFRESHED = yes
 REGISTRATION_STILL_AVAILABLE = yes
 REGISTRATION_ENDPOINT_VERIFIED = yes
 KL2003_REGISTRATION_ATTEMPTED = yes
-KL2003_REGISTRATION_EXECUTED = no
-KL2003_REGISTRATION_BLOCKED_ON_CC_AUTH = yes
-KL2003_FORMALISING_CONFIRMED_BY_GET = no
-AI_ASSISTANCE_DISCLOSED = prepared_payload_only / attempted POST payload
-DATA_ONLY_LEAN_GATE_OPENED = no
+KL2003_REGISTRATION_EXECUTED_VIA_UI = yes
+KL2003_FORMALISING_CONFIRMED_BY_GET = yes
+AI_ASSISTANCE_DISCLOSED = yes
+DATA_ONLY_LEAN_GATE_OPENED = yes
 DATA_ONLY_LEAN_ALREADY_EXISTS_AS_PUBLIC_GITHUB_DRAFT = yes
 NO_GLOBAL_COLLATZ_CLAIM = yes
 ```
