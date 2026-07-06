@@ -4,18 +4,19 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Eliahou author-first + KL2003 data-only Lean
+FASE ACTUAL:          Eliahou upstream contact sent + KL2003 data-only Lean
 
 HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   AUDIT_ENTRY_READY
 HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   FEASIBILITY_GO
-COORDINACION:          AUTHOR_FIRST_PROTOCOL_SELECTED + KL2003 formalising registered
+COORDINACION:          UPSTREAM_AUTHOR_FIRST_CONTACT_SENT + KL2003 formalising registered
 CLAUDE:                veredicto coordinado firmado sobre texto completo
 
 REGLA ACTUAL:
-  Para Eliahou1993 id 6, contactar primero a tangentstorm/maintainers con
-  paquete completo privado: scope consequence-only, exact-period/cardinality
-  glue, hk glue, build/axiom audit, y native_decide trust-boundary probe.
-  Forum queda diferido; no issue upstream todavia; no audit link todavia.
+  Para Eliahou1993 id 6, ya se contacto primero a tangentstorm/maintainers via
+  GitHub issue upstream con paquete completo: scope consequence-only,
+  exact-period/cardinality glue, hk glue, build/axiom audit, y native_decide
+  trust-boundary probe. Forum queda diferido; no audit link todavia. Esperar
+  respuesta author-first antes de publicar en Forum o registrar audit.
   KrasikovLagarias2003 ya esta registrado como formalising con AI declarada.
   El primer .lean permitido es data-only, sin M0, sin Real/log, sin sorry.
 
@@ -23,12 +24,12 @@ LEAN ESCRITO:          KL2003 k=2 data-only draft, build PASS
 TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalising
 
 ELIAHOU1993:
-  AUTHOR_FIRST_PROTOCOL_SELECTED
+  UPSTREAM_AUTHOR_FIRST_CONTACT_SENT
+  GITHUB_ISSUE = https://github.com/tangentstorm/eliahou-collatz-bounds/issues/1
   FORUM_DEFERRED_BY_RECORDED_DECISION
-  AUTHOR_RESPONSE_WINDOW = 14 days after upstream issue/contact
+  AUTHOR_RESPONSE_WINDOW = until 2026-07-21 01:21 CEST
   If no response after window: publish Forum intention/update noting prior direct contact
   NO_AUDIT_LINK
-  NO_UPSTREAM_ISSUE_YET
   NO_GLOBAL_COLLATZ_CLAIM
 
 KL2003:

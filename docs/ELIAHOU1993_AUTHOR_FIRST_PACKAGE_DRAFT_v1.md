@@ -2,7 +2,13 @@
 
 Fecha: 2026-07-06, Europe/Madrid.
 
-Estado: paquete author-first listo para revision interna. No enviado a tangentstorm/maintainers. No Forum post. No issue upstream. No audit link. No claim oficial. No global Collatz claim.
+Estado: paquete author-first aprobado y enviado como GitHub issue upstream. No Forum post. No audit link. No claim oficial. No global Collatz claim.
+
+Issue enviado:
+- `https://github.com/tangentstorm/eliahou-collatz-bounds/issues/1`
+
+Registro de envio:
+- `docs/ELIAHOU1993_AUTHOR_FIRST_CONTACT_SENT_v1.md`
 
 ## Base
 
@@ -24,7 +30,7 @@ Decision de protocolo:
 
 ## Guardarrailes
 
-- NO_UPSTREAM_CONTACT_YET.
+- UPSTREAM_AUTHOR_FIRST_CONTACT_SENT.
 - NO_FORUM_POST.
 - NO_AUDIT_LINK.
 - NO_OFFICIAL_CLAIM.
@@ -313,22 +319,22 @@ Interpretation:
 - direct large replacements failed under tested settings;
 - trust boundary remains.
 
-## Do not send checklist
+## Pre-send checklist status
 
-Before sending any author-first contact:
-- confirm whether to send as GitHub issue, email, or Discussion comment;
-- decide whether to include the optional `farey_13_15` diff inline;
-- decide whether to attach local notes or summarize only;
-- ensure no Forum post is made first;
-- ensure no audit link is created first.
+Resolved at send time:
+- sent as GitHub issue upstream;
+- included the optional `farey_13_15` diff inline;
+- summarized local notes rather than attaching all internal reports;
+- no Forum post was made first;
+- no audit link was created first.
 
 ## Classifications
 
-- AUTHOR_FIRST_PACKAGE_READY_FOR_REVIEW: yes.
+- AUTHOR_FIRST_PACKAGE_SENT: yes.
 - MECHANICAL_PASS_REPORTED: yes.
 - CONSEQUENCE_ONLY_SCOPE_REPORTED: yes.
 - EXACT_PERIOD_GLUE_RECOMMENDED: yes.
 - TRUST_BOUNDARY_REPORTED_WITH_LIMITS: yes.
-- NO_UPSTREAM_CONTACT_YET: yes.
+- UPSTREAM_AUTHOR_FIRST_CONTACT_SENT: yes.
 - NO_AUDIT_LINK: yes.
 - NO_GLOBAL_COLLATZ_CLAIM: yes.
