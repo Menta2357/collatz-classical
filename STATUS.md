@@ -4,7 +4,7 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Eliahou upstream contact sent + KL2003 M0 semantic bridge scoping
+FASE ACTUAL:          Eliahou upstream contact sent + KL2003 M0a piStar semantics scoped
 
 HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   AUDIT_ENTRY_READY
 HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   FEASIBILITY_GO
@@ -48,7 +48,8 @@ KL2003:
   TRANSCENDENTAL_ENDPOINTS_LEAN_BUILD_PASS
   TRANSCENDENTAL_ENDPOINTS_AXIOM_AUDIT_PASS
   M0_SEMANTIC_BRIDGE_SCOPED
-  NEXT_FRONTIER = M0a computable piStar semantics with cross-validation
+  M0A_PI_STAR_SEMANTICS_SCOPED
+  NEXT_FRONTIER = M0a Lean semantics + Python/#eval cross-validation
   NO_M0_PROOF
   NO_M1_THEOREM
   NO_GLOBAL_COLLATZ_CLAIM
