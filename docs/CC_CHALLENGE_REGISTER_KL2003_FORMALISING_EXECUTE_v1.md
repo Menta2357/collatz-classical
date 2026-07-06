@@ -1,23 +1,26 @@
 # CC_CHALLENGE_REGISTER_KL2003_FORMALISING_EXECUTE_v1
 
-Fecha: 2026-07-06.
+Fecha: 2026-07-07.
 
-Estado: refresco ejecutado; registro no ejecutado por ausencia de aprobacion
-humana explicita.
+Estado: aprobacion humana explicita recibida; endpoint verificado; POST
+intentado; registro bloqueado por autenticacion CC Challenge (`401
+Unauthorized`).
 
 ## Clasificacion
 
 ```text
 KL2003_STATUS_REFRESHED
 REGISTRATION_STILL_AVAILABLE
-KL2003_REGISTRATION_NOT_EXECUTED_MISSING_EXPLICIT_APPROVAL
-REGISTRATION_EXECUTION_REQUIRES_HUMAN_APPROVAL
+REGISTRATION_ENDPOINT_VERIFIED
+KL2003_REGISTRATION_ATTEMPTED
+KL2003_REGISTRATION_BLOCKED_ON_CC_AUTH
 DATA_ONLY_LEAN_GATE_REMAINS_CLOSED
-NO_LEAN_FILE_CREATED
+DATA_ONLY_LEAN_ALREADY_EXISTS_AS_PUBLIC_GITHUB_DRAFT
 NO_GLOBAL_COLLATZ_CLAIM
 ```
 
-Las clasificaciones siguientes no se declaran porque no se ejecuto el POST:
+Las clasificaciones siguientes no se declaran porque el POST no quedo
+autenticado/aceptado:
 
 ```text
 KL2003_REGISTRATION_EXECUTED
@@ -40,8 +43,13 @@ Ejecutar POST si y solo si hay aprobacion humana explicita en este hilo.
 Frase requerida: "Apruebo registrar KrasikovLagarias2003 ahora."
 ```
 
-La frase aparece en la tarea como requisito citado, no como aprobacion humana
-emitida. Por tanto no autoriza el POST.
+La aprobacion humana explicita fue emitida el 2026-07-07:
+
+```text
+Apruebo registrar KrasikovLagarias2003 ahora.
+```
+
+Por tanto el POST quedo autorizado por el usuario.
 
 ## Refresco API
 
@@ -79,6 +87,53 @@ formalisations_count = 0
 registration slot still appears available
 ```
 
+## Contrato de API verificado
+
+Se clono el repo publico de CC Challenge para confirmar el endpoint y los
+campos, en vez de adivinar el POST.
+
+Archivo fuente:
+
+```text
+backend/routers/formalisations.py
+```
+
+Contrato relevante:
+
+```text
+router = APIRouter(prefix="/papers/{bibtex_key}/formalisations", tags=["formalisations"])
+@router.post("", status_code=201)
+```
+
+Por tanto, el endpoint correcto bajo prefijo `/api` es:
+
+```text
+POST https://ccchallenge.org/api/papers/KrasikovLagarias2003/formalisations
+```
+
+Schema verificado en:
+
+```text
+backend/schemas.py
+```
+
+Campos:
+
+```text
+proof_assistant: ProofAssistant
+repository_url: str
+ai_assisted: bool = False
+ai_models: str | None = None
+```
+
+El router depende de:
+
+```text
+user: User = Depends(current_active_user)
+```
+
+Por tanto requiere sesion/autenticacion activa en CC Challenge.
+
 ## Payload preparado, no enviado
 
 Payload previsto:
@@ -92,55 +147,63 @@ Payload previsto:
 }
 ```
 
-Estado:
+Estado previo:
 
 ```text
-POST executed = no
+POST authorized = yes
 AI assistance disclosed in prepared payload = yes
-formalisation GET after POST = not applicable
+formalisation GET after POST = attempted after unauthorized POST not applicable
 ```
 
-## Decision
+## POST intentado
 
-Decision operativa:
+Comando:
 
-```text
-HOLD. No ejecutar POST.
+```bash
+curl -i -X POST https://ccchallenge.org/api/papers/KrasikovLagarias2003/formalisations \
+  -H 'Content-Type: application/json' \
+  --data '{"proof_assistant":"lean4","repository_url":"https://github.com/Menta2357/collatz-classical","ai_assisted":true,"ai_models":"Codex / GPT-5-based agents; Claude Fable reviewer"}'
 ```
 
-Motivo:
+Resultado:
 
 ```text
-No hay una aprobacion humana explicita que diga exactamente:
-Apruebo registrar KrasikovLagarias2003 ahora.
+HTTP/2 401
+{"detail":"Unauthorized"}
 ```
 
 Por tanto:
 
 ```text
-No se registra KL2003 en CC Challenge.
-No se crea archivo Lean data-only.
-No se abre aun el gate DATA_ONLY_LEAN_GATE_OPENED.
+POST attempted = yes
+POST accepted = no
+KL2003 registration executed = no
+blocking reason = CC Challenge authentication required
 ```
 
-## Condicion para ejecutar
+## Estado operativo
 
-Para ejecutar el registro en un paso posterior, el hilo debe recibir la
-aprobacion humana explicita:
+El gate publico no queda abierto todavia:
 
 ```text
-Apruebo registrar KrasikovLagarias2003 ahora.
+DATA_ONLY_LEAN_GATE_OPENED = no
 ```
 
-Despues de recibir esa frase como aprobacion, el siguiente intento debe:
+Motivo:
 
 ```text
-1. refrescar de nuevo los dos endpoints por GET;
-2. confirmar formalisation_status = not_started y formalisations_count = 0;
-3. ejecutar el POST con el payload indicado;
-4. verificar por GET que aparece la formalisation;
-5. documentar KL2003_REGISTRATION_EXECUTED y
-   KL2003_FORMALISING_CONFIRMED_BY_GET.
+La aprobacion humana existe, pero falta una sesion CC Challenge autenticada
+para que el servidor acepte el POST.
+```
+
+Siguientes opciones:
+
+```text
+1. Login manual en ccchallenge.org y registrar via UI.
+2. Login manual en ccchallenge.org y proporcionar un mecanismo autorizado de
+   sesion/cookie para repetir el POST.
+3. Mantener el estado actual: GitHub publico con data-only Lean draft, pero CC
+   Challenge aun not_started.
 ```
 
 ## Resultado
@@ -148,10 +211,13 @@ Despues de recibir esa frase como aprobacion, el siguiente intento debe:
 ```text
 KL2003_STATUS_REFRESHED = yes
 REGISTRATION_STILL_AVAILABLE = yes
+REGISTRATION_ENDPOINT_VERIFIED = yes
+KL2003_REGISTRATION_ATTEMPTED = yes
 KL2003_REGISTRATION_EXECUTED = no
+KL2003_REGISTRATION_BLOCKED_ON_CC_AUTH = yes
 KL2003_FORMALISING_CONFIRMED_BY_GET = no
-AI_ASSISTANCE_DISCLOSED = prepared_payload_only
+AI_ASSISTANCE_DISCLOSED = prepared_payload_only / attempted POST payload
 DATA_ONLY_LEAN_GATE_OPENED = no
-NO_LEAN_FILE_CREATED = yes
+DATA_ONLY_LEAN_ALREADY_EXISTS_AS_PUBLIC_GITHUB_DRAFT = yes
 NO_GLOBAL_COLLATZ_CLAIM = yes
 ```
