@@ -1,0 +1,17 @@
+import CollatzClassical.KL2003.KL2003M0BEntryPredecessorDisjointness
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms firstHitsAt_of_natFind
+#print axioms exists_firstHitsAt_of_reachesWithin
+#print axioms T_ne_self
+#print axioms inverseChild_ne_root_of_one_le
+#print axioms entry_predecessor_maps_to_root
+#print axioms entry_predecessor_is_inverse_child
+#print axioms iterate_from_later_hit
+#print axioms entry_pred_eq_of_reaches_child
+#print axioms inverse_children_disjoint_descendants
+
+end KL2003
+end CollatzClassical
