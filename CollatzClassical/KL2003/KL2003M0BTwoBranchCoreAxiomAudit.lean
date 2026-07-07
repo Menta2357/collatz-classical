@@ -1,0 +1,29 @@
+import CollatzClassical.KL2003.KL2003M0BTwoBranchCore
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms reachesWithin_root_le_window
+#print axioms two_branch_advanced_child_maps_to_root
+#print axioms two_branch_children_distinct
+#print axioms two_branch_root_ne_retarded_child
+#print axioms two_branch_advanced_child_ne_root
+#print axioms two_branch_T_two_mul
+#print axioms two_branch_T_four_mul
+#print axioms two_branch_T_two_steps_four_mul
+#print axioms two_branch_retarded_path_to_child
+#print axioms two_branch_child_path_to_root
+#print axioms two_branch_advanced_path_to_root
+#print axioms two_branch_retarded_reaches_child
+#print axioms two_branch_retarded_injection
+#print axioms two_branch_advanced_reaches_child
+#print axioms two_branch_advanced_injection
+#print axioms not_reaches_inverse_child_from_root
+#print axioms root_not_mem_retarded_source
+#print axioms root_not_mem_advanced_source
+#print axioms two_branch_source_members_disjoint
+#print axioms two_branch_sources_disjoint_in_target
+#print axioms two_branch_card_bound
+
+end KL2003
+end CollatzClassical
