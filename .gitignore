@@ -10,6 +10,10 @@ __pycache__/
 *.pyc
 .venv/
 
+# Large generated diagnostics kept local; summaries/manifests are committed.
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/grid.csv
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/c25_cases.csv
+
 # Editor / SO
 .DS_Store
 *.swp
