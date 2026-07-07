@@ -1,0 +1,30 @@
+import CollatzClassical.KL2003.KL2003M0BReachabilityAPI
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms reachesWithin_self
+#print axioms reachesWithin_window_mono
+#print axioms reachesWithin_append_path
+#print axioms mem_piStarPropFinset_iff
+#print axioms boundedReachesWithFuel_sound
+#print axioms boundedReaches_sound
+#print axioms boundedReachesWithFuel_complete_of_witness
+#print axioms boundedReaches_complete_of_witness
+#print axioms boundedReaches_complete_of_fuel_sufficient
+#print axioms boundedReaches_iff_of_fuel_sufficient
+#print axioms mem_piStarFinset_reachesWithin_of_mem
+#print axioms mem_piStarFinset_reachesWithin_iff_of_fuel_sufficient
+#print axioms piStarPropFinset_eq_piStarFinset_of_fuel_sufficient
+#print axioms iterate_repeat_propagates
+#print axioms minimal_hit_distinct
+#print axioms pigeonhole_bound
+#print axioms reachesWithin_has_bounded_min_hit
+#print axioms fuel_sufficient_of_reachesWithin
+#print axioms boundedReaches_complete
+#print axioms boundedReaches_iff
+#print axioms mem_piStarFinset_reachesWithin_iff
+#print axioms piStarPropFinset_eq_piStarFinset
+
+end KL2003
+end CollatzClassical
