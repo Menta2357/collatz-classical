@@ -13,8 +13,13 @@ ABSTRACT_PHI_SYSTEM_DEFINED
 DELTA_MEASURE_IDENTIFIED
 BASE_SEGMENT_INPUT_IDENTIFIED
 CERTIFICATE_CONSUMER_PATH_DEFINED
+ZERO_EXTENSION_DECISION_RECORDED
+BASE_SEGMENT_WIDTH_TWO_RECORDED
+DELTA_VS_BASE_WIDTH_DISTINGUISHED
+DELTA_LAMBDA_MINUS_TWO_SELECTED
 TREE_SEMANTICS_NOT_USED
 D1_D2_D3_NOT_USED
+M0C_SCOPING_PATCHED
 NO_M0_PROOF
 NO_M1_THEOREM
 NO_GLOBAL_COLLATZ_CLAIM
@@ -38,6 +43,7 @@ NO_TREE_SEMANTICS
 docs/KL2003_M0_SEMANTIC_BRIDGE_SCOPING_v1.md
 docs/KL2003_M0A_COMPUTABLE_PI_STAR_SEMANTICS_SCOPING_v1.md
 docs/KL2003_M0A_PI_STAR_SEMANTICS_LEAN_AND_CROSS_VALIDATION_v1.md
+docs/KL2003_M0C_BASE_SEGMENT_AND_ZERO_EXTENSION_PATCH_v1.md
 CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean
 CollatzClassical/KL2003/KL2003K2TranscendentalEndpoints.lean
 ```
@@ -73,9 +79,25 @@ phi_2^m(y) = pi_a^*(2^y * something)
 
 en M0C. Esa identificacion pertenece a M0B/M0D, no al puente abstracto.
 
+Parche M0C base/zero-extension: cuando el sistema abstracto represente la
+semantica `piStar`, debe estar extendido por cero para argumentos negativos:
+
+```lean
+def K2PhiZeroExtension (Phi : K2PhiSystem) : Prop :=
+  forall y, y < 0 ->
+    Phi.phi22 y = 0 /\
+    Phi.phi25 y = 0 /\
+    Phi.phi28 y = 0
+```
+
+Motivo semantico: si `y < 0`, entonces `x = 2^y * a < a`; la raiz no esta en
+la ventana y el conteo `piStar a x` debe ser cero. M0C solo registra esta
+convencion; no prueba aqui el lema semantico de `piStar`.
+
 ## Inputs separados
 
-M0C debe mantener separados cuatro tipos de input.
+M0C debe mantener separados cuatro tipos de input matematico, mas la
+convencion semantica `K2PhiZeroExtension` registrada arriba.
 
 ### 1. Certificado k=2 cerrado
 
@@ -132,18 +154,40 @@ M0C no reprobara los endpoints trascendentales.
 
 ### 3. Base segment lower bound pendiente
 
-El tramo base sigue siendo una hipotesis externa. Firma conceptual:
+El tramo base sigue siendo una hipotesis externa, pero su forma queda fijada
+por el parche M0C base/zero-extension. El retardo mas profundo es `-2`, por lo
+que el segmento base relevante es:
 
-```lean
-def BaseSegmentLowerBound (Phi : K2PhiSystem) (Y0 : Real) : Prop :=
-  forall y, y <= Y0 ->
-    ((73 / 40 : Real) * lambdaR ^ y <= Phi.phi22 y) /\
-    ((1001 / 1000 : Real) * lambdaR ^ y <= Phi.phi25 y) /\
-    ((69 / 40 : Real) * lambdaR ^ y <= Phi.phi28 y)
+```text
+0 <= y < 2
 ```
 
-El valor exacto de `Y0` y la descarga finita del segmento base quedan fuera de
-M0C. M0C solo debe requerir esta hipotesis como anclaje de la induccion.
+La constante del anclaje base es:
+
+```lean
+noncomputable def DeltaM0CBase : Real := lambdaR ^ (-(2 : Real))
+```
+
+Firma conceptual corregida:
+
+```lean
+def BaseSegmentLowerBound (Phi : K2PhiSystem) : Prop :=
+  forall y, 0 <= y -> y < 2 ->
+    DeltaM0CBase * lambdaR ^ y <= Phi.phi22 y /\
+    DeltaM0CBase * lambdaR ^ y <= Phi.phi25 y /\
+    DeltaM0CBase * lambdaR ^ y <= Phi.phi28 y
+```
+
+La razon es:
+
+```text
+0 <= y < 2
+=> DeltaM0CBase * lambdaR^y <= 1
+=> phi_2^m(y) >= 1 por conteo de la raiz
+```
+
+La descarga Lean de que la raiz se cuenta a si misma pertenece a M0A/M0D, no a
+M0C.
 
 ### 4. Filas abstractas estilo I2/EL
 
@@ -218,6 +262,10 @@ retardedRank y
 ```
 
 No se debe intentar una recursion estructural sobre `y : Real`.
+
+Importante: `deltaM0C = 5 - 3*alpha` controla solo la medida bien fundada. No
+controla el ancho del segmento base. El ancho del segmento base es `2`, porque
+el retardo mas profundo del sistema I2/EL es `-2`.
 
 ## Shifts activos
 
@@ -326,9 +374,18 @@ beta <= -delta
 => ceil((y + beta) / delta) < ceil(y / delta)
 ```
 
-El caso `retardedRank y = 0` pertenece al segmento base. Por eso el lema de
-descenso debe estar formulado con una hipotesis de rango positivo o con una
-hipotesis equivalente de estar fuera del tramo base.
+El parche M0C base/zero-extension corrige la lectura del caso base: no debe
+identificarse `retardedRank y = 0` con el segmento `0 <= y < 2`. La induccion
+futura debe separar:
+
+```text
+y < 0       -> extension por cero
+0 <= y < 2  -> base segment por raiz
+2 <= y      -> paso inductivo con descenso por deltaM0C
+```
+
+En la region `2 <= y`, todos los argumentos retardados permanecen no negativos,
+porque todos los shifts activos son `>= -2`.
 
 ## Target Lean futuro
 
@@ -370,35 +427,45 @@ structure K2PhiSystem where
 
 noncomputable def deltaM0C : Real := 5 - 3 * alpha
 
+noncomputable def DeltaM0CBase : Real := lambdaR ^ (-(2 : Real))
+
 noncomputable def retardedRank (y : Real) : Nat :=
   Nat.ceil (y / deltaM0C)
+
+def K2PhiZeroExtension (Phi : K2PhiSystem) : Prop :=
+  forall y, y < 0 ->
+    Phi.phi22 y = 0 /\
+    Phi.phi25 y = 0 /\
+    Phi.phi28 y = 0
 
 structure I2ELAbstractRows (Phi : K2PhiSystem) : Prop where
   row22 : Prop
   row25 : Prop
   row28EL : Prop
 
-def BaseSegmentLowerBound (Phi : K2PhiSystem) (Y0 : Real) : Prop := ...
+def BaseSegmentLowerBound (Phi : K2PhiSystem) : Prop := ...
 
-structure K2RetardedInductionInputs (Phi : K2PhiSystem) (Y0 : Real) : Prop where
+structure K2RetardedInductionInputs (Phi : K2PhiSystem) : Prop where
   certificate :
     K2InteriorCertificateData.ValidData k2CertificateData
   endpointsB :
     (119 / 135 : Real) <= BReal /\ BReal <= (8 / 9 : Real)
   endpointsD :
     (119 / 100 : Real) <= DReal /\ DReal <= (6 / 5 : Real)
+  zeroExtension :
+    K2PhiZeroExtension Phi
   base :
-    BaseSegmentLowerBound Phi Y0
+    BaseSegmentLowerBound Phi
   rows :
     I2ELAbstractRows Phi
 
 -- Target abstracto, no teorema M0/M1:
-def RetardedLowerBoundConclusion (Phi : K2PhiSystem) (Y0 : Real) : Prop := ...
+def RetardedLowerBoundConclusion (Phi : K2PhiSystem) : Prop := ...
 
 theorem k2_retarded_induction_abstract
-    (Phi : K2PhiSystem) (Y0 : Real)
-    (hinputs : K2RetardedInductionInputs Phi Y0) :
-    RetardedLowerBoundConclusion Phi Y0 := by
+    (Phi : K2PhiSystem)
+    (hinputs : K2RetardedInductionInputs Phi) :
+    RetardedLowerBoundConclusion Phi := by
   -- futura prueba por retardedRank
   sorry
 
@@ -436,8 +503,13 @@ ABSTRACT_PHI_SYSTEM_DEFINED = yes
 DELTA_MEASURE_IDENTIFIED = yes
 BASE_SEGMENT_INPUT_IDENTIFIED = yes
 CERTIFICATE_CONSUMER_PATH_DEFINED = yes
+ZERO_EXTENSION_DECISION_RECORDED = yes
+BASE_SEGMENT_WIDTH_TWO_RECORDED = yes
+DELTA_VS_BASE_WIDTH_DISTINGUISHED = yes
+DELTA_LAMBDA_MINUS_TWO_SELECTED = yes
 TREE_SEMANTICS_NOT_USED = yes
 D1_D2_D3_NOT_USED = yes
+M0C_SCOPING_PATCHED = yes
 NO_M0_PROOF = yes
 NO_M1_THEOREM = yes
 NO_GLOBAL_COLLATZ_CLAIM = yes

@@ -55,6 +55,50 @@ theorem mem_piStarList_iff {a x n : Nat} :
       n <= x ∧ 1 <= n ∧ boundedReaches a x n = true := by
   simp [piStarList, piStarMember, Nat.lt_succ_iff]
 
+theorem boundedReachesWithFuel_true_implies_root_le_window {fuel a x n : Nat}
+    (h : boundedReachesWithFuel fuel a x n = true) :
+    a <= x := by
+  induction fuel generalizing n with
+  | zero =>
+      simp [boundedReachesWithFuel] at h
+      exact h.2 ▸ h.1
+  | succ fuel ih =>
+      simp [boundedReachesWithFuel] at h
+      rcases h with ⟨hnx, hhit | hrec⟩
+      · exact hhit ▸ hnx
+      · exact ih hrec
+
+theorem boundedReaches_true_implies_root_le_window {a x n : Nat}
+    (h : boundedReaches a x n = true) :
+    a <= x := by
+  exact boundedReachesWithFuel_true_implies_root_le_window h
+
+theorem piStarFinset_eq_empty_of_x_lt_a {a x : Nat} (hxa : x < a) :
+    piStarFinset a x = ∅ := by
+  rw [Finset.eq_empty_iff_forall_notMem]
+  intro n hn
+  have hm := (mem_piStarFinset_iff (a := a) (x := x) (n := n)).1 hn
+  exact (not_le_of_gt hxa) (boundedReaches_true_implies_root_le_window hm.2.2)
+
+theorem piStar_eq_zero_of_x_lt_a {a x : Nat} (hxa : x < a) :
+    piStar a x = 0 := by
+  rw [piStar, piStarFinset_eq_empty_of_x_lt_a hxa]
+  rfl
+
+theorem boundedReaches_self {a x : Nat} (hax : a <= x) :
+    boundedReaches a x a = true := by
+  simp [boundedReaches, boundedReachesWithFuel, hax]
+
+theorem a_mem_piStarFinset_self_window {a x : Nat} (ha : 1 <= a) (hax : a <= x) :
+    a ∈ piStarFinset a x := by
+  rw [mem_piStarFinset_iff]
+  exact ⟨hax, ha, boundedReaches_self hax⟩
+
+theorem one_le_piStar_of_one_le_a_le_x {a x : Nat} (ha : 1 <= a) (hax : a <= x) :
+    1 <= piStar a x := by
+  dsimp [piStar]
+  exact Finset.one_le_card.2 ⟨a, a_mem_piStarFinset_self_window ha hax⟩
+
 theorem zero_not_mem_piStarFinset (a x : Nat) :
     0 ∉ piStarFinset a x := by
   intro h
