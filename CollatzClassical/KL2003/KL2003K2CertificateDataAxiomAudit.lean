@@ -8,7 +8,8 @@ namespace KL2003
 #print axioms k2_gamma_gt_three_sevenths_int
 #print axioms k2_B_lower_rational_reduction
 #print axioms k2_B_upper_rational_reduction
-#print axioms k2_B_lower_implies_target
+#print axioms k2_B_lower_stronger_than_old
+#print axioms k2_B_lower_implies_old
 #print axioms k2_B_upper_implies_target
 #print axioms k2_D_lower_endpoint
 #print axioms k2_D_upper_endpoint

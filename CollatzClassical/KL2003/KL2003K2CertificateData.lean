@@ -42,7 +42,7 @@ def lambdaQ : Rat := 27 / 20
 
 def AInterval : RationalInterval := { lo := 400 / 729, hi := 400 / 729 }
 
-def BTargetInterval : RationalInterval := { lo := 22 / 25, hi := 89 / 100 }
+def BTargetInterval : RationalInterval := { lo := 119 / 135, hi := 89 / 100 }
 
 def BStrongInterval : RationalInterval := { lo := 119 / 135, hi := 8 / 9 }
 
@@ -61,7 +61,7 @@ def lower_c25_slack : Rat := 1 / 1000
 def upper_c25_slack : Rat := 999 / 1000
 def lower_c28_slack : Rat := 29 / 40
 def upper_c28_slack : Rat := 11 / 40
-def L2NT_D1_slack : Rat := 73 / 48600
+def L2NT_D1_slack : Rat := 29 / 9720
 def L2NT_D2_slack : Rat := 271 / 729000
 def L2NT_D3_slack : Rat := 2077 / 145800
 def aux_c12_le_c22_slack : Rat := 33 / 40
@@ -115,7 +115,10 @@ theorem k2_B_upper_rational_reduction :
     1 <= ((8 / 9 : Rat) ^ 5) * ((27 / 20 : Rat) ^ 2) := by
   norm_num
 
-theorem k2_B_lower_implies_target : (22 / 25 : Rat) <= 119 / 135 := by
+theorem k2_B_lower_stronger_than_old : (22 / 25 : Rat) < 119 / 135 := by
+  norm_num
+
+theorem k2_B_lower_implies_old : (22 / 25 : Rat) <= 119 / 135 := by
   norm_num
 
 theorem k2_B_upper_implies_target : (8 / 9 : Rat) <= 89 / 100 := by
@@ -179,8 +182,8 @@ theorem domain_c12_positive_slack_pos : 0 < domain_c12_positive_slack := by
   norm_num [domain_c12_positive_slack]
 
 theorem k2_L2NT_D1_slack_eq :
-    (400 / 729 : Rat) * (69 / 40) + (22 / 25 : Rat) * 1 - (73 / 40)
-      = 73 / 48600 := by
+    (400 / 729 : Rat) * (69 / 40) + (119 / 135 : Rat) * 1 - (73 / 40)
+      = 29 / 9720 := by
   norm_num
 
 theorem k2_L2NT_D2_slack_eq :

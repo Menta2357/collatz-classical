@@ -62,8 +62,8 @@ def DeclaredSlacksPositive : Prop :=
     LPRowSlack.Positive domain_c12_positive_row
 
 def L2NTRowEquationsHold : Prop :=
-  (400 / 729 : Rat) * (69 / 40) + (22 / 25 : Rat) * 1 - (73 / 40)
-      = 73 / 48600 ∧
+  (400 / 729 : Rat) * (69 / 40) + (119 / 135 : Rat) * 1 - (73 / 40)
+      = 29 / 9720 ∧
     (400 / 729 : Rat) * (73 / 40) - (1001 / 1000)
       = 271 / 729000 ∧
     (400 / 729 : Rat) * (1001 / 1000) + (119 / 100 : Rat) * 1 - (69 / 40)

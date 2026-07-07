@@ -577,14 +577,15 @@ C_2^max = 2
 Tambien fija slacks racionales positivos para las filas L2NT:
 
 ```text
-L2NT_D1_slack = 73/48600
+L2NT_D1_slack = 29/9720
 L2NT_D2_slack = 271/729000
 L2NT_D3_slack = 2077/145800
 ```
 
-Estos slacks son los del certificado racional ya verificado. Los presupuestos
-`c22/c25/c28` anteriores son el margen observado del seam de redondeos y deben
-mantenerse como ledger separado hasta que haya verificacion racional.
+Estos slacks son los del certificado racional ya verificado tras el upgrade
+`B_lo = 119/135`. Los presupuestos `c22/c25/c28` anteriores son el margen
+observado del seam de redondeos y deben mantenerse como ledger separado hasta
+que haya verificacion racional.
 
 Endpoints trascendentales disponibles para el futuro consumo:
 

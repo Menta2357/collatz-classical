@@ -7,6 +7,8 @@ namespace KL2003
 #print axioms BTargetInterval_valid
 #print axioms BStrongInterval_valid
 #print axioms DTargetInterval_valid
+#print axioms k2_B_lower_stronger_than_old
+#print axioms k2_B_lower_implies_old
 #print axioms k2_coefficient_intervals_valid
 #print axioms k2Vars_inBox
 #print axioms lower_c22_row_positive
