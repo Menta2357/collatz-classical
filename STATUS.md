@@ -4,7 +4,7 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Eliahou upstream contact sent + KL2003 M0a piStar semantics Lean
+FASE ACTUAL:          Eliahou upstream contact sent + KL2003 M0a anchored + M0c scoped
 
 HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   AUDIT_ENTRY_READY
 HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   FEASIBILITY_GO
@@ -52,7 +52,10 @@ KL2003:
   M0A_PI_STAR_SEMANTICS_LEAN_BUILD_PASS
   M0A_PI_STAR_SEMANTICS_AXIOM_AUDIT_PASS
   M0A_PYTHON_LEAN_CROSS_VALIDATION_PASS
-  NEXT_FRONTIER = M0b/M0c scoping decision: retarded induction or D1/D2/D3 tree inequalities
+  M0A_THREE_WAY_VALIDATION_PASS
+  HISTORICAL_M1_SANITY_SCRIPT_CUSTODIED
+  M0C_RETARDED_INDUCTION_SCOPED
+  NEXT_FRONTIER = M0c Lean skeleton or M0b D1/D2/D3 tree-inequality scoping
   NO_M0_PROOF
   NO_M1_THEOREM
   NO_GLOBAL_COLLATZ_CLAIM

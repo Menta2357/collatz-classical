@@ -1,0 +1,17 @@
+{
+  "forward_orbit_equals_inverse_tree_bfs": true,
+  "forward_orbit_equals_lean_mirroring": true,
+  "grid_digest_sha256": "65bbece3f9a78844df4b97b874e844ee4fce8d6cd87246d864357b87db15f610",
+  "grid_rows": 6030,
+  "lean_mirroring_equals_inverse_tree_bfs": true,
+  "max_a": 30,
+  "max_x": 200,
+  "mismatch_count": 0,
+  "outputs": {
+    "hash_certificate_json": "outputs/KL2003_M0A_PI_STAR_THREE_WAY_VALIDATION_v1/hash_certificate.json",
+    "mismatch_csv": "outputs/KL2003_M0A_PI_STAR_THREE_WAY_VALIDATION_v1/mismatch.csv",
+    "summary_json": "outputs/KL2003_M0A_PI_STAR_THREE_WAY_VALIDATION_v1/summary.json",
+    "three_way_grid_csv": "outputs/KL2003_M0A_PI_STAR_THREE_WAY_VALIDATION_v1/three_way_grid.csv"
+  },
+  "status": "PASS"
+}
