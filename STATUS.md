@@ -58,7 +58,8 @@ KL2003:
   M0C_RETARDED_INDUCTION_SCOPED
   M0C_ZERO_EXTENSION_AND_BASE_SEGMENT_PATCHED
   M0B_D1_D2_D3_TREE_INEQUALITY_SCOPED
-  NEXT_FRONTIER = M0B Lean first lemma: inverse_children_disjoint_descendants / Prop reachability API
+  M0B_REACHABILITY_PROP_API_SCOPED
+  NEXT_FRONTIER = M0B Lean API: ReachesWithin bridge + inverse_children_disjoint_descendants
   NO_M0_PROOF
   NO_M1_THEOREM
   NO_GLOBAL_COLLATZ_CLAIM
