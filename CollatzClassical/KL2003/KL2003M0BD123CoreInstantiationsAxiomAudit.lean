@@ -1,0 +1,19 @@
+import CollatzClassical.KL2003.KL2003M0BD123CoreInstantiations
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms piStarFinset_card_zero
+#print axioms d1_core_instantiation
+#print axioms d2_single_branch_core_instantiation
+#print axioms d3_core_instantiation
+#print axioms d3_advanced_residue_mod_9_of_t_mod_0
+#print axioms d3_advanced_residue_mod_9_of_t_mod_1
+#print axioms d3_advanced_residue_mod_9_of_t_mod_2
+#print axioms d2_advanced_branch_residue_mod_three
+#print axioms retarded_residue_mod_9_of_root_mod_2
+#print axioms retarded_residue_mod_9_of_root_mod_5
+#print axioms retarded_residue_mod_9_of_root_mod_8
+
+end KL2003
+end CollatzClassical
