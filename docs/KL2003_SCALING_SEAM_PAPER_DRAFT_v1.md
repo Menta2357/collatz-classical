@@ -447,7 +447,10 @@ la ventana Nat es menor o igual que la frontera real
 Carga:
 
 ```text
-clase objetivo c22/c25/c28, segun a mod 9
+fila del caller/root:
+  a % 9 = 2 -> row22
+  a % 9 = 5 -> row25
+  a % 9 = 8 -> row28
 ```
 
 Estado:
@@ -509,23 +512,26 @@ xAdv es conservadora; puede reducir el conteo fuente disponible
 Carga:
 
 ```text
-c % 9 = 2 -> fila c22
-c % 9 = 5 -> fila c25
-c % 9 = 8 -> fila c28
+a % 9 = 2 -> row22
+a % 9 = 8 -> row28
+a % 9 = 5 -> sin cargo advanced, porque D2/row25 no consume la rama advanced
 ```
 
-Presupuestos observados para este ledger:
+Correccion de mapa:
 
 ```text
-c22 slack approx +0.007727
-c25 slack approx +0.000274
-c28 slack approx +0.008697
+incorrecto/diagnostico anterior:
+  cargar segun c % 9
+
+correcto:
+  cargar segun la fila del caller/root
 ```
 
 Riesgo:
 
 ```text
-c25 es fino. No se debe asumir que el redondeo cabe.
+row25/D2 no paga redondeo advanced.
+La senal c25 del test empirico era un artefacto del mapa por clase del child.
 ```
 
 En D3, el split de residuos ya probado en Lean dice:
@@ -533,13 +539,14 @@ En D3, el split de residuos ya probado en Lean dice:
 ```text
 a = 9*t + 8
 c = 6*t + 5
-t % 3 = 0 -> c % 9 = 5 -> carga c25
-t % 3 = 1 -> c % 9 = 2 -> carga c22
-t % 3 = 2 -> c % 9 = 8 -> carga c28
+t % 3 = 0 -> c % 9 = 5 -> termino phi_2^5, cargo row28
+t % 3 = 1 -> c % 9 = 2 -> termino phi_2^2, cargo row28
+t % 3 = 2 -> c % 9 = 8 -> termino phi_2^8, cargo row28
 ```
 
-El caso `t % 3 = 0` es el que exige mas cuidado por el margen pequeno de
-`c25`.
+La clase del child determina que termino del minimo se usa, no que fila paga
+el redondeo. El caso `t % 3 = 0` ya no amenaza el slack fino row25/D2; su cargo
+de redondeo es row28.
 
 ### D2 advanced branch
 
@@ -561,6 +568,22 @@ La rama advanced existe combinatoriamente, pero no entra en el ledger
 actual. La perdida aqui no es un floor/ceil local sino una exclusion estructural
 de clase.
 
+Consecuencia para el ledger:
+
+```text
+row25/D2 es single-branch
+xRet := x
+perdida retardada = 0
+row25 no paga redondeo advanced
+D2_slack = 271/729000 no se usa para absorber perdida advanced
+```
+
+La senal `D2/c25` del test empirico debe reclasificarse como:
+
+```text
+ARTIFACT_OF_CHILD_CLASS_CHARGE_MAP
+```
+
 ## Relacion Con El Certificado Racional
 
 El certificado k=2 data-level fija:
@@ -577,9 +600,9 @@ C_2^max = 2
 Tambien fija slacks racionales positivos para las filas L2NT:
 
 ```text
-L2NT_D1_slack = 29/9720
-L2NT_D2_slack = 271/729000
-L2NT_D3_slack = 2077/145800
+row22 / D1 slack = 29/9720
+row25 / D2 slack = 271/729000
+row28 / D3 slack = 2077/145800
 ```
 
 Estos slacks son los del certificado racional ya verificado tras el upgrade
@@ -597,6 +620,57 @@ D = lambda^(alpha-1) in [119/100, 6/5]
 M0C debe consumir estos hechos como inputs ya cerrados; no debe reabrir el LP
 ni la certificacion de potencias.
 
+## Absorcion De Redondeo Advanced
+
+Condicion documental de absorcion:
+
+```text
+coef_advanced * gamma / xAdv <= slack(row)
+```
+
+Umbrales indicados para el diseno:
+
+```text
+row22 absorbe cuando xAdv >= 128
+row28 absorbe cuando xAdv >= 37
+```
+
+Estos umbrales todavia no estan formalizados en Lean en esta nota. Antes del
+cierre Lean del ledger deben verificarse racionalmente, incluyendo el
+coeficiente advanced usado por la fila, el intervalo racional para
+`gamma = log_2(27/20)`, el slack exacto y la condicion `xAdv >= threshold`.
+
+No hay umbral row25 para redondeo advanced, porque row25/D2 no consume esa
+rama.
+
+## Base Segment Widening
+
+Para ventanas pequenas que no satisfacen los umbrales:
+
+```text
+row22: xAdv < 128
+row28: xAdv < 37
+```
+
+no se fuerza absorcion por slack. Esos casos se cubren ampliando el segmento
+base.
+
+Diseno:
+
+```text
+base segment aproximado: y in [0,14]
+profundidad EL <= 5
+Cmax = 2
+lambda = 27/20
+Delta := 1 / (Cmax * lambda^14)
+       = 1 / (2 * (27/20)^14)
+       = (20/27)^14 / 2
+```
+
+`Delta` es positivo y computable por racionales/intervalos. La eleccion exacta
+del modulo Lean futuro debe registrar si se usa como racional exacto o como
+intervalo racional cerrado.
+
 ## Test Empirico Posterior
 
 Script propuesto:
@@ -608,9 +682,11 @@ scripts/kl2003_scaling_seam_rounding_empirical_v1.py
 Output propuesto:
 
 ```text
-outputs/KL2003_SCALING_SEAM_EMPIRICAL_v1/summary.json
-outputs/KL2003_SCALING_SEAM_EMPIRICAL_v1/grid.csv
-outputs/KL2003_SCALING_SEAM_EMPIRICAL_v1/mismatch.csv
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/summary.json
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/grid.csv
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/mismatch.csv
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/c25_cases.csv
+outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/manifest_sha256.csv
 ```
 
 Grid inicial:
@@ -632,20 +708,57 @@ Para cada fila:
 7. verificar la desigualdad Nat combinatoria miembro/cardinalidad;
 8. medir floor_loss_target;
 9. medir floor_loss_advanced;
-10. asignar la perdida a c22/c25/c28 por residuo;
-11. comparar perdida normalizada contra los presupuestos observados.
+10. asignar la perdida advanced a row22 o row28 segun el caller/root;
+11. no asignar perdida advanced a row25;
+12. comparar perdida normalizada solo como diagnostico si la normalizacion no
+    esta formalmente cerrada.
 ```
 
-Checks esperados:
+Resultado empirico ya ejecutado:
 
 ```text
-core_nat_ok = true para todas las filas cubiertas por M0B
-rounding_budget_ok = pendiente hasta fijar normalizacion racional
-c25_cases_reported_separately = true
+total_rows = 1109082
+core_nat_ok_count = 1109019
+core_nat_fail_count = 0
+core_nat_skipped_count = 63
+mismatch_count = 0
+normalization_status = DIAGNOSTIC_ONLY_NOT_FORMAL
 ```
 
-Este test no sustituye una prueba Lean. Solo sirve para detectar temprano si
-el ledger de redondeos amenaza el margen `c25`.
+Interpretacion corregida:
+
+```text
+core Nat reconfirmed
+normalization advanced_floor_loss / x era diagnostica
+C25_BUDGET_THREAT_SIGNAL -> ARTIFACT_OF_CHILD_CLASS_CHARGE_MAP
+row25 is structurally immune to advanced rounding
+```
+
+El test no sustituye una prueba Lean. La absorcion formal queda pendiente para
+row22/row28 y para el base segment widening.
+
+## M0C Readiness
+
+M0C puede proceder por diseno despues de esta patch porque:
+
+```text
+filas abstractas EL fijadas
+medida retardedRank fijada
+base segment ensanchado
+redondeo advanced solo afecta row22/row28 con umbrales registrados
+row25 no paga advanced rounding
+```
+
+Pero todavia no se reclama:
+
+```text
+M0C probado
+ledger formal Lean cerrado
+umbrales 128/37 formalizados
+M0 theorem
+M1 theorem
+claim global de Collatz
+```
 
 ## Objetivo M1-Surrogate Final
 
@@ -665,15 +778,16 @@ gamma = log_2(27/20)
 El candidato de base abstracta M0C es:
 
 ```text
-DeltaM0CBase = lambda^-2 = (20/27)^2 = 400/729
+Delta := 1 / (2 * lambda^14) = (20/27)^14 / 2
 ```
 
-Pero el `Delta` semantico final debe quedar como placeholder hasta cerrar:
+Este `Delta` es la renormalizacion propuesta tras el widening del base segment.
+El `Delta` semantico final debe quedar como placeholder hasta cerrar:
 
 ```text
 scaling seam
 rounding ledger
-base segment semantico
+base segment semantico ensanchado
 EL rows abstractas consumidas por M0C
 ```
 
@@ -681,7 +795,7 @@ EL rows abstractas consumidas por M0C
 
 ```text
 No se crea Lean nuevo.
-No se modifica ningun modulo existente.
+No se modifica ningun modulo Lean existente.
 No se prueba M0C.
 No se cierra el ledger de redondeos.
 No se prueba M0.
@@ -698,7 +812,14 @@ RETARDED_BRANCH_X_TRAP_IDENTIFIED = yes
 EL_SYSTEM_REQUIRED_BEFORE_M0C = yes
 WINDOW_CHOICE_PROPOSED = yes
 ROUNDING_LEDGER_OPEN = yes
-C25_SLACK_RISK_IDENTIFIED = yes
+SCALING_SEAM_LEDGER_MAP_CORRECTED = yes
+ROUNDING_CHARGE_BY_CALLER_ROW = yes
+ROW25_ADVANCED_ROUNDING_IMMUNE = yes
+C25_THREAT_RECLASSIFIED_AS_DIAGNOSTIC_ARTIFACT = yes
+ROW22_ROW28_THRESHOLDS_RECORDED = yes
+BASE_SEGMENT_WIDENING_DEFINED = yes
+DELTA_RENORMALIZATION_DEFINED = yes
+M0C_READY_BY_DESIGN = yes
 M0C_NOT_STARTED = yes
 NO_NEW_LEAN = yes
 NO_M0_THEOREM = yes
