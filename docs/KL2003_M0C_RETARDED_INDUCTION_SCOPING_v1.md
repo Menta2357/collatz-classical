@@ -14,12 +14,19 @@ DELTA_MEASURE_IDENTIFIED
 BASE_SEGMENT_INPUT_IDENTIFIED
 CERTIFICATE_CONSUMER_PATH_DEFINED
 ZERO_EXTENSION_DECISION_RECORDED
-BASE_SEGMENT_WIDTH_TWO_RECORDED
+BASE_SEGMENT_0_14_REGISTERED
 DELTA_VS_BASE_WIDTH_DISTINGUISHED
-DELTA_LAMBDA_MINUS_TWO_SELECTED
+OLD_DELTA_LAMBDA_MINUS_TWO_DEPRECATED
+DELTA_V2_REGISTERED
+ROW22_ROW28_THRESHOLDS_REFERENCED
+ROW25_ADVANCED_ROUNDING_IMMUNITY_REFERENCED
+M0C_SCOPING_ALIGNED_WITH_SEAM_V2
+M0C_LEAN_READY_BY_DOCUMENTATION
 TREE_SEMANTICS_NOT_USED
 D1_D2_D3_NOT_USED
 M0C_SCOPING_PATCHED
+NO_NEW_LEAN
+NO_M0C_PROOF
 NO_M0_PROOF
 NO_M1_THEOREM
 NO_GLOBAL_COLLATZ_CLAIM
@@ -44,6 +51,8 @@ docs/KL2003_M0_SEMANTIC_BRIDGE_SCOPING_v1.md
 docs/KL2003_M0A_COMPUTABLE_PI_STAR_SEMANTICS_SCOPING_v1.md
 docs/KL2003_M0A_PI_STAR_SEMANTICS_LEAN_AND_CROSS_VALIDATION_v1.md
 docs/KL2003_M0C_BASE_SEGMENT_AND_ZERO_EXTENSION_PATCH_v1.md
+docs/KL2003_SCALING_SEAM_PAPER_DRAFT_v1.md
+docs/KL2003_SCALING_SEAM_LEDGER_MAP_AND_BASE_SEGMENT_PATCH_v2.md
 CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean
 CollatzClassical/KL2003/KL2003K2TranscendentalEndpoints.lean
 ```
@@ -51,6 +60,26 @@ CollatzClassical/KL2003/KL2003K2TranscendentalEndpoints.lean
 M0A ya fijo una semantica computable para `piStar`, pero M0C no debe consumir
 esa semantica. El proposito de M0C es aislar el mecanismo de induccion
 retardada sobre funciones abstractas de variable real.
+
+Nota v2: este scoping fue escrito originalmente antes del scaling seam v2. El
+modulo Lean futuro de M0C debe tomar como fuente de parametros el seam-v2:
+
+```text
+base segment final: 0 <= y < 14
+DeltaV2 = (20/27)^14 / 2 = 1 / (2 * (27/20)^14)
+row22 advanced rounding threshold: xAdv >= 128
+row28 advanced rounding threshold: xAdv >= 37
+row25/D2 no paga advanced rounding
+```
+
+Los parametros antiguos:
+
+```text
+base width 2
+Delta = lambda^-2
+```
+
+quedan deprecados como parametros finales de M0C.
 
 ## Objeto abstracto
 
@@ -155,39 +184,67 @@ M0C no reprobara los endpoints trascendentales.
 ### 3. Base segment lower bound pendiente
 
 El tramo base sigue siendo una hipotesis externa, pero su forma queda fijada
-por el parche M0C base/zero-extension. El retardo mas profundo es `-2`, por lo
-que el segmento base relevante es:
+por el scaling seam v2. El scoping original usaba el segmento pre-seam-v2:
 
 ```text
-0 <= y < 2
+old: 0 <= y < 2
 ```
 
-La constante del anclaje base es:
+Ese parametro ya no debe usarse como base final. El seam-v2 ensancha el
+segmento base para absorber ventanas pequenas que no satisfacen los umbrales
+de redondeo advanced:
+
+```text
+new: 0 <= y < 14
+```
+
+La constante antigua:
+
+```text
+old Delta = lambda^-2 = (20/27)^2
+```
+
+queda deprecada como constante final. La constante v2 es:
 
 ```lean
-noncomputable def DeltaM0CBase : Real := lambdaR ^ (-(2 : Real))
+noncomputable def DeltaV2 : Real := 1 / (2 * lambdaR ^ (14 : Real))
 ```
 
-Firma conceptual corregida:
+equivalentemente:
+
+```text
+DeltaV2 = (20/27)^14 / 2
+```
+
+Firma conceptual v2:
 
 ```lean
 def BaseSegmentLowerBound (Phi : K2PhiSystem) : Prop :=
-  forall y, 0 <= y -> y < 2 ->
-    DeltaM0CBase * lambdaR ^ y <= Phi.phi22 y /\
-    DeltaM0CBase * lambdaR ^ y <= Phi.phi25 y /\
-    DeltaM0CBase * lambdaR ^ y <= Phi.phi28 y
+  forall y, 0 <= y -> y < 14 ->
+    DeltaV2 * lambdaR ^ y <= Phi.phi22 y /\
+    DeltaV2 * lambdaR ^ y <= Phi.phi25 y /\
+    DeltaV2 * lambdaR ^ y <= Phi.phi28 y
 ```
 
-La razon es:
+La razon v2 es:
 
 ```text
-0 <= y < 2
-=> DeltaM0CBase * lambdaR^y <= 1
+0 <= y < 14
+=> DeltaV2 * lambdaR^y <= 1/2 <= 1
 => phi_2^m(y) >= 1 por conteo de la raiz
 ```
 
 La descarga Lean de que la raiz se cuenta a si misma pertenece a M0A/M0D, no a
 M0C.
+
+Condiciones laterales del seam-v2 que M0C debe citar, pero no probar:
+
+```text
+row22 advanced rounding absorbed for xAdv >= 128
+row28 advanced rounding absorbed for xAdv >= 37
+row25/D2 has no advanced rounding charge
+small windows below thresholds are covered by base segment widening
+```
 
 ### 4. Filas abstractas estilo I2/EL
 
@@ -264,8 +321,10 @@ retardedRank y
 No se debe intentar una recursion estructural sobre `y : Real`.
 
 Importante: `deltaM0C = 5 - 3*alpha` controla solo la medida bien fundada. No
-controla el ancho del segmento base. El ancho del segmento base es `2`, porque
-el retardo mas profundo del sistema I2/EL es `-2`.
+controla el ancho del segmento base. El retardo mas profundo del sistema I2/EL
+sigue siendo `-2`, pero el ancho base final v2 es `14`, impuesto por el
+scaling seam y el ledger de redondeo, no por la profundidad logica minima del
+sistema abstracto.
 
 ## Shifts activos
 
@@ -375,17 +434,18 @@ beta <= -delta
 ```
 
 El parche M0C base/zero-extension corrige la lectura del caso base: no debe
-identificarse `retardedRank y = 0` con el segmento `0 <= y < 2`. La induccion
-futura debe separar:
+identificarse `retardedRank y = 0` con el segmento base. Tras seam-v2, la
+induccion futura debe separar:
 
 ```text
 y < 0       -> extension por cero
-0 <= y < 2  -> base segment por raiz
-2 <= y      -> paso inductivo con descenso por deltaM0C
+0 <= y < 14 -> base segment ensanchado
+14 <= y     -> paso inductivo con descenso por deltaM0C
 ```
 
-En la region `2 <= y`, todos los argumentos retardados permanecen no negativos,
-porque todos los shifts activos son `>= -2`.
+En la region `14 <= y`, todos los argumentos retardados permanecen no
+negativos, porque todos los shifts activos son `>= -2`. El margen adicional
+absorbe las ventanas pequenas del scaling seam.
 
 ## Target Lean futuro
 
@@ -394,6 +454,40 @@ Archivo futuro:
 ```text
 CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean
 ```
+
+## M0C Lean contract after v2
+
+El modulo futuro debe incluir:
+
+```text
+abstract Phi functions
+EL row hypotheses
+zero-extension for y < 0
+retardedRank with delta = 5 - 3*alpha
+base segment [0,14]
+DeltaV2 = (20/27)^14 / 2
+row22/row28 threshold assumptions referenced as seam inputs
+row25 advanced rounding immunity referenced as seam input
+```
+
+M0C sigue siendo abstracto:
+
+```text
+M0C consumes EL rows as hypotheses
+M0C does not touch piStarFinset
+M0C does not prove the scaling seam
+M0C does not prove the rounding ledger
+M0C does not prove the M1 theorem
+```
+
+Conclusion abstracta esperada:
+
+```text
+phi_m(y) >= DeltaV2 * c_m * lambda^y
+```
+
+en la region inductiva, o la formulacion abstracta equivalente fijada en el
+modulo Lean futuro.
 
 Imports esperados:
 
@@ -427,7 +521,7 @@ structure K2PhiSystem where
 
 noncomputable def deltaM0C : Real := 5 - 3 * alpha
 
-noncomputable def DeltaM0CBase : Real := lambdaR ^ (-(2 : Real))
+noncomputable def DeltaV2 : Real := 1 / (2 * lambdaR ^ (14 : Real))
 
 noncomputable def retardedRank (y : Real) : Nat :=
   Nat.ceil (y / deltaM0C)
@@ -486,7 +580,9 @@ D2
 D3
 desigualdades de arbol
 semantica de piStar
-base segment lower bound
+scaling seam
+rounding ledger
+base segment lower bound semantico
 M0
 M1
 teorema global de Collatz
@@ -504,12 +600,19 @@ DELTA_MEASURE_IDENTIFIED = yes
 BASE_SEGMENT_INPUT_IDENTIFIED = yes
 CERTIFICATE_CONSUMER_PATH_DEFINED = yes
 ZERO_EXTENSION_DECISION_RECORDED = yes
-BASE_SEGMENT_WIDTH_TWO_RECORDED = yes
+BASE_SEGMENT_0_14_REGISTERED = yes
 DELTA_VS_BASE_WIDTH_DISTINGUISHED = yes
-DELTA_LAMBDA_MINUS_TWO_SELECTED = yes
+OLD_DELTA_LAMBDA_MINUS_TWO_DEPRECATED = yes
+DELTA_V2_REGISTERED = yes
+ROW22_ROW28_THRESHOLDS_REFERENCED = yes
+ROW25_ADVANCED_ROUNDING_IMMUNITY_REFERENCED = yes
+M0C_SCOPING_ALIGNED_WITH_SEAM_V2 = yes
+M0C_LEAN_READY_BY_DOCUMENTATION = yes
 TREE_SEMANTICS_NOT_USED = yes
 D1_D2_D3_NOT_USED = yes
 M0C_SCOPING_PATCHED = yes
+NO_NEW_LEAN = yes
+NO_M0C_PROOF = yes
 NO_M0_PROOF = yes
 NO_M1_THEOREM = yes
 NO_GLOBAL_COLLATZ_CLAIM = yes
