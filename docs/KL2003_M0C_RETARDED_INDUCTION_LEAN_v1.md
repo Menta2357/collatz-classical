@@ -1,12 +1,13 @@
 # KL2003_M0C_RETARDED_INDUCTION_LEAN_v1
 
-Fecha: 2026-07-09.
+Fecha: 2026-07-09. Patches M0C: contrato ponderado y base desde unidad
+aritmetica, 2026-07-10.
 
-Estado: modulo Lean abstracto M0C creado y compilado. La capa de sistema,
-base seam-v2, filas EL como hipotesis y descenso de `retardedRank` esta
-formalizada. El teorema ponderado completo `m0c_retarded_induction_bound` no
-se declara, porque el contrato base seam-v2 documentado es mas debil que la
-base ponderada que necesita el primer paso inductivo.
+Estado: modulo Lean abstracto M0C creado y compilado, con patch de contrato
+ponderado y cierre aritmetico de la base ponderada desde una base unitaria
+abstracta. La capa de sistema, base seam-v2 ponderada como hipotesis, filas EL
+como hipotesis y descenso de `retardedRank` esta formalizada. El teorema
+ponderado completo `m0c_retarded_induction_bound` no se declara en este patch.
 
 ## Clasificacion
 
@@ -14,13 +15,18 @@ base ponderada que necesita el primer paso inductivo.
 M0C_ABSTRACT_SYSTEM_DEFINED
 M0C_BASE_SEGMENT_V2_FORMALIZED
 M0C_SHIFT_DESCENT_LEMMAS_PROVED
-BASE_SEGMENT_V2_CONSUMED
+M0C_WEIGHTED_BASE_CONTRACT_PATCHED
+BASE_SEGMENT_WEIGHTED_LOWER_BOUND_CONSUMED_AS_INPUT
+BASE_WEIGHTED_FROM_UNIT_PROVED
+BASE_ARITHMETIC_DEBT_CLOSED_IN_M0C
+ROOT_COUNT_UNIT_BASE_DEFERRED
+BASE_WEAK_INPUT_NOT_USED_FOR_WEIGHTED_TARGET
+M0C_LAYER_SEPARATION_RESTORED
+ROOT_COUNT_BRIDGE_DEFERRED
+BASE_SEGMENT_V2_CONSUMED_AS_WEAK_DOCUMENTAL_INPUT
 DELTA_V2_USED
 EL_ROWS_CONSUMED_AS_HYPOTHESES
 RETARDED_RANK_DESCENT_PROVED
-M0C_BLOCKED_ON_RETARDED_INDUCTION
-M0C_BLOCKED_ON_BASE_WEIGHTED_LOWER_BOUND
-M0C_BLOCKED_ON_CERTIFICATE_ROW_ARITHMETIC
 NO_PISTAR_SEMANTICS
 NO_SCALING_SEAM_PROOF
 NO_ROUNDING_LEDGER_PROOF
@@ -33,6 +39,7 @@ No se clasifica como:
 ```text
 M0C_RETARDED_INDUCTION_ABSTRACT_PROVED
 ABSTRACT_PHI_BOUND_PROVED
+M0C_BLOCKED_ON_BASE_WEIGHTED_LOWER_BOUND
 M0C_BLOCKED_ON_REAL_CEIL_RANK
 ```
 
@@ -80,9 +87,35 @@ M1
 K2PhiZeroExtension
 I2ELAbstractRows
 BaseSegmentLowerBound
+BaseSegmentUnitLowerBound
 BaseSegmentWeightedLowerBound
 K2RetardedInductionInputs
 RetardedLowerBoundConclusion
+```
+
+`K2RetardedInductionInputs` consume ahora:
+
+```text
+weightedBase : BaseSegmentWeightedLowerBound Phi
+```
+
+La base debil `BaseSegmentLowerBound` permanece definida para documentar un
+input no ponderado. La nueva base unitaria abstracta:
+
+```text
+BaseSegmentUnitLowerBound Phi
+```
+
+usa el segmento cerrado `0 <= y <= 14`. Esta decision es intencional: la
+aritmetica de monotonicidad de `lambdaR^y` se cierra naturalmente hasta el
+endpoint `14`, mientras que `BaseSegmentWeightedLowerBound` sigue consumiendo
+el segmento abierto `0 <= y < 14` y usa `le_of_lt` para aplicar la hipotesis
+unitaria.
+
+El input operativo del target ponderado sigue siendo:
+
+```text
+weightedBase : BaseSegmentWeightedLowerBound Phi
 ```
 
 Las filas EL quedan como hipotesis abstractas:
@@ -105,6 +138,16 @@ DeltaV2_pos
 c22R_pos
 c25R_pos
 c28R_pos
+c22R_le_two
+c25R_le_two
+c28R_le_two
+lambdaR_rpow_le_pow_fourteen
+DeltaV2_mul_two_mul_lambdaR_pow_fourteen
+DeltaV2_mul_coeff_mul_lambdaR_rpow_le_one
+DeltaV2_mul_c22R_mul_lambdaR_rpow_le_one
+DeltaV2_mul_c25R_mul_lambdaR_rpow_le_one
+DeltaV2_mul_c28R_mul_lambdaR_rpow_le_one
+base_weighted_of_unit
 deltaM0C_pos
 one_fifth_lt_deltaM0C
 deltaM0C_le_two
@@ -135,7 +178,7 @@ retardedRank_drop :
 
 y sus cinco instancias para los shifts activos.
 
-## Bloqueo Exacto Del Teorema Ponderado
+## Patch Del Contrato Ponderado
 
 El target deseado pide, para `14 <= y`:
 
@@ -154,7 +197,50 @@ Pero el base segment seam-v2 documentado y formalizado como input es:
   DeltaV2 * lambdaR^y <= Phi.phi28 y
 ```
 
-Esa base no es ponderada por `c22R`, `c25R`, `c28R`.
+Esa base no es ponderada por `c22R`, `c25R`, `c28R`, asi que ahora M0C consume
+explicitamente:
+
+```text
+BaseSegmentWeightedLowerBound Phi
+```
+
+con helpers:
+
+```text
+weightedBaseSegment_phi22
+weightedBaseSegment_phi25
+weightedBaseSegment_phi28
+```
+
+La base debil queda como objeto documental, no como input suficiente para el
+target ponderado.
+
+M0C tambien prueba ahora la parte aritmetica que permite generar la base
+ponderada desde una base unitaria:
+
+```text
+base_weighted_of_unit :
+  BaseSegmentUnitLowerBound Phi ->
+  BaseSegmentWeightedLowerBound Phi
+```
+
+La demostracion usa:
+
+```text
+c22R <= 2
+c25R <= 2
+c28R <= 2
+lambdaR^y <= lambdaR^14      para y <= 14
+DeltaV2 * 2 * lambdaR^14 = 1
+```
+
+Por tanto, para `0 <= y < 14`:
+
+```text
+DeltaV2 * c_m * lambdaR^y <= 1
+```
+
+y la hipotesis unitaria `1 <= Phi.phi_m y` cierra la base ponderada.
 
 En el primer paso inductivo desde `y = 14`, las llamadas retardadas caen en
 el segmento base:
@@ -184,17 +270,28 @@ lambda^-2 * 1 + lambda^(alpha-2) * 1
 que no alcanza `c22`. Por tanto no es correcto declarar el teorema ponderado
 completo sin una entrada adicional.
 
-La forma natural de desbloqueo es una de estas dos:
+La deuda restante pertenece al modulo posterior:
 
 ```text
-1. fortalecer el input base a BaseSegmentWeightedLowerBound; o
-2. probar desde el seam/base semantico que, para 0 <= y < 14,
-   DeltaV2 * c_m * lambdaR^y <= Phi.phi_m y
-   usando Cmax = 2 y el lower bound de raiz.
+BASE_SEGMENT_WEIGHTED_FROM_ROOT_COUNT
 ```
 
-Esta segunda ruta pertenece al scaling seam/base semantic bridge, no a M0C
-abstracto.
+Ese puente ya no necesita repetir la aritmetica anterior. Solo debera probar la
+base unitaria semantica:
+
+```text
+BaseSegmentUnitLowerBound Phi
+```
+
+desde root-count/conteo de la raiz. M0C no importa esa semantica ni prueba ese
+origen.
+
+Resumen de separacion:
+
+```text
+M0C prueba:    BaseSegmentUnitLowerBound -> BaseSegmentWeightedLowerBound
+Futuro prueba: root-count/piStar -> BaseSegmentUnitLowerBound
+```
 
 ## Verificacion
 
@@ -227,7 +324,7 @@ No se prueba:
 ```text
 scaling seam
 rounding ledger
-base segment semantico
+base segment semantico/root-count
 M0 theorem
 M1 theorem
 global Collatz claim
@@ -249,15 +346,23 @@ native_decide
 M0C_ABSTRACT_SYSTEM_DEFINED = yes
 M0C_BASE_SEGMENT_V2_FORMALIZED = yes
 M0C_SHIFT_DESCENT_LEMMAS_PROVED = yes
-BASE_SEGMENT_V2_CONSUMED = yes
+M0C_WEIGHTED_BASE_CONTRACT_PATCHED = yes
+BASE_SEGMENT_WEIGHTED_LOWER_BOUND_CONSUMED_AS_INPUT = yes
+BASE_WEIGHTED_FROM_UNIT_PROVED = yes
+BASE_ARITHMETIC_DEBT_CLOSED_IN_M0C = yes
+ROOT_COUNT_UNIT_BASE_DEFERRED = yes
+BASE_WEAK_INPUT_NOT_USED_FOR_WEIGHTED_TARGET = yes
+M0C_LAYER_SEPARATION_RESTORED = yes
+ROOT_COUNT_BRIDGE_DEFERRED = yes
+BASE_SEGMENT_V2_CONSUMED_AS_WEAK_DOCUMENTAL_INPUT = yes
 DELTA_V2_USED = yes
 EL_ROWS_CONSUMED_AS_HYPOTHESES = yes
 RETARDED_RANK_DESCENT_PROVED = yes
 ABSTRACT_PHI_BOUND_PROVED = no
 M0C_RETARDED_INDUCTION_ABSTRACT_PROVED = no
-M0C_BLOCKED_ON_RETARDED_INDUCTION = yes
-M0C_BLOCKED_ON_BASE_WEIGHTED_LOWER_BOUND = yes
-M0C_BLOCKED_ON_CERTIFICATE_ROW_ARITHMETIC = yes
+M0C_BLOCKED_ON_RETARDED_INDUCTION = not_assessed_in_contract_patch
+M0C_BLOCKED_ON_BASE_WEIGHTED_LOWER_BOUND = no_explicit_contract_now
+M0C_BLOCKED_ON_CERTIFICATE_ROW_ARITHMETIC = not_assessed_in_contract_patch
 M0C_BLOCKED_ON_REAL_CEIL_RANK = no
 NO_PISTAR_SEMANTICS = yes
 NO_SCALING_SEAM_PROOF = yes
