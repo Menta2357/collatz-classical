@@ -1,0 +1,10 @@
+import CollatzClassical.KL2003.KL2003RootCountUnitBase
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms root_mem_piStarFinset_of_root_in_window
+#print axioms root_count_unit_lower_bound_for_window
+
+end KL2003
+end CollatzClassical
