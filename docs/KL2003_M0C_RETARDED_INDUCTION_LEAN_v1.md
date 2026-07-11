@@ -27,6 +27,13 @@ BASE_SEGMENT_V2_CONSUMED_AS_WEAK_DOCUMENTAL_INPUT
 DELTA_V2_USED
 EL_ROWS_CONSUMED_AS_HYPOTHESES
 RETARDED_RANK_DESCENT_PROVED
+I2_EL_ROWS_V2_DEFINED
+EPSILON0_DEFINED
+PADDED_SHIFT_DESCENT_LEMMAS_PROVED
+V1_RETAINED_AS_IDEAL_CONTRACT
+V2_NOT_YET_CONSUMED_BY_MAIN_TARGET
+PADDED_CERTIFICATE_RECHECK_STILL_PENDING
+M0C_MAIN_INDUCTION_NOT_STARTED
 NO_PISTAR_SEMANTICS
 NO_SCALING_SEAM_PROOF
 NO_ROUNDING_LEDGER_PROOF
@@ -76,6 +83,13 @@ shiftAlphaMinusTwo := alpha - 2
 shiftAlphaMinusThree := alpha - 3
 shiftTwoAlphaMinusFive := 2*alpha - 5
 shiftThreeAlphaMinusFive := 3*alpha - 5
+
+epsilon0 := 1/10000
+shiftAlphaMinus2Pad := alpha - 2 - epsilon0
+shiftAlphaMinus1Pad := alpha - 1 - epsilon0
+shiftAlphaMinus3Pad := alpha - 3 - epsilon0
+shift2AlphaMinus5Pad2 := 2*alpha - 5 - 2*epsilon0
+shift3AlphaMinus5Pad3 := 3*alpha - 5 - 3*epsilon0
 ```
 
 Tambien define:
@@ -86,6 +100,7 @@ M2
 M1
 K2PhiZeroExtension
 I2ELAbstractRows
+I2ELAbstractRowsV2
 BaseSegmentLowerBound
 BaseSegmentUnitLowerBound
 BaseSegmentWeightedLowerBound
@@ -253,6 +268,100 @@ y + 2*alpha - 5
 y + 3*alpha - 5
 ```
 
+## Rows V2 Epsilon Pad
+
+El modulo mantiene dos contratos de filas:
+
+```text
+I2ELAbstractRows    -- V1 ideal/continuo
+I2ELAbstractRowsV2  -- V2 seam-compatible con pads epsilon
+```
+
+`I2ELAbstractRowsV2` se definio en paralelo y no reemplaza todavia el input
+principal:
+
+```text
+K2RetardedInductionInputs.rows : I2ELAbstractRows Phi
+```
+
+La constante formalizada es:
+
+```text
+epsilon0 := 1/10000
+```
+
+con lemas:
+
+```text
+epsilon0_pos
+epsilon0_nonneg
+epsilon0_lt_one
+```
+
+La V2 restringe las filas a la region inductiva `14 <= y`. Los terminos
+retardados permanecen exactos:
+
+```text
+y - 2
+```
+
+Los terminos advanced/min reciben pads:
+
+```text
+row22:
+  y + shiftAlphaMinus2Pad
+
+row25:
+  y - 2
+  -- single-branch; no advanced pad
+
+row28EL:
+  y + shiftAlphaMinus3Pad
+  M1V2 with y + shift2AlphaMinus5Pad2
+  M2V2 with y + shift3AlphaMinus5Pad3
+```
+
+Tambien queda definido `shiftAlphaMinus1Pad` para bookkeeping de endpoints o
+seam, pero no se consume como shift retardado de V2 y por eso no tiene lema de
+descenso asociado en este patch.
+
+Se probaron las comparaciones:
+
+```text
+shiftAlphaMinus2Pad <= shiftAlphaMinusTwo
+shiftAlphaMinus3Pad <= shiftAlphaMinusThree
+shift2AlphaMinus5Pad2 <= shiftTwoAlphaMinusFive
+shift3AlphaMinus5Pad3 <= shiftThreeAlphaMinusFive
+```
+
+y por transitividad con los shifts V1:
+
+```text
+shiftAlphaMinus2Pad <= -deltaM0C
+shiftAlphaMinus3Pad <= -deltaM0C
+shift2AlphaMinus5Pad2 <= -deltaM0C
+shift3AlphaMinus5Pad3 <= -deltaM0C
+```
+
+Esto da las instancias:
+
+```text
+retardedRank_drop_shiftAlphaMinus2Pad
+retardedRank_drop_shiftAlphaMinus3Pad
+retardedRank_drop_shift2AlphaMinus5Pad2
+retardedRank_drop_shift3AlphaMinus5Pad3
+```
+
+La aritmetica del certificado con pads todavia no se re-chequea aqui. El
+estado correcto es:
+
+```text
+V1 retained as ideal contract
+V2 defined as seam-compatible contract
+V2 not yet consumed by main target
+padded certificate recheck pending
+```
+
 El certificado racional de filas usa coeficientes ponderados, por ejemplo:
 
 ```text
@@ -358,6 +467,13 @@ BASE_SEGMENT_V2_CONSUMED_AS_WEAK_DOCUMENTAL_INPUT = yes
 DELTA_V2_USED = yes
 EL_ROWS_CONSUMED_AS_HYPOTHESES = yes
 RETARDED_RANK_DESCENT_PROVED = yes
+I2_EL_ROWS_V2_DEFINED = yes
+EPSILON0_DEFINED = yes
+PADDED_SHIFT_DESCENT_LEMMAS_PROVED = yes
+V1_RETAINED_AS_IDEAL_CONTRACT = yes
+V2_NOT_YET_CONSUMED_BY_MAIN_TARGET = yes
+PADDED_CERTIFICATE_RECHECK_STILL_PENDING = yes
+M0C_MAIN_INDUCTION_NOT_STARTED = yes
 ABSTRACT_PHI_BOUND_PROVED = no
 M0C_RETARDED_INDUCTION_ABSTRACT_PROVED = no
 M0C_BLOCKED_ON_RETARDED_INDUCTION = not_assessed_in_contract_patch

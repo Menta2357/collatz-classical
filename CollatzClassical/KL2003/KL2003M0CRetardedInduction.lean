@@ -43,6 +43,14 @@ noncomputable def shiftAlphaMinusThree : Real := alpha - 3
 noncomputable def shiftTwoAlphaMinusFive : Real := 2 * alpha - 5
 noncomputable def shiftThreeAlphaMinusFive : Real := 3 * alpha - 5
 
+noncomputable def epsilon0 : Real := (1 / 10000 : Real)
+
+noncomputable def shiftAlphaMinus2Pad : Real := alpha - 2 - epsilon0
+noncomputable def shiftAlphaMinus1Pad : Real := alpha - 1 - epsilon0
+noncomputable def shiftAlphaMinus3Pad : Real := alpha - 3 - epsilon0
+noncomputable def shift2AlphaMinus5Pad2 : Real := 2 * alpha - 5 - 2 * epsilon0
+noncomputable def shift3AlphaMinus5Pad3 : Real := 3 * alpha - 5 - 3 * epsilon0
+
 def min3 (a b c : Real) : Real := min a (min b c)
 
 noncomputable def M2 (Phi : K2PhiSystem) (y : Real) : Real :=
@@ -55,6 +63,17 @@ noncomputable def M1 (Phi : K2PhiSystem) (y : Real) : Real :=
   min
     (Phi.phi28 (y + 2 * alpha - 5) + M2 Phi y)
     (Phi.phi22 (y + 2 * alpha - 5))
+
+noncomputable def M2V2 (Phi : K2PhiSystem) (y : Real) : Real :=
+  min3
+    (Phi.phi22 (y + shift3AlphaMinus5Pad3))
+    (Phi.phi25 (y + shift3AlphaMinus5Pad3))
+    (Phi.phi28 (y + shift3AlphaMinus5Pad3))
+
+noncomputable def M1V2 (Phi : K2PhiSystem) (y : Real) : Real :=
+  min
+    (Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V2 Phi y)
+    (Phi.phi22 (y + shift2AlphaMinus5Pad2))
 
 def K2PhiZeroExtension (Phi : K2PhiSystem) : Prop :=
   forall y, y < 0 ->
@@ -80,6 +99,31 @@ structure I2ELAbstractRows (Phi : K2PhiSystem) : Prop where
         + min
             (Phi.phi28 (y + alpha - 3) + M1 Phi y)
             (Phi.phi22 (y + alpha - 3))
+        <= Phi.phi28 y
+
+/--
+Seam-compatible epsilon-padded EL rows.  This contract is kept beside the
+ideal/continuous `I2ELAbstractRows`; the main M0C input has not been switched
+to V2 in this module.
+-/
+structure I2ELAbstractRowsV2 (Phi : K2PhiSystem) : Prop where
+  row22 :
+    forall y, 14 <= y ->
+      Phi.phi28 (y - 2)
+        + min3
+            (Phi.phi22 (y + shiftAlphaMinus2Pad))
+            (Phi.phi25 (y + shiftAlphaMinus2Pad))
+            (Phi.phi28 (y + shiftAlphaMinus2Pad))
+        <= Phi.phi22 y
+  row25 :
+    forall y, 14 <= y ->
+      Phi.phi22 (y - 2) <= Phi.phi25 y
+  row28EL :
+    forall y, 14 <= y ->
+      Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad))
         <= Phi.phi28 y
 
 def BaseSegmentLowerBound (Phi : K2PhiSystem) : Prop :=
@@ -274,6 +318,15 @@ theorem base_weighted_of_unit
       (DeltaV2_mul_c25R_mul_lambdaR_rpow_le_one hy0 hy14le).trans hunit_y.2.1,
       (DeltaV2_mul_c28R_mul_lambdaR_rpow_le_one hy0 hy14le).trans hunit_y.2.2 ⟩
 
+theorem epsilon0_pos : 0 < epsilon0 := by
+  norm_num [epsilon0]
+
+theorem epsilon0_nonneg : 0 <= epsilon0 :=
+  epsilon0_pos.le
+
+theorem epsilon0_lt_one : epsilon0 < 1 := by
+  norm_num [epsilon0]
+
 theorem deltaM0C_pos : 0 < deltaM0C := by
   dsimp [deltaM0C]
   linarith [alpha_upper_bound]
@@ -322,6 +375,46 @@ theorem shift_three_alpha_minus_five_eq_neg_deltaM0C :
     shiftThreeAlphaMinusFive = -deltaM0C := by
   dsimp [shiftThreeAlphaMinusFive, deltaM0C]
   ring_nf
+
+theorem shift_alpha_minus2_pad_le_shift_alpha_minus_two :
+    shiftAlphaMinus2Pad <= shiftAlphaMinusTwo := by
+  dsimp [shiftAlphaMinus2Pad, shiftAlphaMinusTwo]
+  linarith [epsilon0_nonneg]
+
+theorem shift_alpha_minus3_pad_le_shift_alpha_minus_three :
+    shiftAlphaMinus3Pad <= shiftAlphaMinusThree := by
+  dsimp [shiftAlphaMinus3Pad, shiftAlphaMinusThree]
+  linarith [epsilon0_nonneg]
+
+theorem shift2_alpha_minus5_pad2_le_shift_two_alpha_minus_five :
+    shift2AlphaMinus5Pad2 <= shiftTwoAlphaMinusFive := by
+  dsimp [shift2AlphaMinus5Pad2, shiftTwoAlphaMinusFive]
+  linarith [epsilon0_nonneg]
+
+theorem shift3_alpha_minus5_pad3_le_shift_three_alpha_minus_five :
+    shift3AlphaMinus5Pad3 <= shiftThreeAlphaMinusFive := by
+  dsimp [shift3AlphaMinus5Pad3, shiftThreeAlphaMinusFive]
+  linarith [epsilon0_nonneg]
+
+theorem shift_alpha_minus2_pad_le_neg_deltaM0C :
+    shiftAlphaMinus2Pad <= -deltaM0C :=
+  shift_alpha_minus2_pad_le_shift_alpha_minus_two.trans
+    shift_alpha_minus_two_le_neg_deltaM0C
+
+theorem shift_alpha_minus3_pad_le_neg_deltaM0C :
+    shiftAlphaMinus3Pad <= -deltaM0C :=
+  shift_alpha_minus3_pad_le_shift_alpha_minus_three.trans
+    shift_alpha_minus_three_le_neg_deltaM0C
+
+theorem shift2_alpha_minus5_pad2_le_neg_deltaM0C :
+    shift2AlphaMinus5Pad2 <= -deltaM0C :=
+  shift2_alpha_minus5_pad2_le_shift_two_alpha_minus_five.trans
+    shift_two_alpha_minus_five_le_neg_deltaM0C
+
+theorem shift3_alpha_minus5_pad3_le_neg_deltaM0C :
+    shift3AlphaMinus5Pad3 <= -deltaM0C :=
+  shift3_alpha_minus5_pad3_le_shift_three_alpha_minus_five.trans
+    (le_of_eq shift_three_alpha_minus_five_eq_neg_deltaM0C)
 
 theorem retardedRank_drop
     {y beta : Real}
@@ -384,6 +477,26 @@ theorem retardedRank_drop_three_alpha_minus_five
       le_of_eq shift_three_alpha_minus_five_eq_neg_deltaM0C
   simpa [sub_eq_add_neg, add_assoc] using
     (retardedRank_drop (y := y) (beta := 3 * alpha - 5) hle hpos)
+
+theorem retardedRank_drop_shiftAlphaMinus2Pad
+    {y : Real} (hpos : 0 < retardedRank y) :
+    retardedRank (y + shiftAlphaMinus2Pad) < retardedRank y :=
+  retardedRank_drop shift_alpha_minus2_pad_le_neg_deltaM0C hpos
+
+theorem retardedRank_drop_shiftAlphaMinus3Pad
+    {y : Real} (hpos : 0 < retardedRank y) :
+    retardedRank (y + shiftAlphaMinus3Pad) < retardedRank y :=
+  retardedRank_drop shift_alpha_minus3_pad_le_neg_deltaM0C hpos
+
+theorem retardedRank_drop_shift2AlphaMinus5Pad2
+    {y : Real} (hpos : 0 < retardedRank y) :
+    retardedRank (y + shift2AlphaMinus5Pad2) < retardedRank y :=
+  retardedRank_drop shift2_alpha_minus5_pad2_le_neg_deltaM0C hpos
+
+theorem retardedRank_drop_shift3AlphaMinus5Pad3
+    {y : Real} (hpos : 0 < retardedRank y) :
+    retardedRank (y + shift3AlphaMinus5Pad3) < retardedRank y :=
+  retardedRank_drop shift3_alpha_minus5_pad3_le_neg_deltaM0C hpos
 
 /-!
 The weighted base segment is now the explicit M0C contract.  A later

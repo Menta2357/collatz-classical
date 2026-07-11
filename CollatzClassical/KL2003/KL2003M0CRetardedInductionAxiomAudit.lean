@@ -24,6 +24,9 @@ namespace KL2003
 #print axioms DeltaV2_mul_c25R_mul_lambdaR_rpow_le_one
 #print axioms DeltaV2_mul_c28R_mul_lambdaR_rpow_le_one
 #print axioms base_weighted_of_unit
+#print axioms epsilon0_pos
+#print axioms epsilon0_nonneg
+#print axioms epsilon0_lt_one
 #print axioms deltaM0C_pos
 #print axioms one_fifth_lt_deltaM0C
 #print axioms deltaM0C_le_two
@@ -36,12 +39,24 @@ namespace KL2003
 #print axioms shift_alpha_minus_three_le_neg_deltaM0C
 #print axioms shift_two_alpha_minus_five_le_neg_deltaM0C
 #print axioms shift_three_alpha_minus_five_eq_neg_deltaM0C
+#print axioms shift_alpha_minus2_pad_le_shift_alpha_minus_two
+#print axioms shift_alpha_minus3_pad_le_shift_alpha_minus_three
+#print axioms shift2_alpha_minus5_pad2_le_shift_two_alpha_minus_five
+#print axioms shift3_alpha_minus5_pad3_le_shift_three_alpha_minus_five
+#print axioms shift_alpha_minus2_pad_le_neg_deltaM0C
+#print axioms shift_alpha_minus3_pad_le_neg_deltaM0C
+#print axioms shift2_alpha_minus5_pad2_le_neg_deltaM0C
+#print axioms shift3_alpha_minus5_pad3_le_neg_deltaM0C
 #print axioms retardedRank_drop
 #print axioms retardedRank_drop_minus_two
 #print axioms retardedRank_drop_alpha_minus_two
 #print axioms retardedRank_drop_alpha_minus_three
 #print axioms retardedRank_drop_two_alpha_minus_five
 #print axioms retardedRank_drop_three_alpha_minus_five
+#print axioms retardedRank_drop_shiftAlphaMinus2Pad
+#print axioms retardedRank_drop_shiftAlphaMinus3Pad
+#print axioms retardedRank_drop_shift2AlphaMinus5Pad2
+#print axioms retardedRank_drop_shift3AlphaMinus5Pad3
 
 end KL2003
 end CollatzClassical
