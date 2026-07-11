@@ -1,5 +1,6 @@
 import CollatzClassical.KL2003.KL2003K2CertificateVerifier
 import CollatzClassical.KL2003.KL2003K2TranscendentalEndpoints
+import Mathlib.Analysis.Convex.SpecificFunctions.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Algebra.Order.Floor.Semiring
 import Mathlib.Tactic.FieldSimp
@@ -326,6 +327,90 @@ theorem epsilon0_nonneg : 0 <= epsilon0 :=
 
 theorem epsilon0_lt_one : epsilon0 < 1 := by
   norm_num [epsilon0]
+
+theorem lambdaR_cube_lt_four : lambdaR ^ (3 : Real) < 4 := by
+  norm_num [lambdaR]
+
+theorem pad_inv_power_ge_four :
+    (4 : Real) <= (10000 / 9997 : Real) ^ (10000 : Real) := by
+  have hbern :
+      (1 : Real) + (10000 : Real) * (3 / 9997 : Real) <=
+        ((1 : Real) + (3 / 9997 : Real)) ^ (10000 : Real) :=
+    one_add_mul_self_le_rpow_one_add
+      (s := (3 / 9997 : Real))
+      (p := (10000 : Real))
+      (by norm_num)
+      (by norm_num)
+  calc
+    (4 : Real) <= (1 : Real) + (10000 : Real) * (3 / 9997 : Real) := by
+      norm_num
+    _ <= ((1 : Real) + (3 / 9997 : Real)) ^ (10000 : Real) := hbern
+    _ = (10000 / 9997 : Real) ^ (10000 : Real) := by
+      norm_num
+
+theorem lambdaR_three_epsilon_le_pad_inv :
+    lambdaR ^ (3 * epsilon0) <= (10000 / 9997 : Real) := by
+  have hpow :
+      (lambdaR ^ (3 * epsilon0)) ^ (10000 : Real) <=
+        (10000 / 9997 : Real) ^ (10000 : Real) := by
+    calc
+      (lambdaR ^ (3 * epsilon0)) ^ (10000 : Real)
+          = lambdaR ^ ((3 * epsilon0) * (10000 : Real)) := by
+            rw [← Real.rpow_mul lambdaR_pos.le]
+      _ = lambdaR ^ (3 : Real) := by
+            congr 1
+            norm_num [epsilon0]
+      _ <= (10000 / 9997 : Real) ^ (10000 : Real) :=
+            (le_of_lt lambdaR_cube_lt_four).trans pad_inv_power_ge_four
+  exact
+    (Real.rpow_le_rpow_iff
+      (Real.rpow_nonneg lambdaR_pos.le _)
+      (by norm_num : 0 <= (10000 / 9997 : Real))
+      (by norm_num : 0 < (10000 : Real))).1 hpow
+
+theorem lambda_neg_three_epsilon_ge :
+    (9997 / 10000 : Real) <= lambdaR ^ (-(3 * epsilon0)) := by
+  have hpos : 0 < lambdaR ^ (3 * epsilon0) :=
+    Real.rpow_pos_of_pos lambdaR_pos _
+  calc
+    (9997 / 10000 : Real) = (10000 / 9997 : Real)⁻¹ := by
+      norm_num
+    _ <= (lambdaR ^ (3 * epsilon0))⁻¹ :=
+      inv_anti₀ hpos lambdaR_three_epsilon_le_pad_inv
+    _ = lambdaR ^ (-(3 * epsilon0)) := by
+      rw [← Real.rpow_neg lambdaR_pos.le]
+
+theorem padded_row22_slack_eq :
+    (400 / 729 : Real) * c28R
+      + (119 / 135 : Real) * (9997 / 10000 : Real) * c12R
+      - c22R
+      = 33037 / 12150000 := by
+  norm_num [c28R, c12R, c22R]
+
+theorem padded_row22_arithmetic :
+    c22R <=
+      (400 / 729 : Real) * c28R
+        + (119 / 135 : Real) * (9997 / 10000 : Real) * c12R := by
+  have h := padded_row22_slack_eq
+  linarith
+
+theorem row25_no_advanced_pad_arithmetic :
+    c25R <= (400 / 729 : Real) * c22R := by
+  norm_num [c25R, c22R]
+
+theorem padded_row28_slack_eq :
+    (400 / 729 : Real) * c25R
+      + (119 / 100 : Real) * (9997 / 10000 : Real) * c12R
+      - c28R
+      = 10124747 / 729000000 := by
+  norm_num [c25R, c12R, c28R]
+
+theorem padded_row28_arithmetic :
+    c28R <=
+      (400 / 729 : Real) * c25R
+        + (119 / 100 : Real) * (9997 / 10000 : Real) * c12R := by
+  have h := padded_row28_slack_eq
+  linarith
 
 theorem deltaM0C_pos : 0 < deltaM0C := by
   dsimp [deltaM0C]

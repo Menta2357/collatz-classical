@@ -27,6 +27,15 @@ namespace KL2003
 #print axioms epsilon0_pos
 #print axioms epsilon0_nonneg
 #print axioms epsilon0_lt_one
+#print axioms lambdaR_cube_lt_four
+#print axioms pad_inv_power_ge_four
+#print axioms lambdaR_three_epsilon_le_pad_inv
+#print axioms lambda_neg_three_epsilon_ge
+#print axioms padded_row22_slack_eq
+#print axioms padded_row22_arithmetic
+#print axioms row25_no_advanced_pad_arithmetic
+#print axioms padded_row28_slack_eq
+#print axioms padded_row28_arithmetic
 #print axioms deltaM0C_pos
 #print axioms one_fifth_lt_deltaM0C
 #print axioms deltaM0C_le_two
