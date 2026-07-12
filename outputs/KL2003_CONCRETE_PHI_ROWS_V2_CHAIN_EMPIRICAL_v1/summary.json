@@ -1,0 +1,80 @@
+{
+  "core_fail_counts": {},
+  "core_ok_counts": {
+    "row22": 369621,
+    "row25": 372876,
+    "row28": 366522
+  },
+  "grid": {
+    "max_a": 500,
+    "max_x_global": 10000,
+    "residues": [
+      2,
+      5,
+      8
+    ],
+    "x_factor": 32,
+    "x_range": "a <= x <= min(MAX_X_GLOBAL, X_FACTOR * a)"
+  },
+  "grid_digest_sha256": "0f2754642beb46044d6caf5c874dac7401f5fdad44391e01b500c8c0f3231106",
+  "known_cycle_skipped_rows": 63,
+  "mismatch_count": 0,
+  "no_claims": {
+    "no_global_collatz_claim": true,
+    "no_k2_inputs_v2_proof": true,
+    "no_lean": true,
+    "no_m1_theorem": true
+  },
+  "outputs": {
+    "grid_csv": "outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/grid.csv",
+    "manifest_sha256_csv": "outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/manifest_sha256.csv",
+    "mismatch_csv": "outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/mismatch.csv",
+    "row22_parity_lift_cases_csv": "outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/row22_parity_lift_cases.csv",
+    "summary_json": "outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/summary.json"
+  },
+  "route_fail_counts": {},
+  "route_ok_counts": {
+    "row22": 369684,
+    "row25": 372876,
+    "row28": 366522
+  },
+  "row22": {
+    "lift_class_counts_over_grid": {
+      "2": 123156,
+      "5": 126441,
+      "8": 120087
+    },
+    "lift_count_le_direct_child_count_failures": 0,
+    "parity_lift_fail_roots": 0,
+    "parity_lift_ok_roots": 56,
+    "parity_lift_root_cases": 56,
+    "shift_accounting": "(alpha - 1) direct advanced plus parity -1 = alpha - 2",
+    "validated_chain": "2c -> c -> a"
+  },
+  "row25": {
+    "advanced_branch_consumed": false,
+    "retarded_exact_window_failures": 0,
+    "single_branch_failures": 0,
+    "validated_chain": "4a -> 2a -> a"
+  },
+  "row28": {
+    "branch_counts_over_grid": {
+      "M1V2_nested_class25_elimination": 125346,
+      "phi22_outer_arm": 119085,
+      "phi28_plus_M1V2_outer_arm": 122091
+    },
+    "child_class_counts_over_grid": {
+      "2": 119085,
+      "5": 125346,
+      "8": 122091
+    },
+    "validated_chain": "c -> a"
+  },
+  "row_counts": {
+    "row22": 369684,
+    "row25": 372876,
+    "row28": 366522
+  },
+  "status": "PASS",
+  "total_rows": 1109082
+}

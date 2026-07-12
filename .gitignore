@@ -13,6 +13,7 @@ __pycache__/
 # Large generated diagnostics kept local; summaries/manifests are committed.
 outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/grid.csv
 outputs/KL2003_SCALING_SEAM_ROUNDING_EMPIRICAL_v1/c25_cases.csv
+outputs/KL2003_CONCRETE_PHI_ROWS_V2_CHAIN_EMPIRICAL_v1/grid.csv
 
 # Editor / SO
 .DS_Store
