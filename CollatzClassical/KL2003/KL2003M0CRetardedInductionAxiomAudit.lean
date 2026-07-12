@@ -101,6 +101,9 @@ namespace KL2003
 #print axioms retardedRank_drop_shiftAlphaMinus3Pad
 #print axioms retardedRank_drop_shift2AlphaMinus5Pad2
 #print axioms retardedRank_drop_shift3AlphaMinus5Pad3
+#print axioms M0CInductionQ
+#print axioms m0c_retarded_induction_bound_v2_nonneg
+#print axioms m0c_retarded_induction_bound_v2
 
 end KL2003
 end CollatzClassical

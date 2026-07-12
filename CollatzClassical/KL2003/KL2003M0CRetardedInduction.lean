@@ -1249,6 +1249,105 @@ theorem retardedRank_drop_shift3AlphaMinus5Pad3
     retardedRank (y + shift3AlphaMinus5Pad3) < retardedRank y :=
   retardedRank_drop shift3_alpha_minus5_pad3_le_neg_deltaM0C hpos
 
+def M0CInductionQ (Phi : K2PhiSystem) (y : Real) : Prop :=
+  Phi22LowerBoundAt Phi y /\
+  Phi25LowerBoundAt Phi y /\
+  Phi28LowerBoundAt Phi y
+
+theorem m0c_retarded_induction_bound_v2_nonneg
+    {Phi : K2PhiSystem}
+    (hinputs : K2RetardedInductionInputsV2 Phi) :
+    forall y, 0 <= y -> M0CInductionQ Phi y := by
+  intro y hy0
+  let rankMotive : Nat -> Prop :=
+    fun n => forall z, retardedRank z = n -> 0 <= z -> M0CInductionQ Phi z
+  have hrank : rankMotive (retardedRank y) := by
+    refine Nat.strongRecOn (retardedRank y) ?_
+    intro n ih z hzrank hz0
+    by_cases hzbase : z < 14
+    · exact hinputs.weightedBase z hz0 hzbase
+    · have hz14 : 14 <= z := le_of_not_gt hzbase
+      have hpos : 0 < retardedRank z := retardedRank_pos_of_fourteen_le hz14
+      have hzret0 : 0 <= z - 2 := by linarith
+      have hza2_0 : 0 <= z + shiftAlphaMinus2Pad := by
+        dsimp [shiftAlphaMinus2Pad]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hza3_0 : 0 <= z + shiftAlphaMinus3Pad := by
+        dsimp [shiftAlphaMinus3Pad]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hzs2_0 : 0 <= z + shift2AlphaMinus5Pad2 := by
+        dsimp [shift2AlphaMinus5Pad2]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hzs3_0 : 0 <= z + shift3AlphaMinus5Pad3 := by
+        dsimp [shift3AlphaMinus5Pad3]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hret :
+          M0CInductionQ Phi (z - 2) := by
+        have hdrop : retardedRank (z - 2) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_minus_two hpos
+        exact ih (retardedRank (z - 2)) hdrop (z - 2) rfl hzret0
+      have ha2 :
+          M0CInductionQ Phi (z + shiftAlphaMinus2Pad) := by
+        have hdrop : retardedRank (z + shiftAlphaMinus2Pad) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shiftAlphaMinus2Pad hpos
+        exact ih (retardedRank (z + shiftAlphaMinus2Pad)) hdrop
+          (z + shiftAlphaMinus2Pad) rfl hza2_0
+      have ha3 :
+          M0CInductionQ Phi (z + shiftAlphaMinus3Pad) := by
+        have hdrop : retardedRank (z + shiftAlphaMinus3Pad) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shiftAlphaMinus3Pad hpos
+        exact ih (retardedRank (z + shiftAlphaMinus3Pad)) hdrop
+          (z + shiftAlphaMinus3Pad) rfl hza3_0
+      have hs2 :
+          M0CInductionQ Phi (z + shift2AlphaMinus5Pad2) := by
+        have hdrop : retardedRank (z + shift2AlphaMinus5Pad2) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shift2AlphaMinus5Pad2 hpos
+        exact ih (retardedRank (z + shift2AlphaMinus5Pad2)) hdrop
+          (z + shift2AlphaMinus5Pad2) rfl hzs2_0
+      have hs3 :
+          M0CInductionQ Phi (z + shift3AlphaMinus5Pad3) := by
+        have hdrop : retardedRank (z + shift3AlphaMinus5Pad3) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shift3AlphaMinus5Pad3 hpos
+        exact ih (retardedRank (z + shift3AlphaMinus5Pad3)) hdrop
+          (z + shift3AlphaMinus5Pad3) rfl hzs3_0
+      have h22 : Phi22LowerBoundAt Phi z :=
+        row22_assembly
+          (hinputs.rowsV2.row22 z hz14)
+          hret.2.2
+          ha2.1
+          ha2.2.1
+          ha2.2.2
+      have h25 : Phi25LowerBoundAt Phi z :=
+        row25_assembly
+          (hinputs.rowsV2.row25 z hz14)
+          hret.1
+      have h28 : Phi28LowerBoundAt Phi z :=
+        row28_assembly
+          (hinputs.rowsV2.row28EL z hz14)
+          hret.2.1
+          ha3.1
+          ha3.2.2
+          hs2.1
+          hs2.2.2
+          hs3.1
+          hs3.2.1
+          hs3.2.2
+      exact ⟨h22, h25, h28⟩
+  exact hrank y rfl hy0
+
+theorem m0c_retarded_induction_bound_v2
+    {Phi : K2PhiSystem}
+    (hinputs : K2RetardedInductionInputsV2 Phi) :
+    RetardedLowerBoundConclusion Phi := by
+  intro y hy14
+  have hy0 : 0 <= y := by linarith
+  exact m0c_retarded_induction_bound_v2_nonneg hinputs y hy0
+
 /-!
 The weighted base segment is now the explicit M0C contract.  A later
 seam/base bridge should derive it from the weak base/root-count input plus
