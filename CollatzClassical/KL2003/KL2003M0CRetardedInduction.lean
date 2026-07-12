@@ -54,6 +54,11 @@ noncomputable def shift3AlphaMinus5Pad3 : Real := 3 * alpha - 5 - 3 * epsilon0
 
 def min3 (a b c : Real) : Real := min a (min b c)
 
+theorem le_min3 {a b c t : Real} (ha : t <= a) (hb : t <= b) (hc : t <= c) :
+    t <= min3 a b c := by
+  dsimp [min3]
+  exact le_min ha (le_min hb hc)
+
 noncomputable def M2 (Phi : K2PhiSystem) (y : Real) : Real :=
   min3
     (Phi.phi22 (y + 3 * alpha - 5))
@@ -174,6 +179,20 @@ structure K2RetardedInductionInputs (Phi : K2PhiSystem) : Prop where
   rows :
     I2ELAbstractRows Phi
 
+structure K2RetardedInductionInputsV2 (Phi : K2PhiSystem) : Prop where
+  certificate :
+    K2InteriorCertificateData.ValidData k2CertificateData
+  endpointsB :
+    (119 / 135 : Real) <= BReal /\ BReal <= (8 / 9 : Real)
+  endpointsD :
+    (119 / 100 : Real) <= DReal /\ DReal <= (6 / 5 : Real)
+  zeroExtension :
+    K2PhiZeroExtension Phi
+  weightedBase :
+    BaseSegmentWeightedLowerBound Phi
+  rowsV2 :
+    I2ELAbstractRowsV2 Phi
+
 theorem k2_retarded_inputs_from_closed_certificate
     (Phi : K2PhiSystem)
     (hzero : K2PhiZeroExtension Phi)
@@ -187,6 +206,20 @@ theorem k2_retarded_inputs_from_closed_certificate
       zeroExtension := hzero
       weightedBase := hweightedBase
       rows := hrows }
+
+theorem k2_retarded_inputs_v2_from_closed_certificate
+    (Phi : K2PhiSystem)
+    (hzero : K2PhiZeroExtension Phi)
+    (hweightedBase : BaseSegmentWeightedLowerBound Phi)
+    (hrows : I2ELAbstractRowsV2 Phi) :
+    K2RetardedInductionInputsV2 Phi := by
+  exact
+    { certificate := k2CertificateData_valid
+      endpointsB := BReal_within_strong_interval
+      endpointsD := DReal_within_target_interval
+      zeroExtension := hzero
+      weightedBase := hweightedBase
+      rowsV2 := hrows }
 
 theorem baseSegment_phi22
     {Phi : K2PhiSystem} (hbase : BaseSegmentLowerBound Phi)
@@ -380,6 +413,23 @@ theorem lambda_neg_three_epsilon_ge :
     _ = lambdaR ^ (-(3 * epsilon0)) := by
       rw [← Real.rpow_neg lambdaR_pos.le]
 
+theorem lambda_neg_epsilon_ge :
+    (9997 / 10000 : Real) <= lambdaR ^ (-epsilon0) := by
+  have hmono :
+      lambdaR ^ (-(3 * epsilon0)) <= lambdaR ^ (-epsilon0) := by
+    exact Real.rpow_le_rpow_of_exponent_le lambdaR_gt_one.le (by
+      nlinarith [epsilon0_nonneg])
+  exact lambda_neg_three_epsilon_ge.trans hmono
+
+theorem lambdaR_rpow_sub_two_eq (y : Real) :
+    lambdaR ^ (y - 2) = lambdaR ^ y * (400 / 729 : Real) := by
+  calc
+    lambdaR ^ (y - 2) = lambdaR ^ y / lambdaR ^ (2 : Real) := by
+      rw [Real.rpow_sub lambdaR_pos]
+    _ = lambdaR ^ y * (400 / 729 : Real) := by
+      norm_num [lambdaR]
+      field_simp
+
 theorem padded_row22_slack_eq :
     (400 / 729 : Real) * c28R
       + (119 / 135 : Real) * (9997 / 10000 : Real) * c12R
@@ -412,9 +462,625 @@ theorem padded_row28_arithmetic :
   have h := padded_row28_slack_eq
   linarith
 
+theorem c12R_le_c22R : c12R <= c22R := by
+  norm_num [c12R, c22R]
+
+theorem c12R_le_c25R : c12R <= c25R := by
+  norm_num [c12R, c25R]
+
+theorem c12R_le_c28R : c12R <= c28R := by
+  norm_num [c12R, c28R]
+
+theorem EL_A : c12R * lambdaR ^ (2 : Real) <= c22R := by
+  norm_num [c12R, lambdaR, c22R]
+
+theorem EL_C : c12R <= min3 c22R c25R c28R := by
+  exact le_min3 c12R_le_c22R c12R_le_c25R c12R_le_c28R
+
+theorem same_shift_c12_term_le_component
+    {z coeff target : Real}
+    (hcoeff : c12R <= coeff)
+    (hbound : DeltaV2 * coeff * lambdaR ^ z <= target) :
+    DeltaV2 * c12R * lambdaR ^ z <= target := by
+  have hnonneg : 0 <= DeltaV2 * lambdaR ^ z :=
+    mul_nonneg DeltaV2_pos.le (Real.rpow_pos_of_pos lambdaR_pos _).le
+  have hscaled :
+      (DeltaV2 * lambdaR ^ z) * c12R <=
+        (DeltaV2 * lambdaR ^ z) * coeff :=
+    mul_le_mul_of_nonneg_left hcoeff hnonneg
+  have hscaled' :
+      DeltaV2 * c12R * lambdaR ^ z <= DeltaV2 * coeff * lambdaR ^ z := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans hbound
+
+theorem lambdaR_shiftAlphaMinus2Pad_factor_lower (y : Real) :
+    (119 / 135 : Real) * (9997 / 10000 : Real) * lambdaR ^ y <=
+      lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+  have hshift :
+      lambdaR ^ shiftAlphaMinus2Pad =
+        BReal * lambdaR ^ (-epsilon0) := by
+    dsimp [shiftAlphaMinus2Pad, BReal]
+    rw [show alpha - 2 - epsilon0 = (alpha - 2) + (-epsilon0) by ring]
+    rw [Real.rpow_add lambdaR_pos]
+  have hfactor :
+      (119 / 135 : Real) * (9997 / 10000 : Real) <=
+        lambdaR ^ shiftAlphaMinus2Pad := by
+    rw [hshift]
+    exact mul_le_mul BReal_lower lambda_neg_epsilon_ge
+      (by norm_num)
+      (by exact (by norm_num : (0 : Real) <= 119 / 135).trans BReal_lower)
+  calc
+    (119 / 135 : Real) * (9997 / 10000 : Real) * lambdaR ^ y
+        <= lambdaR ^ shiftAlphaMinus2Pad * lambdaR ^ y := by
+          exact mul_le_mul_of_nonneg_right hfactor
+            (Real.rpow_pos_of_pos lambdaR_pos _).le
+    _ = lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+          rw [Real.rpow_add lambdaR_pos]
+          ring
+
+theorem lambdaR_shiftAlphaMinus3Pad_DAq_factor_lower (y : Real) :
+    (119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+        lambdaR ^ y <=
+      lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+  have hshift :
+      lambdaR ^ shiftAlphaMinus3Pad =
+        DReal * lambdaR ^ (-2 : Real) * lambdaR ^ (-epsilon0) := by
+    dsimp [shiftAlphaMinus3Pad, DReal]
+    rw [show alpha - 3 - epsilon0 = (alpha - 1) + (-2 : Real) + (-epsilon0) by ring]
+    rw [Real.rpow_add lambdaR_pos]
+    rw [Real.rpow_add lambdaR_pos]
+  have hA : lambdaR ^ (-2 : Real) = (400 / 729 : Real) := by
+    norm_num [lambdaR]
+  have hfactor :
+      (119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) <=
+        lambdaR ^ shiftAlphaMinus3Pad := by
+    rw [hshift, hA]
+    have hDq :
+        (119 / 100 : Real) * (9997 / 10000 : Real) <=
+          DReal * lambdaR ^ (-epsilon0) :=
+      mul_le_mul DReal_lower lambda_neg_epsilon_ge
+        (by norm_num)
+        (by exact (by norm_num : (0 : Real) <= 119 / 100).trans DReal_lower)
+    nlinarith
+      [hDq, Real.rpow_pos_of_pos lambdaR_pos (-epsilon0), DReal_lower]
+  calc
+    (119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+        lambdaR ^ y
+        <= lambdaR ^ shiftAlphaMinus3Pad * lambdaR ^ y := by
+          exact mul_le_mul_of_nonneg_right hfactor
+            (Real.rpow_pos_of_pos lambdaR_pos _).le
+    _ = lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+          rw [Real.rpow_add lambdaR_pos]
+          ring
+
+theorem lambdaR_shiftAlphaMinus3Pad_c22_factor_lower (y : Real) :
+    (119 / 100 : Real) * (9997 / 10000 : Real) * c12R * lambdaR ^ y <=
+      c22R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+  have hshift :
+      lambdaR ^ shiftAlphaMinus3Pad =
+        DReal * lambdaR ^ (-2 : Real) * lambdaR ^ (-epsilon0) := by
+    dsimp [shiftAlphaMinus3Pad, DReal]
+    rw [show alpha - 3 - epsilon0 = (alpha - 1) + (-2 : Real) + (-epsilon0) by ring]
+    rw [Real.rpow_add lambdaR_pos]
+    rw [Real.rpow_add lambdaR_pos]
+  have hA : lambdaR ^ (-2 : Real) = (400 / 729 : Real) := by
+    norm_num [lambdaR]
+  have hcoeff :
+      (119 / 100 : Real) * (9997 / 10000 : Real) * c12R <=
+        c22R * lambdaR ^ shiftAlphaMinus3Pad := by
+    rw [hshift, hA]
+    have hDq :
+        (119 / 100 : Real) * (9997 / 10000 : Real) <=
+          DReal * lambdaR ^ (-epsilon0) :=
+      mul_le_mul DReal_lower lambda_neg_epsilon_ge
+        (by norm_num)
+        (by exact (by norm_num : (0 : Real) <= 119 / 100).trans DReal_lower)
+    have hAcoef : (1 : Real) <= c22R * (400 / 729 : Real) := by
+      norm_num [c22R]
+    nlinarith [hDq, hAcoef, c12R_eq_one, DReal_lower,
+      Real.rpow_pos_of_pos lambdaR_pos (-epsilon0)]
+  calc
+    (119 / 100 : Real) * (9997 / 10000 : Real) * c12R * lambdaR ^ y
+        <= (c22R * lambdaR ^ shiftAlphaMinus3Pad) * lambdaR ^ y := by
+          exact mul_le_mul_of_nonneg_right hcoeff
+            (Real.rpow_pos_of_pos lambdaR_pos _).le
+    _ = c22R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+          rw [Real.rpow_add lambdaR_pos]
+          ring
+
+theorem lambda_neg_two_epsilon_ge :
+    (9997 / 10000 : Real) <= lambdaR ^ (-(2 * epsilon0)) := by
+  have hmono :
+      lambdaR ^ (-(3 * epsilon0)) <= lambdaR ^ (-(2 * epsilon0)) := by
+    exact Real.rpow_le_rpow_of_exponent_le lambdaR_gt_one.le (by
+      nlinarith [epsilon0_nonneg])
+  exact lambda_neg_three_epsilon_ge.trans hmono
+
+theorem lambdaR_shift2AlphaMinus5Pad2_BDAq_factor_lower (y : Real) :
+    (119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+        (9997 / 10000 : Real) * lambdaR ^ y <=
+      lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+  have hshift :
+      lambdaR ^ shift2AlphaMinus5Pad2 =
+        BReal * DReal * lambdaR ^ (-2 : Real) * lambdaR ^ (-(2 * epsilon0)) := by
+    dsimp [shift2AlphaMinus5Pad2, BReal, DReal]
+    rw [show 2 * alpha - 5 - 2 * epsilon0 =
+        (alpha - 2) + (alpha - 1) + (-2 : Real) + (-(2 * epsilon0)) by ring]
+    rw [Real.rpow_add lambdaR_pos]
+    rw [Real.rpow_add lambdaR_pos]
+    rw [Real.rpow_add lambdaR_pos]
+  have hA : lambdaR ^ (-2 : Real) = (400 / 729 : Real) := by
+    norm_num [lambdaR]
+  have hBD :
+      (119 / 135 : Real) * (119 / 100 : Real) <= BReal * DReal := by
+    have hBnonneg : 0 <= BReal := by nlinarith [BReal_lower]
+    have hstep1 :
+        (119 / 135 : Real) * (119 / 100 : Real) <=
+          BReal * (119 / 100 : Real) :=
+      mul_le_mul_of_nonneg_right BReal_lower (by norm_num)
+    have hstep2 :
+        BReal * (119 / 100 : Real) <= BReal * DReal :=
+      mul_le_mul_of_nonneg_left DReal_lower hBnonneg
+    exact hstep1.trans hstep2
+  have hfactor :
+      (119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) <= lambdaR ^ shift2AlphaMinus5Pad2 := by
+    rw [hshift, hA]
+    have hBnonneg : 0 <= BReal := by nlinarith [BReal_lower]
+    have hDnonneg : 0 <= DReal := by nlinarith [DReal_lower]
+    have hBDnonneg : 0 <= BReal * DReal := mul_nonneg hBnonneg hDnonneg
+    have hBDq :
+        ((119 / 135 : Real) * (119 / 100 : Real)) * (9997 / 10000 : Real) <=
+          (BReal * DReal) * lambdaR ^ (-(2 * epsilon0)) := by
+      have hstep1 :
+          ((119 / 135 : Real) * (119 / 100 : Real)) *
+              (9997 / 10000 : Real) <=
+            (BReal * DReal) * (9997 / 10000 : Real) :=
+        mul_le_mul_of_nonneg_right hBD (by norm_num)
+      have hstep2 :
+          (BReal * DReal) * (9997 / 10000 : Real) <=
+            (BReal * DReal) * lambdaR ^ (-(2 * epsilon0)) :=
+        mul_le_mul_of_nonneg_left lambda_neg_two_epsilon_ge hBDnonneg
+      exact hstep1.trans hstep2
+    have hmul := mul_le_mul_of_nonneg_right hBDq (by norm_num : (0 : Real) <= 400 / 729)
+    nlinarith [hmul]
+  calc
+    (119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+        (9997 / 10000 : Real) * lambdaR ^ y
+        <= lambdaR ^ shift2AlphaMinus5Pad2 * lambdaR ^ y := by
+          exact mul_le_mul_of_nonneg_right hfactor
+            (Real.rpow_pos_of_pos lambdaR_pos _).le
+    _ = lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+          rw [Real.rpow_add lambdaR_pos]
+          ring
+
+theorem row25_target_le_shifted22 (y : Real) :
+    DeltaV2 * c25R * lambdaR ^ y <=
+      DeltaV2 * c22R * lambdaR ^ (y - 2) := by
+  have hL0 : 0 <= DeltaV2 * lambdaR ^ y :=
+    mul_nonneg DeltaV2_pos.le (Real.rpow_pos_of_pos lambdaR_pos _).le
+  calc
+    DeltaV2 * c25R * lambdaR ^ y
+        = (DeltaV2 * lambdaR ^ y) * c25R := by ring
+    _ <= (DeltaV2 * lambdaR ^ y) * ((400 / 729 : Real) * c22R) := by
+          exact mul_le_mul_of_nonneg_left row25_no_advanced_pad_arithmetic hL0
+    _ = DeltaV2 * c22R * lambdaR ^ (y - 2) := by
+          rw [lambdaR_rpow_sub_two_eq]
+          ring
+
+theorem row25_assembly
+    {Phi : K2PhiSystem} {y : Real}
+    (hrow : Phi.phi22 (y - 2) <= Phi.phi25 y)
+    (h22 : Phi22LowerBoundAt Phi (y - 2)) :
+    Phi25LowerBoundAt Phi y := by
+  exact (row25_target_le_shifted22 y).trans (h22.trans hrow)
+
+theorem alpha2pad_c12_term_le_component
+    {y coeff target : Real}
+    (hcoeff : c12R <= coeff)
+    (hbound :
+      DeltaV2 * coeff * lambdaR ^ (y + shiftAlphaMinus2Pad) <= target) :
+    DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <= target := by
+  have hfactor := lambdaR_shiftAlphaMinus2Pad_factor_lower y
+  have hpow0 : 0 <= lambdaR ^ (y + shiftAlphaMinus2Pad) :=
+    (Real.rpow_pos_of_pos lambdaR_pos _).le
+  have hcoeff_factor :
+      ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) * lambdaR ^ y <=
+        coeff * lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+    calc
+      ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) * lambdaR ^ y
+          = c12R * ((119 / 135 : Real) * (9997 / 10000 : Real) * lambdaR ^ y) := by
+            ring
+      _ <= c12R * lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+            exact mul_le_mul_of_nonneg_left hfactor (by norm_num [c12R])
+      _ <= coeff * lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+            exact mul_le_mul_of_nonneg_right hcoeff hpow0
+  have hscaled :
+      DeltaV2 *
+          (((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) * lambdaR ^ y)
+        <= DeltaV2 * (coeff * lambdaR ^ (y + shiftAlphaMinus2Pad)) :=
+    mul_le_mul_of_nonneg_left hcoeff_factor DeltaV2_pos.le
+  have hscaled' :
+      DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+          lambdaR ^ y
+        <= DeltaV2 * coeff * lambdaR ^ (y + shiftAlphaMinus2Pad) := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans hbound
+
+theorem row22_target_le_coeff_sum (y : Real) :
+    DeltaV2 * c22R * lambdaR ^ y <=
+      DeltaV2 * c28R * lambdaR ^ (y - 2)
+        + DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y := by
+  have hL0 : 0 <= DeltaV2 * lambdaR ^ y :=
+    mul_nonneg DeltaV2_pos.le (Real.rpow_pos_of_pos lambdaR_pos _).le
+  have harith := padded_row22_arithmetic
+  calc
+    DeltaV2 * c22R * lambdaR ^ y
+        = (DeltaV2 * lambdaR ^ y) * c22R := by ring
+    _ <= (DeltaV2 * lambdaR ^ y) *
+          ((400 / 729 : Real) * c28R
+            + (119 / 135 : Real) * (9997 / 10000 : Real) * c12R) := by
+          exact mul_le_mul_of_nonneg_left harith hL0
+    _ = DeltaV2 * c28R * lambdaR ^ (y - 2)
+          + DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y := by
+          rw [lambdaR_rpow_sub_two_eq]
+          ring
+
+theorem row22_assembly
+    {Phi : K2PhiSystem} {y : Real}
+    (hrow : Phi.phi28 (y - 2)
+        + min3
+            (Phi.phi22 (y + shiftAlphaMinus2Pad))
+            (Phi.phi25 (y + shiftAlphaMinus2Pad))
+            (Phi.phi28 (y + shiftAlphaMinus2Pad))
+        <= Phi.phi22 y)
+    (h28ret : Phi28LowerBoundAt Phi (y - 2))
+    (h22adv : Phi22LowerBoundAt Phi (y + shiftAlphaMinus2Pad))
+    (h25adv : Phi25LowerBoundAt Phi (y + shiftAlphaMinus2Pad))
+    (h28adv : Phi28LowerBoundAt Phi (y + shiftAlphaMinus2Pad)) :
+    Phi22LowerBoundAt Phi y := by
+  have hadv22 :
+      DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <= Phi.phi22 (y + shiftAlphaMinus2Pad) :=
+    alpha2pad_c12_term_le_component c12R_le_c22R h22adv
+  have hadv25 :
+      DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <= Phi.phi25 (y + shiftAlphaMinus2Pad) :=
+    alpha2pad_c12_term_le_component c12R_le_c25R h25adv
+  have hadv28 :
+      DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <= Phi.phi28 (y + shiftAlphaMinus2Pad) :=
+    alpha2pad_c12_term_le_component c12R_le_c28R h28adv
+  have hadv :
+      DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+        min3
+          (Phi.phi22 (y + shiftAlphaMinus2Pad))
+          (Phi.phi25 (y + shiftAlphaMinus2Pad))
+          (Phi.phi28 (y + shiftAlphaMinus2Pad)) :=
+    le_min3 hadv22 hadv25 hadv28
+  have hsum :
+      DeltaV2 * c28R * lambdaR ^ (y - 2)
+        + DeltaV2 * ((119 / 135 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y
+      <= Phi.phi28 (y - 2)
+        + min3
+            (Phi.phi22 (y + shiftAlphaMinus2Pad))
+            (Phi.phi25 (y + shiftAlphaMinus2Pad))
+            (Phi.phi28 (y + shiftAlphaMinus2Pad) ) :=
+    add_le_add h28ret hadv
+  exact (row22_target_le_coeff_sum y).trans (hsum.trans hrow)
+
+theorem m2v2_c12_shift3_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) <=
+      M2V2 Phi y := by
+  dsimp [M2V2]
+  exact le_min3
+    (same_shift_c12_term_le_component c12R_le_c22R h22)
+    (same_shift_c12_term_le_component c12R_le_c25R h25)
+    (same_shift_c12_term_le_component c12R_le_c28R h28)
+
+theorem m2v2_nonneg
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    0 <= M2V2 Phi y := by
+  have hbase : 0 <= DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) := by
+    exact mul_nonneg
+      (mul_nonneg DeltaV2_pos.le (by norm_num [c12R]))
+      (Real.rpow_pos_of_pos lambdaR_pos _).le
+  exact hbase.trans (m2v2_c12_shift3_lower h22 h25 h28)
+
+theorem M2V2_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) <=
+      M2V2 Phi y := by
+  have _hbox : c12R <= min3 c22R c25R c28R := EL_C
+  exact m2v2_c12_shift3_lower h22 h25 h28
+
+theorem m1v2_c12_shift2_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+      M1V2 Phi y := by
+  have hm2_nonneg := m2v2_nonneg h22s3 h25s3 h28s3
+  have h28_lower :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi28 (y + shift2AlphaMinus5Pad2) :=
+    same_shift_c12_term_le_component c12R_le_c28R h28s2
+  have h22_lower :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi22 (y + shift2AlphaMinus5Pad2) :=
+    same_shift_c12_term_le_component c12R_le_c22R h22s2
+  have hfirst :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V2 Phi y := by
+    have hpad :
+        DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+          DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) + M2V2 Phi y := by
+      linarith
+    exact hpad.trans (add_le_add_right h28_lower (M2V2 Phi y))
+  dsimp [M1V2]
+  exact le_min hfirst h22_lower
+
+theorem M1V2_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+      M1V2 Phi y := by
+  have _hA : c12R * lambdaR ^ (2 : Real) <= c22R := EL_A
+  exact m1v2_c12_shift2_lower h22s2 h28s2 h22s3 h25s3 h28s3
+
+theorem row28_second_branch_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22a3 : Phi22LowerBoundAt Phi (y + shiftAlphaMinus3Pad)) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      Phi.phi22 (y + shiftAlphaMinus3Pad) := by
+  have _hA : c12R * lambdaR ^ (2 : Real) <= c22R := EL_A
+  have hfactor := lambdaR_shiftAlphaMinus3Pad_c22_factor_lower y
+  have hscaled :
+      DeltaV2 *
+          (((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y)
+        <= DeltaV2 * (c22R * lambdaR ^ (y + shiftAlphaMinus3Pad)) :=
+    mul_le_mul_of_nonneg_left hfactor DeltaV2_pos.le
+  have hscaled' :
+      DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+          lambdaR ^ y
+        <= DeltaV2 * c22R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans h22a3
+
+theorem row28_phi28_alpha3_block_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad)) :
+    DeltaV2 *
+        ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+          c28R) * lambdaR ^ y <=
+      Phi.phi28 (y + shiftAlphaMinus3Pad) := by
+  have hfactor := lambdaR_shiftAlphaMinus3Pad_DAq_factor_lower y
+  have hcoeff :
+      ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+          c28R) * lambdaR ^ y <=
+        c28R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+    calc
+      ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+          c28R) * lambdaR ^ y
+          = c28R *
+              (((119 / 100 : Real) * (9997 / 10000 : Real) *
+                (400 / 729 : Real)) * lambdaR ^ y) := by ring
+      _ <= c28R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+            exact mul_le_mul_of_nonneg_left hfactor c28R_pos.le
+  have hscaled :
+      DeltaV2 *
+          (((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+            c28R) * lambdaR ^ y)
+        <= DeltaV2 * (c28R * lambdaR ^ (y + shiftAlphaMinus3Pad)) :=
+    mul_le_mul_of_nonneg_left hcoeff DeltaV2_pos.le
+  have hscaled' :
+      DeltaV2 *
+          ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+            c28R) * lambdaR ^ y
+        <= DeltaV2 * c28R * lambdaR ^ (y + shiftAlphaMinus3Pad) := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans h28a3
+
+theorem row28_m1_block_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 *
+        ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y <=
+      M1V2 Phi y := by
+  have hfactor := lambdaR_shift2AlphaMinus5Pad2_BDAq_factor_lower y
+  have hcoeff :
+      ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y <=
+        c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+    calc
+      ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y
+          = c12R *
+              (((119 / 135 : Real) * (119 / 100 : Real) *
+                (400 / 729 : Real) * (9997 / 10000 : Real)) *
+                  lambdaR ^ y) := by ring
+      _ <= c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+            exact mul_le_mul_of_nonneg_left hfactor (by norm_num [c12R])
+  have hscaled :
+      DeltaV2 *
+          (((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y)
+        <= DeltaV2 * (c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2)) :=
+    mul_le_mul_of_nonneg_left hcoeff DeltaV2_pos.le
+  have hscaled' :
+      DeltaV2 *
+          ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y
+        <= DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans
+    (M1V2_lower h22s2 h28s2 h22s3 h25s3 h28s3)
+
+theorem row28_dq_split_arithmetic :
+    (119 / 100 : Real) * (9997 / 10000 : Real) * c12R <=
+      (119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+        c28R
+        + (119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R := by
+  norm_num [c12R, c28R]
+
+theorem row28_dq_split_scaled (y : Real) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      DeltaV2 *
+          ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+            c28R) * lambdaR ^ y
+        + DeltaV2 *
+          ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y := by
+  have hL0 : 0 <= DeltaV2 * lambdaR ^ y :=
+    mul_nonneg DeltaV2_pos.le (Real.rpow_pos_of_pos lambdaR_pos _).le
+  calc
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y
+        = (DeltaV2 * lambdaR ^ y) *
+            ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) := by ring
+    _ <= (DeltaV2 * lambdaR ^ y) *
+          ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+            c28R
+            + (119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+              (9997 / 10000 : Real) * c12R) := by
+          exact mul_le_mul_of_nonneg_left row28_dq_split_arithmetic hL0
+    _ = DeltaV2 *
+          ((119 / 100 : Real) * (9997 / 10000 : Real) * (400 / 729 : Real) *
+            c28R) * lambdaR ^ y
+        + DeltaV2 *
+          ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y := by
+          ring
+
+theorem row28_first_branch_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y := by
+  have hphi28 := row28_phi28_alpha3_block_lower h28a3
+  have hm1 := row28_m1_block_lower h22s2 h28s2 h22s3 h25s3 h28s3
+  exact (row28_dq_split_scaled y).trans (add_le_add hphi28 hm1)
+
+theorem row28_padded_block_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22a3 : Phi22LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      min
+        (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+        (Phi.phi22 (y + shiftAlphaMinus3Pad)) := by
+  exact le_min
+    (row28_first_branch_lower h28a3 h22s2 h28s2 h22s3 h25s3 h28s3)
+    (row28_second_branch_lower h22a3)
+
+theorem row28_target_le_coeff_sum (y : Real) :
+    DeltaV2 * c28R * lambdaR ^ y <=
+      DeltaV2 * c25R * lambdaR ^ (y - 2)
+        + DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y := by
+  have hL0 : 0 <= DeltaV2 * lambdaR ^ y :=
+    mul_nonneg DeltaV2_pos.le (Real.rpow_pos_of_pos lambdaR_pos _).le
+  calc
+    DeltaV2 * c28R * lambdaR ^ y
+        = (DeltaV2 * lambdaR ^ y) * c28R := by ring
+    _ <= (DeltaV2 * lambdaR ^ y) *
+          ((400 / 729 : Real) * c25R
+            + (119 / 100 : Real) * (9997 / 10000 : Real) * c12R) := by
+          exact mul_le_mul_of_nonneg_left padded_row28_arithmetic hL0
+    _ = DeltaV2 * c25R * lambdaR ^ (y - 2)
+          + DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y := by
+          rw [lambdaR_rpow_sub_two_eq]
+          ring
+
+theorem row28_assembly
+    {Phi : K2PhiSystem} {y : Real}
+    (hrow : Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad))
+        <= Phi.phi28 y)
+    (h25ret : Phi25LowerBoundAt Phi (y - 2))
+    (h22a3 : Phi22LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h22s2 : Phi22LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    Phi28LowerBoundAt Phi y := by
+  have hblock :
+      DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      min
+        (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+        (Phi.phi22 (y + shiftAlphaMinus3Pad)) :=
+    row28_padded_block_lower h22a3 h28a3 h22s2 h28s2 h22s3 h25s3 h28s3
+  have hsum :
+      DeltaV2 * c25R * lambdaR ^ (y - 2)
+        + DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y
+      <= Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad)) :=
+    add_le_add h25ret hblock
+  exact (row28_target_le_coeff_sum y).trans (hsum.trans hrow)
+
 theorem deltaM0C_pos : 0 < deltaM0C := by
   dsimp [deltaM0C]
   linarith [alpha_upper_bound]
+
+theorem retardedRank_pos_of_fourteen_le
+    {y : Real} (hy : 14 <= y) :
+    0 < retardedRank y := by
+  dsimp [retardedRank]
+  have hypos : 0 < y := by linarith
+  have hdiv : 0 < y / deltaM0C := div_pos hypos deltaM0C_pos
+  exact Nat.ceil_pos.2 hdiv
 
 theorem one_fifth_lt_deltaM0C : (1 / 5 : Real) < deltaM0C := by
   dsimp [deltaM0C]
