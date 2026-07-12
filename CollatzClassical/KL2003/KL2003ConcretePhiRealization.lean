@@ -313,6 +313,216 @@ theorem concretePhi_row25_seam :
       simpa [row25_retarded_classRoot] using hsource0
   exact hsource.trans (row25_piStar_retarded_le_target hy0 a)
 
+/-!
+## Row22 parity lift
+
+For roots `a % 9 = 2`, the direct advanced child has residue `1 mod 3` and
+is not a tracked class.  The seam therefore tracks the parity lift `2*c`,
+which maps to `c` in one `T` step and lands in one of the classes `{2,5,8}`.
+-/
+
+def row22AdvancedChild (a : Nat) : Nat :=
+  6 * (a / 9) + 1
+
+def row22LiftedChild (a : Nat) : Nat :=
+  2 * row22AdvancedChild a
+
+theorem row22_root_decomp {a : Nat} (ha : a % 9 = 2) :
+    a = 9 * (a / 9) + 2 := by
+  have h := Nat.div_add_mod a 9
+  omega
+
+theorem row22_advanced_child_arith {a : Nat}
+    (ha : a % 9 = 2) :
+    3 * row22AdvancedChild a + 1 = 2 * a := by
+  have haeq := row22_root_decomp ha
+  dsimp [row22AdvancedChild]
+  omega
+
+theorem row22_advanced_child_mod_three (a : Nat) :
+    row22AdvancedChild a % 3 = 1 := by
+  dsimp [row22AdvancedChild]
+  have hExpr : 6 * (a / 9) + 1 = 3 * (2 * (a / 9)) + 1 := by
+    omega
+  rw [hExpr]
+  simp [Nat.add_mod, Nat.mul_mod]
+
+theorem row22_parity_lift_maps_to_child (a : Nat) :
+    T (row22LiftedChild a) = row22AdvancedChild a := by
+  dsimp [row22LiftedChild]
+  exact two_branch_T_two_mul (row22AdvancedChild a)
+
+theorem row22_advanced_child_maps_to_root {a : Nat}
+    (ha : a % 9 = 2) :
+    T (row22AdvancedChild a) = a := by
+  exact two_branch_advanced_child_maps_to_root (row22_advanced_child_arith ha)
+
+theorem row22_parity_lift_route_to_root {a : Nat}
+    (ha : a % 9 = 2) :
+    T^[2] (row22LiftedChild a) = a := by
+  calc
+    T^[2] (row22LiftedChild a) = T (T (row22LiftedChild a)) := by rfl
+    _ = T (row22AdvancedChild a) := by rw [row22_parity_lift_maps_to_child]
+    _ = a := row22_advanced_child_maps_to_root ha
+
+theorem notInCycle_of_iterate_maps_to_notInCycle {a b k : Nat}
+    (ha : NotInCycle a)
+    (hmap : T^[k] b = a) :
+    NotInCycle b := by
+  intro q hq hcycle
+  have hcycle_a : T^[q] a = a := by
+    calc
+      T^[q] a = T^[q] (T^[k] b) := by rw [hmap]
+      _ = T^[q + k] b := by
+        exact (Function.iterate_add_apply T q k b).symm
+      _ = T^[k + q] b := by rw [Nat.add_comm]
+      _ = T^[k] (T^[q] b) := by
+        rw [Function.iterate_add_apply]
+      _ = T^[k] b := by rw [hcycle]
+      _ = a := hmap
+  exact (ha q hq) hcycle_a
+
+theorem row22_advanced_child_notInCycle {a : Nat}
+    (ha_mod : a % 9 = 2)
+    (ha_cycle : NotInCycle a) :
+    NotInCycle (row22AdvancedChild a) := by
+  exact notInCycle_of_iterate_maps_to_notInCycle
+    (a := a) (b := row22AdvancedChild a) (k := 1)
+    ha_cycle (by simpa [Function.iterate_one] using row22_advanced_child_maps_to_root ha_mod)
+
+theorem row22_lifted_child_notInCycle {a : Nat}
+    (ha_mod : a % 9 = 2)
+    (ha_cycle : NotInCycle a) :
+    NotInCycle (row22LiftedChild a) := by
+  exact notInCycle_of_iterate_maps_to_notInCycle
+    (a := a) (b := row22LiftedChild a) (k := 2)
+    ha_cycle (row22_parity_lift_route_to_root ha_mod)
+
+theorem row22_lifted_child_residue_mod_9_of_t_mod_0 {t : Nat}
+    (ht : t % 3 = 0) :
+    (2 * (6 * t + 1)) % 9 = 2 := by
+  have ht_decomp : t = 3 * (t / 3) := by
+    have h := Nat.div_add_mod t 3
+    omega
+  rw [ht_decomp]
+  have hExpr : 2 * (6 * (3 * (t / 3)) + 1) = 9 * (4 * (t / 3)) + 2 := by
+    omega
+  rw [hExpr]
+  simp [Nat.add_mod, Nat.mul_mod]
+
+theorem row22_lifted_child_residue_mod_9_of_t_mod_1 {t : Nat}
+    (ht : t % 3 = 1) :
+    (2 * (6 * t + 1)) % 9 = 5 := by
+  have ht_decomp : t = 3 * (t / 3) + 1 := by
+    have h := Nat.div_add_mod t 3
+    omega
+  rw [ht_decomp]
+  have hExpr :
+      2 * (6 * (3 * (t / 3) + 1) + 1) = 9 * (4 * (t / 3) + 1) + 5 := by
+    omega
+  rw [hExpr]
+  simp [Nat.add_mod, Nat.mul_mod]
+
+theorem row22_lifted_child_residue_mod_9_of_t_mod_2 {t : Nat}
+    (ht : t % 3 = 2) :
+    (2 * (6 * t + 1)) % 9 = 8 := by
+  have ht_decomp : t = 3 * (t / 3) + 2 := by
+    have h := Nat.div_add_mod t 3
+    omega
+  rw [ht_decomp]
+  have hExpr :
+      2 * (6 * (3 * (t / 3) + 2) + 1) = 9 * (4 * (t / 3) + 2) + 8 := by
+    omega
+  rw [hExpr]
+  simp [Nat.add_mod, Nat.mul_mod]
+
+theorem row22_lifted_child_residue_mod_9_of_root_t_mod_0 {a : Nat}
+    (ht : (a / 9) % 3 = 0) :
+    row22LiftedChild a % 9 = 2 := by
+  dsimp [row22LiftedChild, row22AdvancedChild]
+  exact row22_lifted_child_residue_mod_9_of_t_mod_0 ht
+
+theorem row22_lifted_child_residue_mod_9_of_root_t_mod_1 {a : Nat}
+    (ht : (a / 9) % 3 = 1) :
+    row22LiftedChild a % 9 = 5 := by
+  dsimp [row22LiftedChild, row22AdvancedChild]
+  exact row22_lifted_child_residue_mod_9_of_t_mod_1 ht
+
+theorem row22_lifted_child_residue_mod_9_of_root_t_mod_2 {a : Nat}
+    (ht : (a / 9) % 3 = 2) :
+    row22LiftedChild a % 9 = 8 := by
+  dsimp [row22LiftedChild, row22AdvancedChild]
+  exact row22_lifted_child_residue_mod_9_of_t_mod_2 ht
+
+def row22_lifted_child_classRoot_mod2 (a : ClassRoots 2)
+    (ht : (a.1 / 9) % 3 = 0) :
+    ClassRoots 2 := by
+  exact
+    ⟨row22LiftedChild a.1,
+      row22_lifted_child_residue_mod_9_of_root_t_mod_0 ht,
+      row22_lifted_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row22LiftedChild, row22AdvancedChild]; omega⟩
+
+def row22_lifted_child_classRoot_mod5 (a : ClassRoots 2)
+    (ht : (a.1 / 9) % 3 = 1) :
+    ClassRoots 5 := by
+  exact
+    ⟨row22LiftedChild a.1,
+      row22_lifted_child_residue_mod_9_of_root_t_mod_1 ht,
+      row22_lifted_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row22LiftedChild, row22AdvancedChild]; omega⟩
+
+def row22_lifted_child_classRoot_mod8 (a : ClassRoots 2)
+    (ht : (a.1 / 9) % 3 = 2) :
+    ClassRoots 8 := by
+  exact
+    ⟨row22LiftedChild a.1,
+      row22_lifted_child_residue_mod_9_of_root_t_mod_2 ht,
+      row22_lifted_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row22LiftedChild, row22AdvancedChild]; omega⟩
+
+theorem row22_parity_concreteWindow (z : Real) (c : Nat) :
+    concreteWindow (z - 1) (2 * c) = concreteWindow z c := by
+  unfold concreteWindow
+  apply congrArg Nat.ceil
+  calc
+    (2 : Real) ^ (z - 1) * ((2 * c : Nat) : Real)
+        = ((2 : Real) ^ z / (2 : Real) ^ (1 : Real)) * (2 * (c : Real)) := by
+          rw [Real.rpow_sub (by norm_num : 0 < (2 : Real))]
+          norm_num
+    _ = ((2 : Real) ^ z / 2) * (2 * (c : Real)) := by
+          rw [Real.rpow_one]
+    _ = (2 : Real) ^ z * (c : Real) := by ring
+
+theorem row22_parity_piStar_transfer_nat {c xLift x : Nat}
+    (hxLift : xLift <= x) :
+    piStar (2 * c) xLift <= piStar c x := by
+  dsimp [piStar]
+  refine Finset.card_le_card ?_
+  intro n hn
+  have hm :=
+    (mem_piStarFinset_reachesWithin_iff
+      (a := 2 * c) (x := xLift) (n := n)).1 hn
+  have hroot : 2 * c <= xLift :=
+    reachesWithin_root_le_window hm.2.2
+  have h2cx : 2 * c <= x := le_trans hroot hxLift
+  have hcx : c <= x := by omega
+  have hreach :
+      ReachesWithin c x n :=
+    reachesWithin_append_path
+      (reachesWithin_window_mono hm.2.2 hxLift) le_rfl
+      (two_branch_child_path_to_root (a := c) (x := x) h2cx hcx)
+  rw [mem_piStarFinset_reachesWithin_iff]
+  exact ⟨le_trans hm.1 hxLift, hm.2.1, hreach⟩
+
+theorem row22_parity_piStar_transfer (z : Real) (c : Nat) :
+    (piStar (2 * c) (concreteWindow (z - 1) (2 * c)) : Real) <=
+      (piStar c (concreteWindow z c) : Real) := by
+  have hx :
+      concreteWindow (z - 1) (2 * c) <= concreteWindow z c := by
+    rw [row22_parity_concreteWindow]
+  exact_mod_cast row22_parity_piStar_transfer_nat (c := c) hx
+
 theorem one_le_concretePhiComponent_of_nonneg
     {m : Nat} {y : Real} (hy0 : 0 <= y) :
     (1 : Real) <= concretePhiComponent m y := by
