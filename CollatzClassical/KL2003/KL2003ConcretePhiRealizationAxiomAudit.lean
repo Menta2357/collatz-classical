@@ -1,0 +1,14 @@
+import CollatzClassical.KL2003.KL2003ConcretePhiRealization
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms one_le_two_rpow_of_nonneg
+#print axioms classRoot_le_concreteWindow
+#print axioms one_le_concretePhiComponent_of_nonneg
+#print axioms concretePhi_zeroExtension
+#print axioms concretePhi_baseSegmentUnitLowerBound
+#print axioms concretePhi_weightedBase
+
+end KL2003
+end CollatzClassical
