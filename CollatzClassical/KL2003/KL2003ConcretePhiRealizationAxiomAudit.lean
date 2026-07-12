@@ -14,6 +14,17 @@ namespace KL2003
 #print axioms concretePhiComponent_le_of_member
 #print axioms le_concretePhiComponent_of_forall
 #print axioms concretePhiComponent_mono_y
+#print axioms T_le_two_of_le_two
+#print axioms iterate_two_le_two
+#print axioms notInCycle_five
+#print axioms classRoots_five_nonempty
+#print axioms notInCycle_four_mul
+#print axioms row25_retarded_residue_mod_9
+#print axioms row25_retarded_classRoot
+#print axioms row25_advanced_child_arith
+#print axioms row25_concreteWindow_retarded
+#print axioms row25_piStar_retarded_le_target
+#print axioms concretePhi_row25_seam
 #print axioms one_le_concretePhiComponent_of_nonneg
 #print axioms concretePhi_zeroExtension
 #print axioms concretePhi_baseSegmentUnitLowerBound

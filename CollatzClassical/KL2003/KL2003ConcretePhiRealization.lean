@@ -1,5 +1,6 @@
 import CollatzClassical.KL2003.KL2003M0CRetardedInduction
 import CollatzClassical.KL2003.KL2003M0BReachabilityAPI
+import CollatzClassical.KL2003.KL2003M0BD123CoreInstantiations
 import CollatzClassical.KL2003.KL2003RootCountUnitBase
 
 namespace CollatzClassical
@@ -161,6 +162,156 @@ theorem concretePhiComponent_mono_y {m : Nat} {y1 y2 : Real}
         exact_mod_cast piStar_window_mono (a := a.1) hwindow
       exact (ciInf_le concretePhiComponent_range_bddBelow a).trans hpi
     · rfl
+
+/-!
+## Row25 seam traffic
+
+The row25 seam is the single-branch retarded row.  It deliberately does not
+use the advanced child in the EL ledger.
+-/
+
+theorem T_le_two_of_le_two {n : Nat} (hn : n <= 2) :
+    T n <= 2 := by
+  have hcases : n = 0 ∨ n = 1 ∨ n = 2 := by omega
+  rcases hcases with rfl | rfl | rfl <;> norm_num [T]
+
+theorem iterate_two_le_two (q : Nat) :
+    T^[q] 2 <= 2 := by
+  induction q with
+  | zero =>
+      simp
+  | succ q ih =>
+      simpa [Function.iterate_succ_apply'] using T_le_two_of_le_two ih
+
+theorem notInCycle_five :
+    NotInCycle 5 := by
+  intro q hq hcycle
+  by_cases hsmall : q < 3
+  · interval_cases q <;> norm_num [T] at hcycle
+  · have hq3 : 3 <= q := by omega
+    have hle : T^[q] 5 <= 2 := by
+      calc
+        T^[q] 5 = T^[(q - 3) + 3] 5 := by
+          have hidx : (q - 3) + 3 = q := by omega
+          rw [hidx]
+        _ = T^[q - 3] (T^[3] 5) := by
+          rw [Function.iterate_add_apply]
+        _ = T^[q - 3] 2 := by norm_num [T]
+        _ <= 2 := iterate_two_le_two (q - 3)
+    have hfive_le_two : 5 <= 2 := by
+      rw [hcycle] at hle
+      exact hle
+    omega
+
+theorem classRoots_five_nonempty :
+    Nonempty (ClassRoots 5) := by
+  exact ⟨⟨5, by norm_num, notInCycle_five, by norm_num⟩⟩
+
+theorem notInCycle_four_mul {a : Nat}
+    (ha : NotInCycle a) :
+    NotInCycle (4 * a) := by
+  intro q hq hcycle
+  have hcycle_a : T^[q] a = a := by
+    calc
+      T^[q] a = T^[q] (T^[2] (4 * a)) := by
+        rw [two_branch_T_two_steps_four_mul]
+      _ = T^[q + 2] (4 * a) := by
+        exact (Function.iterate_add_apply T q 2 (4 * a)).symm
+      _ = T^[2 + q] (4 * a) := by
+        rw [Nat.add_comm]
+      _ = T^[2] (T^[q] (4 * a)) := by
+        rw [Function.iterate_add_apply]
+      _ = T^[2] (4 * a) := by
+        rw [hcycle]
+      _ = a := two_branch_T_two_steps_four_mul a
+  exact (ha q hq) hcycle_a
+
+theorem row25_retarded_residue_mod_9 {a : Nat}
+    (ha : a % 9 = 5) :
+    (4 * a) % 9 = 2 := by
+  have haeq : a = 9 * (a / 9) + 5 := by
+    have h := Nat.div_add_mod a 9
+    omega
+  exact retarded_residue_mod_9_of_root_mod_5 (t := a / 9) haeq
+
+def row25_retarded_classRoot (a : ClassRoots 5) :
+    ClassRoots 2 := by
+  exact
+    ⟨4 * a.1,
+      row25_retarded_residue_mod_9 a.2.1,
+      notInCycle_four_mul a.2.2.1,
+      by omega⟩
+
+theorem row25_advanced_child_arith {a : Nat}
+    (ha : a % 9 = 5) :
+    3 * (6 * (a / 9) + 3) + 1 = 2 * a := by
+  have haeq : a = 9 * (a / 9) + 5 := by
+    have h := Nat.div_add_mod a 9
+    omega
+  omega
+
+theorem row25_concreteWindow_retarded (y : Real) (a : Nat) :
+    concreteWindow (y - 2) (4 * a) = concreteWindow y a := by
+  unfold concreteWindow
+  apply congrArg Nat.ceil
+  calc
+    (2 : Real) ^ (y - 2) * ((4 * a : Nat) : Real)
+        = ((2 : Real) ^ y / (2 : Real) ^ (2 : Real)) * (4 * (a : Real)) := by
+          rw [Real.rpow_sub (by norm_num : 0 < (2 : Real))]
+          norm_num
+    _ = ((2 : Real) ^ y / 4) * (4 * (a : Real)) := by
+          rw [Real.rpow_two]
+          norm_num
+    _ = (2 : Real) ^ y * (a : Real) := by ring
+
+theorem row25_piStar_retarded_le_target
+    {y : Real} (hy0 : 0 <= y) (a : ClassRoots 5) :
+    (piStar (4 * a.1) (concreteWindow (y - 2) (4 * a.1)) : Real) <=
+      (piStar a.1 (concreteWindow y a.1) : Real) := by
+  let c := 6 * (a.1 / 9) + 3
+  have hcore :
+      piStar (4 * a.1) (concreteWindow y a.1) <=
+        piStar a.1 (concreteWindow y a.1) := by
+    dsimp [piStar]
+    exact
+      d2_single_branch_core_instantiation
+        (a := a.1) (c := c)
+        (x := concreteWindow y a.1) (xRet := concreteWindow y a.1)
+        a.2.2.2
+        a.2.2.1
+        (by
+          dsimp [c]
+          exact row25_advanced_child_arith a.2.1)
+        (classRoot_le_concreteWindow (m := 5) hy0 a)
+        le_rfl
+  have hcore_real :
+      (piStar (4 * a.1) (concreteWindow y a.1) : Real) <=
+        (piStar a.1 (concreteWindow y a.1) : Real) := by
+    exact_mod_cast hcore
+  simpa [row25_concreteWindow_retarded] using hcore_real
+
+theorem concretePhi_row25_seam :
+    forall y, 14 <= y ->
+      concretePhi.phi22 (y - 2) <= concretePhi.phi25 y := by
+  intro y hy14
+  have hy0 : 0 <= y := by linarith
+  have hy2 : 0 <= y - 2 := by linarith
+  dsimp [concretePhi]
+  letI : Nonempty (ClassRoots 5) := classRoots_five_nonempty
+  refine
+    le_concretePhiComponent_of_forall
+      (m := 5) (y := y) (b := concretePhiComponent 2 (y - 2)) hy0 ?_
+  intro a
+  have hsource :
+      concretePhiComponent 2 (y - 2) <=
+        (piStar (4 * a.1)
+          (concreteWindow (y - 2) (4 * a.1)) : Real) :=
+    by
+      have hsource0 :=
+        concretePhiComponent_le_piStar_of_classRoot
+          (m := 2) (y := y - 2) hy2 (row25_retarded_classRoot a)
+      simpa [row25_retarded_classRoot] using hsource0
+  exact hsource.trans (row25_piStar_retarded_le_target hy0 a)
 
 theorem one_le_concretePhiComponent_of_nonneg
     {m : Nat} {y : Real} (hy0 : 0 <= y) :
