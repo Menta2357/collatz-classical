@@ -5,6 +5,15 @@ namespace KL2003
 
 #print axioms one_le_two_rpow_of_nonneg
 #print axioms classRoot_le_concreteWindow
+#print axioms piStarFinset_subset_window
+#print axioms piStar_window_mono
+#print axioms concreteWindow_mono_y
+#print axioms concretePhiComponent_nonneg
+#print axioms concretePhiComponent_range_bddBelow
+#print axioms concretePhiComponent_le_piStar_of_classRoot
+#print axioms concretePhiComponent_le_of_member
+#print axioms le_concretePhiComponent_of_forall
+#print axioms concretePhiComponent_mono_y
 #print axioms one_le_concretePhiComponent_of_nonneg
 #print axioms concretePhi_zeroExtension
 #print axioms concretePhi_baseSegmentUnitLowerBound
