@@ -791,6 +791,362 @@ theorem concretePhi_row22_seam :
     exact_mod_cast row22_piStar_sum_le_target (y := y) hy14 a
   exact hsum.trans hcore
 
+/-!
+## Row28 nested seam traffic
+
+The row28/D3 advanced child is integral for roots `a % 9 = 8`.  Its residue
+splits into `{5,2,8}` and determines which branch of the eliminated row28
+block is meant to feed the direct advanced subtree.
+-/
+
+def row28AdvancedChild (a : Nat) : Nat :=
+  6 * (a / 9) + 5
+
+theorem row28_root_decomp {a : Nat} (ha : a % 9 = 8) :
+    a = 9 * (a / 9) + 8 := by
+  have h := Nat.div_add_mod a 9
+  omega
+
+theorem row28_advanced_child_arith {a : Nat}
+    (ha : a % 9 = 8) :
+    3 * row28AdvancedChild a + 1 = 2 * a := by
+  have haeq := row28_root_decomp ha
+  dsimp [row28AdvancedChild]
+  omega
+
+theorem row28_advanced_child_maps_to_root {a : Nat}
+    (ha : a % 9 = 8) :
+    T (row28AdvancedChild a) = a := by
+  exact two_branch_advanced_child_maps_to_root (row28_advanced_child_arith ha)
+
+theorem row28_advanced_child_notInCycle {a : Nat}
+    (ha_mod : a % 9 = 8)
+    (ha_cycle : NotInCycle a) :
+    NotInCycle (row28AdvancedChild a) := by
+  exact notInCycle_of_iterate_maps_to_notInCycle
+    (a := a) (b := row28AdvancedChild a) (k := 1)
+    ha_cycle (by simpa [Function.iterate_one] using row28_advanced_child_maps_to_root ha_mod)
+
+theorem row28_advanced_child_residue_mod_9_of_root_t_mod_0 {a : Nat}
+    (ht : (a / 9) % 3 = 0) :
+    row28AdvancedChild a % 9 = 5 := by
+  dsimp [row28AdvancedChild]
+  exact d3_advanced_residue_mod_9_of_t_mod_0 rfl ht
+
+theorem row28_advanced_child_residue_mod_9_of_root_t_mod_1 {a : Nat}
+    (ht : (a / 9) % 3 = 1) :
+    row28AdvancedChild a % 9 = 2 := by
+  dsimp [row28AdvancedChild]
+  exact d3_advanced_residue_mod_9_of_t_mod_1 rfl ht
+
+theorem row28_advanced_child_residue_mod_9_of_root_t_mod_2 {a : Nat}
+    (ht : (a / 9) % 3 = 2) :
+    row28AdvancedChild a % 9 = 8 := by
+  dsimp [row28AdvancedChild]
+  exact d3_advanced_residue_mod_9_of_t_mod_2 rfl ht
+
+def row28_advanced_child_classRoot_mod5 (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 0) :
+    ClassRoots 5 := by
+  exact
+    ⟨row28AdvancedChild a.1,
+      row28_advanced_child_residue_mod_9_of_root_t_mod_0 ht,
+      row28_advanced_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row28AdvancedChild]; omega⟩
+
+def row28_advanced_child_classRoot_mod2 (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 1) :
+    ClassRoots 2 := by
+  exact
+    ⟨row28AdvancedChild a.1,
+      row28_advanced_child_residue_mod_9_of_root_t_mod_1 ht,
+      row28_advanced_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row28AdvancedChild]; omega⟩
+
+def row28_advanced_child_classRoot_mod8 (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 2) :
+    ClassRoots 8 := by
+  exact
+    ⟨row28AdvancedChild a.1,
+      row28_advanced_child_residue_mod_9_of_root_t_mod_2 ht,
+      row28_advanced_child_notInCycle a.2.1 a.2.2.1,
+      by dsimp [row28AdvancedChild]; omega⟩
+
+theorem row28_retarded_residue_mod_9 {a : Nat}
+    (ha : a % 9 = 8) :
+    (4 * a) % 9 = 5 := by
+  exact
+    retarded_residue_mod_9_of_root_mod_8
+      (t := a / 9) (row28_root_decomp ha)
+
+def row28_retarded_classRoot (a : ClassRoots 8) :
+    ClassRoots 5 := by
+  exact
+    ⟨4 * a.1,
+      row28_retarded_residue_mod_9 a.2.1,
+      notInCycle_four_mul a.2.2.1,
+      by omega⟩
+
+theorem three_rpow_alpha_sub_one :
+    (2 : Real) ^ (alpha - 1) / 3 = (1 / 2 : Real) := by
+  rw [two_rpow_alpha_sub_one]
+  norm_num
+
+theorem row28_pad_power_mul_child_le_root {a : Nat}
+    (ha : a % 9 = 8) :
+    (2 : Real) ^ (alpha - 1 - epsilon0) *
+        (row28AdvancedChild a : Real) <= (a : Real) := by
+  have hpow :
+      (2 : Real) ^ (alpha - 1 - epsilon0) <=
+        (2 : Real) ^ (alpha - 1) := by
+    exact
+      Real.rpow_le_rpow_of_exponent_le
+        (by norm_num : (1 : Real) <= 2) (by linarith [epsilon0_nonneg])
+  have hmul :
+      (2 : Real) ^ (alpha - 1 - epsilon0) *
+          (row28AdvancedChild a : Real) <=
+        (2 : Real) ^ (alpha - 1) *
+          (row28AdvancedChild a : Real) :=
+    mul_le_mul_of_nonneg_right hpow (Nat.cast_nonneg _)
+  have harith :
+      (3 : Real) * (row28AdvancedChild a : Real) + 1 =
+        2 * (a : Real) := by
+    exact_mod_cast row28_advanced_child_arith ha
+  have hchild :
+      (2 : Real) ^ (alpha - 1) *
+          (row28AdvancedChild a : Real) <= (a : Real) := by
+    rw [two_rpow_alpha_sub_one]
+    nlinarith
+  exact hmul.trans hchild
+
+theorem row28_advanced_window_le_target
+    {y : Real} (_hy14 : 14 <= y) (a : ClassRoots 8) :
+    concreteWindow (y + shiftAlphaMinus1Pad) (row28AdvancedChild a.1) <=
+      concreteWindow y a.1 := by
+  unfold concreteWindow
+  apply Nat.ceil_mono
+  have hshift :
+      (2 : Real) ^ shiftAlphaMinus1Pad *
+          (row28AdvancedChild a.1 : Real) <= (a.1 : Real) := by
+    simpa [shiftAlphaMinus1Pad] using
+      row28_pad_power_mul_child_le_root a.2.1
+  calc
+    (2 : Real) ^ (y + shiftAlphaMinus1Pad) *
+        (row28AdvancedChild a.1 : Real)
+        = (2 : Real) ^ y *
+            ((2 : Real) ^ shiftAlphaMinus1Pad *
+              (row28AdvancedChild a.1 : Real)) := by
+          rw [Real.rpow_add (by norm_num : 0 < (2 : Real))]
+          ring
+    _ <= (2 : Real) ^ y * (a.1 : Real) :=
+          mul_le_mul_of_nonneg_left hshift
+            (Real.rpow_nonneg (by norm_num : (0 : Real) <= 2) y)
+
+theorem row28_shiftAlphaMinus1Pad_nonneg {y : Real}
+    (hy14 : 14 <= y) :
+    0 <= y + shiftAlphaMinus1Pad := by
+  dsimp [shiftAlphaMinus1Pad]
+  linarith [hy14, alpha_lower_bound, epsilon0_lt_one]
+
+theorem row28_shiftAlphaMinus3Pad_nonneg {y : Real}
+    (hy14 : 14 <= y) :
+    0 <= y + shiftAlphaMinus3Pad := by
+  dsimp [shiftAlphaMinus3Pad]
+  linarith [hy14, alpha_lower_bound, epsilon0_lt_one]
+
+theorem row28_shiftAlphaMinus3Pad_le_shiftAlphaMinus1Pad (y : Real) :
+    y + shiftAlphaMinus3Pad <= y + shiftAlphaMinus1Pad := by
+  dsimp [shiftAlphaMinus3Pad, shiftAlphaMinus1Pad]
+  linarith
+
+theorem row28_outer_block_le_second (y : Real) :
+    min
+        (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+        (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+      <= concretePhi.phi22 (y + shiftAlphaMinus3Pad) := by
+  exact min_le_right _ _
+
+theorem row28_outer_block_le_child_mod2
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 1) :
+    min
+        (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+        (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+      <=
+      (piStar (row28AdvancedChild a.1)
+        (concreteWindow (y + shiftAlphaMinus1Pad)
+          (row28AdvancedChild a.1)) : Real) := by
+  have hs3 : 0 <= y + shiftAlphaMinus3Pad :=
+    row28_shiftAlphaMinus3Pad_nonneg hy14
+  have hs1 : 0 <= y + shiftAlphaMinus1Pad :=
+    row28_shiftAlphaMinus1Pad_nonneg hy14
+  have hmono :
+      concretePhi.phi22 (y + shiftAlphaMinus3Pad) <=
+        concretePhi.phi22 (y + shiftAlphaMinus1Pad) := by
+    dsimp [concretePhi]
+    exact
+      concretePhiComponent_mono_y
+        (m := 2) (row28_shiftAlphaMinus3Pad_le_shiftAlphaMinus1Pad y)
+  have hphi :
+      concretePhi.phi22 (y + shiftAlphaMinus1Pad) <=
+        (piStar (row28AdvancedChild a.1)
+          (concreteWindow (y + shiftAlphaMinus1Pad)
+            (row28AdvancedChild a.1)) : Real) := by
+    dsimp [concretePhi]
+    exact
+      concretePhiComponent_le_piStar_of_classRoot
+        (m := 2) (y := y + shiftAlphaMinus1Pad)
+        hs1 (row28_advanced_child_classRoot_mod2 a ht)
+  exact (row28_outer_block_le_second y).trans (hmono.trans hphi)
+
+theorem row28_child_mod5_row25_shift_ge_fourteen
+    {y : Real} (hy14 : 14 <= y) :
+    14 <= y + shiftAlphaMinus1Pad := by
+  dsimp [shiftAlphaMinus1Pad, epsilon0]
+  linarith [hy14, alpha_lower_bound]
+
+theorem row28_outer_block_le_child_mod5
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 0) :
+    min
+        (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+        (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+      <=
+      (piStar (row28AdvancedChild a.1)
+        (concreteWindow (y + shiftAlphaMinus1Pad)
+          (row28AdvancedChild a.1)) : Real) := by
+  let z := y + shiftAlphaMinus1Pad
+  have hz14 : 14 <= z :=
+    row28_child_mod5_row25_shift_ge_fourteen hy14
+  have hs1 : 0 <= z := by linarith
+  have hshift : z - 2 = y + shiftAlphaMinus3Pad := by
+    dsimp [z, shiftAlphaMinus1Pad, shiftAlphaMinus3Pad]
+    ring
+  have hrow25 := concretePhi_row25_seam z hz14
+  have hrow25' :
+      concretePhi.phi22 (y + shiftAlphaMinus3Pad) <=
+        concretePhi.phi25 (y + shiftAlphaMinus1Pad) := by
+    simpa [z, hshift] using hrow25
+  have hphi :
+      concretePhi.phi25 (y + shiftAlphaMinus1Pad) <=
+        (piStar (row28AdvancedChild a.1)
+          (concreteWindow (y + shiftAlphaMinus1Pad)
+            (row28AdvancedChild a.1)) : Real) := by
+    dsimp [concretePhi]
+    exact
+      concretePhiComponent_le_piStar_of_classRoot
+        (m := 5) (y := y + shiftAlphaMinus1Pad)
+        hs1 (row28_advanced_child_classRoot_mod5 a ht)
+  exact (row28_outer_block_le_second y).trans (hrow25'.trans hphi)
+
+theorem row28_piStar_sum_le_target
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8) :
+    piStar (4 * a.1) (concreteWindow y a.1) +
+        piStar (row28AdvancedChild a.1)
+          (concreteWindow (y + shiftAlphaMinus1Pad)
+            (row28AdvancedChild a.1))
+      <=
+      piStar a.1 (concreteWindow y a.1) := by
+  exact
+    d3_core_instantiation
+      (a := a.1) (c := row28AdvancedChild a.1)
+      (x := concreteWindow y a.1)
+      (xRet := concreteWindow y a.1)
+      (xAdv :=
+        concreteWindow (y + shiftAlphaMinus1Pad)
+          (row28AdvancedChild a.1))
+      a.2.2.2
+      a.2.2.1
+      (row28_advanced_child_arith a.2.1)
+      (classRoot_le_concreteWindow (m := 8) (by linarith [hy14]) a)
+      le_rfl
+      (row28_advanced_window_le_target hy14 a)
+
+theorem row28_retarded_le_piStar_source
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8) :
+    concretePhi.phi25 (y - 2) <=
+      (piStar (4 * a.1) (concreteWindow y a.1) : Real) := by
+  have hy2 : 0 <= y - 2 := by linarith
+  dsimp [concretePhi]
+  have hsource0 :=
+    concretePhiComponent_le_piStar_of_classRoot
+      (m := 5) (y := y - 2) hy2 (row28_retarded_classRoot a)
+  simpa [row28_retarded_classRoot, row25_concreteWindow_retarded] using hsource0
+
+theorem row28_pointwise_seam_mod2
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 1) :
+    concretePhi.phi25 (y - 2)
+        + min
+            (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+            (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+      <=
+      (piStar a.1 (concreteWindow y a.1) : Real) := by
+  let x := concreteWindow y a.1
+  let c := row28AdvancedChild a.1
+  let xAdv := concreteWindow (y + shiftAlphaMinus1Pad) c
+  have hret :
+      concretePhi.phi25 (y - 2) <=
+        (piStar (4 * a.1) x : Real) := by
+    simpa [x] using row28_retarded_le_piStar_source hy14 a
+  have hadv :
+      min
+          (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+          (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+        <=
+        (piStar c xAdv : Real) := by
+    simpa [c, xAdv] using row28_outer_block_le_child_mod2 hy14 a ht
+  have hsum :
+      concretePhi.phi25 (y - 2)
+          + min
+              (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+              (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+        <= ((piStar (4 * a.1) x + piStar c xAdv : Nat) : Real) := by
+    rw [Nat.cast_add]
+    exact add_le_add hret hadv
+  have hcore :
+      ((piStar (4 * a.1) x + piStar c xAdv : Nat) : Real) <=
+        (piStar a.1 x : Real) := by
+    exact_mod_cast row28_piStar_sum_le_target (y := y) hy14 a
+  exact hsum.trans hcore
+
+theorem row28_pointwise_seam_mod5
+    {y : Real} (hy14 : 14 <= y) (a : ClassRoots 8)
+    (ht : (a.1 / 9) % 3 = 0) :
+    concretePhi.phi25 (y - 2)
+        + min
+            (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+            (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+      <=
+      (piStar a.1 (concreteWindow y a.1) : Real) := by
+  let x := concreteWindow y a.1
+  let c := row28AdvancedChild a.1
+  let xAdv := concreteWindow (y + shiftAlphaMinus1Pad) c
+  have hret :
+      concretePhi.phi25 (y - 2) <=
+        (piStar (4 * a.1) x : Real) := by
+    simpa [x] using row28_retarded_le_piStar_source hy14 a
+  have hadv :
+      min
+          (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+          (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+        <=
+        (piStar c xAdv : Real) := by
+    simpa [c, xAdv] using row28_outer_block_le_child_mod5 hy14 a ht
+  have hsum :
+      concretePhi.phi25 (y - 2)
+          + min
+              (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+              (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+        <= ((piStar (4 * a.1) x + piStar c xAdv : Nat) : Real) := by
+    rw [Nat.cast_add]
+    exact add_le_add hret hadv
+  have hcore :
+      ((piStar (4 * a.1) x + piStar c xAdv : Nat) : Real) <=
+        (piStar a.1 x : Real) := by
+    exact_mod_cast row28_piStar_sum_le_target (y := y) hy14 a
+  exact hsum.trans hcore
+
 theorem one_le_concretePhiComponent_of_nonneg
     {m : Nat} {y : Real} (hy0 : 0 <= y) :
     (1 : Real) <= concretePhiComponent m y := by
