@@ -106,7 +106,7 @@ phi_2^8(y) >=
 M_1(y) =
   min[
     phi_2^8(y+2alpha-5) + M_2(y),
-    phi_2^2(y+2alpha-5)
+    phi_2^5(y+2alpha-5)
   ],
 
 M_2(y) =
@@ -175,7 +175,7 @@ sources.
 | L1 | `phi_2^8(y+alpha-3)` | 8 | 1 | blocked: not in located table | blocked | blocked | blocked | blocked | `shiftAlphaMinus3Pad` | generic deletion rule located; literal-specific correction missing |
 | L2 | `phi_2^2(y+alpha-3)` | 2 | 1 | blocked: not in located table | blocked | blocked | blocked | blocked | `shiftAlphaMinus3Pad` | generic deletion rule located; literal-specific correction missing |
 | L3 | `phi_2^8(y+2alpha-5)` | 8 | 2 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift2AlphaMinus5Pad2` | generic deletion rule located; literal-specific correction missing |
-| L4 | `phi_2^2(y+2alpha-5)` | 2 | 2 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift2AlphaMinus5Pad2` | generic deletion rule located; literal-specific correction missing |
+| L4 | `phi_2^5(y+2alpha-5)` | 5 | 2 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift2AlphaMinus5Pad2` | generic deletion rule located; literal-specific correction missing |
 | L5 | `phi_2^2(y+3alpha-5)` | 2 | 3 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift3AlphaMinus5Pad3` | generic deletion rule located; literal-specific correction missing |
 | L6 | `phi_2^5(y+3alpha-5)` | 5 | 3 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift3AlphaMinus5Pad3` | generic deletion rule located; literal-specific correction missing |
 | L7 | `phi_2^8(y+3alpha-5)` | 8 | 3 | blocked: not in located table | blocked | blocked | blocked | blocked | `shift3AlphaMinus5Pad3` | generic deletion rule located; literal-specific correction missing |
@@ -255,4 +255,3 @@ Until one of these is available, the correct status remains:
 ```text
 BLOCKED_ON_MISSING_KL2003_LITERAL_WORD_TABLE
 ```
-

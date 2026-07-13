@@ -303,7 +303,7 @@ The nested block is:
 M1V2 Phi y =
   min
     (Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V2 Phi y)
-    (Phi.phi22 (y + shift2AlphaMinus5Pad2))
+    (Phi.phi25 (y + shift2AlphaMinus5Pad2))
 
 M2V2 Phi y =
   min3

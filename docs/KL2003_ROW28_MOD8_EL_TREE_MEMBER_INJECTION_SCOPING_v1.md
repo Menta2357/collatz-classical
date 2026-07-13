@@ -64,9 +64,10 @@ The EL tree below is not rederived here.  It is a transcription of the already
 reconstructed `T_2^8(EL)` / `L_2^EL` table in
 `docs/KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_REPORT_v1.md`.
 
-The relevant normalized errata remain:
+The relevant source-normalization status is:
 
-- the second arm of `M_1` is `phi_2^2(y+2*alpha-5)`;
+- the second arm of `M_1` remains the TeX/source term
+  `phi_2^5(y+2*alpha-5)`;
 - the table exponent typo `2 lambda - 3` is read as `2 alpha - 3`.
 
 ## T2_8(EL) Tree: 8 Literals
@@ -84,7 +85,7 @@ phi_2^8(y) >=
 M_1(y) =
   min[
     phi_2^8(y+2alpha-5) + M_2(y),
-    phi_2^2(y+2alpha-5)
+    phi_2^5(y+2alpha-5)
   ],
 
 M_2(y) =
@@ -103,7 +104,7 @@ Thus the eight literals are:
 | L1 | `phi_2^8(y+alpha-3)` | 8 | 1 | `y + shiftAlphaMinus3Pad` |
 | L2 | `phi_2^2(y+alpha-3)` | 2 | 1 | `y + shiftAlphaMinus3Pad` |
 | L3 | `phi_2^8(y+2alpha-5)` | 8 | 2 | `y + shift2AlphaMinus5Pad2` |
-| L4 | `phi_2^2(y+2alpha-5)` | 2 | 2 | `y + shift2AlphaMinus5Pad2` |
+| L4 | `phi_2^5(y+2alpha-5)` | 5 | 2 | `y + shift2AlphaMinus5Pad2` |
 | L5 | `phi_2^2(y+3alpha-5)` | 2 | 3 | `y + shift3AlphaMinus5Pad3` |
 | L6 | `phi_2^5(y+3alpha-5)` | 5 | 3 | `y + shift3AlphaMinus5Pad3` |
 | L7 | `phi_2^8(y+3alpha-5)` | 8 | 3 | `y + shift3AlphaMinus5Pad3` |

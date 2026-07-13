@@ -375,7 +375,7 @@ M2(Phi,y) =
 M1(Phi,y) =
   min
     (Phi.phi28(y + 2*alpha - 5) + M2(Phi,y))
-    Phi.phi22(y + 2*alpha - 5)
+    Phi.phi25(y + 2*alpha - 5)
 ```
 
 Filas:

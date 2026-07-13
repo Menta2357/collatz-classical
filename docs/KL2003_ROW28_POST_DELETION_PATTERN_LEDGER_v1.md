@@ -147,10 +147,15 @@ row28_a3_to_class8:
     <= c28 * lambda^(3*alpha - 5)
 ```
 
+Meta-errata note: this ledger intentionally preserves the TeX/source arm
+`phi5(y + 2*alpha - 5)` in `M1`. Earlier project documents incorrectly
+normalized that arm to `phi2`; this is now revoked.
+
 Note: the TeX source has the known dimensional typo in the row labelled
 `(8, 2*alpha - 5)`, writing an exponent with `lambda` where `alpha` is required.
 The normalized ledger above uses `2*alpha - 3`, consistent with the surrounding
-formula, the existing errata note, and the Lean V2 contract.
+formula and the source-faithful V3 row contract. The old Lean V2 contract is now
+treated as an abstract theorem over a superseded row system.
 
 ## Case-Tree Consequence For The Remaining Seam
 

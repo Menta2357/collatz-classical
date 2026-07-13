@@ -144,9 +144,18 @@ Solo el residuo `8 mod 9` contiene variables avanzadas, porque `alpha-1 > 0`.
 
 ## Sistema pequeno completo: eliminacion EL para I_2
 
-KL2003 Appendix expande el caso `k=2`. Normalizo dos erratas tipograficas del TeX:
+KL2003 Appendix expande el caso `k=2`.
 
-- en la formula de `M_1`, el segundo termino debe ser `phi_2^2(y+2alpha-5)`, como indican la regla de sustitucion y la Tabla 4; el TeX impreso muestra `phi_2^5`;
+**Meta-errata 2026-07-13.** La version inicial de este reporte normalizo la
+formula de `M_1`, cambiando el segundo termino impreso `phi_2^5(y+2alpha-5)`
+por `phi_2^2(y+2alpha-5)`. Esa normalizacion queda revocada. La lectura de
+Figure A1 como grafo, la regla de delecion de KL2003 y el hook member-wise del
+seam muestran que el TeX original con `phi_2^5` es el brazo correcto. El cambio
+`phi_2^5 -> phi_2^2` fue una meta-errata introducida por nuestra
+reconstruccion.
+
+Se conserva como errata tipografica real:
+
 - en Tabla 4, `lambda^(2 lambda - 3)` debe ser `lambda^(2 alpha - 3)`.
 
 El sistema `I_2(EL)` conserva las desigualdades de residuos `2` y `5` de `I_2`, y reemplaza la de residuo `8` por:
@@ -162,7 +171,7 @@ phi_2^8(y) >=
 M_1(y) =
   min[
     phi_2^8(y+2alpha-5) + M_2(y),
-    phi_2^2(y+2alpha-5)
+    phi_2^5(y+2alpha-5)
   ],
 
 M_2(y) =

@@ -253,7 +253,7 @@ SPEC signature I2_EL8_M1 :
   M1(y) =
     min(
       phi_2^8(y+2*alpha-5) + M2(y),
-      phi_2^2(y+2*alpha-5)
+      phi_2^5(y+2*alpha-5)
     )
 
 SPEC signature I2_EL8_M2 :
@@ -490,7 +490,7 @@ M3/KL2003 completos.
 | Theorem 2.2 TeX | `Then for and all m ...` | `Then for all m ...` | Errata gramatical del TeX; el cuantificador esperado es claro por la formula (2.16). |
 | Seccion 3, formula (3.1) | tercera hoja repetida como `m' + 3^{k-1}` | tercera hoja `m' + 2*3^{k-1}` | Consistencia con la regla de minimizacion (2.6)/(2.14): las tres elevaciones modulo `3^k`. |
 | Appendix `k=2` intro | `I_k(EM)` y `L_k^{EM}` | `I_k(EL)` y `L_k^{EL}` | El resto de KL2003 usa `EL` para eliminated/retarded system; `EM` no se desarrolla como objeto separado. |
-| Appendix `k=2`, formula de `M_1` | segundo termino `phi_2^5(y+2 alpha-5)` | `phi_2^2(y+2 alpha-5)` | Normalizacion provisional por consistencia con Tabla 4 y la enumeracion de hojas LP; requiere auditoria antes de M3. |
+| Appendix `k=2`, formula de `M_1` | segundo termino `phi_2^5(y+2 alpha-5)` | sin cambio: conservar `phi_2^5(y+2 alpha-5)` | Meta-errata 2026-07-13: la normalizacion provisional `phi_2^5 -> phi_2^2` queda revocada por Figure A1 + deletion rule + hook member-wise. |
 | Tabla 4, fila `T_2^8(EL)` | `lambda^(2 lambda - 3)` | `lambda^(2 alpha - 3)` | Errata tipografica dimensional: el exponente debe ser un shift en `alpha`, no en `lambda`. |
 
 ## Registro pre-M0

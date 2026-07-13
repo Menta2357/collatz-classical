@@ -117,7 +117,7 @@ def M2V2 (Phi : K2PhiSystem) (y : Real) : Real :=
 def M1V2 (Phi : K2PhiSystem) (y : Real) : Real :=
   min
     (Phi.phi28 (y + 2 * alpha - 5 - epsilon0) + M2V2 Phi y)
-    (Phi.phi22 (y + 2 * alpha - 5 - epsilon0))
+    (Phi.phi25 (y + 2 * alpha - 5 - epsilon0))
 ```
 
 Nota: esta version usa un unico pad `epsilon0` por llamada abstracta afectada.
