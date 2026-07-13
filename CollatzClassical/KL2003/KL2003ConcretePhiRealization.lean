@@ -1147,6 +1147,31 @@ theorem row28_pointwise_seam_mod5
     exact_mod_cast row28_piStar_sum_le_target (y := y) hy14 a
   exact hsum.trans hcore
 
+/-!
+## Row28 mod8 M1 transfer
+
+The remaining row28 case has `(a.1 / 9) % 3 = 2`, so the direct advanced
+child `row28AdvancedChild a.1` is again in class `8`.  The non-circular target
+is a member-wise transfer of the row28EL outer block into that child's bounded
+subtree:
+
+```lean
+min
+  (concretePhi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 concretePhi y)
+  (concretePhi.phi22 (y + shiftAlphaMinus3Pad))
+<=
+(piStar (row28AdvancedChild a.1)
+  (concreteWindow (y + shiftAlphaMinus1Pad)
+    (row28AdvancedChild a.1)) : Real)
+```
+
+The direct class-root wrapper gives only the `phi28` term at the larger child
+window.  The additional `M1V2` summand needs a genuine finite EL-tree
+member-wise injection inside the class-8 child subtree.  Reusing
+`concretePhi_row28_seam` on the child would be circular, so the proof must add
+that nested transfer explicitly before the full row28 seam can be closed.
+-/
+
 theorem one_le_concretePhiComponent_of_nonneg
     {m : Nat} {y : Real} (hy0 : 0 <= y) :
     (1 : Real) <= concretePhiComponent m y := by
