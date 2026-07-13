@@ -5,6 +5,7 @@ namespace KL2003
 
 #print axioms k2_retarded_inputs_from_closed_certificate
 #print axioms k2_retarded_inputs_v2_from_closed_certificate
+#print axioms k2_retarded_inputs_v3_from_closed_certificate
 #print axioms retardedRank_pos_of_fourteen_le
 #print axioms le_min3
 #print axioms baseSegment_phi22
@@ -71,6 +72,15 @@ namespace KL2003
 #print axioms row28_padded_block_lower
 #print axioms row28_target_le_coeff_sum
 #print axioms row28_assembly
+#print axioms m2v3_c12_shift3_lower
+#print axioms m2v3_nonneg
+#print axioms M2V3_lower
+#print axioms m1v3_c12_shift2_lower
+#print axioms M1V3_lower
+#print axioms row28_m1_v3_block_lower
+#print axioms row28_first_branch_lower_v3
+#print axioms row28_padded_block_lower_v3
+#print axioms row28_assembly_v3
 #print axioms deltaM0C_pos
 #print axioms one_fifth_lt_deltaM0C
 #print axioms deltaM0C_le_two
@@ -104,6 +114,8 @@ namespace KL2003
 #print axioms M0CInductionQ
 #print axioms m0c_retarded_induction_bound_v2_nonneg
 #print axioms m0c_retarded_induction_bound_v2
+#print axioms m0c_retarded_induction_bound_v3_nonneg
+#print axioms m0c_retarded_induction_bound_v3
 
 end KL2003
 end CollatzClassical

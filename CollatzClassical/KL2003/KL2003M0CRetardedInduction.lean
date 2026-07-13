@@ -81,6 +81,17 @@ noncomputable def M1V2 (Phi : K2PhiSystem) (y : Real) : Real :=
     (Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V2 Phi y)
     (Phi.phi22 (y + shift2AlphaMinus5Pad2))
 
+noncomputable def M2V3 (Phi : K2PhiSystem) (y : Real) : Real :=
+  min3
+    (Phi.phi22 (y + shift3AlphaMinus5Pad3))
+    (Phi.phi25 (y + shift3AlphaMinus5Pad3))
+    (Phi.phi28 (y + shift3AlphaMinus5Pad3))
+
+noncomputable def M1V3 (Phi : K2PhiSystem) (y : Real) : Real :=
+  min
+    (Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V3 Phi y)
+    (Phi.phi25 (y + shift2AlphaMinus5Pad2))
+
 def K2PhiZeroExtension (Phi : K2PhiSystem) : Prop :=
   forall y, y < 0 ->
     Phi.phi22 y = 0 /\
@@ -108,9 +119,9 @@ structure I2ELAbstractRows (Phi : K2PhiSystem) : Prop where
         <= Phi.phi28 y
 
 /--
-Seam-compatible epsilon-padded EL rows.  This contract is kept beside the
-ideal/continuous `I2ELAbstractRows`; the main M0C input has not been switched
-to V2 in this module.
+Seam-compatible epsilon-padded EL rows for the historical V2 contract.  After
+the `M1 phi5 reinstated` meta-errata this remains an abstract theorem target,
+but it is no longer the source-faithful KL2003 row28 contract.
 -/
 structure I2ELAbstractRowsV2 (Phi : K2PhiSystem) : Prop where
   row22 :
@@ -129,6 +140,30 @@ structure I2ELAbstractRowsV2 (Phi : K2PhiSystem) : Prop where
       Phi.phi25 (y - 2)
         + min
             (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V2 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad))
+        <= Phi.phi28 y
+
+/--
+Source-faithful epsilon-padded EL rows after reinstating the KL2003 Appendix
+`M1` second arm `phi25`.
+-/
+structure I2ELAbstractRowsV3 (Phi : K2PhiSystem) : Prop where
+  row22 :
+    forall y, 14 <= y ->
+      Phi.phi28 (y - 2)
+        + min3
+            (Phi.phi22 (y + shiftAlphaMinus2Pad))
+            (Phi.phi25 (y + shiftAlphaMinus2Pad))
+            (Phi.phi28 (y + shiftAlphaMinus2Pad))
+        <= Phi.phi22 y
+  row25 :
+    forall y, 14 <= y ->
+      Phi.phi22 (y - 2) <= Phi.phi25 y
+  row28EL :
+    forall y, 14 <= y ->
+      Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y)
             (Phi.phi22 (y + shiftAlphaMinus3Pad))
         <= Phi.phi28 y
 
@@ -193,6 +228,20 @@ structure K2RetardedInductionInputsV2 (Phi : K2PhiSystem) : Prop where
   rowsV2 :
     I2ELAbstractRowsV2 Phi
 
+structure K2RetardedInductionInputsV3 (Phi : K2PhiSystem) : Prop where
+  certificate :
+    K2InteriorCertificateData.ValidData k2CertificateData
+  endpointsB :
+    (119 / 135 : Real) <= BReal /\ BReal <= (8 / 9 : Real)
+  endpointsD :
+    (119 / 100 : Real) <= DReal /\ DReal <= (6 / 5 : Real)
+  zeroExtension :
+    K2PhiZeroExtension Phi
+  weightedBase :
+    BaseSegmentWeightedLowerBound Phi
+  rowsV3 :
+    I2ELAbstractRowsV3 Phi
+
 theorem k2_retarded_inputs_from_closed_certificate
     (Phi : K2PhiSystem)
     (hzero : K2PhiZeroExtension Phi)
@@ -220,6 +269,20 @@ theorem k2_retarded_inputs_v2_from_closed_certificate
       zeroExtension := hzero
       weightedBase := hweightedBase
       rowsV2 := hrows }
+
+theorem k2_retarded_inputs_v3_from_closed_certificate
+    (Phi : K2PhiSystem)
+    (hzero : K2PhiZeroExtension Phi)
+    (hweightedBase : BaseSegmentWeightedLowerBound Phi)
+    (hrows : I2ELAbstractRowsV3 Phi) :
+    K2RetardedInductionInputsV3 Phi := by
+  exact
+    { certificate := k2CertificateData_valid
+      endpointsB := BReal_within_strong_interval
+      endpointsD := DReal_within_target_interval
+      zeroExtension := hzero
+      weightedBase := hweightedBase
+      rowsV3 := hrows }
 
 theorem baseSegment_phi22
     {Phi : K2PhiSystem} (hbase : BaseSegmentLowerBound Phi)
@@ -1070,6 +1133,188 @@ theorem row28_assembly
     add_le_add h25ret hblock
   exact (row28_target_le_coeff_sum y).trans (hsum.trans hrow)
 
+theorem m2v3_c12_shift3_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) <=
+      M2V3 Phi y := by
+  dsimp [M2V3]
+  exact le_min3
+    (same_shift_c12_term_le_component c12R_le_c22R h22)
+    (same_shift_c12_term_le_component c12R_le_c25R h25)
+    (same_shift_c12_term_le_component c12R_le_c28R h28)
+
+theorem m2v3_nonneg
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    0 <= M2V3 Phi y := by
+  have hbase : 0 <= DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) := by
+    exact mul_nonneg
+      (mul_nonneg DeltaV2_pos.le (by norm_num [c12R]))
+      (Real.rpow_pos_of_pos lambdaR_pos _).le
+  exact hbase.trans (m2v3_c12_shift3_lower h22 h25 h28)
+
+theorem M2V3_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h22 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift3AlphaMinus5Pad3) <=
+      M2V3 Phi y := by
+  have _hbox : c12R <= min3 c22R c25R c28R := EL_C
+  exact m2v3_c12_shift3_lower h22 h25 h28
+
+theorem m1v3_c12_shift2_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+      M1V3 Phi y := by
+  have hm2_nonneg := m2v3_nonneg h22s3 h25s3 h28s3
+  have h28_lower :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi28 (y + shift2AlphaMinus5Pad2) :=
+    same_shift_c12_term_le_component c12R_le_c28R h28s2
+  have h25_lower :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi25 (y + shift2AlphaMinus5Pad2) :=
+    same_shift_c12_term_le_component c12R_le_c25R h25s2
+  have hfirst :
+      DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+        Phi.phi28 (y + shift2AlphaMinus5Pad2) + M2V3 Phi y := by
+    have hpad :
+        DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+          DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) + M2V3 Phi y := by
+      linarith
+    exact hpad.trans (add_le_add_right h28_lower (M2V3 Phi y))
+  dsimp [M1V3]
+  exact le_min hfirst h25_lower
+
+theorem M1V3_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) <=
+      M1V3 Phi y := by
+  exact m1v3_c12_shift2_lower h25s2 h28s2 h22s3 h25s3 h28s3
+
+theorem row28_m1_v3_block_lower
+    {Phi : K2PhiSystem} {y : Real}
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 *
+        ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y <=
+      M1V3 Phi y := by
+  have hfactor := lambdaR_shift2AlphaMinus5Pad2_BDAq_factor_lower y
+  have hcoeff :
+      ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y <=
+        c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+    calc
+      ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+          (9997 / 10000 : Real) * c12R) * lambdaR ^ y
+          = c12R *
+              (((119 / 135 : Real) * (119 / 100 : Real) *
+                (400 / 729 : Real) * (9997 / 10000 : Real)) *
+                  lambdaR ^ y) := by ring
+      _ <= c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+            exact mul_le_mul_of_nonneg_left hfactor (by norm_num [c12R])
+  have hscaled :
+      DeltaV2 *
+          (((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y)
+        <= DeltaV2 * (c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2)) :=
+    mul_le_mul_of_nonneg_left hcoeff DeltaV2_pos.le
+  have hscaled' :
+      DeltaV2 *
+          ((119 / 135 : Real) * (119 / 100 : Real) * (400 / 729 : Real) *
+            (9997 / 10000 : Real) * c12R) * lambdaR ^ y
+        <= DeltaV2 * c12R * lambdaR ^ (y + shift2AlphaMinus5Pad2) := by
+    simpa [mul_assoc, mul_left_comm, mul_comm] using hscaled
+  exact hscaled'.trans
+    (M1V3_lower h25s2 h28s2 h22s3 h25s3 h28s3)
+
+theorem row28_first_branch_lower_v3
+    {Phi : K2PhiSystem} {y : Real}
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y := by
+  have hphi28 := row28_phi28_alpha3_block_lower h28a3
+  have hm1 := row28_m1_v3_block_lower h25s2 h28s2 h22s3 h25s3 h28s3
+  exact (row28_dq_split_scaled y).trans (add_le_add hphi28 hm1)
+
+theorem row28_padded_block_lower_v3
+    {Phi : K2PhiSystem} {y : Real}
+    (h22a3 : Phi22LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      min
+        (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y)
+        (Phi.phi22 (y + shiftAlphaMinus3Pad)) := by
+  exact le_min
+    (row28_first_branch_lower_v3 h28a3 h25s2 h28s2 h22s3 h25s3 h28s3)
+    (row28_second_branch_lower h22a3)
+
+theorem row28_assembly_v3
+    {Phi : K2PhiSystem} {y : Real}
+    (hrow : Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad))
+        <= Phi.phi28 y)
+    (h25ret : Phi25LowerBoundAt Phi (y - 2))
+    (h22a3 : Phi22LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h28a3 : Phi28LowerBoundAt Phi (y + shiftAlphaMinus3Pad))
+    (h25s2 : Phi25LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h28s2 : Phi28LowerBoundAt Phi (y + shift2AlphaMinus5Pad2))
+    (h22s3 : Phi22LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h25s3 : Phi25LowerBoundAt Phi (y + shift3AlphaMinus5Pad3))
+    (h28s3 : Phi28LowerBoundAt Phi (y + shift3AlphaMinus5Pad3)) :
+    Phi28LowerBoundAt Phi y := by
+  have hblock :
+      DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+        lambdaR ^ y <=
+      min
+        (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y)
+        (Phi.phi22 (y + shiftAlphaMinus3Pad)) :=
+    row28_padded_block_lower_v3 h22a3 h28a3 h25s2 h28s2 h22s3 h25s3 h28s3
+  have hsum :
+      DeltaV2 * c25R * lambdaR ^ (y - 2)
+        + DeltaV2 * ((119 / 100 : Real) * (9997 / 10000 : Real) * c12R) *
+            lambdaR ^ y
+      <= Phi.phi25 (y - 2)
+        + min
+            (Phi.phi28 (y + shiftAlphaMinus3Pad) + M1V3 Phi y)
+            (Phi.phi22 (y + shiftAlphaMinus3Pad)) :=
+    add_le_add h25ret hblock
+  exact (row28_target_le_coeff_sum y).trans (hsum.trans hrow)
+
 theorem deltaM0C_pos : 0 < deltaM0C := by
   dsimp [deltaM0C]
   linarith [alpha_upper_bound]
@@ -1347,6 +1592,100 @@ theorem m0c_retarded_induction_bound_v2
   intro y hy14
   have hy0 : 0 <= y := by linarith
   exact m0c_retarded_induction_bound_v2_nonneg hinputs y hy0
+
+theorem m0c_retarded_induction_bound_v3_nonneg
+    {Phi : K2PhiSystem}
+    (hinputs : K2RetardedInductionInputsV3 Phi) :
+    forall y, 0 <= y -> M0CInductionQ Phi y := by
+  intro y hy0
+  let rankMotive : Nat -> Prop :=
+    fun n => forall z, retardedRank z = n -> 0 <= z -> M0CInductionQ Phi z
+  have hrank : rankMotive (retardedRank y) := by
+    refine Nat.strongRecOn (retardedRank y) ?_
+    intro n ih z hzrank hz0
+    by_cases hzbase : z < 14
+    · exact hinputs.weightedBase z hz0 hzbase
+    · have hz14 : 14 <= z := le_of_not_gt hzbase
+      have hpos : 0 < retardedRank z := retardedRank_pos_of_fourteen_le hz14
+      have hzret0 : 0 <= z - 2 := by linarith
+      have hza2_0 : 0 <= z + shiftAlphaMinus2Pad := by
+        dsimp [shiftAlphaMinus2Pad]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hza3_0 : 0 <= z + shiftAlphaMinus3Pad := by
+        dsimp [shiftAlphaMinus3Pad]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hzs2_0 : 0 <= z + shift2AlphaMinus5Pad2 := by
+        dsimp [shift2AlphaMinus5Pad2]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hzs3_0 : 0 <= z + shift3AlphaMinus5Pad3 := by
+        dsimp [shift3AlphaMinus5Pad3]
+        linarith [hz14, alpha_lower_bound, epsilon0_lt_one]
+      have hret :
+          M0CInductionQ Phi (z - 2) := by
+        have hdrop : retardedRank (z - 2) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_minus_two hpos
+        exact ih (retardedRank (z - 2)) hdrop (z - 2) rfl hzret0
+      have ha2 :
+          M0CInductionQ Phi (z + shiftAlphaMinus2Pad) := by
+        have hdrop : retardedRank (z + shiftAlphaMinus2Pad) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shiftAlphaMinus2Pad hpos
+        exact ih (retardedRank (z + shiftAlphaMinus2Pad)) hdrop
+          (z + shiftAlphaMinus2Pad) rfl hza2_0
+      have ha3 :
+          M0CInductionQ Phi (z + shiftAlphaMinus3Pad) := by
+        have hdrop : retardedRank (z + shiftAlphaMinus3Pad) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shiftAlphaMinus3Pad hpos
+        exact ih (retardedRank (z + shiftAlphaMinus3Pad)) hdrop
+          (z + shiftAlphaMinus3Pad) rfl hza3_0
+      have hs2 :
+          M0CInductionQ Phi (z + shift2AlphaMinus5Pad2) := by
+        have hdrop : retardedRank (z + shift2AlphaMinus5Pad2) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shift2AlphaMinus5Pad2 hpos
+        exact ih (retardedRank (z + shift2AlphaMinus5Pad2)) hdrop
+          (z + shift2AlphaMinus5Pad2) rfl hzs2_0
+      have hs3 :
+          M0CInductionQ Phi (z + shift3AlphaMinus5Pad3) := by
+        have hdrop : retardedRank (z + shift3AlphaMinus5Pad3) < n := by
+          rw [← hzrank]
+          exact retardedRank_drop_shift3AlphaMinus5Pad3 hpos
+        exact ih (retardedRank (z + shift3AlphaMinus5Pad3)) hdrop
+          (z + shift3AlphaMinus5Pad3) rfl hzs3_0
+      have h22 : Phi22LowerBoundAt Phi z :=
+        row22_assembly
+          (hinputs.rowsV3.row22 z hz14)
+          hret.2.2
+          ha2.1
+          ha2.2.1
+          ha2.2.2
+      have h25 : Phi25LowerBoundAt Phi z :=
+        row25_assembly
+          (hinputs.rowsV3.row25 z hz14)
+          hret.1
+      have h28 : Phi28LowerBoundAt Phi z :=
+        row28_assembly_v3
+          (hinputs.rowsV3.row28EL z hz14)
+          hret.2.1
+          ha3.1
+          ha3.2.2
+          hs2.2.1
+          hs2.2.2
+          hs3.1
+          hs3.2.1
+          hs3.2.2
+      exact ⟨h22, h25, h28⟩
+  exact hrank y rfl hy0
+
+theorem m0c_retarded_induction_bound_v3
+    {Phi : K2PhiSystem}
+    (hinputs : K2RetardedInductionInputsV3 Phi) :
+    RetardedLowerBoundConclusion Phi := by
+  intro y hy14
+  have hy0 : 0 <= y := by linarith
+  exact m0c_retarded_induction_bound_v3_nonneg hinputs y hy0
 
 /-!
 The weighted base segment is now the explicit M0C contract.  A later
