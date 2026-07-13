@@ -1,0 +1,25 @@
+{
+  "classification": [
+    "FIGURE_A1_GEOMETRY_CONTAINS_DIRECTED_GRAPH",
+    "FIGURE_A1_LABELS_PAIRED_WITH_GRAPH_NODES",
+    "FIGURE_A1_ROOT_PATHS_EXTRACTED",
+    "CROSSED_NODES_IDENTIFIED",
+    "INVERSE_WORDS_NOT_INFERRED_YET",
+    "NO_LEAN_CHANGE",
+    "NO_M1_THEOREM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "cross_mark_count": 4,
+  "crossed_node_count": 2,
+  "edge_count": 15,
+  "kafgA1_pstex_sha256": "1f4b4218099af1d34588749cdeb5933cb80eeba48cb94f8537a3a6ccdce802b1",
+  "kafgA1_pstex_t_sha256": "a89f731f78050d5891069c54aefe6f052b5faa82fad6bad2ba46c7b9a9330ceb",
+  "label_count": 13,
+  "labelled_node_count": 13,
+  "node_count": 16,
+  "root_path_count": 16,
+  "source_dir": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src",
+  "status": "PASS_GRAPH_EXTRACTED",
+  "unlabelled_node_count": 3,
+  "unreachable_from_root_count": 0
+}

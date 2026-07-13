@@ -1,0 +1,17 @@
+node_id,node_index,x,y,visual_kind,pstex_line,label,cross_mark_count,crossed
+N00,0,10500,6300,filled_black,244,"(8, \alpha -3)",0,no
+N01,1,10500,3900,filled_black,247,"(5,-2)",0,no
+N02,2,12000,7500,filled_black,250,"(2, 2\alpha -3)",0,no
+N03,3,12000,5100,filled_black,253,"(2, \alpha -1 )",0,no
+N04,4,15000,5100,outline,259,"(8,\alpha -1)",2,yes
+N05,5,15000,7500,outline,268,"(8, 2\alpha -3)",2,yes
+N06,6,10500,8700,filled_black,274,"(8, 2\alpha -5)",0,no
+N07,7,13500,9900,filled_black,277,"(5, 3\alpha -5)",0,no
+N08,8,15000,9900,filled_black,280,"(8, 3\alpha -5)",0,no
+N09,9,12000,2700,filled_black,319,"\phi_2^8 (y) \equiv (8,0)",0,no
+N10,10,12000,9900,filled_black,322,"(2,3\alpha -5)",0,no
+N11,11,13500,7500,filled_black,325,"(5, 2\alpha -3)",0,no
+N12,12,13500,5100,filled_black,328,"(5, \alpha-1)",0,no
+N13,13,13500,3900,filled_shaded,331,,0,no
+N14,14,13500,6300,filled_shaded,334,,0,no
+N15,15,13500,8700,filled_shaded,337,,0,no
