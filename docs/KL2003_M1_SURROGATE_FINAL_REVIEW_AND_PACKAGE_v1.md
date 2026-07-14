@@ -9,8 +9,9 @@ kl2003_k2_m1_surrogate_ceil_window_lower_bound :
   M1SurrogateK2CeilWindowStatement
 ```
 
-The theorem is a KL2003 `k=2` M1-surrogate window theorem.  It is not a full
-M1 theorem, not a theorem for arbitrary windows, and not a global Collatz claim.
+At the time of this original review, the theorem was a KL2003 `k=2`
+M1-surrogate window theorem.  It was not a full M1 theorem, not yet an
+arbitrary-`x` theorem, and not a global Collatz claim.
 
 ## Literal Statement Review
 
@@ -185,6 +186,33 @@ The bridge must explicitly account for the one-unit ceiling excess or formulate
 the statement over the image of `concreteWindow`.  This review does not treat
 `ceil` and `floor` as interchangeable.
 
+## Post-Review Update
+
+The later pass:
+
+```text
+docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md
+```
+
+proved the large-window arbitrary-`x` corollary by choosing:
+
+```lean
+y := Real.logb 2 ((x : Real) / (a : Real))
+```
+
+so that the `ceil` argument is exactly `(x : Real)`.  The no-arbitrary-window
+warning above should now be read as the scope of this original review package,
+not as the current project frontier.
+
+Current non-claims after that pass:
+
+```text
+NO_FULL_M1_THEOREM_CLAIM
+NO_K9_OR_084_CLAIM
+NO_SMALL_X_BELOW_THRESHOLD_CLAIM
+NO_GLOBAL_COLLATZ_CLAIM
+```
+
 ## Classification
 
 ```text
@@ -194,6 +222,7 @@ CEIL_WINDOW_SCOPE_DOCUMENTED
 DEPENDENCY_CHAIN_V3_CONFIRMED
 ROW28_V3_META_ERRATA_CONSUMED
 NO_FULL_M1_THEOREM_CLAIM
-NO_ARBITRARY_WINDOW_CLAIM
+NO_K9_OR_084_CLAIM
+NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```

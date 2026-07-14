@@ -32,8 +32,10 @@ El enunciado esta en
 
 Alcance exacto: `k=2` M1-surrogate sobre la ventana concreta
 `concreteWindow y a = Nat.ceil ((2 : Real)^y * (a : Real))`, para clases
-`2`, `5`, `8` y raices admisibles. Esto no es el M1 completo, no es un
-teorema para ventanas arbitrarias y no es un claim global de Collatz.
+`2`, `5`, `8` y raices admisibles. Tambien esta cerrado el corolario para
+`x` arbitrario grande mediante `y := Real.logb 2 ((x : Real) / (a : Real))`.
+Esto no es el M1 completo, no es el resultado KL2003 `k=9`/`0.84`, no cubre
+`x` pequeno bajo umbral y no es un claim global de Collatz.
 
 ## Principios (heredados del programa anterior)
 
@@ -53,9 +55,10 @@ El checklist operativo completo está en
 
 - No afirma progreso hacia la conjetura de Collatz completa.
 - No afirma supermartingalas globales ni productores all-k.
-- No afirma que el resultado KL2003 actual sea el M1 completo ni que valga
-  para ventanas arbitrarias; el cierre actual es el teorema tecnico
-  `k=2` M1-surrogate sobre `ceil` window.
+- No afirma que el resultado KL2003 actual sea el M1 completo, ni el teorema
+  KL2003 `k=9`/`0.84`, ni una cota para `x` pequeno bajo umbral; el cierre
+  actual es el teorema tecnico `k=2` M1-surrogate sobre `ceil` window y su
+  corolario para `x` arbitrario grande.
 - Los objetivos son formalizaciones de teoremas publicados
   (Krasikov 1989, Applegate–Lagarias 1995, Krasikov–Lagarias 2003)
   y auditorías con crédito explícito a los autores originales.

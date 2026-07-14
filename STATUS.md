@@ -19,9 +19,10 @@ REGLA ACTUAL:
   respuesta author-first antes de publicar en Forum o registrar audit.
   KrasikovLagarias2003 ya esta registrado como formalising con AI declarada.
   El carril B cerro el resultado tecnico calibrado:
-  KL2003 k=2 M1-surrogate over concrete ceil window. No marcar como
-  M1 completo, no marcar como teorema de ventana arbitraria, y no marcar
-  como claim global de Collatz.
+  KL2003 k=2 M1-surrogate over concrete ceil window, ahora con corolario
+  para x arbitrario grande. No marcar como M1 completo, no marcar como
+  k=9/0.84, no cubrir x pequeno bajo umbral, y no marcar como claim global
+  de Collatz.
 
 LEAN ESCRITO:          KL2003 k=2 M1-surrogate package, build/audit PASS
 TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalising
@@ -77,9 +78,13 @@ KL2003:
   M1_SURROGATE_CEIL_WINDOW_BUILD_PASS
   M1_SURROGATE_CEIL_WINDOW_AXIOM_AUDIT_PASS
   KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE
+  KL2003_K2_M1_SURROGATE_ARBITRARY_X_PROVED
+  ROOT8_PUBLIC_INSTANCE_PROVED
+  CEIL_EXCESS_ELIMINATED_BY_LOGB_PARAMETER
   FINAL_REVIEW_PACKAGE_PUBLISHED
   READY_FOR_INTERNAL_AUDIT_PACKAGE
   NO_FULL_M1_THEOREM_CLAIM
-  NO_ARBITRARY_WINDOW_CLAIM
+  NO_K9_OR_084_CLAIM
+  NO_SMALL_X_BELOW_THRESHOLD_CLAIM
   NO_GLOBAL_COLLATZ_CLAIM
 ```

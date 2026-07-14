@@ -11,6 +11,15 @@ namespace KL2003
 #print axioms m1_surrogate_member_ceil_window_lower_bound
 #print axioms m1_surrogate_member_ceil_window_lower_bound_gamma
 #print axioms kl2003_k2_m1_surrogate_ceil_window_lower_bound
+#print axioms x_pos_of_pow14_mul_root_le
+#print axioms two_rpow_logb_ratio_mul_root_eq_x
+#print axioms concreteWindow_logb_eq_self
+#print axioms fourteen_le_logb_ratio_of_pow14_mul_root_le
+#print axioms notInCycle_eight
+#print axioms classRoot_eight
+#print axioms kl2003_k2_m1_surrogate_arbitrary_x_lower_bound_component
+#print axioms kl2003_k2_m1_surrogate_arbitrary_x_lower_bound
+#print axioms kl2003_k2_m1_surrogate_root8_lower_bound
 
 end KL2003
 end CollatzClassical

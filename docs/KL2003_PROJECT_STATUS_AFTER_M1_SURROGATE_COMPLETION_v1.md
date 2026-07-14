@@ -26,6 +26,14 @@ The final review package is:
 docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md
 ```
 
+Post-completion update:
+
+```text
+docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md
+```
+
+adds the large-window arbitrary-`x` corollary and the public root-8 instance.
+
 ## Exact Scope
 
 The theorem is a KL2003 `k=2` M1-surrogate window theorem over the concrete
@@ -100,22 +108,38 @@ This status update does not claim:
 
 ```text
 NO_FULL_M1_THEOREM_CLAIM
-NO_ARBITRARY_WINDOW_CLAIM
+NO_K9_OR_084_CLAIM
+NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```
 
-In particular, the theorem is not a statement for arbitrary `x` or arbitrary
-windows.  Any later arbitrary-window corollary must add a separate window
-bridge and account for the ceiling policy.
+The arbitrary-`x` corollary is now proved only in the calibrated large-window
+form:
+
+```text
+((2 : Nat)^14) * a <= x
+```
+
+and the citable root-8 form uses:
+
+```text
+(2 : Nat)^17 <= x
+```
+
+This is still not the full M1 theorem, not the KL2003 `k=9`/`0.84` theorem,
+and not a global Collatz claim.
 
 ## Classification
 
 ```text
 KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE
+KL2003_K2_M1_SURROGATE_ARBITRARY_X_PROVED
+ROOT8_PUBLIC_INSTANCE_PROVED
 FINAL_REVIEW_PACKAGE_PUBLISHED
 CC_CHALLENGE_REGISTERED_FORMALISING
 READY_FOR_INTERNAL_AUDIT_PACKAGE
 NO_FULL_M1_THEOREM_CLAIM
-NO_ARBITRARY_WINDOW_CLAIM
+NO_K9_OR_084_CLAIM
+NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```
