@@ -113,6 +113,8 @@ namespace KL2003
 #print axioms concretePhi_zeroExtension
 #print axioms concretePhi_baseSegmentUnitLowerBound
 #print axioms concretePhi_weightedBase
+#print axioms concretePhi_k2_retarded_inputs_v3
+#print axioms concretePhi_retarded_lower_bound
 #print axioms concretePhiRowsV3SeamObligation
 
 end KL2003

@@ -1742,6 +1742,19 @@ theorem concretePhi_weightedBase :
     BaseSegmentWeightedLowerBound concretePhi :=
   base_weighted_of_unit concretePhi_baseSegmentUnitLowerBound
 
+theorem concretePhi_k2_retarded_inputs_v3 :
+    K2RetardedInductionInputsV3 concretePhi := by
+  exact
+    k2_retarded_inputs_v3_from_closed_certificate
+      concretePhi
+      concretePhi_zeroExtension
+      concretePhi_weightedBase
+      concretePhi_rowsV3
+
+theorem concretePhi_retarded_lower_bound :
+    RetardedLowerBoundConclusion concretePhi := by
+  exact m0c_retarded_induction_bound_v3 concretePhi_k2_retarded_inputs_v3
+
 def concretePhiRowsV2SeamObligation : Prop :=
   I2ELAbstractRowsV2 concretePhi
 
