@@ -6,7 +6,7 @@ de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 ```
 FASE ACTUAL:          KL2003 k=2 M1-surrogate ceil-window theorem complete
 
-HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   AUDIT_ENTRY_READY
+HILO A (CC Challenge): ELIAHOU1993_AUTHOR_FIRST_WINDOW_ACTIVE   UPSTREAM_RESPONSE_PENDING
 HILO B (Krasikov M1):  KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE
 COORDINACION:          KL2003 formalising registered + internal audit package ready
 CLAUDE:                veredicto coordinado firmado sobre texto completo
@@ -29,10 +29,14 @@ TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalis
 ELIAHOU1993:
   UPSTREAM_AUTHOR_FIRST_CONTACT_SENT
   GITHUB_ISSUE = https://github.com/tangentstorm/eliahou-collatz-bounds/issues/1
+  LAST_WINDOW_CHECK = 2026-07-14 20:36:26 CEST
+  AUTHOR_FIRST_WINDOW_ACTIVE
+  UPSTREAM_RESPONSE_PENDING
   FORUM_DEFERRED_BY_RECORDED_DECISION
+  NO_FORUM_POST_YET
   AUTHOR_RESPONSE_WINDOW = until 2026-07-21 01:21 CEST
   If no response after window: publish Forum intention/update noting prior direct contact
-  NO_AUDIT_LINK
+  NO_AUDIT_LINK_YET
   NO_GLOBAL_COLLATZ_CLAIM
 
 KL2003:
