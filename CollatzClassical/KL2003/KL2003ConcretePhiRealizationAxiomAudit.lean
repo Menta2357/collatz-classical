@@ -87,10 +87,33 @@ namespace KL2003
 #print axioms row28_retarded_le_piStar_source
 #print axioms row28_pointwise_seam_mod2
 #print axioms row28_pointwise_seam_mod5
+#print axioms row28_outer_block_v3_le_second
+#print axioms row28_outer_block_v3_le_child_mod2
+#print axioms row28_outer_block_v3_le_child_mod5
+#print axioms row28_pointwise_seam_v3_mod2
+#print axioms row28_pointwise_seam_v3_mod5
+#print axioms row28CPrime
+#print axioms row28_cprime_arith
+#print axioms row28_shift2AlphaMinus5Pad2_nonneg
+#print axioms row28_shift2AlphaMinus5Pad2_le_shiftAlphaMinus3Pad
+#print axioms row28_shift_le_shiftAlphaMinus1Pad
+#print axioms row28_cprime_window_le_child
+#print axioms row28_cprime_window_depth1_le_child
+#print axioms row28_retarded_window_shift2_le_child
+#print axioms row28_cprime_piStar_le_child
+#print axioms row28_cprime_retarded_piStar_le_child
+#print axioms row28_outer_block_v3_le_child_mod8_cprime_mod2
+#print axioms row28_outer_block_v3_le_child_mod8_cprime_mod5
+#print axioms row28_outer_block_v3_le_child_mod8_cprime_mod8
+#print axioms row28_outer_block_v3_le_child_mod8
+#print axioms row28_pointwise_seam_v3_mod8
+#print axioms concretePhi_row28_seam_v3
+#print axioms concretePhi_rowsV3
 #print axioms one_le_concretePhiComponent_of_nonneg
 #print axioms concretePhi_zeroExtension
 #print axioms concretePhi_baseSegmentUnitLowerBound
 #print axioms concretePhi_weightedBase
+#print axioms concretePhiRowsV3SeamObligation
 
 end KL2003
 end CollatzClassical
