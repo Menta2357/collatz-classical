@@ -4,11 +4,11 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Eliahou upstream contact sent + KL2003 M0a anchored + M0c scoped
+FASE ACTUAL:          KL2003 k=2 M1-surrogate ceil-window theorem complete
 
 HILO A (CC Challenge): CC_CHALLENGE_AUDIT_ENTRY_PHASE0_v2   AUDIT_ENTRY_READY
-HILO B (Krasikov M1):  KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_v2   FEASIBILITY_GO
-COORDINACION:          UPSTREAM_AUTHOR_FIRST_CONTACT_SENT + KL2003 formalising registered
+HILO B (Krasikov M1):  KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE
+COORDINACION:          KL2003 formalising registered + internal audit package ready
 CLAUDE:                veredicto coordinado firmado sobre texto completo
 
 REGLA ACTUAL:
@@ -18,10 +18,12 @@ REGLA ACTUAL:
   trust-boundary probe. Forum queda diferido; no audit link todavia. Esperar
   respuesta author-first antes de publicar en Forum o registrar audit.
   KrasikovLagarias2003 ya esta registrado como formalising con AI declarada.
-  El paquete k=2 permitido sigue limitado a certificado numerico:
-  data/verifier/alpha/endpoints, sin M0, sin M1, sin semantica KL2003.
+  El carril B cerro el resultado tecnico calibrado:
+  KL2003 k=2 M1-surrogate over concrete ceil window. No marcar como
+  M1 completo, no marcar como teorema de ventana arbitraria, y no marcar
+  como claim global de Collatz.
 
-LEAN ESCRITO:          KL2003 k=2 data + rational verifier + alpha bounds + endpoints, build PASS
+LEAN ESCRITO:          KL2003 k=2 M1-surrogate package, build/audit PASS
 TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalising
 
 ELIAHOU1993:
@@ -39,6 +41,11 @@ KL2003:
   REPOSITORY = https://github.com/Menta2357/collatz-classical
   AI_ASSISTED = true
   AI_MODELS = Codex (GPT-5-based agents); Claude Fable 5
+  HEAD_FINAL = 71add7c
+  THEOREM = kl2003_k2_m1_surrogate_ceil_window_lower_bound
+  THEOREM_FILE = CollatzClassical/KL2003/KL2003M1Surrogate.lean
+  FINAL_REVIEW_NOTE = docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md
+  PROJECT_STATUS_NOTE = docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md
   DATA_ONLY_LEAN_BUILD_PASS
   DATA_ONLY_LEAN_AXIOM_AUDIT_PASS
   K2_RATIONAL_VERIFIER_BUILD_PASS
@@ -59,8 +66,16 @@ KL2003:
   M0C_ZERO_EXTENSION_AND_BASE_SEGMENT_PATCHED
   M0B_D1_D2_D3_TREE_INEQUALITY_SCOPED
   M0B_REACHABILITY_PROP_API_SCOPED
-  NEXT_FRONTIER = M0B Lean API: ReachesWithin bridge + inverse_children_disjoint_descendants
-  NO_M0_PROOF
-  NO_M1_THEOREM
+  M0C_V3_ABSTRACT_RETARDED_INDUCTION_PASS
+  ROW28_V3_CONCRETE_SEAM_PASS
+  CONCRETE_PHI_ROWS_V3_PASS
+  M0D_CONCRETE_BOUND_ASSEMBLY_PASS
+  M1_SURROGATE_CEIL_WINDOW_BUILD_PASS
+  M1_SURROGATE_CEIL_WINDOW_AXIOM_AUDIT_PASS
+  KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE
+  FINAL_REVIEW_PACKAGE_PUBLISHED
+  READY_FOR_INTERNAL_AUDIT_PACKAGE
+  NO_FULL_M1_THEOREM_CLAIM
+  NO_ARBITRARY_WINDOW_CLAIM
   NO_GLOBAL_COLLATZ_CLAIM
 ```

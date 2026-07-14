@@ -15,8 +15,25 @@ teoremas que **sí** son demostrables con matemática existente.
 | # | Carril | Documento | Estado |
 |---|--------|-----------|--------|
 | 1 | Entrada como auditores al CC Challenge | `docs/CC_CHALLENGE_AUDIT_ENTRY_PLAN_v1.md` | ACTIVO |
-| 2 | Feasibility audit: Krasikov–Lagarias 2003 (x^0.84) | `docs/KL2003_FEASIBILITY_AUDIT_v1.md` | ACTIVO |
+| 2 | KL2003: k=2 M1-surrogate over concrete ceil window | `docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md` | THEOREM COMPLETE |
 | 3 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
+
+## Estado KL2003
+
+El carril KL2003 alcanzo su meta tecnica calibrada en `71add7c`:
+
+```lean
+kl2003_k2_m1_surrogate_ceil_window_lower_bound
+```
+
+El enunciado esta en
+`CollatzClassical/KL2003/KL2003M1Surrogate.lean` y se empaqueta en
+`docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md`.
+
+Alcance exacto: `k=2` M1-surrogate sobre la ventana concreta
+`concreteWindow y a = Nat.ceil ((2 : Real)^y * (a : Real))`, para clases
+`2`, `5`, `8` y raices admisibles. Esto no es el M1 completo, no es un
+teorema para ventanas arbitrarias y no es un claim global de Collatz.
 
 ## Principios (heredados del programa anterior)
 
@@ -36,6 +53,9 @@ El checklist operativo completo está en
 
 - No afirma progreso hacia la conjetura de Collatz completa.
 - No afirma supermartingalas globales ni productores all-k.
+- No afirma que el resultado KL2003 actual sea el M1 completo ni que valga
+  para ventanas arbitrarias; el cierre actual es el teorema tecnico
+  `k=2` M1-surrogate sobre `ceil` window.
 - Los objetivos son formalizaciones de teoremas publicados
   (Krasikov 1989, Applegate–Lagarias 1995, Krasikov–Lagarias 2003)
   y auditorías con crédito explícito a los autores originales.

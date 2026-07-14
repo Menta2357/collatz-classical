@@ -20,6 +20,24 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - De-risking por escalera: M1 = Krasikov 1989 (x^(3/7)) como GO/NO-GO
   antes de comprometer el 0.84.
 
+## Actualizacion 2026-07-14: KL2003 k=2 M1-surrogate cerrado
+
+- HEAD final registrado: `71add7c`.
+- Teorema tecnico:
+  `kl2003_k2_m1_surrogate_ceil_window_lower_bound`.
+- Archivo Lean:
+  `CollatzClassical/KL2003/KL2003M1Surrogate.lean`.
+- Nota final:
+  `docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md`.
+- Clasificacion de estado:
+  `KL2003_K2_M1_SURROGATE_WINDOW_THEOREM_COMPLETE`,
+  `FINAL_REVIEW_PACKAGE_PUBLISHED`,
+  `CC_CHALLENGE_REGISTERED_FORMALISING`,
+  `READY_FOR_INTERNAL_AUDIT_PACKAGE`.
+- Alcance calibrado: resultado `k=2` M1-surrogate sobre la ventana concreta
+  `ceil`; no es M1 completo, no es un teorema de ventana arbitraria y no es
+  un claim global de Collatz.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
