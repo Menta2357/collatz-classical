@@ -1,0 +1,16 @@
+import CollatzClassical.KL2003.KL2003M1Surrogate
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms gammaK2_eq_logb
+#print axioms gammaK2_gt_three_sevenths
+#print axioms two_rpow_gammaK2
+#print axioms lambdaR_rpow_eq_two_rpow_rpow_gammaK2
+#print axioms DeltaV2_mul_lambdaR_rpow_le_component
+#print axioms m1_surrogate_member_ceil_window_lower_bound
+#print axioms m1_surrogate_member_ceil_window_lower_bound_gamma
+#print axioms kl2003_k2_m1_surrogate_ceil_window_lower_bound
+
+end KL2003
+end CollatzClassical
