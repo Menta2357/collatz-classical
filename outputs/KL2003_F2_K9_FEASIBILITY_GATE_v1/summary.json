@@ -1,0 +1,34 @@
+{
+  "candidate_source_count": 29,
+  "checklist_status_counts": {
+    "AMBIGUOUS": 3,
+    "FOUND_DERIVED": 2,
+    "FOUND_SOURCE": 2,
+    "MISSING": 0,
+    "NOT_NEEDED": 0
+  },
+  "guardrails": [
+    "NO_K9_THEOREM_CLAIM",
+    "NO_084_EXPONENT_CLAIM",
+    "NO_FULL_M1_THEOREM_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM",
+    "NO_LEAN_K9_MODULE_OPENED"
+  ],
+  "output_files": [
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/source_inventory.json",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/source_inventory.csv",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/candidate_sources.csv",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/reusable_assets.csv",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/k2_cabled_assets.csv",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/summary.json",
+    "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/manifest_sha256.csv"
+  ],
+  "run_id": "KL2003_F2_K9_FEASIBILITY_GATE_v1",
+  "source_custody_file_count": 7,
+  "tracked_classes": {
+    "formula": "tracked_classes(k) = 3^(k - 1)",
+    "k2": 3,
+    "k9": 6561,
+    "scale_factor": 2187
+  }
+}
