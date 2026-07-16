@@ -21,8 +21,8 @@ REGLA ACTUAL:
   El carril B cerro el resultado tecnico calibrado:
   KL2003 k=2 M1-surrogate over concrete ceil window, ahora con corolario
   para x arbitrario grande. No marcar como M1 completo, no marcar como
-  k=9/0.84, no cubrir x pequeno bajo umbral, y no marcar como claim global
-  de Collatz.
+  high-k (`k=9`/`gamma_9 = 0.8168300` ni `k=11`/`0.84`), no cubrir x pequeno
+  bajo umbral, y no marcar como claim global de Collatz.
 
 LEAN ESCRITO:          KL2003 k=2 M1-surrogate package, build/audit PASS
 TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalising
@@ -84,7 +84,7 @@ KL2003:
   FINAL_REVIEW_PACKAGE_PUBLISHED
   READY_FOR_INTERNAL_AUDIT_PACKAGE
   NO_FULL_M1_THEOREM_CLAIM
-  NO_K9_OR_084_CLAIM
+  NO_HIGH_K_K9_OR_K11_084_CLAIM
   NO_SMALL_X_BELOW_THRESHOLD_CLAIM
   NO_GLOBAL_COLLATZ_CLAIM
 ```

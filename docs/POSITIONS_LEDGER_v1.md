@@ -52,3 +52,6 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - Asignacion de tiempo tras Fase 1 del carril 1 (segunda auditoria vs
   KL2003 vs contribucion a Terras).
 - Techo del carril 2: M3 (0.84) o M2, segun tarea F2 del feasibility.
+  Actualizacion fuente 2026-07-16: el target `0.84` corresponde a k=11
+  (`gamma_11 = 0.8417560`); k=9 es estacion high-k intermedia
+  (`gamma_9 = 0.8168300`).

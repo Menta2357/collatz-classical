@@ -108,7 +108,7 @@ This status update does not claim:
 
 ```text
 NO_FULL_M1_THEOREM_CLAIM
-NO_K9_OR_084_CLAIM
+NO_HIGH_K_K9_OR_K11_084_CLAIM
 NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```
@@ -126,8 +126,9 @@ and the citable root-8 form uses:
 (2 : Nat)^17 <= x
 ```
 
-This is still not the full M1 theorem, not the KL2003 `k=9`/`0.84` theorem,
-and not a global Collatz claim.
+This is still not the full M1 theorem, not a KL2003 high-k theorem
+(`k=9`/`gamma_9 = 0.8168300` or `k=11`/`0.84`), and not a global Collatz
+claim.
 
 ## Classification
 
@@ -139,7 +140,7 @@ FINAL_REVIEW_PACKAGE_PUBLISHED
 CC_CHALLENGE_REGISTERED_FORMALISING
 READY_FOR_INTERNAL_AUDIT_PACKAGE
 NO_FULL_M1_THEOREM_CLAIM
-NO_K9_OR_084_CLAIM
+NO_HIGH_K_K9_OR_K11_084_CLAIM
 NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```

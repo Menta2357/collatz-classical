@@ -35,7 +35,7 @@ kl2003_k2_m1_surrogate_root8_lower_bound
 
 | Paper/source role | Lean theorem/object | What is proved | What is not proved | Fidelity note |
 |---|---|---|---|---|
-| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not the full KL2003 `k=9` / exponent `0.84` theorem | The name includes `k2` and `surrogate` to prevent overclaiming. |
+| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not any high-k KL2003 theorem: neither k=9 (`gamma_9 = 0.8168300`) nor k=11 / exponent `0.84` | The name includes `k2` and `surrogate` to prevent overclaiming. |
 | M1-style surrogate exponent | `gammaK2 := Real.logb 2 (27 / 20)` | `gammaK2_gt_three_sevenths` | No claim that this is KL2003's final exponent | This is the k=2 surrogate exponent, with integer witness `27^7 > 8 * 20^7`. |
 | Ceil-window theorem | `kl2003_k2_m1_surrogate_ceil_window_lower_bound` | For `14 <= y`, admissible roots in classes `{2,5,8}` satisfy the lower bound at `concreteWindow y a` | Not an arbitrary-`x` theorem by itself | This was the first packaged technical theorem. |
 | Arbitrary large `x` corollary | `kl2003_k2_m1_surrogate_arbitrary_x_lower_bound` | If `((2 : Nat)^14) * a.1 <= x`, then `DeltaV2 * (((x : Real)/(a.1 : Real))^gammaK2) <= piStar a.1 x` | No statement for `x` below the threshold | The `ceil` excess is eliminated by choosing `y = Real.logb 2 ((x:Real)/(a:Real))`. |
@@ -224,7 +224,7 @@ Current no-claims:
 
 ```text
 NO_FULL_M1_THEOREM_CLAIM
-NO_K9_OR_084_CLAIM
+NO_HIGH_K_K9_OR_K11_084_CLAIM
 NO_SMALL_X_CLAIM_BELOW_THRESHOLD
 NO_GLOBAL_COLLATZ_CLAIM
 ```

@@ -2,6 +2,6 @@ asset_id,path,reuse_status,notes
 M0A_piStar_semantics,CollatzClassical/KL2003/KL2003M0APiStarSemantics.lean,REUSABLE_GENERIC,Computable piStar/reachability semantics is not k=2-specific.
 M0B_reachability_api,CollatzClassical/KL2003/KL2003M0BReachabilityAPI.lean,REUSABLE_GENERIC,Prop reachability and Bool/Prop bridge are root/window generic.
 entry_predecessor_fibers,CollatzClassical/KL2003/KL2003M0BEntryPredecessorDisjointness.lean,REUSABLE_GENERIC,First-entry/fiber disjointness is expected to generalize.
-two_branch_core_pattern,CollatzClassical/KL2003/KL2003M0BTwoBranchCore.lean,REUSABLE_PATTERN,"Useful proof pattern, but k=9 rows may need generated variants."
+two_branch_core_pattern,CollatzClassical/KL2003/KL2003M0BTwoBranchCore.lean,REUSABLE_PATTERN,"Useful proof pattern, but high-k rows may need generated variants."
 real_log_rpow_toolkit,CollatzClassical/KL2003/KL2003K2AlphaBounds.lean,REUSABLE_TOOLKIT,"Real/log/rpow techniques reusable, constants are k-specific."
-arbitrary_x_logb_translation,CollatzClassical/KL2003/KL2003M1Surrogate.lean,REUSABLE_PATTERN,The logb arbitrary-x bridge should generalize after k=9 Phi is built.
+arbitrary_x_logb_translation,CollatzClassical/KL2003/KL2003M1Surrogate.lean,REUSABLE_PATTERN,The logb arbitrary-x bridge should generalize after high-k Phi is built.

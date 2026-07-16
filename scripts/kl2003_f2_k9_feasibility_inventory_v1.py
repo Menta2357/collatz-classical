@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Inventory local KL2003 k=9 feasibility evidence.
+"""Inventory local KL2003 high-k feasibility evidence.
 
 This is an F2 gate script, not a theorem generator.  It reads the local
 scoping note, scans local source custody/docs/outputs/Lean/scripts, and emits
-an evidence inventory for the fixed k=9 checklist.  It deliberately marks
+an evidence inventory for the fixed high-k checklist.  It deliberately marks
 missing or ambiguous evidence instead of reconstructing mathematics from
 patterns.
 """
@@ -24,6 +24,7 @@ from typing import Iterable
 RUN_ID = "KL2003_F2_K9_FEASIBILITY_GATE_v1"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCOPING = REPO_ROOT / "docs" / "KL2003_F2_K9_FEASIBILITY_GATE_SCOPING_v1.md"
+SOURCE_REVIEW_NOTE = REPO_ROOT / "docs" / "KL2003_F2_HIGH_K_SOURCE_REVIEW_AND_GENERATOR_PATH_v1.md"
 OUT_DIR = REPO_ROOT / "outputs" / RUN_ID
 
 KL2003_SOURCE_DIR = Path(
@@ -85,14 +86,24 @@ CHECKLIST: tuple[ChecklistItem, ...] = (
         weak_patterns=(r"\b0\.84\b", r"\b0,84\b", r"\bM3\b", r"certificate", r"Table"),
     ),
     ChecklistItem(
+        item_id="printed_k11_084_data",
+        description="Printed k=11 / 0.84 row system or certificate data",
+        expected_evidence=(
+            "Explicit paper/source tables for k=11 rows, weights, endpoints, "
+            "or certificate data supporting the 0.84 line."
+        ),
+        strong_patterns=(r"\bk\s*=\s*11\b", r"\bk=11\b", r"\bK11\b", r"\bgamma_?11\b", r"\blambda_?11\b", r"\b0\.84\b"),
+        weak_patterns=(r"\b0\.8417560\b", r"\b1\.7922310\b", r"further computation", r"certificate", r"Table"),
+    ),
+    ChecklistItem(
         item_id="gamma_k_table",
         description="Table of exponents gamma(k)",
         expected_evidence=(
             "Printed or source-derived values for intermediate k, especially "
-            "k=3 through k=9."
+            "k=3 through k=11."
         ),
         strong_patterns=(r"gamma\s*\(\s*k\s*\)", r"gamma\(k\)", r"gamma_?k", r"exponents? gamma"),
-        weak_patterns=(r"\bgammaK2\b", r"\bgamma\b", r"\bk\s*=\s*9\b", r"\b0\.84\b"),
+        weak_patterns=(r"\bgammaK2\b", r"\bgamma\b", r"\bk\s*=\s*9\b", r"\bk\s*=\s*11\b", r"\b0\.84\b"),
     ),
     ChecklistItem(
         item_id="k9_lambda_precision",
@@ -101,8 +112,18 @@ CHECKLIST: tuple[ChecklistItem, ...] = (
             "Exact or approximate k=9 lambda/endpoints with enough precision "
             "for rational intervals and slacks."
         ),
-        strong_patterns=(r"\blambda_?9\b", r"\bk\s*=\s*9\b.*\blambda\b", r"\blambda\b.*\bk\s*=\s*9\b"),
+        strong_patterns=(r"\blambda_?9\b", r"\bk\s*=\s*9\b.*\blambda\b", r"\blambda\b.*\bk\s*=\s*9\b", r"\b1\.7615320\b"),
         weak_patterns=(r"\blambdaR\b", r"\blambda\b", r"endpoint", r"precision", r"interval"),
+    ),
+    ChecklistItem(
+        item_id="k11_lambda_precision",
+        description="k=11 / 0.84 lambda/endpoint precision",
+        expected_evidence=(
+            "Exact or approximate k=11 lambda/endpoints with enough precision "
+            "for rational intervals and slacks."
+        ),
+        strong_patterns=(r"\blambda_?11\b", r"\bk\s*=\s*11\b.*\blambda\b", r"\blambda\b.*\bk\s*=\s*11\b", r"\b1\.7922310\b"),
+        weak_patterns=(r"\blambdaR\b", r"\blambda\b", r"endpoint", r"precision", r"interval", r"\b0\.8417560\b"),
     ),
     ChecklistItem(
         item_id="k9_deletion_tree_sources",
@@ -113,6 +134,16 @@ CHECKLIST: tuple[ChecklistItem, ...] = (
         ),
         strong_patterns=(r"\bk\s*=\s*9\b.*(deletion|tree|figure)", r"(deletion|tree|figure).*\bk\s*=\s*9\b"),
         weak_patterns=(r"deletion", r"deleted", r"crossed", r"tree", r"pstex", r"Figure"),
+    ),
+    ChecklistItem(
+        item_id="k11_deletion_tree_sources",
+        description="k=11 / 0.84 deletion/tree source material",
+        expected_evidence=(
+            "Figure overlays, graphical sources, TeX tables, or algorithms "
+            "sufficient to reconstruct k=11 member-wise populations."
+        ),
+        strong_patterns=(r"\bk\s*=\s*11\b.*(deletion|tree|figure)", r"(deletion|tree|figure).*\bk\s*=\s*11\b"),
+        weak_patterns=(r"deletion", r"deleted", r"crossed", r"tree", r"pstex", r"Figure", r"\b0\.84\b"),
     ),
     ChecklistItem(
         item_id="reusable_lean_assets",
@@ -162,7 +193,7 @@ REUSABLE_ASSETS = [
         "asset_id": "two_branch_core_pattern",
         "path": "CollatzClassical/KL2003/KL2003M0BTwoBranchCore.lean",
         "reuse_status": "REUSABLE_PATTERN",
-        "notes": "Useful proof pattern, but k=9 rows may need generated variants.",
+        "notes": "Useful proof pattern, but high-k rows may need generated variants.",
     },
     {
         "asset_id": "real_log_rpow_toolkit",
@@ -174,7 +205,7 @@ REUSABLE_ASSETS = [
         "asset_id": "arbitrary_x_logb_translation",
         "path": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
         "reuse_status": "REUSABLE_PATTERN",
-        "notes": "The logb arbitrary-x bridge should generalize after k=9 Phi is built.",
+        "notes": "The logb arbitrary-x bridge should generalize after high-k Phi is built.",
     },
 ]
 
@@ -184,37 +215,37 @@ K2_CABLED_ASSETS = [
         "asset_id": "k2_certificate_data",
         "path": "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
         "cabling_reason": "Contains k=2 constants/classes/slacks.",
-        "replacement_needed": "k=9 certificate data and exact rational verifier.",
+        "replacement_needed": "high-k certificate data and exact rational verifier.",
     },
     {
         "asset_id": "k2_certificate_verifier",
         "path": "CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean",
         "cabling_reason": "Verifier rows are tied to the k=2 LP skeleton.",
-        "replacement_needed": "Generated or data-driven k=9 verifier.",
+        "replacement_needed": "Generated or data-driven high-k verifier.",
     },
     {
         "asset_id": "k2_concrete_phi_realization",
         "path": "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
         "cabling_reason": "ClassRoots are mod 9 and row22/25/28 case trees are k=2-specific.",
-        "replacement_needed": "k=9 class envelope and source-faithful row seam.",
+        "replacement_needed": "high-k class envelope and source-faithful row seam.",
     },
     {
         "asset_id": "k2_M0C_rows_V3",
         "path": "CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean",
         "cabling_reason": "Rows V2/V3 and coefficients are k=2-specific.",
-        "replacement_needed": "k=9 abstract row contract and certificate arithmetic.",
+        "replacement_needed": "high-k abstract row contract and certificate arithmetic.",
     },
     {
         "asset_id": "k2_row_instantiations",
         "path": "CollatzClassical/KL2003/KL2003M0BD123CoreInstantiations.lean",
         "cabling_reason": "D1/D2/D3 are the k=2 row families only.",
-        "replacement_needed": "k=9 row family extraction/generation.",
+        "replacement_needed": "high-k row family extraction/generation.",
     },
     {
         "asset_id": "k2_figure_A1_outputs",
         "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1",
         "cabling_reason": "Figure A1 is the k=2 row28/EL tree custody.",
-        "replacement_needed": "k=9 deletion/tree source custody if present.",
+        "replacement_needed": "high-k deletion/tree source custody if present.",
     },
 ]
 
@@ -256,7 +287,7 @@ def path_is_under(path: Path, root: Path) -> bool:
 def excluded_from_evidence_scan(path: Path) -> bool:
     """Avoid self-evidence from the scoping note, this script, and outputs."""
     resolved = path.resolve()
-    if resolved in {SCOPING.resolve(), Path(__file__).resolve()}:
+    if resolved in {SCOPING.resolve(), SOURCE_REVIEW_NOTE.resolve(), Path(__file__).resolve()}:
         return True
     if path_is_under(path, OUT_DIR):
         return True
@@ -360,23 +391,28 @@ def hit_text_matches(hit: PatternHit, pattern: str) -> bool:
     return re.search(pattern, hit.text, re.IGNORECASE) is not None
 
 
-def has_explicit_k9_data_table_hit(hit: PatternHit) -> bool:
-    return hit_text_matches(hit, r"\bk\s*=\s*9\b|\bk=9\b|\bK9\b|\bgamma_?9\b|\blambda_?9\b") and hit_text_matches(
+def has_explicit_high_k_data_table_hit(hit: PatternHit) -> bool:
+    return hit_text_matches(
+        hit,
+        r"\bk\s*=\s*(9|11)\b|\bk=(9|11)\b|\bK(9|11)\b|\bgamma_?(9|11)\b|\blambda_?(9|11)\b|\b0\.84\b",
+    ) and hit_text_matches(
         hit,
         r"\b(rows?|weights?|endpoints?|certificate|slacks?|feasible solution|constraints?|coefficients?|table)\b",
     )
 
 
-def has_explicit_k9_lambda_precision_hit(hit: PatternHit) -> bool:
+def has_explicit_high_k_lambda_precision_hit(hit: PatternHit) -> bool:
+    if hit_text_matches(hit, r"\b1\.7615320\b|\b1\.7922310\b"):
+        return True
     precision_near_lambda = (
-        r"(\\lambda|\blambda\b|\blambda_?9\b)[^0-9\n]{0,30}"
+        r"(\\lambda|\blambda\b|\blambda_?(9|11)\b)[^0-9\n]{0,30}"
         r"(\d+\.\d{4,}|\d+\s*/\s*\d+)|"
         r"(\d+\.\d{4,}|\d+\s*/\s*\d+)[^\n]{0,30}"
-        r"(\\lambda|\blambda\b|\blambda_?9\b)"
+        r"(\\lambda|\blambda\b|\blambda_?(9|11)\b)"
     )
     return (
-        hit_text_matches(hit, r"\\lambda|\blambda\b|\blambda_?9\b")
-        and hit_text_matches(hit, r"\bk\s*=\s*9\b|\bk=9\b|\blambda_?9\b")
+        hit_text_matches(hit, r"\\lambda|\blambda\b|\blambda_?(9|11)\b")
+        and hit_text_matches(hit, r"\bk\s*=\s*(9|11)\b|\bk=(9|11)\b|\blambda_?(9|11)\b")
         and hit_text_matches(hit, precision_near_lambda)
     )
 
@@ -386,47 +422,50 @@ def decide_status(item: ChecklistItem, strong: list[PatternHit], weak: list[Patt
     weak_source = [h for h in weak if source_kind(h.path) in {"SOURCE_CUSTODY", "SOURCE_ARCHIVE"}]
 
     if item.item_id == "reusable_lean_assets":
-        return "FOUND_DERIVED", "Hand-maintained reuse table emitted by script; requires human review before k=9 GO."
+        return "FOUND_DERIVED", "Hand-maintained reuse table emitted by script; requires human review before high-k GO."
     if item.item_id == "k2_cabled_assets":
-        return "FOUND_DERIVED", "Hand-maintained k=2 cabling table emitted by script; replacement required for k=9."
+        return "FOUND_DERIVED", "Hand-maintained k=2 cabling table emitted by script; replacement required for high-k."
 
-    if item.item_id == "printed_k9_data":
-        explicit_source = [h for h in strong_source if has_explicit_k9_data_table_hit(h)]
-        explicit_derived = [h for h in strong if has_explicit_k9_data_table_hit(h)]
+    if item.item_id in {"printed_k9_data", "printed_k11_084_data"}:
+        explicit_source = [h for h in strong_source if has_explicit_high_k_data_table_hit(h)]
+        explicit_derived = [h for h in strong if has_explicit_high_k_data_table_hit(h)]
         if explicit_source:
-            return "FOUND_SOURCE", "Explicit-looking k=9 data/table hit found in local KL2003 source custody."
+            return "FOUND_SOURCE", "Explicit-looking high-k data/table hit found in local KL2003 source custody."
         if explicit_derived:
-            return "FOUND_DERIVED", "Explicit-looking k=9 data/table hit found only in derived repo material."
+            return (
+                "AMBIGUOUS",
+                "Explicit-looking high-k data/table hit found only in derived repo material; primary source data remains unverified.",
+            )
         if strong_source:
             return (
                 "AMBIGUOUS",
-                "Primary source mentions k=9, but this scan did not identify explicit printed k=9 rows/certificate data.",
+                "Primary source mentions this high-k target, but this scan did not identify explicit printed rows/certificate data.",
             )
         if strong:
-            return "AMBIGUOUS", "Derived material mentions k=9, but no explicit source table/certificate was identified."
+            return "AMBIGUOUS", "Derived material mentions this high-k target, but no explicit source table/certificate was identified."
 
-    if item.item_id == "k9_lambda_precision":
-        explicit_source = [h for h in strong_source + weak_source if has_explicit_k9_lambda_precision_hit(h)]
-        explicit_derived = [h for h in strong + weak if has_explicit_k9_lambda_precision_hit(h)]
+    if item.item_id in {"k9_lambda_precision", "k11_lambda_precision"}:
+        explicit_source = [h for h in strong_source + weak_source if has_explicit_high_k_lambda_precision_hit(h)]
+        explicit_derived = [h for h in strong + weak if has_explicit_high_k_lambda_precision_hit(h)]
         if explicit_source:
-            return "FOUND_SOURCE", "Explicit-looking k=9 lambda precision hit found in local KL2003 source custody."
+            return "FOUND_SOURCE", "Explicit-looking high-k lambda precision hit found in local KL2003 source custody."
         if explicit_derived:
-            return "FOUND_DERIVED", "Explicit-looking k=9 lambda precision hit found only in derived repo material."
+            return "FOUND_DERIVED", "Explicit-looking high-k lambda precision hit found only in derived repo material."
         if strong_source or weak_source:
             return (
                 "AMBIGUOUS",
-                "Local source mentions k=9/lambda context, but no precise k=9 lambda value or interval was identified.",
+                "Local source mentions high-k/lambda context, but no precise endpoint interval or certificate precision was identified.",
             )
         if strong or weak:
-            return "AMBIGUOUS", "Derived material mentions lambda/k=9, but no precise source value was identified."
+            return "AMBIGUOUS", "Derived material mentions high-k lambda context, but no precise source value was identified."
 
-    if item.item_id == "k9_deletion_tree_sources":
+    if item.item_id in {"k9_deletion_tree_sources", "k11_deletion_tree_sources"}:
         if strong_source:
-            return "FOUND_SOURCE", "k=9-specific deletion/tree hit found in local KL2003 source custody."
+            return "FOUND_SOURCE", "High-k-specific deletion/tree hit found in local KL2003 source custody."
         if strong:
             return (
                 "AMBIGUOUS",
-                "k=9-specific deletion/tree hit appears only in derived material; needs primary-source confirmation.",
+                "High-k-specific deletion/tree hit appears only in derived material; needs primary-source confirmation.",
             )
         if weak_source:
             return (
@@ -434,14 +473,14 @@ def decide_status(item: ChecklistItem, strong: list[PatternHit], weak: list[Patt
                 "Generic deletion/tree/Figure source exists, but no k=9-specific tree source was identified by this scan.",
             )
         if weak:
-            return "AMBIGUOUS", "Generic deletion/tree material appears in derived files only; k=9-specific source is still open."
+            return "AMBIGUOUS", "Generic deletion/tree material appears in derived files only; high-k-specific source is still open."
 
     if strong_source:
         return "FOUND_SOURCE", "Strong checklist pattern found in local KL2003 source custody."
     if strong:
         return "FOUND_DERIVED", "Strong pattern found only in derived repo docs/outputs/scripts/Lean, not primary source."
     if weak_source and item.source_required:
-        return "AMBIGUOUS", "Only weak/source-adjacent evidence found; not enough to certify the required k=9 item."
+        return "AMBIGUOUS", "Only weak/source-adjacent evidence found; not enough to certify the required high-k item."
     if weak:
         return "AMBIGUOUS", "Only weak derived evidence found; requires human source review."
     return "MISSING", "No local evidence found for this fixed checklist item."
@@ -487,17 +526,22 @@ def build_checklist(files: list[Path]) -> list[dict[str, object]]:
 def candidate_sources(files: list[Path]) -> list[dict[str, object]]:
     patterns = (
         r"\bk\s*=\s*9\b",
+        r"\bk\s*=\s*11\b",
         r"\bk=9\b",
+        r"\bk=11\b",
         r"\bK9\b",
+        r"\bK11\b",
         r"\b0\.84\b",
         r"\b0,84\b",
         r"gamma\s*\(\s*k\s*\)",
         r"\blambda_?9\b",
+        r"\blambda_?11\b",
         r"deletion",
         r"pstex",
         r"Table 4",
         r"30apr02",
         r"6561",
+        r"59049",
     )
     hits = line_hits(files, patterns, "candidate", limit=500)
     grouped: dict[Path, list[PatternHit]] = {}
@@ -543,7 +587,7 @@ def source_custody_summary(files: list[Path]) -> list[dict[str, object]]:
 def write_csv(path: Path, rows: list[dict[str, object]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             encoded = {}
@@ -581,8 +625,10 @@ def main() -> None:
         "formula": "tracked_classes(k) = 3^(k - 1)",
         "k2": 3 ** (2 - 1),
         "k9": 3 ** (9 - 1),
+        "k11": 3 ** (11 - 1),
     }
-    tracked_classes["scale_factor"] = tracked_classes["k9"] // tracked_classes["k2"]
+    tracked_classes["scale_factor_k9_from_k2"] = tracked_classes["k9"] // tracked_classes["k2"]
+    tracked_classes["scale_factor_k11_from_k2"] = tracked_classes["k11"] // tracked_classes["k2"]
 
     complexity = {
         "tracked_classes": tracked_classes,
@@ -592,7 +638,7 @@ def main() -> None:
         "maximum_elimination_depth": "REQUIRES_SOURCE_INVENTORY",
         "certificate_constants": "REQUIRES_SOURCE_INVENTORY",
         "expected_generated_lean_declarations": "REQUIRES_GENERATOR_DESIGN",
-        "manual_transcription_plausibility": "NOT_PLAUSIBLE_AT_SCALE_6561",
+        "manual_transcription_plausibility": "NOT_PLAUSIBLE_AT_SCALE_6561_AND_59049",
     }
 
     inventory = {
@@ -616,7 +662,11 @@ def main() -> None:
             "Is there a printed/source k=9 row system, or only an algorithm plus final exponent?",
             "Where are k=9 certificate constants and endpoint precisions printed?",
             "Can k=9 rows be generated source-faithfully with manifests and independent checks?",
+            "Is there a printed/source k=11 row system for the 0.84 line, or only an algorithm plus final exponent?",
+            "Where are k=11/0.84 certificate constants and endpoint precisions printed?",
+            "Can k=11 rows be generated source-faithfully with manifests and independent checks?",
             "What is the smallest rational slack after exact k=9 reconstruction?",
+            "What is the smallest rational slack after exact k=11 reconstruction?",
             "Which row families are regular and which are exceptional?",
         ],
         "guardrails": [
@@ -710,7 +760,9 @@ def main() -> None:
     print(f"run_id={RUN_ID}")
     print(f"tracked_classes.k2={tracked_classes['k2']}")
     print(f"tracked_classes.k9={tracked_classes['k9']}")
-    print(f"tracked_classes.scale_factor={tracked_classes['scale_factor']}")
+    print(f"tracked_classes.k11={tracked_classes['k11']}")
+    print(f"tracked_classes.scale_factor_k9_from_k2={tracked_classes['scale_factor_k9_from_k2']}")
+    print(f"tracked_classes.scale_factor_k11_from_k2={tracked_classes['scale_factor_k11_from_k2']}")
     print(f"output_dir={repo_rel(OUT_DIR)}")
     print("no k=9 theorem, no 0.84 theorem, no global Collatz claim")
 

@@ -1,9 +1,9 @@
 {
-  "candidate_source_count": 29,
+  "candidate_source_count": 26,
   "checklist_status_counts": {
-    "AMBIGUOUS": 3,
+    "AMBIGUOUS": 4,
     "FOUND_DERIVED": 2,
-    "FOUND_SOURCE": 2,
+    "FOUND_SOURCE": 4,
     "MISSING": 0,
     "NOT_NEEDED": 0
   },
@@ -27,8 +27,10 @@
   "source_custody_file_count": 7,
   "tracked_classes": {
     "formula": "tracked_classes(k) = 3^(k - 1)",
+    "k11": 59049,
     "k2": 3,
     "k9": 6561,
-    "scale_factor": 2187
+    "scale_factor_k11_from_k2": 19683,
+    "scale_factor_k9_from_k2": 2187
   }
 }

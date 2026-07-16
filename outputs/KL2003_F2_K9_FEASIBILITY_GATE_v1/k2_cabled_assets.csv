@@ -1,7 +1,7 @@
 asset_id,path,cabling_reason,replacement_needed
-k2_certificate_data,CollatzClassical/KL2003/KL2003K2CertificateData.lean,Contains k=2 constants/classes/slacks.,k=9 certificate data and exact rational verifier.
-k2_certificate_verifier,CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean,Verifier rows are tied to the k=2 LP skeleton.,Generated or data-driven k=9 verifier.
-k2_concrete_phi_realization,CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean,ClassRoots are mod 9 and row22/25/28 case trees are k=2-specific.,k=9 class envelope and source-faithful row seam.
-k2_M0C_rows_V3,CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean,Rows V2/V3 and coefficients are k=2-specific.,k=9 abstract row contract and certificate arithmetic.
-k2_row_instantiations,CollatzClassical/KL2003/KL2003M0BD123CoreInstantiations.lean,D1/D2/D3 are the k=2 row families only.,k=9 row family extraction/generation.
-k2_figure_A1_outputs,outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1,Figure A1 is the k=2 row28/EL tree custody.,k=9 deletion/tree source custody if present.
+k2_certificate_data,CollatzClassical/KL2003/KL2003K2CertificateData.lean,Contains k=2 constants/classes/slacks.,high-k certificate data and exact rational verifier.
+k2_certificate_verifier,CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean,Verifier rows are tied to the k=2 LP skeleton.,Generated or data-driven high-k verifier.
+k2_concrete_phi_realization,CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean,ClassRoots are mod 9 and row22/25/28 case trees are k=2-specific.,high-k class envelope and source-faithful row seam.
+k2_M0C_rows_V3,CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean,Rows V2/V3 and coefficients are k=2-specific.,high-k abstract row contract and certificate arithmetic.
+k2_row_instantiations,CollatzClassical/KL2003/KL2003M0BD123CoreInstantiations.lean,D1/D2/D3 are the k=2 row families only.,high-k row family extraction/generation.
+k2_figure_A1_outputs,outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1,Figure A1 is the k=2 row28/EL tree custody.,high-k deletion/tree source custody if present.

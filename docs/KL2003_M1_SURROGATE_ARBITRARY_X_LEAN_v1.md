@@ -16,7 +16,7 @@ k=2 M1-surrogate
 tracked classes 2, 5, 8
 large-window threshold
 not full M1
-not k=9 / 0.84
+not high-k (`k=9` / `gamma_9 = 0.8168300`, nor `k=11` / `0.84`)
 not global Collatz
 ```
 
@@ -122,13 +122,14 @@ for the calibrated `k=2` surrogate.  The remaining non-claims are:
 
 ```text
 NO_FULL_M1_THEOREM_CLAIM
-NO_K9_OR_084_CLAIM
+NO_HIGH_K_K9_OR_K11_084_CLAIM
 NO_SMALL_X_BELOW_THRESHOLD_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```
 
-The theorem is not KL2003's full `k=9`/`0.84` result and does not make a global
-Collatz claim.
+The theorem is not a high-k KL2003 result: it proves neither the k=9
+`gamma_9 = 0.8168300` line nor the k=11 / `0.84` line, and it does not make a
+global Collatz claim.
 
 ## Verification
 
@@ -156,6 +157,6 @@ KL2003_K2_M1_SURROGATE_ARBITRARY_X_PROVED
 ROOT8_PUBLIC_INSTANCE_PROVED
 CEIL_EXCESS_ELIMINATED_BY_LOGB_PARAMETER
 NO_FULL_M1_THEOREM_CLAIM
-NO_K9_OR_084_CLAIM
+NO_HIGH_K_K9_OR_K11_084_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```

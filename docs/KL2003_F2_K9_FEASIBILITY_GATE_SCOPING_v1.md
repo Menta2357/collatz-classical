@@ -7,8 +7,14 @@ Status: `F2_K9_FEASIBILITY_GATE_OPENED`
 ## Purpose
 
 This note opens the post-k=2 feasibility gate for deciding whether the next
-mathematical target should be the full KL2003 k=9 theorem, with exponent near
-0.84, or a consolidation/writing phase around the completed k=2 surrogate.
+mathematical target should be a high-k KL2003 formalization, or a
+consolidation/writing phase around the completed k=2 surrogate.
+
+Source clarification from `30apr02.tex`: k=9 is an intermediate high-k station
+with `gamma_9 = 0.8168300`; the advertised `0.84` exponent comes from the k=11
+computation, with `gamma_11 = 0.8417560`.  F2 therefore tracks both k=9 and
+k=11: k=9 as the first large-scale feasibility target, and k=11 as the actual
+KL2003 `0.84` target.
 
 The gate is intentionally data-first. It does not claim a k=9 theorem, does not
 start a k=9 Lean proof, and does not change any global Collatz status.
@@ -16,9 +22,9 @@ start a k=9 Lean proof, and does not change any global Collatz status.
 The question is:
 
 ```text
-Can the k=9 KL2003 certificate and row system be reconstructed, audited,
-and formalized with manageable source fidelity, arithmetic size, and
-Lean engineering cost?
+Can the high-k KL2003 certificate and row systems, especially k=9 and the k=11
+`0.84` target, be reconstructed, audited, and formalized with manageable source
+fidelity, arithmetic size, and Lean engineering cost?
 ```
 
 ## Current baseline
@@ -39,13 +45,15 @@ Audit posture:
 
 - Lean builds and axiom audits pass for the k=2 surrogate modules.
 - The public root-8 statement is arbitrary-x above the threshold `2^17`.
-- The current no-claims remain: no full M1 theorem, no k=9/0.84 theorem,
-  no small-x theorem below stated thresholds, and no global Collatz claim.
+- The current no-claims remain: no full M1 theorem, no high-k theorem
+  (`k=9`/`gamma_9 = 0.8168300` or `k=11`/`0.84`), no small-x theorem below
+  stated thresholds, and no global Collatz claim.
 
 ## Why F2 is needed
 
 k=9 would change the category of the result: from a k=2 M1-surrogate
-formalization to the main KL2003 exponent line.
+formalization to a large-scale KL2003 exponent line.  k=11 is the target that
+corresponds to the paper's `0.84` claim.
 
 It would not change the global Collatz problem. It would formalize a known
 published theorem, not prove a new mathematical fact. Its value is nevertheless
@@ -58,9 +66,9 @@ The decision should be made by evidence, not momentum.
 
 ### 1. Source inventory
 
-Identify and custody the exact source material needed for k=9:
+Identify and custody the exact source material needed for the high-k path:
 
-- KL2003 tables relevant to the k=9 system.
+- KL2003 tables relevant to the k=9 and k=11 systems.
 - Certificate weights/endpoints/slacks.
 - Reduced residue classes and elimination rules.
 - Tree/literal figures if the k=9 system uses deletion or graphical row data.
@@ -76,8 +84,8 @@ docs/KL2003_F2_K9_SOURCE_INVENTORY_v1.md
 ```
 
 The inventory is not an open-ended grep. It must answer the fixed checklist
-below, because these are the items that decide whether k=9 is a formalization
-track or a generator/reconstruction project.
+below, because these are the items that decide whether high-k KL2003 is a
+formalization track or a generator/reconstruction project.
 
 ### 1A. Fixed source checklist
 
@@ -99,19 +107,19 @@ Required checklist:
 1. General-k system definition for `I_k`/EL.
    Evidence: TeX ranges defining the splitting and deletion rules
    parametrically, not only the k=2 instance.
-2. Printed k=9 row system or certificate.
-   Evidence: explicit paper/source tables for k=9 rows, weights, endpoints,
+2. Printed k=9/k=11 row system or certificate.
+   Evidence: explicit paper/source tables for k=9 or k=11 rows, weights, endpoints,
    or certificate data. If the paper contains only the algorithm and final
    result, mark this `MISSING` rather than inferring it.
 3. Table of exponents `gamma(k)`.
    Evidence: printed or source-derived values for intermediate k, especially
-   k=3 through k=9, to identify possible intermediate targets between the
-   completed k=2 surrogate and k=9.
-4. k=9 lambda/endpoint precision.
-   Evidence: the exact or approximate value that would play the role of
+   k=3 through k=11, to identify possible intermediate targets between the
+   completed k=2 surrogate, k=9, and k=11.
+4. k=9/k=11 lambda/endpoint precision.
+   Evidence: the exact or approximate values that would play the role of
    `lambdaR`, together with enough precision to reconstruct rational intervals
    and slacks.
-5. k=9 deletion/tree source material.
+5. k=9/k=11 deletion/tree source material.
    Evidence: figure overlays, graphical source, TeX tables, or algorithmic
    descriptions sufficient to reconstruct member-wise populations without
    inventing them.
@@ -124,7 +132,7 @@ Required checklist:
 
 ### 2. Dimension and complexity count
 
-Measure the actual size of the k=9 task:
+Measure the actual size of the high-k task:
 
 - number of tracked classes after reductions;
 - number of row inequalities;
@@ -135,8 +143,8 @@ Measure the actual size of the k=9 task:
 - expected number of generated Lean declarations;
 - expected row proof families versus genuinely exceptional rows.
 
-The key question is whether k=9 looks like "k=2 scaled by a generator" or a
-new manual proof project.
+The key question is whether high-k KL2003 looks like "k=2 scaled by a
+generator" or a new manual proof project.
 
 The first scale metric is known before source extraction:
 
@@ -144,16 +152,19 @@ The first scale metric is known before source extraction:
 tracked_classes(k) = 3^(k - 1)
 tracked_classes(2) = 3
 tracked_classes(9) = 6561
+tracked_classes(11) = 59049
 scale_factor_from_k2_to_k9 = 2187
+scale_factor_from_k2_to_k11 = 19683
 ```
 
 This metric does not decide feasibility by itself, but it rules out any plan
-that relies on hand-writing the k=9 row system. F2 should therefore treat the
-generator question as central:
+that relies on hand-writing the k=9 or k=11 row system. F2 should therefore
+treat the generator question as central:
 
 ```text
-Can the k=9 row/certificate data be generated in a way that is source-faithful,
-manifested, and independently verified by Lean/data-only checkers?
+Can the high-k row/certificate data be generated in a way that is
+source-faithful, manifested, and independently verified by Lean/data-only
+checkers?
 ```
 
 ### 3. Rational certificate audit
@@ -259,8 +270,8 @@ scripts/kl2003_f2_k9_feasibility_inventory_v1.py
 
 It should scan the local KL2003 source custody, existing docs, and output
 directories for k=9-relevant data; produce a JSON/CSV inventory for the fixed
-checklist; compute the scale metrics; and explicitly mark every required source
-item as:
+and k=11-relevant data; produce a JSON/CSV inventory for the fixed checklist;
+compute the scale metrics; and explicitly mark every required source item as:
 
 ```text
 FOUND_SOURCE
@@ -279,7 +290,13 @@ The initial JSON should include at least:
 ```text
 {
   "run_id": "KL2003_F2_K9_FEASIBILITY_GATE_v1",
-  "tracked_classes": {"k2": 3, "k9": 6561, "scale_factor": 2187},
+  "tracked_classes": {
+    "k2": 3,
+    "k9": 6561,
+    "k11": 59049,
+    "scale_factor_k9_from_k2": 2187,
+    "scale_factor_k11_from_k2": 19683
+  },
   "checklist": [...],
   "candidate_sources": [...],
   "reusable_assets": [...],
@@ -297,7 +314,7 @@ inventory outputs can cite a custodied gate definition.
 - No 0.84 theorem claim.
 - No full M1 theorem claim from the k=2 surrogate.
 - No global Collatz claim.
-- No Lean k=9 module until F2 produces a GO/CONDITIONAL_GO.
+- No Lean high-k module until F2 produces a GO/CONDITIONAL_GO.
 - No generated proof data without source manifests.
 
 ## Classification
@@ -310,6 +327,8 @@ K9_CERTIFICATE_SIZE_UNKNOWN
 K9_ROW_SYSTEM_DIMENSION_UNKNOWN
 K9_GENERATOR_NEED_UNKNOWN
 K9_TRACKED_CLASS_SCALE_6561_RECORDED
+K11_TARGET_FOR_084_RECORDED
+K11_TRACKED_CLASS_SCALE_59049_RECORDED
 K9_MANUAL_TRANSCRIPTION_NOT_PLAUSIBLE
 NO_K9_THEOREM_CLAIM
 NO_084_EXPONENT_CLAIM

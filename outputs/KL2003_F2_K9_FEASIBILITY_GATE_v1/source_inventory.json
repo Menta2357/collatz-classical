@@ -1,7 +1,7 @@
 {
   "candidate_sources": [
     {
-      "hit_count": 29,
+      "hit_count": 31,
       "line_refs": [
         "4",
         "5",
@@ -9,6 +9,7 @@
         "309",
         "327",
         "330",
+        "336",
         "337",
         "646",
         "702",
@@ -21,8 +22,7 @@
         "830",
         "890",
         "896",
-        "907",
-        "947"
+        "907"
       ],
       "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
       "sample_hits": [
@@ -51,12 +51,12 @@
           "text": "$L_{\\lambda}^{NT}$ for $k=9$ (which has  equivalent growth expoonent to"
         },
         {
-          "line": 337,
-          "text": "$$\\pi_1(x) > x^{0.84},$$"
+          "line": 336,
+          "text": "for $k=11$, we obtain  the improved lower bound"
         },
         {
-          "line": 646,
-          "text": "the lower bound $\\pi_a(x) \\ge x^{0.84}$ for all sufficiently"
+          "line": 337,
+          "text": "$$\\pi_1(x) > x^{0.84},$$"
         }
       ],
       "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
@@ -147,14 +147,14 @@
       "sample_hits": [
         {
           "line": 38,
-          "text": "| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not the full KL2003 `k=9` / exponent `0.84` theorem | The name includes `k2` and `surrogate` t"
+          "text": "| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not any high-k KL2003 theorem: neither k=9 (`gamma_9 = 0.8168300`) nor k=11 / exponent `0.84` "
         },
         {
           "line": 184,
           "text": "-> row28 V3 c' split / post-deletion branch"
         }
       ],
-      "sha256": "064334a62b0e87ecabf57675748fb3969df738fe18016f58c597aa32a08d9537",
+      "sha256": "ec3e82a792d15148fb1c7a0eccad55c5ec50161d89d94fb27766e77892438585",
       "source_kind": "DOC"
     },
     {
@@ -240,16 +240,24 @@
       "source_kind": "DOC"
     },
     {
-      "hit_count": 8,
+      "hit_count": 16,
       "line_refs": [
         "7",
-        "43",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
         "49",
-        "52",
-        "64",
-        "76",
+        "50",
+        "56",
+        "57",
+        "59",
+        "72",
         "84",
-        "102"
+        "85",
+        "93",
+        "94"
       ],
       "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
       "sample_hits": [
@@ -258,35 +266,35 @@
           "text": "alcanza 1 es ≥ c·x^0.84 para todo x suficientemente grande."
         },
         {
-          "line": 43,
-          "text": "mod 3^9 obtienen γ = 0.84)."
+          "line": 10,
+          "text": "inicial (\"k=9 -> 0.84\") no es fiel al TeX de KL2003.  `30apr02.tex` da"
+        },
+        {
+          "line": 11,
+          "text": "`gamma_9 = 0.8168300` y `lambda_9 = 1.7615320`, mientras que el exponente"
+        },
+        {
+          "line": 12,
+          "text": "`0.84` corresponde a la computación `k=11`, con `gamma_11 = 0.8417560` y"
+        },
+        {
+          "line": 13,
+          "text": "`lambda_11 = 1.7922310`.  La escalera F2 actualizada trata k=9 como estación"
+        },
+        {
+          "line": 14,
+          "text": "high-k intermedia y k=11 como el objetivo KL2003 `0.84`."
         },
         {
           "line": 49,
-          "text": "- RIESGO MEDIO: tamaño del certificado a k=9 (3^9 = 19683 clases antes de"
+          "text": "sistema.  En la tabla de KL2003, k=9 da `gamma_9 = 0.8168300`, y la línea"
         },
         {
-          "line": 52,
-          "text": "- Las potencias reales x^γ se manejan con γ racional (0.84 = 21/25) y"
-        },
-        {
-          "line": 64,
-          "text": "## Escalera de de-risking (no atacar 0.84 de frente)"
-        },
-        {
-          "line": 76,
-          "text": "M3  KL2003: γ = 0.84 con el certificado a k = 9."
-        },
-        {
-          "line": 84,
-          "text": "F2  Cuantificar el certificado de KL a k = 9: dimensión real del sistema"
-        },
-        {
-          "line": 102,
-          "text": "- NO-GO (o rebaja a M1-only) si: F2 muestra un certificado k=9"
+          "line": 50,
+          "text": "`0.84` se obtiene desde k=11."
         }
       ],
-      "sha256": "b9fd75d2cca9c69b5fa093488e3742ec260189d8d81b9a6451f95a4429480d35",
+      "sha256": "1fbeedea5c52ca3a3dd7172a14639eff6bec6358247f354fddcac1c9d0d53666",
       "source_kind": "DOC"
     },
     {
@@ -393,23 +401,28 @@
       "source_kind": "DOC"
     },
     {
-      "hit_count": 2,
+      "hit_count": 3,
       "line_refs": [
         "19",
-        "130"
+        "130",
+        "131"
       ],
       "path": "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md",
       "sample_hits": [
         {
           "line": 19,
-          "text": "not k=9 / 0.84"
+          "text": "not high-k (`k=9` / `gamma_9 = 0.8168300`, nor `k=11` / `0.84`)"
         },
         {
           "line": 130,
-          "text": "The theorem is not KL2003's full `k=9`/`0.84` result and does not make a global"
+          "text": "The theorem is not a high-k KL2003 result: it proves neither the k=9"
+        },
+        {
+          "line": 131,
+          "text": "`gamma_9 = 0.8168300` line nor the k=11 / `0.84` line, and it does not make a"
         }
       ],
-      "sha256": "28fc058db1f48e2c4e6aa1e88f47e5b1e1140f6f63b5cb169935c4c6c74ea2f3",
+      "sha256": "e212d85cce696c1c0923a5403ea07ff99154ba30c562bf2f5a9b001f8293cc7a",
       "source_kind": "DOC"
     },
     {
@@ -455,16 +468,16 @@
     {
       "hit_count": 1,
       "line_refs": [
-        "129"
+        "130"
       ],
       "path": "docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md",
       "sample_hits": [
         {
-          "line": 129,
-          "text": "This is still not the full M1 theorem, not the KL2003 `k=9`/`0.84` theorem,"
+          "line": 130,
+          "text": "(`k=9`/`gamma_9 = 0.8168300` or `k=11`/`0.84`), and not a global Collatz"
         }
       ],
-      "sha256": "59c7fccdf88f0ad71081ead35c06f865d5d4cdfefb7693f6b99768f261f4007a",
+      "sha256": "577a10c357ccac0a6d77f15e7700129ff794c0c166e1b00aab4f59d752621780",
       "source_kind": "DOC"
     },
     {
@@ -824,10 +837,12 @@
       "source_kind": "DOC"
     },
     {
-      "hit_count": 2,
+      "hit_count": 4,
       "line_refs": [
         "21",
-        "54"
+        "54",
+        "55",
+        "56"
       ],
       "path": "docs/POSITIONS_LEDGER_v1.md",
       "sample_hits": [
@@ -838,13 +853,21 @@
         {
           "line": 54,
           "text": "- Techo del carril 2: M3 (0.84) o M2, segun tarea F2 del feasibility."
+        },
+        {
+          "line": 55,
+          "text": "Actualizacion fuente 2026-07-16: el target `0.84` corresponde a k=11"
+        },
+        {
+          "line": 56,
+          "text": "(`gamma_11 = 0.8417560`); k=9 es estacion high-k intermedia"
         }
       ],
-      "sha256": "9d89557e61ec89da4c1010de7764c56f42ea24671940b94fc6f92821365fb87a",
+      "sha256": "b5d261a6f6e893c376419c43b2e7d225e118d5a0f3c1b2b283725edc5eb714f9",
       "source_kind": "DOC"
     },
     {
-      "hit_count": 281,
+      "hit_count": 271,
       "line_refs": [
         "122185",
         "122186",
@@ -903,51 +926,6 @@
         }
       ],
       "sha256": "2dc2812c19c8722fd9b65cbbe1e86a8a051bc90f963c5eaabf70cc157cebfeb1",
-      "source_kind": "OUTPUT"
-    },
-    {
-      "hit_count": 1,
-      "line_refs": [
-        "1"
-      ],
-      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/cross_marks.csv",
-      "sample_hits": [
-        {
-          "line": 1,
-          "text": "cross_id,pstex_line,coords,center_x,center_y,nearest_node,nearest_node_distance"
-        }
-      ],
-      "sha256": "33257c9c80cab737d1df00d3fa399ebb58fec967773a545146bbe7d994693bb2",
-      "source_kind": "OUTPUT"
-    },
-    {
-      "hit_count": 1,
-      "line_refs": [
-        "1"
-      ],
-      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/edges.csv",
-      "sample_hits": [
-        {
-          "line": 1,
-          "text": "edge_id,pstex_line,src,dst,raw_start_x,raw_start_y,raw_end_x,raw_end_y,src_snap_distance,dst_snap_distance"
-        }
-      ],
-      "sha256": "78c95211ab747c035773e962c9f30591cb61ea7f02d1294492c64440c36d40f6",
-      "source_kind": "OUTPUT"
-    },
-    {
-      "hit_count": 1,
-      "line_refs": [
-        "1"
-      ],
-      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/labels.csv",
-      "sample_hits": [
-        {
-          "line": 1,
-          "text": "label_id,node_id,overlay_x,overlay_y,mapped_pstex_y,label"
-        }
-      ],
-      "sha256": "f56db56fe8ddaf343f5bbdfc93b90a1ac05750aaa9e3ff84e701a62ae3bcab64",
       "source_kind": "OUTPUT"
     }
   ],
@@ -1050,16 +1028,16 @@
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:327",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:330",
         "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md:38",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:10",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:11",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:13",
         "docs/KL2003_FEASIBILITY_AUDIT_v1.md:49",
-        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:76",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:56",
         "docs/KL2003_FEASIBILITY_AUDIT_v1.md:84",
-        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:102",
-        "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md:19",
-        "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md:130",
-        "docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md:129",
-        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:212"
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:93",
+        "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md:19"
       ],
-      "notes": "Primary source mentions k=9, but this scan did not identify explicit printed k=9 rows/certificate data.",
+      "notes": "Primary source mentions this high-k target, but this scan did not identify explicit printed rows/certificate data.",
       "sample_hits": [
         {
           "kind": "strong",
@@ -1083,52 +1061,53 @@
           "kind": "strong",
           "line": 38,
           "path": "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md",
-          "text": "| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not the full KL2003 `k=9` / exponent `0.84` theorem | The name includes `k2` and `surrogate` t"
+          "text": "| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not any high-k KL2003 theorem: neither k=9 (`gamma_9 = 0.8168300`) nor k=11 / exponent `0.84` "
+        },
+        {
+          "kind": "strong",
+          "line": 10,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "inicial (\"k=9 -> 0.84\") no es fiel al TeX de KL2003.  `30apr02.tex` da"
+        },
+        {
+          "kind": "strong",
+          "line": 11,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "`gamma_9 = 0.8168300` y `lambda_9 = 1.7615320`, mientras que el exponente"
+        },
+        {
+          "kind": "strong",
+          "line": 13,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "`lambda_11 = 1.7922310`.  La escalera F2 actualizada trata k=9 como estación"
         },
         {
           "kind": "strong",
           "line": 49,
           "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
-          "text": "- RIESGO MEDIO: tamaño del certificado a k=9 (3^9 = 19683 clases antes de"
+          "text": "sistema.  En la tabla de KL2003, k=9 da `gamma_9 = 0.8168300`, y la línea"
         },
         {
           "kind": "strong",
-          "line": 76,
+          "line": 56,
           "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
-          "text": "M3  KL2003: γ = 0.84 con el certificado a k = 9."
+          "text": "- RIESGO MEDIO: tamaño del certificado high-k.  La estación k=9 ya tiene"
         },
         {
           "kind": "strong",
           "line": 84,
           "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
-          "text": "F2  Cuantificar el certificado de KL a k = 9: dimensión real del sistema"
-        },
-        {
-          "kind": "strong",
-          "line": 102,
-          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
-          "text": "- NO-GO (o rebaja a M1-only) si: F2 muestra un certificado k=9"
-        },
-        {
-          "kind": "strong",
-          "line": 19,
-          "path": "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md",
-          "text": "not k=9 / 0.84"
-        },
-        {
-          "kind": "strong",
-          "line": 130,
-          "path": "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md",
-          "text": "The theorem is not KL2003's full `k=9`/`0.84` result and does not make a global"
+          "text": "M3a KL2003 high-k: k = 9, gamma_9 = 0.8168300."
         }
       ],
-      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md=064334a62b0e87ecabf57675748fb3969df738fe18016f58c597aa32a08d9537;docs/KL2003_FEASIBILITY_AUDIT_v1.md=b9fd75d2cca9c69b5fa093488e3742ec260189d8d81b9a6451f95a4429480d35;docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md=28fc058db1f48e2c4e6aa1e88f47e5b1e1140f6f63b5cb169935c4c6c74ea2f3;docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md=59c7fccdf88f0ad71081ead35c06f865d5d4cdfefb7693f6b99768f261f4007a;CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean=1821a02348ff8e7e371a23cd1cd914d82b2f6461dc11a4f7acfe4a8d6ce7c31e;CollatzClassical/KL2003/KL2003K2AlphaBounds.lean=9400f8d67bc202d2156378c55b57489c55a2d69134c4783cef3804fe3d064b2e;CollatzClassical/KL2003/KL2003K2CertificateData.lean=2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e;CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean=50f1094c3e20e9f98fc859178736f875bc8efcc8848af1c3e7686521be8f1145;CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean=895ea50e7b4731abeae334299952168d98fba4ec26b7e365d01be72dd604f7d5",
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md=ec3e82a792d15148fb1c7a0eccad55c5ec50161d89d94fb27766e77892438585;docs/KL2003_FEASIBILITY_AUDIT_v1.md=1fbeedea5c52ca3a3dd7172a14639eff6bec6358247f354fddcac1c9d0d53666;docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md=e212d85cce696c1c0923a5403ea07ff99154ba30c562bf2f5a9b001f8293cc7a;docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md=577a10c357ccac0a6d77f15e7700129ff794c0c166e1b00aab4f59d752621780;docs/POSITIONS_LEDGER_v1.md=b5d261a6f6e893c376419c43b2e7d225e118d5a0f3c1b2b283725edc5eb714f9;CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean=1821a02348ff8e7e371a23cd1cd914d82b2f6461dc11a4f7acfe4a8d6ce7c31e;CollatzClassical/KL2003/KL2003K2AlphaBounds.lean=9400f8d67bc202d2156378c55b57489c55a2d69134c4783cef3804fe3d064b2e;CollatzClassical/KL2003/KL2003K2CertificateData.lean=2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e;CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean=50f1094c3e20e9f98fc859178736f875bc8efcc8848af1c3e7686521be8f1145;CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean=895ea50e7b4731abeae334299952168d98fba4ec26b7e365d01be72dd604f7d5",
       "source_paths": [
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
         "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md",
         "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
         "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md",
         "docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md",
+        "docs/POSITIONS_LEDGER_v1.md",
         "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
         "CollatzClassical/KL2003/KL2003K2AlphaBounds.lean",
         "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
@@ -1136,12 +1115,112 @@
         "CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean"
       ],
       "status": "AMBIGUOUS",
-      "strong_hit_count": 11,
+      "strong_hit_count": 17,
+      "weak_hit_count": 40
+    },
+    {
+      "description": "Printed k=11 / 0.84 row system or certificate data",
+      "expected_evidence": "Explicit paper/source tables for k=11 rows, weights, endpoints, or certificate data supporting the 0.84 line.",
+      "item_id": "printed_k11_084_data",
+      "line_ranges_or_record_ids": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:212",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:336",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:337",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:646",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1520",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1526",
+        "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md:38",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:7",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:10",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:12",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:13",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:14"
+      ],
+      "notes": "Primary source mentions this high-k target, but this scan did not identify explicit printed rows/certificate data.",
+      "sample_hits": [
+        {
+          "kind": "strong",
+          "line": 212,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "at least $x^{0.84}$ of integers below $x$"
+        },
+        {
+          "kind": "strong",
+          "line": 336,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "for $k=11$, we obtain  the improved lower bound"
+        },
+        {
+          "kind": "strong",
+          "line": 337,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "$$\\pi_1(x) > x^{0.84},$$"
+        },
+        {
+          "kind": "strong",
+          "line": 646,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "the lower bound $\\pi_a(x) \\ge x^{0.84}$ for all sufficiently"
+        },
+        {
+          "kind": "strong",
+          "line": 1520,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "$$ \\pi_a(x) \\ge x^{0.84}. $$"
+        },
+        {
+          "kind": "strong",
+          "line": 1526,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "for  $k=11$,"
+        },
+        {
+          "kind": "strong",
+          "line": 38,
+          "path": "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md",
+          "text": "| KL2003 general program | This package only treats the `k=2` surrogate lane | A calibrated lower-bound mechanism for tracked classes `{2,5,8}` | Not any high-k KL2003 theorem: neither k=9 (`gamma_9 = 0.8168300`) nor k=11 / exponent `0.84` "
+        },
+        {
+          "kind": "strong",
+          "line": 7,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "alcanza 1 es ≥ c·x^0.84 para todo x suficientemente grande."
+        },
+        {
+          "kind": "strong",
+          "line": 10,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "inicial (\"k=9 -> 0.84\") no es fiel al TeX de KL2003.  `30apr02.tex` da"
+        },
+        {
+          "kind": "strong",
+          "line": 12,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "`0.84` corresponde a la computación `k=11`, con `gamma_11 = 0.8417560` y"
+        }
+      ],
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md=ec3e82a792d15148fb1c7a0eccad55c5ec50161d89d94fb27766e77892438585;docs/KL2003_FEASIBILITY_AUDIT_v1.md=1fbeedea5c52ca3a3dd7172a14639eff6bec6358247f354fddcac1c9d0d53666;docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md=e212d85cce696c1c0923a5403ea07ff99154ba30c562bf2f5a9b001f8293cc7a;docs/KL2003_M1_SURROGATE_ARBITRARY_X_SCOPING_v1.md=cc5be4dbf662c5312f05f8f5456e81cb5c8ccb43a17cadf42119024af1f21e51;docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md=577a10c357ccac0a6d77f15e7700129ff794c0c166e1b00aab4f59d752621780;docs/KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_REPORT_v1.md=1587e351cf38b0da99e025d553d8443f39ac98745465dffb919fbcfa0942cb9b;docs/POSITIONS_LEDGER_v1.md=b5d261a6f6e893c376419c43b2e7d225e118d5a0f3c1b2b283725edc5eb714f9;CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean=1821a02348ff8e7e371a23cd1cd914d82b2f6461dc11a4f7acfe4a8d6ce7c31e;CollatzClassical/KL2003/KL2003K2AlphaBounds.lean=9400f8d67bc202d2156378c55b57489c55a2d69134c4783cef3804fe3d064b2e;CollatzClassical/KL2003/KL2003K2CertificateData.lean=2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e;CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean=50f1094c3e20e9f98fc859178736f875bc8efcc8848af1c3e7686521be8f1145",
+      "source_paths": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+        "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+        "docs/KL2003_M1_SURROGATE_ARBITRARY_X_LEAN_v1.md",
+        "docs/KL2003_M1_SURROGATE_ARBITRARY_X_SCOPING_v1.md",
+        "docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md",
+        "docs/KRASIKOV_M1_FEASIBILITY_RECONSTRUCTION_REPORT_v1.md",
+        "docs/POSITIONS_LEDGER_v1.md",
+        "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
+        "CollatzClassical/KL2003/KL2003K2AlphaBounds.lean",
+        "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
+        "CollatzClassical/KL2003/KL2003K2CertificateDataAxiomAudit.lean"
+      ],
+      "status": "AMBIGUOUS",
+      "strong_hit_count": 28,
       "weak_hit_count": 40
     },
     {
       "description": "Table of exponents gamma(k)",
-      "expected_evidence": "Printed or source-derived values for intermediate k, especially k=3 through k=9.",
+      "expected_evidence": "Printed or source-derived values for intermediate k, especially k=3 through k=11.",
       "item_id": "gamma_k_table",
       "line_ranges_or_record_ids": [
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1549",
@@ -1220,7 +1299,7 @@
           "text": "(2 : Real) ^ gammaK2 = lambdaR := by"
         }
       ],
-      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;CollatzClassical/KL2003/KL2003M1Surrogate.lean=27ee0bc21023889c4a7c2980821ab2b0e9c041cc9502087069389476b896682e;CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean=6bea0c1bd5621ac4f6dd2d8d915093264d83140d2b6b40e591810399787b580b;docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md=064334a62b0e87ecabf57675748fb3969df738fe18016f58c597aa32a08d9537;docs/CLAUDE_INTERVAL_METHOD_VERDICT_2026_07_05_v1.md=95435dcda8ed117960d2dfbb42161366fb90ef71f2184510a6f21038e93fe9ba;docs/CLAUDE_PUBLIC_CONTACT_AND_DATA_LEAN_GATE_VERDICT_2026_07_05_v1.md=b99ff5989254a0be9285e7832091cbf565236afa7ae5b8114f969209bcd17e65",
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;CollatzClassical/KL2003/KL2003M1Surrogate.lean=27ee0bc21023889c4a7c2980821ab2b0e9c041cc9502087069389476b896682e;CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean=6bea0c1bd5621ac4f6dd2d8d915093264d83140d2b6b40e591810399787b580b;docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md=ec3e82a792d15148fb1c7a0eccad55c5ec50161d89d94fb27766e77892438585;docs/CLAUDE_INTERVAL_METHOD_VERDICT_2026_07_05_v1.md=95435dcda8ed117960d2dfbb42161366fb90ef71f2184510a6f21038e93fe9ba;docs/CLAUDE_PUBLIC_CONTACT_AND_DATA_LEAN_GATE_VERDICT_2026_07_05_v1.md=b99ff5989254a0be9285e7832091cbf565236afa7ae5b8114f969209bcd17e65",
       "source_paths": [
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
         "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
@@ -1239,6 +1318,8 @@
       "item_id": "k9_lambda_precision",
       "line_ranges_or_record_ids": [
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:330",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1571",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:11",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:42",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:288",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:289",
@@ -1247,17 +1328,27 @@
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:299",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:300",
         "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:302",
-        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:322",
-        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:330",
-        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:332"
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:322"
       ],
-      "notes": "Local source mentions k=9/lambda context, but no precise k=9 lambda value or interval was identified.",
+      "notes": "Explicit-looking high-k lambda precision hit found in local KL2003 source custody.",
       "sample_hits": [
         {
           "kind": "strong",
           "line": 330,
           "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
           "text": "$L_{\\lambda}^{NT}$ for $k=9$ (which has  equivalent growth expoonent to"
+        },
+        {
+          "kind": "strong",
+          "line": 1571,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "9 & 0.8168300 & 1.7615320 & 43.3394210 & 5.8102043 & 5.4164870 & 0.3937173 \\\\"
+        },
+        {
+          "kind": "strong",
+          "line": 11,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "`gamma_9 = 0.8168300` y `lambda_9 = 1.7615320`, mientras que el exponente"
         },
         {
           "kind": "weak",
@@ -1300,26 +1391,105 @@
           "line": 300,
           "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
           "text": "$\\pi_1(x)$ is then $\\gamma = \\log_2 \\lambda.$"
-        },
-        {
-          "kind": "weak",
-          "line": 302,
-          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
-          "text": "value of $\\lambda$ for which a positive feasible solution exists,"
-        },
-        {
-          "kind": "weak",
-          "line": 322,
-          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
-          "text": "$L_k^{NT}(\\lambda)$, do give legitimate lower bounds for"
         }
       ],
-      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;docs/KL2003_FEASIBILITY_AUDIT_v1.md=1fbeedea5c52ca3a3dd7172a14639eff6bec6358247f354fddcac1c9d0d53666",
       "source_paths": [
-        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex"
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md"
       ],
-      "status": "AMBIGUOUS",
-      "strong_hit_count": 1,
+      "status": "FOUND_SOURCE",
+      "strong_hit_count": 3,
+      "weak_hit_count": 40
+    },
+    {
+      "description": "k=11 / 0.84 lambda/endpoint precision",
+      "expected_evidence": "Exact or approximate k=11 lambda/endpoints with enough precision for rational intervals and slacks.",
+      "item_id": "k11_lambda_precision",
+      "line_ranges_or_record_ids": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1527",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:1575",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md:13",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:42",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:288",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:289",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:292",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:295",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:299",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:300",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:302",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:322"
+      ],
+      "notes": "Explicit-looking high-k lambda precision hit found in local KL2003 source custody.",
+      "sample_hits": [
+        {
+          "kind": "strong",
+          "line": 1527,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "for $\\lambda = 1.7922310,$"
+        },
+        {
+          "kind": "strong",
+          "line": 1575,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "11 & 0.8417560 & 1.7922310 & 98.4009647 & 7.1552344 & 6.7695583 & 0.3856761 \\\\"
+        },
+        {
+          "kind": "strong",
+          "line": 13,
+          "path": "docs/KL2003_FEASIBILITY_AUDIT_v1.md",
+          "text": "`lambda_11 = 1.7922310`.  La escalera F2 actualizada trata k=9 como estación"
+        },
+        {
+          "kind": "weak",
+          "line": 42,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "\\newcommand{\\la}{\\lambda}"
+        },
+        {
+          "kind": "weak",
+          "line": 288,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "programs $L_k^{\\sD}(\\lambda)$ depending on a parameter $\\lambda$."
+        },
+        {
+          "kind": "weak",
+          "line": 289,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "The parameter  $\\lambda$ lies in the interval $1 \\le \\lambda \\le 2,$"
+        },
+        {
+          "kind": "weak",
+          "line": 292,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "on $\\lambda$."
+        },
+        {
+          "kind": "weak",
+          "line": 295,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "feasible solution to the linear program for a fixed $\\lambda$"
+        },
+        {
+          "kind": "weak",
+          "line": 299,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "growth constant $\\lambda$; the associated exponent in lower bounding"
+        },
+        {
+          "kind": "weak",
+          "line": 300,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "$\\pi_1(x)$ is then $\\gamma = \\log_2 \\lambda.$"
+        }
+      ],
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd;docs/KL2003_FEASIBILITY_AUDIT_v1.md=1fbeedea5c52ca3a3dd7172a14639eff6bec6358247f354fddcac1c9d0d53666",
+      "source_paths": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+        "docs/KL2003_FEASIBILITY_AUDIT_v1.md"
+      ],
+      "status": "FOUND_SOURCE",
+      "strong_hit_count": 3,
       "weak_hit_count": 40
     },
     {
@@ -1412,11 +1582,100 @@
       "weak_hit_count": 40
     },
     {
+      "description": "k=11 / 0.84 deletion/tree source material",
+      "expected_evidence": "Figure overlays, graphical sources, TeX tables, or algorithms sufficient to reconstruct k=11 member-wise populations.",
+      "item_id": "k11_deletion_tree_sources",
+      "line_ranges_or_record_ids": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:2",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:4",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:5",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:212",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:337",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:646",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:702",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:704",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:715",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:719",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:721",
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:722"
+      ],
+      "notes": "Generic deletion/tree/Figure source exists, but no k=9-specific tree source was identified by this scan.",
+      "sample_hits": [
+        {
+          "kind": "weak",
+          "line": 2,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "% needs three figures and five figure files:"
+        },
+        {
+          "kind": "weak",
+          "line": 4,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "%  kafg3.pstex kafg3.pstex_t"
+        },
+        {
+          "kind": "weak",
+          "line": 5,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "%    kafgA1.pstex  kafgA1.pstex_t"
+        },
+        {
+          "kind": "weak",
+          "line": 212,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "at least $x^{0.84}$ of integers below $x$"
+        },
+        {
+          "kind": "weak",
+          "line": 337,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "$$\\pi_1(x) > x^{0.84},$$"
+        },
+        {
+          "kind": "weak",
+          "line": 646,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "the lower bound $\\pi_a(x) \\ge x^{0.84}$ for all sufficiently"
+        },
+        {
+          "kind": "weak",
+          "line": 702,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "deletion rule described below, which, if $\\beta'' \\ge 0$,"
+        },
+        {
+          "kind": "weak",
+          "line": 704,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "after the deletion substep is $I_k^m (l+1)$."
+        },
+        {
+          "kind": "weak",
+          "line": 715,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "tree $\\sT_k^m (l)$, in which the root mode is labelled"
+        },
+        {
+          "kind": "weak",
+          "line": 719,
+          "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+          "text": "The initial tree for the  inequality $I_k^m$ for"
+        }
+      ],
+      "sha256": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex=04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_paths": [
+        "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex"
+      ],
+      "status": "AMBIGUOUS",
+      "strong_hit_count": 0,
+      "weak_hit_count": 40
+    },
+    {
       "description": "Existing reusable Lean assets",
       "expected_evidence": "Hand-maintained table classifying which k=2 modules are genuinely generic and reusable.",
       "item_id": "reusable_lean_assets",
       "line_ranges_or_record_ids": [],
-      "notes": "Hand-maintained reuse table emitted by script; requires human review before k=9 GO.",
+      "notes": "Hand-maintained reuse table emitted by script; requires human review before high-k GO.",
       "sample_hits": [],
       "sha256": "CollatzClassical/KL2003/KL2003M0APiStarSemantics.lean=9032774e3b69fdfdeb5b4159c0375ca8018a5c976c61d10303351fee31151d3f;CollatzClassical/KL2003/KL2003M0BReachabilityAPI.lean=87c657b95b413708ef1e69dc2e1a4b1999953e0d1a2fc6f40fc5e97d87b28c02;CollatzClassical/KL2003/KL2003M0BEntryPredecessorDisjointness.lean=db8a0e0faee509106f8fa957c82a3df6aff16fc078a043fb1d9f3a2b47339083;CollatzClassical/KL2003/KL2003M0BTwoBranchCore.lean=d82171b6dabc5510b19f3aa9c6a6f14a41920c3809ff491c62a53316e1f42e48;CollatzClassical/KL2003/KL2003K2AlphaBounds.lean=9400f8d67bc202d2156378c55b57489c55a2d69134c4783cef3804fe3d064b2e;CollatzClassical/KL2003/KL2003M1Surrogate.lean=27ee0bc21023889c4a7c2980821ab2b0e9c041cc9502087069389476b896682e",
       "source_paths": [
@@ -1436,7 +1695,7 @@
       "expected_evidence": "Hand-maintained table marking files/declarations tied to mod 9, the k=2 certificate, k=2 row labels, or k=2 case trees.",
       "item_id": "k2_cabled_assets",
       "line_ranges_or_record_ids": [],
-      "notes": "Hand-maintained k=2 cabling table emitted by script; replacement required for k=9.",
+      "notes": "Hand-maintained k=2 cabling table emitted by script; replacement required for high-k.",
       "sample_hits": [],
       "sha256": "CollatzClassical/KL2003/KL2003K2CertificateData.lean=2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e;CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean=895ea50e7b4731abeae334299952168d98fba4ec26b7e365d01be72dd604f7d5;CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean=1821a02348ff8e7e371a23cd1cd914d82b2f6461dc11a4f7acfe4a8d6ce7c31e;CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean=34394817144cfbc1321174216382de80b9e4ee295297a194a7fab8600f3f5d95;CollatzClassical/KL2003/KL2003M0BD123CoreInstantiations.lean=97401b2bb839dafd6b3cc4b8c9a8582225575b9f835e07c82f26074ff57d180d",
       "source_paths": [
@@ -1456,18 +1715,20 @@
     "certificate_constants": "REQUIRES_SOURCE_INVENTORY",
     "expected_generated_lean_declarations": "REQUIRES_GENERATOR_DESIGN",
     "literal_tree_populations": "REQUIRES_SOURCE_INVENTORY",
-    "manual_transcription_plausibility": "NOT_PLAUSIBLE_AT_SCALE_6561",
+    "manual_transcription_plausibility": "NOT_PLAUSIBLE_AT_SCALE_6561_AND_59049",
     "maximum_elimination_depth": "REQUIRES_SOURCE_INVENTORY",
     "min_max_auxiliary_terms": "REQUIRES_SOURCE_INVENTORY",
     "row_inequalities": "REQUIRES_SOURCE_INVENTORY",
     "tracked_classes": {
       "formula": "tracked_classes(k) = 3^(k - 1)",
+      "k11": 59049,
       "k2": 3,
       "k9": 6561,
-      "scale_factor": 2187
+      "scale_factor_k11_from_k2": 19683,
+      "scale_factor_k9_from_k2": 2187
     }
   },
-  "generated_at_utc": "2026-07-16T21:37:43.148294+00:00",
+  "generated_at_utc": "2026-07-16T22:15:43.093863+00:00",
   "guardrails": [
     "NO_K9_THEOREM_CLAIM",
     "NO_084_EXPONENT_CLAIM",
@@ -1480,44 +1741,48 @@
       "asset_id": "k2_certificate_data",
       "cabling_reason": "Contains k=2 constants/classes/slacks.",
       "path": "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
-      "replacement_needed": "k=9 certificate data and exact rational verifier."
+      "replacement_needed": "high-k certificate data and exact rational verifier."
     },
     {
       "asset_id": "k2_certificate_verifier",
       "cabling_reason": "Verifier rows are tied to the k=2 LP skeleton.",
       "path": "CollatzClassical/KL2003/KL2003K2CertificateVerifier.lean",
-      "replacement_needed": "Generated or data-driven k=9 verifier."
+      "replacement_needed": "Generated or data-driven high-k verifier."
     },
     {
       "asset_id": "k2_concrete_phi_realization",
       "cabling_reason": "ClassRoots are mod 9 and row22/25/28 case trees are k=2-specific.",
       "path": "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
-      "replacement_needed": "k=9 class envelope and source-faithful row seam."
+      "replacement_needed": "high-k class envelope and source-faithful row seam."
     },
     {
       "asset_id": "k2_M0C_rows_V3",
       "cabling_reason": "Rows V2/V3 and coefficients are k=2-specific.",
       "path": "CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean",
-      "replacement_needed": "k=9 abstract row contract and certificate arithmetic."
+      "replacement_needed": "high-k abstract row contract and certificate arithmetic."
     },
     {
       "asset_id": "k2_row_instantiations",
       "cabling_reason": "D1/D2/D3 are the k=2 row families only.",
       "path": "CollatzClassical/KL2003/KL2003M0BD123CoreInstantiations.lean",
-      "replacement_needed": "k=9 row family extraction/generation."
+      "replacement_needed": "high-k row family extraction/generation."
     },
     {
       "asset_id": "k2_figure_A1_outputs",
       "cabling_reason": "Figure A1 is the k=2 row28/EL tree custody.",
       "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1",
-      "replacement_needed": "k=9 deletion/tree source custody if present."
+      "replacement_needed": "high-k deletion/tree source custody if present."
     }
   ],
   "open_questions": [
     "Is there a printed/source k=9 row system, or only an algorithm plus final exponent?",
     "Where are k=9 certificate constants and endpoint precisions printed?",
     "Can k=9 rows be generated source-faithfully with manifests and independent checks?",
+    "Is there a printed/source k=11 row system for the 0.84 line, or only an algorithm plus final exponent?",
+    "Where are k=11/0.84 certificate constants and endpoint precisions printed?",
+    "Can k=11 rows be generated source-faithfully with manifests and independent checks?",
     "What is the smallest rational slack after exact k=9 reconstruction?",
+    "What is the smallest rational slack after exact k=11 reconstruction?",
     "Which row families are regular and which are exceptional?"
   ],
   "repo_root": "/Users/MoiTam/Documents/Codex/collatz-classical",
@@ -1542,7 +1807,7 @@
     },
     {
       "asset_id": "two_branch_core_pattern",
-      "notes": "Useful proof pattern, but k=9 rows may need generated variants.",
+      "notes": "Useful proof pattern, but high-k rows may need generated variants.",
       "path": "CollatzClassical/KL2003/KL2003M0BTwoBranchCore.lean",
       "reuse_status": "REUSABLE_PATTERN"
     },
@@ -1554,14 +1819,14 @@
     },
     {
       "asset_id": "arbitrary_x_logb_translation",
-      "notes": "The logb arbitrary-x bridge should generalize after k=9 Phi is built.",
+      "notes": "The logb arbitrary-x bridge should generalize after high-k Phi is built.",
       "path": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
       "reuse_status": "REUSABLE_PATTERN"
     }
   ],
   "run_id": "KL2003_F2_K9_FEASIBILITY_GATE_v1",
   "scoping_path": "docs/KL2003_F2_K9_FEASIBILITY_GATE_SCOPING_v1.md",
-  "scoping_sha256": "5c8962085ee4de1eee51606650e9fe810cf77d53f918702518471116280e078c",
+  "scoping_sha256": "cf2c1a4ada694e9b771aceccbec998a3e93526f6fe05f890026891c8aa8b4c28",
   "source_custody": [
     {
       "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003.tar",
@@ -1619,8 +1884,10 @@
   ],
   "tracked_classes": {
     "formula": "tracked_classes(k) = 3^(k - 1)",
+    "k11": 59049,
     "k2": 3,
     "k9": 6561,
-    "scale_factor": 2187
+    "scale_factor_k11_from_k2": 19683,
+    "scale_factor_k9_from_k2": 2187
   }
 }
