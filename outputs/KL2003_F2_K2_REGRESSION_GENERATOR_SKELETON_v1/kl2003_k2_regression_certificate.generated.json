@@ -1,0 +1,939 @@
+{
+  "deletion_marks": [
+    {
+      "boundary_correction": "baseline_reemission_only",
+      "child_id": "row22_baseline_child_placeholder",
+      "deleted": false,
+      "deletion_policy": "row22 parity lift",
+      "reason": "unchanged from source-faithful k2 seam",
+      "row_id": "row22",
+      "source_ref": "concretePhi_row22_seam; d1_core_instantiation"
+    },
+    {
+      "boundary_correction": "baseline_reemission_only",
+      "child_id": "row25_baseline_child_placeholder",
+      "deleted": false,
+      "deletion_policy": "row25 single-branch",
+      "reason": "advanced branch absent; D2 is immune to advanced rounding",
+      "row_id": "row25",
+      "source_ref": "concretePhi_row25_seam; d2_single_branch_core_instantiation"
+    },
+    {
+      "boundary_correction": "baseline_reemission_only",
+      "child_id": "row28_baseline_child_placeholder",
+      "deleted": false,
+      "deletion_policy": "row28 c' split / post-deletion behavior",
+      "reason": "M1V3 uses phi25, not phi22",
+      "row_id": "row28",
+      "source_ref": "concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3"
+    },
+    {
+      "boundary_correction": "baseline_reemission_only",
+      "child_id": "M1V3_baseline_child_placeholder",
+      "deleted": false,
+      "deletion_policy": "meta-errata phi25 reinstated",
+      "reason": "second arm is phi25; phi22 form is historical V2 only",
+      "row_id": "M1V3",
+      "source_ref": "M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md"
+    }
+  ],
+  "inverse_words": [
+    {
+      "baseline_expected_shape": "two-branch with retarded branch plus advanced branch using parity lift",
+      "baseline_refs": "concretePhi_row22_seam; d1_core_instantiation",
+      "baseline_required_feature": "row22 parity lift",
+      "boundary_correction": "not_generated_in_skeleton",
+      "child_id": "row22_baseline_child_placeholder",
+      "coefficient_ref": "row22_baseline_coefficient_placeholder",
+      "deleted": false,
+      "depth": "0",
+      "fiber_parent": "baseline_reemission_no_fiber_generated",
+      "forward_route": [],
+      "inverse_word": [],
+      "literal_id": "row22_baseline_literal_placeholder",
+      "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+      "residue_side_conditions": [],
+      "root_formula": "not_generated_in_skeleton",
+      "row_id": "row22",
+      "shift": "0",
+      "target_class": "2",
+      "window_policy": "baseline_reemission_no_window_generated"
+    },
+    {
+      "baseline_expected_shape": "single-branch retarded row; no advanced contribution",
+      "baseline_refs": "concretePhi_row25_seam; d2_single_branch_core_instantiation",
+      "baseline_required_feature": "row25 single-branch",
+      "boundary_correction": "not_generated_in_skeleton",
+      "child_id": "row25_baseline_child_placeholder",
+      "coefficient_ref": "row25_baseline_coefficient_placeholder",
+      "deleted": false,
+      "depth": "0",
+      "fiber_parent": "baseline_reemission_no_fiber_generated",
+      "forward_route": [],
+      "inverse_word": [],
+      "literal_id": "row25_baseline_literal_placeholder",
+      "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+      "residue_side_conditions": [],
+      "root_formula": "not_generated_in_skeleton",
+      "row_id": "row25",
+      "shift": "0",
+      "target_class": "5",
+      "window_policy": "baseline_reemission_no_window_generated"
+    },
+    {
+      "baseline_expected_shape": "two-branch row with nested EL block and row28 c-prime split",
+      "baseline_refs": "concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3",
+      "baseline_required_feature": "row28 c' split / post-deletion behavior",
+      "boundary_correction": "not_generated_in_skeleton",
+      "child_id": "row28_baseline_child_placeholder",
+      "coefficient_ref": "row28_baseline_coefficient_placeholder",
+      "deleted": false,
+      "depth": "0",
+      "fiber_parent": "baseline_reemission_no_fiber_generated",
+      "forward_route": [],
+      "inverse_word": [],
+      "literal_id": "row28_baseline_literal_placeholder",
+      "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+      "residue_side_conditions": [],
+      "root_formula": "not_generated_in_skeleton",
+      "row_id": "row28",
+      "shift": "0",
+      "target_class": "8",
+      "window_policy": "baseline_reemission_no_window_generated"
+    },
+    {
+      "baseline_expected_shape": "min(phi28 + M2V3, phi25)",
+      "baseline_refs": "M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+      "baseline_required_feature": "meta-errata phi25 reinstated",
+      "boundary_correction": "not_generated_in_skeleton",
+      "child_id": "M1V3_baseline_child_placeholder",
+      "coefficient_ref": "M1V3_baseline_coefficient_placeholder",
+      "deleted": false,
+      "depth": "0",
+      "fiber_parent": "baseline_reemission_no_fiber_generated",
+      "forward_route": [],
+      "inverse_word": [],
+      "literal_id": "M1V3_baseline_literal_placeholder",
+      "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+      "residue_side_conditions": [],
+      "root_formula": "not_generated_in_skeleton",
+      "row_id": "M1V3",
+      "shift": "0",
+      "target_class": "nested",
+      "window_policy": "baseline_reemission_no_window_generated"
+    }
+  ],
+  "manual_baseline": {
+    "inventory": [
+      {
+        "asset_kind": "source_doc",
+        "description": "regression contract for future generator",
+        "path": "docs/KL2003_F2_K2_GENERATOR_REGRESSION_SCOPING_v1.md",
+        "sha256": "274bf7d1e3d707d265653f85c4c1d9123c22124458736b8db35fb8a11155f5cc",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "audit-ready theorem and dependency package",
+        "path": "docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md",
+        "sha256": "ec3e82a792d15148fb1c7a0eccad55c5ec50161d89d94fb27766e77892438585",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "source-fidelity correction requiring phi25 in M1V3",
+        "path": "docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+        "sha256": "faf6f1e137ffbdb6a4e036ed8e6b01c142a9909f74679b732002b42399064967",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "V3 row contract scoping",
+        "path": "docs/KL2003_M0C_ROWS_V3_PHI5_CONTRACT_AND_RECHECK_SCOPING_v1.md",
+        "sha256": "2bf6382461d70a91db7d4f208f0788df3d02e57826f0d08cf9fcb7c77b4ccc14",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "V3 Lean migration record",
+        "path": "docs/KL2003_M0C_ROWS_V3_PHI5_LEAN_MIGRATION_v1.md",
+        "sha256": "a79b3f25539b051e44d475d94e32ff60a697da54d9e01ae0ddda440803c79295",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "row28 V3 final seam record",
+        "path": "docs/KL2003_ROW28_V3_MOD8_CP_SPLIT_AND_ROWSV3_FINAL_LEAN_v1.md",
+        "sha256": "e13ee511a07cb03e09acf63768da08b02ba5236953537ef4b09cb9e7ae3b598a",
+        "status": "present"
+      },
+      {
+        "asset_kind": "source_doc",
+        "description": "B_lo endpoint unification record",
+        "path": "docs/KL2003_K2_CERTIFICATE_ENDPOINT_UNIFICATION_BLO_UPGRADE_v1.md",
+        "sha256": "aeff203ffc57040954a31b4d37e9728f120456f98530565cf201f5d1acf8f915",
+        "status": "present"
+      },
+      {
+        "asset_kind": "lean_module",
+        "description": "abstract rows V3, assemblies, and induction",
+        "path": "CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean",
+        "sha256": "34394817144cfbc1321174216382de80b9e4ee295297a194a7fab8600f3f5d95",
+        "status": "present"
+      },
+      {
+        "asset_kind": "lean_module",
+        "description": "concrete Phi seam and rows V3",
+        "path": "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
+        "sha256": "1821a02348ff8e7e371a23cd1cd914d82b2f6461dc11a4f7acfe4a8d6ce7c31e",
+        "status": "present"
+      },
+      {
+        "asset_kind": "lean_module",
+        "description": "final k2 surrogate theorem package",
+        "path": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
+        "sha256": "27ee0bc21023889c4a7c2980821ab2b0e9c041cc9502087069389476b896682e",
+        "status": "present"
+      },
+      {
+        "asset_kind": "lean_module",
+        "description": "exact rational certificate constants and slacks",
+        "path": "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
+        "sha256": "2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e",
+        "status": "present"
+      },
+      {
+        "asset_kind": "audit",
+        "description": "abstract induction axiom audit",
+        "path": "CollatzClassical/KL2003/KL2003M0CRetardedInductionAxiomAudit.lean",
+        "sha256": "d9fc59180f221671f5f93879cb0f6554dcedb131cd0d167636f8b005491e4beb",
+        "status": "present"
+      },
+      {
+        "asset_kind": "audit",
+        "description": "concrete seam axiom audit",
+        "path": "CollatzClassical/KL2003/KL2003ConcretePhiRealizationAxiomAudit.lean",
+        "sha256": "b449ce85177b3007185769f69f5e195c65f08951fc9c7057f73a85b1f5fb7191",
+        "status": "present"
+      },
+      {
+        "asset_kind": "audit",
+        "description": "M1 surrogate axiom audit",
+        "path": "CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean",
+        "sha256": "6bea0c1bd5621ac4f6dd2d8d915093264d83140d2b6b40e591810399787b580b",
+        "status": "present"
+      },
+      {
+        "asset_kind": "certificate_data",
+        "description": "k2 rational data baseline",
+        "path": "CollatzClassical/KL2003/KL2003K2CertificateData.lean",
+        "sha256": "2b1321e6051fd8c1e4131a1bfee95238eb835580b58529c46c4c4ba336736e2e",
+        "status": "present"
+      },
+      {
+        "asset_kind": "output_artifact",
+        "description": "rational certificate script outputs",
+        "path": "outputs/KL2003_K2_INTERIOR_RATIONAL_CERTIFICATE_v1",
+        "sha256": "directory",
+        "status": "present"
+      },
+      {
+        "asset_kind": "output_artifact",
+        "description": "Figure A1 graph transcription custody",
+        "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1",
+        "sha256": "directory",
+        "status": "present"
+      },
+      {
+        "asset_kind": "output_artifact",
+        "description": "literal table recovery attempt custody",
+        "path": "outputs/KL2003_ROW28_V3_LITERAL_WORD_TABLE_RECOVERY_v1",
+        "sha256": "directory",
+        "status": "present"
+      }
+    ],
+    "requirements": [
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "V2 rows are not acceptable as source-faithful KL2003 baseline.",
+        "pass_condition": "Generated k=2 rows match row22/row25/row28 V3 mathematical shapes.",
+        "required": "yes",
+        "requirement_id": "reproduce_rows_v3"
+      },
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "This is the explicit meta-errata baseline.",
+        "pass_condition": "M1V3 second arm is phi25, not phi22.",
+        "required": "yes",
+        "requirement_id": "reproduce_meta_errata_phi25"
+      },
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "Format-only id differences are allowed; mathematical deletion differences are blockers.",
+        "pass_condition": "Generated deletion marks and post-deletion behavior match Figure A1/source-custody baseline.",
+        "required": "yes",
+        "requirement_id": "reproduce_deletion_behavior"
+      },
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "Includes B_lo endpoint unification and final slacks.",
+        "pass_condition": "lambda, coefficients, endpoint-derived rows, and slacks match exact rational baseline.",
+        "required": "yes",
+        "requirement_id": "reproduce_certificate_constants"
+      },
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "Lean consumes generated Lean data, not JSON.",
+        "pass_condition": "Generated k=2 artifacts use schema v2 JSON plus deterministic Lean data twins with cross-hashes.",
+        "required": "yes",
+        "requirement_id": "emit_json_lean_twin_artifacts_v2"
+      },
+      {
+        "fail_classification": "K2_REGRESSION_FAIL",
+        "notes": "Manual k=2 is the source of truth for regression.",
+        "pass_condition": "Every mathematical diff is classified as generator blocker, not a request to change proved k=2 theorems.",
+        "required": "yes",
+        "requirement_id": "any_math_diff_is_generator_blocker"
+      }
+    ],
+    "summary": {
+      "certificate_constant_count": 9,
+      "expected_generator_mode": "k2_regression",
+      "expected_row_record_count": 4,
+      "generated_at": "2026-07-17T23:19:08.080955+00:00",
+      "global_collatz_claim": false,
+      "guardrails": [
+        "NO_K3_GENERATION",
+        "NO_LP_SOLVED",
+        "NO_NEW_LEAN_OPENED",
+        "NO_HIGH_K_CLAIM",
+        "NO_GLOBAL_COLLATZ_CLAIM"
+      ],
+      "high_k_claim": false,
+      "lean_opened": false,
+      "lp_solved": false,
+      "manual_baseline_asset_count": 18,
+      "manual_baseline_missing_asset_count": 0,
+      "manual_baseline_missing_assets": [],
+      "must_reproduce": [
+        "rows_v3",
+        "meta_errata_phi25",
+        "deletion_behavior",
+        "certificate_constants",
+        "json_lean_twin_artifacts_v2"
+      ],
+      "no_k3_generation": true,
+      "output_files": [
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/summary.json",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/theorem_baseline.csv",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/certificate_constants.csv",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/manual_baseline_inventory.csv",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/generator_regression_requirements.csv",
+        "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/manifest_sha256.csv"
+      ],
+      "regression_requirement_count": 6,
+      "run_id": "KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1",
+      "schema_version_expected": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+      "source_commit": "244694b78d297b9064e22b27c48e6aea46eb97e8",
+      "source_faithful_contract": "V3",
+      "theorem_count": 6,
+      "v2_status": "ABSTRACT_ONLY_NOT_SOURCE_FAITHFUL",
+      "verdict": "K2_REGRESSION_BASELINE_ONLY"
+    },
+    "theorems": [
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003ConcretePhiRealizationAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
+        "role": "concrete rows V3 seam",
+        "source_faithful_contract": "V3",
+        "theorem": "concretePhi_rowsV3"
+      },
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003ConcretePhiRealizationAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003ConcretePhiRealization.lean",
+        "role": "instantiates M0C V3 with concrete Phi",
+        "source_faithful_contract": "V3",
+        "theorem": "concretePhi_retarded_lower_bound"
+      },
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003M0CRetardedInductionAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003M0CRetardedInduction.lean",
+        "role": "abstract retarded induction over rows V3",
+        "source_faithful_contract": "V3",
+        "theorem": "m0c_retarded_induction_bound_v3"
+      },
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
+        "role": "technical ceil-window k=2 M1-surrogate theorem",
+        "source_faithful_contract": "V3",
+        "theorem": "kl2003_k2_m1_surrogate_ceil_window_lower_bound"
+      },
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
+        "role": "arbitrary large-x k=2 M1-surrogate theorem",
+        "source_faithful_contract": "V3",
+        "theorem": "kl2003_k2_m1_surrogate_arbitrary_x_lower_bound"
+      },
+      {
+        "audit_file": "CollatzClassical/KL2003/KL2003M1SurrogateAxiomAudit.lean",
+        "baseline_status": "proved_manual_k2",
+        "module": "CollatzClassical/KL2003/KL2003M1Surrogate.lean",
+        "role": "public root-8 k=2 M1-surrogate instance",
+        "source_faithful_contract": "V3",
+        "theorem": "kl2003_k2_m1_surrogate_root8_lower_bound"
+      }
+    ]
+  },
+  "metadata": {
+    "artifact_links": {
+      "json_artifact": "kl2003_k2_regression_certificate.generated.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "scripts/kl2003_f2_k2_regression_generator_skeleton_v1.py",
+      "json_to_lean_generator_sha256": "RECORDED_IN_MANIFEST",
+      "lean_data_artifact": "KL2003K2RegressionCertificateDataGenerated.lean",
+      "lean_data_sha256": "RECORDED_IN_MANIFEST",
+      "lean_import_policy": "Lean consumes generated .lean data, not JSON; this generated data is not imported yet."
+    },
+    "created_at": "2026-07-17T23:37:16.151155+00:00",
+    "format_scope": "high_k_parametric",
+    "generator_mode": "k2_regression",
+    "generator_version": "kl2003_f2_k2_regression_generator_skeleton_v1.py",
+    "guardrails": [
+      "BASELINE_REEMISSION_ONLY",
+      "NO_INVERSE_WORD_RECONSTRUCTION",
+      "NO_LP_SOLVED",
+      "NO_K3_GENERATION",
+      "NO_LEAN_BUILD",
+      "NO_NEW_THEOREM_CLAIM",
+      "NO_HIGH_K_CLAIM",
+      "NO_GLOBAL_COLLATZ_CLAIM"
+    ],
+    "k": "2",
+    "mathematical_content": "baseline_reemission_only",
+    "pre_reduction_class_count": "9",
+    "run_id": "KL2003_F2_K2_REGRESSION_GENERATOR_SKELETON_v1",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "source_commit": "b1d55f8370646d280d113aee75e8a82987b978fa",
+    "source_faithful_contract": "V3",
+    "source_inputs": [
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/summary.json",
+        "role": "baseline_summary",
+        "sha256": "7158c62c96bbf8286f73b1a8168e281a32bac9312f21377075f1b0fe777c1b9c"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+        "role": "baseline_rows_v3",
+        "sha256": "1a590bf696250d1b1544e314ad0d4bbd9e31bc9713dcda22b6b7d0210635ee98"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/certificate_constants.csv",
+        "role": "baseline_certificate_constants",
+        "sha256": "abfc3bb2d167b18e4685cf2efc6cce81c2e13c713c1552e38d268f4c14f8c8fe"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/theorem_baseline.csv",
+        "role": "baseline_theorems",
+        "sha256": "da215b95b5a45968b7f4523ea899c480fb3cdcbf470b9bffa8e1cf6c7db5865d"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/generator_regression_requirements.csv",
+        "role": "baseline_generator_requirements",
+        "sha256": "de8eb9ba8685d22bb34b54d9f320da28fa598c249e1f0044b769b3f36605250b"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/manual_baseline_inventory.csv",
+        "role": "baseline_manual_inventory",
+        "sha256": "a5afced076e84bc1b46c61b0e36c208eeb8d1ae0e5d8952c5533116319c62d58"
+      },
+      {
+        "path": "docs/KL2003_F2_K2_GENERATOR_REGRESSION_SCOPING_v1.md",
+        "role": "k2_regression_scoping",
+        "sha256": "274bf7d1e3d707d265653f85c4c1d9123c22124458736b8db35fb8a11155f5cc"
+      },
+      {
+        "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
+        "role": "schema_v2_scoping",
+        "sha256": "0f8dc838f819ff72b741dc23c6bc6f56ab8eab255d6d45fba3eb680859ce257f"
+      }
+    ],
+    "tracked_class_convention": "k2_manual_v3_regression_classes_mod9_2_5_8",
+    "tracked_class_count": "3",
+    "v2_status": "ABSTRACT_ONLY_NOT_SOURCE_FAITHFUL"
+  },
+  "no_claims": {
+    "global_collatz_claim": false,
+    "high_k_claim": false,
+    "k3_generation": false,
+    "new_theorem_claim": false
+  },
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "lambda",
+        "kind": "lambda",
+        "lean_name": "lambdaR",
+        "must_reproduce_exactly": "yes",
+        "notes": "k=2 surrogate lambda",
+        "source": "KL2003K2AlphaBounds.lean",
+        "value": "27/20"
+      },
+      {
+        "coefficient_id": "gammaK2",
+        "kind": "exponent",
+        "lean_name": "gammaK2",
+        "must_reproduce_exactly": "yes",
+        "notes": "also proves gammaK2 > 3/7",
+        "source": "KL2003M1Surrogate.lean",
+        "value": "logb 2 (27/20)"
+      },
+      {
+        "coefficient_id": "DeltaV2",
+        "kind": "base_constant",
+        "lean_name": "DeltaV2",
+        "must_reproduce_exactly": "yes",
+        "notes": "equivalent to 1/(2*lambdaR^14)",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "(20/27)^14/2"
+      },
+      {
+        "coefficient_id": "c22",
+        "kind": "row_coefficient",
+        "lean_name": "c22R",
+        "must_reproduce_exactly": "yes",
+        "notes": "class 2 coefficient",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "73/40"
+      },
+      {
+        "coefficient_id": "c25",
+        "kind": "row_coefficient",
+        "lean_name": "c25R",
+        "must_reproduce_exactly": "yes",
+        "notes": "class 5 coefficient; source-faithful M1V3 arm",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "1001/1000"
+      },
+      {
+        "coefficient_id": "c28",
+        "kind": "row_coefficient",
+        "lean_name": "c28R",
+        "must_reproduce_exactly": "yes",
+        "notes": "class 8 coefficient",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "69/40"
+      },
+      {
+        "coefficient_id": "L2NT_D1_slack",
+        "kind": "slack",
+        "lean_name": "L2NT_D1_slack",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22/D1 slack after B_lo endpoint unification",
+        "source": "KL2003K2CertificateData.lean",
+        "value": "29/9720"
+      },
+      {
+        "coefficient_id": "L2NT_D2_slack",
+        "kind": "slack",
+        "lean_name": "L2NT_D2_slack",
+        "must_reproduce_exactly": "yes",
+        "notes": "row25/D2 slack",
+        "source": "KL2003K2CertificateData.lean",
+        "value": "271/729000"
+      },
+      {
+        "coefficient_id": "L2NT_D3_slack",
+        "kind": "slack",
+        "lean_name": "L2NT_D3_slack",
+        "must_reproduce_exactly": "yes",
+        "notes": "row28/D3 slack",
+        "source": "KL2003K2CertificateData.lean",
+        "value": "2077/145800"
+      }
+    ],
+    "float_diagnostics": {
+      "float_evidence_used": false,
+      "notes": "No floats are emitted as evidence."
+    },
+    "lambda_interval": {
+      "exact": "27/20",
+      "source": "manual_k2_baseline"
+    },
+    "row_lhs": {},
+    "row_rhs": {},
+    "solver_manifest": {
+      "lp_solved": false,
+      "mode": "k2_regression",
+      "notes": "Skeleton reemits manual baseline constants only.",
+      "solver": "none"
+    },
+    "variables": {}
+  },
+  "rows": [
+    {
+      "baseline": {
+        "baseline_refs": "concretePhi_row22_seam; d1_core_instantiation",
+        "expected_shape": "two-branch with retarded branch plus advanced branch using parity lift",
+        "generator_blocker_if_missing": "yes",
+        "required_feature": "row22 parity lift",
+        "row_family": "D1",
+        "row_id": "row22",
+        "source_class": "22",
+        "tracked_residue_mod9": "2",
+        "v3_requirement": "unchanged from source-faithful k2 seam"
+      },
+      "children": [
+        {
+          "baseline_expected_shape": "two-branch with retarded branch plus advanced branch using parity lift",
+          "baseline_refs": "concretePhi_row22_seam; d1_core_instantiation",
+          "baseline_required_feature": "row22 parity lift",
+          "boundary_correction": "not_generated_in_skeleton",
+          "child_id": "row22_baseline_child_placeholder",
+          "coefficient_ref": "row22_baseline_coefficient_placeholder",
+          "deleted": false,
+          "depth": "0",
+          "fiber_parent": "baseline_reemission_no_fiber_generated",
+          "forward_route": [],
+          "inverse_word": [],
+          "literal_id": "row22_baseline_literal_placeholder",
+          "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+          "residue_side_conditions": [],
+          "root_formula": "not_generated_in_skeleton",
+          "row_id": "row22",
+          "shift": "0",
+          "target_class": "2",
+          "window_policy": "baseline_reemission_no_window_generated"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "row22_baseline_coefficient_placeholder",
+          "notes": "placeholder coefficient; certificate constants are reemitted separately",
+          "target": "row22_baseline_child_placeholder",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "row22 parity lift",
+      "normalization_ref": "manual_k2_v3_baseline_reemission",
+      "row_id": "row22",
+      "row_kind": "D1",
+      "slack_id": "L2NT_D1_slack",
+      "source_class": "22",
+      "source_ref": "concretePhi_row22_seam; d1_core_instantiation",
+      "target_bound": "1"
+    },
+    {
+      "baseline": {
+        "baseline_refs": "concretePhi_row25_seam; d2_single_branch_core_instantiation",
+        "expected_shape": "single-branch retarded row; no advanced contribution",
+        "generator_blocker_if_missing": "yes",
+        "required_feature": "row25 single-branch",
+        "row_family": "D2",
+        "row_id": "row25",
+        "source_class": "25",
+        "tracked_residue_mod9": "5",
+        "v3_requirement": "advanced branch absent; D2 is immune to advanced rounding"
+      },
+      "children": [
+        {
+          "baseline_expected_shape": "single-branch retarded row; no advanced contribution",
+          "baseline_refs": "concretePhi_row25_seam; d2_single_branch_core_instantiation",
+          "baseline_required_feature": "row25 single-branch",
+          "boundary_correction": "not_generated_in_skeleton",
+          "child_id": "row25_baseline_child_placeholder",
+          "coefficient_ref": "row25_baseline_coefficient_placeholder",
+          "deleted": false,
+          "depth": "0",
+          "fiber_parent": "baseline_reemission_no_fiber_generated",
+          "forward_route": [],
+          "inverse_word": [],
+          "literal_id": "row25_baseline_literal_placeholder",
+          "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+          "residue_side_conditions": [],
+          "root_formula": "not_generated_in_skeleton",
+          "row_id": "row25",
+          "shift": "0",
+          "target_class": "5",
+          "window_policy": "baseline_reemission_no_window_generated"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "row25_baseline_coefficient_placeholder",
+          "notes": "placeholder coefficient; certificate constants are reemitted separately",
+          "target": "row25_baseline_child_placeholder",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "row25 single-branch",
+      "normalization_ref": "manual_k2_v3_baseline_reemission",
+      "row_id": "row25",
+      "row_kind": "D2",
+      "slack_id": "L2NT_D2_slack",
+      "source_class": "25",
+      "source_ref": "concretePhi_row25_seam; d2_single_branch_core_instantiation",
+      "target_bound": "1"
+    },
+    {
+      "baseline": {
+        "baseline_refs": "concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3",
+        "expected_shape": "two-branch row with nested EL block and row28 c-prime split",
+        "generator_blocker_if_missing": "yes",
+        "required_feature": "row28 c' split / post-deletion behavior",
+        "row_family": "D3 / EL",
+        "row_id": "row28",
+        "source_class": "28",
+        "tracked_residue_mod9": "8",
+        "v3_requirement": "M1V3 uses phi25, not phi22"
+      },
+      "children": [
+        {
+          "baseline_expected_shape": "two-branch row with nested EL block and row28 c-prime split",
+          "baseline_refs": "concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3",
+          "baseline_required_feature": "row28 c' split / post-deletion behavior",
+          "boundary_correction": "not_generated_in_skeleton",
+          "child_id": "row28_baseline_child_placeholder",
+          "coefficient_ref": "row28_baseline_coefficient_placeholder",
+          "deleted": false,
+          "depth": "0",
+          "fiber_parent": "baseline_reemission_no_fiber_generated",
+          "forward_route": [],
+          "inverse_word": [],
+          "literal_id": "row28_baseline_literal_placeholder",
+          "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+          "residue_side_conditions": [],
+          "root_formula": "not_generated_in_skeleton",
+          "row_id": "row28",
+          "shift": "0",
+          "target_class": "8",
+          "window_policy": "baseline_reemission_no_window_generated"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "row28_baseline_coefficient_placeholder",
+          "notes": "placeholder coefficient; certificate constants are reemitted separately",
+          "target": "row28_baseline_child_placeholder",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "row28 c' split / post-deletion behavior",
+      "normalization_ref": "manual_k2_v3_baseline_reemission",
+      "row_id": "row28",
+      "row_kind": "D3 / EL",
+      "slack_id": "L2NT_D3_slack",
+      "source_class": "28",
+      "source_ref": "concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3",
+      "target_bound": "1"
+    },
+    {
+      "baseline": {
+        "baseline_refs": "M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+        "expected_shape": "min(phi28 + M2V3, phi25)",
+        "generator_blocker_if_missing": "yes",
+        "required_feature": "meta-errata phi25 reinstated",
+        "row_family": "EL auxiliary",
+        "row_id": "M1V3",
+        "source_class": "row28 nested block",
+        "tracked_residue_mod9": "nested",
+        "v3_requirement": "second arm is phi25; phi22 form is historical V2 only"
+      },
+      "children": [
+        {
+          "baseline_expected_shape": "min(phi28 + M2V3, phi25)",
+          "baseline_refs": "M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+          "baseline_required_feature": "meta-errata phi25 reinstated",
+          "boundary_correction": "not_generated_in_skeleton",
+          "child_id": "M1V3_baseline_child_placeholder",
+          "coefficient_ref": "M1V3_baseline_coefficient_placeholder",
+          "deleted": false,
+          "depth": "0",
+          "fiber_parent": "baseline_reemission_no_fiber_generated",
+          "forward_route": [],
+          "inverse_word": [],
+          "literal_id": "M1V3_baseline_literal_placeholder",
+          "reason": "skeleton_reemits_manual_baseline_without_reconstructing_inverse_words",
+          "residue_side_conditions": [],
+          "root_formula": "not_generated_in_skeleton",
+          "row_id": "M1V3",
+          "shift": "0",
+          "target_class": "nested",
+          "window_policy": "baseline_reemission_no_window_generated"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "M1V3_baseline_coefficient_placeholder",
+          "notes": "placeholder coefficient; certificate constants are reemitted separately",
+          "target": "M1V3_baseline_child_placeholder",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "meta-errata phi25 reinstated",
+      "normalization_ref": "manual_k2_v3_baseline_reemission",
+      "row_id": "M1V3",
+      "row_kind": "EL auxiliary",
+      "slack_id": "M1V3_baseline_auxiliary_placeholder_slack",
+      "source_class": "row28 nested block",
+      "source_ref": "M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+      "target_bound": "1"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "0",
+      "lhs": "0",
+      "notes": "Baseline slack reemitted from manual k=2 data; bit sizes are not recomputed by skeleton.",
+      "numerator_bits": "0",
+      "rhs": "29/9720",
+      "row_id": "row22",
+      "slack": "29/9720",
+      "slack_id": "L2NT_D1_slack",
+      "strictly_positive": true
+    },
+    {
+      "denominator_bits": "0",
+      "lhs": "0",
+      "notes": "Baseline slack reemitted from manual k=2 data; bit sizes are not recomputed by skeleton.",
+      "numerator_bits": "0",
+      "rhs": "271/729000",
+      "row_id": "row25",
+      "slack": "271/729000",
+      "slack_id": "L2NT_D2_slack",
+      "strictly_positive": true
+    },
+    {
+      "denominator_bits": "0",
+      "lhs": "0",
+      "notes": "Baseline slack reemitted from manual k=2 data; bit sizes are not recomputed by skeleton.",
+      "numerator_bits": "0",
+      "rhs": "2077/145800",
+      "row_id": "row28",
+      "slack": "2077/145800",
+      "slack_id": "L2NT_D3_slack",
+      "strictly_positive": true
+    },
+    {
+      "denominator_bits": "0",
+      "lhs": "0",
+      "notes": "Auxiliary EL row placeholder for schema linkage only; not a mathematical slack.",
+      "numerator_bits": "0",
+      "rhs": "0",
+      "row_id": "M1V3",
+      "slack": "0",
+      "slack_id": "M1V3_baseline_auxiliary_placeholder_slack",
+      "strictly_positive": false
+    }
+  ],
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "class_mod9_2",
+      "modulus": "9",
+      "notes": "k=2 tracked class for row22 / phi22",
+      "pre_reduction_residues": [
+        "2"
+      ],
+      "representative": "2",
+      "source_rule": "manual_k2_tracked_class"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_5",
+      "modulus": "9",
+      "notes": "k=2 tracked class for row25 / phi25",
+      "pre_reduction_residues": [
+        "5"
+      ],
+      "representative": "5",
+      "source_rule": "manual_k2_tracked_class"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_8",
+      "modulus": "9",
+      "notes": "k=2 tracked class for row28 / phi28",
+      "pre_reduction_residues": [
+        "8"
+      ],
+      "representative": "8",
+      "source_rule": "manual_k2_tracked_class"
+    }
+  ],
+  "verification_targets": [
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Generated k=2 rows match row22/row25/row28 V3 mathematical shapes.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "reproduce_rows_v3"
+    },
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "M1V3 second arm is phi25, not phi22.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "reproduce_meta_errata_phi25"
+    },
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Generated deletion marks and post-deletion behavior match Figure A1/source-custody baseline.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "reproduce_deletion_behavior"
+    },
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "lambda, coefficients, endpoint-derived rows, and slacks match exact rational baseline.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "reproduce_certificate_constants"
+    },
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Generated k=2 artifacts use schema v2 JSON plus deterministic Lean data twins with cross-hashes.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "emit_json_lean_twin_artifacts_v2"
+    },
+    {
+      "expected_checker": "future_lean_verifier",
+      "input_sections": [
+        "rows",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Every mathematical diff is classified as generator blocker, not a request to change proved k=2 theorems.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "any_math_diff_is_generator_blocker"
+    }
+  ]
+}

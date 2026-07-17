@@ -12,6 +12,7 @@ import hashlib
 import json
 import re
 import sys
+import argparse
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from math import gcd
@@ -29,9 +30,6 @@ DEFAULT_INPUT = (
     / "kl2003_k3_certificate.fixture.json"
 )
 OUT_DIR = REPO_ROOT / "outputs" / RUN_ID
-SUMMARY_PATH = OUT_DIR / "schema_validation_summary.json"
-ERRORS_PATH = OUT_DIR / "schema_validation_errors.csv"
-MANIFEST_PATH = OUT_DIR / "manifest_sha256.csv"
 
 RATIONAL_RE = re.compile(r"^-?(0|[1-9][0-9]*)(/([1-9][0-9]*))?$")
 
@@ -52,9 +50,6 @@ METADATA_FLAGS_REQUIRED = [
     "tracked_class_count",
     "pre_reduction_class_count",
     "artifact_links",
-    "fixture_only",
-    "mathematical_content",
-    "not_for_lean_import",
 ]
 
 ROW_REQUIRED = [
@@ -269,6 +264,16 @@ def check_rational_strings(obj: Any, issues: list[ValidationIssue], path: str = 
         for key, value in obj.items():
             child_path = f"{path}.{key}"
             if key in RATIONAL_KEY_TOKENS:
+                symbolic_constant_allowed = (
+                    key == "value"
+                    and isinstance(value, str)
+                    and isinstance(obj.get("kind"), str)
+                    and obj.get("kind") in {"exponent", "base_constant"}
+                    and not rational_string_ok(value)
+                )
+                if symbolic_constant_allowed:
+                    check_rational_strings(value, issues, child_path)
+                    continue
                 if not isinstance(value, str):
                     add_issue(
                         issues,
@@ -336,8 +341,173 @@ def artifact_hash_fields(data: Any) -> dict[str, Any]:
     return {key: links.get(key) for key in keys if key in links}
 
 
-def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], dict[str, int | bool]]:
+def classify_input(data: Any, input_path: Path) -> str:
+    if input_path.name.endswith(".fixture.json"):
+        return "fixture"
+    if isinstance(data, dict):
+        metadata = data.get("metadata")
+        if isinstance(metadata, dict):
+            if (
+                metadata.get("k") == "2"
+                and metadata.get("generator_mode") == "k2_regression"
+                and metadata.get("mathematical_content") == "baseline_reemission_only"
+            ):
+                return "generated_k2_regression"
+    return "generated_or_unknown"
+
+
+def check_fixture_flags(metadata: Any, issues: list[ValidationIssue]) -> None:
+    check_required_fields(
+        metadata,
+        ["fixture_only", "mathematical_content", "not_for_lean_import"],
+        "$.metadata",
+        issues,
+    )
+    if not isinstance(metadata, dict):
+        return
+    if metadata.get("fixture_only") is not True:
+        add_issue(issues, "error", "$.metadata.fixture_only", "FIXTURE_FLAG_INVALID", "Fixture file requires fixture_only=true.")
+    if metadata.get("mathematical_content") is not False:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.mathematical_content",
+            "FIXTURE_FLAG_INVALID",
+            "Fixture file requires mathematical_content=false.",
+        )
+    if metadata.get("not_for_lean_import") is not True:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.not_for_lean_import",
+            "FIXTURE_FLAG_INVALID",
+            "Fixture file requires not_for_lean_import=true.",
+        )
+
+
+def check_generated_k2_regression(data: dict[str, Any], issues: list[ValidationIssue]) -> None:
+    metadata = data.get("metadata")
+    if not isinstance(metadata, dict):
+        return
+
+    expected_metadata = {
+        "schema_version": EXPECTED_SCHEMA_VERSION,
+        "k": "2",
+        "tracked_class_count": "3",
+        "pre_reduction_class_count": "9",
+        "generator_mode": "k2_regression",
+        "mathematical_content": "baseline_reemission_only",
+    }
+    for key, expected in expected_metadata.items():
+        if metadata.get(key) != expected:
+            add_issue(
+                issues,
+                "error",
+                f"$.metadata.{key}",
+                "GENERATED_K2_METADATA_MISMATCH",
+                f"Expected `{expected}` for generated k2 regression input.",
+            )
+
+    links = metadata.get("artifact_links")
+    if isinstance(links, dict):
+        for key in ["json_sha256", "lean_data_sha256", "json_to_lean_generator_sha256"]:
+            value = links.get(key)
+            if not isinstance(value, str) or not value:
+                add_issue(
+                    issues,
+                    "error",
+                    f"$.metadata.artifact_links.{key}",
+                    "GENERATED_K2_CROSS_HASH_FIELD_MISSING",
+                    "Generated k2 regression artifact must report cross-hash fields.",
+                )
+
+    rows = data.get("rows")
+    if not isinstance(rows, list) or not rows:
+        add_issue(issues, "error", "$.rows", "GENERATED_K2_ROWS_MISSING", "Generated k2 regression artifact requires rows.")
+    else:
+        row_ids = [row.get("row_id") for row in rows if isinstance(row, dict)]
+        for row_id in ["row22", "row25", "row28", "M1V3"]:
+            if row_id not in row_ids:
+                add_issue(
+                    issues,
+                    "error",
+                    "$.rows",
+                    "GENERATED_K2_ROW_ID_MISSING",
+                    f"Generated k2 regression artifact must include `{row_id}`.",
+                )
+        m1_rows = [row for row in rows if isinstance(row, dict) and row.get("row_id") == "M1V3"]
+        if not m1_rows:
+            add_issue(issues, "error", "$.rows", "M1V3_ROW_MISSING", "M1V3 row is required.")
+        else:
+            expected_shape = str(m1_rows[0].get("baseline", {}).get("expected_shape", ""))
+            if "phi25" not in expected_shape:
+                add_issue(
+                    issues,
+                    "error",
+                    "$.rows[row_id=M1V3].baseline.expected_shape",
+                    "M1V3_PHI25_NOT_RECORDED",
+                    "M1V3 must record phi25 as the source-faithful second arm.",
+                )
+            if "phi22" in expected_shape:
+                add_issue(
+                    issues,
+                    "error",
+                    "$.rows[row_id=M1V3].baseline.expected_shape",
+                    "M1V3_REPLACED_BY_PHI22",
+                    "M1V3 expected shape must not replace phi25 with phi22.",
+                )
+
+    rational_certificate = data.get("rational_certificate")
+    constants = []
+    if isinstance(rational_certificate, dict):
+        constants = rational_certificate.get("coefficient_intervals", [])
+    if not isinstance(constants, list) or not constants:
+        add_issue(
+            issues,
+            "error",
+            "$.rational_certificate.coefficient_intervals",
+            "GENERATED_K2_CONSTANTS_MISSING",
+            "Generated k2 regression artifact requires baseline constants.",
+        )
+    else:
+        constant_ids = [constant.get("coefficient_id") for constant in constants if isinstance(constant, dict)]
+        for constant_id in [
+            "lambda",
+            "gammaK2",
+            "DeltaV2",
+            "c22",
+            "c25",
+            "c28",
+            "L2NT_D1_slack",
+            "L2NT_D2_slack",
+            "L2NT_D3_slack",
+        ]:
+            if constant_id not in constant_ids:
+                add_issue(
+                    issues,
+                    "error",
+                    "$.rational_certificate.coefficient_intervals",
+                    "GENERATED_K2_CONSTANT_MISSING",
+                    f"Missing baseline constant `{constant_id}`.",
+                )
+        for constant in constants:
+            if not isinstance(constant, dict):
+                continue
+            if constant.get("kind") in {"lambda", "row_coefficient", "slack"}:
+                value = constant.get("value")
+                if not isinstance(value, str) or not rational_string_ok(value):
+                    add_issue(
+                        issues,
+                        "error",
+                        "$.rational_certificate.coefficient_intervals.value",
+                        "GENERATED_K2_RATIONAL_CONSTANT_NOT_CANONICAL",
+                        f"Constant `{constant.get('coefficient_id')}` must be a canonical rational string.",
+                    )
+
+
+def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], dict[str, int | bool | str]]:
     issues: list[ValidationIssue] = []
+    input_kind = classify_input(data, input_path)
     if not isinstance(data, dict):
         add_issue(issues, "error", "$", "TOP_LEVEL_NOT_OBJECT", "Top-level JSON value must be an object.")
         return issues, {
@@ -345,7 +515,9 @@ def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], d
             "row_count": 0,
             "child_count": 0,
             "slack_count": 0,
+            "constant_count": 0,
             "is_fixture": input_path.name.endswith(".fixture.json"),
+            "input_kind": input_kind,
         }
 
     check_required_fields(data, TOP_LEVEL_REQUIRED, "$", issues)
@@ -355,26 +527,11 @@ def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], d
     check_metadata_version_and_counts(metadata, issues)
     check_artifact_links(metadata, issues)
 
-    is_fixture = input_path.name.endswith(".fixture.json")
-    if is_fixture and isinstance(metadata, dict):
-        if metadata.get("fixture_only") is not True:
-            add_issue(issues, "error", "$.metadata.fixture_only", "FIXTURE_FLAG_INVALID", "Fixture file requires fixture_only=true.")
-        if metadata.get("mathematical_content") is not False:
-            add_issue(
-                issues,
-                "error",
-                "$.metadata.mathematical_content",
-                "FIXTURE_FLAG_INVALID",
-                "Fixture file requires mathematical_content=false.",
-            )
-        if metadata.get("not_for_lean_import") is not True:
-            add_issue(
-                issues,
-                "error",
-                "$.metadata.not_for_lean_import",
-                "FIXTURE_FLAG_INVALID",
-                "Fixture file requires not_for_lean_import=true.",
-            )
+    is_fixture = input_kind == "fixture"
+    if is_fixture:
+        check_fixture_flags(metadata, issues)
+    if input_kind == "generated_k2_regression":
+        check_generated_k2_regression(data, issues)
 
     rows = data.get("rows", [])
     if isinstance(rows, list):
@@ -475,12 +632,17 @@ def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], d
     row_count = len(rows) if isinstance(rows, list) else 0
     child_count = len(inverse_words) if isinstance(inverse_words, list) else 0
     slack_count = len(data.get("slacks", [])) if isinstance(data.get("slacks", []), list) else 0
+    rational_certificate = data.get("rational_certificate", {})
+    constants = rational_certificate.get("coefficient_intervals", []) if isinstance(rational_certificate, dict) else []
+    constant_count = len(constants) if isinstance(constants, list) else 0
     return issues, {
         "float_count": float_count,
         "row_count": row_count,
         "child_count": child_count,
         "slack_count": slack_count,
+        "constant_count": constant_count,
         "is_fixture": is_fixture,
+        "input_kind": input_kind,
     }
 
 
@@ -505,20 +667,35 @@ def write_errors(path: Path, issues: list[ValidationIssue]) -> None:
             )
 
 
-def write_manifest(paths: list[Path]) -> None:
-    with MANIFEST_PATH.open("w", newline="", encoding="utf-8") as handle:
+def write_manifest(paths: list[Path], manifest_path: Path) -> None:
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    with manifest_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=["path", "sha256"], lineterminator="\n")
         writer.writeheader()
         for path in paths:
             writer.writerow({"path": repo_rel(path), "sha256": sha256(path)})
 
 
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input_path", nargs="?", default=str(DEFAULT_INPUT), help="certificate JSON path to validate")
+    parser.add_argument("--out-dir", default=str(OUT_DIR), help="output directory for validation artifacts")
+    return parser.parse_args(argv[1:])
+
+
 def main(argv: list[str]) -> int:
-    input_path = Path(argv[1]).expanduser() if len(argv) > 1 else DEFAULT_INPUT
+    args = parse_args(argv)
+    input_path = Path(args.input_path).expanduser()
     if not input_path.is_absolute():
         input_path = (REPO_ROOT / input_path).resolve()
+    out_dir = Path(args.out_dir).expanduser()
+    if not out_dir.is_absolute():
+        out_dir = (REPO_ROOT / out_dir).resolve()
+    summary_path = out_dir / "schema_validation_summary.json"
+    errors_path = out_dir / "schema_validation_errors.csv"
+    manifest_path = out_dir / "manifest_sha256.csv"
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     issues: list[ValidationIssue] = []
     data: Any = None
     parse_ok = False
@@ -536,7 +713,9 @@ def main(argv: list[str]) -> int:
         "row_count": 0,
         "child_count": 0,
         "slack_count": 0,
+        "constant_count": 0,
         "is_fixture": input_path.name.endswith(".fixture.json"),
+        "input_kind": "fixture" if input_path.name.endswith(".fixture.json") else "generated_or_unknown",
     }
     if parse_ok:
         validation_issues, stats = validate_data(data, input_path)
@@ -559,10 +738,19 @@ def main(argv: list[str]) -> int:
         if issue.severity == "warning"
     ]
     schema_ok = parse_ok and error_count == 0
+    input_kind = str(stats["input_kind"])
+    if schema_ok and input_kind == "generated_k2_regression":
+        verdict = "GENERATED_K2_REGRESSION_SCHEMA_PASS"
+    elif schema_ok:
+        verdict = "FORMAT_CHECK_ONLY"
+    else:
+        verdict = "FORMAT_CHECK_FAILED"
+
     summary = {
         "run_id": RUN_ID,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "input_path": repo_rel(input_path),
+        "input_kind": input_kind,
         "input_sha256": sha256(input_path) if input_path.exists() and input_path.is_file() else None,
         "json_parseable": parse_ok,
         "expected_schema_version": EXPECTED_SCHEMA_VERSION,
@@ -582,8 +770,9 @@ def main(argv: list[str]) -> int:
         "row_count": stats["row_count"],
         "child_count": stats["child_count"],
         "slack_count": stats["slack_count"],
+        "constant_count": stats["constant_count"],
         "reported_artifact_hash_fields": artifact_hash_fields(data) if parse_ok else {},
-        "verdict": "FORMAT_CHECK_ONLY" if schema_ok else "FORMAT_CHECK_FAILED",
+        "verdict": verdict,
         "guardrails": [
             "NO_MATHEMATICAL_VERIFICATION",
             "NO_K3_ROWS_GENERATED",
@@ -595,10 +784,14 @@ def main(argv: list[str]) -> int:
         "classifications": [
             "K3_CERTIFICATE_SCHEMA_VALIDATOR_CREATED",
             "SCHEMA_VALIDATOR_UPDATED",
+            "SCHEMA_VALIDATOR_ACCEPTS_GENERATED_ARTIFACTS",
             "K_PARAMETRIC_CERTIFICATE_SCHEMA_DEFINED",
             "JSON_LEAN_TWIN_ARTIFACT_POLICY_DEFINED",
             "CANONICAL_RATIONAL_FORMAT_DEFINED",
             "FIXTURE_SCHEMA_VALIDATED" if schema_ok and stats["is_fixture"] else "SCHEMA_VALIDATION_ATTEMPTED",
+            "K2_REGRESSION_GENERATED_JSON_SCHEMA_VALIDATED"
+            if schema_ok and input_kind == "generated_k2_regression"
+            else "K2_REGRESSION_GENERATED_JSON_NOT_VALIDATED_IN_THIS_RUN",
             "FORMAT_WARNING_NAMED_OR_RESOLVED",
             "FORMAT_CHECK_ONLY",
             "NO_MATHEMATICAL_VERIFICATION",
@@ -607,9 +800,9 @@ def main(argv: list[str]) -> int:
         ],
     }
 
-    write_json(SUMMARY_PATH, summary)
-    write_errors(ERRORS_PATH, issues)
-    write_manifest([SUMMARY_PATH, ERRORS_PATH])
+    write_json(summary_path, summary)
+    write_errors(errors_path, issues)
+    write_manifest([summary_path, errors_path], manifest_path)
 
     print(f"run_id={RUN_ID}")
     print(f"input_path={repo_rel(input_path)}")
