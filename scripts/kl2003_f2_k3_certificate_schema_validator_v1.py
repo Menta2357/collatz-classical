@@ -14,11 +14,13 @@ import re
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from math import gcd
 from pathlib import Path
 from typing import Any
 
 
 RUN_ID = "KL2003_F2_K3_CERTIFICATE_SCHEMA_VALIDATION_v1"
+EXPECTED_SCHEMA_VERSION = "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = (
     REPO_ROOT
@@ -31,7 +33,7 @@ SUMMARY_PATH = OUT_DIR / "schema_validation_summary.json"
 ERRORS_PATH = OUT_DIR / "schema_validation_errors.csv"
 MANIFEST_PATH = OUT_DIR / "manifest_sha256.csv"
 
-RATIONAL_RE = re.compile(r"^-?(0|[1-9][0-9]*)(/(-?(0|[1-9][0-9]*)))?$")
+RATIONAL_RE = re.compile(r"^-?(0|[1-9][0-9]*)(/([1-9][0-9]*))?$")
 
 TOP_LEVEL_REQUIRED = [
     "metadata",
@@ -45,6 +47,11 @@ TOP_LEVEL_REQUIRED = [
 ]
 
 METADATA_FLAGS_REQUIRED = [
+    "schema_version",
+    "k",
+    "tracked_class_count",
+    "pre_reduction_class_count",
+    "artifact_links",
     "fixture_only",
     "mathematical_content",
     "not_for_lean_import",
@@ -136,13 +143,22 @@ def count_floats(obj: Any) -> int:
 
 
 def rational_string_ok(value: str) -> bool:
-    match = RATIONAL_RE.fullmatch(value)
-    if not match:
+    if not RATIONAL_RE.fullmatch(value):
+        return False
+    if value == "-0":
         return False
     if "/" not in value:
         return True
-    denominator = value.split("/", 1)[1]
-    return int(denominator) != 0
+    numerator_text, denominator_text = value.split("/", 1)
+    numerator = int(numerator_text)
+    denominator = int(denominator_text)
+    if denominator <= 0:
+        return False
+    if numerator == 0:
+        return False
+    if denominator == 1:
+        return False
+    return gcd(abs(numerator), denominator) == 1
 
 
 def check_required_fields(
@@ -157,6 +173,95 @@ def check_required_fields(
     for field in fields:
         if field not in obj:
             add_issue(issues, "error", f"{prefix}.{field}", "MISSING_REQUIRED_FIELD", "Required field is missing.")
+
+
+def parse_canonical_nonnegative_int(value: Any) -> int | None:
+    if not isinstance(value, str):
+        return None
+    if not rational_string_ok(value):
+        return None
+    if "/" in value or value.startswith("-"):
+        return None
+    return int(value)
+
+
+def check_metadata_version_and_counts(metadata: Any, issues: list[ValidationIssue]) -> None:
+    if not isinstance(metadata, dict):
+        return
+    schema_version = metadata.get("schema_version")
+    if schema_version != EXPECTED_SCHEMA_VERSION:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.schema_version",
+            "SCHEMA_VERSION_UNSUPPORTED",
+            f"Expected `{EXPECTED_SCHEMA_VERSION}`.",
+        )
+
+    k = parse_canonical_nonnegative_int(metadata.get("k"))
+    tracked = parse_canonical_nonnegative_int(metadata.get("tracked_class_count"))
+    pre_reduction = parse_canonical_nonnegative_int(metadata.get("pre_reduction_class_count"))
+    if k is None or k < 1:
+        add_issue(issues, "error", "$.metadata.k", "K_INVALID", "Expected positive canonical integer string.")
+        return
+    if tracked is None:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.tracked_class_count",
+            "TRACKED_CLASS_COUNT_INVALID",
+            "Expected canonical integer string.",
+        )
+    elif tracked != 3 ** (k - 1):
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.tracked_class_count",
+            "TRACKED_CLASS_COUNT_MISMATCH",
+            f"Expected 3^(k-1) = {3 ** (k - 1)} for k={k}.",
+        )
+    if pre_reduction is None:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.pre_reduction_class_count",
+            "PRE_REDUCTION_CLASS_COUNT_INVALID",
+            "Expected canonical integer string.",
+        )
+    elif pre_reduction != 3**k:
+        add_issue(
+            issues,
+            "error",
+            "$.metadata.pre_reduction_class_count",
+            "PRE_REDUCTION_CLASS_COUNT_MISMATCH",
+            f"Expected 3^k = {3**k} for k={k}.",
+        )
+
+
+def check_artifact_links(metadata: Any, issues: list[ValidationIssue]) -> None:
+    if not isinstance(metadata, dict):
+        return
+    links = metadata.get("artifact_links")
+    if not isinstance(links, dict):
+        add_issue(issues, "error", "$.metadata.artifact_links", "ARTIFACT_LINKS_INVALID", "Expected object.")
+        return
+    required = [
+        "json_artifact",
+        "lean_data_artifact",
+        "json_to_lean_generator",
+        "json_sha256",
+        "lean_data_sha256",
+        "json_to_lean_generator_sha256",
+    ]
+    for key in required:
+        if key not in links:
+            add_issue(
+                issues,
+                "error",
+                f"$.metadata.artifact_links.{key}",
+                "MISSING_ARTIFACT_LINK_FIELD",
+                "Required artifact-link field is missing.",
+            )
 
 
 def check_rational_strings(obj: Any, issues: list[ValidationIssue], path: str = "$") -> None:
@@ -211,6 +316,26 @@ def child_signature(child: dict[str, Any]) -> tuple[Any, ...]:
     return tuple((key, json.dumps(child.get(key), sort_keys=True)) for key in CHILD_REQUIRED)
 
 
+def artifact_hash_fields(data: Any) -> dict[str, Any]:
+    if not isinstance(data, dict):
+        return {}
+    metadata = data.get("metadata")
+    if not isinstance(metadata, dict):
+        return {}
+    links = metadata.get("artifact_links")
+    if not isinstance(links, dict):
+        return {}
+    keys = [
+        "json_artifact",
+        "lean_data_artifact",
+        "json_to_lean_generator",
+        "json_sha256",
+        "lean_data_sha256",
+        "json_to_lean_generator_sha256",
+    ]
+    return {key: links.get(key) for key in keys if key in links}
+
+
 def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], dict[str, int | bool]]:
     issues: list[ValidationIssue] = []
     if not isinstance(data, dict):
@@ -227,6 +352,8 @@ def validate_data(data: Any, input_path: Path) -> tuple[list[ValidationIssue], d
 
     metadata = data.get("metadata", {})
     check_required_fields(metadata, METADATA_FLAGS_REQUIRED, "$.metadata", issues)
+    check_metadata_version_and_counts(metadata, issues)
+    check_artifact_links(metadata, issues)
 
     is_fixture = input_path.name.endswith(".fixture.json")
     if is_fixture and isinstance(metadata, dict):
@@ -365,7 +492,7 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 def write_errors(path: Path, issues: list[ValidationIssue]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["severity", "path", "code", "message"])
+        writer = csv.DictWriter(handle, fieldnames=["severity", "path", "code", "message"], lineterminator="\n")
         writer.writeheader()
         for issue in issues:
             writer.writerow(
@@ -380,7 +507,7 @@ def write_errors(path: Path, issues: list[ValidationIssue]) -> None:
 
 def write_manifest(paths: list[Path]) -> None:
     with MANIFEST_PATH.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["path", "sha256"])
+        writer = csv.DictWriter(handle, fieldnames=["path", "sha256"], lineterminator="\n")
         writer.writeheader()
         for path in paths:
             writer.writerow({"path": repo_rel(path), "sha256": sha256(path)})
@@ -417,6 +544,20 @@ def main(argv: list[str]) -> int:
 
     error_count = sum(1 for issue in issues if issue.severity == "error")
     warning_count = sum(1 for issue in issues if issue.severity == "warning")
+    warning_records = [
+        {
+            "code": issue.code,
+            "path": issue.path,
+            "message": issue.message,
+            "disposition": (
+                "ACCEPTED_NAMED_WARNING"
+                if issue.code == "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED"
+                else "REVIEW_REQUIRED"
+            ),
+        }
+        for issue in issues
+        if issue.severity == "warning"
+    ]
     schema_ok = parse_ok and error_count == 0
     summary = {
         "run_id": RUN_ID,
@@ -424,14 +565,24 @@ def main(argv: list[str]) -> int:
         "input_path": repo_rel(input_path),
         "input_sha256": sha256(input_path) if input_path.exists() and input_path.is_file() else None,
         "json_parseable": parse_ok,
+        "expected_schema_version": EXPECTED_SCHEMA_VERSION,
         "schema_ok": schema_ok,
         "is_fixture": stats["is_fixture"],
         "float_count": stats["float_count"],
         "error_count": error_count,
         "warning_count": warning_count,
+        "warning_codes": sorted({record["code"] for record in warning_records}),
+        "warnings": warning_records,
+        "known_warning_policy": {
+            "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED": (
+                "Accepted for schema validation v1: the validator reports sibling manifest presence "
+                "but does not yet verify external artifact manifests."
+            )
+        },
         "row_count": stats["row_count"],
         "child_count": stats["child_count"],
         "slack_count": stats["slack_count"],
+        "reported_artifact_hash_fields": artifact_hash_fields(data) if parse_ok else {},
         "verdict": "FORMAT_CHECK_ONLY" if schema_ok else "FORMAT_CHECK_FAILED",
         "guardrails": [
             "NO_MATHEMATICAL_VERIFICATION",
@@ -443,7 +594,12 @@ def main(argv: list[str]) -> int:
         ],
         "classifications": [
             "K3_CERTIFICATE_SCHEMA_VALIDATOR_CREATED",
+            "SCHEMA_VALIDATOR_UPDATED",
+            "K_PARAMETRIC_CERTIFICATE_SCHEMA_DEFINED",
+            "JSON_LEAN_TWIN_ARTIFACT_POLICY_DEFINED",
+            "CANONICAL_RATIONAL_FORMAT_DEFINED",
             "FIXTURE_SCHEMA_VALIDATED" if schema_ok and stats["is_fixture"] else "SCHEMA_VALIDATION_ATTEMPTED",
+            "FORMAT_WARNING_NAMED_OR_RESOLVED",
             "FORMAT_CHECK_ONLY",
             "NO_MATHEMATICAL_VERIFICATION",
             "NO_HIGH_K_CLAIM",

@@ -37,8 +37,18 @@
   ],
   "mathematical_content": false,
   "metadata": {
-    "created_at": "2026-07-17T22:25:20.757566+00:00",
+    "artifact_links": {
+      "json_artifact": "kl2003_k3_certificate.fixture.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "scripts/kl2003_f2_k3_certificate_fixture_v1.py",
+      "json_to_lean_generator_sha256": "RECORDED_IN_MANIFEST",
+      "lean_data_artifact": "KL2003K3CertificateDataFixture.lean",
+      "lean_data_sha256": "RECORDED_IN_MANIFEST",
+      "lean_import_policy": "Lean consumes generated .lean data, not JSON."
+    },
+    "created_at": "2026-07-17T22:45:21.110430+00:00",
     "fixture_only": true,
+    "format_scope": "high_k_parametric",
     "generator_version": "kl2003_f2_k3_certificate_fixture_v1.py",
     "guardrails": [
       "FIXTURE_ONLY",
@@ -54,13 +64,13 @@
     "not_for_lean_import": true,
     "pre_reduction_class_count": "27",
     "run_id": "KL2003_F2_K3_CERTIFICATE_FIXTURE_v1",
-    "schema_version": "KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_v1",
-    "source_commit": "fba6bb714c51be06c479fe5e9818dc23ae46cbd7",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "source_commit": "05d0993d831e5b800794a3e82a64bf255dd5bbea",
     "source_inputs": [
       {
         "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
         "role": "format_scoping",
-        "sha256": "2de166fcbf0a6e9a8cf7e939ae20cf05de128f9a2db792bcd0f644806b9c678d"
+        "sha256": "0f8dc838f819ff72b741dc23c6bc6f56ab8eab255d6d45fba3eb680859ce257f"
       }
     ],
     "tracked_class_convention": "fixture_dummy_single_class",

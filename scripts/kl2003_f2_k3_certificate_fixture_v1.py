@@ -15,17 +15,19 @@ import json
 import re
 import subprocess
 from datetime import datetime, timezone
+from math import gcd
 from pathlib import Path
 from typing import Any
 
 
 RUN_ID = "KL2003_F2_K3_CERTIFICATE_FIXTURE_v1"
-SCHEMA_VERSION = "KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_v1"
+SCHEMA_VERSION = "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2"
 GENERATOR_VERSION = "kl2003_f2_k3_certificate_fixture_v1.py"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCOPING = REPO_ROOT / "docs" / "KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md"
 OUT_DIR = REPO_ROOT / "outputs" / RUN_ID
 FIXTURE_PATH = OUT_DIR / "kl2003_k3_certificate.fixture.json"
+LEAN_FIXTURE_PATH = OUT_DIR / "KL2003K3CertificateDataFixture.lean"
 SUMMARY_PATH = OUT_DIR / "schema_check_summary.json"
 MANIFEST_PATH = OUT_DIR / "manifest_sha256.csv"
 
@@ -49,6 +51,7 @@ METADATA_REQUIRED = [
     "tracked_class_convention",
     "pre_reduction_class_count",
     "tracked_class_count",
+    "artifact_links",
     "generator_version",
     "created_at",
     "source_commit",
@@ -164,6 +167,16 @@ def build_fixture(created_at: str, commit: str) -> dict[str, Any]:
             "tracked_class_convention": "fixture_dummy_single_class",
             "pre_reduction_class_count": "27",
             "tracked_class_count": "9",
+            "format_scope": "high_k_parametric",
+            "artifact_links": {
+                "json_artifact": "kl2003_k3_certificate.fixture.json",
+                "lean_data_artifact": "KL2003K3CertificateDataFixture.lean",
+                "json_to_lean_generator": "scripts/kl2003_f2_k3_certificate_fixture_v1.py",
+                "json_sha256": "RECORDED_IN_MANIFEST",
+                "lean_data_sha256": "RECORDED_IN_MANIFEST",
+                "json_to_lean_generator_sha256": "RECORDED_IN_MANIFEST",
+                "lean_import_policy": "Lean consumes generated .lean data, not JSON.",
+            },
             "generator_version": GENERATOR_VERSION,
             "created_at": created_at,
             "source_commit": commit,
@@ -287,6 +300,25 @@ def count_floats(obj: Any) -> int:
     return 0
 
 
+def canonical_rational_string_ok(value: str) -> bool:
+    if not RATIONAL_RE.fullmatch(value):
+        return False
+    if value == "-0":
+        return False
+    if "/" not in value:
+        return True
+    numerator_text, denominator_text = value.split("/", 1)
+    numerator = int(numerator_text)
+    denominator = int(denominator_text)
+    if denominator <= 0:
+        return False
+    if numerator == 0:
+        return False
+    if denominator == 1:
+        return False
+    return gcd(abs(numerator), denominator) == 1
+
+
 def rational_string_errors(obj: Any, path: str = "$") -> list[str]:
     errors: list[str] = []
     rational_key_tokens = {
@@ -311,7 +343,7 @@ def rational_string_errors(obj: Any, path: str = "$") -> list[str]:
         for key, value in obj.items():
             child_path = f"{path}.{key}"
             if key in rational_key_tokens:
-                if not isinstance(value, str) or not RATIONAL_RE.fullmatch(value):
+                if not isinstance(value, str) or not canonical_rational_string_ok(value):
                     errors.append(child_path)
             errors.extend(rational_string_errors(value, child_path))
     elif isinstance(obj, list):
@@ -393,6 +425,36 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def write_lean_fixture(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "\n".join(
+            [
+                "/-",
+                "KL2003 k=3 certificate data fixture.",
+                "",
+                "fixture only; not imported; no mathematical content.",
+                "Generated deterministically from the JSON fixture shape.",
+                "-/",
+                "",
+                "namespace KL2003K3CertificateDataFixture",
+                "",
+                "def fixtureOnly : Bool := true",
+                "def mathematicalContent : Bool := false",
+                "def notForLeanImport : Bool := true",
+                f'def schemaVersion : String := "{SCHEMA_VERSION}"',
+                "def k : Nat := 3",
+                "def trackedClassCount : Nat := 9",
+                "def preReductionClassCount : Nat := 27",
+                "",
+                "end KL2003K3CertificateDataFixture",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 def write_manifest(rows: list[dict[str, str]]) -> None:
     with MANIFEST_PATH.open("w", newline="", encoding="utf-8") as handle:
         fieldnames = [
@@ -403,9 +465,12 @@ def write_manifest(rows: list[dict[str, str]]) -> None:
             "schema_version",
             "created_at",
             "source_commit",
+            "json_sha256",
+            "lean_data_sha256",
+            "json_to_lean_generator_sha256",
             "notes",
         ]
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -421,9 +486,15 @@ def main() -> None:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     write_json(FIXTURE_PATH, fixture)
+    write_lean_fixture(LEAN_FIXTURE_PATH)
+
+    json_sha = sha256(FIXTURE_PATH)
+    lean_sha = sha256(LEAN_FIXTURE_PATH)
+    generator_sha = sha256(Path(__file__).resolve())
 
     manifest_targets = [
         (FIXTURE_PATH, "fixture_certificate", "Syntax-only fixture; not a mathematical certificate."),
+        (LEAN_FIXTURE_PATH, "fixture_lean_data", "Fixture-only generated Lean data file; not imported."),
         (SUMMARY_PATH, "summary", "Schema check summary for the fixture."),
     ]
 
@@ -432,6 +503,10 @@ def main() -> None:
         "created_at": created_at,
         "schema_version": SCHEMA_VERSION,
         "fixture_path": repo_rel(FIXTURE_PATH),
+        "lean_fixture_path": repo_rel(LEAN_FIXTURE_PATH),
+        "json_sha256": json_sha,
+        "lean_data_sha256": lean_sha,
+        "json_to_lean_generator_sha256": generator_sha,
         "fixture_only": True,
         "mathematical_content": False,
         "not_for_lean_import": True,
@@ -452,6 +527,9 @@ def main() -> None:
         ],
         "classifications": [
             "K3_CERTIFICATE_FIXTURE_CREATED",
+            "K3_FIXTURE_UPDATED_TO_SCHEMA_V2",
+            "JSON_LEAN_TWIN_ARTIFACT_POLICY_DEFINED",
+            "CANONICAL_RATIONAL_FORMAT_DEFINED",
             "FORMAT_ONLY_FIXTURE",
             "NO_MATHEMATICAL_CONTENT",
             "NOT_FOR_LEAN_IMPORT",
@@ -471,6 +549,9 @@ def main() -> None:
             "schema_version": SCHEMA_VERSION,
             "created_at": created_at,
             "source_commit": commit,
+            "json_sha256": json_sha,
+            "lean_data_sha256": lean_sha,
+            "json_to_lean_generator_sha256": generator_sha,
             "notes": notes,
         }
         for path, kind, notes in manifest_targets
@@ -482,6 +563,7 @@ def main() -> None:
 
     print(f"run_id={RUN_ID}")
     print(f"fixture={repo_rel(FIXTURE_PATH)}")
+    print(f"lean_fixture={repo_rel(LEAN_FIXTURE_PATH)}")
     print(f"summary={repo_rel(SUMMARY_PATH)}")
     print(f"manifest={repo_rel(MANIFEST_PATH)}")
     print("verdict=FIXTURE_FORMAT_ONLY")

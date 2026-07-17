@@ -1,6 +1,9 @@
 {
   "classifications": [
     "K3_CERTIFICATE_FIXTURE_CREATED",
+    "K3_FIXTURE_UPDATED_TO_SCHEMA_V2",
+    "JSON_LEAN_TWIN_ARTIFACT_POLICY_DEFINED",
+    "CANONICAL_RATIONAL_FORMAT_DEFINED",
     "FORMAT_ONLY_FIXTURE",
     "NO_MATHEMATICAL_CONTENT",
     "NOT_FOR_LEAN_IMPORT",
@@ -8,7 +11,7 @@
     "NO_HIGH_K_CLAIM",
     "NO_GLOBAL_COLLATZ_CLAIM"
   ],
-  "created_at": "2026-07-17T22:25:20.757566+00:00",
+  "created_at": "2026-07-17T22:45:21.110430+00:00",
   "fixture_only": true,
   "fixture_path": "outputs/KL2003_F2_K3_CERTIFICATE_FIXTURE_v1/kl2003_k3_certificate.fixture.json",
   "flag_errors": [],
@@ -21,13 +24,17 @@
     "NO_HIGH_K_CLAIM",
     "NO_GLOBAL_COLLATZ_CLAIM"
   ],
-  "manifest_file_count": 2,
+  "json_sha256": "459c971c54437ad7ed64589e76334175bdc2346713e13520dd00207178edd4d4",
+  "json_to_lean_generator_sha256": "75391b9522b9170754edee3c1ea17887f2ffecafe41b7af3421260ddf4986754",
+  "lean_data_sha256": "169fe5f2ab089b2f7261435c92162fe9bf9baf6efc2e4609ff47ef9f4c5bdd93",
+  "lean_fixture_path": "outputs/KL2003_F2_K3_CERTIFICATE_FIXTURE_v1/KL2003K3CertificateDataFixture.lean",
+  "manifest_file_count": 3,
   "mathematical_content": false,
   "missing_required_fields": [],
   "not_for_lean_import": true,
   "rational_string_errors": [],
   "run_id": "KL2003_F2_K3_CERTIFICATE_FIXTURE_v1",
   "schema_ok": true,
-  "schema_version": "KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_v1",
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
   "verdict": "FIXTURE_FORMAT_ONLY"
 }
