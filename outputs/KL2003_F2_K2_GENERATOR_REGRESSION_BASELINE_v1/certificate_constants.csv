@@ -1,0 +1,10 @@
+constant_id,lean_name,value,kind,source,must_reproduce_exactly,notes
+lambda,lambdaR,27/20,lambda,KL2003K2AlphaBounds.lean,yes,k=2 surrogate lambda
+gammaK2,gammaK2,logb 2 (27/20),exponent,KL2003M1Surrogate.lean,yes,also proves gammaK2 > 3/7
+DeltaV2,DeltaV2,(20/27)^14/2,base_constant,KL2003M0CRetardedInduction.lean,yes,equivalent to 1/(2*lambdaR^14)
+c22,c22R,73/40,row_coefficient,KL2003M0CRetardedInduction.lean,yes,class 2 coefficient
+c25,c25R,1001/1000,row_coefficient,KL2003M0CRetardedInduction.lean,yes,class 5 coefficient; source-faithful M1V3 arm
+c28,c28R,69/40,row_coefficient,KL2003M0CRetardedInduction.lean,yes,class 8 coefficient
+L2NT_D1_slack,L2NT_D1_slack,29/9720,slack,KL2003K2CertificateData.lean,yes,row22/D1 slack after B_lo endpoint unification
+L2NT_D2_slack,L2NT_D2_slack,271/729000,slack,KL2003K2CertificateData.lean,yes,row25/D2 slack
+L2NT_D3_slack,L2NT_D3_slack,2077/145800,slack,KL2003K2CertificateData.lean,yes,row28/D3 slack

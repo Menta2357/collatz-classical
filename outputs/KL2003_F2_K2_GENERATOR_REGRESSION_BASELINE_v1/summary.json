@@ -1,0 +1,45 @@
+{
+  "certificate_constant_count": 9,
+  "expected_generator_mode": "k2_regression",
+  "expected_row_record_count": 4,
+  "generated_at": "2026-07-17T23:19:08.080955+00:00",
+  "global_collatz_claim": false,
+  "guardrails": [
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_NEW_LEAN_OPENED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "high_k_claim": false,
+  "lean_opened": false,
+  "lp_solved": false,
+  "manual_baseline_asset_count": 18,
+  "manual_baseline_missing_asset_count": 0,
+  "manual_baseline_missing_assets": [],
+  "must_reproduce": [
+    "rows_v3",
+    "meta_errata_phi25",
+    "deletion_behavior",
+    "certificate_constants",
+    "json_lean_twin_artifacts_v2"
+  ],
+  "no_k3_generation": true,
+  "output_files": [
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/summary.json",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/theorem_baseline.csv",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/certificate_constants.csv",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/manual_baseline_inventory.csv",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/generator_regression_requirements.csv",
+    "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/manifest_sha256.csv"
+  ],
+  "regression_requirement_count": 6,
+  "run_id": "KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1",
+  "schema_version_expected": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+  "source_commit": "244694b78d297b9064e22b27c48e6aea46eb97e8",
+  "source_faithful_contract": "V3",
+  "theorem_count": 6,
+  "v2_status": "ABSTRACT_ONLY_NOT_SOURCE_FAITHFUL",
+  "verdict": "K2_REGRESSION_BASELINE_ONLY"
+}

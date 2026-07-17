@@ -1,0 +1,5 @@
+row_id,source_class,tracked_residue_mod9,row_family,expected_shape,required_feature,v3_requirement,generator_blocker_if_missing,baseline_refs
+row22,22,2,D1,two-branch with retarded branch plus advanced branch using parity lift,row22 parity lift,unchanged from source-faithful k2 seam,yes,concretePhi_row22_seam; d1_core_instantiation
+row25,25,5,D2,single-branch retarded row; no advanced contribution,row25 single-branch,advanced branch absent; D2 is immune to advanced rounding,yes,concretePhi_row25_seam; d2_single_branch_core_instantiation
+row28,28,8,D3 / EL,two-branch row with nested EL block and row28 c-prime split,row28 c' split / post-deletion behavior,"M1V3 uses phi25, not phi22",yes,concretePhi_row28_seam_v3; row28_pointwise_seam_v3_mod8; I2ELAbstractRowsV3
+M1V3,row28 nested block,nested,EL auxiliary,"min(phi28 + M2V3, phi25)",meta-errata phi25 reinstated,second arm is phi25; phi22 form is historical V2 only,yes,M1V3; docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md

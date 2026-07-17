@@ -1,0 +1,7 @@
+requirement_id,required,pass_condition,fail_classification,notes
+reproduce_rows_v3,yes,Generated k=2 rows match row22/row25/row28 V3 mathematical shapes.,K2_REGRESSION_FAIL,V2 rows are not acceptable as source-faithful KL2003 baseline.
+reproduce_meta_errata_phi25,yes,"M1V3 second arm is phi25, not phi22.",K2_REGRESSION_FAIL,This is the explicit meta-errata baseline.
+reproduce_deletion_behavior,yes,Generated deletion marks and post-deletion behavior match Figure A1/source-custody baseline.,K2_REGRESSION_FAIL,Format-only id differences are allowed; mathematical deletion differences are blockers.
+reproduce_certificate_constants,yes,"lambda, coefficients, endpoint-derived rows, and slacks match exact rational baseline.",K2_REGRESSION_FAIL,Includes B_lo endpoint unification and final slacks.
+emit_json_lean_twin_artifacts_v2,yes,Generated k=2 artifacts use schema v2 JSON plus deterministic Lean data twins with cross-hashes.,K2_REGRESSION_FAIL,"Lean consumes generated Lean data, not JSON."
+any_math_diff_is_generator_blocker,yes,"Every mathematical diff is classified as generator blocker, not a request to change proved k=2 theorems.",K2_REGRESSION_FAIL,Manual k=2 is the source of truth for regression.
