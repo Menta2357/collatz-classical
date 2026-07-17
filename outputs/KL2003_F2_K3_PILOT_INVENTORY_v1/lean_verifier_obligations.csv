@@ -1,0 +1,8 @@
+obligation_id,category,trusted_checker_role,expected_reuse,status
+row_well_formed,schema,"Check every generated row id, term list, coefficient reference, and class reference is valid.",data verifier style from k=2 certificate modules,PENDING_FUTURE_LEAN
+residue_compatibility,arithmetic,Check declared residues/classes against exact Nat arithmetic.,M0B residue proof patterns; generated norm_num facts if needed,PENDING_FUTURE_LEAN
+inverse_word_forward_route,combinatorial,Check each inverse word forward-maps to its declared parent/root.,M0A T function and reachability API,PENDING_FUTURE_LEAN
+deletion_rule_soundness,source normalization,Check kept/deleted marks obey the declared deletion rule and boundary correction.,k=2 deletion ledger pattern only; rule is high-k data,PENDING_FUTURE_LEAN
+disjointness_or_fiber_partition,semantic/combinatorial,Check summed populations are disjoint or partitioned by first-entry fibers.,entry-predecessor fiber disjointness,PENDING_FUTURE_LEAN
+rational_slack_positive,exact arithmetic,Check every emitted rational row slack is strictly positive.,k=2 rational verifier style; generated exact rational facts,PENDING_FUTURE_LEAN
+abstract_row_discharge,row theorem,Discharge each abstract row from checked combinatorial and rational data.,M0C row-contract shape if the pilot reaches abstract rows,PENDING_FUTURE_LEAN

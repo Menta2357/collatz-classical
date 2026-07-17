@@ -1,0 +1,66 @@
+{
+  "artifact_schema_status": "DRAFT_ONLY",
+  "classifications": [
+    "F2_K3_PILOT_INVENTORY_CREATED",
+    "GENERATOR_VERIFIER_SCHEMA_DRAFTED",
+    "LEAN_VERIFIER_OBLIGATIONS_LISTED",
+    "NO_K3_ROWS_GENERATED",
+    "NO_HIGH_K_LEAN_OPENED",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "generated_at_utc": "2026-07-17T22:25:16.305982+00:00",
+  "generated_math_rows": false,
+  "go_no_go_declared": false,
+  "guardrails": [
+    "NO_K3_ROWS_GENERATED",
+    "NO_LP_SOLVED",
+    "NO_HIGH_K_LEAN_OPENED",
+    "NO_GO_NO_GO_DECLARED",
+    "NO_K9_THEOREM_CLAIM",
+    "NO_K11_084_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "high_k_lean_files_detected": [],
+  "inputs": {
+    "previous_f2_status_counts": {
+      "AMBIGUOUS": 4,
+      "FOUND_DERIVED": 2,
+      "FOUND_SOURCE": 4,
+      "MISSING": 0,
+      "NOT_NEEDED": 0
+    },
+    "previous_f2_summary": "outputs/KL2003_F2_K9_FEASIBILITY_GATE_v1/summary.json",
+    "previous_f2_summary_sha256": "2abd19aad9006949028cd80bf81ca0c009aa50baceb33f7b36e7718e354947c6",
+    "scoping_path": "docs/KL2003_F2_K3_GENERATOR_VERIFIER_PILOT_SCOPING_v1.md",
+    "scoping_sha256": "056bbad5dde65d4d3bf46360724cc3bf2bc8845fdccb88b1c7c9a2f57fcb73be"
+  },
+  "lean_opened": false,
+  "lp_solved": false,
+  "output_files": [
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/summary.json",
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/architecture_checklist.csv",
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/k3_artifact_schema.json",
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/lean_verifier_obligations.csv",
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/reuse_map.csv",
+    "outputs/KL2003_F2_K3_PILOT_INVENTORY_v1/manifest_sha256.csv"
+  ],
+  "repo_root": "/Users/MoiTam/Documents/Codex/collatz-classical",
+  "run_id": "KL2003_F2_K3_PILOT_INVENTORY_v1",
+  "scale_factors": {
+    "k11_from_k3": 6561,
+    "k3_from_k2": 3,
+    "k9_from_k3": 729
+  },
+  "tracked_classes": {
+    "formula": "tracked_classes(k) = 3^(k - 1)",
+    "k11": 59049,
+    "k2": 3,
+    "k3": 9,
+    "k3_pre_reduction": 27,
+    "k9": 6561,
+    "scale_factor_k11_from_k3": 6561,
+    "scale_factor_k3_from_k2": 3,
+    "scale_factor_k9_from_k3": 729
+  },
+  "verdict_placeholder": "K3_PILOT_INVENTORY_ONLY"
+}

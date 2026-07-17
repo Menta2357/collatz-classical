@@ -1,0 +1,7 @@
+item_id,status,trust_layer,expected_artifact,notes
+generator_untrusted,SCOPED,generator,candidate JSON/CSV only,"Python may search or emit candidates, but Lean/data verifiers must recheck all mathematical claims."
+data_artifacts_versioned,SCOPED,data,versioned JSON/CSV with manifest_sha256.csv,"Generator output must be stable, hashed, and reviewable before any Lean checker consumes it."
+lean_verifier_trusted,SCOPED,Lean checker,future data verifier module and axiom audit,"Lean verifier checks well-formedness, residues, inverse words, deletion/cobertura, rationals, and slacks."
+empirical_hooks_nontrusted,SCOPED,diagnostic scripts,future finite-grid/member-wise hook outputs,Empirical hooks are useful diagnostics but not part of the logical proof base.
+no_manual_mass_transcription,SCOPED,process guardrail,generator schema plus manifests,A k=3 pilot that only succeeds by hand transcription is not evidence for k=9/k=11.
+no_high_k_lean_opened,PASS,repository check,no K3/K9/K11 Lean modules in CollatzClassical/KL2003,Detected files: none

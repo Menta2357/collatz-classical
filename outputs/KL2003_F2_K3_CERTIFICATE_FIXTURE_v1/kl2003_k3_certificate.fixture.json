@@ -1,0 +1,177 @@
+{
+  "deletion_marks": [
+    {
+      "boundary_correction": "none",
+      "child_id": "dummy_child_0",
+      "deleted": false,
+      "deletion_policy": "fixture_no_deletion_policy",
+      "reason": "fixture_only_no_math",
+      "row_id": "dummy_row_0",
+      "source_ref": "fixture_no_source_ref"
+    }
+  ],
+  "fixture_only": true,
+  "inverse_words": [
+    {
+      "boundary_correction": "none",
+      "child_id": "dummy_child_0",
+      "coefficient_ref": "dummy_coeff_0",
+      "deleted": false,
+      "depth": "0",
+      "fiber_parent": "dummy_fiber_parent",
+      "forward_route": [
+        "fixture_route_step"
+      ],
+      "inverse_word": [
+        "e"
+      ],
+      "literal_id": "dummy_literal_0",
+      "reason": "fixture_only_no_math",
+      "residue_side_conditions": [],
+      "root_formula": "fixture_root",
+      "row_id": "dummy_row_0",
+      "shift": "0",
+      "target_class": "dummy_class_0",
+      "window_policy": "fixture_window_policy"
+    }
+  ],
+  "mathematical_content": false,
+  "metadata": {
+    "created_at": "2026-07-17T22:25:20.757566+00:00",
+    "fixture_only": true,
+    "generator_version": "kl2003_f2_k3_certificate_fixture_v1.py",
+    "guardrails": [
+      "FIXTURE_ONLY",
+      "NO_MATHEMATICAL_CONTENT",
+      "NOT_FOR_LEAN_IMPORT",
+      "NO_K3_ROWS_GENERATED",
+      "NO_LP_SOLVED",
+      "NO_HIGH_K_CLAIM",
+      "NO_GLOBAL_COLLATZ_CLAIM"
+    ],
+    "k": "3",
+    "mathematical_content": false,
+    "not_for_lean_import": true,
+    "pre_reduction_class_count": "27",
+    "run_id": "KL2003_F2_K3_CERTIFICATE_FIXTURE_v1",
+    "schema_version": "KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_v1",
+    "source_commit": "fba6bb714c51be06c479fe5e9818dc23ae46cbd7",
+    "source_inputs": [
+      {
+        "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
+        "role": "format_scoping",
+        "sha256": "2de166fcbf0a6e9a8cf7e939ae20cf05de128f9a2db792bcd0f644806b9c678d"
+      }
+    ],
+    "tracked_class_convention": "fixture_dummy_single_class",
+    "tracked_class_count": "9"
+  },
+  "not_for_lean_import": true,
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "dummy_coeff_0",
+        "hi": "1",
+        "lo": "1"
+      }
+    ],
+    "float_diagnostics": [],
+    "lambda_interval": {
+      "hi": "1",
+      "lo": "1"
+    },
+    "row_lhs": {
+      "dummy_row_0": "0"
+    },
+    "row_rhs": {
+      "dummy_row_0": "1"
+    },
+    "solver_manifest": {
+      "lp_solved": false,
+      "solver": "none_fixture_only"
+    },
+    "variables": {
+      "dummy_var": "1/2"
+    }
+  },
+  "rows": [
+    {
+      "children": [
+        {
+          "boundary_correction": "none",
+          "child_id": "dummy_child_0",
+          "coefficient_ref": "dummy_coeff_0",
+          "deleted": false,
+          "depth": "0",
+          "fiber_parent": "dummy_fiber_parent",
+          "forward_route": [
+            "fixture_route_step"
+          ],
+          "inverse_word": [
+            "e"
+          ],
+          "literal_id": "dummy_literal_0",
+          "reason": "fixture_only_no_math",
+          "residue_side_conditions": [],
+          "root_formula": "fixture_root",
+          "row_id": "dummy_row_0",
+          "shift": "0",
+          "target_class": "dummy_class_0",
+          "window_policy": "fixture_window_policy"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "dummy_coeff_0",
+          "target": "dummy_child_0",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "fixture_no_deletion_policy",
+      "normalization_ref": "fixture_no_normalization_ref",
+      "row_id": "dummy_row_0",
+      "row_kind": "fixture",
+      "slack_id": "dummy_slack_0",
+      "source_class": "dummy_class_0",
+      "source_ref": "fixture_no_source_ref",
+      "target_bound": "1"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "1",
+      "lhs": "0",
+      "notes": "Dummy positive slack for schema validation only.",
+      "numerator_bits": "1",
+      "rhs": "1",
+      "row_id": "dummy_row_0",
+      "slack": "1",
+      "slack_id": "dummy_slack_0",
+      "strictly_positive": true
+    }
+  ],
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "dummy_class_0",
+      "modulus": "27",
+      "notes": "Dummy class for schema validation only.",
+      "pre_reduction_residues": [
+        "1"
+      ],
+      "representative": "1",
+      "source_rule": "fixture_only_no_source_rule"
+    }
+  ],
+  "verification_targets": [
+    {
+      "expected_checker": "future_lean_or_schema_checker",
+      "input_sections": [
+        "rows"
+      ],
+      "notes": "Fixture target only.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "row_well_formed"
+    }
+  ]
+}

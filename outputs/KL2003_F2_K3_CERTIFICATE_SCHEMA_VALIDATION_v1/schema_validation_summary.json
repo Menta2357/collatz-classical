@@ -1,0 +1,32 @@
+{
+  "child_count": 1,
+  "classifications": [
+    "K3_CERTIFICATE_SCHEMA_VALIDATOR_CREATED",
+    "FIXTURE_SCHEMA_VALIDATED",
+    "FORMAT_CHECK_ONLY",
+    "NO_MATHEMATICAL_VERIFICATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-17T22:25:27.124530+00:00",
+  "error_count": 0,
+  "float_count": 0,
+  "guardrails": [
+    "NO_MATHEMATICAL_VERIFICATION",
+    "NO_K3_ROWS_GENERATED",
+    "NO_LP_SOLVED",
+    "NO_LEAN_OPENED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "input_path": "outputs/KL2003_F2_K3_CERTIFICATE_FIXTURE_v1/kl2003_k3_certificate.fixture.json",
+  "input_sha256": "6f907422bf4452c9106c0b39e938944f59884d2433cbaafebf2e22018970bcbc",
+  "is_fixture": true,
+  "json_parseable": true,
+  "row_count": 1,
+  "run_id": "KL2003_F2_K3_CERTIFICATE_SCHEMA_VALIDATION_v1",
+  "schema_ok": true,
+  "slack_count": 1,
+  "verdict": "FORMAT_CHECK_ONLY",
+  "warning_count": 1
+}

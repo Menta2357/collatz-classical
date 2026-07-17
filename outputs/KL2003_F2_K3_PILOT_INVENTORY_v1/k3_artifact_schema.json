@@ -1,0 +1,97 @@
+{
+  "classes": {
+    "file": "classes.json",
+    "purpose": "Declare tracked and pre-reduction class conventions.",
+    "required_fields": [
+      "k",
+      "tracked_class_convention",
+      "tracked_class_id",
+      "pre_reduction_residue",
+      "modulus",
+      "representative",
+      "source_rule"
+    ]
+  },
+  "deletion_marks": {
+    "file": "deletion_marks.csv",
+    "purpose": "Record kept/deleted literals and the source rule justifying each mark.",
+    "required_fields": [
+      "row_id",
+      "literal_id",
+      "is_deleted",
+      "deletion_rule_id",
+      "boundary_correction",
+      "source_ref"
+    ]
+  },
+  "guardrails": [
+    "NO_K3_ROWS_GENERATED_BY_THIS_SCRIPT",
+    "NO_LP_SOLVED_BY_THIS_SCRIPT",
+    "NO_HIGH_K_LEAN_OPENED",
+    "NO_K9_THEOREM_CLAIM",
+    "NO_K11_084_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "inverse_words": {
+    "file": "inverse_words.csv",
+    "purpose": "Materialize finite inverse words for row populations.",
+    "required_fields": [
+      "word_id",
+      "row_id",
+      "literal_id",
+      "edge_word",
+      "root_formula",
+      "forward_route",
+      "target_class",
+      "residue_side_conditions"
+    ]
+  },
+  "manifest": {
+    "file": "manifest_sha256.csv",
+    "purpose": "Bind generated artifacts to hashes.",
+    "required_fields": [
+      "path",
+      "sha256"
+    ]
+  },
+  "rational_certificate": {
+    "file": "certificate.json",
+    "purpose": "Exact rational certificate candidate for the pilot rows.",
+    "required_fields": [
+      "lambda_interval",
+      "coefficient_intervals",
+      "variables",
+      "rows",
+      "source_or_solver_manifest",
+      "float_diagnostics_only"
+    ]
+  },
+  "rows": {
+    "file": "rows.json",
+    "purpose": "Declare generated abstract rows without trusting their truth.",
+    "required_fields": [
+      "row_id",
+      "caller_class",
+      "row_family",
+      "terms",
+      "deletion_rule_id",
+      "source_ref",
+      "normalization_ref"
+    ]
+  },
+  "run_id": "KL2003_F2_K3_PILOT_INVENTORY_v1",
+  "schema_status": "TENTATIVE_NO_ROWS_GENERATED",
+  "slacks": {
+    "file": "row_slacks.csv",
+    "purpose": "Exact rational row slack ledger.",
+    "required_fields": [
+      "row_id",
+      "lhs_rational",
+      "rhs_rational",
+      "slack_rational",
+      "slack_positive",
+      "denominator_bits"
+    ]
+  },
+  "source_scoping": "docs/KL2003_F2_K3_GENERATOR_VERIFIER_PILOT_SCOPING_v1.md"
+}
