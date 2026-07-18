@@ -1,0 +1,473 @@
+{
+  "case_splits": [
+    {
+      "exhaustive_cases": [
+        "5",
+        "2",
+        "8"
+      ],
+      "modulus": "9",
+      "split_id": "row28_c_split",
+      "variable": "c"
+    },
+    {
+      "exhaustive_cases": [
+        "2",
+        "5",
+        "8"
+      ],
+      "modulus": "9",
+      "split_id": "row28_cprime_split",
+      "variable": "cPrime"
+    }
+  ],
+  "deletion_marks": [
+    {
+      "boundary_correction": "post_deletion_replacement",
+      "child_id": "row28_deleted_N04",
+      "deleted": true,
+      "deletion_policy": "same_mode_earlier_smaller_shift",
+      "figure_node_id": "N04",
+      "node_status": "deleted",
+      "reason": "fixture Figure A1 crossed node N04",
+      "row_id": "row28",
+      "source_ref": "deletion_rule_source"
+    }
+  ],
+  "fixture_only": true,
+  "inverse_words": [
+    {
+      "boundary_correction": "none",
+      "branch_role": "retarded",
+      "child_id": "row28_retarded_4a",
+      "coefficient_ref": "c25",
+      "contributes_to_cardinality": true,
+      "deleted": false,
+      "depth": "2",
+      "fiber_parent": "row28_root",
+      "forward_route": [
+        "4*a -> 2*a",
+        "2*a -> a"
+      ],
+      "inverse_word": [
+        "even",
+        "even"
+      ],
+      "literal_id": "row28_retarded_literal",
+      "node_id": "row28_retarded_4a",
+      "node_status": "counted",
+      "reason": "fixture_retarded_branch",
+      "residue_side_conditions": [
+        "a % 9 = 8",
+        "(4*a) % 9 = 5"
+      ],
+      "root_formula": "4*a",
+      "row_id": "row28",
+      "shift": "-2",
+      "target_class": "5",
+      "window_policy": "exact_retarded_window"
+    }
+  ],
+  "mathematical_content": false,
+  "metadata": {
+    "artifact_links": {
+      "json_artifact": "kl2003_k2_row28_nested_certificate.fixture.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "scripts/kl2003_f2_k3_certificate_fixture_v1.py",
+      "json_to_lean_generator_sha256": "RECORDED_IN_MANIFEST",
+      "lean_data_artifact": "KL2003K2Row28NestedCertificateDataFixture.lean",
+      "lean_data_sha256": "RECORDED_IN_MANIFEST",
+      "lean_import_policy": "Nested fixture Lean data remains in outputs and is not imported."
+    },
+    "created_at": "2026-07-18T22:44:48.031579+00:00",
+    "fixture_only": true,
+    "format_scope": "high_k_parametric_nested_el",
+    "generator_version": "kl2003_f2_k3_certificate_fixture_v1.py",
+    "guardrails": [
+      "FIXTURE_ONLY",
+      "NO_MATHEMATICAL_CONTENT",
+      "NOT_FOR_LEAN_IMPORT",
+      "NO_ROW28_GENERATOR_IMPLEMENTATION",
+      "NO_K3_ROWS_GENERATED",
+      "NO_LP_SOLVED",
+      "NO_HIGH_K_CLAIM",
+      "NO_GLOBAL_COLLATZ_CLAIM"
+    ],
+    "k": "2",
+    "mathematical_content": false,
+    "not_for_lean_import": true,
+    "pre_reduction_class_count": "9",
+    "run_id": "KL2003_F2_K2_ROW28_NESTED_CERTIFICATE_FIXTURE_v1",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+    "source_commit": "d022e94863324d50e0650557ccecd4c170a23e4f",
+    "source_inputs": [
+      {
+        "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
+        "role": "format_scoping",
+        "sha256": "1397f4b4cbad09895be596ba3ed8ac4ad96313ec247d5c30da2d9ba39f7e9113"
+      }
+    ],
+    "tracked_class_convention": "k2_nested_fixture_classes_mod9_2_5_8",
+    "tracked_class_count": "3"
+  },
+  "nested_blocks": [
+    {
+      "block_id": "M2V3",
+      "block_kind": "min",
+      "children": [
+        {
+          "component": "phi22",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi25",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi28",
+          "shift": "shift3AlphaMinus5Pad3"
+        }
+      ]
+    },
+    {
+      "block_id": "M1V3",
+      "block_kind": "min",
+      "children": [
+        {
+          "children": [
+            {
+              "component": "phi28",
+              "shift": "shift2AlphaMinus5Pad2"
+            },
+            {
+              "block_ref": "M2V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi22",
+          "shift": "shift2AlphaMinus5Pad2"
+        }
+      ]
+    },
+    {
+      "block_id": "row28_post_deletion_sibling_sum",
+      "block_kind": "sum",
+      "children": [
+        {
+          "node_ref": "row28_post_child_phi28"
+        },
+        {
+          "node_ref": "row28_post_child_phi25"
+        }
+      ],
+      "claims_disjointness": true,
+      "parent_descendant_overlap_forbidden": true,
+      "sibling_disjointness_group": "row28_post_deletion_siblings_N04"
+    },
+    {
+      "block_id": "row28_outer_block",
+      "block_kind": "min",
+      "children": [
+        {
+          "children": [
+            {
+              "component": "phi28",
+              "shift": "shiftAlphaMinus3Pad"
+            },
+            {
+              "block_ref": "M1V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi22",
+          "shift": "shiftAlphaMinus3Pad"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "branch_role": "row_root",
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "figure_node_id": "N09",
+      "node_id": "row28_root",
+      "node_status": "expanded",
+      "shift": "0",
+      "source_ref": "figure_a1_oracle"
+    },
+    {
+      "branch_role": "retarded",
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_retarded_4a",
+      "node_status": "counted",
+      "parent_node_id": "row28_root",
+      "shift": "-2",
+      "source_ref": "splitting_rule_source"
+    },
+    {
+      "branch_role": "advanced",
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "figure_node_id": "N04",
+      "node_id": "row28_deleted_N04",
+      "node_status": "deleted",
+      "parent_node_id": "row28_root",
+      "shift": "0",
+      "source_ref": "deletion_rule_source"
+    },
+    {
+      "branch_role": "post_deletion",
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_post_child_phi28",
+      "node_status": "counted",
+      "parent_node_id": "row28_deleted_N04",
+      "shift": "0",
+      "source_ref": "deletion_rule_source"
+    },
+    {
+      "branch_role": "post_deletion",
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_post_child_phi25",
+      "node_status": "counted",
+      "parent_node_id": "row28_deleted_N04",
+      "shift": "0",
+      "source_ref": "deletion_rule_source"
+    }
+  ],
+  "not_for_lean_import": true,
+  "overlap_guards": [
+    {
+      "guard_id": "row28_no_parent_descendant_sum",
+      "guard_kind": "no_parent_descendant_sum",
+      "reason": "fixture guard against parent+descendant counting",
+      "scope": "row28"
+    }
+  ],
+  "post_deletion_edges": [
+    {
+      "deleted_node_id": "row28_deleted_N04",
+      "edge_id": "post_delete_N04",
+      "reason": "fixture post-deletion edge",
+      "replacement_child_ids": [
+        "row28_post_child_phi28",
+        "row28_post_child_phi25"
+      ],
+      "source_ref": "deletion_rule_source"
+    }
+  ],
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "c25",
+        "hi": "1001/1000",
+        "lo": "1001/1000"
+      },
+      {
+        "coefficient_id": "c28",
+        "hi": "69/40",
+        "lo": "69/40"
+      },
+      {
+        "coefficient_id": "L2NT_D3_slack",
+        "hi": "2077/145800",
+        "lo": "2077/145800"
+      }
+    ],
+    "float_diagnostics": [],
+    "lambda_interval": {
+      "hi": "27/20",
+      "lo": "27/20"
+    },
+    "row_lhs": {
+      "row28": "0"
+    },
+    "row_rhs": {
+      "row28": "69/40"
+    },
+    "solver_manifest": {
+      "lp_solved": false,
+      "solver": "none_fixture_only"
+    },
+    "variables": {
+      "fixture_var": "1"
+    }
+  },
+  "rows": [
+    {
+      "children": [
+        {
+          "boundary_correction": "none",
+          "branch_role": "retarded",
+          "child_id": "row28_retarded_4a",
+          "coefficient_ref": "c25",
+          "contributes_to_cardinality": true,
+          "deleted": false,
+          "depth": "2",
+          "fiber_parent": "row28_root",
+          "forward_route": [
+            "4*a -> 2*a",
+            "2*a -> a"
+          ],
+          "inverse_word": [
+            "even",
+            "even"
+          ],
+          "literal_id": "row28_retarded_literal",
+          "node_id": "row28_retarded_4a",
+          "node_status": "counted",
+          "reason": "fixture_retarded_branch",
+          "residue_side_conditions": [
+            "a % 9 = 8",
+            "(4*a) % 9 = 5"
+          ],
+          "root_formula": "4*a",
+          "row_id": "row28",
+          "shift": "-2",
+          "target_class": "5",
+          "window_policy": "exact_retarded_window"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "c25",
+          "target": "row28_retarded_4a",
+          "value": "1001/1000"
+        },
+        {
+          "coefficient_id": "c28",
+          "target": "row28",
+          "value": "69/40"
+        }
+      ],
+      "deletion_policy": "fixture_deletion_policy",
+      "nested_block_ref": "row28_outer_block",
+      "normalization_ref": "fixture_v2_1_nested_el",
+      "row_id": "row28",
+      "row_kind": "D3 / EL nested fixture",
+      "slack_id": "L2NT_D3_slack",
+      "source_class": "28",
+      "source_ref": "fixture_v2_1_nested_el",
+      "target_bound": "69/40"
+    }
+  ],
+  "sibling_disjointness_groups": [
+    {
+      "group_id": "row28_post_deletion_siblings_N04",
+      "member_node_ids": [
+        "row28_post_child_phi28",
+        "row28_post_child_phi25"
+      ],
+      "parent_fiber": "row28_deleted_N04",
+      "reason": "fixture sibling group for post-deletion counted children"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "18",
+      "lhs": "0",
+      "notes": "Fixture D3 slack reference only.",
+      "numerator_bits": "12",
+      "rhs": "2077/145800",
+      "row_id": "row28",
+      "slack": "2077/145800",
+      "slack_id": "L2NT_D3_slack",
+      "strictly_positive": true
+    }
+  ],
+  "source_refs": [
+    {
+      "line_range": "TBD_BEFORE_IMPLEMENTATION",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "splitting_rule",
+      "source_ref_id": "splitting_rule_source",
+      "trust_role": "generator_rule_source"
+    },
+    {
+      "line_range": "763-779",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "deletion_rule",
+      "source_ref_id": "deletion_rule_source",
+      "trust_role": "generator_rule_source"
+    },
+    {
+      "line_range": "N04/N05",
+      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv",
+      "sha256": "RECORDED_IN_ROW28_SCHEMA_CHECK_MANIFEST",
+      "source_kind": "figure_a1",
+      "source_ref_id": "figure_a1_oracle",
+      "trust_role": "regression_oracle"
+    },
+    {
+      "line_range": "TBD_BEFORE_ROW28_IMPLEMENTATION",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "termination_rule",
+      "source_ref_id": "termination_rule_source_tbd",
+      "trust_role": "hypothesis_source_pending"
+    }
+  ],
+  "termination_policy": {
+    "kind": "expand_until_deletion_saturation",
+    "notes": "Fixture representability only; not a proof.",
+    "source_ref": "termination_rule_source_tbd",
+    "status": "hypothesis_untested"
+  },
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "class_mod9_2",
+      "modulus": "9",
+      "notes": "Nested fixture class.",
+      "pre_reduction_residues": [
+        "2"
+      ],
+      "representative": "2",
+      "source_rule": "fixture_nested"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_5",
+      "modulus": "9",
+      "notes": "Nested fixture class.",
+      "pre_reduction_residues": [
+        "5"
+      ],
+      "representative": "5",
+      "source_rule": "fixture_nested"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_8",
+      "modulus": "9",
+      "notes": "Nested fixture class.",
+      "pre_reduction_residues": [
+        "8"
+      ],
+      "representative": "8",
+      "source_rule": "fixture_nested"
+    }
+  ],
+  "verification_targets": [
+    {
+      "expected_checker": "schema_v2_1_validator",
+      "input_sections": [
+        "nested_blocks",
+        "nodes",
+        "post_deletion_edges"
+      ],
+      "notes": "Fixture target only.",
+      "status": "PENDING_SCHEMA_VALIDATOR",
+      "target_id": "nested_el_well_formed"
+    }
+  ]
+}

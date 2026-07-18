@@ -1,0 +1,17 @@
+test_id,expected_outcome,severity,path,code,message
+positive_fixture_v2,pass,warning,outputs/KL2003_F2_K3_CERTIFICATE_FIXTURE_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+positive_k2_regression_v2,pass,warning,outputs/KL2003_F2_K2_REGRESSION_GENERATOR_SKELETON_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+positive_row25_v2,pass,warning,outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+positive_row22_v2,pass,warning,outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+positive_nested_fixture_v21,pass,warning,outputs/KL2003_F2_K3_CERTIFICATE_FIXTURE_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+positive_row28_proposal_v21,pass,warning,outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.
+negative_m1v3_phi22,fail,error,$.nested_blocks[M1V3].children[1],V21_M1V3_SECOND_ARM_NOT_PHI25,M1V3 second arm must be phi25; phi22 is the historical V2 arm.
+negative_m1v3_phi22,fail,warning,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/manifest_sha256.csv,EXTERNAL_MANIFEST_NOT_FOUND,No sibling artifact manifest found to report.
+negative_missing_ref,fail,error,$.nested_blocks[block_id=M1V3],V21_UNRESOLVED_BLOCK_REF,block_ref `MISSING_BLOCK_REF_FOR_NEGATIVE_TEST` does not resolve.
+negative_missing_ref,fail,warning,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/manifest_sha256.csv,EXTERNAL_MANIFEST_NOT_FOUND,No sibling artifact manifest found to report.
+negative_block_cycle,fail,error,$.nested_blocks,V21_BLOCK_GRAPH_CYCLE,Cycle detected in block graph: M2V3 -> M1V3 -> M2V3
+negative_block_cycle,fail,warning,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/manifest_sha256.csv,EXTERNAL_MANIFEST_NOT_FOUND,No sibling artifact manifest found to report.
+negative_deleted_counted,fail,error,$.nodes[2].contributes_to_cardinality,V21_DELETED_NODE_CONTRIBUTES,Deleted nodes must not contribute directly to cardinality.
+negative_deleted_counted,fail,warning,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/manifest_sha256.csv,EXTERNAL_MANIFEST_NOT_FOUND,No sibling artifact manifest found to report.
+negative_parent_descendant_sum,fail,error,$.nested_blocks[block_id=negative_parent_descendant_sum],V21_PARENT_DESCENDANT_SUM,Sum block contains node `row28_retarded_4a` and ancestor(s) ['row28_root'].
+negative_parent_descendant_sum,fail,warning,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/manifest_sha256.csv,EXTERNAL_MANIFEST_NOT_FOUND,No sibling artifact manifest found to report.

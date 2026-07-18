@@ -1,0 +1,6 @@
+test_id,input_path,expected_error_code,rejected,expected_code_seen,actual_error_codes,verdict
+negative_m1v3_phi22,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/negative_m1v3_phi22.fixture.json,V21_M1V3_SECOND_ARM_NOT_PHI25,True,True,"[""V21_M1V3_SECOND_ARM_NOT_PHI25""]",PASS
+negative_missing_ref,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/negative_missing_ref.fixture.json,V21_UNRESOLVED_BLOCK_REF,True,True,"[""V21_UNRESOLVED_BLOCK_REF""]",PASS
+negative_block_cycle,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/negative_block_cycle.fixture.json,V21_BLOCK_GRAPH_CYCLE,True,True,"[""V21_BLOCK_GRAPH_CYCLE""]",PASS
+negative_deleted_counted,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/negative_deleted_counted.fixture.json,V21_DELETED_NODE_CONTRIBUTES,True,True,"[""V21_DELETED_NODE_CONTRIBUTES""]",PASS
+negative_parent_descendant_sum,outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_inputs/negative_parent_descendant_sum.fixture.json,V21_PARENT_DESCENDANT_SUM,True,True,"[""V21_PARENT_DESCENDANT_SUM""]",PASS

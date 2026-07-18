@@ -4,24 +4,121 @@
     "c25": "1001/1000",
     "c28": "69/40"
   },
+  "deletion_marks": [
+    {
+      "boundary_correction": "post_deletion_children_counted_instead",
+      "child_id": "row28_deleted_N04",
+      "deleted": true,
+      "deletion_policy": "same_mode_earlier_path_smaller_shift",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N04",
+      "node_id": "row28_deleted_N04",
+      "reason": "Figure A1 oracle marks this node deleted; proposal records not-counted parent.",
+      "row_id": "row28",
+      "source_ref": "figure_a1_root_paths_oracle"
+    },
+    {
+      "boundary_correction": "post_deletion_children_counted_instead",
+      "child_id": "row28_deleted_N05",
+      "deleted": true,
+      "deletion_policy": "same_mode_earlier_path_smaller_shift",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N05",
+      "node_id": "row28_deleted_N05",
+      "reason": "Second expected Figure A1 crossing placeholder; deleted node is never counted directly.",
+      "row_id": "row28",
+      "source_ref": "figure_a1_root_paths_oracle"
+    }
+  ],
   "guardrails": [
     "ROW28_GENERATOR_NOT_STARTED",
     "NO_K3_GENERATION",
     "NO_HIGH_K_CLAIM",
     "NO_GLOBAL_COLLATZ_CLAIM"
   ],
+  "inverse_words": [
+    {
+      "boundary_correction": "none",
+      "child_id": "row28_retarded_4a",
+      "coefficient_ref": "c25",
+      "deleted": false,
+      "depth": "1",
+      "fiber_parent": "2*a",
+      "forward_route": [
+        "4*a -> 2*a",
+        "2*a -> a"
+      ],
+      "inverse_word": [
+        "e",
+        "e"
+      ],
+      "literal_id": "row28_retarded",
+      "reason": "retarded branch counted by D3 core",
+      "residue_side_conditions": [
+        "a % 9 = 8",
+        "(4*a) % 9 = 5"
+      ],
+      "root_formula": "4*a",
+      "row_id": "row28",
+      "shift": "-2",
+      "target_class": "5",
+      "window_policy": "exact_retarded_window"
+    }
+  ],
+  "mathematical_content": false,
   "metadata": {
-    "current_schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "artifact_links": {
+      "json_artifact": "row28_nested_representation_proposal.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "NOT_APPLICABLE_SCHEMA_PROPOSAL",
+      "json_to_lean_generator_sha256": "NOT_APPLICABLE_SCHEMA_PROPOSAL",
+      "lean_data_artifact": "NOT_EMITTED_FOR_SCHEMA_PROPOSAL",
+      "lean_data_sha256": "NOT_EMITTED_FOR_SCHEMA_PROPOSAL",
+      "lean_import_policy": "Schema proposal only; Lean consumes generated .lean data in future tasks, not JSON."
+    },
+    "created_at": "RECORDED_IN_SUMMARY",
+    "generator_mode": "row28_nested_schema_proposal",
+    "generator_version": "kl2003_f2_row28_nested_schema_check_v1.py",
+    "guardrails": [
+      "ROW28_GENERATOR_NOT_STARTED",
+      "NO_K3_GENERATION",
+      "NO_HIGH_K_CLAIM",
+      "NO_GLOBAL_COLLATZ_CLAIM"
+    ],
+    "k": "2",
     "no_theorem_claim": true,
+    "pre_reduction_class_count": "9",
     "proof_status": "schema_proposal_only",
-    "proposed_schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+    "proposal_only": true,
     "run_id": "KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1",
-    "schema_decision": "proposed_v2_1_required_before_row28_generator"
+    "schema_decision": "v2_1_required_before_row28_generator",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+    "source_commit": "d022e94863324d50e0650557ccecd4c170a23e4f",
+    "source_inputs": [
+      {
+        "path": "docs/KL2003_F2_K2_ROW28_MICROGENERATOR_SCOPING_v1.md",
+        "role": "row28_microgenerator_scoping",
+        "sha256": "f2333148fa30d1902b1c0a9a3d134e52d42fe49c98011cfe658b38db4f3d6123"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+        "role": "manual_k2_baseline_regression_oracle",
+        "sha256": "1a590bf696250d1b1544e314ad0d4bbd9e31bc9713dcda22b6b7d0210635ee98"
+      },
+      {
+        "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv",
+        "role": "figure_a1_regression_oracle_not_generator_source",
+        "sha256": "7d4de321e113d7da6e776d96379b5349021fc0320d1fa8684540d372081cefee"
+      }
+    ],
+    "tracked_class_convention": "k2_mod9_classes_2_5_8",
+    "tracked_class_count": "3"
   },
   "nested_blocks": [
     {
       "block_id": "M2V3",
-      "operands": [
+      "block_kind": "min",
+      "children": [
         {
           "component": "phi22",
           "shift": "shift3AlphaMinus5Pad3"
@@ -35,14 +132,17 @@
           "shift": "shift3AlphaMinus5Pad3"
         }
       ],
-      "operator": "min3"
+      "source_refs": [
+        "source_refs.splitting_rule"
+      ]
     },
     {
       "baseline_expected_shape": "min(phi28 + M2V3, phi25)",
       "block_id": "M1V3",
-      "operands": [
+      "block_kind": "min",
+      "children": [
         {
-          "operands": [
+          "children": [
             {
               "component": "phi28",
               "shift": "shift2AlphaMinus5Pad2"
@@ -58,14 +158,37 @@
           "shift": "shift2AlphaMinus5Pad2"
         }
       ],
-      "operator": "min",
-      "source_faithful_requirement": "second arm is phi25; phi22 form is historical V2 only"
+      "source_faithful_requirement": "second arm is phi25; phi22 form is historical V2 only",
+      "source_refs": [
+        "source_refs.splitting_rule",
+        "source_refs.meta_errata_phi25"
+      ]
+    },
+    {
+      "block_id": "row28_post_deletion_sibling_sum",
+      "block_kind": "sum",
+      "children": [
+        {
+          "node_ref": "row28_cprime_mod8_phi28"
+        },
+        {
+          "node_ref": "row28_four_c_mod5_phi25"
+        }
+      ],
+      "claims_disjointness": true,
+      "parent_descendant_overlap_forbidden": true,
+      "sibling_disjointness_group": "row28_post_deletion_siblings_mod8",
+      "source_refs": [
+        "source_refs.deletion_rule",
+        "source_refs.fiber_disjointness"
+      ]
     },
     {
       "block_id": "row28_outer_block",
-      "operands": [
+      "block_kind": "min",
+      "children": [
         {
-          "operands": [
+          "children": [
             {
               "component": "phi28",
               "shift": "shiftAlphaMinus3Pad"
@@ -81,30 +204,40 @@
           "shift": "shiftAlphaMinus3Pad"
         }
       ],
-      "operator": "min"
+      "source_refs": [
+        "source_refs.splitting_rule",
+        "source_refs.deletion_rule"
+      ]
     }
   ],
   "nodes": [
     {
       "class": "8",
+      "contributes_to_cardinality": false,
+      "figure_node_id": "N09",
       "node_id": "row28_root",
-      "node_status": "structural_only",
-      "shift": "0",
-      "source_tree_node_id": "N09"
+      "node_status": "expanded",
+      "shift": "0"
     },
     {
       "branch_kind": "retarded",
       "class": "5",
+      "contributes_to_cardinality": true,
+      "figure_node_id": "row28_retarded_placeholder",
       "node_id": "row28_retarded_4a",
       "node_status": "counted",
+      "parent_node_id": "row28_root",
       "shift": "-2",
       "window_policy": "exact_retarded_window"
     },
     {
       "arith": "3*c + 1 = 2*a",
       "branch_kind": "advanced_child",
+      "contributes_to_cardinality": false,
+      "figure_node_id": "row28_advanced_c_placeholder",
       "node_id": "row28_advanced_c",
-      "node_status": "structural_or_counted_by_case",
+      "node_status": "expanded",
+      "parent_node_id": "row28_root",
       "residue_split": [
         "5",
         "2",
@@ -113,40 +246,72 @@
     },
     {
       "class": "8",
+      "contributes_to_cardinality": false,
       "deletion_rule": "same mode earlier on path + smaller shift => delete current leaf",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N04",
       "node_id": "row28_deleted_N04",
       "node_status": "deleted",
-      "shift": "alpha - 1",
-      "source_tree_node_id": "N04"
+      "parent_node_id": "row28_advanced_c",
+      "shift": "alpha - 1"
     },
     {
       "class": "8",
+      "contributes_to_cardinality": false,
       "deletion_rule": "same mode earlier on path + smaller shift => delete current leaf",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N05",
       "node_id": "row28_deleted_N05",
       "node_status": "deleted",
-      "shift": "2*alpha - 3",
-      "source_tree_node_id": "N05"
+      "parent_node_id": "row28_deleted_N04",
+      "shift": "2*alpha - 3"
     },
     {
       "arith": "3*cPrime + 1 = 2*c",
+      "contributes_to_cardinality": false,
+      "figure_node_id": "row28_cprime_placeholder",
       "node_id": "row28_cprime",
-      "node_status": "post_deletion_structural",
+      "node_status": "expanded",
+      "parent_node_id": "row28_deleted_N04",
       "residue_split": [
         "2",
         "5",
         "8"
       ]
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "figure_node_id": "row28_cprime_mod8_phi28_placeholder",
+      "node_id": "row28_cprime_mod8_phi28",
+      "node_status": "counted",
+      "parent_node_id": "row28_cprime",
+      "shift": "shiftAlphaMinus3Pad",
+      "sibling_disjointness_group": "row28_post_deletion_siblings_mod8"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "figure_node_id": "row28_four_c_mod5_phi25_placeholder",
+      "node_id": "row28_four_c_mod5_phi25",
+      "node_status": "counted",
+      "parent_node_id": "row28_cprime",
+      "shift": "shift2AlphaMinus5Pad2",
+      "sibling_disjointness_group": "row28_post_deletion_siblings_mod8"
     }
   ],
+  "not_for_lean_import": true,
   "overlap_guards": [
     {
       "guard_id": "row28_no_deleted_parent_plus_descendant",
       "guard_kind": "no_parent_descendant_sum",
+      "parent_descendant_overlap_forbidden": true,
       "rejected_pattern": "count deleted parent + count descendant repair"
     },
     {
       "guard_id": "row28_sibling_sums_only",
       "guard_kind": "sibling_fiber_sum_only",
+      "parent_descendant_overlap_forbidden": true,
       "reason": "sums only between disjoint sibling populations"
     }
   ],
@@ -182,24 +347,76 @@
       ]
     }
   ],
+  "post_deletion_edges": [
+    {
+      "deleted_node_id": "row28_deleted_N04",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "edge_id": "row28_N04_post_deletion_children",
+      "reason": "Deleted parent is not counted; post-deletion cPrime and sibling branches are represented.",
+      "replacement_child_ids": [
+        "row28_cprime",
+        "row28_cprime_mod8_phi28",
+        "row28_four_c_mod5_phi25"
+      ]
+    },
+    {
+      "deleted_node_id": "row28_deleted_N05",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "edge_id": "row28_N05_to_M2V3_placeholder",
+      "reason": "Second Figure A1 crossing placeholder; representability only.",
+      "replacement_child_ids": [
+        "row28_cprime"
+      ]
+    }
+  ],
+  "proposal_only": true,
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "c25",
+        "hi": "1001/1000",
+        "lo": "1001/1000"
+      },
+      {
+        "coefficient_id": "c28",
+        "hi": "69/40",
+        "lo": "69/40"
+      }
+    ],
+    "float_diagnostics": {
+      "float_count": "0"
+    },
+    "lambda_interval": {
+      "hi": "27/20",
+      "lo": "27/20"
+    },
+    "row_lhs": {
+      "row28": "0"
+    },
+    "row_rhs": {
+      "row28": "69/40"
+    },
+    "solver_manifest": "not_applicable_schema_proposal",
+    "variables": {}
+  },
   "required_v21_sections": [
     "nested_blocks[] with block_id, operator, operands, shift, coefficient_ref",
-    "expr_nodes[] entries with operator = min",
-    "expr_nodes[] entries with operator = sum and operands[]",
+    "nested_blocks[] entries with block_kind = min and children[]",
+    "nested_blocks[] entries with block_kind = sum and children[]",
     "block_ref operands and row.auxiliary_blocks[]",
     "nested_blocks[M1V3].operands[1] = {component: phi25, shift: shift2AlphaMinus5Pad2}",
     "child.branch_role = retarded | advanced | post_deletion",
     "case_splits[] with split_id, variable, modulus, exhaustive_cases[]",
     "case_splits[] may be nested and may reference post_deletion_edges",
     "post_deletion_edges[] with deleted_node_id and replacement_child_ids[]",
-    "source_tree_node_id, oracle_node_id, oracle_path_node_ids",
-    "node_status = counted | deleted | structural_only",
-    "sibling_groups[] with group_id, parent_fiber, member_child_ids[]",
+    "figure_node_id plus source_refs entry for Figure A1/root_paths regression oracle",
+    "node_status = counted | deleted | terminal | expanded plus contributes_to_cardinality",
+    "sibling_disjointness_groups[] with group_id and member node ids",
     "overlap_guards[] with guard_kind = no_parent_descendant_sum",
     "splitting_rule_source{path,line_range,sha256,rule_id}",
     "deletion_rule_source{path,line_range,sha256,rule_id}",
     "termination_rule{kind,source_ref,line_range,sha256}",
-    "termination_policy{kind: expand_until_deletion_saturation, status: DELETION_SATURATION_HYPOTHESIS_UNTESTED}"
+    "termination_policy{kind: expand_until_deletion_saturation, status: hypothesis_untested}"
   ],
   "row28_target": {
     "baseline_expected_shape": "two-branch row with nested EL block and row28 c-prime split",
@@ -210,30 +427,175 @@
     "source_class": "28",
     "v3_requirement": "M1V3 uses phi25, not phi22"
   },
-  "source_refs_required": {
-    "deletion_rule": {
-      "line_range": "763-779",
-      "path": "work/sources/kl2003_src/30apr02.tex",
-      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd"
-    },
-    "splitting_rule": {
+  "rows": [
+    {
+      "children": [
+        {
+          "boundary_correction": "none",
+          "child_id": "row28_retarded_4a",
+          "coefficient_ref": "c25",
+          "deleted": false,
+          "depth": "1",
+          "fiber_parent": "2*a",
+          "forward_route": [
+            "4*a -> 2*a",
+            "2*a -> a"
+          ],
+          "inverse_word": [
+            "e",
+            "e"
+          ],
+          "literal_id": "row28_retarded",
+          "reason": "retarded branch counted by D3 core",
+          "residue_side_conditions": [
+            "a % 9 = 8",
+            "(4*a) % 9 = 5"
+          ],
+          "root_formula": "4*a",
+          "row_id": "row28",
+          "shift": "-2",
+          "target_class": "5",
+          "window_policy": "exact_retarded_window"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "c25",
+          "target": "row28_retarded_4a",
+          "value": "1001/1000"
+        },
+        {
+          "coefficient_id": "c28",
+          "target": "row28_outer_block",
+          "value": "69/40"
+        }
+      ],
+      "deletion_policy": "post_deletion_v3_cprime_split",
+      "nested_block_ref": "row28_outer_block",
+      "normalization_ref": "M0C_V3_phi25_meta_errata",
+      "row_id": "row28",
+      "row_kind": "nested_el_v3_schema_proposal",
+      "slack_id": "L2NT_D3_slack",
+      "source_class": "class8",
+      "source_ref": "row28_scoping_and_figure_a1_regression_oracle",
+      "target_bound": "69/40"
+    }
+  ],
+  "sibling_disjointness_groups": [
+    {
+      "disjointness_claim": "siblings_under_distinct_entry_fibers",
+      "group_id": "row28_post_deletion_siblings_mod8",
+      "member_node_ids": [
+        "row28_cprime_mod8_phi28",
+        "row28_four_c_mod5_phi25"
+      ],
+      "parent_fiber": "row28_cprime",
+      "source_ref": "source_refs.fiber_disjointness"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "18",
+      "lhs": "0",
+      "notes": "D3 slack carried as regression baseline reference; not mathematically verified by schema proposal.",
+      "numerator_bits": "12",
+      "rhs": "2077/145800",
+      "row_id": "row28",
+      "slack": "2077/145800",
+      "slack_id": "L2NT_D3_slack",
+      "strictly_positive": true
+    }
+  ],
+  "source_refs": [
+    {
       "line_range": "TBD_BEFORE_IMPLEMENTATION",
       "path": "work/sources/kl2003_src/30apr02.tex",
-      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd"
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "splitting_rule",
+      "source_ref_id": "splitting_rule",
+      "trust_role": "generator_source_required_before_row28_implementation"
     },
-    "termination_rule": {
+    {
+      "line_range": "763-779",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "deletion_rule",
+      "source_ref_id": "deletion_rule",
+      "trust_role": "source_audit_reference"
+    },
+    {
       "blocker_if_missing": "BLOCKED_ON_EL_TERMINATION_RULE_SOURCE",
       "line_range": "TBD",
       "path": "TBD_FROM_TEX_BEFORE_IMPLEMENTATION",
-      "sha256": "TBD"
+      "sha256": "TBD",
+      "source_kind": "termination_rule",
+      "source_ref_id": "termination_rule",
+      "trust_role": "source_required_before_claim"
+    },
+    {
+      "line_range": "not_applicable_csv_oracle",
+      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv",
+      "sha256": "7d4de321e113d7da6e776d96379b5349021fc0320d1fa8684540d372081cefee",
+      "source_kind": "figure_a1",
+      "source_ref_id": "figure_a1",
+      "trust_role": "regression_oracle"
+    },
+    {
+      "line_range": "entire_note",
+      "path": "docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+      "sha256": "RECORDED_IN_SOURCE_DOC",
+      "source_kind": "meta_errata",
+      "source_ref_id": "meta_errata_phi25",
+      "trust_role": "source_faithful_contract_guardrail"
+    },
+    {
+      "line_range": "existing_named_theorems",
+      "path": "CollatzClassical/KL2003/KL2003M0BEntryPredecessorDisjointness.lean",
+      "sha256": "LEAN_SOURCE_BASELINE",
+      "source_kind": "lean_dependency",
+      "source_ref_id": "fiber_disjointness",
+      "trust_role": "future_verifier_dependency"
     }
-  },
+  ],
   "termination_policy": {
+    "kind": "expand_until_deletion_saturation",
     "notes": "Representability is checked here; the mathematical/source validity of saturation is deferred.",
-    "policy_kind": "expand_until_deletion_saturation",
-    "status": "DELETION_SATURATION_HYPOTHESIS_UNTESTED",
+    "status": "hypothesis_untested",
+    "termination_rule_ref": "source_refs.termination_rule",
     "tested_by_this_script": false
   },
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "class2",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "2"
+      ],
+      "representative": "2",
+      "source_rule": "k2 tracked class"
+    },
+    {
+      "active": true,
+      "class_id": "class5",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "5"
+      ],
+      "representative": "5",
+      "source_rule": "k2 tracked class"
+    },
+    {
+      "active": true,
+      "class_id": "class8",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "8"
+      ],
+      "representative": "8",
+      "source_rule": "k2 tracked class"
+    }
+  ],
   "tree_oracle": {
     "expected_deleted_nodes": [
       {
@@ -253,5 +615,14 @@
     ],
     "required_diff_verdict": "FIGURE_A1_DELETION_DIFF_PASS",
     "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
-  }
+  },
+  "verification_targets": [
+    {
+      "description": "Represent Row28 V3 nested EL with M1V3/M2V3, deletion marks, and post-deletion cPrime split.",
+      "kind": "schema_only",
+      "required": true,
+      "row_id": "row28",
+      "target_id": "row28_nested_el_v3_representability"
+    }
+  ]
 }

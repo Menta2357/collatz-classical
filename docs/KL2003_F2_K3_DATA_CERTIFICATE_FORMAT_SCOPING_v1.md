@@ -24,6 +24,21 @@ Schema version:
 KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2
 ```
 
+Nested-EL amendment version:
+
+```text
+KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1
+```
+
+Compatibility policy:
+
+- v2 remains valid for flat/simple row artifacts such as fixtures,
+  k2-regression reemission, row25, and row22.
+- v2.1 is required for nested EL rows such as source-faithful row28 V3.
+- Historical v2 artifacts should not be rewritten merely because v2.1 exists.
+- A validator must accept both v2 and v2.1, applying v2.1-only checks only
+  when `metadata.schema_version = KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1`.
+
 ## Artifact Layout
 
 The future generator should emit a directory such as:
@@ -135,6 +150,23 @@ the outside, for example in the run summary or a later audit package.
 
 No top-level field is trusted merely by appearing in the artifact.  The future
 Lean verifier must either check the field directly or ignore it.
+
+For v2.1 nested EL artifacts, the JSON must additionally contain:
+
+```json
+{
+  "nodes": [],
+  "nested_blocks": [],
+  "post_deletion_edges": [],
+  "sibling_disjointness_groups": [],
+  "overlap_guards": [],
+  "source_refs": [],
+  "termination_policy": {}
+}
+```
+
+The v2.1 additions are mandatory for nested EL and optional for v2 flat rows.
+They are data, not proof.
 
 ## `metadata`
 
@@ -309,6 +341,164 @@ source_ref
 The verifier must reject a certificate where a row and its deletion ledger
 disagree.
 
+## v2.1 Nested EL Fields
+
+The v2.1 amendment adds canonical fields needed by row28 V3 and later high-k
+nested EL rows.
+
+### `nodes`
+
+Each tree node or generated literal node should contain:
+
+```text
+node_id
+node_status
+figure_node_id
+parent_node_id
+class
+shift
+branch_role
+contributes_to_cardinality
+source_ref
+```
+
+Allowed `node_status` values:
+
+```text
+counted
+deleted
+terminal
+expanded
+```
+
+Deleted nodes must not contribute directly to cardinality.
+
+### `nested_blocks`
+
+Each block must contain:
+
+```text
+block_id
+block_kind
+children
+```
+
+Allowed `block_kind` values:
+
+```text
+min
+sum
+row
+auxiliary
+```
+
+Block children may reference:
+
+```text
+block_ref
+node_ref
+component
+```
+
+Every `block_ref` must resolve to a declared `block_id`, and the block graph
+must be acyclic.
+
+For row28 V3:
+
+```text
+M1V3 second arm = phi25
+M1V3 second arm != phi22
+M2V3 is represented as a nested block
+```
+
+### `post_deletion_edges`
+
+Each post-deletion edge must contain:
+
+```text
+edge_id
+deleted_node_id
+replacement_child_ids
+reason
+source_ref
+```
+
+`deleted_node_id` must refer to a node whose status is `deleted` or `expanded`.
+
+### `sibling_disjointness_groups`
+
+Each group must contain:
+
+```text
+group_id
+parent_fiber
+member_node_ids
+reason
+```
+
+A `sum` block that claims disjointness must either refer to such a group or
+carry an equivalent checked group id.
+
+### `overlap_guards`
+
+Each guard must contain:
+
+```text
+guard_id
+guard_kind
+scope
+reason
+```
+
+The required guard for row28 is:
+
+```text
+guard_kind = no_parent_descendant_sum
+```
+
+The validator must reject a sum that includes both a node and one of its
+descendants.
+
+### `source_refs`
+
+Nested EL artifacts must distinguish provenance roles:
+
+```text
+source_ref_id
+source_kind
+path
+line_range
+sha256
+trust_role
+```
+
+Figure A1/root_paths references are regression oracles, not generator sources:
+
+```text
+trust_role = regression_oracle
+```
+
+### `termination_policy`
+
+Nested EL artifacts must record the expansion termination policy:
+
+```text
+kind
+status
+source_ref
+notes
+```
+
+The row28 gate currently requires representability of:
+
+```text
+kind = expand_until_deletion_saturation
+status = hypothesis_untested
+```
+
+This records the policy as a pending hypothesis.  It does not prove termination
+by saturation.
+
 ## `rational_certificate`
 
 This section records exact arithmetic data for the pilot certificate.
@@ -445,6 +635,8 @@ encoded as canonical integer strings for uniformity.
 - Empirical hooks may accompany the artifact, but hooks are diagnostic and
   non-trusted.
 - Solver logs and floats are provenance/debugging material only.
+- v2.1 nested blocks remain untrusted data until the Lean verifier proves the
+  corresponding well-formedness, route, deletion, disjointness, and slack facts.
 
 ## Anti-Wrapper Rules
 

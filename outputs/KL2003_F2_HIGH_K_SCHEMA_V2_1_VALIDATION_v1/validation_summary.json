@@ -1,0 +1,53 @@
+{
+  "all_warnings_named": true,
+  "classifications": [
+    "HIGH_K_SCHEMA_V2_1_DEFINED",
+    "NESTED_EL_SCHEMA_FIELDS_DEFINED",
+    "SCHEMA_V2_BACKWARD_COMPATIBILITY_PRESERVED",
+    "ROW28_NESTED_REPRESENTATION_SCHEMA_VALIDATED",
+    "NEGATIVE_SCHEMA_TESTS_PASS",
+    "FORMAT_WARNINGS_NAMED",
+    "DELETION_SATURATION_HYPOTHESIS_RECORDED_NOT_TESTED",
+    "ROW28_GENERATOR_NOT_STARTED",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T22:45:29.081744+00:00",
+  "deletion_saturation_hypothesis": "RECORDED_NOT_TESTED",
+  "guardrails": [
+    "NO_ROW28_GENERATOR_IMPLEMENTATION",
+    "NO_TERMINATION_BY_SATURATION_PROOF",
+    "NO_K3_GENERATION",
+    "NO_LP",
+    "NO_LEAN_BUILD",
+    "NO_THEOREM_CHANGE",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "negative_pass_count": 5,
+  "negative_schema_tests_pass": true,
+  "negative_test_count": 5,
+  "outputs": {
+    "artifact_validation_matrix": "outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/artifact_validation_matrix.csv",
+    "manifest": "outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/manifest_sha256.csv",
+    "negative_test_results": "outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/negative_test_results.csv",
+    "schema_validation_errors": "outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/schema_validation_errors.csv",
+    "validation_summary": "outputs/KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1/validation_summary.json"
+  },
+  "positive_artifact_count": 6,
+  "positive_pass_count": 6,
+  "positive_validations_pass": true,
+  "row28_nested_representation_schema_validated": true,
+  "run_id": "KL2003_F2_HIGH_K_SCHEMA_V2_1_VALIDATION_v1",
+  "schema_versions_tested": [
+    "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1"
+  ],
+  "source_commit": "d022e94863324d50e0650557ccecd4c170a23e4f",
+  "verdict": "HIGH_K_SCHEMA_V2_1_VALIDATION_PASS",
+  "warning_codes": [
+    "EXTERNAL_MANIFEST_NOT_FOUND",
+    "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED"
+  ]
+}
