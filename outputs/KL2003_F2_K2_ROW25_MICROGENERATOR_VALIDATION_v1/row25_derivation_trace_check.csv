@@ -1,0 +1,7 @@
+step_id,required_tokens,present,missing_tokens,status,notes
+source_class,a % 9 = 5,yes,,pass,trace requirement satisfied
+retarded_child,child = 4*a,yes,,pass,trace requirement satisfied
+class_transfer_mod9,(4*a) % 9 = 2,yes,,pass,trace requirement satisfied
+window_transfer,concreteWindow (y - 2) (4*a) = concreteWindow y a,yes,,pass,trace requirement satisfied
+row_shape,single-branch; advanced_contribution_in_EL = false,yes,,pass,trace requirement satisfied
+slack_reference,271/729000,yes,,pass,trace requirement satisfied

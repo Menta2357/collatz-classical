@@ -349,7 +349,7 @@ def build_json(
                         "value": constants_by_id["c25"]["value"],
                     },
                 ],
-                "target_bound": "c25",
+                "target_bound": constants_by_id["c25"]["value"],
                 "slack_id": "L2NT_D2_slack",
                 "source_ref": row25_baseline["baseline_refs"],
                 "normalization_ref": "rule_derived_row25",

@@ -1,0 +1,11 @@
+check_id,expected,actual,status,diff_kind,notes
+row_id,row25,row25,pass,MATCH,row25 exists
+row_shape,single-branch retarded row; no advanced contribution,single-branch retarded row; no advanced contribution,pass,MATCH,row25 shape matches baseline
+source_class,25,25,pass,MATCH,source class matches
+row_kind,D2,D2,pass,MATCH,row family matches
+no_advanced_branch,False,False,pass,MATCH,no advanced contribution
+child_formula,4*a,4*a,pass,MATCH,retarded child formula
+child_target_class,2,2,pass,MATCH,class transfer target
+window_policy,exact_retarded_window,exact_retarded_window,pass,MATCH,exact window transfer
+c25,1001/1000,1001/1000,pass,MATCH,c25 matches baseline
+L2NT_D2_slack,271/729000,271/729000,pass,MATCH,row25 slack matches baseline

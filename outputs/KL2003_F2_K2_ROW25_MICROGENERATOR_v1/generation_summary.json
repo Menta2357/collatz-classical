@@ -9,7 +9,7 @@
     "NO_HIGH_K_CLAIM",
     "NO_GLOBAL_COLLATZ_CLAIM"
   ],
-  "created_at": "2026-07-18T14:50:25.464996+00:00",
+  "created_at": "2026-07-18T19:47:12.589588+00:00",
   "derivation_step_count": 7,
   "derivation_trace": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25_derivation_trace.csv",
   "diff_artifact": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25_vs_baseline_diff.csv",
@@ -41,6 +41,6 @@
   "run_id": "KL2003_F2_K2_ROW25_MICROGENERATOR_v1",
   "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
   "scope": "k2_row25_only",
-  "source_commit": "98593f3df09f102e6e3a31ab136fc807239dd5d1",
+  "source_commit": "a55c0d4d537a09a96ebf37b3eaf154ed361c354c",
   "verdict": "ROW25_MICROGENERATOR_DIFF_PASS"
 }

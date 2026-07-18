@@ -53,7 +53,7 @@
       "lean_data_sha256": "RECORDED_IN_MANIFEST",
       "lean_import_policy": "Generated Lean data remains in outputs and is not imported."
     },
-    "created_at": "2026-07-18T14:50:25.464996+00:00",
+    "created_at": "2026-07-18T19:47:12.589588+00:00",
     "format_scope": "high_k_parametric",
     "generation_mode": "rule_derived_row25",
     "generator_version": "kl2003_f2_k2_row25_microgenerator_v1.py",
@@ -74,7 +74,7 @@
     "run_id": "KL2003_F2_K2_ROW25_MICROGENERATOR_v1",
     "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
     "scope": "k2_row25_only",
-    "source_commit": "98593f3df09f102e6e3a31ab136fc807239dd5d1",
+    "source_commit": "a55c0d4d537a09a96ebf37b3eaf154ed361c354c",
     "source_inputs": [
       {
         "path": "docs/KL2003_F2_K2_ROW25_MICROGENERATOR_SCOPING_v1.md",
@@ -248,7 +248,7 @@
       "slack_id": "L2NT_D2_slack",
       "source_class": "25",
       "source_ref": "concretePhi_row25_seam; d2_single_branch_core_instantiation",
-      "target_bound": "c25"
+      "target_bound": "1001/1000"
     }
   ],
   "slacks": [
