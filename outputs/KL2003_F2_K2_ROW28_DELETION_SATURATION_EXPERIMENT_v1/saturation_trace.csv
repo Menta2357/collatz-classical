@@ -1,0 +1,4 @@
+round,active_leaves_before,expanded_leaves,new_nodes,deleted_nodes,terminal_leaves,active_leaves_after,fixed_point_reached
+1,"[""G00""]","[""G00""]",5,1,"[""G01"", ""G03""]","[""G05""]",False
+2,"[""G05""]","[""G05""]",5,1,"[""G01"", ""G03"", ""G06"", ""G09""]","[""G08""]",False
+3,"[""G08""]","[""G08""]",5,0,"[""G01"", ""G03"", ""G06"", ""G09"", ""G11"", ""G13"", ""G14"", ""G15""]",[],True

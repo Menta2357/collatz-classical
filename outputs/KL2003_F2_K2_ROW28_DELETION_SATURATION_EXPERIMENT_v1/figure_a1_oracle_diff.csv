@@ -1,0 +1,4 @@
+diff_kind,direction,signature,status
+node_count,count_compare,generated=16; oracle=16,match
+edge_count,count_compare,generated=15; oracle=15,match
+deleted_count,count_compare,generated=2; oracle=2,match

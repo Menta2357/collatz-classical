@@ -106,14 +106,30 @@ splitting, deletion, termination, and Figure A1 oracle references must not be
 collapsed into unstructured notes.
 
 `termination_policy`:
-the current row28 gate records:
+the row28 gate originally recorded:
 
 ```text
 kind = expand_until_deletion_saturation
 status = hypothesis_untested
 ```
 
-This is representability only.  It is not a proof of saturation.
+That status was representability only.  It was not a proof of saturation.
+
+The k=2 row28 deletion-saturation experiment now validates this policy against
+the Figure A1/root_paths oracle:
+
+```text
+outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/generation_summary.json
+verdict = ROW28_DELETION_SATURATION_FIGURE_A1_PASS
+K2_DELETION_SATURATION_ORACLE_VALIDATED
+```
+
+This updates the k=2 row28 gate only.  The general-k saturation theorem remains
+outside this experiment:
+
+```text
+GENERAL_K_DELETION_SATURATION_UNPROVED
+```
 
 ## Validator Requirements
 
@@ -141,10 +157,18 @@ termination_policy.kind = expand_until_deletion_saturation
 termination_policy.status = hypothesis_untested
 ```
 
-with the warning:
+with the warning, for artifacts that have not supplied a k-specific saturation
+experiment:
 
 ```text
 DELETION_SATURATION_HYPOTHESIS_RECORDED_NOT_TESTED
+```
+
+For the k=2 row28 experiment output, the corresponding status is:
+
+```text
+K2_DELETION_SATURATION_ORACLE_VALIDATED
+GENERAL_K_DELETION_SATURATION_UNPROVED
 ```
 
 ## Row28 Representation Target
@@ -189,13 +213,23 @@ historical `phi22` M1 arm, an unresolved block reference, a block cycle, a
 counted deleted node, and a parent-plus-descendant sum.  The manifest warning
 remains named as `EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED`.
 
+The follow-up row28 k=2 deletion-saturation experiment is:
+
+```text
+scripts/kl2003_f2_k2_row28_deletion_saturation_experiment_v1.py
+```
+
+It uses KL2003 TeX rules as source and Figure A1/root_paths as a regression
+oracle only.  Its generated tree has 16 nodes, 15 edges, two deleted nodes, and
+zero oracle mismatches.
+
 ## No Claims
 
 This amendment does not:
 
 ```text
 implement row28 generator
-prove termination by deletion saturation
+prove general-k termination by deletion saturation
 generate k=3 data
 solve LP
 open Lean
@@ -210,7 +244,8 @@ claim global Collatz
 HIGH_K_SCHEMA_V2_1_DEFINED
 NESTED_EL_SCHEMA_FIELDS_DEFINED
 SCHEMA_V2_BACKWARD_COMPATIBILITY_PRESERVED
-DELETION_SATURATION_HYPOTHESIS_RECORDED_NOT_TESTED
+K2_DELETION_SATURATION_ORACLE_VALIDATED
+GENERAL_K_DELETION_SATURATION_UNPROVED
 ROW28_GENERATOR_NOT_STARTED
 NO_K3_GENERATION
 NO_HIGH_K_CLAIM

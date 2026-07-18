@@ -1,0 +1,3 @@
+round,deleted_node,deleted_mode,earlier_matching_mode_ancestor,ancestor_shift,deleted_shift,comparison_exact,source_ref,deletion_reason
+1,G04,8,G00,0,alpha-1,0 < alpha-1,/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:763-779:deletion_rule,same mode 8 ancestor G00 has 0 < alpha-1
+2,G10,8,G00,0,2*alpha-3,0 < 2*alpha-3,/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:763-779:deletion_rule,same mode 8 ancestor G00 has 0 < 2*alpha-3

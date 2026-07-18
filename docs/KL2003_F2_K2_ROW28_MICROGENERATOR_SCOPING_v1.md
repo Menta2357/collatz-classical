@@ -200,6 +200,40 @@ If the source rule is not clear, do not implement row28.  Classify:
 BLOCKED_ON_EL_TERMINATION_RULE_SOURCE
 ```
 
+### Deletion Saturation Experiment Update
+
+The k=2 row28 deletion-saturation experiment now executes the source-parametric
+expansion rule and deletion rule to a fixed point, then compares the generated
+tree against Figure A1/root_paths as an oracle:
+
+```text
+scripts/kl2003_f2_k2_row28_deletion_saturation_experiment_v1.py
+outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/
+```
+
+Result:
+
+```text
+verdict = ROW28_DELETION_SATURATION_FIGURE_A1_PASS
+generated_node_count = 16
+generated_edge_count = 15
+deleted_node_count = 2
+figure_a1_mismatch_count = 0
+rounds = 3
+```
+
+This removes the k=2 row28 operational uncertainty:
+
+```text
+K2_DELETION_SATURATION_ORACLE_VALIDATED
+```
+
+It does not prove a general-k saturation theorem:
+
+```text
+GENERAL_K_DELETION_SATURATION_UNPROVED
+```
+
 ## Schema v2 Nested EL Check
 
 The current high-k certificate format v2 must be checked against row28 before
@@ -611,6 +645,7 @@ requires this scoping contract to be implemented by a future generator that:
 - emits the `c` split and `cPrime` split;
 - emits V3 `M1V3` with `phi25`;
 - derives deletion from the parametric TeX rule;
+- matches the k=2 deletion-saturation experiment;
 - reproduces the Figure A1 crossed-node oracle;
 - records the EL termination rule source;
 - passes schema validation;
@@ -659,6 +694,8 @@ DELETION_RULE_GENERATOR_TARGET_DEFINED
 FIGURE_A1_ORACLE_DIFF_REQUIRED
 EL_TERMINATION_RULE_REQUIRED
 NESTED_EL_SCHEMA_CHECK_REQUIRED
+K2_DELETION_SATURATION_ORACLE_VALIDATED
+GENERAL_K_DELETION_SATURATION_UNPROVED
 ROW28_CPRIME_SPLIT_TARGET_DEFINED
 M1V3_PHI25_GUARDRAIL_RECORDED
 BASELINE_AS_TEST_NOT_SOURCE

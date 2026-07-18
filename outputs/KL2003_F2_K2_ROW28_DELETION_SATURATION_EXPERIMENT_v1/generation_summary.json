@@ -1,0 +1,79 @@
+{
+  "active_terminal_count": 8,
+  "blocked_reason": "",
+  "classification": [
+    "ROW28_DELETION_SATURATION_EXPERIMENT_CREATED",
+    "PARAMETRIC_DELETION_RULE_EXECUTED",
+    "FIGURE_A1_USED_AS_REGRESSION_ORACLE_ONLY",
+    "ROW28_DELETION_SATURATION_FIGURE_A1_PASS",
+    "K2_DELETION_SATURATION_ORACLE_VALIDATED",
+    "GENERAL_K_DELETION_SATURATION_UNPROVED",
+    "ROW28_GENERATOR_NOT_STARTED",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T23:37:36.683140+00:00",
+  "deleted_node_count": 2,
+  "figure_a1_mismatch_count": 0,
+  "figure_a1_oracle_deleted_count": 2,
+  "figure_a1_oracle_deleted_nodes": [
+    "N04",
+    "N05"
+  ],
+  "figure_a1_oracle_edge_count": 15,
+  "figure_a1_oracle_node_count": 16,
+  "generated_edge_count": 15,
+  "generated_graph_max_path_length": 6,
+  "generated_max_depth": 3,
+  "generated_node_count": 16,
+  "guardrails": [
+    "NO_FIGURE_A1_AS_GENERATOR_SOURCE",
+    "NO_HARDCODED_DEPTH_OR_NODE_COUNT_IN_GENERATOR_LOGIC",
+    "NO_ROW28_GENERATOR_IMPLEMENTATION",
+    "NO_K3_GENERATION",
+    "NO_LP",
+    "NO_LEAN_BUILD",
+    "NO_THEOREM_CHANGE",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "oracle_policy": "Figure A1/root_paths read only after generation, for regression diff.",
+  "outputs": {
+    "deletion_trace": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/deletion_trace.csv",
+    "figure_a1_oracle_diff": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/figure_a1_oracle_diff.csv",
+    "generated_edges": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/generated_edges.csv",
+    "generated_nodes": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/generated_nodes.csv",
+    "manifest": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/manifest_sha256.csv",
+    "mismatch": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/mismatch.csv",
+    "saturation_trace": "outputs/KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1/saturation_trace.csv"
+  },
+  "rounds": 3,
+  "run_id": "KL2003_F2_K2_ROW28_DELETION_SATURATION_EXPERIMENT_v1",
+  "safety_limit_hit": false,
+  "safety_node_limit": 10000,
+  "safety_round_limit": 32,
+  "saturation_reached": true,
+  "session_clock_europe_madrid": "2026-07-19T01:37:36.679568+02:00",
+  "source_checks": {
+    "D1_formula_present": true,
+    "D2_formula_present": true,
+    "D3_formula_present": true,
+    "deletion_rule_present": true,
+    "kminus1_min_present": true,
+    "splitting_step_present": true,
+    "termination_theorem_present": true
+  },
+  "source_commit": "39e86c9a95cdc717587fb4edef1c8e950e451df2",
+  "source_path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+  "source_ranges": {
+    "D1_D2_D3": "433-445",
+    "back_substitution_setup": "680-703",
+    "deletion_rule": "763-779",
+    "phi_kminus1_min": "450-451",
+    "splitting_tree_step": "752-761",
+    "termination_theorem": "794-801"
+  },
+  "source_sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+  "verdict": "ROW28_DELETION_SATURATION_FIGURE_A1_PASS"
+}
