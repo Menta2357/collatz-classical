@@ -1,0 +1,10 @@
+constant_id,baseline_value,generated_value,baseline_kind,generated_kind,status,diff_kind,notes
+lambda,27/20,27/20,lambda,lambda,pass,MATCH,constant baseline preserved
+gammaK2,logb 2 (27/20),logb 2 (27/20),exponent,exponent,pass,MATCH,constant baseline preserved
+DeltaV2,(20/27)^14/2,(20/27)^14/2,base_constant,base_constant,pass,MATCH,constant baseline preserved
+c22,73/40,73/40,row_coefficient,row_coefficient,pass,MATCH,constant baseline preserved
+c25,1001/1000,1001/1000,row_coefficient,row_coefficient,pass,MATCH,constant baseline preserved
+c28,69/40,69/40,row_coefficient,row_coefficient,pass,MATCH,constant baseline preserved
+L2NT_D1_slack,29/9720,29/9720,slack,slack,pass,MATCH,constant baseline preserved
+L2NT_D2_slack,271/729000,271/729000,slack,slack,pass,MATCH,constant baseline preserved
+L2NT_D3_slack,2077/145800,2077/145800,slack,slack,pass,MATCH,constant baseline preserved

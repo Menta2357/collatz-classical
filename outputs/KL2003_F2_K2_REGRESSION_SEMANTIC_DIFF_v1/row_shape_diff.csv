@@ -1,0 +1,5 @@
+row_id,baseline_expected_shape,baseline_required_feature,generated_present,generated_source_class,generated_row_kind,status,diff_kind,notes
+row22,two-branch with retarded branch plus advanced branch using parity lift,row22 parity lift,yes,22,D1,pass,MATCH,row baseline preserved
+row25,single-branch retarded row; no advanced contribution,row25 single-branch,yes,25,D2,pass,MATCH,row baseline preserved
+row28,two-branch row with nested EL block and row28 c-prime split,row28 c' split / post-deletion behavior,yes,28,D3 / EL,pass,MATCH,row baseline preserved
+M1V3,"min(phi28 + M2V3, phi25)",meta-errata phi25 reinstated,yes,row28 nested block,EL auxiliary,pass,MATCH,row baseline preserved

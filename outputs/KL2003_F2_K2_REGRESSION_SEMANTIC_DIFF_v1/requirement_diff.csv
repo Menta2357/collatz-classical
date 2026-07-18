@@ -1,0 +1,7 @@
+requirement_id,baseline_present,generated_present,status,diff_kind,notes
+reproduce_rows_v3,yes,yes,pass,MATCH,requirement preserved
+reproduce_meta_errata_phi25,yes,yes,pass,MATCH,requirement preserved
+reproduce_deletion_behavior,yes,yes,pass,MATCH,requirement preserved
+reproduce_certificate_constants,yes,yes,pass,MATCH,requirement preserved
+emit_json_lean_twin_artifacts_v2,yes,yes,pass,MATCH,requirement preserved
+any_math_diff_is_generator_blocker,yes,yes,pass,MATCH,requirement preserved
