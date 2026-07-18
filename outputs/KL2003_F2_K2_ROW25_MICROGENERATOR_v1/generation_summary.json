@@ -1,0 +1,46 @@
+{
+  "classifications": [
+    "K2_ROW25_MICROGENERATOR_CREATED",
+    "ROW25_RULE_DERIVATION_EMITTED",
+    "ROW25_MICROGENERATOR_DIFF_PASS",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T14:50:25.464996+00:00",
+  "derivation_step_count": 7,
+  "derivation_trace": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25_derivation_trace.csv",
+  "diff_artifact": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25_vs_baseline_diff.csv",
+  "diff_check_count": 19,
+  "diff_failure_count": 0,
+  "diff_failures": [],
+  "forbidden_row_ids_present": [],
+  "generated_row_ids": [
+    "row25"
+  ],
+  "generation_mode": "rule_derived_row25",
+  "generator_version": "kl2003_f2_k2_row25_microgenerator_v1.py",
+  "guardrails": [
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_GENERATED_LEAN_IMPORT",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_THEOREM_CLAIM",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "json_artifact": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25.generated.json",
+  "lean_data_artifact": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/KL2003K2Row25GeneratedData.lean",
+  "manifest": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/manifest_sha256.csv",
+  "mathematical_generation": true,
+  "proof_status": "data_candidate_only",
+  "row_count": 1,
+  "run_id": "KL2003_F2_K2_ROW25_MICROGENERATOR_v1",
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+  "scope": "k2_row25_only",
+  "source_commit": "98593f3df09f102e6e3a31ab136fc807239dd5d1",
+  "verdict": "ROW25_MICROGENERATOR_DIFF_PASS"
+}

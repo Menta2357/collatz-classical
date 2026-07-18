@@ -1,0 +1,20 @@
+check_id,expected,actual,status,diff_kind,notes
+row25_only,"[""row25""]","[""row25""]",pass,MATCH,only row25 is generated
+row_id,row25,row25,pass,MATCH,row id matches baseline
+source_class,25,25,pass,MATCH,source class preserved
+row_kind,D2,D2,pass,MATCH,row family preserved
+expected_shape,single-branch retarded row; no advanced contribution,single-branch retarded row; no advanced contribution,pass,MATCH,row25 single-branch shape preserved
+required_feature,row25 single-branch,row25 single-branch,pass,MATCH,row25 single-branch feature preserved
+advanced_absent,False,False,pass,MATCH,no advanced EL contribution
+generation_mode,rule_derived_row25,rule_derived_row25,pass,MATCH,rule-derived generation mode
+mathematical_generation,True,True,pass,MATCH,mathematical generation flag set
+proof_status,data_candidate_only,data_candidate_only,pass,MATCH,no theorem/proof claim
+constant_lambda,27/20,27/20,pass,MATCH,lambda baseline value preserved
+constant_DeltaV2,(20/27)^14/2,(20/27)^14/2,pass,MATCH,DeltaV2 baseline value preserved
+constant_c22,73/40,73/40,pass,MATCH,c22 baseline value preserved
+constant_c25,1001/1000,1001/1000,pass,MATCH,c25 baseline value preserved
+constant_L2NT_D2_slack,271/729000,271/729000,pass,MATCH,L2NT_D2_slack baseline value preserved
+child_formula,4*a,4*a,pass,MATCH,retarded child formula derived
+child_target_class,2,2,pass,MATCH,retarded child class is 2
+child_shift,-2,-2,pass,MATCH,retarded shift is -2
+window_policy,exact_retarded_window,exact_retarded_window,pass,MATCH,exact retarded window policy

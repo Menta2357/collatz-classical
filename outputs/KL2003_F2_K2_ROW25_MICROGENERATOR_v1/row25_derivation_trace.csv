@@ -1,0 +1,8 @@
+step_id,rule,input,derived,status,proof_status,notes
+source_class,k2 row25 source residue,a % 9 = 5,a = 9*t + 5,derived,data_trace_only,Parameter t witnesses the residue class.
+retarded_child,retarded branch,a,child = 4*a,derived,data_trace_only,This is the only consumed EL branch for row25.
+class_transfer_expand,substitute a = 9*t + 5,4*a,4*a = 4*(9*t + 5) = 36*t + 20,derived,data_trace_only,Algebraic expansion for residue computation.
+class_transfer_mod9,mod 9 decomposition,36*t + 20,"36*t + 20 = 9*(4*t + 2) + 2, so (4*a) % 9 = 2",derived,data_trace_only,Retarded child transfers from class 5 to tracked class 2.
+row_shape,D2 EL row policy,row25,single-branch retarded; advanced_contribution_in_EL = false,derived,data_trace_only,Auxiliary advanced child may instantiate core but is not consumed.
+window_transfer,exact retarded window,2^(y-2) * (4*a),2^(y-2) * (4*a) = 2^y * a; concreteWindow (y - 2) (4*a) = concreteWindow y a,derived,data_trace_only,No floor/ceil loss and no epsilon pad.
+slack_reference,baseline certificate reference,certificate_constants.csv,L2NT_D2_slack = 271/729000,attached,data_trace_only,LP is not solved by this microgenerator.
