@@ -1,0 +1,554 @@
+{
+  "deletion_marks": [
+    {
+      "boundary_correction": "none",
+      "child_id": "row22_retarded_4a",
+      "deleted": false,
+      "deletion_policy": "none_for_row22_microgenerator_scope",
+      "reason": "row22 retarded branch is kept",
+      "row_id": "row22",
+      "source_ref": "concretePhi_row22_seam; d1_core_instantiation"
+    },
+    {
+      "boundary_correction": "epsilon0_pad_for_advanced_window",
+      "child_id": "row22_advanced_lifted_2c",
+      "deleted": false,
+      "deletion_policy": "none_for_row22_microgenerator_scope",
+      "reason": "row22 parity-lifted advanced branch is kept",
+      "row_id": "row22",
+      "source_ref": "concretePhi_row22_seam; d1_core_instantiation"
+    }
+  ],
+  "inverse_words": [
+    {
+      "advanced_contribution_in_EL": false,
+      "boundary_correction": "none",
+      "branch_kind": "retarded",
+      "child_id": "row22_retarded_4a",
+      "coefficient_ref": "c28",
+      "deleted": false,
+      "depth": "2",
+      "epsilon_pad": "none",
+      "fiber_parent": "retarded_path_parent_2a",
+      "forward_route": [
+        "4*a -> 2*a",
+        "2*a -> a"
+      ],
+      "inverse_word": [
+        "even",
+        "even"
+      ],
+      "literal_id": "row22_retarded_literal",
+      "reason": "row22 retarded source",
+      "residue_side_conditions": [
+        "a = 9*t + 2",
+        "4*a = 9*(4*t) + 8"
+      ],
+      "root_formula": "4*a",
+      "rounding_loss": "0",
+      "row_id": "row22",
+      "shift": "-2",
+      "target_class": "8",
+      "window_identity": "concreteWindow (y - 2) (4*a) = concreteWindow y a",
+      "window_policy": "exact_retarded_window"
+    },
+    {
+      "advanced_contribution_in_EL": true,
+      "boundary_correction": "epsilon0_pad_for_advanced_window",
+      "branch_kind": "advanced_parity_lift",
+      "child_id": "row22_advanced_lifted_2c",
+      "coefficient_ref": "min3(c22,c25,c28)",
+      "deleted": false,
+      "depth": "2",
+      "direct_child_formula": "c = 6*t + 1",
+      "direct_child_tracked": false,
+      "epsilon_pad": "epsilon0",
+      "fiber_parent": "advanced_child_c",
+      "forward_route": [
+        "2*c -> c",
+        "c -> a"
+      ],
+      "inverse_word": [
+        "odd_preimage",
+        "even_lift"
+      ],
+      "literal_id": "row22_advanced_parity_lift_literal",
+      "reason": "direct advanced child c is 1 mod 3, so lifted child 2*c is tracked",
+      "residue_side_conditions": [
+        "a = 9*t + 2",
+        "c = 6*t + 1",
+        "c % 3 = 1",
+        "t % 3 = 0 -> (2*c) % 9 = 2",
+        "t % 3 = 1 -> (2*c) % 9 = 5",
+        "t % 3 = 2 -> (2*c) % 9 = 8"
+      ],
+      "residue_split": [
+        {
+          "condition": "t % 3 = 0",
+          "target_class": "2"
+        },
+        {
+          "condition": "t % 3 = 1",
+          "target_class": "5"
+        },
+        {
+          "condition": "t % 3 = 2",
+          "target_class": "8"
+        }
+      ],
+      "root_formula": "2*c = 12*t + 2",
+      "rounding_loss": "0",
+      "row_id": "row22",
+      "shift": "-2",
+      "symbolic_shift": "shiftAlphaMinus2Pad",
+      "target_class": "min3_2_5_8",
+      "window_identity": "concreteWindow (z - 1) (2*c) = concreteWindow z c",
+      "window_pad": "shiftAlphaMinus2Pad = alpha - 2 - epsilon0",
+      "window_policy": "advanced_parity_lift_with_epsilon_pad"
+    }
+  ],
+  "metadata": {
+    "artifact_links": {
+      "json_artifact": "row22.generated.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "scripts/kl2003_f2_k2_row22_microgenerator_v1.py",
+      "json_to_lean_generator_sha256": "RECORDED_IN_MANIFEST",
+      "lean_data_artifact": "KL2003K2Row22GeneratedData.lean",
+      "lean_data_sha256": "RECORDED_IN_MANIFEST",
+      "lean_import_policy": "Generated Lean data remains in outputs and is not imported."
+    },
+    "created_at": "2026-07-18T21:56:26.551317+00:00",
+    "format_scope": "high_k_parametric",
+    "generation_mode": "rule_derived_row22",
+    "generator_version": "kl2003_f2_k2_row22_microgenerator_v1.py",
+    "guardrails": [
+      "DATA_CANDIDATE_ONLY",
+      "NO_LEAN_PROOF",
+      "NO_GENERATED_LEAN_IMPORT",
+      "NO_K3_GENERATION",
+      "NO_LP_SOLVED",
+      "NO_THEOREM_CLAIM",
+      "NO_HIGH_K_CLAIM",
+      "NO_GLOBAL_COLLATZ_CLAIM"
+    ],
+    "k": "2",
+    "mathematical_generation": true,
+    "pre_reduction_class_count": "9",
+    "proof_status": "data_candidate_only",
+    "run_id": "KL2003_F2_K2_ROW22_MICROGENERATOR_v1",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "scope": "k2_row22_only",
+    "source_commit": "1739dca1bd49be5805d13e9319a2b73df9e40317",
+    "source_inputs": [
+      {
+        "path": "docs/KL2003_F2_K2_ROW22_MICROGENERATOR_SCOPING_v1.md",
+        "role": "row22_microgenerator_scoping",
+        "sha256": "1f52d431a2db443201d1dcb930566cadf0482acc9ae7d32fc069c64d835b6b48"
+      },
+      {
+        "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
+        "role": "schema_v2_scoping",
+        "sha256": "0f8dc838f819ff72b741dc23c6bc6f56ab8eab255d6d45fba3eb680859ce257f"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+        "role": "row22_baseline_row",
+        "sha256": "1a590bf696250d1b1544e314ad0d4bbd9e31bc9713dcda22b6b7d0210635ee98"
+      },
+      {
+        "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/certificate_constants.csv",
+        "role": "row22_baseline_constants",
+        "sha256": "abfc3bb2d167b18e4685cf2efc6cce81c2e13c713c1552e38d268f4c14f8c8fe"
+      }
+    ],
+    "tracked_class_convention": "k2_manual_v3_classes_mod9_2_5_8",
+    "tracked_class_count": "3"
+  },
+  "no_claims": {
+    "global_collatz_claim": false,
+    "high_k_claim": false,
+    "k3_generation": false,
+    "lean_proof": false,
+    "theorem_claim": false
+  },
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "lambda",
+        "kind": "lambda",
+        "lean_name": "lambdaR",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003K2AlphaBounds.lean",
+        "value": "27/20"
+      },
+      {
+        "coefficient_id": "DeltaV2",
+        "kind": "base_constant",
+        "lean_name": "DeltaV2",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "(20/27)^14/2"
+      },
+      {
+        "coefficient_id": "c22",
+        "kind": "row_coefficient",
+        "lean_name": "c22R",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "73/40"
+      },
+      {
+        "coefficient_id": "c25",
+        "kind": "row_coefficient",
+        "lean_name": "c25R",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "1001/1000"
+      },
+      {
+        "coefficient_id": "c28",
+        "kind": "row_coefficient",
+        "lean_name": "c28R",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "69/40"
+      },
+      {
+        "coefficient_id": "L2NT_D1_slack",
+        "kind": "slack",
+        "lean_name": "L2NT_D1_slack",
+        "must_reproduce_exactly": "yes",
+        "notes": "row22 microgenerator constant reference",
+        "source": "KL2003K2CertificateData.lean",
+        "value": "29/9720"
+      }
+    ],
+    "float_diagnostics": {
+      "float_evidence_used": false,
+      "notes": "No floats are emitted as evidence."
+    },
+    "lambda_interval": {
+      "exact": "27/20",
+      "source": "baseline"
+    },
+    "row_lhs": {
+      "row22": "c28 + min3(c22,c25,c28)"
+    },
+    "row_rhs": {
+      "row22": "c22"
+    },
+    "solver_manifest": {
+      "lp_solved": false,
+      "notes": "Row22 microgenerator attaches baseline slack; it does not solve an LP.",
+      "solver": "none"
+    },
+    "variables": {
+      "advanced_child": "c = 6*t + 1",
+      "lifted_child": "2*c = 12*t + 2",
+      "residue_parameter": "t",
+      "retarded_child": "4*a",
+      "source_root": "a"
+    }
+  },
+  "rows": [
+    {
+      "advanced_contribution_in_EL": true,
+      "advanced_direct_child_tracked": false,
+      "baseline_expected_shape": "two-branch with retarded branch plus advanced branch using parity lift",
+      "baseline_required_feature": "row22 parity lift",
+      "children": [
+        {
+          "advanced_contribution_in_EL": false,
+          "boundary_correction": "none",
+          "branch_kind": "retarded",
+          "child_id": "row22_retarded_4a",
+          "coefficient_ref": "c28",
+          "deleted": false,
+          "depth": "2",
+          "epsilon_pad": "none",
+          "fiber_parent": "retarded_path_parent_2a",
+          "forward_route": [
+            "4*a -> 2*a",
+            "2*a -> a"
+          ],
+          "inverse_word": [
+            "even",
+            "even"
+          ],
+          "literal_id": "row22_retarded_literal",
+          "reason": "row22 retarded source",
+          "residue_side_conditions": [
+            "a = 9*t + 2",
+            "4*a = 9*(4*t) + 8"
+          ],
+          "root_formula": "4*a",
+          "rounding_loss": "0",
+          "row_id": "row22",
+          "shift": "-2",
+          "target_class": "8",
+          "window_identity": "concreteWindow (y - 2) (4*a) = concreteWindow y a",
+          "window_policy": "exact_retarded_window"
+        },
+        {
+          "advanced_contribution_in_EL": true,
+          "boundary_correction": "epsilon0_pad_for_advanced_window",
+          "branch_kind": "advanced_parity_lift",
+          "child_id": "row22_advanced_lifted_2c",
+          "coefficient_ref": "min3(c22,c25,c28)",
+          "deleted": false,
+          "depth": "2",
+          "direct_child_formula": "c = 6*t + 1",
+          "direct_child_tracked": false,
+          "epsilon_pad": "epsilon0",
+          "fiber_parent": "advanced_child_c",
+          "forward_route": [
+            "2*c -> c",
+            "c -> a"
+          ],
+          "inverse_word": [
+            "odd_preimage",
+            "even_lift"
+          ],
+          "literal_id": "row22_advanced_parity_lift_literal",
+          "reason": "direct advanced child c is 1 mod 3, so lifted child 2*c is tracked",
+          "residue_side_conditions": [
+            "a = 9*t + 2",
+            "c = 6*t + 1",
+            "c % 3 = 1",
+            "t % 3 = 0 -> (2*c) % 9 = 2",
+            "t % 3 = 1 -> (2*c) % 9 = 5",
+            "t % 3 = 2 -> (2*c) % 9 = 8"
+          ],
+          "residue_split": [
+            {
+              "condition": "t % 3 = 0",
+              "target_class": "2"
+            },
+            {
+              "condition": "t % 3 = 1",
+              "target_class": "5"
+            },
+            {
+              "condition": "t % 3 = 2",
+              "target_class": "8"
+            }
+          ],
+          "root_formula": "2*c = 12*t + 2",
+          "rounding_loss": "0",
+          "row_id": "row22",
+          "shift": "-2",
+          "symbolic_shift": "shiftAlphaMinus2Pad",
+          "target_class": "min3_2_5_8",
+          "window_identity": "concreteWindow (z - 1) (2*c) = concreteWindow z c",
+          "window_pad": "shiftAlphaMinus2Pad = alpha - 2 - epsilon0",
+          "window_policy": "advanced_parity_lift_with_epsilon_pad"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "c28",
+          "role": "retarded_phi28_y_minus_2",
+          "value": "69/40"
+        },
+        {
+          "coefficient_id": "c22",
+          "role": "target_phi22_y",
+          "value": "73/40"
+        },
+        {
+          "coefficient_id": "min3_c22_c25_c28",
+          "role": "advanced_parity_lift_min3",
+          "value": "1"
+        }
+      ],
+      "deletion_policy": "none_for_row22_microgenerator_scope",
+      "generation_mode": "rule_derived_row22",
+      "mathematical_generation": true,
+      "normalization_ref": "rule_derived_row22",
+      "parity_lift": true,
+      "proof_status": "data_candidate_only",
+      "row_id": "row22",
+      "row_kind": "D1",
+      "row_shape_symbolic": "phi28(y - 2) + min3(phi22,phi25,phi28)(y + shiftAlphaMinus2Pad) <= phi22(y)",
+      "slack_id": "L2NT_D1_slack",
+      "source_class": "22",
+      "source_ref": "concretePhi_row22_seam; d1_core_instantiation",
+      "target_bound": "73/40"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "0",
+      "lhs": "0",
+      "notes": "Baseline row22/D1 slack; positivity is for future verifier.",
+      "numerator_bits": "0",
+      "rhs": "29/9720",
+      "row_id": "row22",
+      "slack": "29/9720",
+      "slack_id": "L2NT_D1_slack",
+      "strictly_positive": true
+    }
+  ],
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "class_mod9_2",
+      "modulus": "9",
+      "notes": "Source class for row22 and one lifted residue split case.",
+      "pre_reduction_residues": [
+        "2"
+      ],
+      "representative": "2",
+      "source_rule": "row22_source_and_lifted_split_target"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_5",
+      "modulus": "9",
+      "notes": "One lifted residue split case in the min3 branch.",
+      "pre_reduction_residues": [
+        "5"
+      ],
+      "representative": "5",
+      "source_rule": "row22_lifted_split_target"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_8",
+      "modulus": "9",
+      "notes": "Target class for row22 retarded child 4*a and one lifted split case.",
+      "pre_reduction_residues": [
+        "8"
+      ],
+      "representative": "8",
+      "source_rule": "row22_retarded_child_target_class"
+    }
+  ],
+  "verification_targets": [
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check row22 generated two-branch shape.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "row_well_formed"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check a % 9 = 2 -> (4*a) % 9 = 8.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "retarded_residue_compatibility"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check c = 6*t + 1 and 3*c + 1 = 2*a.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "advanced_child_arithmetic"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check c % 3 = 1 and direct c is not tracked.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "advanced_child_not_tracked"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check 2*c -> c -> a.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "parity_lift_forward_route"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check lifted child cases in {2,5,8}.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "lifted_residue_split"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check retarded window and parity lift window/pad policy.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "window_policy"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check no row22 microgenerator deletion marks are consumed.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "deletion_rule_soundness"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check row22 seam obligation shape.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "abstract_row_discharge"
+    },
+    {
+      "expected_checker": "future_row22_lean_verifier",
+      "input_sections": [
+        "rows",
+        "inverse_words",
+        "rational_certificate",
+        "slacks"
+      ],
+      "notes": "Check L2NT_D1_slack positivity.",
+      "status": "PENDING_LEAN_VERIFIER",
+      "target_id": "rational_slack_positive"
+    }
+  ]
+}

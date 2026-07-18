@@ -1,0 +1,61 @@
+{
+  "classifications": [
+    "K2_ROW22_MICROGENERATOR_CREATED",
+    "ROW22_RULE_DERIVATION_EMITTED",
+    "PARITY_LIFT_GENERATED",
+    "ROW22_MICROGENERATOR_DIFF_PASS",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T21:56:26.551317+00:00",
+  "derivation_step_count": 15,
+  "derivation_trace": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/row22_derivation_trace.csv",
+  "diff_artifact": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/row22_vs_baseline_diff.csv",
+  "diff_check_count": 28,
+  "diff_failure_count": 0,
+  "diff_failures": [],
+  "forbidden_row_ids_present": [],
+  "generated_row_ids": [
+    "row22"
+  ],
+  "generation_mode": "rule_derived_row22",
+  "generator_version": "kl2003_f2_k2_row22_microgenerator_v1.py",
+  "guardrails": [
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_GENERATED_LEAN_IMPORT",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_THEOREM_CLAIM",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "json_artifact": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/row22.generated.json",
+  "lean_data_artifact": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/KL2003K2Row22GeneratedData.lean",
+  "manifest": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/manifest_sha256.csv",
+  "mathematical_generation": true,
+  "proof_status": "data_candidate_only",
+  "row22_features": {
+    "advanced_direct_child": "c = 6*t + 1",
+    "advanced_direct_child_tracked": false,
+    "deletion_tree_present": false,
+    "lifted_residue_split": [
+      "2",
+      "5",
+      "8"
+    ],
+    "m1v3_present": false,
+    "parity_lift": "2*c",
+    "retarded_branch": "4*a -> class 8",
+    "two_branch": true
+  },
+  "row_count": 1,
+  "run_id": "KL2003_F2_K2_ROW22_MICROGENERATOR_v1",
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+  "scope": "k2_row22_only",
+  "source_commit": "1739dca1bd49be5805d13e9319a2b73df9e40317",
+  "verdict": "ROW22_MICROGENERATOR_DIFF_PASS"
+}

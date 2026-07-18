@@ -1,0 +1,29 @@
+check_id,expected,actual,status,diff_kind,notes
+row22_only,"[""row22""]","[""row22""]",pass,MATCH,only row22 is generated
+forbidden_rows_absent,[],[],pass,MATCH,no row25/row28/M1V3
+row_id,row22,row22,pass,MATCH,row id matches baseline
+source_class,22,22,pass,MATCH,source class preserved
+row_kind,D1,D1,pass,MATCH,row family preserved
+expected_shape,two-branch with retarded branch plus advanced branch using parity lift,two-branch with retarded branch plus advanced branch using parity lift,pass,MATCH,row22 two-branch shape preserved
+required_feature,row22 parity lift,row22 parity lift,pass,MATCH,row22 parity-lift feature preserved
+parity_lift,True,True,pass,MATCH,parity lift present
+direct_child_not_tracked,False,False,pass,MATCH,direct c is not treated as tracked
+generation_mode,rule_derived_row22,rule_derived_row22,pass,MATCH,rule-derived generation mode
+mathematical_generation,True,True,pass,MATCH,mathematical generation flag set
+proof_status,data_candidate_only,data_candidate_only,pass,MATCH,no theorem/proof claim
+child_ids,"[""row22_retarded_4a"", ""row22_advanced_lifted_2c""]","[""row22_retarded_4a"", ""row22_advanced_lifted_2c""]",pass,MATCH,retarded and lifted advanced children emitted
+retarded_formula,4*a,4*a,pass,MATCH,retarded child formula derived
+retarded_target_class,8,8,pass,MATCH,retarded child class is 8
+retarded_shift,-2,-2,pass,MATCH,retarded shift is -2
+advanced_direct_formula,c = 6*t + 1,c = 6*t + 1,pass,MATCH,direct advanced child formula derived
+advanced_direct_tracked,False,False,pass,MATCH,direct child is not tracked
+lifted_formula,2*c = 12*t + 2,2*c = 12*t + 2,pass,MATCH,lifted child formula derived
+lifted_target_class,min3_2_5_8,min3_2_5_8,pass,MATCH,lifted child routes to min3
+lifted_residue_split,"[""2"", ""5"", ""8""]","[""2"", ""5"", ""8""]",pass,MATCH,lifted residue split in tracked classes
+advanced_window_policy,advanced_parity_lift_with_epsilon_pad,advanced_parity_lift_with_epsilon_pad,pass,MATCH,advanced parity lift pad recorded
+constant_lambda,27/20,27/20,pass,MATCH,lambda baseline value preserved
+constant_DeltaV2,(20/27)^14/2,(20/27)^14/2,pass,MATCH,DeltaV2 baseline value preserved
+constant_c22,73/40,73/40,pass,MATCH,c22 baseline value preserved
+constant_c25,1001/1000,1001/1000,pass,MATCH,c25 baseline value preserved
+constant_c28,69/40,69/40,pass,MATCH,c28 baseline value preserved
+constant_L2NT_D1_slack,29/9720,29/9720,pass,MATCH,L2NT_D1_slack baseline value preserved

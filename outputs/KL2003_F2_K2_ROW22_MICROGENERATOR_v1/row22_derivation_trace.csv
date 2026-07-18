@@ -1,0 +1,16 @@
+step_id,rule,input,derived,source_kind,status,proof_status,notes
+source_class,k2 row22 source residue,a % 9 = 2,a = 9*t + 2,PARAMETRIC_RULE,derived,data_trace_only,Parameter t witnesses the row22 source residue.
+retarded_child,retarded branch,a,child = 4*a,PARAMETRIC_RULE,derived,data_trace_only,Retarded branch is consumed by the D1 row.
+retarded_class_transfer_mod9,substitute a = 9*t + 2,4*a,"4*a = 4*(9*t + 2) = 36*t + 8, so (4*a) % 9 = 8",ARITHMETIC_DERIVATION,derived,data_trace_only,Retarded branch transfers from class 2 to tracked class 8.
+retarded_window_transfer,exact retarded window,2^(y-2) * (4*a),2^(y-2) * (4*a) = 2^y * a; concreteWindow (y - 2) (4*a) = concreteWindow y a,ARITHMETIC_DERIVATION,derived,data_trace_only,No retarded rounding loss.
+advanced_child_definition,odd inverse child for row22,a = 9*t + 2,c = 6*t + 1,PARAMETRIC_RULE,derived,data_trace_only,Direct advanced child for D1 before parity lift.
+advanced_child_arithmetic,odd child maps to root,"a = 9*t + 2, c = 6*t + 1",3*c + 1 = 3*(6*t + 1) + 1 = 18*t + 4 = 2*a,ARITHMETIC_DERIVATION,derived,data_trace_only,Equivalently T c = a for the KL2003 T.
+advanced_child_mod_three,direct child not tracked,c = 6*t + 1,"c % 3 = 1, so direct c is not in tracked classes {2,5,8}",ARITHMETIC_DERIVATION,derived,data_trace_only,Generator must not treat direct c as the tracked advanced child.
+parity_lift_definition,parity lift,c,lifted = 2*c,PARAMETRIC_RULE,derived,data_trace_only,This is the tracked advanced population.
+parity_lift_forward_route,forward route,"lifted = 2*c, 3*c + 1 = 2*a",2c -> c -> a,ARITHMETIC_DERIVATION,derived,data_trace_only,Explains the extra -1 shift after the direct advanced child.
+parity_window_transfer,exact parity window,2^(z-1) * (2*c),2^(z-1) * (2*c) = 2^z * c; concreteWindow (z - 1) (2*c) = concreteWindow z c,ARITHMETIC_DERIVATION,derived,data_trace_only,Parity lift itself has exact window transfer.
+lifted_residue_split_mod2,split t % 3 = 0,2*c = 12*t + 2,if t % 3 = 0 then (2*c) % 9 = 2,ARITHMETIC_DERIVATION,derived,data_trace_only,One arm of min3.
+lifted_residue_split_mod5,split t % 3 = 1,2*c = 12*t + 2,if t % 3 = 1 then (2*c) % 9 = 5,ARITHMETIC_DERIVATION,derived,data_trace_only,One arm of min3.
+lifted_residue_split_mod8,split t % 3 = 2,2*c = 12*t + 2,if t % 3 = 2 then (2*c) % 9 = 8,ARITHMETIC_DERIVATION,derived,data_trace_only,One arm of min3.
+row_shape,D1 EL row policy,row22,two-branch: retarded phi28(y-2) plus advanced parity-lift min3 at y + shiftAlphaMinus2Pad,PARAMETRIC_RULE,derived,data_trace_only,No row28 nested M1V3/M2V3 and no deletion tree in this scope.
+slack_reference,baseline certificate reference,certificate_constants.csv,L2NT_D1_slack = 29/9720,BASELINE_REGRESSION_TARGET,attached,data_trace_only,LP is not solved by this microgenerator.
