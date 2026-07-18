@@ -1,0 +1,63 @@
+{
+  "classifications": [
+    "ROW22_MICROGENERATOR_VALIDATION_CREATED",
+    "ROW22_MICROGENERATOR_VALIDATION_PASS",
+    "ROW22_DECISION_CHECKS_PASS",
+    "ROW22_SCHEMA_AND_SEMANTIC_DIFF_CHECKED",
+    "PARITY_LIFT_VALIDATED",
+    "ROW22_MEMBERWISE_HOOK_PASS",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T22:17:42.640548+00:00",
+  "decision_failure_count": 0,
+  "decision_failures": [],
+  "decision_ok": true,
+  "guardrails": [
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_THEOREM_CLAIM",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "input_json": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/row22.generated.json",
+  "memberwise_failure_count": 0,
+  "memberwise_failures": [],
+  "memberwise_lifted_classes_seen": [
+    2,
+    5,
+    8
+  ],
+  "memberwise_ok": true,
+  "memberwise_sample_count": 12,
+  "memberwise_t_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "run_id": "KL2003_F2_K2_ROW22_MICROGENERATOR_VALIDATION_v1",
+  "schema_error_count": 0,
+  "schema_ok": true,
+  "semantic_failure_count": 0,
+  "semantic_failures": [],
+  "semantic_ok": true,
+  "source_commit": "e286c208dd31d6541c7de81ca4b5926b3a677a97",
+  "trace_failure_count": 0,
+  "trace_failures": [],
+  "trace_ok": true,
+  "verdict": "ROW22_MICROGENERATOR_VALIDATION_PASS"
+}

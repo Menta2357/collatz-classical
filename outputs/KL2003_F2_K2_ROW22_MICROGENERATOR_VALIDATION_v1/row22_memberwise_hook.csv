@@ -1,0 +1,13 @@
+t,a,a_mod9,c,c_formula_ok,c_mod3,direct_child_arith_ok,direct_child_tracked_by_general_criterion,lifted,T_lifted,T_c,route_ok,t_mod3,lifted_mod9,expected_lifted_mod9,lifted_class_tracked,split_case_present,status,proof_status,notes
+0,2,2,1,True,1,True,False,2,1,2,True,0,2,2,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+1,11,2,7,True,1,True,False,14,7,11,True,1,5,5,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+2,20,2,13,True,1,True,False,26,13,20,True,2,8,8,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+3,29,2,19,True,1,True,False,38,19,29,True,0,2,2,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+4,38,2,25,True,1,True,False,50,25,38,True,1,5,5,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+5,47,2,31,True,1,True,False,62,31,47,True,2,8,8,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+6,56,2,37,True,1,True,False,74,37,56,True,0,2,2,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+7,65,2,43,True,1,True,False,86,43,65,True,1,5,5,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+8,74,2,49,True,1,True,False,98,49,74,True,2,8,8,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+9,83,2,55,True,1,True,False,110,55,83,True,0,2,2,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+10,92,2,61,True,1,True,False,122,61,92,True,1,5,5,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift
+11,101,2,67,True,1,True,False,134,67,101,True,2,8,8,True,True,pass,diagnostic_only_not_proof,member-wise hook for row22 parity lift

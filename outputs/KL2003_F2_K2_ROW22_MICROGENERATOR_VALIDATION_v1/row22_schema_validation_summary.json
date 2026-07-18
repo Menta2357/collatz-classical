@@ -1,0 +1,38 @@
+{
+  "direct_child_tracked": false,
+  "error_count": 0,
+  "errors": [],
+  "external_schema_validator": {
+    "known_warning_policy": {
+      "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED": "Accepted for schema validation v1: the validator reports sibling manifest presence but does not yet verify external artifact manifests."
+    },
+    "schema_ok": true,
+    "script": "scripts/kl2003_f2_k3_certificate_schema_validator_v1.py",
+    "verdict": "FORMAT_CHECK_ONLY",
+    "warning_codes": [
+      "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED"
+    ],
+    "warning_count": 1
+  },
+  "float_count": 0,
+  "generation_mode": "rule_derived_row22",
+  "has_json_lean_twin_links": true,
+  "json_parseable": true,
+  "k": "2",
+  "lifted_residue_split": [
+    "2",
+    "5",
+    "8"
+  ],
+  "mathematical_generation": true,
+  "parity_lift_present": true,
+  "parse_errors": [],
+  "proof_status": "data_candidate_only",
+  "row_count": 1,
+  "row_ids": [
+    "row22"
+  ],
+  "schema_ok": true,
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+  "scope": "k2_row22_only"
+}

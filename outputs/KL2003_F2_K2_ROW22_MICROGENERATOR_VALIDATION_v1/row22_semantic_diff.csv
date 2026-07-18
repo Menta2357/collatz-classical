@@ -1,0 +1,23 @@
+check_id,expected,actual,status,diff_kind,notes
+row22_only,"[""row22""]","[""row22""]",pass,MATCH,artifact contains only row22
+row25_absent,False,False,pass,MATCH,row25 is not generated
+row28_absent,False,False,pass,MATCH,row28 is not generated
+M1V3_absent,False,False,pass,MATCH,M1V3 is not generated
+row_id,row22,row22,pass,MATCH,row22 exists
+row_shape,two-branch with retarded branch plus advanced branch using parity lift,two-branch with retarded branch plus advanced branch using parity lift,pass,MATCH,row22 shape matches baseline
+source_class,22,22,pass,MATCH,source class matches
+row_kind,D1,D1,pass,MATCH,row family matches
+parity_lift,True,True,pass,MATCH,parity lift is present
+direct_child_not_tracked,False,False,pass,MATCH,direct advanced child is not tracked
+retarded_formula,4*a,4*a,pass,MATCH,retarded branch formula
+retarded_target_class,8,8,pass,MATCH,retarded class transfer target
+advanced_direct_formula,c = 6*t + 1,c = 6*t + 1,pass,MATCH,direct child formula
+advanced_direct_tracked,False,False,pass,MATCH,direct child marked untracked
+lifted_formula,2*c = 12*t + 2,2*c = 12*t + 2,pass,MATCH,lifted child formula
+lifted_target_class,min3_2_5_8,min3_2_5_8,pass,MATCH,lifted child routes to min3
+lifted_residue_split,"[""2"", ""5"", ""8""]","[""2"", ""5"", ""8""]",pass,MATCH,lifted residue split
+parity_route,2c -> c -> a,2c -> c -> a,pass,MATCH,route 2c -> c -> a is represented
+advanced_window_policy,advanced_parity_lift_with_epsilon_pad,advanced_parity_lift_with_epsilon_pad,pass,MATCH,window pad policy
+c22,73/40,73/40,pass,MATCH,c22 matches baseline
+c28,69/40,69/40,pass,MATCH,c28 matches baseline
+L2NT_D1_slack,29/9720,29/9720,pass,MATCH,row22 slack matches baseline

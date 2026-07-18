@@ -1,0 +1,4 @@
+check_id,status,evidence,tracked_residues,memberwise_failures,notes
+decision_A_direct_child_not_tracked,pass,direct c = 6*t+1 has c % 3 = 1 and is outside tracked classes by the artifact's general mod9 criterion,"[2, 5, 8]",,"Fail if direct c is treated as tracked or if tracked class criterion is not {2,5,8}."
+decision_B_parity_lift,pass,lifted = 2*c; T(2c)=c; T(c)=a; alpha - 2 is recorded as (alpha - 1) - 1 with epsilon pad,"[2, 5, 8]",,Fail if parity lift is absent or recorded as an unexplained constant.
+decision_C_lifted_residue_split,pass,"t % 3 cases produce lifted residues 2, 5, and 8, each observed in the hook sample","[2, 5, 8]",,Fail if any lifted residue arm is missing.

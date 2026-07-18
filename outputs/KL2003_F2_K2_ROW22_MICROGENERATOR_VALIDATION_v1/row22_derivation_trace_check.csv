@@ -1,0 +1,11 @@
+step_id,required_tokens,present,missing_tokens,status,notes
+source_class,a % 9 = 2,yes,,pass,trace requirement satisfied
+retarded_child,child = 4*a,yes,,pass,trace requirement satisfied
+retarded_class_transfer_mod9,(4*a) % 9 = 8,yes,,pass,trace requirement satisfied
+advanced_child_arithmetic,3*c + 1; 2*a,yes,,pass,trace requirement satisfied
+advanced_child_mod_three,c % 3 = 1,yes,,pass,trace requirement satisfied
+parity_lift_definition,lifted = 2*c,yes,,pass,trace requirement satisfied
+parity_lift_forward_route,2c -> c -> a,yes,,pass,trace requirement satisfied
+parity_window_transfer,concreteWindow (z - 1) (2*c) = concreteWindow z c,yes,,pass,trace requirement satisfied
+row_shape,two-branch; shiftAlphaMinus2Pad,yes,,pass,trace requirement satisfied
+slack_reference,29/9720,yes,,pass,trace requirement satisfied
