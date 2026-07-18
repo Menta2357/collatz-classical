@@ -1,0 +1,112 @@
+{
+  "all_warnings_have_code_and_explanation": true,
+  "capability_count": 18,
+  "capability_matrix_path": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/schema_capability_matrix.csv",
+  "classification": [
+    "ROW28_NESTED_SCHEMA_CHECK_CREATED",
+    "NESTED_EL_SCHEMA_CAPABILITY_ASSESSED",
+    "EL_TERMINATION_POLICY_REPRESENTABILITY_CHECKED",
+    "DELETION_SATURATION_HYPOTHESIS_RECORDED_NOT_TESTED",
+    "SCHEMA_V2_REQUIRES_V21_FOR_ROW28_NESTED_EL",
+    "ROW28_GENERATOR_NOT_STARTED",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-18T22:31:27.211682+00:00",
+  "direct_supported_count": 1,
+  "el_termination_policy_representability_checked": true,
+  "figure_a1_deleted_nodes_expected": [
+    {
+      "expected_status": "deleted",
+      "label_path": "\\phi_2^8 (y) \\equiv (8,0) -> N13 -> (8,\\alpha -1)",
+      "oracle_node_id": "N04",
+      "path_node_ids": "N09 N13 N04",
+      "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
+    },
+    {
+      "expected_status": "deleted",
+      "label_path": "\\phi_2^8 (y) \\equiv (8,0) -> N13 -> (2, \\alpha -1 ) -> N14 -> (8, 2\\alpha -3)",
+      "oracle_node_id": "N05",
+      "path_node_ids": "N09 N13 N03 N14 N05",
+      "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
+    }
+  ],
+  "figure_a1_oracle_diff_required": true,
+  "gap_count": 17,
+  "guardrails": [
+    "NO_ROW28_GENERATOR_IMPLEMENTATION",
+    "NO_K3_GENERATION",
+    "NO_LP",
+    "NO_LEAN_BUILD",
+    "NO_THEOREM_CLAIM",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "input_files": [
+    {
+      "path": "docs/KL2003_F2_K3_DATA_CERTIFICATE_FORMAT_SCOPING_v1.md",
+      "role": "schema_v2_scoping",
+      "sha256": "0f8dc838f819ff72b741dc23c6bc6f56ab8eab255d6d45fba3eb680859ce257f"
+    },
+    {
+      "path": "docs/KL2003_F2_K2_ROW28_MICROGENERATOR_SCOPING_v1.md",
+      "role": "row28_microgenerator_scoping",
+      "sha256": "f2333148fa30d1902b1c0a9a3d134e52d42fe49c98011cfe658b38db4f3d6123"
+    },
+    {
+      "path": "outputs/KL2003_F2_K2_GENERATOR_REGRESSION_BASELINE_v1/expected_rows_v3.csv",
+      "role": "manual_k2_baseline_rows",
+      "sha256": "1a590bf696250d1b1544e314ad0d4bbd9e31bc9713dcda22b6b7d0210635ee98"
+    },
+    {
+      "path": "outputs/KL2003_F2_K2_ROW25_MICROGENERATOR_v1/row25.generated.json",
+      "role": "row25_generated_example",
+      "sha256": "2db403d1463b9f59549e50a0677850ce14e605b4edffb756a4cec1a420ffe214"
+    },
+    {
+      "path": "outputs/KL2003_F2_K2_ROW22_MICROGENERATOR_v1/row22.generated.json",
+      "role": "row22_generated_example",
+      "sha256": "56f5466486cdfd9a3d7dfcd19f3fbc4c9c950ba260381f85d3bc3d4efc0495c9"
+    },
+    {
+      "path": "outputs/KL2003_F2_K2_REGRESSION_GENERATOR_SKELETON_v1/kl2003_k2_regression_certificate.generated.json",
+      "role": "k2_regression_generated_example",
+      "sha256": "587fc08a832c9c741a3626f2ac527b575b47e0aeead0e715450d30bb91ba0a1e"
+    },
+    {
+      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv",
+      "role": "figure_a1_root_paths_oracle",
+      "sha256": "7d4de321e113d7da6e776d96379b5349021fc0320d1fa8684540d372081cefee"
+    }
+  ],
+  "m1v3_baseline_present": true,
+  "m1v3_phi22_second_arm_forbidden": true,
+  "m1v3_phi25_guardrail_seen": true,
+  "missing_canonical_field_count": 15,
+  "outputs": {
+    "manifest": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/manifest_sha256.csv",
+    "row28_nested_representation_proposal": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/row28_nested_representation_proposal.json",
+    "schema_capability_matrix": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/schema_capability_matrix.csv",
+    "schema_gap_analysis": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/schema_gap_analysis.csv",
+    "summary": "outputs/KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1/nested_schema_check_summary.json"
+  },
+  "partial_supported_count": 2,
+  "row28_baseline_present": true,
+  "row28_generator_status": "ROW28_GENERATOR_NOT_STARTED",
+  "run_id": "KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1",
+  "schema_v21_required": true,
+  "schema_version_current": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+  "schema_version_proposed_if_needed": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+  "source_commit": "717f8d60ef7a3fb9099030e673ef27f2a31a825e",
+  "termination_policy_kind": "expand_until_deletion_saturation",
+  "termination_policy_status": "DELETION_SATURATION_HYPOTHESIS_UNTESTED",
+  "verdict": "SCHEMA_V2_REQUIRES_V21_FOR_ROW28_NESTED_EL",
+  "warning_count": 1,
+  "warnings": [
+    {
+      "code": "DELETION_SATURATION_HYPOTHESIS_UNTESTED",
+      "explanation": "The check verifies that schema v2.1 can represent expand_until_deletion_saturation; it does not prove or source-discharge that termination policy."
+    }
+  ]
+}

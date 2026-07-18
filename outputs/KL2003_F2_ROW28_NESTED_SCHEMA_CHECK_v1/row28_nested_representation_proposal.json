@@ -1,0 +1,257 @@
+{
+  "certificate_refs": {
+    "L2NT_D3_slack": "2077/145800",
+    "c25": "1001/1000",
+    "c28": "69/40"
+  },
+  "guardrails": [
+    "ROW28_GENERATOR_NOT_STARTED",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "metadata": {
+    "current_schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "no_theorem_claim": true,
+    "proof_status": "schema_proposal_only",
+    "proposed_schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+    "run_id": "KL2003_F2_ROW28_NESTED_SCHEMA_CHECK_v1",
+    "schema_decision": "proposed_v2_1_required_before_row28_generator"
+  },
+  "nested_blocks": [
+    {
+      "block_id": "M2V3",
+      "operands": [
+        {
+          "component": "phi22",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi25",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi28",
+          "shift": "shift3AlphaMinus5Pad3"
+        }
+      ],
+      "operator": "min3"
+    },
+    {
+      "baseline_expected_shape": "min(phi28 + M2V3, phi25)",
+      "block_id": "M1V3",
+      "operands": [
+        {
+          "operands": [
+            {
+              "component": "phi28",
+              "shift": "shift2AlphaMinus5Pad2"
+            },
+            {
+              "block_ref": "M2V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi25",
+          "shift": "shift2AlphaMinus5Pad2"
+        }
+      ],
+      "operator": "min",
+      "source_faithful_requirement": "second arm is phi25; phi22 form is historical V2 only"
+    },
+    {
+      "block_id": "row28_outer_block",
+      "operands": [
+        {
+          "operands": [
+            {
+              "component": "phi28",
+              "shift": "shiftAlphaMinus3Pad"
+            },
+            {
+              "block_ref": "M1V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi22",
+          "shift": "shiftAlphaMinus3Pad"
+        }
+      ],
+      "operator": "min"
+    }
+  ],
+  "nodes": [
+    {
+      "class": "8",
+      "node_id": "row28_root",
+      "node_status": "structural_only",
+      "shift": "0",
+      "source_tree_node_id": "N09"
+    },
+    {
+      "branch_kind": "retarded",
+      "class": "5",
+      "node_id": "row28_retarded_4a",
+      "node_status": "counted",
+      "shift": "-2",
+      "window_policy": "exact_retarded_window"
+    },
+    {
+      "arith": "3*c + 1 = 2*a",
+      "branch_kind": "advanced_child",
+      "node_id": "row28_advanced_c",
+      "node_status": "structural_or_counted_by_case",
+      "residue_split": [
+        "5",
+        "2",
+        "8"
+      ]
+    },
+    {
+      "class": "8",
+      "deletion_rule": "same mode earlier on path + smaller shift => delete current leaf",
+      "node_id": "row28_deleted_N04",
+      "node_status": "deleted",
+      "shift": "alpha - 1",
+      "source_tree_node_id": "N04"
+    },
+    {
+      "class": "8",
+      "deletion_rule": "same mode earlier on path + smaller shift => delete current leaf",
+      "node_id": "row28_deleted_N05",
+      "node_status": "deleted",
+      "shift": "2*alpha - 3",
+      "source_tree_node_id": "N05"
+    },
+    {
+      "arith": "3*cPrime + 1 = 2*c",
+      "node_id": "row28_cprime",
+      "node_status": "post_deletion_structural",
+      "residue_split": [
+        "2",
+        "5",
+        "8"
+      ]
+    }
+  ],
+  "overlap_guards": [
+    {
+      "guard_id": "row28_no_deleted_parent_plus_descendant",
+      "guard_kind": "no_parent_descendant_sum",
+      "rejected_pattern": "count deleted parent + count descendant repair"
+    },
+    {
+      "guard_id": "row28_sibling_sums_only",
+      "guard_kind": "sibling_fiber_sum_only",
+      "reason": "sums only between disjoint sibling populations"
+    }
+  ],
+  "post_deletion_case_tree": [
+    {
+      "case": "c % 9 = 5",
+      "consumer": "tracked class 5 child; simpler direct transfer",
+      "counting_policy": "count child population only"
+    },
+    {
+      "case": "c % 9 = 2",
+      "consumer": "tracked class 2 child; simpler direct transfer",
+      "counting_policy": "count child population only"
+    },
+    {
+      "case": "c % 9 = 8",
+      "consumer": "cPrime split after deletion",
+      "counting_policy": "do not count deleted parent; count post-deletion siblings only",
+      "cprime_cases": [
+        {
+          "case": "cPrime % 9 = 2",
+          "consumer": "outer phi22 directly"
+        },
+        {
+          "case": "cPrime % 9 = 5",
+          "consumer": "outer phi22 via 4*cPrime class 2"
+        },
+        {
+          "case": "cPrime % 9 = 8",
+          "consumer": "phi28 + M1V3 with sibling fibers cPrime and 4*c",
+          "m1v3_arm": "phi25"
+        }
+      ]
+    }
+  ],
+  "required_v21_sections": [
+    "nested_blocks[] with block_id, operator, operands, shift, coefficient_ref",
+    "expr_nodes[] entries with operator = min",
+    "expr_nodes[] entries with operator = sum and operands[]",
+    "block_ref operands and row.auxiliary_blocks[]",
+    "nested_blocks[M1V3].operands[1] = {component: phi25, shift: shift2AlphaMinus5Pad2}",
+    "child.branch_role = retarded | advanced | post_deletion",
+    "case_splits[] with split_id, variable, modulus, exhaustive_cases[]",
+    "case_splits[] may be nested and may reference post_deletion_edges",
+    "post_deletion_edges[] with deleted_node_id and replacement_child_ids[]",
+    "source_tree_node_id, oracle_node_id, oracle_path_node_ids",
+    "node_status = counted | deleted | structural_only",
+    "sibling_groups[] with group_id, parent_fiber, member_child_ids[]",
+    "overlap_guards[] with guard_kind = no_parent_descendant_sum",
+    "splitting_rule_source{path,line_range,sha256,rule_id}",
+    "deletion_rule_source{path,line_range,sha256,rule_id}",
+    "termination_rule{kind,source_ref,line_range,sha256}",
+    "termination_policy{kind: expand_until_deletion_saturation, status: DELETION_SATURATION_HYPOTHESIS_UNTESTED}"
+  ],
+  "row28_target": {
+    "baseline_expected_shape": "two-branch row with nested EL block and row28 c-prime split",
+    "baseline_required_feature": "row28 c' split / post-deletion behavior",
+    "root_residue_mod9": "8",
+    "row_family": "D3 / EL",
+    "row_id": "row28",
+    "source_class": "28",
+    "v3_requirement": "M1V3 uses phi25, not phi22"
+  },
+  "source_refs_required": {
+    "deletion_rule": {
+      "line_range": "763-779",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd"
+    },
+    "splitting_rule": {
+      "line_range": "TBD_BEFORE_IMPLEMENTATION",
+      "path": "work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd"
+    },
+    "termination_rule": {
+      "blocker_if_missing": "BLOCKED_ON_EL_TERMINATION_RULE_SOURCE",
+      "line_range": "TBD",
+      "path": "TBD_FROM_TEX_BEFORE_IMPLEMENTATION",
+      "sha256": "TBD"
+    }
+  },
+  "termination_policy": {
+    "notes": "Representability is checked here; the mathematical/source validity of saturation is deferred.",
+    "policy_kind": "expand_until_deletion_saturation",
+    "status": "DELETION_SATURATION_HYPOTHESIS_UNTESTED",
+    "tested_by_this_script": false
+  },
+  "tree_oracle": {
+    "expected_deleted_nodes": [
+      {
+        "expected_status": "deleted",
+        "label_path": "\\phi_2^8 (y) \\equiv (8,0) -> N13 -> (8,\\alpha -1)",
+        "oracle_node_id": "N04",
+        "path_node_ids": "N09 N13 N04",
+        "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
+      },
+      {
+        "expected_status": "deleted",
+        "label_path": "\\phi_2^8 (y) \\equiv (8,0) -> N13 -> (2, \\alpha -1 ) -> N14 -> (8, 2\\alpha -3)",
+        "oracle_node_id": "N05",
+        "path_node_ids": "N09 N13 N03 N14 N05",
+        "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
+      }
+    ],
+    "required_diff_verdict": "FIGURE_A1_DELETION_DIFF_PASS",
+    "source": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv"
+  }
+}

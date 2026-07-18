@@ -46,6 +46,8 @@ reviewed, and a new coordination decision explicitly authorizes publication.
 
 ```text
 AUTHOR_FIRST_WINDOW_ACTIVE
+FORUM_RESERVE_DRAFT_READY = true
+AUTHOR_FIRST_DEADLINE = 2026-07-21 01:21 CEST
 NO_FORUM_POST_YET
 NO_AUDIT_LINK_YET
 NO_GLOBAL_COLLATZ_CLAIM
@@ -60,6 +62,14 @@ state and record one of:
 UPSTREAM_RESPONSE_RECEIVED
 AUTHOR_FIRST_WINDOW_EXPIRED
 FORUM_PUBLICATION_REQUIRES_EXPLICIT_APPROVAL
+```
+
+On the deadline day, execute the already registered branch according to the
+observed upstream state:
+
+```text
+if response received: summarize response and prepare next coordination draft
+if silence persists: use the reserve Forum draft path, still requiring explicit approval before posting
 ```
 
 No Forum post is authorized by this note.
