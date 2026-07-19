@@ -84,6 +84,46 @@ unchanged. The second uses that fact to preserve every ancestor node bound
 while introducing the new local source-row bound. Thus repeated splitting,
 prior to deletion, preserves the equation-(305) invariant.
 
+## Nonempty deletion semantics
+
+The tree language now distinguishes `min2` from `min3`. A deletion result is
+represented by `ELTree.Min3Retention`, whose seven constructors retain every
+nonempty subset of three ordered branches. There is no constructor for an
+empty minimum, and Lean proves `retainedCount_pos`.
+
+At a fixed `Phi` and `y`, a branch is critical when its value is no larger
+than both alternatives. Lean proves:
+
+```lean
+ELTree.Min3Retention.one_branch_critical
+ELTree.Min3Retention.not_all_branches_noncritical
+```
+
+Thus the three branches cannot all be noncritical. The predicate
+`DeletedBranchesNoncritical` requires every removed branch to be noncritical.
+Under that condition, reducing the minimum preserves its exact value and
+recursive node bounds:
+
+```lean
+ELTree.Min3Retention.reducedValue_eq_full
+ELTree.Min3Retention.reduce_normalExpr_eval_eq
+ELTree.Min3Retention.reduce_frontierExpr_eval_eq
+ELTree.Min3Retention.reduce_nodeBounds
+```
+
+`ELTree.Min3Path` lifts the same operation through an arbitrarily nested tree.
+Its reduction preserves the normal evaluation, frontier evaluation, and all
+ancestor node bounds whenever the corresponding local noncriticality facts
+hold.
+
+This local condition is sufficient but stronger than the source deletion
+criterion. KL2003 removes a vertex that is *totally* noncritical in the full
+tree; such a vertex can still be a local minimizer inside a branch that no
+global critical assignment selects. The remaining source-specific step is
+therefore a contextual theorem: a deletion witness excludes the exact branch
+occurrence from every global critical assignment, and reducing that occurrence
+preserves the whole-tree value even when its local minimum changes.
+
 ## Verification
 
 ```text
@@ -99,8 +139,8 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 ## Remaining Module 2 work
 
 ```text
-DELETION_OPERATION_AND_WELL_FORMEDNESS
-DELETION_NEVER_REMOVES_ALL_MIN_CHILDREN
+DELETION_WITNESS_IMPLIES_TOTAL_NONCRITICALITY
+CONTEXTUAL_TOTAL_NONCRITICAL_DELETION_PRESERVATION
 CRITICAL_ASSIGNMENT_DELETION_PRESERVATION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
@@ -119,6 +159,13 @@ GENERAL_K_SOURCE_SPLIT_TREE_NODE_BOUNDS_PROVED
 GENERAL_K_TREE_TERMINAL_PATH_DEFINED
 GENERAL_K_TREE_SPLIT_PRESERVES_FRONTIER_PROVED
 GENERAL_K_TREE_SPLIT_PRESERVES_NODE_BOUNDS_PROVED
+GENERAL_K_MIN2_TREE_NODE_DEFINED
+GENERAL_K_NONEMPTY_MIN3_RETENTION_DEFINED
+GENERAL_K_MIN3_RETENTION_COUNT_POSITIVE_PROVED
+GENERAL_K_NOT_ALL_MIN_BRANCHES_NONCRITICAL_PROVED
+GENERAL_K_LOCAL_NONCRITICAL_DELETION_VALUE_PRESERVATION_PROVED
+GENERAL_K_LOCAL_NONCRITICAL_DELETION_NODE_BOUNDS_PRESERVED
+GENERAL_K_NESTED_MIN3_REDUCTION_DEFINED
 GENERAL_K_EL_TREE_AXIOM_AUDIT_PASS
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED

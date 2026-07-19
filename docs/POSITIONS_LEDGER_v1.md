@@ -130,6 +130,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   una ruta estructural, no una busqueda por etiqueta, y adjunta la fila fuente
   parametrica. La deuda semantica restante comienza ahora en la operacion de
   deletion y su preservacion de buena formacion.
+- La operacion de deletion ya tiene una representacion no vacia: siete
+  patrones retienen exactamente uno, dos o tres brazos, y el tipo no permite
+  borrar los tres. Al menos un brazo de cualquier triple real es critico, por
+  lo que los tres no pueden ser simultaneamente no criticos. Si cada brazo
+  retirado es no critico, la reduccion conserva exactamente frontera, normal
+  y cotas de nodos incluso dentro de un arbol anidado. Falta derivar esa
+  preservacion en la condicion mas debil de la fuente: no-criticidad total en
+  el contexto global, que no implica necesariamente no-minimalidad local.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere
