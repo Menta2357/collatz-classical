@@ -4,8 +4,11 @@ namespace CollatzClassical
 namespace KL2003
 
 #print axioms ELTree.Context.plug_normalExpr_eval_mono
+#print axioms ELTree.Context.plug_normalExpr_eval_eq
+#print axioms ELTree.Context.holeCritical_congr
 #print axioms ELTree.Context.plug_normalExpr_eval_eq_of_not_holeCritical
 #print axioms ELTree.Context.criticalNodeBounds_of_nodeBounds
+#print axioms ELTree.Context.criticalNodeBounds_congr
 #print axioms ELTree.Context.criticalAssignment_bound
 #print axioms ELTree.sourceSplitTree_criticalNodeBounds
 #print axioms ELTree.Context.lift_criticalPath

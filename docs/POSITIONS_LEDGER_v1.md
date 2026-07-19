@@ -169,6 +169,11 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   invariante, cada source split inicial lo satisface y Lean recupera de el la
   cota para cualquier asignacion critica. Falta demostrar que la deletion
   canonica lo preserva entre pasos; esa es ahora la deuda semantica inmediata.
+- La infraestructura de transporte de esa deuda ya esta cerrada: igualdad de
+  valor normal local implica igualdad despues de enchufar y congruencia de
+  `HoleCritical`; una equivalencia estable bajo subcontextos transporta todo
+  `CriticalNodeBounds`. La prueba pendiente se reduce a demostrar que cada
+  contexto de brazo retenido tras deletion no crea una ruta critica nueva.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

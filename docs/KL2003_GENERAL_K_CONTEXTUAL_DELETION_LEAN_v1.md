@@ -204,6 +204,21 @@ which is the formal interface corresponding to equation (305). Preservation
 of this weaker invariant by canonical witness deletion is the next required
 iteration theorem; it is not claimed here.
 
+The supporting congruence layer is also proved. Equal local normal values
+remain equal after plugging into any context, and preserve `HoleCritical`:
+
+```lean
+ELTree.Context.plug_normalExpr_eval_eq
+ELTree.Context.holeCritical_congr
+```
+
+`CriticalityEquivalentBelow` packages equivalence for every deeper
+subcontext, and `criticalNodeBounds_congr` transports the complete contextual
+invariant across such equivalent zippers. Consequently, the remaining
+preservation proof is localized: for each child retained by the canonical
+policy, show that its post-deletion branch context cannot create a new
+critical route relative to the original three-way minimum.
+
 ## Verification
 
 ```text
@@ -257,6 +272,9 @@ GENERAL_K_CONTEXTUAL_CRITICAL_NODE_BOUNDS_DEFINED
 GENERAL_K_NODE_BOUNDS_IMPLIES_CRITICAL_NODE_BOUNDS
 GENERAL_K_SOURCE_SPLIT_CRITICAL_NODE_BOUNDS_PROVED
 GENERAL_K_EQUATION_305_CRITICAL_ASSIGNMENT_INTERFACE_PROVED
+GENERAL_K_CONTEXT_NORMAL_VALUE_CONGRUENCE_PROVED
+GENERAL_K_HOLE_CRITICALITY_CONGRUENCE_PROVED
+GENERAL_K_CRITICAL_NODE_BOUNDS_CONTEXT_TRANSPORT_PROVED
 GENERAL_K_EL_CONTEXT_AXIOM_AUDIT_PASS
 ITERATED_DELETION_NORMALIZER_NOT_YET_PROVED
 CRITICAL_NODE_BOUNDS_DELETION_PRESERVATION_NOT_YET_PROVED

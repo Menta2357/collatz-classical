@@ -99,6 +99,10 @@ theorem comp_assoc {k : Nat} (outer middle inner : Context k) :
     (outer.comp middle).comp inner = outer.comp (middle.comp inner) := by
   induction outer <;> simp [comp, *]
 
+theorem comp_hole {k : Nat} (context : Context k) :
+    context.comp .hole = context := by
+  induction context <;> simp [comp, *]
+
 def HoleCritical {k : Nat} (context : Context k) (tree : ELTree k)
     (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
   match context with
@@ -131,6 +135,12 @@ def HoleCritical {k : Nat} (context : Context k) (tree : ELTree k)
           (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
           ((subcontext.plug tree).normalExpr.eval Phi y)
 
+def CriticalityEquivalentBelow {k : Nat} (oldContext newContext : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
+  forall inner tree,
+    (oldContext.comp inner).HoleCritical tree Phi y <->
+      (newContext.comp inner).HoleCritical tree Phi y
+
 theorem holeCritical_comp_iff {k : Nat} (outer inner : Context k)
     (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real) :
     (outer.comp inner).HoleCritical tree Phi y <->
@@ -161,6 +171,65 @@ def CriticalNodeBounds {k : Nat} (context : Context k)
           (context.comp (.minSecond first .hole third)) Phi y second /\
         CriticalNodeBounds
           (context.comp (.minThird first second .hole)) Phi y third
+
+theorem criticalNodeBounds_congr {k : Nat} (oldContext newContext : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldContext.CriticalityEquivalentBelow newContext Phi y)
+    (tree : ELTree k) (hbounds : oldContext.CriticalNodeBounds Phi y tree) :
+    newContext.CriticalNodeBounds Phi y tree := by
+  induction tree generalizing oldContext newContext with
+  | terminal => trivial
+  | expanded label body ih =>
+      refine ⟨fun hcritical => hbounds.1 ?_, ?_⟩
+      · have hiff := heq (.hole : Context k) (.expanded label body)
+        rw [comp_hole, comp_hole] at hiff
+        exact hiff.mpr hcritical
+      · refine ih (oldContext.comp (.expanded label .hole))
+          (newContext.comp (.expanded label .hole)) ?_ hbounds.2
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.expanded label .hole) : Context k).comp inner) subtree
+  | add left right ihLeft ihRight =>
+      constructor
+      · refine ihLeft (oldContext.comp (.addLeft .hole right))
+          (newContext.comp (.addLeft .hole right)) ?_ hbounds.1
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.addLeft .hole right) : Context k).comp inner) subtree
+      · refine ihRight (oldContext.comp (.addRight left .hole))
+          (newContext.comp (.addRight left .hole)) ?_ hbounds.2
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.addRight left .hole) : Context k).comp inner) subtree
+  | min2 left right ihLeft ihRight =>
+      constructor
+      · refine ihLeft (oldContext.comp (.min2Left .hole right))
+          (newContext.comp (.min2Left .hole right)) ?_ hbounds.1
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.min2Left .hole right) : Context k).comp inner) subtree
+      · refine ihRight (oldContext.comp (.min2Right left .hole))
+          (newContext.comp (.min2Right left .hole)) ?_ hbounds.2
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.min2Right left .hole) : Context k).comp inner) subtree
+  | min3 first second third ihFirst ihSecond ihThird =>
+      refine ⟨?_, ?_, ?_⟩
+      · refine ihFirst (oldContext.comp (.minFirst .hole second third))
+          (newContext.comp (.minFirst .hole second third)) ?_ hbounds.1
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.minFirst .hole second third) : Context k).comp inner) subtree
+      · refine ihSecond (oldContext.comp (.minSecond first .hole third))
+          (newContext.comp (.minSecond first .hole third)) ?_ hbounds.2.1
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.minSecond first .hole third) : Context k).comp inner) subtree
+      · refine ihThird (oldContext.comp (.minThird first second .hole))
+          (newContext.comp (.minThird first second .hole)) ?_ hbounds.2.2
+        intro inner subtree
+        simpa [comp_assoc] using
+          heq (((.minThird first second .hole) : Context k).comp inner) subtree
 
 theorem criticalNodeBounds_of_nodeBounds {k : Nat} (context : Context k)
     (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real)
@@ -216,6 +285,48 @@ theorem plug_normalExpr_eval_mono {k : Nat} (context : Context k)
       exact min_le_min (le_refl _) (min_le_min ih (le_refl _))
   | minThird first second context ih =>
       exact min_le_min (le_refl _) (min_le_min (le_refl _) ih)
+
+theorem plug_normalExpr_eval_eq {k : Nat} (context : Context k)
+    (oldTree newTree : ELTree k) (Phi : TrackedMode k -> Real -> Real)
+    (y : Real)
+    (heq : oldTree.normalExpr.eval Phi y = newTree.normalExpr.eval Phi y) :
+    (context.plug oldTree).normalExpr.eval Phi y =
+      (context.plug newTree).normalExpr.eval Phi y := by
+  apply le_antisymm
+  · exact context.plug_normalExpr_eval_mono oldTree newTree Phi y heq.le
+  · exact context.plug_normalExpr_eval_mono newTree oldTree Phi y heq.ge
+
+theorem holeCritical_congr {k : Nat} (context : Context k)
+    (oldTree newTree : ELTree k) (Phi : TrackedMode k -> Real -> Real)
+    (y : Real)
+    (heq : oldTree.normalExpr.eval Phi y = newTree.normalExpr.eval Phi y) :
+    context.HoleCritical oldTree Phi y <->
+      context.HoleCritical newTree Phi y := by
+  induction context with
+  | hole => rfl
+  | expanded label context ih => simpa [HoleCritical] using ih
+  | addLeft context right ih => simpa [HoleCritical] using ih
+  | addRight left context ih => simpa [HoleCritical] using ih
+  | min2Left context right ih =>
+      have hplug := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      simp only [HoleCritical]
+      rw [ih, hplug]
+  | min2Right left context ih =>
+      have hplug := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      simp only [HoleCritical]
+      rw [ih, hplug]
+  | minFirst context second third ih =>
+      have hplug := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      simp only [HoleCritical, Min3Retention.criticalFirst]
+      rw [ih, hplug]
+  | minSecond first context third ih =>
+      have hplug := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      simp only [HoleCritical, Min3Retention.criticalSecond]
+      rw [ih, hplug]
+  | minThird first second context ih =>
+      have hplug := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      simp only [HoleCritical, Min3Retention.criticalThird]
+      rw [ih, hplug]
 
 theorem not_criticalFirst_of_mono {old new second third : Real}
     (hle : old <= new)
