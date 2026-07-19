@@ -111,6 +111,25 @@ Nonnegative arguments also pass from the full expression to the selected
 subexpression, so positivity applies to the actual companion contribution of
 a critical assignment rather than to an untracked abstract summand.
 
+Critical paths record a selected leaf together with the additive siblings met
+on its path:
+
+```lean
+ELExpr.CriticalAssignment.PathTo
+ELExpr.CriticalAssignment.PathTo.companions
+ELExpr.CriticalAssignment.PathTo.companionValue
+```
+
+Lean proves the exact decomposition
+
+```text
+selected value = selected leaf value + companion value
+```
+
+and proves the companion value strictly positive whenever the companion list
+is nonempty and all arguments are nonnegative. Min nodes contribute no
+companion; sum nodes contribute the selected sibling expression.
+
 ## Deletion witness vocabulary
 
 `ELLeafState` records a leaf, its principal ancestors, and its status.
@@ -130,6 +149,7 @@ ELExpr.eval_pos
 deletionWitness_critical_sum_contradiction
 deletionWitness_excludes_critical_sum
 deletionWitness_excludes_critical_assignment
+deletionWitness_excludes_bounded_critical_path
 ```
 
 For an expression whose shifted arguments stay in the nonnegative region,
@@ -147,6 +167,12 @@ critical assignment passing through such a node is bounded by the node value.
 That invariant must supply the companion subtree and critical sum inequality
 without assuming the desired preservation theorem.
 
+`deletionWitness_excludes_bounded_critical_path` is the exact local endpoint:
+given the equation-(305) node bound and a nonempty companion list, a leaf with
+a deletion witness cannot occur on the critical path. Thus the remaining
+semantic debt is the construction and preservation of the node-bound
+invariant, not the contradiction used after it is available.
+
 ## Verification
 
 ```text
@@ -159,6 +185,11 @@ Build and audit pass with the expected axiom profile. No `sorry`, `admit`,
 `unsafe`, or `native_decide` is used.
 
 ## Remaining Module 2 work
+
+The termination proof also has a source sign inconsistency recorded in
+`docs/KL2003_THEOREM31_TERMINATION_SIGN_SCOPING_v1.md`. The proposed
+normalization is `delta = beta_2 - beta_1 < 0`; the required self-similarity
+lemma and order-independence argument remain open.
 
 ```text
 EL_WELL_FORMEDNESS_PRESERVATION
@@ -185,14 +216,18 @@ GENERAL_K_EL_SPLIT_SEMANTIC_PRESERVATION_PROVED
 EL_CRITICAL_ASSIGNMENT_DEFINED
 EL_CRITICAL_ASSIGNMENT_EXISTS
 EL_CRITICAL_ASSIGNMENT_EVAL_EXACT
+EL_CRITICAL_PATH_DECOMPOSITION_PROVED
+EL_CRITICAL_PATH_POSITIVE_COMPANION_PROVED
 EL_DELETION_WITNESS_DEFINED
 EL_DELETION_MONOTONICITY_COMPONENT_PROVED
 EL_EXPRESSION_POSITIVITY_PROVED
 EL_DELETION_CRITICAL_SUM_CONTRADICTION_PROVED
 EL_DELETION_CRITICAL_ASSIGNMENT_CONTRADICTION_PROVED
+EL_DELETION_BOUNDED_CRITICAL_PATH_EXCLUDED
 GENERAL_K_ELIMINATION_FOUNDATION_AXIOM_AUDIT_PASS
 EL_TERMINATION_NOT_YET_PROVED
 EL_SEMANTIC_PRESERVATION_NOT_YET_PROVED
+THEOREM31_SOURCE_SIGN_INCONSISTENCY_RECORDED
 K3_PISTAR_THEOREM_NOT_YET_PROVED
 K9_FORMALISATION_NOT_AUTHORIZED
 NO_GLOBAL_COLLATZ_CLAIM

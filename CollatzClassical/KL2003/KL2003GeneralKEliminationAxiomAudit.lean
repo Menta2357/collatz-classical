@@ -22,11 +22,15 @@ namespace KL2003
 #print axioms ELExpr.CriticalAssignment.selectedExpr_eval_eq
 #print axioms ELExpr.CriticalAssignment.exists_isCritical
 #print axioms ELExpr.CriticalAssignment.selectedExpr_argumentsNonnegative
+#print axioms ELExpr.CriticalAssignment.PathTo.selectedExpr_eval_eq_leaf_add_companionValue
+#print axioms ELExpr.CriticalAssignment.PathTo.companions_argumentsNonnegative
+#print axioms ELExpr.CriticalAssignment.PathTo.companionValue_pos
 #print axioms ELExpr.eval_pos
 #print axioms ELExpr.CriticalAssignment.selectedExpr_eval_pos
 #print axioms deletionWitness_critical_sum_contradiction
 #print axioms deletionWitness_excludes_critical_sum
 #print axioms deletionWitness_excludes_critical_assignment
+#print axioms deletionWitness_excludes_bounded_critical_path
 
 end KL2003
 end CollatzClassical

@@ -113,6 +113,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   para toda expresion finita y su expresion seleccionada evalua exactamente al
   termino original. La contradiccion de deletion ya consume este objeto real;
   falta el invariante de caminos internos equivalente a la ecuacion (305).
+- Una ruta critica ya descompone exactamente el valor seleccionado como
+  `hoja + companeros aditivos`; si hay al menos un companero, su valor es
+  estrictamente positivo. Bajo la cota de nodo de (305), Lean excluye la hoja
+  con testigo de deletion. Falta producir y preservar esa cota para todos los
+  nodos principales internos del proceso, no justificar de nuevo la
+  contradiccion local.
+- La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
+  de signo: despues de `beta_1 > beta_2 > ...` declara
+  `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere
+  `delta < 0`. La normalizacion negativa queda propuesta y custodiada, pero no
+  se promueve a prueba: falta formalizar la correspondencia autosimilar que
+  hace constante el incremento y la independencia del orden.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

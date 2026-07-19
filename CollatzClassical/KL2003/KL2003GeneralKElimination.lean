@@ -528,6 +528,133 @@ theorem selectedExpr_argumentsNonnegative {k : Nat} {expr : ELExpr k}
   | minSecond _ _ _ _ ih => exact ih hargs.2.1
   | minThird _ _ _ _ ih => exact ih hargs.2.2
 
+inductive PathTo {k : Nat} : {expr : ELExpr k} ->
+    (assignment : CriticalAssignment expr) -> ELLabel k -> Type
+  | leaf (label : ELLabel k) : PathTo (.leaf label) label
+  | addLeft (left right : ELExpr k)
+      (leftChoice : CriticalAssignment left)
+      (rightChoice : CriticalAssignment right)
+      (target : ELLabel k) (path : PathTo leftChoice target) :
+      PathTo (.add left right leftChoice rightChoice) target
+  | addRight (left right : ELExpr k)
+      (leftChoice : CriticalAssignment left)
+      (rightChoice : CriticalAssignment right)
+      (target : ELLabel k) (path : PathTo rightChoice target) :
+      PathTo (.add left right leftChoice rightChoice) target
+  | minFirst (first second third : ELExpr k)
+      (choice : CriticalAssignment first)
+      (target : ELLabel k) (path : PathTo choice target) :
+      PathTo (.minFirst first second third choice) target
+  | minSecond (first second third : ELExpr k)
+      (choice : CriticalAssignment second)
+      (target : ELLabel k) (path : PathTo choice target) :
+      PathTo (.minSecond first second third choice) target
+  | minThird (first second third : ELExpr k)
+      (choice : CriticalAssignment third)
+      (target : ELLabel k) (path : PathTo choice target) :
+      PathTo (.minThird first second third choice) target
+
+namespace PathTo
+
+def companions {k : Nat} {expr : ELExpr k}
+    {assignment : CriticalAssignment expr} {target : ELLabel k}
+    (path : PathTo assignment target) : List (ELExpr k) :=
+  match path with
+  | .leaf _ => []
+  | .addLeft _ _ _ rightChoice _ subpath =>
+      rightChoice.selectedExpr :: subpath.companions
+  | .addRight _ _ leftChoice _ _ subpath =>
+      leftChoice.selectedExpr :: subpath.companions
+  | .minFirst _ _ _ _ _ subpath => subpath.companions
+  | .minSecond _ _ _ _ _ subpath => subpath.companions
+  | .minThird _ _ _ _ _ subpath => subpath.companions
+
+noncomputable def companionValue {k : Nat} {expr : ELExpr k}
+    {assignment : CriticalAssignment expr} {target : ELLabel k}
+    (path : PathTo assignment target)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Real :=
+  (path.companions.map (fun companion => companion.eval Phi y)).sum
+
+theorem selectedExpr_eval_eq_leaf_add_companionValue {k : Nat}
+    {expr : ELExpr k} {assignment : CriticalAssignment expr}
+    {target : ELLabel k} (path : PathTo assignment target)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    assignment.selectedExpr.eval Phi y =
+      Phi target.mode (y + target.shift.eval) +
+        path.companionValue Phi y := by
+  induction path with
+  | leaf => simp [selectedExpr, ELExpr.eval, companionValue, companions]
+  | addLeft left right leftChoice rightChoice target path ih =>
+      simp only [selectedExpr, ELExpr.eval, companionValue, companions,
+        List.map_cons, List.sum_cons]
+      rw [ih]
+      ring
+  | addRight left right leftChoice rightChoice target path ih =>
+      simp only [selectedExpr, ELExpr.eval, companionValue, companions,
+        List.map_cons, List.sum_cons]
+      rw [ih]
+      ring
+  | minFirst first second third choice target path ih =>
+      simpa only [selectedExpr, companionValue, companions] using ih
+  | minSecond first second third choice target path ih =>
+      simpa only [selectedExpr, companionValue, companions] using ih
+  | minThird first second third choice target path ih =>
+      simpa only [selectedExpr, companionValue, companions] using ih
+
+theorem companions_argumentsNonnegative {k : Nat} {expr : ELExpr k}
+    {assignment : CriticalAssignment expr} {target : ELLabel k}
+    (path : PathTo assignment target) {y : Real}
+    (hargs : expr.ArgumentsNonnegative y) :
+    path.companions.Forall (fun companion =>
+      companion.ArgumentsNonnegative y) := by
+  induction path with
+  | leaf => simp [companions]
+  | addLeft _ _ _ rightChoice _ _ ih =>
+      simp only [companions, List.forall_cons]
+      exact ⟨rightChoice.selectedExpr_argumentsNonnegative hargs.2,
+        ih hargs.1⟩
+  | addRight _ _ leftChoice _ _ _ ih =>
+      simp only [companions, List.forall_cons]
+      exact ⟨leftChoice.selectedExpr_argumentsNonnegative hargs.1,
+        ih hargs.2⟩
+  | minFirst _ _ _ _ _ _ ih => exact ih hargs.1
+  | minSecond _ _ _ _ _ _ ih => exact ih hargs.2.1
+  | minThird _ _ _ _ _ _ ih => exact ih hargs.2.2
+
+private theorem eval_sum_nonneg {k : Nat}
+    (companions : List (ELExpr k))
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi)
+    (hargs : companions.Forall (fun companion =>
+      companion.ArgumentsNonnegative y)) :
+    0 <= (companions.map (fun companion => companion.eval Phi y)).sum := by
+  induction companions with
+  | nil => simp
+  | cons companion tail ih =>
+      simp only [List.forall_cons] at hargs
+      simp only [List.map_cons, List.sum_cons]
+      exact add_nonneg (le_of_lt (companion.eval_pos hpos hargs.1))
+        (ih hargs.2)
+
+theorem companionValue_pos {k : Nat} {expr : ELExpr k}
+    {assignment : CriticalAssignment expr} {target : ELLabel k}
+    (path : PathTo assignment target)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y)
+    (hnonempty : path.companions != []) :
+    0 < path.companionValue Phi y := by
+  have hall := path.companions_argumentsNonnegative hargs
+  cases hcompanions : path.companions with
+  | nil => exact False.elim (hnonempty hcompanions)
+  | cons companion tail =>
+      rw [companionValue, hcompanions]
+      simp only [List.forall_cons] at hall
+      simp only [List.map_cons, List.sum_cons]
+      exact add_pos_of_pos_of_nonneg (companion.eval_pos hpos hall.1)
+        (eval_sum_nonneg tail hpos hall.2)
+
+end PathTo
+
 end ELExpr.CriticalAssignment
 
 theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
@@ -611,6 +738,36 @@ theorem deletionWitness_excludes_critical_assignment {k : Nat}
   intro ancestor hmem hmode hshift
   rw [← assignment.selectedExpr_eval_eq Phi y hassignment]
   exact hcritical ancestor hmem hmode hshift
+
+theorem deletionWitness_excludes_bounded_critical_path {k : Nat}
+    {Phi : TrackedMode k -> Real -> Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    {y : Real} {leaf : ELLeafState k} {subtree : ELExpr k}
+    (hwitness : HasDeletionWitness leaf)
+    (assignment : ELExpr.CriticalAssignment subtree)
+    (hassignment : assignment.IsCritical Phi y)
+    (path : ELExpr.CriticalAssignment.PathTo assignment leaf.label)
+    (hargs : subtree.ArgumentsNonnegative y)
+    (hnonempty : path.companions != [])
+    (hnodeBound : forall ancestor,
+      ancestor ∈ leaf.ancestors ->
+      ancestor.mode = leaf.label.mode ->
+      ancestor.shift.eval < leaf.label.shift.eval ->
+      subtree.eval Phi y <=
+        Phi ancestor.mode (y + ancestor.shift.eval)) :
+    False := by
+  rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
+  have hbound := hnodeBound ancestor hmem hmode hshift
+  rw [← assignment.selectedExpr_eval_eq Phi y hassignment,
+    path.selectedExpr_eval_eq_leaf_add_companionValue] at hbound
+  have hcompanion : 0 < path.companionValue Phi y :=
+    path.companionValue_pos hpos hargs hnonempty
+  have hmonoValue :
+      Phi ancestor.mode (y + ancestor.shift.eval) <=
+        Phi leaf.label.mode (y + leaf.label.shift.eval) := by
+    rw [hmode]
+    exact hmono leaf.label.mode (by linarith)
+  linarith
 
 end KL2003
 end CollatzClassical
