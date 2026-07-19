@@ -16,6 +16,8 @@ namespace KL2003
 #print axioms ELTree.ExpandableOccurrence.sourcePhiK_positive
 #print axioms ELTree.ExpandableOccurrence.sourcePhiK_monotone
 #print axioms ELTree.trackedMode_mod_nine_cases
+#print axioms ELTree.ExpandableOccurrence.d1Configuration
+#print axioms ELTree.ExpandableOccurrence.d3Configuration
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d1
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d2
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d3

@@ -202,6 +202,35 @@ theorem sourceSplitTree_translate {p : Nat} (hp : 1 <= p)
       (sourceSplitTree hp label).translate delta := by
   simp [sourceSplitTree, translate, splitTopExpr_translate, ofExpr_shiftBy]
 
+theorem retardedSplitLabel_translate {p : Nat}
+    (label : ELLabel (p + 1)) (delta : SymbolicShift) :
+    retardedSplitLabel (label.translate delta) =
+      (retardedSplitLabel label).translate delta := by
+  simp [retardedSplitLabel, ELLabel.translate, SymbolicShift.add_assoc]
+
+theorem d1AdvancedSplitLabel_translate {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2)
+    (delta : SymbolicShift) (j : Fin 3) :
+    d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) j =
+      (d1AdvancedSplitLabel hp label hm j).translate delta := by
+  simp [d1AdvancedSplitLabel, ELLabel.translate, SymbolicShift.add_assoc]
+
+theorem d3AdvancedSplitLabel_translate {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8)
+    (delta : SymbolicShift) (j : Fin 3) :
+    d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) j =
+      (d3AdvancedSplitLabel hp label hm j).translate delta := by
+  simp [d3AdvancedSplitLabel, ELLabel.translate, SymbolicShift.add_assoc]
+
+theorem advancedSplitTree_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    advancedSplitTree (root.translate delta) (retarded.translate delta)
+        (first.translate delta) (second.translate delta)
+        (third.translate delta) =
+      (advancedSplitTree root retarded first second third).translate delta := by
+  rfl
+
 namespace Min3Retention
 
 theorem reduce_translate {k : Nat} (retention : Min3Retention)
@@ -214,6 +243,90 @@ theorem reduce_translate {k : Nat} (retention : Min3Retention)
 end Min3Retention
 
 namespace Min3Path
+
+@[simp] theorem firstChild_cast {k : Nat} {treeA treeB : ELTree k}
+    (h : treeA = treeB) (path : Min3Path treeA) :
+    (h ▸ path).firstChild = path.firstChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem secondChild_cast {k : Nat} {treeA treeB : ELTree k}
+    (h : treeA = treeB) (path : Min3Path treeA) :
+    (h ▸ path).secondChild = path.secondChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem thirdChild_cast {k : Nat} {treeA treeB : ELTree k}
+    (h : treeA = treeB) (path : Min3Path treeA) :
+    (h ▸ path).thirdChild = path.thirdChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem firstBranchContext_cast {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (h ▸ path).firstBranchContext = path.firstBranchContext := by
+  subst treeB
+  rfl
+
+@[simp] theorem secondBranchContext_cast {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (h ▸ path).secondBranchContext = path.secondBranchContext := by
+  subst treeB
+  rfl
+
+@[simp] theorem thirdBranchContext_cast {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (h ▸ path).thirdBranchContext = path.thirdBranchContext := by
+  subst treeB
+  rfl
+
+@[simp] theorem firstChild_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).firstChild = path.firstChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem secondChild_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).secondChild = path.secondChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem thirdChild_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).thirdChild = path.thirdChild := by
+  subst treeB
+  rfl
+
+@[simp] theorem firstBranchContext_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).firstBranchContext =
+      path.firstBranchContext := by
+  subst treeB
+  rfl
+
+@[simp] theorem secondBranchContext_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).secondBranchContext =
+      path.secondBranchContext := by
+  subst treeB
+  rfl
+
+@[simp] theorem thirdBranchContext_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} (h : treeA = treeB)
+    (path : Min3Path treeA) :
+    (cast (congrArg Min3Path h) path).thirdBranchContext =
+      path.thirdBranchContext := by
+  subst treeB
+  rfl
 
 def translate {k : Nat} {tree : ELTree k} (path : Min3Path tree)
     (delta : SymbolicShift) : Min3Path (tree.translate delta) :=
@@ -245,6 +358,15 @@ def translate {k : Nat} {tree : ELTree k} (path : Min3Path tree)
   | .minThird first second third subpath =>
       .minThird (first.translate delta) (second.translate delta)
         (third.translate delta) (subpath.translate delta)
+
+theorem translate_heq_of_heq {k : Nat} {treeA treeB : ELTree k}
+    (pathA : Min3Path treeA) (pathB : Min3Path treeB)
+    (htree : treeA = treeB) (hpath : HEq pathA pathB)
+    (delta : SymbolicShift) :
+    HEq (pathA.translate delta) (pathB.translate delta) := by
+  subst treeB
+  cases eq_of_heq hpath
+  rfl
 
 @[simp] theorem firstChild_translate {k : Nat} {tree : ELTree k}
     (path : Min3Path tree) (delta : SymbolicShift) :
@@ -316,6 +438,21 @@ theorem reduceAt_translate {k : Nat} {tree : ELTree k}
 end Min3Path
 
 namespace TerminalPath
+
+@[simp] theorem context_cast {k : Nat} {treeA treeB : ELTree k}
+    {target : ELLabel k} (h : treeA = treeB)
+    (path : TerminalPath treeA target) :
+    (h ▸ path).context = path.context := by
+  subst treeB
+  rfl
+
+@[simp] theorem context_cast_congrArg {k : Nat}
+    {treeA treeB : ELTree k} {target : ELLabel k}
+    (h : treeA = treeB) (path : TerminalPath treeA target) :
+    (cast (congrArg (fun tree => TerminalPath tree target) h) path).context =
+      path.context := by
+  subst treeB
+  rfl
 
 def translate {k : Nat} {tree : ELTree k} {target : ELLabel k}
     (path : TerminalPath tree target) (delta : SymbolicShift) :
@@ -412,6 +549,129 @@ theorem splitAt_translate {p : Nat} (hp : 1 <= p)
   | minThird first second third target subpath ih =>
       simp [translate, splitAt, ELTree.translate, ih]
 
+def translateSourceSplitPath {p : Nat} (hp : 1 <= p)
+    {target leaf : ELLabel (p + 1)}
+    (inner : TerminalPath (sourceSplitTree hp target) leaf)
+    (delta : SymbolicShift) :
+    TerminalPath (sourceSplitTree hp (target.translate delta))
+      (leaf.translate delta) :=
+  cast (congrArg
+      (fun tree => TerminalPath tree (leaf.translate delta))
+      (sourceSplitTree_translate hp target delta).symm)
+    (inner.translate delta)
+
+def translateSourceSplitMin3Path {p : Nat} (hp : 1 <= p)
+    {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    Min3Path (sourceSplitTree hp (target.translate delta)) :=
+  cast (congrArg Min3Path
+      (sourceSplitTree_translate hp target delta).symm)
+    (inner.translate delta)
+
+@[simp] theorem translateSourceSplitPath_context {p : Nat} (hp : 1 <= p)
+    {target leaf : ELLabel (p + 1)}
+    (inner : TerminalPath (sourceSplitTree hp target) leaf)
+    (delta : SymbolicShift) :
+    (inner.translateSourceSplitPath hp delta).context =
+      inner.context.translate delta := by
+  unfold translateSourceSplitPath
+  rw [TerminalPath.context_cast_congrArg, inner.context_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_firstChild {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).firstChild =
+      inner.firstChild.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.firstChild_cast_congrArg, inner.firstChild_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_secondChild {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).secondChild =
+      inner.secondChild.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.secondChild_cast_congrArg, inner.secondChild_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_thirdChild {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).thirdChild =
+      inner.thirdChild.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.thirdChild_cast_congrArg, inner.thirdChild_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_firstBranchContext {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).firstBranchContext =
+      inner.firstBranchContext.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.firstBranchContext_cast_congrArg,
+    inner.firstBranchContext_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_secondBranchContext {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).secondBranchContext =
+      inner.secondBranchContext.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.secondBranchContext_cast_congrArg,
+    inner.secondBranchContext_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+@[simp] theorem translateSourceSplitMin3Path_thirdBranchContext {p : Nat}
+    (hp : 1 <= p) {target : ELLabel (p + 1)}
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    (TerminalPath.translateSourceSplitMin3Path hp inner delta).thirdBranchContext =
+      inner.thirdBranchContext.translate delta := by
+  unfold translateSourceSplitMin3Path
+  rw [Min3Path.thirdBranchContext_cast_congrArg,
+    inner.thirdBranchContext_translate]
+  exact (sourceSplitTree_translate hp target delta).symm
+
+theorem descendSplit_translate_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : TerminalPath (sourceSplitTree hp target) leaf)
+    (delta : SymbolicShift) :
+    HEq ((outer.descendSplit hp inner).translate delta)
+      ((outer.translate delta).descendSplit hp
+        (inner.translateSourceSplitPath hp delta)) := by
+  induction outer <;>
+    simp only [descendSplit, TerminalPath.translate]
+  all_goals
+    congr! 1 <;>
+      simp_all [translateSourceSplitPath, sourceSplitTree_translate,
+        splitAt_translate]
+
+theorem descendSplitMin3_translate_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target))
+    (delta : SymbolicShift) :
+    HEq ((outer.descendSplitMin3 hp inner).translate delta)
+      ((outer.translate delta).descendSplitMin3 hp
+        (TerminalPath.translateSourceSplitMin3Path hp inner delta)) := by
+  induction outer <;>
+    simp only [descendSplitMin3, Min3Path.translate, TerminalPath.translate]
+  all_goals
+    congr! 1 <;>
+      simp_all [translateSourceSplitMin3Path, sourceSplitTree_translate,
+        splitAt_translate]
+
 end TerminalPath
 
 namespace TerminalPath.AdvancedMinConfiguration
@@ -469,6 +729,355 @@ def translate {k : Nat} {tree : ELTree k}
     rw [TerminalPath.context_translate,
       Context.addBelowEveryExpanded_translate]
     exact configuration.thirdAddBelow
+
+def translateSourceSplit {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    AdvancedMinConfiguration (sourceSplitTree hp (target.translate delta))
+      (first.translate delta) (second.translate delta)
+      (third.translate delta) where
+  minPath := TerminalPath.translateSourceSplitMin3Path hp
+    configuration.minPath delta
+  firstPath := configuration.firstPath.translateSourceSplitPath hp delta
+  secondPath := configuration.secondPath.translateSourceSplitPath hp delta
+  thirdPath := configuration.thirdPath.translateSourceSplitPath hp delta
+  firstChild_eq := by
+    simp [configuration.firstChild_eq, ELTree.translate]
+  secondChild_eq := by
+    simp [configuration.secondChild_eq, ELTree.translate]
+  thirdChild_eq := by
+    simp [configuration.thirdChild_eq, ELTree.translate]
+  firstContext_eq := by
+    simp [configuration.firstContext_eq]
+  secondContext_eq := by
+    simp [configuration.secondContext_eq]
+  thirdContext_eq := by
+    simp [configuration.thirdContext_eq]
+  firstContainsAdd := by
+    simp [configuration.firstContainsAdd]
+  secondContainsAdd := by
+    simp [configuration.secondContainsAdd]
+  thirdContainsAdd := by
+    simp [configuration.thirdContainsAdd]
+  firstAddBelow := by
+    change (configuration.firstPath.translateSourceSplitPath hp delta).context
+      |>.AddBelowEveryExpanded
+    rw [TerminalPath.translateSourceSplitPath_context]
+    exact (Context.addBelowEveryExpanded_translate
+      configuration.firstPath.context delta).2 configuration.firstAddBelow
+  secondAddBelow := by
+    change (configuration.secondPath.translateSourceSplitPath hp delta).context
+      |>.AddBelowEveryExpanded
+    rw [TerminalPath.translateSourceSplitPath_context]
+    exact (Context.addBelowEveryExpanded_translate
+      configuration.secondPath.context delta).2 configuration.secondAddBelow
+  thirdAddBelow := by
+    change (configuration.thirdPath.translateSourceSplitPath hp delta).context
+      |>.AddBelowEveryExpanded
+    rw [TerminalPath.translateSourceSplitPath_context]
+    exact (Context.addBelowEveryExpanded_translate
+      configuration.thirdPath.context delta).2 configuration.thirdAddBelow
+
+@[simp] theorem cast_minPath {k : Nat} {treeA treeB : ELTree k}
+    {first second third : ELLabel k} (h : treeA = treeB)
+    (configuration : AdvancedMinConfiguration treeA first second third) :
+    (h ▸ configuration).minPath = h ▸ configuration.minPath := by
+  subst treeB
+  rfl
+
+@[simp] theorem cast_firstPath {k : Nat} {treeA treeB : ELTree k}
+    {first second third : ELLabel k} (h : treeA = treeB)
+    (configuration : AdvancedMinConfiguration treeA first second third) :
+    (h ▸ configuration).firstPath = h ▸ configuration.firstPath := by
+  subst treeB
+  rfl
+
+@[simp] theorem cast_secondPath {k : Nat} {treeA treeB : ELTree k}
+    {first second third : ELLabel k} (h : treeA = treeB)
+    (configuration : AdvancedMinConfiguration treeA first second third) :
+    (h ▸ configuration).secondPath = h ▸ configuration.secondPath := by
+  subst treeB
+  rfl
+
+@[simp] theorem cast_thirdPath {k : Nat} {treeA treeB : ELTree k}
+    {first second third : ELLabel k} (h : treeA = treeB)
+    (configuration : AdvancedMinConfiguration treeA first second third) :
+    (h ▸ configuration).thirdPath = h ▸ configuration.thirdPath := by
+  subst treeB
+  rfl
+
+@[simp] theorem translateSourceSplit_minPath {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    (configuration.translateSourceSplit hp delta).minPath =
+      TerminalPath.translateSourceSplitMin3Path hp configuration.minPath
+        delta := by
+  simp [translateSourceSplit, TerminalPath.translateSourceSplitMin3Path]
+
+@[simp] theorem translateSourceSplit_firstPath {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    (configuration.translateSourceSplit hp delta).firstPath =
+      configuration.firstPath.translateSourceSplitPath hp delta := by
+  simp [translateSourceSplit, TerminalPath.translateSourceSplitPath]
+
+@[simp] theorem translateSourceSplit_secondPath {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    (configuration.translateSourceSplit hp delta).secondPath =
+      configuration.secondPath.translateSourceSplitPath hp delta := by
+  simp [translateSourceSplit, TerminalPath.translateSourceSplitPath]
+
+@[simp] theorem translateSourceSplit_thirdPath {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    (configuration.translateSourceSplit hp delta).thirdPath =
+      configuration.thirdPath.translateSourceSplitPath hp delta := by
+  simp [translateSourceSplit, TerminalPath.translateSourceSplitPath]
+
+theorem descendSplit_translate_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)}
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (outer : TerminalPath tree target) (delta : SymbolicShift) :
+    HEq ((configuration.descendSplit hp outer).translate delta)
+      ((configuration.translateSourceSplit hp delta).descendSplit hp
+        (outer.translate delta)) := by
+  cases configuration
+  simp only [translate, TerminalPath.AdvancedMinConfiguration.descendSplit,
+    translateSourceSplit_minPath, translateSourceSplit_firstPath,
+    translateSourceSplit_secondPath, translateSourceSplit_thirdPath]
+  congr! 1
+  all_goals
+    first
+    | exact (outer.splitAt_translate hp delta).symm
+    | exact outer.descendSplitMin3_translate_heq hp _ delta
+    | exact outer.descendSplit_translate_heq hp _ delta
+
+theorem advancedMinConfiguration_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    (TerminalPath.advancedMinConfiguration root retarded first second third).translate
+        delta =
+      TerminalPath.advancedMinConfiguration (root.translate delta)
+        (retarded.translate delta) (first.translate delta)
+        (second.translate delta) (third.translate delta) := by
+  rfl
+
+theorem advancedMinPath_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    (TerminalPath.advancedMinPath root retarded first second third).translate
+        delta =
+      TerminalPath.advancedMinPath (root.translate delta)
+        (retarded.translate delta) (first.translate delta)
+        (second.translate delta) (third.translate delta) := by
+  rfl
+
+theorem advancedFirstPath_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    (TerminalPath.advancedFirstPath root retarded first second third).translate
+        delta =
+      TerminalPath.advancedFirstPath (root.translate delta)
+        (retarded.translate delta) (first.translate delta)
+        (second.translate delta) (third.translate delta) := by
+  rfl
+
+theorem advancedSecondPath_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    (TerminalPath.advancedSecondPath root retarded first second third).translate
+        delta =
+      TerminalPath.advancedSecondPath (root.translate delta)
+        (retarded.translate delta) (first.translate delta)
+        (second.translate delta) (third.translate delta) := by
+  rfl
+
+theorem advancedThirdPath_translate {k : Nat}
+    (root retarded first second third : ELLabel k)
+    (delta : SymbolicShift) :
+    (TerminalPath.advancedThirdPath root retarded first second third).translate
+        delta =
+      TerminalPath.advancedThirdPath (root.translate delta)
+        (retarded.translate delta) (first.translate delta)
+        (second.translate delta) (third.translate delta) := by
+  rfl
+
+theorem sourceD1AdvancedConfigurationData_minPath_heq_advanced {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) :
+    HEq (TerminalPath.sourceD1AdvancedConfigurationData hp label hm).minPath
+      (TerminalPath.advancedMinConfiguration label
+        (retardedSplitLabel label)
+        (d1AdvancedSplitLabel hp label hm 0)
+        (d1AdvancedSplitLabel hp label hm 1)
+        (d1AdvancedSplitLabel hp label hm 2)).minPath := by
+  unfold TerminalPath.sourceD1AdvancedConfigurationData
+  congr! 1
+  all_goals
+    first
+    | exact sourceSplitTree_eq_advanced_d1 hp label hm
+    | exact rec_heq_of_heq
+        (C := fun tree => AdvancedMinConfiguration tree
+          (d1AdvancedSplitLabel hp label hm 0)
+          (d1AdvancedSplitLabel hp label hm 1)
+          (d1AdvancedSplitLabel hp label hm 2))
+        (sourceSplitTree_eq_advanced_d1 hp label hm).symm HEq.rfl
+
+theorem sourceD3AdvancedConfigurationData_minPath_heq_advanced {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) :
+    HEq (TerminalPath.sourceD3AdvancedConfigurationData hp label hm).minPath
+      (TerminalPath.advancedMinConfiguration label
+        (retardedSplitLabel label)
+        (d3AdvancedSplitLabel hp label hm 0)
+        (d3AdvancedSplitLabel hp label hm 1)
+        (d3AdvancedSplitLabel hp label hm 2)).minPath := by
+  unfold TerminalPath.sourceD3AdvancedConfigurationData
+  congr! 1
+  all_goals
+    first
+    | exact sourceSplitTree_eq_advanced_d3 hp label hm
+    | exact rec_heq_of_heq
+        (C := fun tree => AdvancedMinConfiguration tree
+          (d3AdvancedSplitLabel hp label hm 0)
+          (d3AdvancedSplitLabel hp label hm 1)
+          (d3AdvancedSplitLabel hp label hm 2))
+        (sourceSplitTree_eq_advanced_d3 hp label hm).symm HEq.rfl
+
+theorem sourceD1AdvancedConfigurationData_minPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitMin3Path hp
+        (TerminalPath.sourceD1AdvancedConfigurationData hp label hm).minPath
+        delta)
+      (TerminalPath.sourceD1AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).minPath := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp label hm
+  let advanced := TerminalPath.advancedMinConfiguration label
+    (retardedSplitLabel label)
+    (d1AdvancedSplitLabel hp label hm 0)
+    (d1AdvancedSplitLabel hp label hm 1)
+    (d1AdvancedSplitLabel hp label hm 2)
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  let translatedAdvanced := TerminalPath.advancedMinConfiguration
+    (label.translate delta) (retardedSplitLabel (label.translate delta))
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 0)
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 1)
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 2)
+  let translatedByParts := TerminalPath.advancedMinConfiguration
+    (label.translate delta) ((retardedSplitLabel label).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 0).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 1).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 2).translate delta)
+  have houter : HEq
+      (TerminalPath.translateSourceSplitMin3Path hp source.minPath delta)
+      (source.minPath.translate delta) := by
+    unfold TerminalPath.translateSourceSplitMin3Path
+    exact cast_heq _ _
+  have hsource : HEq source.minPath advanced.minPath := by
+    exact sourceD1AdvancedConfigurationData_minPath_heq_advanced hp label hm
+  have hadvanced : HEq (advanced.minPath.translate delta)
+      translatedAdvanced.minPath := by
+    have hparts : advanced.minPath.translate delta =
+        translatedByParts.minPath := by
+      simpa [advanced, translatedByParts,
+        TerminalPath.AdvancedMinConfiguration.translate] using
+        congrArg (fun configuration => configuration.minPath)
+        (advancedMinConfiguration_translate label (retardedSplitLabel label)
+          (d1AdvancedSplitLabel hp label hm 0)
+          (d1AdvancedSplitLabel hp label hm 1)
+          (d1AdvancedSplitLabel hp label hm 2) delta)
+    have hcanonical : HEq translatedByParts.minPath
+        translatedAdvanced.minPath := by
+      dsimp [translatedByParts, translatedAdvanced]
+      have hret := (retardedSplitLabel_translate label delta).symm
+      have h0 := (d1AdvancedSplitLabel_translate hp label hm delta 0).symm
+      have h1 := (d1AdvancedSplitLabel_translate hp label hm delta 1).symm
+      have h2 := (d1AdvancedSplitLabel_translate hp label hm delta 2).symm
+      rw [hret, h0, h1, h2]
+    exact (heq_of_eq hparts).trans hcanonical
+  have htranslated : HEq translatedSource.minPath
+      translatedAdvanced.minPath := by
+    exact sourceD1AdvancedConfigurationData_minPath_heq_advanced hp
+      (label.translate delta) (by simpa using hm)
+  exact houter.trans ((Min3Path.translate_heq_of_heq _ _
+    (sourceSplitTree_eq_advanced_d1 hp label hm) hsource delta).trans
+    (hadvanced.trans htranslated.symm))
+
+theorem sourceD3AdvancedConfigurationData_minPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitMin3Path hp
+        (TerminalPath.sourceD3AdvancedConfigurationData hp label hm).minPath
+        delta)
+      (TerminalPath.sourceD3AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).minPath := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp label hm
+  let advanced := TerminalPath.advancedMinConfiguration label
+    (retardedSplitLabel label)
+    (d3AdvancedSplitLabel hp label hm 0)
+    (d3AdvancedSplitLabel hp label hm 1)
+    (d3AdvancedSplitLabel hp label hm 2)
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  let translatedAdvanced := TerminalPath.advancedMinConfiguration
+    (label.translate delta) (retardedSplitLabel (label.translate delta))
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 0)
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 1)
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 2)
+  let translatedByParts := TerminalPath.advancedMinConfiguration
+    (label.translate delta) ((retardedSplitLabel label).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 0).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 1).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 2).translate delta)
+  have houter : HEq
+      (TerminalPath.translateSourceSplitMin3Path hp source.minPath delta)
+      (source.minPath.translate delta) := by
+    unfold TerminalPath.translateSourceSplitMin3Path
+    exact cast_heq _ _
+  have hsource : HEq source.minPath advanced.minPath := by
+    exact sourceD3AdvancedConfigurationData_minPath_heq_advanced hp label hm
+  have hadvanced : HEq (advanced.minPath.translate delta)
+      translatedAdvanced.minPath := by
+    have hparts : advanced.minPath.translate delta =
+        translatedByParts.minPath := by
+      simpa [advanced, translatedByParts,
+        TerminalPath.AdvancedMinConfiguration.translate] using
+        congrArg (fun configuration => configuration.minPath)
+        (advancedMinConfiguration_translate label (retardedSplitLabel label)
+          (d3AdvancedSplitLabel hp label hm 0)
+          (d3AdvancedSplitLabel hp label hm 1)
+          (d3AdvancedSplitLabel hp label hm 2) delta)
+    have hcanonical : HEq translatedByParts.minPath
+        translatedAdvanced.minPath := by
+      dsimp [translatedByParts, translatedAdvanced]
+      have hret := (retardedSplitLabel_translate label delta).symm
+      have h0 := (d3AdvancedSplitLabel_translate hp label hm delta 0).symm
+      have h1 := (d3AdvancedSplitLabel_translate hp label hm delta 1).symm
+      have h2 := (d3AdvancedSplitLabel_translate hp label hm delta 2).symm
+      rw [hret, h0, h1, h2]
+    exact (heq_of_eq hparts).trans hcanonical
+  have htranslated : HEq translatedSource.minPath
+      translatedAdvanced.minPath := by
+    exact sourceD3AdvancedConfigurationData_minPath_heq_advanced hp
+      (label.translate delta) (by simpa using hm)
+  exact houter.trans ((Min3Path.translate_heq_of_heq _ _
+    (sourceSplitTree_eq_advanced_d3 hp label hm) hsource delta).trans
+    (hadvanced.trans htranslated.symm))
 
 theorem witnessRetention_eq_of_witness_iff
     {k : Nat} {treeA treeB : ELTree k}

@@ -26,6 +26,8 @@ namespace KL2003
 #print axioms ELTree.Min3Path.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
 #print axioms ELTree.Min3Retention.reduce_criticalNodeBounds
 #print axioms ELTree.TerminalPath.deletionWitness_implies_not_holeCritical
+#print axioms ELTree.TerminalPath.sourceD1AdvancedConfigurationData
+#print axioms ELTree.TerminalPath.sourceD3AdvancedConfigurationData
 #print axioms ELTree.TerminalPath.sourceD1AdvancedConfiguration
 #print axioms ELTree.TerminalPath.sourceD3AdvancedConfiguration
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.descendSplit

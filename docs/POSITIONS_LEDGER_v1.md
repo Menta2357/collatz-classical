@@ -226,9 +226,12 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   al trasladar. La geometria de deletion si transporta: `Min3Path` y
   `reduceAt` con retencion fija conmutan con la traslacion. La politica por
   testigos tambien se conserva entre configuraciones traducidas cuando las
-  hojas comparadas son no negativas, y D2 conmuta por completo. En D1/D3 falta
-  identificar las configuraciones advanced construidas tras el split con sus
-  traducciones; el umbral absoluto del scheduler sigue siendo la segunda
+  hojas comparadas son no negativas, y D2 conmuta por completo. El descenso
+  dependiente por un split exterior y el `minPath` canonico de las
+  configuraciones advanced D1/D3 ya se identifican con sus traducciones. Falta
+  extender esa correspondencia a los tres branch paths, transportar sus
+  testigos bajo las hipotesis de signo explicitas y cerrar `witnessRetention`
+  y `sourceStep`; el umbral absoluto del scheduler sigue siendo la segunda
   decision pendiente de la correspondencia recurrente.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con

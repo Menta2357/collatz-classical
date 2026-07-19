@@ -1993,14 +1993,37 @@ def advancedMinConfiguration {k : Nat}
   secondAddBelow := advancedSecondPath_addBelowEveryExpanded _ _ _ _ _
   thirdAddBelow := advancedThirdPath_addBelowEveryExpanded _ _ _ _ _
 
+def sourceD1AdvancedConfigurationData {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2) :
+    AdvancedMinConfiguration (sourceSplitTree hp label)
+      (d1AdvancedSplitLabel hp label hm 0)
+      (d1AdvancedSplitLabel hp label hm 1)
+      (d1AdvancedSplitLabel hp label hm 2) :=
+  (sourceSplitTree_eq_advanced_d1 hp label hm).symm ▸
+    advancedMinConfiguration label (retardedSplitLabel label)
+      (d1AdvancedSplitLabel hp label hm 0)
+      (d1AdvancedSplitLabel hp label hm 1)
+      (d1AdvancedSplitLabel hp label hm 2)
+
+def sourceD3AdvancedConfigurationData {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8) :
+    AdvancedMinConfiguration (sourceSplitTree hp label)
+      (d3AdvancedSplitLabel hp label hm 0)
+      (d3AdvancedSplitLabel hp label hm 1)
+      (d3AdvancedSplitLabel hp label hm 2) :=
+  (sourceSplitTree_eq_advanced_d3 hp label hm).symm ▸
+    advancedMinConfiguration label (retardedSplitLabel label)
+      (d3AdvancedSplitLabel hp label hm 0)
+      (d3AdvancedSplitLabel hp label hm 1)
+      (d3AdvancedSplitLabel hp label hm 2)
+
 theorem sourceD1AdvancedConfiguration {p : Nat} (hp : 1 <= p)
     (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2) :
     Nonempty (AdvancedMinConfiguration (sourceSplitTree hp label)
       (d1AdvancedSplitLabel hp label hm 0)
       (d1AdvancedSplitLabel hp label hm 1)
       (d1AdvancedSplitLabel hp label hm 2)) := by
-  rw [sourceSplitTree_eq_advanced_d1 hp label hm]
-  exact ⟨advancedMinConfiguration _ _ _ _ _⟩
+  exact ⟨sourceD1AdvancedConfigurationData hp label hm⟩
 
 theorem sourceD3AdvancedConfiguration {p : Nat} (hp : 1 <= p)
     (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8) :
@@ -2008,8 +2031,7 @@ theorem sourceD3AdvancedConfiguration {p : Nat} (hp : 1 <= p)
       (d3AdvancedSplitLabel hp label hm 0)
       (d3AdvancedSplitLabel hp label hm 1)
       (d3AdvancedSplitLabel hp label hm 2)) := by
-  rw [sourceSplitTree_eq_advanced_d3 hp label hm]
-  exact ⟨advancedMinConfiguration _ _ _ _ _⟩
+  exact ⟨sourceD3AdvancedConfigurationData hp label hm⟩
 
 theorem exists_sourceD1AdvancedPath {p : Nat} (hp : 1 <= p)
     (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2)

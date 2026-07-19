@@ -418,27 +418,25 @@ theorem sourcePhiK_monotone {p : Nat}
   intro mode y1 y2 hy
   exact sourcePhiK_mono_y roots hy
 
-noncomputable def d1Configuration {p : Nat} (hp : 1 <= p)
+def d1Configuration {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
     (hm : occurrence.target.mode.1.1 % 9 = 2) :
     TerminalPath.AdvancedMinConfiguration (occurrence.split hp)
       (d1AdvancedSplitLabel hp occurrence.target hm 0)
       (d1AdvancedSplitLabel hp occurrence.target hm 1)
       (d1AdvancedSplitLabel hp occurrence.target hm 2) :=
-  (Classical.choice
-    (TerminalPath.sourceD1AdvancedConfiguration hp occurrence.target hm)).descendSplit
-      hp occurrence.path
+  (TerminalPath.sourceD1AdvancedConfigurationData hp occurrence.target hm)
+    |>.descendSplit hp occurrence.path
 
-noncomputable def d3Configuration {p : Nat} (hp : 1 <= p)
+def d3Configuration {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
     (hm : occurrence.target.mode.1.1 % 9 = 8) :
     TerminalPath.AdvancedMinConfiguration (occurrence.split hp)
       (d3AdvancedSplitLabel hp occurrence.target hm 0)
       (d3AdvancedSplitLabel hp occurrence.target hm 1)
       (d3AdvancedSplitLabel hp occurrence.target hm 2) :=
-  (Classical.choice
-    (TerminalPath.sourceD3AdvancedConfiguration hp occurrence.target hm)).descendSplit
-      hp occurrence.path
+  (TerminalPath.sourceD3AdvancedConfigurationData hp occurrence.target hm)
+    |>.descendSplit hp occurrence.path
 
 noncomputable def sourceStep {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree) :

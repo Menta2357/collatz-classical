@@ -21,6 +21,11 @@ namespace KL2003
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_translate_of_nonnegative
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_translate_of_nonnegative
 #print axioms ELTree.TerminalPath.splitAt_translate
+#print axioms ELTree.TerminalPath.descendSplit_translate_heq
+#print axioms ELTree.TerminalPath.descendSplitMin3_translate_heq
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.descendSplit_translate_heq
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.sourceD1AdvancedConfigurationData_minPath_translate_heq
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.sourceD3AdvancedConfigurationData_minPath_translate_heq
 #print axioms ELTree.ExpandableOccurrence.split_translate
 #print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d2
 #print axioms ELTree.RawSourceSplitStep.translate
