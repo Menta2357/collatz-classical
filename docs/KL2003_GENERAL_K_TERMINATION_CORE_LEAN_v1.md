@@ -29,7 +29,11 @@ the separate self-similar correspondence obligation identified in the source
 scoping note. The uniform-drop theorem weakens what must be derived: exact
 self-similarity is unnecessary if a finite transition/cycle argument supplies
 one uniform positive loss at repeated modes. That graph-theoretic premise is
-not yet proved. The module also does not claim EL termination, order
+not yet proved. In particular, the printed deletion rule uses a strict
+ancestor-shift comparison and does not delete an equal-shift recurrence, even
+though the proof prose later treats equality as deleted. A cycle certificate
+must therefore exclude zero-weight recurrent segments as well as positive
+ones. The module also does not claim EL termination, order
 independence, a canonical normal form, or `SatisfiesEL`.
 
 ## Main theorems

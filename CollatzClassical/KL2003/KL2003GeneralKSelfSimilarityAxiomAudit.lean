@@ -59,6 +59,7 @@ namespace KL2003
 #print axioms ELTree.terminalEligibilityEquivalent_terminal_zero_iff
 #print axioms ELTree.not_terminalEligibilityEquivalent_terminal_zero_of_delta_neg
 #print axioms ELTree.deletionWitness_depends_on_outer_context
+#print axioms ELTree.equal_shift_same_mode_not_deletionWitness
 #print axioms ELTree.terminalShiftsNegative_translate_of_delta_nonpos
 #print axioms ELTree.findExpandableOccurrence_translate_eq_none_of_delta_nonpos
 #print axioms ELTree.RawSourceSplitStep.translate

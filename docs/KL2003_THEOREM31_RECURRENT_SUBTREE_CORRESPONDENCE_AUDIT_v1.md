@@ -58,6 +58,24 @@ The same leaf has no deletion witness as a bare terminal and does have one
 when placed below an earlier same-mode expanded node. Thus root mode and shift
 translation alone do not determine deletion behavior.
 
+### Strict rule versus equality claim
+
+The printed deletion rule requires an earlier same-mode shift to be strictly
+smaller than the current leaf shift. The proof later says that a later shift
+greater than or equal to an earlier one would have been deleted. Equality is
+not covered by the printed rule.
+
+Lean records the boundary directly:
+
+```lean
+equal_shift_same_mode_not_deletionWitness
+```
+
+An eligible shift-zero leaf below a shift-zero same-mode ancestor is not
+deleted. A strict recurrent descent must therefore prove that zero-weight
+recurrent path segments cannot occur; deletion alone supplies only
+nonincrease.
+
 ### One-way pruning
 
 Negative translation still has a useful monotone direction. Lean proves that
@@ -89,7 +107,7 @@ least one fixed `epsilon > 0`.
 
 A prospective proof can model admissible source branches as a finite weighted
 transition graph. If deletion admissibility implies that every repeated-mode
-simple cycle has negative total shift, finiteness would provide a uniform
+simple cycle has strictly negative total shift, finiteness would provide a uniform
 negative margin; loop erasure would then force shifts to negative values. This
 graph/cycle premise is a proposed route only and is not yet formalized.
 
@@ -108,6 +126,7 @@ lake env lean CollatzClassical/KL2003/KL2003GeneralKSelfSimilarityAxiomAudit.lea
 THEOREM31_PRIMARY_SOURCE_RECHECKED
 THEOREM31_TERMINAL_ELIGIBILITY_COUNTEREXAMPLE_PROVED
 THEOREM31_DELETION_OUTER_CONTEXT_COUNTEREXAMPLE_PROVED
+THEOREM31_EQUAL_SHIFT_DELETION_GAP_PROVED
 THEOREM31_NEGATIVE_TRANSLATION_ONE_WAY_PRUNING_PROVED
 THEOREM31_UNIFORM_RECURRENT_DROP_CONTRADICTION_PROVED
 THEOREM31_UNCONDITIONAL_RECURRENT_SUBTREE_IDENTITY_NOT_JUSTIFIED

@@ -65,6 +65,15 @@ translation argument, not Theorem 3.1 itself. A successful proof must add the
 missing contextual invariant or replace exact subtree identity by another
 well-founded descent.
 
+There is also an inequality mismatch inside the source proof. The deletion
+rule at lines 769-777 deletes when an earlier same-mode shift is strictly
+smaller than the leaf shift. At lines 830-832 the proof says deletion would
+occur when the later shift is greater than or equal to the earlier one. The
+equality case is not covered by the printed rule. Lean confirms this boundary:
+an eligible leaf below an equal-shift same-mode ancestor has no deletion
+witness. Strict recurrent descent therefore needs a separate exclusion of
+zero-weight recurrent segments.
+
 The termination pass must therefore discharge, separately:
 
 1. finite branching and extraction of an infinite path from nontermination;
@@ -114,6 +123,10 @@ nonpositive translation cannot create an expandable terminal in a tree that
 already has only negative terminal shifts. This gives one-way pruning, not
 subtree identity.
 
+An additional theorem places a shift-zero leaf below a shift-zero same-mode
+ancestor and proves that no deletion witness exists. It formalizes the gap
+between the strict printed deletion rule and the proof's later `>=` claim.
+
 The arithmetic core now also proves a weaker sufficient endpoint. If every
 later recurrence of one mode decreases the shift by at least one uniform
 `epsilon > 0`, then some recurrent shift is negative. The next mathematical
@@ -139,6 +152,7 @@ THEOREM31_SOURCE_SCHEDULER_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 THEOREM31_NEGATIVE_TRANSLATION_ONE_WAY_PRUNING_PROVED
 THEOREM31_TERMINAL_ELIGIBILITY_COUNTEREXAMPLE_PROVED
 THEOREM31_DELETION_OUTER_CONTEXT_COUNTEREXAMPLE_PROVED
+THEOREM31_EQUAL_SHIFT_DELETION_GAP_PROVED
 THEOREM31_UNCONDITIONAL_RECURRENT_SUBTREE_IDENTITY_NOT_JUSTIFIED
 THEOREM31_CONTEXTUAL_CORRESPONDENCE_OR_UNIFORM_CYCLE_DROP_REQUIRED
 THEOREM31_UNIFORM_DROP_FROM_ADMISSIBLE_CYCLES_NOT_YET_PROVED

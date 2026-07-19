@@ -2131,6 +2131,23 @@ theorem deletionWitness_depends_on_outer_context {k : Nat}
       · norm_num [TerminalPath.leafState, SymbolicShift.zero,
           SymbolicShift.eval]
 
+theorem equal_shift_same_mode_not_deletionWitness {k : Nat}
+    (mode : TrackedMode k) :
+    let label : ELLabel k := ELLabel.mk mode SymbolicShift.zero
+    let path : TerminalPath
+        (ELTree.expanded label (ELTree.terminal label)) label :=
+      TerminalPath.expanded label (ELTree.terminal label) label
+        (TerminalPath.here label)
+    Not path.HasDeletionWitness := by
+  dsimp
+  intro hwitness
+  rcases hwitness.2 with ⟨ancestor, hmember, _, hshift⟩
+  simp [TerminalPath.leafState, TerminalPath.context,
+    ELTree.Context.expandedLabels] at hmember
+  subst ancestor
+  norm_num [TerminalPath.leafState, SymbolicShift.zero,
+    SymbolicShift.eval] at hshift
+
 theorem terminalShiftsNegative_translate_of_delta_nonpos {k : Nat}
     (tree : ELTree k) (delta : SymbolicShift) (hdelta : delta.eval <= 0)
     (hnegative : tree.TerminalShiftsNegative) :

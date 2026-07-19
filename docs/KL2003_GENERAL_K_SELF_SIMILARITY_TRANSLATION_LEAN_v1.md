@@ -37,7 +37,8 @@ splits. A symbolic translation `delta`:
   in a tree already having only negative terminal shifts;
 - exhibits exact counterexamples showing that negative translation need not
   preserve terminal eligibility and that deletion witnesses depend on the
-  outer ancestor context;
+  outer ancestor context, and confirms that an equal-shift same-mode ancestor
+  is not a deletion witness under the source's strict inequality;
 - transports the reflexive-transitive closure of raw localized source splits.
 
 The main finite-trace theorem is `ELTree.rawSourceSplitSteps_translate`; the
@@ -74,6 +75,9 @@ module does not derive one fixed increment between successive recurrent shifts
 or prove termination/order independence. It does prove the useful one-way
 fact that translating by a nonpositive shift preserves an already terminal
 tree, so negative translation prunes eligibility rather than creating it.
+The theorem `equal_shift_same_mode_not_deletionWitness` also records the exact
+boundary of the printed deletion rule: equality is retained. Any strict-cycle
+descent must therefore rule out zero-weight recurrent segments separately.
 
 ## Verification
 
@@ -113,6 +117,7 @@ GENERAL_K_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
 GENERAL_K_NEGATIVE_TRANSLATION_ONE_WAY_PRUNING_PROVED
 GENERAL_K_TERMINAL_ELIGIBILITY_NEGATIVE_TRANSLATION_COUNTEREXAMPLE_PROVED
 GENERAL_K_DELETION_WITNESS_OUTER_CONTEXT_DEPENDENCE_PROVED
+GENERAL_K_EQUAL_SHIFT_SAME_MODE_NOT_DELETED_PROVED
 THEOREM31_LOCAL_SELF_SIMILARITY_STEP_PROVED
 GENERAL_K_SELF_SIMILARITY_TRANSLATION_AXIOM_AUDIT_PASS
 GENERAL_K_UNCONDITIONAL_SIGN_SENSITIVE_SCHEDULER_TRANSLATION_NOT_CLAIMED

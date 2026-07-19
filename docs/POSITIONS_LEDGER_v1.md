@@ -246,12 +246,26 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   direccion monotona util: una traslacion no positiva no crea hojas
   expandibles en un arbol ya terminal. Esto no refuta Theorem 3.1, pero impide
   deducir identidad de subarboles recurrentes solo de modo y traslacion.
+- La misma relectura detecta una segunda inconsistencia de desigualdad. La
+  deletion rule impresa exige que el shift del ancestro sea estrictamente
+  menor, mientras la prueba afirma despues que tambien se borraria en
+  igualdad. Lean confirma que una hoja elegible bajo un ancestro del mismo
+  modo y mismo shift no tiene testigo. Por tanto deletion sola da no-aumento;
+  cualquier descenso estricto debe excluir aparte ciclos de peso cero.
 - El nucleo aritmetico dispone ahora de una salida mas debil que la identidad
   exacta de subarboles. Si toda repeticion posterior de un modo pierde al menos
   un `epsilon > 0` uniforme, alguna shift recurrente se vuelve negativa. Queda
   abierta la parte matematica real: derivar ese margen uniforme de un grafo
   finito de transiciones y ciclos simples admisibles, respetando el contexto de
   deletion. No se reclama aun terminacion ni independencia de orden.
+- La ruta alternativa queda ahora disenada como cuatro modulos: grafo finito
+  de acciones source, exclusion de peso cero mediante irracionalidad de
+  `logb 2 3` o certificado kernel-checked, descomposicion en ciclos simples y
+  extraccion de una caminata superviviente desde la no terminacion. El grafo
+  bruto tiene ciclos positivos, incluido el auto-bucle D3 de clase 8 en k=2;
+  deletion los excluye solo en ramas supervivientes. Por eso el contrato no
+  afirma negatividad del grafo bruto: combina no-aumento contextual, ausencia
+  de peso cero y finitud para producir el margen uniforme.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
