@@ -68,6 +68,24 @@ sourcePhiK_D3_topExpr
 This is the expression substituted by a future EL split step; it is generated
 from the parametric row operators and does not import a prebuilt tree.
 
+The semantic split substep is also isolated and proved:
+
+```lean
+ELExpr.shiftBy
+ELExpr.shiftBy_eval
+splitTopExpr
+splitTopExpr_eval_le_sourceLeaf
+ELExpr.replaceLeaves
+ELExpr.replaceLeaves_eval_le
+```
+
+`splitTopExpr` selects D1, D2, or D3 from the residue of the tracked mode,
+then shifts the entire row by the leaf's symbolic argument. The theorem
+`splitTopExpr_eval_le_sourceLeaf` proves the local substitution inequality.
+The generic replacement theorem lifts such leaf inequalities through any
+nested combination of sums and minima. Therefore the split substep of
+Theorem 3.2 is closed independently of deletion.
+
 ## Deletion witness vocabulary
 
 `ELLeafState` records a leaf, its principal ancestors, and its status.
@@ -97,7 +115,6 @@ Build and audit pass with the expected axiom profile. No `sorry`, `admit`,
 ## Remaining Module 2 work
 
 ```text
-EL_SPLIT_STEP
 EL_WELL_FORMEDNESS_PRESERVATION
 DELETION_NEVER_REMOVES_ALL_MIN_CHILDREN
 EL_TERMINATION
@@ -116,6 +133,8 @@ GENERAL_K_NESTED_EL_EXPR_DEFINED
 EL_TO_RETARDED_EXPR_SEMANTICS_PROVED
 GENERAL_K_TOP_LEVEL_ROW_EXPRESSIONS_DEFINED
 GENERAL_K_TOP_LEVEL_ROW_EXPRESSION_SEMANTICS_PROVED
+GENERAL_K_EL_SPLIT_EXPRESSION_DEFINED
+GENERAL_K_EL_SPLIT_SEMANTIC_PRESERVATION_PROVED
 EL_DELETION_WITNESS_DEFINED
 EL_DELETION_MONOTONICITY_COMPONENT_PROVED
 GENERAL_K_ELIMINATION_FOUNDATION_AXIOM_AUDIT_PASS

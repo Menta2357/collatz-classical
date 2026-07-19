@@ -98,6 +98,10 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - P3 ya compila D1 y D3 a expresiones enteramente del nivel superior; las tres
   filas top-level tienen evaluacion exacta y desigualdad semantica probadas.
   Esas expresiones son el futuro cuerpo de split EL, sin arbol preconstruido.
+- La subetapa split de EL ya esta cerrada semanticamente: cada hoja se
+  reemplaza por D1/D2/D3 desplazada y un lema estructural propaga la
+  desigualdad a traves de sumas y minimos. Terminacion y deletion siguen
+  separadas y abiertas.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

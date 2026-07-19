@@ -16,6 +16,9 @@ namespace KL2003
 #print axioms sourcePhiK_D1_topExpr
 #print axioms sourcePhiK_D2_topExpr
 #print axioms sourcePhiK_D3_topExpr
+#print axioms ELExpr.shiftBy_eval
+#print axioms splitTopExpr_eval_le_sourceLeaf
+#print axioms ELExpr.replaceLeaves_eval_le
 
 end KL2003
 end CollatzClassical

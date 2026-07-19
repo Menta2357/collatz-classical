@@ -306,5 +306,87 @@ theorem sourcePhiK_D3_topExpr {p : Nat} (hp : 1 <= p)
   rw [← hp3]
   exact sourcePhiK_D3 hp roots m hm hy
 
+def ELExpr.shiftBy {k : Nat} (delta : SymbolicShift) : ELExpr k -> ELExpr k
+  | .leaf label => .leaf ⟨label.mode, delta + label.shift⟩
+  | .add left right => .add (left.shiftBy delta) (right.shiftBy delta)
+  | .min3 first second third =>
+      .min3 (first.shiftBy delta) (second.shiftBy delta)
+        (third.shiftBy delta)
+
+theorem ELExpr.shiftBy_eval {k : Nat} (expr : ELExpr k)
+    (delta : SymbolicShift) (Phi : TrackedMode k -> Real -> Real)
+    (y : Real) :
+    (expr.shiftBy delta).eval Phi y = expr.eval Phi (y + delta.eval) := by
+  induction expr with
+  | leaf label =>
+      simp only [shiftBy, eval, SymbolicShift.eval_add]
+      congr 1
+      ring
+  | add left right ihLeft ihRight =>
+      simp only [shiftBy, eval, ihLeft, ihRight]
+  | min3 first second third ihFirst ihSecond ihThird =>
+      simp only [shiftBy, eval, ihFirst, ihSecond, ihThird]
+
+def splitTopExpr {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) : ELExpr (p + 1) := by
+  by_cases h2 : label.mode.1.1 % 9 = 2
+  · exact (d1TopExpr hp label.mode h2).shiftBy label.shift
+  by_cases h5 : label.mode.1.1 % 9 = 5
+  · exact (d2TopExpr hp label.mode).shiftBy label.shift
+  · have h8 : label.mode.1.1 % 9 = 8 := by
+      rcases trackedMode_mod_nine_cases label.mode with h | h | h
+      · exact False.elim (h2 h)
+      · exact False.elim (h5 h)
+      · exact h
+    exact (d3TopExpr hp label.mode h8).shiftBy label.shift
+
+theorem splitTopExpr_eval_le_sourceLeaf {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    (label : ELLabel (p + 1)) {y : Real}
+    (hy : 2 <= y + label.shift.eval) :
+    (splitTopExpr hp label).eval (fun mode z => sourcePhiK mode z) y <=
+      sourcePhiK label.mode (y + label.shift.eval) := by
+  unfold splitTopExpr
+  split
+  next h2 =>
+    rw [ELExpr.shiftBy_eval]
+    exact sourcePhiK_D1_topExpr hp roots label.mode h2 hy
+  next hnot2 =>
+    split
+    next h5 =>
+      rw [ELExpr.shiftBy_eval]
+      exact sourcePhiK_D2_topExpr hp roots label.mode h5 hy
+    next hnot5 =>
+      have h8 : label.mode.1.1 % 9 = 8 := by
+        rcases trackedMode_mod_nine_cases label.mode with h | h | h
+        · exact False.elim (hnot2 h)
+        · exact False.elim (hnot5 h)
+        · exact h
+      rw [ELExpr.shiftBy_eval]
+      exact sourcePhiK_D3_topExpr hp roots label.mode h8 hy
+
+def ELExpr.replaceLeaves {k : Nat}
+    (replacement : ELLabel k -> ELExpr k) : ELExpr k -> ELExpr k
+  | .leaf label => replacement label
+  | .add left right =>
+      .add (left.replaceLeaves replacement) (right.replaceLeaves replacement)
+  | .min3 first second third =>
+      .min3 (first.replaceLeaves replacement)
+        (second.replaceLeaves replacement) (third.replaceLeaves replacement)
+
+theorem ELExpr.replaceLeaves_eval_le {k : Nat} (expr : ELExpr k)
+    (replacement : ELLabel k -> ELExpr k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hleaf : forall label,
+      (replacement label).eval Phi y <=
+        Phi label.mode (y + label.shift.eval)) :
+    (expr.replaceLeaves replacement).eval Phi y <= expr.eval Phi y := by
+  induction expr with
+  | leaf label => exact hleaf label
+  | add left right ihLeft ihRight =>
+      exact add_le_add ihLeft ihRight
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact min_le_min ihFirst (min_le_min ihSecond ihThird)
+
 end KL2003
 end CollatzClassical
