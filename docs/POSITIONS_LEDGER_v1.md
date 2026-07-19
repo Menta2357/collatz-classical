@@ -212,10 +212,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   trackeado modulo 9 y, en D1/D3, desciende la configuracion del nuevo minimo
   advanced por el contexto exterior y aplica la retencion maximal por
   testigos, sin consultar `Phi`. El split conserva frontera y `NodeBounds`, y
-  cada rama borrada lleva testigo sintactico. Sigue abierto el punto semantico
-  decisivo: probar que esta deletion incondicional preserva
-  `CriticalNodeBounds` aun cuando el minimo objetivo no sea globalmente
-  critico; no se ha convertido en hipotesis.
+  cada rama borrada lleva testigo sintactico. El punto semantico decisivo ya
+  esta cerrado sin convertirlo en hipotesis: si el minimo objetivo es critico,
+  aplica el transporte dirigido existente; si no lo es, toda retencion eleva
+  su valor pero sigue bloqueada por el primer minimo exterior no critico, y
+  `NodeBounds` paga los nodos retenidos y hermanos. Lean concluye que el paso
+  source-faithful D1/D2/D3 preserva `CriticalNodeBounds` sin asumir criticidad
+  del objetivo. Quedan la terminacion expansion-deletion, la independencia de
+  orden, la forma normal canonica y `SatisfiesEL`.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

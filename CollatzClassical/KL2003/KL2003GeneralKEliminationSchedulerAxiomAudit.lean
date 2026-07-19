@@ -5,13 +5,25 @@ namespace KL2003
 
 #print axioms ELTree.ExpandableOccurrence.split_frontierExpr
 #print axioms ELTree.ExpandableOccurrence.split_nodeBounds
+#print axioms ELTree.Context.criticalNodeBounds_of_root
+#print axioms ELTree.Min3Path.normalExpr_eval_le_reduceAt
+#print axioms ELTree.Min3Path.reduceAt_criticalNodeBounds_of_totallyNoncritical_of_nodeBounds
+#print axioms ELTree.Min3Path.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_nodeBounds
+#print axioms ELTree.shiftBy_argumentsNonnegative
+#print axioms ELTree.sourceSplitTree_normalExpr_argumentsNonnegative
+#print axioms ELTree.TerminalPath.splitAt_normalExpr_argumentsNonnegative
+#print axioms ELTree.ExpandableOccurrence.split_normalExpr_argumentsNonnegative
+#print axioms ELTree.ExpandableOccurrence.sourcePhiK_positive
+#print axioms ELTree.ExpandableOccurrence.sourcePhiK_monotone
 #print axioms ELTree.trackedMode_mod_nine_cases
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d1
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d2
 #print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d3
 #print axioms ELTree.ExpandableOccurrence.d1_deletedBranchesHaveWitness
 #print axioms ELTree.ExpandableOccurrence.d3_deletedBranchesHaveWitness
+#print axioms ELTree.ExpandableOccurrence.sourceStep_criticalNodeBounds
 #print axioms ELTree.findExpandableOccurrence_eq_none_iff
+#print axioms ELTree.sourceScheduledStep_criticalNodeBounds
 #print axioms ELTree.sourceScheduledStep_eq_self_of_terminalShiftsNegative
 
 end KL2003
