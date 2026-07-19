@@ -143,9 +143,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   ancestro; si una reduccion no vacia eleva el valor local pero la ocurrencia
   no era globalmente critica, el valor normal de todo el arbol permanece
   exactamente igual. `Min3Path` ya extrae ese contexto y el teorema se aplica
-  directamente a `reduceAt`. Sigue abierto derivar la no-criticidad contextual
-  desde `DeletionWitness` y preservar la informacion de frontera/cotas que
-  requiera la iteracion posterior.
+  directamente a `reduceAt`.
+- La semantica ya se ha afinado al nivel correcto de la fuente: cada brazo
+  eliminado tiene su propio contexto global, y `reduceAt` conserva el valor
+  si todos los brazos retirados son totalmente no criticos. Una ruta terminal
+  construye su lista real de ancestros expandidos. Bajo `NodeBounds`,
+  argumentos no negativos, positividad/monotonia y el invariante estructural
+  de que hay un nodo aditivo bajo cada ancestro expandido, Lean deriva
+  `HasDeletionWitness -> not HoleCritical` mediante la cadena exacta
+  (305)--(307). Sigue abierto probar que la generacion por source splitting
+  preserva ese invariante aditivo, ensamblar los testigos de los brazos en la
+  retencion concreta y preservar la informacion de frontera/cotas requerida
+  por iteraciones posteriores.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

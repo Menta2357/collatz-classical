@@ -125,9 +125,12 @@ The contextual value-preservation part is now proved in the separate module
 recorded by `KL2003_GENERAL_K_CONTEXTUAL_DELETION_LEAN_v1.md`: a typed one-hole
 context tracks criticality through every ancestor minimum, and replacing a
 totally noncritical occurrence by a larger local value leaves the whole normal
-evaluation unchanged. What remains source-specific is deriving that contextual
-noncriticality from the existing deletion witness and preserving any frontier
-or node-bound data needed by later iterations.
+evaluation unchanged. That module now also derives branch-level contextual
+noncriticality from a deletion witness under the source node-bound,
+nonnegative-argument, and additive-companion invariants. What remains is to
+prove that source splitting preserves the additive-companion invariant,
+assemble terminal branch witnesses into each concrete retention, and preserve
+any frontier or node-bound data needed by later iterations.
 
 ## Verification
 
@@ -144,7 +147,8 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 ## Remaining Module 2 work
 
 ```text
-DELETION_WITNESS_IMPLIES_TOTAL_NONCRITICALITY
+SOURCE_SPLITTING_PRESERVES_ADD_BELOW_EVERY_EXPANDED
+TERMINAL_BRANCH_WITNESSES_ASSEMBLED_INTO_MIN3_RETENTION
 CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
