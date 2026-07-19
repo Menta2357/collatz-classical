@@ -393,6 +393,335 @@ theorem holeCritical_congr {k : Nat} (context : Context k)
       simp only [HoleCritical, Min3Retention.criticalThird]
       rw [ih, hplug]
 
+theorem criticalityDominatesBelow_comp_of_local {k : Nat}
+    (outer oldFrame newFrame : Context k)
+    (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hlocal : oldFrame.CriticalityDominatesBelow newFrame Phi y tree)
+    (heq : (oldFrame.plug tree).normalExpr.eval Phi y =
+      (newFrame.plug tree).normalExpr.eval Phi y) :
+    (outer.comp oldFrame).CriticalityDominatesBelow
+      (outer.comp newFrame) Phi y tree := by
+  intro inner subtree hplug hcritical
+  have hcritical' :
+      (outer.comp (newFrame.comp inner)).HoleCritical subtree Phi y := by
+    simpa [comp_assoc] using hcritical
+  rw [holeCritical_comp_iff] at hcritical'
+  have hlocalCritical := hlocal inner subtree hplug hcritical'.1
+  have houterCritical :
+      outer.HoleCritical ((oldFrame.comp inner).plug subtree) Phi y := by
+    have houterNew : outer.HoleCritical (newFrame.plug tree) Phi y := by
+      simpa [plug_comp, hplug] using hcritical'.2
+    have houterOld : outer.HoleCritical (oldFrame.plug tree) Phi y :=
+      (outer.holeCritical_congr
+        (oldFrame.plug tree) (newFrame.plug tree) Phi y heq).mpr houterNew
+    simpa [plug_comp, hplug] using houterOld
+  have hcombined :
+      (outer.comp (oldFrame.comp inner)).HoleCritical subtree Phi y :=
+    (holeCritical_comp_iff outer (oldFrame.comp inner) subtree Phi y).2
+      ⟨hlocalCritical, houterCritical⟩
+  simpa [comp_assoc] using hcombined
+
+theorem criticalityEquivalentBelow_comp_of_local {k : Nat}
+    (outer oldFrame newFrame : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hlocal : oldFrame.CriticalityEquivalentBelow newFrame Phi y)
+    (heq : forall tree : ELTree k,
+      (oldFrame.plug tree).normalExpr.eval Phi y =
+        (newFrame.plug tree).normalExpr.eval Phi y) :
+    (outer.comp oldFrame).CriticalityEquivalentBelow
+      (outer.comp newFrame) Phi y := by
+  intro inner tree
+  have hlocalIff := hlocal inner tree
+  have houterIff := outer.holeCritical_congr
+    ((oldFrame.comp inner).plug tree) ((newFrame.comp inner).plug tree)
+    Phi y (by simpa [plug_comp] using heq (inner.plug tree))
+  simpa [comp_assoc, holeCritical_comp_iff] using and_congr hlocalIff houterIff
+
+theorem addLeft_fixedRight_congr {k : Nat} (oldRight newRight : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    ((.addLeft .hole oldRight) : Context k).CriticalityEquivalentBelow
+      (.addLeft .hole newRight) Phi y := by
+  intro inner tree
+  rfl
+
+theorem addRight_fixedLeft_congr {k : Nat} (oldLeft newLeft : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    ((.addRight oldLeft .hole) : Context k).CriticalityEquivalentBelow
+      (.addRight newLeft .hole) Phi y := by
+  intro inner tree
+  rfl
+
+theorem min2Left_fixedRight_congr {k : Nat} (oldRight newRight : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldRight.normalExpr.eval Phi y = newRight.normalExpr.eval Phi y) :
+    ((.min2Left .hole oldRight) : Context k).CriticalityEquivalentBelow
+      (.min2Left .hole newRight) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, heq]
+
+theorem min2Right_fixedLeft_congr {k : Nat} (oldLeft newLeft : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldLeft.normalExpr.eval Phi y = newLeft.normalExpr.eval Phi y) :
+    ((.min2Right oldLeft .hole) : Context k).CriticalityEquivalentBelow
+      (.min2Right newLeft .hole) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, heq]
+
+theorem minFirst_fixedSecond_congr {k : Nat}
+    (oldSecond newSecond third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldSecond.normalExpr.eval Phi y = newSecond.normalExpr.eval Phi y) :
+    ((.minFirst .hole oldSecond third) : Context k).CriticalityEquivalentBelow
+      (.minFirst .hole newSecond third) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalFirst, heq]
+
+theorem minFirst_fixedThird_congr {k : Nat}
+    (second oldThird newThird : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldThird.normalExpr.eval Phi y = newThird.normalExpr.eval Phi y) :
+    ((.minFirst .hole second oldThird) : Context k).CriticalityEquivalentBelow
+      (.minFirst .hole second newThird) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalFirst, heq]
+
+theorem minSecond_fixedFirst_congr {k : Nat}
+    (oldFirst newFirst third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldFirst.normalExpr.eval Phi y = newFirst.normalExpr.eval Phi y) :
+    ((.minSecond oldFirst .hole third) : Context k).CriticalityEquivalentBelow
+      (.minSecond newFirst .hole third) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalSecond, heq]
+
+theorem minSecond_fixedThird_congr {k : Nat}
+    (first oldThird newThird : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldThird.normalExpr.eval Phi y = newThird.normalExpr.eval Phi y) :
+    ((.minSecond first .hole oldThird) : Context k).CriticalityEquivalentBelow
+      (.minSecond first .hole newThird) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalSecond, heq]
+
+theorem minThird_fixedFirst_congr {k : Nat}
+    (oldFirst newFirst second : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldFirst.normalExpr.eval Phi y = newFirst.normalExpr.eval Phi y) :
+    ((.minThird oldFirst second .hole) : Context k).CriticalityEquivalentBelow
+      (.minThird newFirst second .hole) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalThird, heq]
+
+theorem minThird_fixedSecond_congr {k : Nat}
+    (first oldSecond newSecond : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldSecond.normalExpr.eval Phi y = newSecond.normalExpr.eval Phi y) :
+    ((.minThird first oldSecond .hole) : Context k).CriticalityEquivalentBelow
+      (.minThird first newSecond .hole) Phi y := by
+  intro inner tree
+  simp [comp, HoleCritical, plug, Min3Retention.criticalThird, heq]
+
+theorem criticalNodeBounds_at_plug {k : Nat}
+    (outer context : Context k) (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hbounds : outer.CriticalNodeBounds Phi y (context.plug tree)) :
+    (outer.comp context).CriticalNodeBounds Phi y tree := by
+  induction context generalizing outer with
+  | hole => simpa [plug, comp_hole] using hbounds
+  | expanded label context ih =>
+      have result := ih (outer := outer.comp (.expanded label .hole))
+        (by simpa [comp_assoc, comp] using hbounds.2)
+      simpa [comp_assoc, comp] using result
+  | addLeft context right ih =>
+      have result := ih (outer := outer.comp (.addLeft .hole right))
+        (by simpa [comp_assoc, comp] using hbounds.1)
+      simpa [comp_assoc, comp] using result
+  | addRight left context ih =>
+      have result := ih (outer := outer.comp (.addRight left .hole))
+        (by simpa [comp_assoc, comp] using hbounds.2)
+      simpa [comp_assoc, comp] using result
+  | min2Left context right ih =>
+      have result := ih (outer := outer.comp (.min2Left .hole right))
+        (by simpa [comp_assoc, comp] using hbounds.1)
+      simpa [comp_assoc, comp] using result
+  | min2Right left context ih =>
+      have result := ih (outer := outer.comp (.min2Right left .hole))
+        (by simpa [comp_assoc, comp] using hbounds.2)
+      simpa [comp_assoc, comp] using result
+  | minFirst context second third ih =>
+      have result := ih (outer := outer.comp (.minFirst .hole second third))
+        (by simpa [comp_assoc, comp] using hbounds.1)
+      simpa [comp_assoc, comp] using result
+  | minSecond first context third ih =>
+      have result := ih (outer := outer.comp (.minSecond first .hole third))
+        (by simpa [comp_assoc, comp] using hbounds.2.1)
+      simpa [comp_assoc, comp] using result
+  | minThird first second context ih =>
+      have result := ih (outer := outer.comp (.minThird first second .hole))
+        (by simpa [comp_assoc, comp] using hbounds.2.2)
+      simpa [comp_assoc, comp] using result
+
+theorem plug_criticalNodeBounds_of_normalExpr_eval_eq {k : Nat}
+    (outer context : Context k) (oldTree newTree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (heq : oldTree.normalExpr.eval Phi y = newTree.normalExpr.eval Phi y)
+    (hold : outer.CriticalNodeBounds Phi y (context.plug oldTree))
+    (hnew : (outer.comp context).CriticalNodeBounds Phi y newTree) :
+    outer.CriticalNodeBounds Phi y (context.plug newTree) := by
+  induction context generalizing outer with
+  | hole => simpa [plug, comp_hole] using hnew
+  | expanded label context ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_⟩
+      · intro hcritical
+        have holdCritical :
+            outer.HoleCritical (.expanded label (context.plug oldTree)) Phi y :=
+          (outer.holeCritical_congr
+            (.expanded label (context.plug oldTree))
+            (.expanded label (context.plug newTree)) Phi y
+            (by simpa [normalExpr] using hbodyEq)).mpr hcritical
+        calc
+          (context.plug newTree).normalExpr.eval Phi y =
+              (context.plug oldTree).normalExpr.eval Phi y := hbodyEq.symm
+          _ <= Phi label.mode (y + label.shift.eval) := hold.1 holdCritical
+      · apply ih (outer := outer.comp (.expanded label .hole)) hold.2
+        simpa [comp_assoc, comp] using hnew
+  | addLeft context right ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_⟩
+      · apply ih (outer := outer.comp (.addLeft .hole right)) hold.1
+        simpa [comp_assoc, comp] using hnew
+      · apply criticalNodeBounds_congr
+          (outer.comp (.addRight (context.plug oldTree) .hole))
+          (outer.comp (.addRight (context.plug newTree) .hole)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.addRight (context.plug oldTree) .hole)
+            (.addRight (context.plug newTree) .hole) Phi y
+            (addRight_fixedLeft_congr
+              (context.plug oldTree) (context.plug newTree) Phi y)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          right hold.2
+  | addRight left context ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_⟩
+      · apply criticalNodeBounds_congr
+          (outer.comp (.addLeft .hole (context.plug oldTree)))
+          (outer.comp (.addLeft .hole (context.plug newTree))) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.addLeft .hole (context.plug oldTree))
+            (.addLeft .hole (context.plug newTree)) Phi y
+            (addLeft_fixedRight_congr
+              (context.plug oldTree) (context.plug newTree) Phi y)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          left hold.1
+      · apply ih (outer := outer.comp (.addRight left .hole)) hold.2
+        simpa [comp_assoc, comp] using hnew
+  | min2Left context right ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_⟩
+      · apply ih (outer := outer.comp (.min2Left .hole right)) hold.1
+        simpa [comp_assoc, comp] using hnew
+      · apply criticalNodeBounds_congr
+          (outer.comp (.min2Right (context.plug oldTree) .hole))
+          (outer.comp (.min2Right (context.plug newTree) .hole)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.min2Right (context.plug oldTree) .hole)
+            (.min2Right (context.plug newTree) .hole) Phi y
+            (min2Right_fixedLeft_congr
+              (context.plug oldTree) (context.plug newTree) Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          right hold.2
+  | min2Right left context ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_⟩
+      · apply criticalNodeBounds_congr
+          (outer.comp (.min2Left .hole (context.plug oldTree)))
+          (outer.comp (.min2Left .hole (context.plug newTree))) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.min2Left .hole (context.plug oldTree))
+            (.min2Left .hole (context.plug newTree)) Phi y
+            (min2Left_fixedRight_congr
+              (context.plug oldTree) (context.plug newTree) Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          left hold.1
+      · apply ih (outer := outer.comp (.min2Right left .hole)) hold.2
+        simpa [comp_assoc, comp] using hnew
+  | minFirst context second third ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_, ?_⟩
+      · apply ih (outer := outer.comp (.minFirst .hole second third)) hold.1
+        simpa [comp_assoc, comp] using hnew
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minSecond (context.plug oldTree) .hole third))
+          (outer.comp (.minSecond (context.plug newTree) .hole third)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minSecond (context.plug oldTree) .hole third)
+            (.minSecond (context.plug newTree) .hole third) Phi y
+            (minSecond_fixedFirst_congr
+              (context.plug oldTree) (context.plug newTree) third Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          second hold.2.1
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minThird (context.plug oldTree) second .hole))
+          (outer.comp (.minThird (context.plug newTree) second .hole)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minThird (context.plug oldTree) second .hole)
+            (.minThird (context.plug newTree) second .hole) Phi y
+            (minThird_fixedFirst_congr
+              (context.plug oldTree) (context.plug newTree) second Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          third hold.2.2
+  | minSecond first context third ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_, ?_⟩
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minFirst .hole (context.plug oldTree) third))
+          (outer.comp (.minFirst .hole (context.plug newTree) third)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minFirst .hole (context.plug oldTree) third)
+            (.minFirst .hole (context.plug newTree) third) Phi y
+            (minFirst_fixedSecond_congr
+              (context.plug oldTree) (context.plug newTree) third Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          first hold.1
+      · apply ih (outer := outer.comp (.minSecond first .hole third)) hold.2.1
+        simpa [comp_assoc, comp] using hnew
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minThird first (context.plug oldTree) .hole))
+          (outer.comp (.minThird first (context.plug newTree) .hole)) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minThird first (context.plug oldTree) .hole)
+            (.minThird first (context.plug newTree) .hole) Phi y
+            (minThird_fixedSecond_congr
+              first (context.plug oldTree) (context.plug newTree) Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          third hold.2.2
+  | minThird first second context ih =>
+      have hbodyEq := context.plug_normalExpr_eval_eq oldTree newTree Phi y heq
+      refine ⟨?_, ?_, ?_⟩
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minFirst .hole second (context.plug oldTree)))
+          (outer.comp (.minFirst .hole second (context.plug newTree))) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minFirst .hole second (context.plug oldTree))
+            (.minFirst .hole second (context.plug newTree)) Phi y
+            (minFirst_fixedThird_congr
+              second (context.plug oldTree) (context.plug newTree) Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          first hold.1
+      · apply criticalNodeBounds_congr
+          (outer.comp (.minSecond first .hole (context.plug oldTree)))
+          (outer.comp (.minSecond first .hole (context.plug newTree))) Phi y
+          (criticalityEquivalentBelow_comp_of_local outer
+            (.minSecond first .hole (context.plug oldTree))
+            (.minSecond first .hole (context.plug newTree)) Phi y
+            (minSecond_fixedThird_congr
+              first (context.plug oldTree) (context.plug newTree) Phi y hbodyEq)
+            (by intro tree; simp [plug, normalExpr, ELExpr.eval, hbodyEq]))
+          second hold.2.1
+      · apply ih (outer := outer.comp (.minThird first second .hole)) hold.2.2
+        simpa [comp_assoc, comp] using hnew
+
 theorem not_criticalFirst_of_mono {old new second third : Real}
     (hle : old <= new)
     (hnot : ¬ Min3Retention.criticalFirst old second third) :
@@ -413,6 +742,96 @@ theorem not_criticalThird_of_mono {first second old new : Real}
     ¬ Min3Retention.criticalThird first second new := by
   intro hnew
   exact hnot ⟨hle.trans hnew.1, hle.trans hnew.2⟩
+
+theorem not_holeCritical_of_mono {k : Nat} (context : Context k)
+    (oldTree newTree : ELTree k) (Phi : TrackedMode k -> Real -> Real)
+    (y : Real)
+    (hle : oldTree.normalExpr.eval Phi y <= newTree.normalExpr.eval Phi y)
+    (hnot : ¬ context.HoleCritical oldTree Phi y) :
+    ¬ context.HoleCritical newTree Phi y := by
+  induction context with
+  | hole => exact fun _ => hnot trivial
+  | expanded label context ih => exact ih hnot
+  | addLeft context right ih => exact ih hnot
+  | addRight left context ih => exact ih hnot
+  | min2Left context right ih =>
+      intro hnew
+      by_cases holdSub : context.HoleCritical oldTree Phi y
+      · have hmono := context.plug_normalExpr_eval_mono oldTree newTree Phi y hle
+        exact hnot ⟨holdSub, hmono.trans hnew.2⟩
+      · exact (ih holdSub) hnew.1
+  | min2Right left context ih =>
+      intro hnew
+      by_cases holdSub : context.HoleCritical oldTree Phi y
+      · have hmono := context.plug_normalExpr_eval_mono oldTree newTree Phi y hle
+        exact hnot ⟨holdSub, hmono.trans hnew.2⟩
+      · exact (ih holdSub) hnew.1
+  | minFirst context second third ih =>
+      intro hnew
+      by_cases holdSub : context.HoleCritical oldTree Phi y
+      · have hmono := context.plug_normalExpr_eval_mono oldTree newTree Phi y hle
+        exact hnot ⟨holdSub, ⟨hmono.trans hnew.2.1, hmono.trans hnew.2.2⟩⟩
+      · exact (ih holdSub) hnew.1
+  | minSecond first context third ih =>
+      intro hnew
+      by_cases holdSub : context.HoleCritical oldTree Phi y
+      · have hmono := context.plug_normalExpr_eval_mono oldTree newTree Phi y hle
+        exact hnot ⟨holdSub, ⟨hmono.trans hnew.2.1, hmono.trans hnew.2.2⟩⟩
+      · exact (ih holdSub) hnew.1
+  | minThird first second context ih =>
+      intro hnew
+      by_cases holdSub : context.HoleCritical oldTree Phi y
+      · have hmono := context.plug_normalExpr_eval_mono oldTree newTree Phi y hle
+        exact hnot ⟨holdSub, ⟨hmono.trans hnew.2.1, hmono.trans hnew.2.2⟩⟩
+      · exact (ih holdSub) hnew.1
+
+theorem criticalNodeBounds_of_not_holeCritical {k : Nat}
+    (context : Context k) (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hnot : ¬ context.HoleCritical tree Phi y) :
+    context.CriticalNodeBounds Phi y tree := by
+  induction tree generalizing context with
+  | terminal => trivial
+  | expanded label body ih =>
+      refine ⟨fun hcritical => False.elim (hnot hcritical), ?_⟩
+      apply ih (context.comp (.expanded label .hole))
+      intro hcritical
+      exact hnot ((holeCritical_comp_iff context
+        (.expanded label .hole) body Phi y).1 hcritical).2
+  | add left right ihLeft ihRight =>
+      constructor
+      · apply ihLeft (context.comp (.addLeft .hole right))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.addLeft .hole right) left Phi y).1 hcritical).2
+      · apply ihRight (context.comp (.addRight left .hole))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.addRight left .hole) right Phi y).1 hcritical).2
+  | min2 left right ihLeft ihRight =>
+      constructor
+      · apply ihLeft (context.comp (.min2Left .hole right))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.min2Left .hole right) left Phi y).1 hcritical).2
+      · apply ihRight (context.comp (.min2Right left .hole))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.min2Right left .hole) right Phi y).1 hcritical).2
+  | min3 first second third ihFirst ihSecond ihThird =>
+      refine ⟨?_, ?_, ?_⟩
+      · apply ihFirst (context.comp (.minFirst .hole second third))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.minFirst .hole second third) first Phi y).1 hcritical).2
+      · apply ihSecond (context.comp (.minSecond first .hole third))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.minSecond first .hole third) second Phi y).1 hcritical).2
+      · apply ihThird (context.comp (.minThird first second .hole))
+        intro hcritical
+        exact hnot ((holeCritical_comp_iff context
+          (.minThird first second .hole) third Phi y).1 hcritical).2
 
 theorem plug_normalExpr_eval_eq_of_not_holeCritical {k : Nat}
     (context : Context k) (oldTree newTree : ELTree k)
@@ -711,6 +1130,339 @@ theorem min3_normalExpr_eval_le_reduce {k : Nat}
       (retention.reduce first second third).normalExpr.eval Phi y := by
   cases retention <;> simp [reduce, normalExpr, ELExpr.eval]
 
+private theorem criticalFirst_of_eq_full {first second third : Real}
+    (heq : first = min first (min second third)) :
+    criticalFirst first second third := by
+  constructor
+  · rw [heq]
+    exact le_trans (min_le_right _ _) (min_le_left _ _)
+  · rw [heq]
+    exact le_trans (min_le_right _ _) (min_le_right _ _)
+
+private theorem criticalSecond_of_eq_full {first second third : Real}
+    (heq : second = min first (min second third)) :
+    criticalSecond first second third := by
+  constructor
+  · rw [heq]
+    exact min_le_left _ _
+  · rw [heq]
+    exact le_trans (min_le_right _ _) (min_le_right _ _)
+
+private theorem criticalThird_of_eq_full {first second third : Real}
+    (heq : third = min first (min second third)) :
+    criticalThird first second third := by
+  constructor
+  · rw [heq]
+    exact min_le_left _ _
+  · rw [heq]
+    exact le_trans (min_le_right _ _) (min_le_left _ _)
+
+theorem minFirst_dominates_keepFirstSecond {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepFirstSecond
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minFirst .hole second third) : Context k).CriticalityDominatesBelow
+      (.min2Left .hole second) Phi y first := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hfirstSecond⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hfirstSecond ⊢
+  apply criticalFirst_of_eq_full
+  calc
+    first.normalExpr.eval Phi y =
+        min (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y) :=
+      (min_eq_left hfirstSecond).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minFirst_dominates_keepFirstThird {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepFirstThird
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minFirst .hole second third) : Context k).CriticalityDominatesBelow
+      (.min2Left .hole third) Phi y first := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hfirstThird⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hfirstThird ⊢
+  apply criticalFirst_of_eq_full
+  calc
+    first.normalExpr.eval Phi y =
+        min (first.normalExpr.eval Phi y) (third.normalExpr.eval Phi y) :=
+      (min_eq_left hfirstThird).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minFirst_dominates_keepFirst {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepFirst
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minFirst .hole second third) : Context k).CriticalityDominatesBelow
+      .hole Phi y first := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  refine ⟨hcritical, ?_⟩
+  rw [hplug]
+  apply criticalFirst_of_eq_full
+  simpa [reducedValue] using reducedValue_eq_full hsound
+
+theorem minSecond_dominates_keepFirstSecond {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepFirstSecond
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minSecond first .hole third) : Context k).CriticalityDominatesBelow
+      (.min2Right first .hole) Phi y second := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hsecondFirst⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hsecondFirst ⊢
+  apply criticalSecond_of_eq_full
+  calc
+    second.normalExpr.eval Phi y =
+        min (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y) :=
+      (min_eq_right hsecondFirst).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minSecond_dominates_keepSecondThird {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepSecondThird
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minSecond first .hole third) : Context k).CriticalityDominatesBelow
+      (.min2Left .hole third) Phi y second := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hsecondThird⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hsecondThird ⊢
+  apply criticalSecond_of_eq_full
+  calc
+    second.normalExpr.eval Phi y =
+        min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y) :=
+      (min_eq_left hsecondThird).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minSecond_dominates_keepSecond {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepSecond
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minSecond first .hole third) : Context k).CriticalityDominatesBelow
+      .hole Phi y second := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  refine ⟨hcritical, ?_⟩
+  rw [hplug]
+  apply criticalSecond_of_eq_full
+  simpa [reducedValue] using reducedValue_eq_full hsound
+
+theorem minThird_dominates_keepFirstThird {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepFirstThird
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minThird first second .hole) : Context k).CriticalityDominatesBelow
+      (.min2Right first .hole) Phi y third := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hthirdFirst⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hthirdFirst ⊢
+  apply criticalThird_of_eq_full
+  calc
+    third.normalExpr.eval Phi y =
+        min (first.normalExpr.eval Phi y) (third.normalExpr.eval Phi y) :=
+      (min_eq_right hthirdFirst).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minThird_dominates_keepSecondThird {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepSecondThird
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minThird first second .hole) : Context k).CriticalityDominatesBelow
+      (.min2Right second .hole) Phi y third := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  rcases hcritical with ⟨hinner, hthirdSecond⟩
+  refine ⟨hinner, ?_⟩
+  rw [hplug] at hthirdSecond ⊢
+  apply criticalThird_of_eq_full
+  calc
+    third.normalExpr.eval Phi y =
+        min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y) :=
+      (min_eq_right hthirdSecond).symm
+    _ = min (first.normalExpr.eval Phi y)
+          (min (second.normalExpr.eval Phi y) (third.normalExpr.eval Phi y)) :=
+      reducedValue_eq_full hsound
+
+theorem minThird_dominates_keepThird {k : Nat}
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : DeletedBranchesNoncritical .keepThird
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y)) :
+    ((.minThird first second .hole) : Context k).CriticalityDominatesBelow
+      .hole Phi y third := by
+  intro inner subtree hplug hcritical
+  simp only [Context.comp, Context.HoleCritical, Context.plug] at hcritical ⊢
+  refine ⟨hcritical, ?_⟩
+  rw [hplug]
+  apply criticalThird_of_eq_full
+  simpa [reducedValue] using reducedValue_eq_full hsound
+
+theorem reduce_criticalNodeBounds {k : Nat}
+    (retention : Min3Retention) (context : Context k)
+    (first second third : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : retention.DeletedBranchesNoncritical
+      (first.normalExpr.eval Phi y) (second.normalExpr.eval Phi y)
+      (third.normalExpr.eval Phi y))
+    (hbounds : context.CriticalNodeBounds Phi y (.min3 first second third)) :
+    context.CriticalNodeBounds Phi y (retention.reduce first second third) := by
+  cases retention with
+  | keepAll => exact hbounds
+  | keepFirstSecond =>
+      change
+        (context.comp (.min2Left .hole second)).CriticalNodeBounds Phi y first /\
+          (context.comp (.min2Right first .hole)).CriticalNodeBounds Phi y second
+      refine ⟨?_, ?_⟩
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minFirst .hole second third))
+          (context.comp (.min2Left .hole second)) Phi y first
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minFirst .hole second third) (.min2Left .hole second)
+            first Phi y
+            (minFirst_dominates_keepFirstSecond first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepFirstSecond
+                first second third Phi y hsound).symm))
+        exact hbounds.1
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minSecond first .hole third))
+          (context.comp (.min2Right first .hole)) Phi y second
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minSecond first .hole third) (.min2Right first .hole)
+            second Phi y
+            (minSecond_dominates_keepFirstSecond first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepFirstSecond
+                first second third Phi y hsound).symm))
+        exact hbounds.2.1
+  | keepFirstThird =>
+      change
+        (context.comp (.min2Left .hole third)).CriticalNodeBounds Phi y first /\
+          (context.comp (.min2Right first .hole)).CriticalNodeBounds Phi y third
+      refine ⟨?_, ?_⟩
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minFirst .hole second third))
+          (context.comp (.min2Left .hole third)) Phi y first
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minFirst .hole second third) (.min2Left .hole third)
+            first Phi y
+            (minFirst_dominates_keepFirstThird first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepFirstThird
+                first second third Phi y hsound).symm))
+        exact hbounds.1
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minThird first second .hole))
+          (context.comp (.min2Right first .hole)) Phi y third
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minThird first second .hole) (.min2Right first .hole)
+            third Phi y
+            (minThird_dominates_keepFirstThird first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepFirstThird
+                first second third Phi y hsound).symm))
+        exact hbounds.2.2
+  | keepSecondThird =>
+      change
+        (context.comp (.min2Left .hole third)).CriticalNodeBounds Phi y second /\
+          (context.comp (.min2Right second .hole)).CriticalNodeBounds Phi y third
+      refine ⟨?_, ?_⟩
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minSecond first .hole third))
+          (context.comp (.min2Left .hole third)) Phi y second
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minSecond first .hole third) (.min2Left .hole third)
+            second Phi y
+            (minSecond_dominates_keepSecondThird first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepSecondThird
+                first second third Phi y hsound).symm))
+        exact hbounds.2.1
+      · apply Context.criticalNodeBounds_of_dominates
+          (context.comp (.minThird first second .hole))
+          (context.comp (.min2Right second .hole)) Phi y third
+          (Context.criticalityDominatesBelow_comp_of_local context
+            (.minThird first second .hole) (.min2Right second .hole)
+            third Phi y
+            (minThird_dominates_keepSecondThird first second third Phi y hsound)
+            (by simpa [Context.plug, reduce] using
+              (reduce_normalExpr_eval_eq .keepSecondThird
+                first second third Phi y hsound).symm))
+        exact hbounds.2.2
+  | keepFirst =>
+      apply Context.criticalNodeBounds_of_dominates
+        (context.comp (.minFirst .hole second third)) context Phi y first
+        (by
+          simpa [Context.comp_hole] using
+            Context.criticalityDominatesBelow_comp_of_local context
+              (.minFirst .hole second third) .hole first Phi y
+              (minFirst_dominates_keepFirst first second third Phi y hsound)
+              (by simpa [Context.plug, reduce] using
+                (reduce_normalExpr_eval_eq .keepFirst
+                  first second third Phi y hsound).symm))
+      exact hbounds.1
+  | keepSecond =>
+      apply Context.criticalNodeBounds_of_dominates
+        (context.comp (.minSecond first .hole third)) context Phi y second
+        (by
+          simpa [Context.comp_hole] using
+            Context.criticalityDominatesBelow_comp_of_local context
+              (.minSecond first .hole third) .hole second Phi y
+              (minSecond_dominates_keepSecond first second third Phi y hsound)
+              (by simpa [Context.plug, reduce] using
+                (reduce_normalExpr_eval_eq .keepSecond
+                  first second third Phi y hsound).symm))
+      exact hbounds.2.1
+  | keepThird =>
+      apply Context.criticalNodeBounds_of_dominates
+        (context.comp (.minThird first second .hole)) context Phi y third
+        (by
+          simpa [Context.comp_hole] using
+            Context.criticalityDominatesBelow_comp_of_local context
+              (.minThird first second .hole) .hole third Phi y
+              (minThird_dominates_keepThird first second third Phi y hsound)
+              (by simpa [Context.plug, reduce] using
+                (reduce_normalExpr_eval_eq .keepThird
+                  first second third Phi y hsound).symm))
+      exact hbounds.2.2
+
 end Min3Retention
 
 namespace Min3Path
@@ -798,6 +1550,11 @@ theorem context_plug_reduce {k : Nat} {tree : ELTree k}
       simpa [context, ELTree.Context.plug, firstChild, secondChild, thirdChild,
         reduceAt] using congrArg (ELTree.min3 first second) ih
 
+theorem reduceAt_keepAll {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) : path.reduceAt .keepAll = tree := by
+  induction path <;>
+    simp [reduceAt, Min3Retention.reduce, *]
+
 def firstBranchContext {k : Nat} {tree : ELTree k}
     (path : Min3Path tree) : ELTree.Context k :=
   path.context.comp (.minFirst .hole path.secondChild path.thirdChild)
@@ -883,6 +1640,83 @@ theorem reduceAt_normalExpr_eval_eq_of_totallyNoncritical {k : Nat}
     Phi y hlocal hnot
   rw [context_plug_target path, context_plug_reduce retention path] at hcontext
   exact hcontext.symm
+
+theorem deletedBranchesNoncritical_of_targetCritical {k : Nat}
+    {tree : ELTree k} (retention : Min3Retention) (path : Min3Path tree)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : path.DeletedBranchesTotallyNoncritical retention Phi y)
+    (hparentCritical : path.context.HoleCritical path.target Phi y) :
+    retention.DeletedBranchesNoncritical
+      (path.firstChild.normalExpr.eval Phi y)
+      (path.secondChild.normalExpr.eval Phi y)
+      (path.thirdChild.normalExpr.eval Phi y) := by
+  cases retention with
+  | keepAll => trivial
+  | keepFirstSecond =>
+      intro hcritical
+      exact hsound ((path.thirdBranch_holeCritical_iff Phi y).2
+        ⟨hparentCritical, hcritical⟩)
+  | keepFirstThird =>
+      intro hcritical
+      exact hsound ((path.secondBranch_holeCritical_iff Phi y).2
+        ⟨hparentCritical, hcritical⟩)
+  | keepSecondThird =>
+      intro hcritical
+      exact hsound ((path.firstBranch_holeCritical_iff Phi y).2
+        ⟨hparentCritical, hcritical⟩)
+  | keepFirst =>
+      exact ⟨fun hcritical => hsound.1
+          ((path.secondBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩),
+        fun hcritical => hsound.2
+          ((path.thirdBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩)⟩
+  | keepSecond =>
+      exact ⟨fun hcritical => hsound.1
+          ((path.firstBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩),
+        fun hcritical => hsound.2
+          ((path.thirdBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩)⟩
+  | keepThird =>
+      exact ⟨fun hcritical => hsound.1
+          ((path.firstBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩),
+        fun hcritical => hsound.2
+          ((path.secondBranch_holeCritical_iff Phi y).2
+            ⟨hparentCritical, hcritical⟩)⟩
+
+theorem reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
+    {k : Nat} {tree : ELTree k} (retention : Min3Retention)
+    (path : Min3Path tree) (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hsound : path.DeletedBranchesTotallyNoncritical retention Phi y)
+    (hparentCritical : path.context.HoleCritical path.target Phi y)
+    (hbounds : tree.CriticalNodeBounds Phi y) :
+    (path.reduceAt retention).CriticalNodeBounds Phi y := by
+  have hlocal := path.deletedBranchesNoncritical_of_targetCritical
+    retention Phi y hsound hparentCritical
+  have hboundsPlug :
+      Context.CriticalNodeBounds .hole Phi y (path.context.plug path.target) := by
+    simpa [path.context_plug_target] using hbounds
+  have htargetBounds :
+      path.context.CriticalNodeBounds Phi y path.target :=
+    Context.criticalNodeBounds_at_plug .hole path.context path.target Phi y
+      hboundsPlug
+  have hreducedBounds : path.context.CriticalNodeBounds Phi y
+      (retention.reduce path.firstChild path.secondChild path.thirdChild) :=
+    retention.reduce_criticalNodeBounds path.context
+      path.firstChild path.secondChild path.thirdChild Phi y hlocal htargetBounds
+  have hlocalEq : path.target.normalExpr.eval Phi y =
+      (retention.reduce path.firstChild path.secondChild path.thirdChild).normalExpr.eval
+        Phi y := by
+    simpa [target] using
+      (retention.reduce_normalExpr_eval_eq path.firstChild path.secondChild
+        path.thirdChild Phi y hlocal).symm
+  have result := Context.plug_criticalNodeBounds_of_normalExpr_eval_eq
+    .hole path.context path.target
+      (retention.reduce path.firstChild path.secondChild path.thirdChild)
+      Phi y hlocalEq hboundsPlug hreducedBounds
+  simpa [Context.plug, context_plug_reduce] using result
 
 theorem reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
     {k : Nat} {tree : ELTree k} (retention : Min3Retention)
@@ -1493,6 +2327,30 @@ theorem witnessRetention_retainedCount {k : Nat} {tree : ELTree k}
         simp [witnessRetention, witnessCount, Min3Retention.retainedCount,
           hfirst, hsecond, hthird]
 
+noncomputable def criticalWitnessRetention {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Min3Retention := by
+  classical
+  exact if configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y then
+    configuration.witnessRetention
+  else
+    .keepAll
+
+theorem criticalWitnessRetention_deletedBranchesHaveWitness {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    configuration.DeletedBranchesHaveWitness
+      (configuration.criticalWitnessRetention Phi y) := by
+  classical
+  by_cases hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y
+  · simpa [criticalWitnessRetention, hcritical] using
+      configuration.witnessRetention_deletedBranchesHaveWitness
+  · simp [criticalWitnessRetention, hcritical, DeletedBranchesHaveWitness]
+
 end AdvancedMinConfiguration
 
 private theorem witness_ancestor_excludes_holeCritical {k : Nat}
@@ -1650,6 +2508,26 @@ theorem reduceAt_normalExpr_eval_eq_of_witnesses {k : Nat}
         (configuration.deletedBranchesTotallyNoncritical_of_witnesses
           retention hpos hmono hbounds hargs hwitness)
 
+theorem reduceAt_criticalNodeBounds_of_witnesses_of_targetCritical {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    (configuration.minPath.reduceAt retention).CriticalNodeBounds Phi y := by
+  apply configuration.minPath
+    |>.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
+      retention Phi y
+        (configuration.deletedBranchesTotallyNoncritical_of_witnesses
+          retention hpos hmono hbounds hargs hwitness)
+      hcritical
+  exact criticalNodeBounds_of_nodeBounds tree Phi y hbounds
+
 theorem witnessRetention_reduceAt_normalExpr_eval_eq {k : Nat}
     {tree : ELTree k} {first second third : ELLabel k}
     (configuration : AdvancedMinConfiguration tree first second third)
@@ -1662,6 +2540,59 @@ theorem witnessRetention_reduceAt_normalExpr_eval_eq {k : Nat}
   configuration.reduceAt_normalExpr_eval_eq_of_witnesses
     configuration.witnessRetention hpos hmono hbounds hargs
       configuration.witnessRetention_deletedBranchesHaveWitness
+
+theorem witnessRetention_reduceAt_criticalNodeBounds_of_targetCritical {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y) :
+    (configuration.minPath.reduceAt
+      configuration.witnessRetention).CriticalNodeBounds Phi y :=
+  configuration.reduceAt_criticalNodeBounds_of_witnesses_of_targetCritical
+    configuration.witnessRetention hpos hmono hbounds hargs hcritical
+      configuration.witnessRetention_deletedBranchesHaveWitness
+
+theorem criticalWitnessRetention_reduceAt_normalExpr_eval_eq {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt
+      (configuration.criticalWitnessRetention Phi y)).normalExpr.eval Phi y =
+        tree.normalExpr.eval Phi y := by
+  classical
+  by_cases hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y
+  · simpa [criticalWitnessRetention, hcritical] using
+      configuration.witnessRetention_reduceAt_normalExpr_eval_eq
+        hpos hmono hbounds hargs
+  · rw [criticalWitnessRetention]
+    simp [hcritical, configuration.minPath.reduceAt_keepAll]
+
+theorem criticalWitnessRetention_reduceAt_criticalNodeBounds {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt
+      (configuration.criticalWitnessRetention Phi y)).CriticalNodeBounds Phi y := by
+  classical
+  by_cases hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y
+  · simpa [criticalWitnessRetention, hcritical] using
+      configuration.witnessRetention_reduceAt_criticalNodeBounds_of_targetCritical
+        hpos hmono hbounds hargs hcritical
+  · rw [criticalWitnessRetention]
+    simp [hcritical, configuration.minPath.reduceAt_keepAll]
+    exact criticalNodeBounds_of_nodeBounds tree Phi y hbounds
 
 end AdvancedMinConfiguration
 

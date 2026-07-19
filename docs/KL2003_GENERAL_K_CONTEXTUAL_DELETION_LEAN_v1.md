@@ -227,10 +227,48 @@ ELTree.Context.criticalNodeBounds_of_dominates
 
 The dominance relation composes through every zipper frame, and it transports
 the complete `CriticalNodeBounds` invariant from the old global context to the
-new one. Consequently, the remaining preservation proof is localized: for
-each child retained by the canonical policy, prove this directed dominance
-between its post-deletion and pre-deletion branch contexts. No equivalence for
-hypothetical replacements is required.
+new one. This localizes the preservation proof to directed dominance between
+the post-deletion and pre-deletion contexts of each retained child. No
+equivalence for hypothetical replacements is required.
+
+## Context-sensitive canonical deletion
+
+The localized preservation proof is now closed. For every retained branch,
+Lean proves that criticality in the reduced minimum implies criticality in the
+original three-way minimum. Exact equality of the retained minimum with the
+full minimum then lifts this dominance through the complete outer zipper.
+The reusable assembly layer consists of
+
+```lean
+ELTree.Min3Retention.reduce_criticalNodeBounds
+ELTree.Context.criticalNodeBounds_at_plug
+ELTree.Context.plug_criticalNodeBounds_of_normalExpr_eval_eq
+ELTree.Min3Path.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
+```
+
+Deletion below a target that is already globally noncritical is semantically
+irrelevant but need not satisfy the local numerical soundness predicate. The
+canonical contextual policy therefore applies `witnessRetention` exactly when
+the target minimum is critical and selects `keepAll` otherwise:
+
+```lean
+ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention
+```
+
+This is a constructed policy, not an assumed hook. Lean proves that every
+deleted branch still has a source witness, the complete normal value is
+preserved exactly, and the source-faithful equation-(305) invariant survives:
+
+```lean
+ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_deletedBranchesHaveWitness
+ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_normalExpr_eval_eq
+ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_criticalNodeBounds
+```
+
+Thus preservation of `CriticalNodeBounds` by one canonical contextual deletion
+step is proved. Iteration still requires a locator that chooses the next
+advanced configuration, re-establishes the structural hypotheses needed by
+the next step, and proves termination.
 
 ## Verification
 
@@ -247,7 +285,6 @@ The audit reports only `[propext, Classical.choice, Quot.sound]`. No `sorry`,
 
 ```text
 ITERATED_DELETION_NORMALIZER_LOCATES_AND_APPLIES_LOCAL_STEPS
-CONTEXTUAL_CRITICAL_NODE_BOUNDS_PRESERVED_BY_DELETION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
 SATISFIES_EL_OF_SATISFIES_IK
@@ -291,9 +328,13 @@ GENERAL_K_CRITICAL_NODE_BOUNDS_CONTEXT_TRANSPORT_PROVED
 GENERAL_K_CRITICALITY_DOMINANCE_BELOW_DEFINED
 GENERAL_K_CRITICALITY_DOMINANCE_COMPOSITION_PROVED
 GENERAL_K_CRITICAL_NODE_BOUNDS_DIRECTED_TRANSPORT_PROVED
+GENERAL_K_RETAINED_BRANCH_CRITICALITY_DOMINANCE_PROVED
+GENERAL_K_MIN3_CRITICAL_NODE_BOUNDS_REDUCTION_PROVED
+GENERAL_K_CONTEXTUAL_WITNESS_RETENTION_DEFINED
+GENERAL_K_CONTEXTUAL_WITNESS_RETENTION_VALUE_PRESERVATION_PROVED
+GENERAL_K_CONTEXTUAL_CRITICAL_NODE_BOUNDS_DELETION_PRESERVATION_PROVED
 GENERAL_K_EL_CONTEXT_AXIOM_AUDIT_PASS
 ITERATED_DELETION_NORMALIZER_NOT_YET_PROVED
-CRITICAL_NODE_BOUNDS_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED
 K9_FORMALISATION_NOT_AUTHORIZED

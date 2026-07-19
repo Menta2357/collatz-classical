@@ -167,15 +167,21 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   fuente: `CriticalNodeBounds` exige (305) solo en ocurrencias expandidas que
   pertenecen a una ruta globalmente critica. `NodeBounds` implica este nuevo
   invariante, cada source split inicial lo satisface y Lean recupera de el la
-  cota para cualquier asignacion critica. Falta demostrar que la deletion
-  canonica lo preserva entre pasos; esa es ahora la deuda semantica inmediata.
+  cota para cualquier asignacion critica.
 - La infraestructura de transporte de esa deuda ya esta cerrada: igualdad de
   valor normal local implica igualdad despues de enchufar y congruencia de
   `HoleCritical`; una equivalencia estable bajo subcontextos transporta todo
   `CriticalNodeBounds`. Ademas, una relacion dirigida sobre ocurrencias reales
   compone bajo zippers y transporta el invariante sin exigir equivalencia para
-  reemplazos hipoteticos. La prueba pendiente se reduce a demostrar esa
-  dominancia dirigida para cada contexto de brazo retenido tras deletion.
+  reemplazos hipoteticos.
+- Esa dominancia dirigida y su consumidor ya estan cerrados. Cada brazo
+  retenido critico tras reducir el minimo era critico en el `min3` original;
+  el transporte por zipper preserva `CriticalNodeBounds`. La politica
+  contextual `criticalWitnessRetention` usa la retencion maximal no vacia en
+  objetivos criticos y `keepAll` fuera de la ruta critica. Lean prueba para
+  esa politica igualdad exacta del valor y preservacion de (305). El blocker
+  inmediato pasa a ser el normalizador iterado: localizar el siguiente paso,
+  transportar las hipotesis estructurales y terminar.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

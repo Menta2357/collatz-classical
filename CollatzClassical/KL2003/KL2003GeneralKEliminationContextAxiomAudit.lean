@@ -11,12 +11,20 @@ namespace KL2003
 #print axioms ELTree.Context.criticalNodeBounds_congr
 #print axioms ELTree.Context.criticalityDominatesBelow_comp
 #print axioms ELTree.Context.criticalNodeBounds_of_dominates
+#print axioms ELTree.Context.criticalityDominatesBelow_comp_of_local
+#print axioms ELTree.Context.criticalityEquivalentBelow_comp_of_local
+#print axioms ELTree.Context.not_holeCritical_of_mono
+#print axioms ELTree.Context.criticalNodeBounds_of_not_holeCritical
+#print axioms ELTree.Context.criticalNodeBounds_at_plug
+#print axioms ELTree.Context.plug_criticalNodeBounds_of_normalExpr_eval_eq
 #print axioms ELTree.Context.criticalAssignment_bound
 #print axioms ELTree.sourceSplitTree_criticalNodeBounds
 #print axioms ELTree.Context.lift_criticalPath
 #print axioms ELTree.Context.terminal_not_holeCritical_of_excludesCriticalLeaf
 #print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_totallyNoncritical
 #print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
+#print axioms ELTree.Min3Path.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
+#print axioms ELTree.Min3Retention.reduce_criticalNodeBounds
 #print axioms ELTree.TerminalPath.deletionWitness_implies_not_holeCritical
 #print axioms ELTree.TerminalPath.sourceD1AdvancedConfiguration
 #print axioms ELTree.TerminalPath.sourceD3AdvancedConfiguration
@@ -25,6 +33,9 @@ namespace KL2003
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_deletedBranchesHaveWitness
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_retainedCount
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_reduceAt_normalExpr_eval_eq
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_deletedBranchesHaveWitness
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_normalExpr_eval_eq
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_criticalNodeBounds
 
 end KL2003
 end CollatzClassical
