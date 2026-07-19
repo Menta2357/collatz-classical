@@ -173,6 +173,11 @@ a deletion witness cannot occur on the critical path. Thus the remaining
 semantic debt is the construction and preservation of the node-bound
 invariant, not the contradiction used after it is available.
 
+The internal principal-node tree and that node-bound invariant are now proved
+in `docs/KL2003_GENERAL_K_ELIMINATION_TREE_INVARIANT_LEAN_v1.md`. The remaining
+semantic work is to show that tree expansion and deletion preserve the
+invariant and well-formedness through the complete normalization process.
+
 ## Verification
 
 ```text

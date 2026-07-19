@@ -396,6 +396,18 @@ def ELExpr.ArgumentsNonnegative {k : Nat} (y : Real) : ELExpr k -> Prop
       first.ArgumentsNonnegative y /\ second.ArgumentsNonnegative y /\
         third.ArgumentsNonnegative y
 
+theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y) :
+    0 < expr.eval Phi y := by
+  induction expr with
+  | leaf label => exact hpos label.mode _ hargs
+  | add left right ihLeft ihRight =>
+      exact add_pos (ihLeft hargs.1) (ihRight hargs.2)
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact lt_min (ihFirst hargs.1)
+        (lt_min (ihSecond hargs.2.1) (ihThird hargs.2.2))
+
 inductive ELExpr.CriticalAssignment {k : Nat} : ELExpr k -> Type
   | leaf (label : ELLabel k) : CriticalAssignment (.leaf label)
   | add (left right : ELExpr k)
@@ -491,31 +503,15 @@ theorem exists_isCritical {k : Nat} (expr : ELExpr k)
       rcases ihFirst with ⟨firstChoice, hfirst⟩
       rcases ihSecond with ⟨secondChoice, hsecond⟩
       rcases ihThird with ⟨thirdChoice, hthird⟩
-      by_cases hfirstMin :
-          first.eval Phi y <= second.eval Phi y /\
-            first.eval Phi y <= third.eval Phi y
-      · exact ⟨.minFirst first second third firstChoice, hfirst, hfirstMin⟩
-      by_cases hsecondMin :
-          second.eval Phi y <= first.eval Phi y /\
-            second.eval Phi y <= third.eval Phi y
-      · exact ⟨.minSecond first second third secondChoice, hsecond, hsecondMin⟩
-      · refine ⟨.minThird first second third thirdChoice, hthird, ?_, ?_⟩
-        · by_contra hnot
-          have hfirstLe : first.eval Phi y <= third.eval Phi y :=
-            le_of_not_ge hnot
-          have hsecondLt : second.eval Phi y < first.eval Phi y := by
-            by_contra hsecondNotLt
-            exact hsecondMin ⟨le_of_not_gt hsecondNotLt,
-              le_trans (le_of_not_gt hsecondNotLt) hfirstLe⟩
-          exact hfirstMin ⟨le_of_lt hsecondLt, hfirstLe⟩
-        · by_contra hnot
-          have hsecondLe : second.eval Phi y <= third.eval Phi y :=
-            le_of_not_ge hnot
-          have hfirstLt : first.eval Phi y < second.eval Phi y := by
-            by_contra hfirstNotLt
-            exact hfirstMin ⟨le_of_not_gt hfirstNotLt,
-              le_trans (le_of_not_gt hfirstNotLt) hsecondLe⟩
-          exact hsecondMin ⟨le_of_lt hfirstLt, hsecondLe⟩
+      rcases le_total (first.eval Phi y) (second.eval Phi y) with h12 | h21
+      · rcases le_total (first.eval Phi y) (third.eval Phi y) with h13 | h31
+        · exact ⟨.minFirst first second third firstChoice, hfirst, h12, h13⟩
+        · exact ⟨.minThird first second third thirdChoice, hthird,
+            h31, le_trans h31 h12⟩
+      · rcases le_total (second.eval Phi y) (third.eval Phi y) with h23 | h32
+        · exact ⟨.minSecond first second third secondChoice, hsecond, h21, h23⟩
+        · exact ⟨.minThird first second third thirdChoice, hthird,
+            le_trans h32 h21, h32⟩
 
 theorem selectedExpr_argumentsNonnegative {k : Nat} {expr : ELExpr k}
     (assignment : CriticalAssignment expr) {y : Real}
@@ -587,11 +583,13 @@ theorem selectedExpr_eval_eq_leaf_add_companionValue {k : Nat}
   | addLeft left right leftChoice rightChoice target path ih =>
       simp only [selectedExpr, ELExpr.eval, companionValue, companions,
         List.map_cons, List.sum_cons]
+      unfold companionValue at ih
       rw [ih]
       ring
   | addRight left right leftChoice rightChoice target path ih =>
       simp only [selectedExpr, ELExpr.eval, companionValue, companions,
         List.map_cons, List.sum_cons]
+      unfold companionValue at ih
       rw [ih]
       ring
   | minFirst first second third choice target path ih =>
@@ -641,13 +639,14 @@ theorem companionValue_pos {k : Nat} {expr : ELExpr k}
     (path : PathTo assignment target)
     {Phi : TrackedMode k -> Real -> Real} {y : Real}
     (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y)
-    (hnonempty : path.companions != []) :
+    (hnonempty : path.companions ≠ []) :
     0 < path.companionValue Phi y := by
   have hall := path.companions_argumentsNonnegative hargs
   cases hcompanions : path.companions with
   | nil => exact False.elim (hnonempty hcompanions)
   | cons companion tail =>
       rw [companionValue, hcompanions]
+      rw [hcompanions] at hall
       simp only [List.forall_cons] at hall
       simp only [List.map_cons, List.sum_cons]
       exact add_pos_of_pos_of_nonneg (companion.eval_pos hpos hall.1)
@@ -656,18 +655,6 @@ theorem companionValue_pos {k : Nat} {expr : ELExpr k}
 end PathTo
 
 end ELExpr.CriticalAssignment
-
-theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
-    {Phi : TrackedMode k -> Real -> Real} {y : Real}
-    (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y) :
-    0 < expr.eval Phi y := by
-  induction expr with
-  | leaf label => exact hpos label.mode _ hargs
-  | add left right ihLeft ihRight =>
-      exact add_pos (ihLeft hargs.1) (ihRight hargs.2)
-  | min3 first second third ihFirst ihSecond ihThird =>
-      exact lt_min (ihFirst hargs.1)
-        (lt_min (ihSecond hargs.2.1) (ihThird hargs.2.2))
 
 theorem ELExpr.CriticalAssignment.selectedExpr_eval_pos {k : Nat}
     {expr : ELExpr k} (assignment : CriticalAssignment expr)
@@ -748,7 +735,7 @@ theorem deletionWitness_excludes_bounded_critical_path {k : Nat}
     (hassignment : assignment.IsCritical Phi y)
     (path : ELExpr.CriticalAssignment.PathTo assignment leaf.label)
     (hargs : subtree.ArgumentsNonnegative y)
-    (hnonempty : path.companions != [])
+    (hnonempty : path.companions ≠ [])
     (hnodeBound : forall ancestor,
       ancestor ∈ leaf.ancestors ->
       ancestor.mode = leaf.label.mode ->
