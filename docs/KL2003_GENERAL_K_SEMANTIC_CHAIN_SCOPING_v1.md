@@ -321,14 +321,15 @@ Module 3 passes only if:
 
 ## Module 4: generic retarded lower-bound induction
 
-Proposed file:
+Implemented file:
 
 ```text
 CollatzClassical/KL2003/KL2003GeneralKRetardedLowerBound.lean
 ```
 
-This module formalizes Theorem 5.1 for any finite nested `sum/min` system
-whose leaf shifts lie in `[-nu, -mu]` with `0 < mu`.
+This module now proves the k-independent induction core of Theorem 5.1 for any
+finite nested `sum/min` system whose leaf shifts lie in `[-nu, -mu]` with
+`0 < mu`.
 
 The theorem must not mention Collatz residues. Its inputs are:
 
@@ -338,27 +339,24 @@ The theorem must not mention Collatz residues. Its inputs are:
 - bounds `0 < mu <= nu` on all leaf shifts; and
 - a positive base value.
 
-Expected result:
+Proved result:
 
 ```lean
-theorem retarded_system_lower_bound
-    (hrows : SatisfiesRetardedSystem Phi system)
-    (hfeasible : Feasible system lambda coeff)
-    (hlambda : 1 < lambda) :
+theorem generic_retarded_lower_bound
+    (inputs : GenericRetardedInputs Index) :
     forall i y, 0 <= y ->
-      Delta Phi coeff lambda nu * coeff i * lambda ^ y <= Phi i y
+      inputs.Delta * inputs.coeff i * inputs.lambda ^ y <= inputs.Phi i y
 ```
 
-The induction should follow the source intervals
-`[0, nu + j*mu]` or an equivalent well-founded rank. The central reusable
-lemma is monotonicity of evaluation of a nested `sum/min` expression under
-pointwise lower bounds.
+The implementation uses the equivalent well-founded rank
+`ceil (y / mu)`. It proves monotonicity and nonnegative homogeneity of the
+nested AST once, then applies them to every row.
 
 This module supersedes neither `m0c_retarded_induction_bound_v3` nor its
 specialized padded arithmetic. The k=2 theorem remains an independent,
 already-audited route.
 
-### Acceptance gate
+### Acceptance gate: PASS
 
 Module 4 passes only if:
 
@@ -367,6 +365,9 @@ Module 4 passes only if:
 - the base constant is explicit and positive;
 - no advanced leaf can enter through a malformed system; and
 - its specialization matches the form of KL2003 Theorem 5.1.
+
+Build and axiom audit pass. The concrete source formula for `Delta` remains a
+Module 5 construction; Module 4 accepts the base inequality explicitly.
 
 ## Module 5: composition and concrete piStar bounds
 
@@ -516,7 +517,7 @@ The recommended order is deliberately not the numeric module order:
 
 1. Prove indexed residue arithmetic and ClassRootsK traffic; the floor-window
    pilot is complete.
-2. Implement Module 4, the k-independent retarded induction.
+2. Module 4, the k-independent retarded induction, is complete.
 3. Implement Module 1 and obtain concrete general-k rows.
 4. Implement Module 2 termination before semantic preservation.
 5. Implement Module 3 feasibility transfer.
@@ -586,6 +587,7 @@ THEOREM_3_1_TERMINATION_CONTRACT_IDENTIFIED
 THEOREM_3_2_SEMANTIC_PRESERVATION_CONTRACT_IDENTIFIED
 THEOREM_4_1_FEASIBILITY_TRANSFER_CONTRACT_IDENTIFIED
 THEOREM_5_1_RETARDED_INDUCTION_CONTRACT_IDENTIFIED
+THEOREM_5_1_GENERIC_CORE_PROVED
 K3_FIRST_CONSUMER_DEFINED
 K3_PISTAR_THEOREM_NOT_YET_PROVED
 K9_MEASUREMENT_REQUIRED

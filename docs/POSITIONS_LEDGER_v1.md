@@ -72,6 +72,9 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   k=2 existente sobre `Nat.ceil` ni prueba todavia las filas general-k.
 - El certificado k=3 sigue clasificado como verificado sin teorema `piStar`.
   k=3 sera el primer consumidor de la cadena; solo despues se medira k=9.
+- El nucleo k-independiente de la induccion retardada (Teorema 5.1) ya esta
+  probado y auditado sobre un AST generico `leaf/add/min`. La formula concreta
+  de Delta y las filas EL siguen perteneciendo a los modulos consumidores.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
