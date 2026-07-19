@@ -163,6 +163,12 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   que el `reduceAt` canonico conserva exactamente el valor normal. Sigue
   abierto el normalizador iterado que localiza estos pasos por todo el arbol,
   preserva sus invariantes entre pasos y termina.
+- La cota universal `NodeBounds` se ha separado de la condicion exacta de la
+  fuente: `CriticalNodeBounds` exige (305) solo en ocurrencias expandidas que
+  pertenecen a una ruta globalmente critica. `NodeBounds` implica este nuevo
+  invariante, cada source split inicial lo satisface y Lean recupera de el la
+  cota para cualquier asignacion critica. Falta demostrar que la deletion
+  canonica lo preserva entre pasos; esa es ahora la deuda semantica inmediata.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

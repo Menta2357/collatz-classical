@@ -136,6 +136,13 @@ one-step value preservation is proved. What remains is to locate and iterate
 these local reductions through the complete tree and to preserve any frontier
 or node-bound data needed by later iterations.
 
+The contextual module also defines the weaker source-faithful form of equation
+(305): an expanded-node bound is required only when its occurrence lies on a
+global critical path. Universal `NodeBounds` implies this
+`CriticalNodeBounds` invariant, initial source splits satisfy it, and the
+bound is exposed for every critical assignment. Preservation under canonical
+deletion remains open.
+
 ## Verification
 
 ```text
@@ -152,7 +159,7 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 
 ```text
 ITERATED_DELETION_NORMALIZER_LOCATES_AND_APPLIES_LOCAL_STEPS
-CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
+CONTEXTUAL_CRITICAL_NODE_BOUNDS_PRESERVED_BY_DELETION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
 SATISFIES_EL_OF_SATISFIES_IK
@@ -182,6 +189,7 @@ GENERAL_K_TOTAL_NONCRITICAL_CONTEXT_PRESERVATION_PROVED_IN_SEPARATE_MODULE
 GENERAL_K_SOURCE_SPLIT_ADD_COMPANION_INVARIANT_PROVED_IN_SEPARATE_MODULE
 GENERAL_K_WITNESS_RETENTION_ASSEMBLY_PROVED_IN_SEPARATE_MODULE
 GENERAL_K_CANONICAL_WITNESS_RETENTION_PROVED_IN_SEPARATE_MODULE
+GENERAL_K_CONTEXTUAL_CRITICAL_NODE_BOUNDS_DEFINED_IN_SEPARATE_MODULE
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED

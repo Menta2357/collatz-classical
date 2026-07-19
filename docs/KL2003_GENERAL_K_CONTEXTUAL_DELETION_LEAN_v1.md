@@ -175,6 +175,35 @@ consumer. It is not yet an iterated normalizer: selecting the next advanced
 leaf/minimum, preserving the global iteration invariants, and proving that the
 process halts remain separate work.
 
+## Contextual equation-(305) invariant
+
+Universal `NodeBounds` is stronger than the source invariant after deletion:
+KL2003 only requires equation (305) at an internal principal node when a
+critical path actually passes through that occurrence. The module therefore
+defines
+
+```lean
+ELTree.Context.CriticalNodeBounds
+ELTree.CriticalNodeBounds
+```
+
+recursively with the exact one-hole context of every expanded node. At an
+expanded node the label bound is conditional on that occurrence being
+`HoleCritical`; descendants are checked in their composed global contexts.
+Lean proves that the existing universal invariant implies this source-faithful
+one and that every initial source split satisfies it:
+
+```lean
+ELTree.Context.criticalNodeBounds_of_nodeBounds
+ELTree.sourceSplitTree_criticalNodeBounds
+```
+
+Finally, `ELTree.Context.criticalAssignment_bound` converts the contextual
+node condition into the selected-leaf sum bound for any critical assignment,
+which is the formal interface corresponding to equation (305). Preservation
+of this weaker invariant by canonical witness deletion is the next required
+iteration theorem; it is not claimed here.
+
 ## Verification
 
 ```text
@@ -190,7 +219,7 @@ The audit reports only `[propext, Classical.choice, Quot.sound]`. No `sorry`,
 
 ```text
 ITERATED_DELETION_NORMALIZER_LOCATES_AND_APPLIES_LOCAL_STEPS
-CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
+CONTEXTUAL_CRITICAL_NODE_BOUNDS_PRESERVED_BY_DELETION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
 SATISFIES_EL_OF_SATISFIES_IK
@@ -224,8 +253,13 @@ GENERAL_K_WITNESS_BASED_REDUCEAT_VALUE_PRESERVATION_PROVED
 GENERAL_K_CANONICAL_WITNESS_RETENTION_DEFINED
 GENERAL_K_WITNESS_RETENTION_MAXIMAL_NONEMPTY_PROVED
 GENERAL_K_CANONICAL_WITNESS_RETENTION_VALUE_PRESERVATION_PROVED
+GENERAL_K_CONTEXTUAL_CRITICAL_NODE_BOUNDS_DEFINED
+GENERAL_K_NODE_BOUNDS_IMPLIES_CRITICAL_NODE_BOUNDS
+GENERAL_K_SOURCE_SPLIT_CRITICAL_NODE_BOUNDS_PROVED
+GENERAL_K_EQUATION_305_CRITICAL_ASSIGNMENT_INTERFACE_PROVED
 GENERAL_K_EL_CONTEXT_AXIOM_AUDIT_PASS
 ITERATED_DELETION_NORMALIZER_NOT_YET_PROVED
+CRITICAL_NODE_BOUNDS_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED
 K9_FORMALISATION_NOT_AUTHORIZED

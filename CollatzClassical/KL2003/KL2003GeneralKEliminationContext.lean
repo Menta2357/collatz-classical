@@ -140,6 +140,57 @@ theorem holeCritical_comp_iff {k : Nat} (outer inner : Context k)
     simp [comp, HoleCritical, plug, plug_comp, *, and_assoc, and_left_comm,
       and_comm]
 
+def CriticalNodeBounds {k : Nat} (context : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : ELTree k -> Prop
+  | .terminal _ => True
+  | .expanded label body =>
+      (context.HoleCritical (.expanded label body) Phi y ->
+        body.normalExpr.eval Phi y <=
+          Phi label.mode (y + label.shift.eval)) /\
+        CriticalNodeBounds (context.comp (.expanded label .hole)) Phi y body
+  | .add left right =>
+      CriticalNodeBounds (context.comp (.addLeft .hole right)) Phi y left /\
+        CriticalNodeBounds (context.comp (.addRight left .hole)) Phi y right
+  | .min2 left right =>
+      CriticalNodeBounds (context.comp (.min2Left .hole right)) Phi y left /\
+        CriticalNodeBounds (context.comp (.min2Right left .hole)) Phi y right
+  | .min3 first second third =>
+      CriticalNodeBounds
+          (context.comp (.minFirst .hole second third)) Phi y first /\
+        CriticalNodeBounds
+          (context.comp (.minSecond first .hole third)) Phi y second /\
+        CriticalNodeBounds
+          (context.comp (.minThird first second .hole)) Phi y third
+
+theorem criticalNodeBounds_of_nodeBounds {k : Nat} (context : Context k)
+    (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hbounds : tree.NodeBounds Phi y) :
+    context.CriticalNodeBounds Phi y tree := by
+  induction tree generalizing context with
+  | terminal => trivial
+  | expanded label body ih =>
+      exact ⟨fun _ => expandedNode_normalExpr_eval_le_label
+        label body Phi y hbounds, ih _ hbounds.1⟩
+  | add left right ihLeft ihRight =>
+      exact ⟨ihLeft _ hbounds.1, ihRight _ hbounds.2⟩
+  | min2 left right ihLeft ihRight =>
+      exact ⟨ihLeft _ hbounds.1, ihRight _ hbounds.2⟩
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact ⟨ihFirst _ hbounds.1, ihSecond _ hbounds.2.1,
+        ihThird _ hbounds.2.2⟩
+
+theorem criticalAssignment_bound {k : Nat} (context : Context k)
+    (label : ELLabel k) (body : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hbounds : context.CriticalNodeBounds Phi y (.expanded label body))
+    (hcontext : context.HoleCritical (.expanded label body) Phi y)
+    (assignment : ELExpr.CriticalAssignment body.normalExpr)
+    (hcritical : assignment.IsCritical Phi y) :
+    assignment.selectedExpr.eval Phi y <=
+      Phi label.mode (y + label.shift.eval) := by
+  rw [assignment.selectedExpr_eval_eq Phi y hcritical]
+  exact hbounds.1 hcontext
+
 theorem plug_normalExpr_eval_mono {k : Nat} (context : Context k)
     (oldTree newTree : ELTree k) (Phi : TrackedMode k -> Real -> Real)
     (y : Real)
@@ -456,6 +507,24 @@ theorem terminal_not_holeCritical_of_excludesCriticalLeaf {k : Nat}
   exact hexcludes assignment hassignment path
 
 end Context
+
+def CriticalNodeBounds {k : Nat} (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
+  (Context.hole : Context k).CriticalNodeBounds Phi y tree
+
+theorem criticalNodeBounds_of_nodeBounds {k : Nat} (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hbounds : tree.NodeBounds Phi y) : tree.CriticalNodeBounds Phi y :=
+  Context.criticalNodeBounds_of_nodeBounds .hole tree Phi y hbounds
+
+theorem sourceSplitTree_criticalNodeBounds {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    (label : ELLabel (p + 1)) {y : Real}
+    (hy : 2 <= y + label.shift.eval) :
+    (sourceSplitTree hp label).CriticalNodeBounds
+      (fun mode z => sourcePhiK mode z) y :=
+  criticalNodeBounds_of_nodeBounds _ _ _
+    (sourceSplitTree_nodeBounds hp roots label hy)
 
 namespace Min3Retention
 

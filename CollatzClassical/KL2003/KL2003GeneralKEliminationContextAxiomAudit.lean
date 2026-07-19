@@ -5,6 +5,9 @@ namespace KL2003
 
 #print axioms ELTree.Context.plug_normalExpr_eval_mono
 #print axioms ELTree.Context.plug_normalExpr_eval_eq_of_not_holeCritical
+#print axioms ELTree.Context.criticalNodeBounds_of_nodeBounds
+#print axioms ELTree.Context.criticalAssignment_bound
+#print axioms ELTree.sourceSplitTree_criticalNodeBounds
 #print axioms ELTree.Context.lift_criticalPath
 #print axioms ELTree.Context.terminal_not_holeCritical_of_excludesCriticalLeaf
 #print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_totallyNoncritical
