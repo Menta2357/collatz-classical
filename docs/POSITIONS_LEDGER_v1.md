@@ -205,6 +205,13 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `delta < 0`. La normalizacion negativa queda propuesta y custodiada, pero no
   se promueve a prueba: falta formalizar la correspondencia autosimilar que
   hace constante el incremento y la independencia del orden.
+- El nucleo finito y aritmetico de esa prueba ya esta en Lean. Toda secuencia
+  infinita de `TrackedMode k` tiene un modo con ocurrencias arbitrariamente
+  lejanas; `beta_2 < beta_1` fuerza el signo corregido
+  `delta = beta_2 - beta_1 < 0`; y una sucesion con incremento fijo negativo
+  no puede permanecer no negativa. Esto no prueba aun terminacion: sigue
+  faltando la correspondencia autosimilar que convierte subarboles recurrentes
+  en un unico incremento fijo, ademas de la unicidad respecto del orden.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

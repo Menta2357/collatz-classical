@@ -65,11 +65,27 @@ The termination pass must therefore discharge, separately:
 5. eventual negativity and contradiction with continued splittability;
 6. order independence or a canonical normalization theorem.
 
+## Lean progress
+
+`KL2003GeneralKTerminationCore.lean` now proves two independent parts of this
+list without assuming the missing correspondence:
+
+- every infinite sequence in the finite type `TrackedMode k` has a mode with
+  occurrences arbitrarily far out;
+- if the recurrent shifts have one fixed increment `delta < 0`, they are
+  eventually negative and contradict nonnegativity.
+
+It also proves directly that `beta_2 < beta_1` and
+`delta = beta_2 - beta_1` imply `delta < 0`. The self-similar subtree
+correspondence needed to obtain a fixed increment remains open.
+
 ## Current verdict
 
 ```text
 THEOREM31_SOURCE_SIGN_INCONSISTENCY_RECORDED
 THEOREM31_DELTA_NORMALIZATION_PROPOSED_NEGATIVE
+THEOREM31_FINITE_MODE_RECURRENCE_PROVED
+THEOREM31_FIXED_NEGATIVE_INCREMENT_CONTRADICTION_PROVED
 THEOREM31_SELF_SIMILARITY_LEMMA_REQUIRED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

@@ -1,0 +1,15 @@
+import CollatzClassical.KL2003.KL2003GeneralKTerminationCore
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms GeneralKTermination.exists_mode_with_infinite_fiber
+#print axioms GeneralKTermination.exists_recurrent_mode_unbounded
+#print axioms GeneralKTermination.exists_recurrent_mode_subsequence
+#print axioms GeneralKTermination.hasFixedIncrement_closedForm
+#print axioms GeneralKTermination.corrected_delta_negative
+#print axioms GeneralKTermination.exists_negative_of_hasFixedIncrement_of_delta_neg
+#print axioms GeneralKTermination.theorem31_arithmetic_contradiction
+
+end KL2003
+end CollatzClassical
