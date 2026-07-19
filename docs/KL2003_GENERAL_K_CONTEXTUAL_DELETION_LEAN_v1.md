@@ -214,10 +214,23 @@ ELTree.Context.holeCritical_congr
 
 `CriticalityEquivalentBelow` packages equivalence for every deeper
 subcontext, and `criticalNodeBounds_congr` transports the complete contextual
-invariant across such equivalent zippers. Consequently, the remaining
-preservation proof is localized: for each child retained by the canonical
-policy, show that its post-deletion branch context cannot create a new
-critical route relative to the original three-way minimum.
+invariant across such equivalent zippers. For deletion, full equivalence is
+unnecessarily strong: only actual subtree occurrences matter, and the needed
+direction is that post-deletion criticality implies pre-deletion criticality.
+The module therefore also defines and proves the directed layer
+
+```lean
+ELTree.Context.CriticalityDominatesBelow
+ELTree.Context.criticalityDominatesBelow_comp
+ELTree.Context.criticalNodeBounds_of_dominates
+```
+
+The dominance relation composes through every zipper frame, and it transports
+the complete `CriticalNodeBounds` invariant from the old global context to the
+new one. Consequently, the remaining preservation proof is localized: for
+each child retained by the canonical policy, prove this directed dominance
+between its post-deletion and pre-deletion branch contexts. No equivalence for
+hypothetical replacements is required.
 
 ## Verification
 
@@ -275,6 +288,9 @@ GENERAL_K_EQUATION_305_CRITICAL_ASSIGNMENT_INTERFACE_PROVED
 GENERAL_K_CONTEXT_NORMAL_VALUE_CONGRUENCE_PROVED
 GENERAL_K_HOLE_CRITICALITY_CONGRUENCE_PROVED
 GENERAL_K_CRITICAL_NODE_BOUNDS_CONTEXT_TRANSPORT_PROVED
+GENERAL_K_CRITICALITY_DOMINANCE_BELOW_DEFINED
+GENERAL_K_CRITICALITY_DOMINANCE_COMPOSITION_PROVED
+GENERAL_K_CRITICAL_NODE_BOUNDS_DIRECTED_TRANSPORT_PROVED
 GENERAL_K_EL_CONTEXT_AXIOM_AUDIT_PASS
 ITERATED_DELETION_NORMALIZER_NOT_YET_PROVED
 CRITICAL_NODE_BOUNDS_DELETION_PRESERVATION_NOT_YET_PROVED

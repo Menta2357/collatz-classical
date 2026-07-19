@@ -9,6 +9,8 @@ namespace KL2003
 #print axioms ELTree.Context.plug_normalExpr_eval_eq_of_not_holeCritical
 #print axioms ELTree.Context.criticalNodeBounds_of_nodeBounds
 #print axioms ELTree.Context.criticalNodeBounds_congr
+#print axioms ELTree.Context.criticalityDominatesBelow_comp
+#print axioms ELTree.Context.criticalNodeBounds_of_dominates
 #print axioms ELTree.Context.criticalAssignment_bound
 #print axioms ELTree.sourceSplitTree_criticalNodeBounds
 #print axioms ELTree.Context.lift_criticalPath

@@ -141,6 +141,29 @@ def CriticalityEquivalentBelow {k : Nat} (oldContext newContext : Context k)
     (oldContext.comp inner).HoleCritical tree Phi y <->
       (newContext.comp inner).HoleCritical tree Phi y
 
+def CriticalityDominatesBelow {k : Nat} (oldContext newContext : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (tree : ELTree k) : Prop :=
+  forall inner subtree, inner.plug subtree = tree ->
+    (newContext.comp inner).HoleCritical subtree Phi y ->
+      (oldContext.comp inner).HoleCritical subtree Phi y
+
+theorem criticalityDominatesBelow_comp {k : Nat}
+    {oldContext newContext : Context k}
+    {Phi : TrackedMode k -> Real -> Real} {y : Real} {tree : ELTree k}
+    (hdom : oldContext.CriticalityDominatesBelow newContext Phi y tree)
+    (frame : Context k) (subtree : ELTree k)
+    (hplug : frame.plug subtree = tree) :
+    (oldContext.comp frame).CriticalityDominatesBelow
+      (newContext.comp frame) Phi y subtree := by
+  intro inner candidate hcand hcritical
+  have hcritical' :
+      (newContext.comp (frame.comp inner)).HoleCritical candidate Phi y := by
+    simpa [comp_assoc] using hcritical
+  have hold := hdom (frame.comp inner) candidate
+    (by rw [plug_comp, hcand, hplug]) hcritical'
+  simpa [comp_assoc] using hold
+
 theorem holeCritical_comp_iff {k : Nat} (outer inner : Context k)
     (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real) :
     (outer.comp inner).HoleCritical tree Phi y <->
@@ -230,6 +253,48 @@ theorem criticalNodeBounds_congr {k : Nat} (oldContext newContext : Context k)
         intro inner subtree
         simpa [comp_assoc] using
           heq (((.minThird first second .hole) : Context k).comp inner) subtree
+
+theorem criticalNodeBounds_of_dominates {k : Nat}
+    (oldContext newContext : Context k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) (tree : ELTree k)
+    (hdom : oldContext.CriticalityDominatesBelow newContext Phi y tree)
+    (hbounds : oldContext.CriticalNodeBounds Phi y tree) :
+    newContext.CriticalNodeBounds Phi y tree := by
+  induction tree generalizing oldContext newContext with
+  | terminal => trivial
+  | expanded label body ih =>
+      refine ⟨fun hcritical => hbounds.1 ?_, ?_⟩
+      · have hold := hdom (.hole : Context k) (.expanded label body) rfl
+          (by simpa [comp_hole] using hcritical)
+        simpa [comp_hole] using hold
+      · exact ih _ _
+          (criticalityDominatesBelow_comp hdom
+            (.expanded label .hole) body rfl)
+          hbounds.2
+  | add left right ihLeft ihRight =>
+      exact ⟨ihLeft _ _
+          (criticalityDominatesBelow_comp hdom (.addLeft .hole right) left rfl)
+          hbounds.1,
+        ihRight _ _
+          (criticalityDominatesBelow_comp hdom (.addRight left .hole) right rfl)
+          hbounds.2⟩
+  | min2 left right ihLeft ihRight =>
+      exact ⟨ihLeft _ _
+          (criticalityDominatesBelow_comp hdom (.min2Left .hole right) left rfl)
+          hbounds.1,
+        ihRight _ _
+          (criticalityDominatesBelow_comp hdom (.min2Right left .hole) right rfl)
+          hbounds.2⟩
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact ⟨ihFirst _ _
+          (criticalityDominatesBelow_comp hdom
+            (.minFirst .hole second third) first rfl) hbounds.1,
+        ihSecond _ _
+          (criticalityDominatesBelow_comp hdom
+            (.minSecond first .hole third) second rfl) hbounds.2.1,
+        ihThird _ _
+          (criticalityDominatesBelow_comp hdom
+            (.minThird first second .hole) third rfl) hbounds.2.2⟩
 
 theorem criticalNodeBounds_of_nodeBounds {k : Nat} (context : Context k)
     (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real)
