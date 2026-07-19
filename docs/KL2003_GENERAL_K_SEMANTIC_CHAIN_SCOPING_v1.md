@@ -90,8 +90,8 @@ noncomputable def sourceWindow (y : Real) (a : Nat) : Nat :=
   Nat.floor ((2 : Real) ^ y * (a : Real))
 ```
 
-The new general-k chain should use this floor window. This has three intended
-properties:
+The new general-k chain uses this floor window. The dedicated Lean pilot
+`KL2003GeneralKFloorWindow.lean` now proves the three required properties:
 
 1. It matches the cardinal interpretation of `n <= 2^y * a`.
 2. The D1/D2/D3 advanced-window comparisons should require no epsilon pad.
@@ -102,10 +102,11 @@ This is not a migration of the existing `concreteWindow`, which remains a
 surrogate. The two realizations must have different names and no theorem may
 silently rewrite one into the other.
 
-Before Module 1 is accepted, a focused floor-window pilot must prove the exact
-retarded identities and advanced inequalities needed by all three generic
-rows. If any row needs a rounding loss, the general contract must expose that
-loss before the certificate interface is fixed.
+The pilot proves the exact `4a` retarded identity, exact `2c` parity identity,
+the D3 advanced comparison at `alpha - 1`, the D1 lifted comparison at
+`alpha - 2`, and the natural-logb self-window identity. No rounding loss or
+epsilon pad enters this policy. Module 1 must still prove the full member-wise
+rows and P3; this traffic result alone is not a semantic seam.
 
 ## Module 1: general-k semantics and original rows
 
@@ -496,7 +497,6 @@ Must be new:
 
 ```text
 BLOCKED_ON_GENERAL_K_MODE_INDEX_NORMALIZATION
-BLOCKED_ON_SOURCE_FAITHFUL_FLOOR_WINDOW_ROWS
 BLOCKED_ON_CLASSROOTSK_NONEMPTY
 BLOCKED_ON_EL_TERMINATION_FORMALIZATION
 BLOCKED_ON_EL_ORDER_INDEPENDENCE
@@ -514,7 +514,8 @@ theorem or remain an explicit project blocker.
 
 The recommended order is deliberately not the numeric module order:
 
-1. Prove the floor-window traffic pilot and indexed residue arithmetic.
+1. Prove indexed residue arithmetic and ClassRootsK traffic; the floor-window
+   pilot is complete.
 2. Implement Module 4, the k-independent retarded induction.
 3. Implement Module 1 and obtain concrete general-k rows.
 4. Implement Module 2 termination before semantic preservation.
@@ -579,7 +580,7 @@ complete `k=9` pipeline has passed.
 ```text
 GENERAL_K_SEMANTIC_CHAIN_SCOPED
 GENERAL_K_CHAIN_SPLIT_INTO_FIVE_MODULES
-SOURCE_FAITHFUL_FLOOR_WINDOW_POLICY_PROPOSED
+SOURCE_FAITHFUL_FLOOR_WINDOW_POLICY_PROVED
 K2_CEIL_THEOREM_RETAINED_UNCHANGED
 THEOREM_3_1_TERMINATION_CONTRACT_IDENTIFIED
 THEOREM_3_2_SEMANTIC_PRESERVATION_CONTRACT_IDENTIFIED

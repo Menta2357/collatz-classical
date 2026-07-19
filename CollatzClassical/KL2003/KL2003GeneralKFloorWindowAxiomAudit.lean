@@ -1,0 +1,16 @@
+import CollatzClassical.KL2003.KL2003GeneralKFloorWindow
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms sourceWindow_mono_y
+#print axioms root_le_sourceWindow
+#print axioms sourceWindow_retarded_four
+#print axioms sourceWindow_parity_two
+#print axioms source_advanced_power_mul_child_le_root
+#print axioms sourceWindow_advanced_child_le_target
+#print axioms sourceWindow_lifted_advanced_child_le_target
+#print axioms sourceWindow_logb_eq_self
+
+end KL2003
+end CollatzClassical

@@ -66,9 +66,10 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   semantica/filas originales, eliminacion EL, transferencia de factibilidad,
   induccion retardada generica y composicion concreta. Contrato completo en
   `docs/KL2003_GENERAL_K_SEMANTIC_CHAIN_SCOPING_v1.md`.
-- La nueva cadena propone una ventana `Nat.floor` fiel al enunciado fuente;
-  esa politica sigue pendiente de prueba y no modifica el teorema k=2
-  existente sobre `Nat.ceil`.
+- La nueva cadena usa una ventana `Nat.floor` fiel al enunciado fuente. Su
+  trafico base, retarded, parity, advanced D1/D3 y logb-self ya esta probado y
+  auditado en `KL2003GeneralKFloorWindow.lean`. Esto no modifica el teorema
+  k=2 existente sobre `Nat.ceil` ni prueba todavia las filas general-k.
 - El certificado k=3 sigue clasificado como verificado sin teorema `piStar`.
   k=3 sera el primer consumidor de la cadena; solo despues se medira k=9.
 
