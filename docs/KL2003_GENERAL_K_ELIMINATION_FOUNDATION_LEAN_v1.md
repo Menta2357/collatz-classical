@@ -97,9 +97,27 @@ Theorem 3.2 is closed independently of deletion.
 
 For a monotone function family,
 `deletionWitness_ancestor_le_leaf` proves the corresponding value comparison.
-This is one ingredient of the critical-assignment proof; it is not by itself
-the semantic deletion theorem because the latter also needs the strictly
-positive sibling contribution from the split node.
+The strictly positive companion contribution is now isolated as well:
+
+```lean
+ELExpr.ArgumentsNonnegative
+ELExpr.eval_pos
+deletionWitness_critical_sum_contradiction
+deletionWitness_excludes_critical_sum
+```
+
+For an expression whose shifted arguments stay in the nonnegative region,
+`ELExpr.eval_pos` derives strict positivity from `PositivePhi`. If a deleted
+leaf has a same-mode ancestor at a strictly smaller shift, monotonicity makes
+the ancestor value no larger than the leaf value. It is therefore impossible
+for the leaf plus a positive companion subtree to be bounded above by that
+ancestor. This proves the algebraic contradiction at the heart of the source
+critical-assignment argument.
+
+This is still not the complete semantic deletion theorem. The remaining lift
+must define the source critical assignment and prove that every deletion
+context supplies the companion subtree, its nonnegative arguments, and the
+critical sum inequality without assuming the desired preservation theorem.
 
 ## Verification
 
@@ -119,6 +137,7 @@ EL_WELL_FORMEDNESS_PRESERVATION
 DELETION_NEVER_REMOVES_ALL_MIN_CHILDREN
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
+CRITICAL_ASSIGNMENT_CONTEXT_CONSTRUCTION
 CRITICAL_ASSIGNMENT_DELETION_PRESERVATION
 SATISFIES_EL_OF_SATISFIES_IK
 K2_FIGURE_A1_REGRESSION
@@ -137,6 +156,8 @@ GENERAL_K_EL_SPLIT_EXPRESSION_DEFINED
 GENERAL_K_EL_SPLIT_SEMANTIC_PRESERVATION_PROVED
 EL_DELETION_WITNESS_DEFINED
 EL_DELETION_MONOTONICITY_COMPONENT_PROVED
+EL_EXPRESSION_POSITIVITY_PROVED
+EL_DELETION_CRITICAL_SUM_CONTRADICTION_PROVED
 GENERAL_K_ELIMINATION_FOUNDATION_AXIOM_AUDIT_PASS
 EL_TERMINATION_NOT_YET_PROVED
 EL_SEMANTIC_PRESERVATION_NOT_YET_PROVED

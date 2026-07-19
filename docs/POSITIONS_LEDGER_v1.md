@@ -102,6 +102,12 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   reemplaza por D1/D2/D3 desplazada y un lema estructural propaga la
   desigualdad a traves de sumas y minimos. Terminacion y deletion siguen
   separadas y abiertas.
+- El nucleo algebraico de deletion ya esta cerrado: expresiones EL con
+  argumentos no negativos son estrictamente positivas, y un ancestro del
+  mismo modo a shift menor contradice cualquier desigualdad critica que
+  intente pagar `hoja + subarbol companero positivo` con ese ancestro. Sigue
+  abierto construir el contexto de asignacion critica que entrega esas
+  premisas en cada deletion, asi como la preservacion global y la terminacion.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

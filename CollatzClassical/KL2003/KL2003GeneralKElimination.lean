@@ -388,5 +388,66 @@ theorem ELExpr.replaceLeaves_eval_le {k : Nat} (expr : ELExpr k)
   | min3 first second third ihFirst ihSecond ihThird =>
       exact min_le_min ihFirst (min_le_min ihSecond ihThird)
 
+def ELExpr.ArgumentsNonnegative {k : Nat} (y : Real) : ELExpr k -> Prop
+  | .leaf label => 0 <= y + label.shift.eval
+  | .add left right =>
+      left.ArgumentsNonnegative y /\ right.ArgumentsNonnegative y
+  | .min3 first second third =>
+      first.ArgumentsNonnegative y /\ second.ArgumentsNonnegative y /\
+        third.ArgumentsNonnegative y
+
+theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y) :
+    0 < expr.eval Phi y := by
+  induction expr with
+  | leaf label => exact hpos label.mode _ hargs
+  | add left right ihLeft ihRight =>
+      exact add_pos (ihLeft hargs.1) (ihRight hargs.2)
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact lt_min (ihFirst hargs.1)
+        (lt_min (ihSecond hargs.2.1) (ihThird hargs.2.2))
+
+theorem deletionWitness_critical_sum_contradiction {k : Nat}
+    {Phi : TrackedMode k -> Real -> Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    {y : Real} {leaf : ELLeafState k} {ancestor : ELLabel k}
+    {companion : ELExpr k}
+    (_hancestor : ancestor ∈ leaf.ancestors)
+    (hmode : ancestor.mode = leaf.label.mode)
+    (hshift : ancestor.shift.eval < leaf.label.shift.eval)
+    (hargs : companion.ArgumentsNonnegative y)
+    (hcritical :
+      Phi leaf.label.mode (y + leaf.label.shift.eval) +
+          companion.eval Phi y <=
+        Phi ancestor.mode (y + ancestor.shift.eval)) :
+    False := by
+  have hmonoValue :
+      Phi ancestor.mode (y + ancestor.shift.eval) <=
+        Phi leaf.label.mode (y + leaf.label.shift.eval) := by
+    rw [hmode]
+    exact hmono leaf.label.mode (by linarith)
+  have hcompanion : 0 < companion.eval Phi y :=
+    companion.eval_pos hpos hargs
+  linarith
+
+theorem deletionWitness_excludes_critical_sum {k : Nat}
+    {Phi : TrackedMode k -> Real -> Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    {y : Real} {leaf : ELLeafState k} {companion : ELExpr k}
+    (hwitness : HasDeletionWitness leaf)
+    (hargs : companion.ArgumentsNonnegative y)
+    (hcritical : forall ancestor,
+      ancestor ∈ leaf.ancestors ->
+      ancestor.mode = leaf.label.mode ->
+      ancestor.shift.eval < leaf.label.shift.eval ->
+      Phi leaf.label.mode (y + leaf.label.shift.eval) +
+          companion.eval Phi y <=
+        Phi ancestor.mode (y + ancestor.shift.eval)) :
+    False := by
+  rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
+  exact deletionWitness_critical_sum_contradiction hpos hmono hmem hmode
+    hshift hargs (hcritical ancestor hmem hmode hshift)
+
 end KL2003
 end CollatzClassical
