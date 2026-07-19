@@ -1,0 +1,6 @@
+check_id,status,evidence,memberwise_failures,notes
+decision_A_direct_c_split,pass,"observed direct classes [2, 5, 8]",,Decision check is diagnostic; future Lean verifier remains authoritative.
+decision_B_repeated_cprime_split,pass,"observed cPrime classes [2, 5, 8]",,Decision check is diagnostic; future Lean verifier remains authoritative.
+decision_C_phi25_meta_errata,pass,M1V3 second arm = phi25,,Decision check is diagnostic; future Lean verifier remains authoritative.
+decision_D_deletion_excludes_parents,pass,two deleted tree nodes contribute false; repeated class-8 parent omitted member-wise,,Decision check is diagnostic; future Lean verifier remains authoritative.
+decision_E_sibling_sum_only,pass,all repeated branches use valid child/sibling routes without parent-descendant sums,,Decision check is diagnostic; future Lean verifier remains authoritative.

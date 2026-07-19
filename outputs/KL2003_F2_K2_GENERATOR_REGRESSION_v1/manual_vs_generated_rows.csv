@@ -1,0 +1,5 @@
+row_id,manual_expected_shape,generated_expected_shape,manual_required_feature,generated_required_feature,status,diff_kind,notes
+row22,two-branch with retarded branch plus advanced branch using parity lift,two-branch with retarded branch plus advanced branch using parity lift,row22 parity lift,row22 parity lift,pass,MATCH,source-faithful V3 item reproduced
+row25,single-branch retarded row; no advanced contribution,single-branch retarded row; no advanced contribution,row25 single-branch,row25 single-branch,pass,MATCH,source-faithful V3 item reproduced
+row28,two-branch row with nested EL block and row28 c-prime split,two-branch row with nested EL block and row28 c-prime split,row28 c' split / post-deletion behavior,row28 c' split / post-deletion behavior,pass,MATCH,source-faithful V3 item reproduced
+M1V3,"min(phi28 + M2V3, phi25)","min(phi28 + M2V3, phi25)",meta-errata phi25 reinstated,meta-errata phi25 reinstated,pass,MATCH,source-faithful V3 item reproduced

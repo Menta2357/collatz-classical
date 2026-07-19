@@ -1,0 +1,6 @@
+check_id,status,evidence,diff_kind,notes
+json_artifact_exists,pass,outputs/KL2003_F2_K2_GENERATOR_REGRESSION_v1/kl2003_k2_regression.generated.json,MATCH,JSON/Lean twin and schema policy check
+lean_artifact_exists,pass,outputs/KL2003_F2_K2_GENERATOR_REGRESSION_v1/KL2003K2RegressionDataGeneratedV21.lean,MATCH,JSON/Lean twin and schema policy check
+json_to_lean_generator_exists,pass,kl2003_f2_k2_full_generator_regression_v1.py,MATCH,JSON/Lean twin and schema policy check
+schema_v21,pass,KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1,MATCH,JSON/Lean twin and schema policy check
+generated_lean_not_in_source_tree,pass,outputs/KL2003_F2_K2_GENERATOR_REGRESSION_v1/KL2003K2RegressionDataGeneratedV21.lean,MATCH,JSON/Lean twin and schema policy check

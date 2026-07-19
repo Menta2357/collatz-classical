@@ -1,0 +1,15 @@
+step_id,required_tokens,present,missing_tokens,status,notes
+source_class,a % 9 = 8,yes,,pass,Rule-derived trace token check.
+retarded_child,class 5; shift -2,yes,,pass,Rule-derived trace token check.
+advanced_child,c = 6*t + 5; 3*c + 1 = 2*a,yes,,pass,Rule-derived trace token check.
+c_split_mod5,c % 9 = 5,yes,,pass,Rule-derived trace token check.
+c_split_mod2,c % 9 = 2,yes,,pass,Rule-derived trace token check.
+c_split_mod8,c % 9 = 8,yes,,pass,Rule-derived trace token check.
+cprime_definition,3*cPrime + 1 = 2*c,yes,,pass,Rule-derived trace token check.
+cprime_split_mod2,cPrime % 9 = 2,yes,,pass,Rule-derived trace token check.
+cprime_split_mod5,cPrime % 9 = 5,yes,,pass,Rule-derived trace token check.
+cprime_split_mod8,cPrime % 9 = 8,yes,,pass,Rule-derived trace token check.
+m2v3_shape,"min3(phi22, phi25, phi28)",yes,,pass,Rule-derived trace token check.
+m1v3_shape,"min(phi28 + M2V3, phi25)",yes,,pass,Rule-derived trace token check.
+deletion_saturation,G04; G10,yes,,pass,Rule-derived trace token check.
+slack_reference,2077/145800,yes,,pass,Rule-derived trace token check.

@@ -1,0 +1,1198 @@
+{
+  "deletion_marks": [
+    {
+      "boundary_correction": "post_deletion_children_counted_instead",
+      "child_id": "tree_G04",
+      "deleted": true,
+      "deletion_policy": "same_mode_earlier_path_smaller_shift",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N04",
+      "node_id": "tree_G04",
+      "reason": "same mode 8 ancestor G00 has 0 < alpha-1",
+      "row_id": "row28"
+    },
+    {
+      "boundary_correction": "post_deletion_children_counted_instead",
+      "child_id": "tree_G10",
+      "deleted": true,
+      "deletion_policy": "same_mode_earlier_path_smaller_shift",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "figure_node_id": "N05",
+      "node_id": "tree_G10",
+      "reason": "same mode 8 ancestor G00 has 0 < 2*alpha-3",
+      "row_id": "row28"
+    }
+  ],
+  "guardrails": [
+    "BASELINE_AS_TEST_NOT_SOURCE",
+    "FIGURE_A1_AS_ORACLE_NOT_SOURCE",
+    "M1V3_SECOND_ARM_PHI25",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "inverse_words": [
+    {
+      "child_id": "tree_G01",
+      "deleted": false,
+      "depth": "1",
+      "fiber_parent": "tree_G00",
+      "inverse_word": [
+        "D3:retarded"
+      ],
+      "literal_id": "row28_tree_G01",
+      "reason": "D3_retarded_4m generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "-2",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D3_formula",
+      "target_class": "5",
+      "window_policy": "exact_retarded_window"
+    },
+    {
+      "child_id": "tree_G03",
+      "deleted": false,
+      "depth": "1",
+      "fiber_parent": "tree_G02",
+      "inverse_word": [
+        "D3:min",
+        "class:5"
+      ],
+      "literal_id": "row28_tree_G03",
+      "reason": "D3_advanced_min_class_5 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "alpha-1",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "target_class": "5",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G04",
+      "deleted": true,
+      "depth": "1",
+      "fiber_parent": "tree_G02",
+      "inverse_word": [
+        "D3:min",
+        "class:8"
+      ],
+      "literal_id": "row28_tree_G04",
+      "reason": "same mode 8 ancestor G00 has 0 < alpha-1",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "alpha-1",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "target_class": "8",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G05",
+      "deleted": false,
+      "depth": "1",
+      "fiber_parent": "tree_G02",
+      "inverse_word": [
+        "D3:min",
+        "class:2"
+      ],
+      "literal_id": "row28_tree_G05",
+      "reason": "D3_advanced_min_class_2 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "alpha-1",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "target_class": "2",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G06",
+      "deleted": false,
+      "depth": "2",
+      "fiber_parent": "tree_G05",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:retarded"
+      ],
+      "literal_id": "row28_tree_G06",
+      "reason": "D1_retarded_4m generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "alpha-3",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D1_formula",
+      "target_class": "8",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G08",
+      "deleted": false,
+      "depth": "2",
+      "fiber_parent": "tree_G07",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2"
+      ],
+      "literal_id": "row28_tree_G08",
+      "reason": "D1_advanced_min_class_2 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "2*alpha-3",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "2",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G09",
+      "deleted": false,
+      "depth": "2",
+      "fiber_parent": "tree_G07",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:5"
+      ],
+      "literal_id": "row28_tree_G09",
+      "reason": "D1_advanced_min_class_5 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "2*alpha-3",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "5",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G10",
+      "deleted": true,
+      "depth": "2",
+      "fiber_parent": "tree_G07",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:8"
+      ],
+      "literal_id": "row28_tree_G10",
+      "reason": "same mode 8 ancestor G00 has 0 < 2*alpha-3",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "2*alpha-3",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "8",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G11",
+      "deleted": false,
+      "depth": "3",
+      "fiber_parent": "tree_G08",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:retarded"
+      ],
+      "literal_id": "row28_tree_G11",
+      "reason": "D1_retarded_4m generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "2*alpha-5",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D1_formula",
+      "target_class": "8",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G13",
+      "deleted": false,
+      "depth": "3",
+      "fiber_parent": "tree_G12",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:2"
+      ],
+      "literal_id": "row28_tree_G13",
+      "reason": "D1_advanced_min_class_2 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "3*alpha-5",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "2",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G14",
+      "deleted": false,
+      "depth": "3",
+      "fiber_parent": "tree_G12",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:5"
+      ],
+      "literal_id": "row28_tree_G14",
+      "reason": "D1_advanced_min_class_5 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "3*alpha-5",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "5",
+      "window_policy": "padded_advanced_or_nested_window"
+    },
+    {
+      "child_id": "tree_G15",
+      "deleted": false,
+      "depth": "3",
+      "fiber_parent": "tree_G12",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:8"
+      ],
+      "literal_id": "row28_tree_G15",
+      "reason": "D1_advanced_min_class_8 generated from parametric EL rules",
+      "root_formula": "rule_derived_tree_node",
+      "row_id": "row28",
+      "shift": "3*alpha-5",
+      "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "target_class": "8",
+      "window_policy": "padded_advanced_or_nested_window"
+    }
+  ],
+  "mathematical_content": "rule_derived_row28_data_candidate",
+  "metadata": {
+    "artifact_links": {
+      "json_artifact": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28.generated.json",
+      "json_sha256": "RECORDED_IN_MANIFEST",
+      "json_to_lean_generator": "scripts/kl2003_f2_k2_row28_microgenerator_v1.py",
+      "json_to_lean_generator_sha256": "4167e10d5d05be14484f0432e30839ced7a5b6736a5d92d1f10c38f14bd04866",
+      "lean_data_artifact": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/KL2003K2Row28GeneratedData.lean",
+      "lean_data_sha256": "RECORDED_IN_MANIFEST",
+      "lean_import_policy": "Generated Lean data remains under outputs and is not imported."
+    },
+    "baseline_policy": "manual V3 baseline and Figure A1 are read only after rule-derived generation",
+    "created_at": "2026-07-19T01:38:07+02:00",
+    "generator_mode": "rule_derived_row28",
+    "generator_version": "kl2003_f2_k2_row28_microgenerator_v1.py",
+    "k": "2",
+    "mathematical_generation": true,
+    "no_theorem_claim": true,
+    "pre_reduction_class_count": "9",
+    "proof_status": "data_candidate_only",
+    "run_id": "KL2003_F2_K2_ROW28_MICROGENERATOR_v1",
+    "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+    "scope": "k2_row28_only",
+    "source_commit": "62fc6829ab03b2f4199746b9ddc88ad1accc42d0",
+    "tracked_class_count": "3"
+  },
+  "nested_blocks": [
+    {
+      "block_id": "M2V3",
+      "block_kind": "min",
+      "children": [
+        {
+          "component": "phi22",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi25",
+          "shift": "shift3AlphaMinus5Pad3"
+        },
+        {
+          "component": "phi28",
+          "shift": "shift3AlphaMinus5Pad3"
+        }
+      ],
+      "source_refs": [
+        "source_refs.splitting_rule",
+        "source_refs.meta_errata_phi25"
+      ]
+    },
+    {
+      "block_id": "M1V3",
+      "block_kind": "min",
+      "children": [
+        {
+          "children": [
+            {
+              "component": "phi28",
+              "shift": "shift2AlphaMinus5Pad2"
+            },
+            {
+              "block_ref": "M2V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi25",
+          "shift": "shift2AlphaMinus5Pad2"
+        }
+      ],
+      "source_faithful_requirement": "second arm is phi25; phi22 is historical V2 only",
+      "source_refs": [
+        "source_refs.splitting_rule",
+        "source_refs.meta_errata_phi25"
+      ]
+    },
+    {
+      "block_id": "row28_outer_block",
+      "block_kind": "min",
+      "children": [
+        {
+          "children": [
+            {
+              "component": "phi28",
+              "shift": "shiftAlphaMinus3Pad"
+            },
+            {
+              "block_ref": "M1V3"
+            }
+          ],
+          "operator": "sum"
+        },
+        {
+          "component": "phi22",
+          "shift": "shiftAlphaMinus3Pad"
+        }
+      ],
+      "source_refs": [
+        "source_refs.splitting_rule",
+        "source_refs.deletion_rule"
+      ]
+    },
+    {
+      "block_id": "row28_post_deletion_sibling_sum",
+      "block_kind": "sum",
+      "children": [
+        {
+          "node_ref": "row28_cprime_mod8_phi28"
+        },
+        {
+          "node_ref": "row28_four_c_mod5_phi25"
+        }
+      ],
+      "claims_disjointness": true,
+      "parent_descendant_overlap_forbidden": true,
+      "sibling_disjointness_group": "row28_post_deletion_siblings_mod8",
+      "source_refs": [
+        "source_refs.deletion_rule",
+        "source_refs.fiber_disjointness"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:680-683:row28_D3_root_initialization",
+      "expansion_depth": 0,
+      "figure_node_id": "N09",
+      "graph_depth": 0,
+      "inverse_step": "root",
+      "inverse_word": [],
+      "node_id": "tree_G00",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "",
+      "shift": "0"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D3_formula",
+      "expansion_depth": 1,
+      "figure_node_id": "N01",
+      "graph_depth": 1,
+      "inverse_step": "D3_retarded_4m",
+      "inverse_word": [
+        "D3:retarded"
+      ],
+      "node_id": "tree_G01",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G00",
+      "shift": "-2"
+    },
+    {
+      "class": "",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:450-451:phi_kminus1_min",
+      "expansion_depth": 1,
+      "figure_node_id": "N13",
+      "graph_depth": 1,
+      "inverse_step": "D3_kminus1_min",
+      "inverse_word": [
+        "D3:min"
+      ],
+      "node_id": "tree_G02",
+      "node_kind": "m",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "tree_G00"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "expansion_depth": 1,
+      "figure_node_id": "N12",
+      "graph_depth": 2,
+      "inverse_step": "D3_advanced_min_class_5",
+      "inverse_word": [
+        "D3:min",
+        "class:5"
+      ],
+      "node_id": "tree_G03",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G02",
+      "shift": "alpha-1"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "same mode 8 ancestor G00 has 0 < alpha-1",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "expansion_depth": 1,
+      "figure_node_id": "N04",
+      "graph_depth": 2,
+      "inverse_step": "D3_advanced_min_class_8",
+      "inverse_word": [
+        "D3:min",
+        "class:8"
+      ],
+      "node_id": "tree_G04",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "deleted",
+      "parent_node_id": "tree_G02",
+      "shift": "alpha-1"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:443-445:D3_advanced_min",
+      "expansion_depth": 1,
+      "figure_node_id": "N03",
+      "graph_depth": 2,
+      "inverse_step": "D3_advanced_min_class_2",
+      "inverse_word": [
+        "D3:min",
+        "class:2"
+      ],
+      "node_id": "tree_G05",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "tree_G02",
+      "shift": "alpha-1"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D1_formula",
+      "expansion_depth": 2,
+      "figure_node_id": "N00",
+      "graph_depth": 3,
+      "inverse_step": "D1_retarded_4m",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:retarded"
+      ],
+      "node_id": "tree_G06",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G05",
+      "shift": "alpha-3"
+    },
+    {
+      "class": "",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:450-451:phi_kminus1_min",
+      "expansion_depth": 2,
+      "figure_node_id": "N14",
+      "graph_depth": 3,
+      "inverse_step": "D1_kminus1_min",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min"
+      ],
+      "node_id": "tree_G07",
+      "node_kind": "m",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "tree_G05"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 2,
+      "figure_node_id": "N02",
+      "graph_depth": 4,
+      "inverse_step": "D1_advanced_min_class_2",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2"
+      ],
+      "node_id": "tree_G08",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "tree_G07",
+      "shift": "2*alpha-3"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 2,
+      "figure_node_id": "N11",
+      "graph_depth": 4,
+      "inverse_step": "D1_advanced_min_class_5",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:5"
+      ],
+      "node_id": "tree_G09",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G07",
+      "shift": "2*alpha-3"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "same mode 8 ancestor G00 has 0 < 2*alpha-3",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 2,
+      "figure_node_id": "N05",
+      "graph_depth": 4,
+      "inverse_step": "D1_advanced_min_class_8",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:8"
+      ],
+      "node_id": "tree_G10",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "deleted",
+      "parent_node_id": "tree_G07",
+      "shift": "2*alpha-3"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D1_formula",
+      "expansion_depth": 3,
+      "figure_node_id": "N06",
+      "graph_depth": 5,
+      "inverse_step": "D1_retarded_4m",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:retarded"
+      ],
+      "node_id": "tree_G11",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G08",
+      "shift": "2*alpha-5"
+    },
+    {
+      "class": "",
+      "contributes_to_cardinality": false,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:450-451:phi_kminus1_min",
+      "expansion_depth": 3,
+      "figure_node_id": "N15",
+      "graph_depth": 5,
+      "inverse_step": "D1_kminus1_min",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min"
+      ],
+      "node_id": "tree_G12",
+      "node_kind": "m",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "expanded",
+      "parent_node_id": "tree_G08"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 3,
+      "figure_node_id": "N10",
+      "graph_depth": 6,
+      "inverse_step": "D1_advanced_min_class_2",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:2"
+      ],
+      "node_id": "tree_G13",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G12",
+      "shift": "3*alpha-5"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 3,
+      "figure_node_id": "N07",
+      "graph_depth": 6,
+      "inverse_step": "D1_advanced_min_class_5",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:5"
+      ],
+      "node_id": "tree_G14",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G12",
+      "shift": "3*alpha-5"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "deletion_reason": "",
+      "derivation_source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-437:D1_advanced_min",
+      "expansion_depth": 3,
+      "figure_node_id": "N08",
+      "graph_depth": 6,
+      "inverse_step": "D1_advanced_min_class_8",
+      "inverse_word": [
+        "D3:min",
+        "class:2",
+        "D1:min",
+        "class:2",
+        "D1:min",
+        "class:8"
+      ],
+      "node_id": "tree_G15",
+      "node_kind": "p",
+      "node_role": "rule_derived_figure_tree",
+      "node_status": "terminal",
+      "parent_node_id": "tree_G12",
+      "shift": "3*alpha-5"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_semantic_root",
+      "node_role": "row28_source",
+      "node_status": "expanded",
+      "parent_node_id": "",
+      "shift": "0"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_retarded_4a",
+      "node_role": "retarded_exact_window",
+      "node_status": "terminal",
+      "parent_node_id": "row28_semantic_root",
+      "shift": "-2"
+    },
+    {
+      "arith": "a = 9*t + 8; c = 6*t + 5; 3*c + 1 = 2*a",
+      "class": "split_5_2_8",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_advanced_c_split",
+      "node_role": "advanced_child_c",
+      "node_status": "expanded",
+      "parent_node_id": "row28_semantic_root",
+      "shift": "shiftAlphaMinus1Pad"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_c_mod5",
+      "node_role": "direct_c_case",
+      "node_status": "terminal",
+      "parent_node_id": "row28_advanced_c_split",
+      "shift": "shiftAlphaMinus1Pad"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_c_mod2",
+      "node_role": "direct_c_case",
+      "node_status": "terminal",
+      "parent_node_id": "row28_advanced_c_split",
+      "shift": "shiftAlphaMinus1Pad"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_c_mod8_repeated",
+      "node_role": "post_deletion_repeated_class8",
+      "node_status": "expanded",
+      "parent_node_id": "row28_advanced_c_split",
+      "shift": "shiftAlphaMinus1Pad"
+    },
+    {
+      "arith": "3*cPrime + 1 = 2*c",
+      "class": "split_2_5_8",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_cprime_split",
+      "node_role": "post_deletion_cprime",
+      "node_status": "expanded",
+      "parent_node_id": "row28_c_mod8_repeated",
+      "shift": "shiftAlphaMinus3Pad"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_cprime_mod2_phi22",
+      "node_role": "outer_phi22_direct",
+      "node_status": "terminal",
+      "parent_node_id": "row28_cprime_split",
+      "shift": "shiftAlphaMinus3Pad"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_cprime_mod5",
+      "node_role": "outer_phi22_parity_source",
+      "node_status": "expanded",
+      "parent_node_id": "row28_cprime_split",
+      "shift": "shiftAlphaMinus3Pad"
+    },
+    {
+      "class": "2",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_four_cprime_mod2_phi22",
+      "node_role": "outer_phi22_via_4cprime",
+      "node_status": "terminal",
+      "parent_node_id": "row28_cprime_mod5",
+      "shift": "shiftAlphaMinus3Pad"
+    },
+    {
+      "class": "8",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_cprime_mod8_phi28",
+      "node_role": "post_deletion_odd_sibling_phi28",
+      "node_status": "terminal",
+      "parent_node_id": "row28_c_mod8_repeated",
+      "shift": "shiftAlphaMinus3Pad"
+    },
+    {
+      "class": "5",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_four_c_mod5_phi25",
+      "node_role": "post_deletion_even_sibling_phi25",
+      "node_status": "terminal",
+      "parent_node_id": "row28_c_mod8_repeated",
+      "shift": "shift2AlphaMinus5Pad2"
+    },
+    {
+      "class": "split_2_5_8",
+      "contributes_to_cardinality": false,
+      "node_id": "row28_m2_split",
+      "node_role": "M2V3_min3",
+      "node_status": "expanded",
+      "parent_node_id": "row28_cprime_mod8_phi28",
+      "shift": "shift3AlphaMinus5Pad3"
+    },
+    {
+      "class": "22",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_m2_phi22",
+      "node_role": "M2V3_arm",
+      "node_status": "terminal",
+      "parent_node_id": "row28_m2_split",
+      "shift": "shift3AlphaMinus5Pad3"
+    },
+    {
+      "class": "25",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_m2_phi25",
+      "node_role": "M2V3_arm",
+      "node_status": "terminal",
+      "parent_node_id": "row28_m2_split",
+      "shift": "shift3AlphaMinus5Pad3"
+    },
+    {
+      "class": "28",
+      "contributes_to_cardinality": true,
+      "node_id": "row28_m2_phi28",
+      "node_role": "M2V3_arm",
+      "node_status": "terminal",
+      "parent_node_id": "row28_m2_split",
+      "shift": "shift3AlphaMinus5Pad3"
+    }
+  ],
+  "not_for_lean_import": true,
+  "overlap_guards": [
+    {
+      "guard_id": "row28_no_parent_descendant_sum",
+      "guard_kind": "no_parent_descendant_sum",
+      "parent_descendant_overlap_forbidden": true,
+      "rejected_pattern": "count deleted parent + descendant repair"
+    },
+    {
+      "guard_id": "row28_sibling_sums_only",
+      "guard_kind": "sibling_fiber_sum_only",
+      "parent_descendant_overlap_forbidden": true,
+      "reason": "Only disjoint entry-fiber siblings may be summed."
+    }
+  ],
+  "post_deletion_case_tree": [
+    {
+      "case": "c % 9 = 5",
+      "consumer": "direct tracked phi25",
+      "counting_policy": "single child"
+    },
+    {
+      "case": "c % 9 = 2",
+      "consumer": "direct tracked phi22",
+      "counting_policy": "single child"
+    },
+    {
+      "case": "c % 9 = 8",
+      "consumer": "cPrime split",
+      "counting_policy": "deleted parent excluded; post-deletion siblings only",
+      "cprime_cases": [
+        {
+          "case": "cPrime % 9 = 2",
+          "consumer": "outer phi22 directly"
+        },
+        {
+          "case": "cPrime % 9 = 5",
+          "consumer": "outer phi22 via 4*cPrime class 2"
+        },
+        {
+          "case": "cPrime % 9 = 8",
+          "consumer": "phi28 plus M1V3 through sibling phi25 arm",
+          "m1v3_arm": "phi25"
+        }
+      ]
+    }
+  ],
+  "post_deletion_edges": [
+    {
+      "deleted_node_id": "tree_G04",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "edge_id": "row28_N04_post_deletion",
+      "reason": "Deleted class-8 parent is replaced by the cPrime case split and counted sibling fibers.",
+      "replacement_child_ids": [
+        "row28_cprime_split",
+        "row28_cprime_mod8_phi28",
+        "row28_four_c_mod5_phi25"
+      ]
+    },
+    {
+      "deleted_node_id": "tree_G10",
+      "deletion_source_ref": "source_refs.deletion_rule",
+      "edge_id": "row28_N05_post_deletion",
+      "reason": "Second deleted class-8 node is replaced by the terminal M2V3 min3 arms.",
+      "replacement_child_ids": [
+        "row28_m2_split",
+        "row28_m2_phi22",
+        "row28_m2_phi25",
+        "row28_m2_phi28"
+      ]
+    }
+  ],
+  "rational_certificate": {
+    "coefficient_intervals": [
+      {
+        "coefficient_id": "lambda",
+        "hi": "27/20",
+        "kind": "lambda",
+        "lo": "27/20",
+        "source": "KL2003K2AlphaBounds.lean",
+        "value": "27/20"
+      },
+      {
+        "coefficient_id": "DeltaV2",
+        "kind": "base_constant",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "(20/27)^14/2"
+      },
+      {
+        "coefficient_id": "c22",
+        "hi": "73/40",
+        "kind": "row_coefficient",
+        "lo": "73/40",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "73/40"
+      },
+      {
+        "coefficient_id": "c25",
+        "hi": "1001/1000",
+        "kind": "row_coefficient",
+        "lo": "1001/1000",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "1001/1000"
+      },
+      {
+        "coefficient_id": "c28",
+        "hi": "69/40",
+        "kind": "row_coefficient",
+        "lo": "69/40",
+        "source": "KL2003M0CRetardedInduction.lean",
+        "value": "69/40"
+      },
+      {
+        "coefficient_id": "L2NT_D3_slack",
+        "hi": "2077/145800",
+        "kind": "slack",
+        "lo": "2077/145800",
+        "source": "KL2003K2CertificateData.lean",
+        "value": "2077/145800"
+      }
+    ],
+    "lambda_interval": {
+      "hi": "27/20",
+      "lo": "27/20"
+    },
+    "row_lhs": {
+      "row28": "0"
+    },
+    "row_rhs": {
+      "row28": "69/40"
+    },
+    "solver_manifest": "not_solved_microgenerator_reuses_regression_target_only",
+    "variables": {}
+  },
+  "rows": [
+    {
+      "baseline_expected_shape": "two-branch row with nested EL block and row28 c-prime split",
+      "children": [
+        {
+          "child_id": "tree_G01",
+          "deleted": false,
+          "depth": "1",
+          "fiber_parent": "tree_G00",
+          "inverse_word": [
+            "D3:retarded"
+          ],
+          "literal_id": "row28_tree_G01",
+          "reason": "D3_retarded_4m generated from parametric EL rules",
+          "root_formula": "rule_derived_tree_node",
+          "row_id": "row28",
+          "shift": "-2",
+          "source_ref": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex:433-445:D3_formula",
+          "target_class": "5",
+          "window_policy": "exact_retarded_window"
+        }
+      ],
+      "coefficient_terms": [
+        {
+          "coefficient_id": "c25",
+          "target": "tree_G01",
+          "value": "1001/1000"
+        },
+        {
+          "coefficient_id": "c28",
+          "target": "row28_outer_block",
+          "value": "69/40"
+        }
+      ],
+      "deletion_policy": "parametric_same_mode_smaller_shift_then_post_deletion_cprime_split",
+      "nested_block_ref": "row28_outer_block",
+      "required_feature": "row28 c' split / post-deletion behavior",
+      "row_family": "D3 / EL",
+      "row_id": "row28",
+      "row_kind": "nested_el_v3",
+      "slack_id": "L2NT_D3_slack",
+      "source_class": "28",
+      "source_ref": "source_refs.splitting_rule",
+      "target_bound": "69/40",
+      "tracked_residue_mod9": "8",
+      "v3_requirement": "M1V3 uses phi25, not phi22"
+    }
+  ],
+  "sibling_disjointness_groups": [
+    {
+      "disjointness_claim": "siblings_under_distinct_entry_fibers",
+      "group_id": "row28_post_deletion_siblings_mod8",
+      "member_node_ids": [
+        "row28_cprime_mod8_phi28",
+        "row28_four_c_mod5_phi25"
+      ],
+      "parent_fiber": "row28_c_mod8_repeated",
+      "source_ref": "source_refs.fiber_disjointness"
+    }
+  ],
+  "slacks": [
+    {
+      "denominator_bits": "18",
+      "lhs": "0",
+      "notes": "Regression target only; this microgenerator does not solve the LP.",
+      "numerator_bits": "12",
+      "rhs": "2077/145800",
+      "row_id": "row28",
+      "slack": "2077/145800",
+      "slack_id": "L2NT_D3_slack",
+      "strictly_positive": true
+    }
+  ],
+  "source_refs": [
+    {
+      "line_range": "433-451;752-761",
+      "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "splitting_rule",
+      "source_ref_id": "splitting_rule",
+      "trust_role": "generator_rule_source"
+    },
+    {
+      "line_range": "763-779",
+      "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "deletion_rule",
+      "source_ref_id": "deletion_rule",
+      "trust_role": "generator_rule_source"
+    },
+    {
+      "line_range": "794-801",
+      "path": "/Users/MoiTam/Documents/Codex/2026-07-05/tarea-krasikov-m1-feasibility-reconstruction-v2/work/sources/kl2003_src/30apr02.tex",
+      "sha256": "04fa4d484fe89256f6771f5651338891219385f6e049ffaf41035541016232cd",
+      "source_kind": "termination_rule",
+      "source_ref_id": "termination_rule",
+      "trust_role": "finite_halt_source_and_k2_saturation_policy"
+    },
+    {
+      "line_range": "not_applicable_csv_oracle",
+      "path": "outputs/KL2003_FIGURE_A1_GRAPH_TRANSCRIPTION_v1/root_paths.csv",
+      "sha256": "7d4de321e113d7da6e776d96379b5349021fc0320d1fa8684540d372081cefee",
+      "source_kind": "figure_a1",
+      "source_ref_id": "figure_a1",
+      "trust_role": "regression_oracle"
+    },
+    {
+      "line_range": "entire_note",
+      "path": "docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md",
+      "sha256": "faf6f1e137ffbdb6a4e036ed8e6b01c142a9909f74679b732002b42399064967",
+      "source_kind": "meta_errata",
+      "source_ref_id": "meta_errata_phi25",
+      "trust_role": "source_faithful_contract_guardrail"
+    },
+    {
+      "line_range": "existing_named_theorems",
+      "path": "CollatzClassical/KL2003/KL2003M0BEntryPredecessorDisjointness.lean",
+      "sha256": "LEAN_SOURCE_BASELINE",
+      "source_kind": "lean_dependency",
+      "source_ref_id": "fiber_disjointness",
+      "trust_role": "future_verifier_dependency"
+    }
+  ],
+  "termination_policy": {
+    "general_k_status": "GENERAL_K_DELETION_SATURATION_UNPROVED",
+    "k2_oracle_status": "K2_DELETION_SATURATION_ORACLE_VALIDATED",
+    "kind": "expand_until_deletion_saturation",
+    "rounds_to_k2_fixed_point": 2,
+    "status": "hypothesis_untested",
+    "termination_rule_ref": "source_refs.termination_rule",
+    "tested_by_this_generator": true
+  },
+  "tracked_classes": [
+    {
+      "active": true,
+      "class_id": "class_mod9_2",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "2"
+      ],
+      "representative": "2",
+      "source_rule": "k2 tracked class m congruent 2 mod 3"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_5",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "5"
+      ],
+      "representative": "5",
+      "source_rule": "k2 tracked class m congruent 2 mod 3"
+    },
+    {
+      "active": true,
+      "class_id": "class_mod9_8",
+      "modulus": "9",
+      "pre_reduction_residues": [
+        "8"
+      ],
+      "representative": "8",
+      "source_rule": "k2 tracked class m congruent 2 mod 3"
+    }
+  ],
+  "verification_targets": [
+    {
+      "description": "Check D3 row, M1V3/M2V3, phi25 arm, deletion, and cPrime split.",
+      "kind": "future_lean_verifier",
+      "required": true,
+      "row_id": "row28",
+      "target_id": "row28_nested_el_v3_shape"
+    },
+    {
+      "description": "Check generated tree against Figure A1 only after generation.",
+      "kind": "external_regression_oracle",
+      "required": true,
+      "row_id": "row28",
+      "target_id": "row28_figure_a1_regression"
+    }
+  ]
+}

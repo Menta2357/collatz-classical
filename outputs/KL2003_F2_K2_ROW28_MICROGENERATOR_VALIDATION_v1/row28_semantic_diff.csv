@@ -1,0 +1,14 @@
+check_id,expected,actual,status,diff_kind,notes
+row28_only,"[""row28""]","[""row28""]",pass,MATCH,"M1V3 is nested, not a top-level row"
+source_class,28,28,pass,MATCH,manual V3 oracle
+row_shape,two-branch row with nested EL block and row28 c-prime split,two-branch row with nested EL block and row28 c-prime split,pass,MATCH,manual V3 oracle
+required_feature,row28 c' split / post-deletion behavior,row28 c' split / post-deletion behavior,pass,MATCH,cPrime/post-deletion
+m1_second_arm,phi25,phi25,pass,MATCH,source-faithful V3
+m2_components,"[""phi22"", ""phi25"", ""phi28""]","[""phi22"", ""phi25"", ""phi28""]",pass,MATCH,depth-3 min3
+deleted_figure_nodes,"[""N04"", ""N05""]","[""N04"", ""N05""]",pass,MATCH,Figure A1 oracle
+post_deletion_siblings,"[""row28_cprime_mod8_phi28"", ""row28_four_c_mod5_phi25""]","[""row28_cprime_mod8_phi28"", ""row28_four_c_mod5_phi25""]",pass,MATCH,only sibling fibers are summed
+lambda,27/20,27/20,pass,MATCH,baseline constant
+DeltaV2,(20/27)^14/2,(20/27)^14/2,pass,MATCH,baseline constant
+c25,1001/1000,1001/1000,pass,MATCH,phi25 coefficient
+c28,69/40,69/40,pass,MATCH,row28 coefficient
+D3_slack,2077/145800,2077/145800,pass,MATCH,D3 regression target

@@ -1,0 +1,20 @@
+check_id,expected,actual,status,diff_kind,notes
+row_id,row28,row28,pass,MATCH,single generated top-level row
+source_class,28,28,pass,MATCH,manual V3 baseline
+tracked_residue,8,8,pass,MATCH,root residue
+row_family,D3 / EL,D3 / EL,pass,MATCH,D3 / EL family
+expected_shape,two-branch row with nested EL block and row28 c-prime split,two-branch row with nested EL block and row28 c-prime split,pass,MATCH,baseline used as oracle
+required_feature,row28 c' split / post-deletion behavior,row28 c' split / post-deletion behavior,pass,MATCH,cPrime/post-deletion
+m1_shape,"min(phi28 + M2V3, phi25)","min(phi28 + M2V3, phi25)",pass,MATCH,V3 nested shape
+m1_second_arm,phi25,phi25,pass,MATCH,meta-errata guardrail
+retarded_target,5,5,pass,MATCH,4*a mod 9
+retarded_shift,-2,-2,pass,MATCH,exact retarded shift
+c_split,"[""5"", ""2"", ""8""]","[""5"", ""2"", ""8""]",pass,MATCH,rule-derived exhaustive split
+cprime_split,"[""2"", ""5"", ""8""]","[""2"", ""5"", ""8""]",pass,MATCH,post-deletion exhaustive split
+tree_node_count,16,16,pass,MATCH,saturation result before Figure oracle
+tree_edge_count,15,15,pass,MATCH,saturation result before Figure oracle
+deleted_figure_nodes,"[""N04"", ""N05""]","[""N04"", ""N05""]",pass,MATCH,Figure A1 oracle diff
+figure_mismatch_count,0,0,pass,MATCH,Figure A1 oracle diff
+c25,1001/1000,1001/1000,pass,MATCH,certificate baseline
+c28,69/40,69/40,pass,MATCH,certificate baseline
+D3_slack,2077/145800,2077/145800,pass,MATCH,certificate baseline

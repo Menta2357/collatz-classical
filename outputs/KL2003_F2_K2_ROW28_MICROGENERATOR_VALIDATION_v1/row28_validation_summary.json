@@ -1,0 +1,53 @@
+{
+  "classifications": [
+    "ROW28_MICROGENERATOR_VALIDATION_CREATED",
+    "ROW28_MICROGENERATOR_VALIDATION_PASS",
+    "ROW28_SCHEMA_V21_PASS",
+    "ROW28_SEMANTIC_DIFF_PASS",
+    "FIGURE_A1_TREE_DIFF_PASS",
+    "ROW28_DECISION_CHECKS_PASS",
+    "ROW28_MEMBERWISE_HOOK_PASS",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "cprime_classes_seen": [
+    2,
+    5,
+    8
+  ],
+  "created_at": "2026-07-19T00:02:27.694130+00:00",
+  "decision_failures": [],
+  "decision_ok": true,
+  "direct_c_classes_seen": [
+    2,
+    5,
+    8
+  ],
+  "figure_a1_ok": true,
+  "figure_failures": [],
+  "guardrails": [
+    "DATA_CANDIDATE_ONLY",
+    "DIAGNOSTIC_MEMBERWISE_HOOK_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "input_json": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28.generated.json",
+  "memberwise_failures": [],
+  "memberwise_ok": true,
+  "memberwise_sample_count": 30,
+  "run_id": "KL2003_F2_K2_ROW28_MICROGENERATOR_VALIDATION_v1",
+  "schema_failures": [],
+  "schema_ok": true,
+  "semantic_failures": [],
+  "semantic_ok": true,
+  "source_commit": "62fc6829ab03b2f4199746b9ddc88ad1accc42d0",
+  "trace_failures": [],
+  "trace_ok": true,
+  "verdict": "ROW28_MICROGENERATOR_VALIDATION_PASS"
+}

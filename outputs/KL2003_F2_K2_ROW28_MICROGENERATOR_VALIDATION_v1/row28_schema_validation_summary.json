@@ -1,0 +1,15 @@
+{
+  "error_count": 0,
+  "external_verdict": "FORMAT_CHECK_ONLY",
+  "failures": [],
+  "input": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28.generated.json",
+  "known_warning_policy": {
+    "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED": "Accepted for schema validation v1: the validator reports sibling manifest presence but does not yet verify external artifact manifests."
+  },
+  "schema_ok": true,
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+  "warning_codes": [
+    "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED"
+  ],
+  "warning_count": 1
+}

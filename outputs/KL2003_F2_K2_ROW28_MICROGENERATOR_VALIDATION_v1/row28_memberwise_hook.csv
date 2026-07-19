@@ -1,0 +1,31 @@
+t,a,a_mod9,c,c_mod9,expected_c_mod9,direct_route_ok,repeated_class8,cprime,cprime_mod9,expected_cprime_mod9,cprime_route_ok,branch,counted_populations,deleted_parent_counted,sibling_route_ok,parent_descendant_double_count,status,diagnostic_only,not_part_of_logical_base
+0,8,8,5,5,5,True,False,,,,True,c_mod5,[5],False,True,False,pass,True,True
+1,17,8,11,2,2,True,False,,,,True,c_mod2,[11],False,True,False,pass,True,True
+2,26,8,17,8,8,True,True,11,2,2,True,c_mod8_cprime_mod2,[11],False,True,False,pass,True,True
+3,35,8,23,5,5,True,False,,,,True,c_mod5,[23],False,True,False,pass,True,True
+4,44,8,29,2,2,True,False,,,,True,c_mod2,[29],False,True,False,pass,True,True
+5,53,8,35,8,8,True,True,23,5,5,True,c_mod8_cprime_mod5,[92],False,True,False,pass,True,True
+6,62,8,41,5,5,True,False,,,,True,c_mod5,[41],False,True,False,pass,True,True
+7,71,8,47,2,2,True,False,,,,True,c_mod2,[47],False,True,False,pass,True,True
+8,80,8,53,8,8,True,True,35,8,8,True,c_mod8_cprime_mod8,"[35, 212]",False,True,False,pass,True,True
+9,89,8,59,5,5,True,False,,,,True,c_mod5,[59],False,True,False,pass,True,True
+10,98,8,65,2,2,True,False,,,,True,c_mod2,[65],False,True,False,pass,True,True
+11,107,8,71,8,8,True,True,47,2,2,True,c_mod8_cprime_mod2,[47],False,True,False,pass,True,True
+12,116,8,77,5,5,True,False,,,,True,c_mod5,[77],False,True,False,pass,True,True
+13,125,8,83,2,2,True,False,,,,True,c_mod2,[83],False,True,False,pass,True,True
+14,134,8,89,8,8,True,True,59,5,5,True,c_mod8_cprime_mod5,[236],False,True,False,pass,True,True
+15,143,8,95,5,5,True,False,,,,True,c_mod5,[95],False,True,False,pass,True,True
+16,152,8,101,2,2,True,False,,,,True,c_mod2,[101],False,True,False,pass,True,True
+17,161,8,107,8,8,True,True,71,8,8,True,c_mod8_cprime_mod8,"[71, 428]",False,True,False,pass,True,True
+18,170,8,113,5,5,True,False,,,,True,c_mod5,[113],False,True,False,pass,True,True
+19,179,8,119,2,2,True,False,,,,True,c_mod2,[119],False,True,False,pass,True,True
+20,188,8,125,8,8,True,True,83,2,2,True,c_mod8_cprime_mod2,[83],False,True,False,pass,True,True
+21,197,8,131,5,5,True,False,,,,True,c_mod5,[131],False,True,False,pass,True,True
+22,206,8,137,2,2,True,False,,,,True,c_mod2,[137],False,True,False,pass,True,True
+23,215,8,143,8,8,True,True,95,5,5,True,c_mod8_cprime_mod5,[380],False,True,False,pass,True,True
+24,224,8,149,5,5,True,False,,,,True,c_mod5,[149],False,True,False,pass,True,True
+25,233,8,155,2,2,True,False,,,,True,c_mod2,[155],False,True,False,pass,True,True
+26,242,8,161,8,8,True,True,107,8,8,True,c_mod8_cprime_mod8,"[107, 644]",False,True,False,pass,True,True
+27,251,8,167,5,5,True,False,,,,True,c_mod5,[167],False,True,False,pass,True,True
+28,260,8,173,2,2,True,False,,,,True,c_mod2,[173],False,True,False,pass,True,True
+29,269,8,179,8,8,True,True,119,2,2,True,c_mod8_cprime_mod2,[119],False,True,False,pass,True,True

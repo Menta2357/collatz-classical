@@ -1,0 +1,9 @@
+check_id,expected,actual,status,notes
+D3_ROOT_CLASS,8,8,pass,Decision-level generator check; logical verification remains future Lean work.
+RETARDED_CLASS_TRANSFER,5,5,pass,Decision-level generator check; logical verification remains future Lean work.
+C_SPLIT_EXHAUSTIVE,"2,5,8","2,5,8",pass,Decision-level generator check; logical verification remains future Lean work.
+CPRIME_SPLIT_EXHAUSTIVE,"2,5,8","2,5,8",pass,Decision-level generator check; logical verification remains future Lean work.
+M1V3_SECOND_ARM_PHI25,phi25,phi25,pass,Decision-level generator check; logical verification remains future Lean work.
+DELETION_COUNT,2,2,pass,Decision-level generator check; logical verification remains future Lean work.
+NO_PARENT_DESCENDANT_SUM_GUARD,true,true,pass,Decision-level generator check; logical verification remains future Lean work.
+SIBLING_GROUP_PRESENT,row28_post_deletion_siblings_mod8,row28_post_deletion_siblings_mod8,pass,Decision-level generator check; logical verification remains future Lean work.

@@ -1,0 +1,10 @@
+constant_id,manual_value,generated_value,status,diff_kind,derivation,notes
+lambda,27/20,27/20,pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+gammaK2,logb 2 (27/20),logb 2 (27/20),pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+DeltaV2,(20/27)^14/2,(20/27)^14/2,pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+c22,73/40,73/40,pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+c25,1001/1000,1001/1000,pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+c28,69/40,69/40,pass,MATCH,generated from certificate candidate and source formula,exact constant reproduced
+L2NT_D1_slack,29/9720,29/9720,pass,MATCH,recomputed exact row equation,exact constant reproduced
+L2NT_D2_slack,271/729000,271/729000,pass,MATCH,recomputed exact row equation,exact constant reproduced
+L2NT_D3_slack,2077/145800,2077/145800,pass,MATCH,recomputed exact row equation,exact constant reproduced

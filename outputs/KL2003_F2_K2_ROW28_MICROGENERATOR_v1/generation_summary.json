@@ -1,0 +1,77 @@
+{
+  "artifact_created_at": "2026-07-19T01:38:07+02:00",
+  "classifications": [
+    "K2_ROW28_MICROGENERATOR_CREATED",
+    "ROW28_RULE_DERIVATION_EMITTED",
+    "ROW28_NESTED_EL_V21_EMITTED",
+    "ROW28_DELETION_RULE_EXECUTED",
+    "ROW28_CPRIME_SPLIT_EMITTED",
+    "M1V3_PHI25_GUARDRAIL_PASS",
+    "ROW28_MICROGENERATOR_DIFF_PASS",
+    "FIGURE_A1_DELETION_DIFF_PASS",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "created_at": "2026-07-19T00:02:27.575452+00:00",
+  "decision_check_count": 8,
+  "deleted_node_count": 2,
+  "derivation_step_count": 16,
+  "diff_failure_count": 0,
+  "diff_failures": [],
+  "figure_a1_mismatch_count": 0,
+  "figure_verdict": "FIGURE_A1_DELETION_DIFF_PASS",
+  "forbidden_top_level_row_ids_present": [],
+  "generated_row_ids": [
+    "row28"
+  ],
+  "generated_tree_edge_count": 15,
+  "generated_tree_node_count": 16,
+  "generation_mode": "rule_derived_row28",
+  "generator_version": "kl2003_f2_k2_row28_microgenerator_v1.py",
+  "guardrails": [
+    "BASELINE_AS_TEST_NOT_SOURCE",
+    "FIGURE_A1_AS_ORACLE_NOT_SOURCE",
+    "M1V3_SECOND_ARM_PHI25",
+    "DATA_CANDIDATE_ONLY",
+    "NO_LEAN_PROOF",
+    "NO_K3_GENERATION",
+    "NO_LP_SOLVED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "mathematical_generation": true,
+  "nested_block_ids": [
+    "M2V3",
+    "M1V3",
+    "row28_outer_block",
+    "row28_post_deletion_sibling_sum"
+  ],
+  "outputs": {
+    "baseline_diff": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_vs_baseline_diff.csv",
+    "decision_checks": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_decision_checks.csv",
+    "deletion_trace": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_deletion_trace.csv",
+    "derivation_trace": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_derivation_trace.csv",
+    "figure_diff": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_tree_diff_against_figure_a1.csv",
+    "json": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28.generated.json",
+    "lean_data": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/KL2003K2Row28GeneratedData.lean",
+    "manifest": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/manifest_sha256.csv",
+    "tree_edges": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_generated_tree_edges.csv",
+    "tree_nodes": "outputs/KL2003_F2_K2_ROW28_MICROGENERATOR_v1/row28_generated_tree_nodes.csv"
+  },
+  "proof_status": "data_candidate_only",
+  "row_count": 1,
+  "run_id": "KL2003_F2_K2_ROW28_MICROGENERATOR_v1",
+  "saturation_rounds": 2,
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+  "scope": "k2_row28_only",
+  "semantic_diff_check_count": 19,
+  "source_commit": "62fc6829ab03b2f4199746b9ddc88ad1accc42d0",
+  "termination_policy": {
+    "general_k": "GENERAL_K_DELETION_SATURATION_UNPROVED",
+    "k2": "K2_DELETION_SATURATION_ORACLE_VALIDATED"
+  },
+  "verdict": "ROW28_MICROGENERATOR_DIFF_PASS"
+}
