@@ -69,9 +69,35 @@ def ContainsAdd {k : Nat} : Context k -> Prop
   | .minFirst context _ _ | .minSecond _ context _ |
       .minThird _ _ context => context.ContainsAdd
 
+def AddBelowEveryExpanded {k : Nat} : Context k -> Prop
+  | .hole => True
+  | .expanded _ context =>
+      context.ContainsAdd /\ context.AddBelowEveryExpanded
+  | .addLeft context _ | .addRight _ context =>
+      context.AddBelowEveryExpanded
+  | .min2Left context _ | .min2Right _ context =>
+      context.AddBelowEveryExpanded
+  | .minFirst context _ _ | .minSecond _ context _ |
+      .minThird _ _ context => context.AddBelowEveryExpanded
+
+theorem containsAdd_comp_right {k : Nat} (outer inner : Context k)
+    (hinner : inner.ContainsAdd) : (outer.comp inner).ContainsAdd := by
+  induction outer <;> simp [comp, ContainsAdd, *, hinner]
+
+theorem addBelowEveryExpanded_comp {k : Nat} (outer inner : Context k)
+    (hcontains : inner.ContainsAdd) (hbelow : inner.AddBelowEveryExpanded) :
+    (outer.comp inner).AddBelowEveryExpanded := by
+  induction outer <;>
+    simp [comp, AddBelowEveryExpanded, *, hcontains, hbelow,
+      containsAdd_comp_right]
+
 theorem plug_comp {k : Nat} (outer inner : Context k) (tree : ELTree k) :
     (outer.comp inner).plug tree = outer.plug (inner.plug tree) := by
   induction outer <;> simp [comp, plug, *]
+
+theorem comp_assoc {k : Nat} (outer middle inner : Context k) :
+    (outer.comp middle).comp inner = outer.comp (middle.comp inner) := by
+  induction outer <;> simp [comp, *]
 
 def HoleCritical {k : Nat} (context : Context k) (tree : ELTree k)
     (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
@@ -667,7 +693,85 @@ theorem reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
 
 end Min3Path
 
+def advancedSplitTree {k : Nat}
+    (root retarded first second third : ELLabel k) : ELTree k :=
+  .expanded root
+    (.add (.terminal retarded)
+      (.min3 (.terminal first) (.terminal second) (.terminal third)))
+
+def retardedSplitLabel {p : Nat} (label : ELLabel (p + 1)) :
+    ELLabel (p + 1) :=
+  ⟨fourTrackedMode (by omega) label.mode,
+    label.shift + SymbolicShift.retardedTwo⟩
+
+def d1AdvancedSplitLabel {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2)
+    (j : Fin 3) : ELLabel (p + 1) :=
+  ⟨liftTrackedMode hp (d1LowerTrackedMode hp label.mode hm) j,
+    label.shift + SymbolicShift.d1Advanced⟩
+
+def d3AdvancedSplitLabel {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8)
+    (j : Fin 3) : ELLabel (p + 1) :=
+  ⟨liftTrackedMode hp (d3LowerTrackedMode hp label.mode hm) j,
+    label.shift + SymbolicShift.d3Advanced⟩
+
+theorem sourceSplitTree_eq_advanced_d1 {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2) :
+    sourceSplitTree hp label =
+      advancedSplitTree label (retardedSplitLabel label)
+        (d1AdvancedSplitLabel hp label hm 0)
+        (d1AdvancedSplitLabel hp label hm 1)
+        (d1AdvancedSplitLabel hp label hm 2) := by
+  simp [sourceSplitTree, splitTopExpr, hm, d1TopExpr, ELExpr.shiftBy,
+    elLeaf, ofExpr, advancedSplitTree, retardedSplitLabel,
+    d1AdvancedSplitLabel]
+
+theorem sourceSplitTree_eq_advanced_d3 {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8) :
+    sourceSplitTree hp label =
+      advancedSplitTree label (retardedSplitLabel label)
+        (d3AdvancedSplitLabel hp label hm 0)
+        (d3AdvancedSplitLabel hp label hm 1)
+        (d3AdvancedSplitLabel hp label hm 2) := by
+  have hnot2 : ¬ label.mode.1.1 % 9 = 2 := by omega
+  have hnot5 : ¬ label.mode.1.1 % 9 = 5 := by omega
+  simp [sourceSplitTree, splitTopExpr, hnot2, hnot5, d3TopExpr,
+    ELExpr.shiftBy, elLeaf, ofExpr, advancedSplitTree, retardedSplitLabel,
+    d3AdvancedSplitLabel]
+
 namespace TerminalPath
+
+def advancedMinPath {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    Min3Path (advancedSplitTree root retarded first second third) :=
+  .expanded root _
+    (.addRight (.terminal retarded) _
+      (.here (.terminal first) (.terminal second) (.terminal third)))
+
+def advancedFirstPath {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    TerminalPath (advancedSplitTree root retarded first second third) first :=
+  .expanded root _ first
+    (.addRight (.terminal retarded) _ first
+      (.minFirst (.terminal first) (.terminal second) (.terminal third) first
+        (.here first)))
+
+def advancedSecondPath {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    TerminalPath (advancedSplitTree root retarded first second third) second :=
+  .expanded root _ second
+    (.addRight (.terminal retarded) _ second
+      (.minSecond (.terminal first) (.terminal second) (.terminal third) second
+        (.here second)))
+
+def advancedThirdPath {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    TerminalPath (advancedSplitTree root retarded first second third) third :=
+  .expanded root _ third
+    (.addRight (.terminal retarded) _ third
+      (.minThird (.terminal first) (.terminal second) (.terminal third) third
+        (.here third)))
 
 def context {k : Nat} {tree : ELTree k} {target : ELLabel k} :
     (path : TerminalPath tree target) -> ELTree.Context k
@@ -683,6 +787,24 @@ def context {k : Nat} {tree : ELTree k} {target : ELLabel k} :
       .minSecond first subpath.context third
   | .minThird first second _ _ subpath =>
       .minThird first second subpath.context
+
+theorem advancedMinPath_firstBranchContext_eq {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedMinPath root retarded first second third).firstBranchContext =
+      (advancedFirstPath root retarded first second third).context := by
+  rfl
+
+theorem advancedMinPath_secondBranchContext_eq {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedMinPath root retarded first second third).secondBranchContext =
+      (advancedSecondPath root retarded first second third).context := by
+  rfl
+
+theorem advancedMinPath_thirdBranchContext_eq {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedMinPath root retarded first second third).thirdBranchContext =
+      (advancedThirdPath root retarded first second third).context := by
+  rfl
 
 theorem context_plug_target {k : Nat} {tree : ELTree k}
     {target : ELLabel k} (path : TerminalPath tree target) :
@@ -716,15 +838,360 @@ theorem context_plug_target {k : Nat} {tree : ELTree k}
 
 def AddBelowEveryExpanded {k : Nat} {tree : ELTree k}
     {target : ELLabel k} : TerminalPath tree target -> Prop
-  | .here _ => True
-  | .expanded _ _ _ subpath =>
-      subpath.context.ContainsAdd /\ subpath.AddBelowEveryExpanded
-  | .addLeft _ _ _ subpath | .addRight _ _ _ subpath =>
-      subpath.AddBelowEveryExpanded
-  | .min2Left _ _ _ subpath | .min2Right _ _ _ subpath =>
-      subpath.AddBelowEveryExpanded
-  | .minFirst _ _ _ _ subpath | .minSecond _ _ _ _ subpath |
-      .minThird _ _ _ _ subpath => subpath.AddBelowEveryExpanded
+  | path => path.context.AddBelowEveryExpanded
+
+theorem advancedFirstPath_containsAdd {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedFirstPath root retarded first second third).context.ContainsAdd := by
+  simp [advancedFirstPath, context, ELTree.Context.ContainsAdd]
+
+theorem advancedSecondPath_containsAdd {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedSecondPath root retarded first second third).context.ContainsAdd := by
+  simp [advancedSecondPath, context, ELTree.Context.ContainsAdd]
+
+theorem advancedThirdPath_containsAdd {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedThirdPath root retarded first second third).context.ContainsAdd := by
+  simp [advancedThirdPath, context, ELTree.Context.ContainsAdd]
+
+theorem advancedFirstPath_addBelowEveryExpanded {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedFirstPath root retarded first second third).AddBelowEveryExpanded := by
+  simp [AddBelowEveryExpanded, advancedFirstPath, context,
+    ELTree.Context.AddBelowEveryExpanded, ELTree.Context.ContainsAdd]
+
+theorem advancedSecondPath_addBelowEveryExpanded {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedSecondPath root retarded first second third).AddBelowEveryExpanded := by
+  simp [AddBelowEveryExpanded, advancedSecondPath, context,
+    ELTree.Context.AddBelowEveryExpanded, ELTree.Context.ContainsAdd]
+
+theorem advancedThirdPath_addBelowEveryExpanded {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    (advancedThirdPath root retarded first second third).AddBelowEveryExpanded := by
+  simp [AddBelowEveryExpanded, advancedThirdPath, context,
+    ELTree.Context.AddBelowEveryExpanded, ELTree.Context.ContainsAdd]
+
+structure AdvancedMinConfiguration {k : Nat} (tree : ELTree k)
+    (first second third : ELLabel k) where
+  minPath : Min3Path tree
+  firstPath : TerminalPath tree first
+  secondPath : TerminalPath tree second
+  thirdPath : TerminalPath tree third
+  firstChild_eq : minPath.firstChild = .terminal first
+  secondChild_eq : minPath.secondChild = .terminal second
+  thirdChild_eq : minPath.thirdChild = .terminal third
+  firstContext_eq : minPath.firstBranchContext = firstPath.context
+  secondContext_eq : minPath.secondBranchContext = secondPath.context
+  thirdContext_eq : minPath.thirdBranchContext = thirdPath.context
+  firstContainsAdd : firstPath.context.ContainsAdd
+  secondContainsAdd : secondPath.context.ContainsAdd
+  thirdContainsAdd : thirdPath.context.ContainsAdd
+  firstAddBelow : firstPath.AddBelowEveryExpanded
+  secondAddBelow : secondPath.AddBelowEveryExpanded
+  thirdAddBelow : thirdPath.AddBelowEveryExpanded
+
+def advancedMinConfiguration {k : Nat}
+    (root retarded first second third : ELLabel k) :
+    AdvancedMinConfiguration
+      (advancedSplitTree root retarded first second third)
+      first second third where
+  minPath := advancedMinPath root retarded first second third
+  firstPath := advancedFirstPath root retarded first second third
+  secondPath := advancedSecondPath root retarded first second third
+  thirdPath := advancedThirdPath root retarded first second third
+  firstChild_eq := rfl
+  secondChild_eq := rfl
+  thirdChild_eq := rfl
+  firstContext_eq := advancedMinPath_firstBranchContext_eq _ _ _ _ _
+  secondContext_eq := advancedMinPath_secondBranchContext_eq _ _ _ _ _
+  thirdContext_eq := advancedMinPath_thirdBranchContext_eq _ _ _ _ _
+  firstContainsAdd := advancedFirstPath_containsAdd _ _ _ _ _
+  secondContainsAdd := advancedSecondPath_containsAdd _ _ _ _ _
+  thirdContainsAdd := advancedThirdPath_containsAdd _ _ _ _ _
+  firstAddBelow := advancedFirstPath_addBelowEveryExpanded _ _ _ _ _
+  secondAddBelow := advancedSecondPath_addBelowEveryExpanded _ _ _ _ _
+  thirdAddBelow := advancedThirdPath_addBelowEveryExpanded _ _ _ _ _
+
+theorem sourceD1AdvancedConfiguration {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2) :
+    Nonempty (AdvancedMinConfiguration (sourceSplitTree hp label)
+      (d1AdvancedSplitLabel hp label hm 0)
+      (d1AdvancedSplitLabel hp label hm 1)
+      (d1AdvancedSplitLabel hp label hm 2)) := by
+  rw [sourceSplitTree_eq_advanced_d1 hp label hm]
+  exact ⟨advancedMinConfiguration _ _ _ _ _⟩
+
+theorem sourceD3AdvancedConfiguration {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8) :
+    Nonempty (AdvancedMinConfiguration (sourceSplitTree hp label)
+      (d3AdvancedSplitLabel hp label hm 0)
+      (d3AdvancedSplitLabel hp label hm 1)
+      (d3AdvancedSplitLabel hp label hm 2)) := by
+  rw [sourceSplitTree_eq_advanced_d3 hp label hm]
+  exact ⟨advancedMinConfiguration _ _ _ _ _⟩
+
+theorem exists_sourceD1AdvancedPath {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 2)
+    (j : Fin 3) :
+    exists path : TerminalPath (sourceSplitTree hp label)
+        (d1AdvancedSplitLabel hp label hm j),
+      path.context.ContainsAdd /\ path.AddBelowEveryExpanded := by
+  fin_cases j
+  · rw [sourceSplitTree_eq_advanced_d1 hp label hm]
+    exact ⟨advancedFirstPath _ _ _ _ _,
+      advancedFirstPath_containsAdd _ _ _ _ _,
+      advancedFirstPath_addBelowEveryExpanded _ _ _ _ _⟩
+  · rw [sourceSplitTree_eq_advanced_d1 hp label hm]
+    exact ⟨advancedSecondPath _ _ _ _ _,
+      advancedSecondPath_containsAdd _ _ _ _ _,
+      advancedSecondPath_addBelowEveryExpanded _ _ _ _ _⟩
+  · rw [sourceSplitTree_eq_advanced_d1 hp label hm]
+    exact ⟨advancedThirdPath _ _ _ _ _,
+      advancedThirdPath_containsAdd _ _ _ _ _,
+      advancedThirdPath_addBelowEveryExpanded _ _ _ _ _⟩
+
+theorem exists_sourceD3AdvancedPath {p : Nat} (hp : 1 <= p)
+    (label : ELLabel (p + 1)) (hm : label.mode.1.1 % 9 = 8)
+    (j : Fin 3) :
+    exists path : TerminalPath (sourceSplitTree hp label)
+        (d3AdvancedSplitLabel hp label hm j),
+      path.context.ContainsAdd /\ path.AddBelowEveryExpanded := by
+  fin_cases j
+  · rw [sourceSplitTree_eq_advanced_d3 hp label hm]
+    exact ⟨advancedFirstPath _ _ _ _ _,
+      advancedFirstPath_containsAdd _ _ _ _ _,
+      advancedFirstPath_addBelowEveryExpanded _ _ _ _ _⟩
+  · rw [sourceSplitTree_eq_advanced_d3 hp label hm]
+    exact ⟨advancedSecondPath _ _ _ _ _,
+      advancedSecondPath_containsAdd _ _ _ _ _,
+      advancedSecondPath_addBelowEveryExpanded _ _ _ _ _⟩
+  · rw [sourceSplitTree_eq_advanced_d3 hp label hm]
+    exact ⟨advancedThirdPath _ _ _ _ _,
+      advancedThirdPath_containsAdd _ _ _ _ _,
+      advancedThirdPath_addBelowEveryExpanded _ _ _ _ _⟩
+
+def descendSplit {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : TerminalPath (sourceSplitTree hp target) leaf) :
+    TerminalPath (outer.splitAt hp) leaf :=
+  match outer with
+  | .here _ => inner
+  | .expanded label _ _ subpath =>
+      .expanded label _ leaf (subpath.descendSplit hp inner)
+  | .addLeft _ right _ subpath =>
+      .addLeft _ right leaf (subpath.descendSplit hp inner)
+  | .addRight left _ _ subpath =>
+      .addRight left _ leaf (subpath.descendSplit hp inner)
+  | .min2Left _ right _ subpath =>
+      .min2Left _ right leaf (subpath.descendSplit hp inner)
+  | .min2Right left _ _ subpath =>
+      .min2Right left _ leaf (subpath.descendSplit hp inner)
+  | .minFirst _ second third _ subpath =>
+      .minFirst _ second third leaf (subpath.descendSplit hp inner)
+  | .minSecond first _ third _ subpath =>
+      .minSecond first _ third leaf (subpath.descendSplit hp inner)
+  | .minThird first second _ _ subpath =>
+      .minThird first second _ leaf (subpath.descendSplit hp inner)
+
+def descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target)) :
+    Min3Path (outer.splitAt hp) :=
+  match outer with
+  | .here _ => inner
+  | .expanded label _ _ subpath =>
+      .expanded label _ (subpath.descendSplitMin3 hp inner)
+  | .addLeft _ right _ subpath =>
+      .addLeft _ right (subpath.descendSplitMin3 hp inner)
+  | .addRight left _ _ subpath =>
+      .addRight left _ (subpath.descendSplitMin3 hp inner)
+  | .min2Left _ right _ subpath =>
+      .min2Left _ right (subpath.descendSplitMin3 hp inner)
+  | .min2Right left _ _ subpath =>
+      .min2Right left _ (subpath.descendSplitMin3 hp inner)
+  | .minFirst _ second third _ subpath =>
+      .minFirst _ second third (subpath.descendSplitMin3 hp inner)
+  | .minSecond first _ third _ subpath =>
+      .minSecond first _ third (subpath.descendSplitMin3 hp inner)
+  | .minThird first second _ _ subpath =>
+      .minThird first second _ (subpath.descendSplitMin3 hp inner)
+
+theorem context_descendSplit {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : TerminalPath (sourceSplitTree hp target) leaf) :
+    (outer.descendSplit hp inner).context = outer.context.comp inner.context := by
+  induction outer <;>
+    simp [descendSplit, context, ELTree.Context.comp, *]
+
+theorem context_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target)) :
+    (outer.descendSplitMin3 hp inner).context =
+      outer.context.comp inner.context := by
+  induction outer <;>
+    simp [descendSplitMin3, context, Min3Path.context,
+      ELTree.Context.comp, *]
+
+theorem firstChild_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target)) :
+    (outer.descendSplitMin3 hp inner).firstChild = inner.firstChild := by
+  induction outer <;> simp [descendSplitMin3, Min3Path.firstChild, *]
+
+theorem secondChild_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target)) :
+    (outer.descendSplitMin3 hp inner).secondChild = inner.secondChild := by
+  induction outer <;> simp [descendSplitMin3, Min3Path.secondChild, *]
+
+theorem thirdChild_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : Min3Path (sourceSplitTree hp target)) :
+    (outer.descendSplitMin3 hp inner).thirdChild = inner.thirdChild := by
+  induction outer <;> simp [descendSplitMin3, Min3Path.thirdChild, *]
+
+theorem firstBranchContext_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (innerMin : Min3Path (sourceSplitTree hp target))
+    (innerLeaf : TerminalPath (sourceSplitTree hp target) leaf)
+    (heq : innerMin.firstBranchContext = innerLeaf.context) :
+    (outer.descendSplitMin3 hp innerMin).firstBranchContext =
+      (outer.descendSplit hp innerLeaf).context := by
+  rw [Min3Path.firstBranchContext, context_descendSplitMin3,
+    context_descendSplit, secondChild_descendSplitMin3,
+    thirdChild_descendSplitMin3,
+    ELTree.Context.comp_assoc]
+  change outer.context.comp innerMin.firstBranchContext =
+    outer.context.comp innerLeaf.context
+  rw [heq]
+
+theorem secondBranchContext_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (innerMin : Min3Path (sourceSplitTree hp target))
+    (innerLeaf : TerminalPath (sourceSplitTree hp target) leaf)
+    (heq : innerMin.secondBranchContext = innerLeaf.context) :
+    (outer.descendSplitMin3 hp innerMin).secondBranchContext =
+      (outer.descendSplit hp innerLeaf).context := by
+  rw [Min3Path.secondBranchContext, context_descendSplitMin3,
+    context_descendSplit, firstChild_descendSplitMin3,
+    thirdChild_descendSplitMin3,
+    ELTree.Context.comp_assoc]
+  change outer.context.comp innerMin.secondBranchContext =
+    outer.context.comp innerLeaf.context
+  rw [heq]
+
+theorem thirdBranchContext_descendSplitMin3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (innerMin : Min3Path (sourceSplitTree hp target))
+    (innerLeaf : TerminalPath (sourceSplitTree hp target) leaf)
+    (heq : innerMin.thirdBranchContext = innerLeaf.context) :
+    (outer.descendSplitMin3 hp innerMin).thirdBranchContext =
+      (outer.descendSplit hp innerLeaf).context := by
+  rw [Min3Path.thirdBranchContext, context_descendSplitMin3,
+    context_descendSplit, firstChild_descendSplitMin3,
+    secondChild_descendSplitMin3,
+    ELTree.Context.comp_assoc]
+  change outer.context.comp innerMin.thirdBranchContext =
+    outer.context.comp innerLeaf.context
+  rw [heq]
+
+theorem descendSplit_addBelowEveryExpanded {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target leaf : ELLabel (p + 1)}
+    (outer : TerminalPath tree target)
+    (inner : TerminalPath (sourceSplitTree hp target) leaf)
+    (hcontains : inner.context.ContainsAdd)
+    (hbelow : inner.AddBelowEveryExpanded) :
+    (outer.descendSplit hp inner).AddBelowEveryExpanded := by
+  change (outer.descendSplit hp inner).context.AddBelowEveryExpanded
+  rw [context_descendSplit]
+  exact outer.context.addBelowEveryExpanded_comp inner.context hcontains hbelow
+
+def leafState {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) : ELLeafState k where
+  label := target
+  ancestors := path.context.expandedLabels
+  status := .active
+
+def HasDeletionWitness {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) : Prop :=
+  KL2003.HasDeletionWitness path.leafState
+
+namespace AdvancedMinConfiguration
+
+def descendSplit {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (outer : TerminalPath tree target) :
+    AdvancedMinConfiguration (outer.splitAt hp) first second third where
+  minPath := outer.descendSplitMin3 hp configuration.minPath
+  firstPath := outer.descendSplit hp configuration.firstPath
+  secondPath := outer.descendSplit hp configuration.secondPath
+  thirdPath := outer.descendSplit hp configuration.thirdPath
+  firstChild_eq := (firstChild_descendSplitMin3 hp outer _).trans
+    configuration.firstChild_eq
+  secondChild_eq := (secondChild_descendSplitMin3 hp outer _).trans
+    configuration.secondChild_eq
+  thirdChild_eq := (thirdChild_descendSplitMin3 hp outer _).trans
+    configuration.thirdChild_eq
+  firstContext_eq := firstBranchContext_descendSplitMin3 hp outer
+    configuration.minPath configuration.firstPath configuration.firstContext_eq
+  secondContext_eq := secondBranchContext_descendSplitMin3 hp outer
+    configuration.minPath configuration.secondPath
+      configuration.secondContext_eq
+  thirdContext_eq := thirdBranchContext_descendSplitMin3 hp outer
+    configuration.minPath configuration.thirdPath configuration.thirdContext_eq
+  firstContainsAdd := by
+    rw [context_descendSplit]
+    exact outer.context.containsAdd_comp_right _ configuration.firstContainsAdd
+  secondContainsAdd := by
+    rw [context_descendSplit]
+    exact outer.context.containsAdd_comp_right _ configuration.secondContainsAdd
+  thirdContainsAdd := by
+    rw [context_descendSplit]
+    exact outer.context.containsAdd_comp_right _ configuration.thirdContainsAdd
+  firstAddBelow := descendSplit_addBelowEveryExpanded hp outer
+    configuration.firstPath configuration.firstContainsAdd
+      configuration.firstAddBelow
+  secondAddBelow := descendSplit_addBelowEveryExpanded hp outer
+    configuration.secondPath configuration.secondContainsAdd
+      configuration.secondAddBelow
+  thirdAddBelow := descendSplit_addBelowEveryExpanded hp outer
+    configuration.thirdPath configuration.thirdContainsAdd
+      configuration.thirdAddBelow
+
+def DeletedBranchesHaveWitness {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention) : Prop :=
+  match retention with
+  | .keepAll => True
+  | .keepFirstSecond => configuration.thirdPath.HasDeletionWitness
+  | .keepFirstThird => configuration.secondPath.HasDeletionWitness
+  | .keepSecondThird => configuration.firstPath.HasDeletionWitness
+  | .keepFirst =>
+      configuration.secondPath.HasDeletionWitness /\
+        configuration.thirdPath.HasDeletionWitness
+  | .keepSecond =>
+      configuration.firstPath.HasDeletionWitness /\
+        configuration.thirdPath.HasDeletionWitness
+  | .keepThird =>
+      configuration.firstPath.HasDeletionWitness /\
+        configuration.secondPath.HasDeletionWitness
+
+end AdvancedMinConfiguration
 
 private theorem witness_ancestor_excludes_holeCritical {k : Nat}
     {tree : ELTree k} {target : ELLabel k}
@@ -743,6 +1210,7 @@ private theorem witness_ancestor_excludes_holeCritical {k : Nat}
   induction path generalizing ancestor with
   | here label => simp [context, ELTree.Context.expandedLabels] at hmem
   | expanded label body target path ih =>
+      change path.context.ContainsAdd /\ path.AddBelowEveryExpanded at hadd
       simp only [context, ELTree.Context.expandedLabels, List.mem_cons] at hmem
       rcases hmem with heq | hmem
       · subst ancestor
@@ -773,43 +1241,40 @@ private theorem witness_ancestor_excludes_holeCritical {k : Nat}
       · exact ih hbounds.1 hargs hadd.2 hcritical htargetNonneg
           ancestor hmem hmode hshift
   | addLeft left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.1 hargs.1 hadd hcritical htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | addRight left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.2 hargs.2 hadd hcritical htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | min2Left left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.1 hargs.1 hadd hcritical.1 htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | min2Right left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.2 hargs.2.1 hadd hcritical.1 htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | minFirst first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.1 hargs.1 hadd hcritical.1 htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | minSecond first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.2.1 hargs.2.1 hadd hcritical.1 htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
   | minThird first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
       exact ih hbounds.2.2 hargs.2.2 hadd hcritical.1 htargetNonneg ancestor
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
-
-def leafState {k : Nat} {tree : ELTree k} {target : ELLabel k}
-    (path : TerminalPath tree target) : ELLeafState k where
-  label := target
-  ancestors := path.context.expandedLabels
-  status := .active
-
-def HasDeletionWitness {k : Nat} {tree : ELTree k} {target : ELLabel k}
-    (path : TerminalPath tree target) : Prop :=
-  KL2003.HasDeletionWitness path.leafState
 
 theorem deletionWitness_implies_not_holeCritical {k : Nat}
     {tree : ELTree k} {target : ELLabel k}
@@ -825,6 +1290,65 @@ theorem deletionWitness_implies_not_holeCritical {k : Nat}
   rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
   exact path.witness_ancestor_excludes_holeCritical hpos hmono hbounds
     hargs hadd hcritical hwitness.1 ancestor hmem hmode hshift
+
+namespace AdvancedMinConfiguration
+
+theorem deletedBranchesTotallyNoncritical_of_witnesses {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    configuration.minPath.DeletedBranchesTotallyNoncritical
+      retention Phi y := by
+  have hfirst (hw : configuration.firstPath.HasDeletionWitness) :
+      ¬ configuration.minPath.firstBranchContext.HoleCritical
+        configuration.minPath.firstChild Phi y := by
+    rw [configuration.firstContext_eq, configuration.firstChild_eq]
+    exact configuration.firstPath.deletionWitness_implies_not_holeCritical
+      hpos hmono hbounds hargs configuration.firstAddBelow hw
+  have hsecond (hw : configuration.secondPath.HasDeletionWitness) :
+      ¬ configuration.minPath.secondBranchContext.HoleCritical
+        configuration.minPath.secondChild Phi y := by
+    rw [configuration.secondContext_eq, configuration.secondChild_eq]
+    exact configuration.secondPath.deletionWitness_implies_not_holeCritical
+      hpos hmono hbounds hargs configuration.secondAddBelow hw
+  have hthird (hw : configuration.thirdPath.HasDeletionWitness) :
+      ¬ configuration.minPath.thirdBranchContext.HoleCritical
+        configuration.minPath.thirdChild Phi y := by
+    rw [configuration.thirdContext_eq, configuration.thirdChild_eq]
+    exact configuration.thirdPath.deletionWitness_implies_not_holeCritical
+      hpos hmono hbounds hargs configuration.thirdAddBelow hw
+  cases retention with
+  | keepAll => trivial
+  | keepFirstSecond => exact hthird hwitness
+  | keepFirstThird => exact hsecond hwitness
+  | keepSecondThird => exact hfirst hwitness
+  | keepFirst => exact ⟨hsecond hwitness.1, hthird hwitness.2⟩
+  | keepSecond => exact ⟨hfirst hwitness.1, hthird hwitness.2⟩
+  | keepThird => exact ⟨hfirst hwitness.1, hsecond hwitness.2⟩
+
+theorem reduceAt_normalExpr_eval_eq_of_witnesses {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    (configuration.minPath.reduceAt retention).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y :=
+  configuration.minPath
+    |>.reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
+      retention Phi y
+        (configuration.deletedBranchesTotallyNoncritical_of_witnesses
+          retention hpos hmono hbounds hargs hwitness)
+
+end AdvancedMinConfiguration
 
 theorem not_holeCritical_of_excludesCriticalLeaf {k : Nat}
     {tree : ELTree k} {target : ELLabel k}

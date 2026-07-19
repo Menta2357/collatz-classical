@@ -127,10 +127,12 @@ context tracks criticality through every ancestor minimum, and replacing a
 totally noncritical occurrence by a larger local value leaves the whole normal
 evaluation unchanged. That module now also derives branch-level contextual
 noncriticality from a deletion witness under the source node-bound,
-nonnegative-argument, and additive-companion invariants. What remains is to
-prove that source splitting preserves the additive-companion invariant,
-assemble terminal branch witnesses into each concrete retention, and preserve
-any frontier or node-bound data needed by later iterations.
+nonnegative-argument, and additive-companion invariants. It now constructs the
+D1/D3 advanced triples with that additive-companion invariant, transports the
+configuration through outer terminal contexts, and assembles supplied branch
+witnesses into exact `reduceAt` value preservation. What remains is to derive
+the concrete retention and branch witnesses selected by normalization and to
+preserve any frontier or node-bound data needed by later iterations.
 
 ## Verification
 
@@ -147,8 +149,7 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 ## Remaining Module 2 work
 
 ```text
-SOURCE_SPLITTING_PRESERVES_ADD_BELOW_EVERY_EXPANDED
-TERMINAL_BRANCH_WITNESSES_ASSEMBLED_INTO_MIN3_RETENTION
+DELETION_PROCESS_SELECTS_RETENTION_AND_PRODUCES_BRANCH_WITNESSES
 CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
@@ -176,6 +177,8 @@ GENERAL_K_LOCAL_NONCRITICAL_DELETION_NODE_BOUNDS_PRESERVED
 GENERAL_K_NESTED_MIN3_REDUCTION_DEFINED
 GENERAL_K_EL_TREE_AXIOM_AUDIT_PASS
 GENERAL_K_TOTAL_NONCRITICAL_CONTEXT_PRESERVATION_PROVED_IN_SEPARATE_MODULE
+GENERAL_K_SOURCE_SPLIT_ADD_COMPANION_INVARIANT_PROVED_IN_SEPARATE_MODULE
+GENERAL_K_WITNESS_RETENTION_ASSEMBLY_PROVED_IN_SEPARATE_MODULE
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED

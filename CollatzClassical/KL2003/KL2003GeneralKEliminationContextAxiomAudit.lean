@@ -10,6 +10,10 @@ namespace KL2003
 #print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_totallyNoncritical
 #print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
 #print axioms ELTree.TerminalPath.deletionWitness_implies_not_holeCritical
+#print axioms ELTree.TerminalPath.sourceD1AdvancedConfiguration
+#print axioms ELTree.TerminalPath.sourceD3AdvancedConfiguration
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.descendSplit
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_normalExpr_eval_eq_of_witnesses
 
 end KL2003
 end CollatzClassical
