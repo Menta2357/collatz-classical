@@ -91,6 +91,10 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `floor`. El bundle `SatisfiesIk` queda probado bajo no-vacuidad; su instancia
   `k=3` es incondicional y consume los nueve testigos explicitos. La igualdad
   fuente (200) sigue separada, pero no es premisa del bundle ni de sus filas.
+- El Modulo 2 ya tiene lenguaje Lean auditado para shifts simbolicos, AST
+  nested `sum/min3`, traduccion exacta al `RetardedExpr` generico y testigos de
+  deletion basados en ancestros. No se reclama aun terminacion EL, unicidad ni
+  preservacion semantica de la deletion rule.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
