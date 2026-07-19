@@ -59,23 +59,6 @@ theorem classRoot_le_concreteWindow {m : Nat} {y : Real}
     exact Nat.le_ceil _
   exact_mod_cast hroot.trans hceil
 
-theorem piStarFinset_subset_window {a x1 x2 : Nat}
-    (hx : x1 <= x2) :
-    piStarFinset a x1 ⊆ piStarFinset a x2 := by
-  intro n hn
-  have hm :=
-    (mem_piStarFinset_reachesWithin_iff (a := a) (x := x1) (n := n)).1 hn
-  exact
-    (mem_piStarFinset_reachesWithin_iff (a := a) (x := x2) (n := n)).2
-      ⟨le_trans hm.1 hx, hm.2.1,
-        reachesWithin_window_mono hm.2.2 hx⟩
-
-theorem piStar_window_mono {a x1 x2 : Nat}
-    (hx : x1 <= x2) :
-    piStar a x1 <= piStar a x2 := by
-  dsimp [piStar]
-  exact Finset.card_le_card (piStarFinset_subset_window (a := a) hx)
-
 theorem concreteWindow_mono_y {y1 y2 : Real} {a : Nat}
     (hy : y1 <= y2) :
     concreteWindow y1 a <= concreteWindow y2 a := by

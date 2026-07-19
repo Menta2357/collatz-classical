@@ -75,6 +75,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - El nucleo k-independiente de la induccion retardada (Teorema 5.1) ya esta
   probado y auditado sobre un AST generico `leaf/add/min`. La formula concreta
   de Delta y las filas EL siguen perteneciendo a los modulos consumidores.
+- La semantica fuente indexada por `TrackedMode k` ya esta definida y auditada.
+  P1 y P2 estan probadas bajo no-vacuidad; para `k=3`, las nueve clases modulo
+  27 se habitan mediante testigos explicitos que son potencias de dos, por lo
+  que P1/P2 quedan incondicionales en el primer banco de integracion.
+- P3 ya es una igualdad Lean de infimos derivada de la particion ternaria de
+  las poblaciones de raices, no una hipotesis de puente. La instancia de nivel
+  2 a nivel 3 queda cerrada con los testigos anteriores. El Modulo 1 sigue
+  abierto en normalizacion paritaria y filas D1/D2/D3 generales.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

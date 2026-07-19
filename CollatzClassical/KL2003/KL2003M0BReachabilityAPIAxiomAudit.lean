@@ -25,6 +25,8 @@ namespace KL2003
 #print axioms boundedReaches_iff
 #print axioms mem_piStarFinset_reachesWithin_iff
 #print axioms piStarPropFinset_eq_piStarFinset
+#print axioms piStarFinset_subset_window
+#print axioms piStar_window_mono
 
 end KL2003
 end CollatzClassical
