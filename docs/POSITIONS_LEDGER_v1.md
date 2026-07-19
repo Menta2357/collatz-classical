@@ -205,6 +205,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `delta < 0`. La normalizacion negativa queda propuesta y custodiada, pero no
   se promueve a prueba: falta formalizar la correspondencia autosimilar que
   hace constante el incremento y la independencia del orden.
+- El scheduler sintactico source-faithful ya esta formalizado. Un zipper
+  terminal dependiente localiza de izquierda a derecha la primera hoja con
+  shift no negativo; `none` equivale exactamente a que todos los shifts
+  terminales sean negativos. El paso aplica D1/D2/D3 segun el residuo
+  trackeado modulo 9 y, en D1/D3, desciende la configuracion del nuevo minimo
+  advanced por el contexto exterior y aplica la retencion maximal por
+  testigos, sin consultar `Phi`. El split conserva frontera y `NodeBounds`, y
+  cada rama borrada lleva testigo sintactico. Sigue abierto el punto semantico
+  decisivo: probar que esta deletion incondicional preserva
+  `CriticalNodeBounds` aun cuando el minimo objetivo no sea globalmente
+  critico; no se ha convertido en hipotesis.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

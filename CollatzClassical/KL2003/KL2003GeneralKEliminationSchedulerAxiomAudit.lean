@@ -1,0 +1,18 @@
+import CollatzClassical.KL2003.KL2003GeneralKEliminationScheduler
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms ELTree.ExpandableOccurrence.split_frontierExpr
+#print axioms ELTree.ExpandableOccurrence.split_nodeBounds
+#print axioms ELTree.trackedMode_mod_nine_cases
+#print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d1
+#print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d2
+#print axioms ELTree.ExpandableOccurrence.sourceStep_eq_d3
+#print axioms ELTree.ExpandableOccurrence.d1_deletedBranchesHaveWitness
+#print axioms ELTree.ExpandableOccurrence.d3_deletedBranchesHaveWitness
+#print axioms ELTree.findExpandableOccurrence_eq_none_iff
+#print axioms ELTree.sourceScheduledStep_eq_self_of_terminalShiftsNegative
+
+end KL2003
+end CollatzClassical
