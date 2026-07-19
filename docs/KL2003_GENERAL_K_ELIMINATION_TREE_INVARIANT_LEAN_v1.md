@@ -130,9 +130,11 @@ noncriticality from a deletion witness under the source node-bound,
 nonnegative-argument, and additive-companion invariants. It now constructs the
 D1/D3 advanced triples with that additive-companion invariant, transports the
 configuration through outer terminal contexts, and assembles supplied branch
-witnesses into exact `reduceAt` value preservation. What remains is to derive
-the concrete retention and branch witnesses selected by normalization and to
-preserve any frontier or node-bound data needed by later iterations.
+witnesses into exact `reduceAt` value preservation. A canonical retention now
+deletes the witnessed children subject to retaining at least one, and its
+one-step value preservation is proved. What remains is to locate and iterate
+these local reductions through the complete tree and to preserve any frontier
+or node-bound data needed by later iterations.
 
 ## Verification
 
@@ -149,7 +151,7 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 ## Remaining Module 2 work
 
 ```text
-DELETION_PROCESS_SELECTS_RETENTION_AND_PRODUCES_BRANCH_WITNESSES
+ITERATED_DELETION_NORMALIZER_LOCATES_AND_APPLIES_LOCAL_STEPS
 CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
@@ -179,6 +181,7 @@ GENERAL_K_EL_TREE_AXIOM_AUDIT_PASS
 GENERAL_K_TOTAL_NONCRITICAL_CONTEXT_PRESERVATION_PROVED_IN_SEPARATE_MODULE
 GENERAL_K_SOURCE_SPLIT_ADD_COMPANION_INVARIANT_PROVED_IN_SEPARATE_MODULE
 GENERAL_K_WITNESS_RETENTION_ASSEMBLY_PROVED_IN_SEPARATE_MODULE
+GENERAL_K_CANONICAL_WITNESS_RETENTION_PROVED_IN_SEPARATE_MODULE
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED

@@ -1191,6 +1191,63 @@ def DeletedBranchesHaveWitness {k : Nat} {tree : ELTree k}
       configuration.firstPath.HasDeletionWitness /\
         configuration.secondPath.HasDeletionWitness
 
+noncomputable def witnessCount {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third) : Nat := by
+  classical
+  exact (if configuration.firstPath.HasDeletionWitness then 1 else 0) +
+    (if configuration.secondPath.HasDeletionWitness then 1 else 0) +
+      (if configuration.thirdPath.HasDeletionWitness then 1 else 0)
+
+noncomputable def witnessRetention {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third) :
+    Min3Retention := by
+  classical
+  exact if configuration.firstPath.HasDeletionWitness then
+    if configuration.secondPath.HasDeletionWitness then
+      if configuration.thirdPath.HasDeletionWitness then
+        .keepFirst
+      else
+        .keepThird
+    else if configuration.thirdPath.HasDeletionWitness then
+      .keepSecond
+    else
+      .keepSecondThird
+  else if configuration.secondPath.HasDeletionWitness then
+    if configuration.thirdPath.HasDeletionWitness then
+      .keepFirst
+    else
+      .keepFirstThird
+  else if configuration.thirdPath.HasDeletionWitness then
+    .keepFirstSecond
+  else
+    .keepAll
+
+theorem witnessRetention_deletedBranchesHaveWitness {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third) :
+    configuration.DeletedBranchesHaveWitness
+      configuration.witnessRetention := by
+  classical
+  by_cases hfirst : configuration.firstPath.HasDeletionWitness <;>
+    by_cases hsecond : configuration.secondPath.HasDeletionWitness <;>
+      by_cases hthird : configuration.thirdPath.HasDeletionWitness <;>
+        simp [witnessRetention, DeletedBranchesHaveWitness, hfirst, hsecond,
+          hthird]
+
+theorem witnessRetention_retainedCount {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third) :
+    configuration.witnessRetention.retainedCount =
+      3 - Nat.min 2 configuration.witnessCount := by
+  classical
+  by_cases hfirst : configuration.firstPath.HasDeletionWitness <;>
+    by_cases hsecond : configuration.secondPath.HasDeletionWitness <;>
+      by_cases hthird : configuration.thirdPath.HasDeletionWitness <;>
+        simp [witnessRetention, witnessCount, Min3Retention.retainedCount,
+          hfirst, hsecond, hthird]
+
 end AdvancedMinConfiguration
 
 private theorem witness_ancestor_excludes_holeCritical {k : Nat}
@@ -1347,6 +1404,19 @@ theorem reduceAt_normalExpr_eval_eq_of_witnesses {k : Nat}
       retention Phi y
         (configuration.deletedBranchesTotallyNoncritical_of_witnesses
           retention hpos hmono hbounds hargs hwitness)
+
+theorem witnessRetention_reduceAt_normalExpr_eval_eq {k : Nat}
+    {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.NodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt configuration.witnessRetention).normalExpr.eval
+      Phi y = tree.normalExpr.eval Phi y :=
+  configuration.reduceAt_normalExpr_eval_eq_of_witnesses
+    configuration.witnessRetention hpos hmono hbounds hargs
+      configuration.witnessRetention_deletedBranchesHaveWitness
 
 end AdvancedMinConfiguration
 

@@ -14,6 +14,9 @@ namespace KL2003
 #print axioms ELTree.TerminalPath.sourceD3AdvancedConfiguration
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.descendSplit
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_normalExpr_eval_eq_of_witnesses
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_deletedBranchesHaveWitness
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_retainedCount
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_reduceAt_normalExpr_eval_eq
 
 end KL2003
 end CollatzClassical

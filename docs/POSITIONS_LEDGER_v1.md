@@ -156,9 +156,13 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   transporta al insertar el split bajo una ruta terminal exterior. Un bundle
   construido alinea las tres rutas terminales con el `Min3Path`; para una
   retencion suministrada, los testigos de todos los brazos eliminados implican
-  no-criticidad global y preservacion exacta del valor de `reduceAt`. Sigue
-  abierto que el proceso de normalizacion elija la retencion concreta y
-  produzca esos testigos, ademas de preservar frontera/cotas y terminar.
+  no-criticidad global y preservacion exacta del valor de `reduceAt`.
+- La retencion local ya no es una hipotesis: `witnessRetention` la construye
+  desde los tres predicados de testigo, elimina `min 2 witnessCount` ramas y
+  conserva al menos una. Lean prueba que todo brazo eliminado tiene testigo y
+  que el `reduceAt` canonico conserva exactamente el valor normal. Sigue
+  abierto el normalizador iterado que localiza estos pasos por todo el arbol,
+  preserva sus invariantes entre pasos y termina.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere
