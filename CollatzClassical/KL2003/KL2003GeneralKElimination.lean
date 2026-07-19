@@ -193,5 +193,118 @@ theorem deletionWitness_ancestor_le_leaf {k : Nat}
   rw [hmode]
   exact hmono leaf.label.mode (by linarith)
 
+def elLeaf {k : Nat} (mode : TrackedMode k)
+    (shift : SymbolicShift) : ELExpr k :=
+  .leaf ⟨mode, shift⟩
+
+def d1TopExpr {p : Nat} (hp : 1 <= p)
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 2) :
+    ELExpr (p + 1) :=
+  .add
+    (elLeaf (fourTrackedMode (by omega) m) .retardedTwo)
+    (.min3
+      (elLeaf (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 0)
+        .d1Advanced)
+      (elLeaf (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 1)
+        .d1Advanced)
+      (elLeaf (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 2)
+        .d1Advanced))
+
+def d2TopExpr {p : Nat} (_hp : 1 <= p)
+    (m : TrackedMode (p + 1)) : ELExpr (p + 1) :=
+  elLeaf (fourTrackedMode (by omega) m) .retardedTwo
+
+def d3TopExpr {p : Nat} (hp : 1 <= p)
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 8) :
+    ELExpr (p + 1) :=
+  .add
+    (elLeaf (fourTrackedMode (by omega) m) .retardedTwo)
+    (.min3
+      (elLeaf (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 0)
+        .d3Advanced)
+      (elLeaf (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 1)
+        .d3Advanced)
+      (elLeaf (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 2)
+        .d3Advanced))
+
+theorem d1TopExpr_eval {p : Nat} (hp : 1 <= p)
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 2)
+    (Phi : TrackedMode (p + 1) -> Real -> Real) (y : Real) :
+    (d1TopExpr hp m hm).eval Phi y =
+      Phi (fourTrackedMode (by omega) m) (y - 2) +
+        min (Phi (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 0)
+              (y + alpha - 2))
+          (min (Phi (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 1)
+                (y + alpha - 2))
+            (Phi (liftTrackedMode hp (d1LowerTrackedMode hp m hm) 2)
+              (y + alpha - 2))) := by
+  simp [d1TopExpr, elLeaf, ELExpr.eval,
+    SymbolicShift.eval_retardedTwo, SymbolicShift.eval_d1Advanced]
+  ring_nf
+
+theorem d2TopExpr_eval {p : Nat} (hp : 1 <= p)
+    (m : TrackedMode (p + 1))
+    (Phi : TrackedMode (p + 1) -> Real -> Real) (y : Real) :
+    (d2TopExpr hp m).eval Phi y =
+      Phi (fourTrackedMode (by omega) m) (y - 2) := by
+  change Phi (fourTrackedMode (by omega) m)
+    (y + SymbolicShift.retardedTwo.eval) = _
+  rw [SymbolicShift.eval_retardedTwo]
+  congr 1
+
+theorem d3TopExpr_eval {p : Nat} (hp : 1 <= p)
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 8)
+    (Phi : TrackedMode (p + 1) -> Real -> Real) (y : Real) :
+    (d3TopExpr hp m hm).eval Phi y =
+      Phi (fourTrackedMode (by omega) m) (y - 2) +
+        min (Phi (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 0)
+              (y + alpha - 1))
+          (min (Phi (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 1)
+                (y + alpha - 1))
+            (Phi (liftTrackedMode hp (d3LowerTrackedMode hp m hm) 2)
+              (y + alpha - 1))) := by
+  simp [d3TopExpr, elLeaf, ELExpr.eval,
+    SymbolicShift.eval_retardedTwo, SymbolicShift.eval_d3Advanced]
+  ring_nf
+
+theorem sourcePhiK_D1_topExpr {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 2)
+    {y : Real} (hy : 2 <= y) :
+    (d1TopExpr hp m hm).eval (fun mode z => sourcePhiK mode z) y <=
+      sourcePhiK m y := by
+  have hyAdv : 0 <= y + alpha - 2 := by
+    have h := alpha_lower_bound
+    linarith
+  rw [d1TopExpr_eval]
+  have hp3 := sourcePhiK_P3 hp roots (d1LowerTrackedMode hp m hm) hyAdv
+  simp only [sourcePhiK_liftMin3] at hp3
+  rw [← hp3]
+  exact sourcePhiK_D1 hp roots m hm hy
+
+theorem sourcePhiK_D2_topExpr {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 5)
+    {y : Real} (hy : 2 <= y) :
+    (d2TopExpr hp m).eval (fun mode z => sourcePhiK mode z) y <=
+      sourcePhiK m y := by
+  rw [d2TopExpr_eval]
+  exact sourcePhiK_D2 hp roots m hm hy
+
+theorem sourcePhiK_D3_topExpr {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    (m : TrackedMode (p + 1)) (hm : m.1.1 % 9 = 8)
+    {y : Real} (hy : 2 <= y) :
+    (d3TopExpr hp m hm).eval (fun mode z => sourcePhiK mode z) y <=
+      sourcePhiK m y := by
+  have hyAdv : 0 <= y + alpha - 1 := by
+    have h := alpha_lower_bound
+    linarith
+  rw [d3TopExpr_eval]
+  have hp3 := sourcePhiK_P3 hp roots (d3LowerTrackedMode hp m hm) hyAdv
+  simp only [sourcePhiK_liftMin3] at hp3
+  rw [← hp3]
+  exact sourcePhiK_D3 hp roots m hm hy
+
 end KL2003
 end CollatzClassical

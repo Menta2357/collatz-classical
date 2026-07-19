@@ -95,6 +95,9 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   nested `sum/min3`, traduccion exacta al `RetardedExpr` generico y testigos de
   deletion basados en ancestros. No se reclama aun terminacion EL, unicidad ni
   preservacion semantica de la deletion rule.
+- P3 ya compila D1 y D3 a expresiones enteramente del nivel superior; las tres
+  filas top-level tienen evaluacion exacta y desigualdad semantica probadas.
+  Esas expresiones son el futuro cuerpo de split EL, sin arbol preconstruido.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

@@ -47,6 +47,27 @@ This bridge ensures that a future EL normal form can be consumed by the
 generic retarded induction without a second evaluator or an unproved
 translation layer.
 
+The original rows are also compiled into top-level expressions:
+
+```lean
+d1TopExpr
+d2TopExpr
+d3TopExpr
+```
+
+For D1 and D3, P3 replaces the level-`k-1` term by a three-way minimum at
+level `k`. Lean proves both the exact expression evaluations and the source
+row inequalities:
+
+```lean
+sourcePhiK_D1_topExpr
+sourcePhiK_D2_topExpr
+sourcePhiK_D3_topExpr
+```
+
+This is the expression substituted by a future EL split step; it is generated
+from the parametric row operators and does not import a prebuilt tree.
+
 ## Deletion witness vocabulary
 
 `ELLeafState` records a leaf, its principal ancestors, and its status.
@@ -93,6 +114,8 @@ K3_TABLE1_METRIC_REGRESSION
 GENERAL_K_SYMBOLIC_SHIFT_DEFINED
 GENERAL_K_NESTED_EL_EXPR_DEFINED
 EL_TO_RETARDED_EXPR_SEMANTICS_PROVED
+GENERAL_K_TOP_LEVEL_ROW_EXPRESSIONS_DEFINED
+GENERAL_K_TOP_LEVEL_ROW_EXPRESSION_SEMANTICS_PROVED
 EL_DELETION_WITNESS_DEFINED
 EL_DELETION_MONOTONICITY_COMPONENT_PROVED
 GENERAL_K_ELIMINATION_FOUNDATION_AXIOM_AUDIT_PASS

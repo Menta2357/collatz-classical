@@ -10,6 +10,12 @@ namespace KL2003
 #print axioms ELExpr.toRetardedExpr_evalAt
 #print axioms ELExpr.leafCount_pos
 #print axioms deletionWitness_ancestor_le_leaf
+#print axioms d1TopExpr_eval
+#print axioms d2TopExpr_eval
+#print axioms d3TopExpr_eval
+#print axioms sourcePhiK_D1_topExpr
+#print axioms sourcePhiK_D2_topExpr
+#print axioms sourcePhiK_D3_topExpr
 
 end KL2003
 end CollatzClassical
