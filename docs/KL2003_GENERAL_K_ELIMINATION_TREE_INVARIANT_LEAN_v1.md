@@ -68,6 +68,22 @@ ELTree.sourceSplitTree_criticalAssignment_bound
 
 No prebuilt k=2 tree or Figure A1 data is an input.
 
+## Expansion inside an existing tree
+
+`ELTree.TerminalPath` locates a terminal principal node without identifying it
+by a potentially non-unique label. `TerminalPath.splitAt` replaces exactly
+that node by its parametric source split. Lean proves:
+
+```lean
+ELTree.TerminalPath.frontierExpr_splitAt
+ELTree.TerminalPath.splitAt_nodeBounds
+```
+
+The first theorem says that expansion leaves the whole-tree frontier
+unchanged. The second uses that fact to preserve every ancestor node bound
+while introducing the new local source-row bound. Thus repeated splitting,
+prior to deletion, preserves the equation-(305) invariant.
+
 ## Verification
 
 ```text
@@ -83,7 +99,6 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 ## Remaining Module 2 work
 
 ```text
-TREE_LEAF_EXPANSION_PRESERVES_NODE_BOUNDS
 DELETION_OPERATION_AND_WELL_FORMEDNESS
 DELETION_NEVER_REMOVES_ALL_MIN_CHILDREN
 CRITICAL_ASSIGNMENT_DELETION_PRESERVATION
@@ -101,6 +116,9 @@ GENERAL_K_EL_NODE_BOUNDS_DEFINED
 GENERAL_K_EL_NORMAL_LE_FRONTIER_PROVED
 GENERAL_K_EL_EQUATION_305_CRITICAL_BOUND_PROVED
 GENERAL_K_SOURCE_SPLIT_TREE_NODE_BOUNDS_PROVED
+GENERAL_K_TREE_TERMINAL_PATH_DEFINED
+GENERAL_K_TREE_SPLIT_PRESERVES_FRONTIER_PROVED
+GENERAL_K_TREE_SPLIT_PRESERVES_NODE_BOUNDS_PROVED
 GENERAL_K_EL_TREE_AXIOM_AUDIT_PASS
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED

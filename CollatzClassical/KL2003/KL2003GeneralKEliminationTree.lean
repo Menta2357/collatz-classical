@@ -125,6 +125,84 @@ theorem sourceSplitTree_nodeBounds {p : Nat} (hp : 1 <= p)
   rw [frontierExpr_ofExpr]
   exact splitTopExpr_eval_le_sourceLeaf hp roots label hy
 
+inductive TerminalPath {k : Nat} : ELTree k -> ELLabel k -> Type
+  | here (label : ELLabel k) : TerminalPath (.terminal label) label
+  | expanded (label : ELLabel k) (body : ELTree k)
+      (target : ELLabel k) (path : TerminalPath body target) :
+      TerminalPath (.expanded label body) target
+  | addLeft (left right : ELTree k) (target : ELLabel k)
+      (path : TerminalPath left target) :
+      TerminalPath (.add left right) target
+  | addRight (left right : ELTree k) (target : ELLabel k)
+      (path : TerminalPath right target) :
+      TerminalPath (.add left right) target
+  | minFirst (first second third : ELTree k) (target : ELLabel k)
+      (path : TerminalPath first target) :
+      TerminalPath (.min3 first second third) target
+  | minSecond (first second third : ELTree k) (target : ELLabel k)
+      (path : TerminalPath second target) :
+      TerminalPath (.min3 first second third) target
+  | minThird (first second third : ELTree k) (target : ELLabel k)
+      (path : TerminalPath third target) :
+      TerminalPath (.min3 first second third) target
+
+namespace TerminalPath
+
+def splitAt {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (path : TerminalPath tree target) : ELTree (p + 1) :=
+  match path with
+  | .here label => sourceSplitTree hp label
+  | .expanded label _ _ subpath => .expanded label (subpath.splitAt hp)
+  | .addLeft _ right _ subpath => .add (subpath.splitAt hp) right
+  | .addRight left _ _ subpath => .add left (subpath.splitAt hp)
+  | .minFirst _ second third _ subpath =>
+      .min3 (subpath.splitAt hp) second third
+  | .minSecond first _ third _ subpath =>
+      .min3 first (subpath.splitAt hp) third
+  | .minThird first second _ _ subpath =>
+      .min3 first second (subpath.splitAt hp)
+
+theorem frontierExpr_splitAt {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (path : TerminalPath tree target) :
+    (path.splitAt hp).frontierExpr = tree.frontierExpr := by
+  induction path with
+  | here => rfl
+  | expanded => rfl
+  | addLeft _ _ _ _ ih => simp [splitAt, frontierExpr, ih]
+  | addRight _ _ _ _ ih => simp [splitAt, frontierExpr, ih]
+  | minFirst _ _ _ _ _ ih => simp [splitAt, frontierExpr, ih]
+  | minSecond _ _ _ _ _ ih => simp [splitAt, frontierExpr, ih]
+  | minThird _ _ _ _ _ ih => simp [splitAt, frontierExpr, ih]
+
+theorem splitAt_nodeBounds {p : Nat} (hp : 1 <= p)
+    (roots : GeneralKClassRootsNonempty (p + 1))
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    (path : TerminalPath tree target)
+    {y : Real} (hbounds : tree.NodeBounds
+      (fun mode z => sourcePhiK mode z) y)
+    (hy : 2 <= y + target.shift.eval) :
+    (path.splitAt hp).NodeBounds (fun mode z => sourcePhiK mode z) y := by
+  induction path with
+  | here label => exact sourceSplitTree_nodeBounds hp roots label hy
+  | expanded label body target path ih =>
+      refine ⟨ih hbounds.1 hy, ?_⟩
+      rw [frontierExpr_splitAt]
+      exact hbounds.2
+  | addLeft left right target path ih =>
+      exact ⟨ih hbounds.1 hy, hbounds.2⟩
+  | addRight left right target path ih =>
+      exact ⟨hbounds.1, ih hbounds.2 hy⟩
+  | minFirst first second third target path ih =>
+      exact ⟨ih hbounds.1 hy, hbounds.2.1, hbounds.2.2⟩
+  | minSecond first second third target path ih =>
+      exact ⟨hbounds.1, ih hbounds.2.1 hy, hbounds.2.2⟩
+  | minThird first second third target path ih =>
+      exact ⟨hbounds.1, hbounds.2.1, ih hbounds.2.2 hy⟩
+
+end TerminalPath
+
 theorem sourceSplitTree_criticalAssignment_bound {p : Nat}
     (hp : 1 <= p) (roots : GeneralKClassRootsNonempty (p + 1))
     (label : ELLabel (p + 1)) {y : Real}

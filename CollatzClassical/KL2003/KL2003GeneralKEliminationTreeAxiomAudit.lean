@@ -11,6 +11,8 @@ namespace KL2003
 #print axioms ELTree.nodeBounds_ofExpr
 #print axioms ELTree.sourceSplitTree_nodeBounds
 #print axioms ELTree.sourceSplitTree_criticalAssignment_bound
+#print axioms ELTree.TerminalPath.frontierExpr_splitAt
+#print axioms ELTree.TerminalPath.splitAt_nodeBounds
 
 end KL2003
 end CollatzClassical

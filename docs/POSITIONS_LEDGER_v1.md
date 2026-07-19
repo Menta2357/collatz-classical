@@ -123,8 +123,13 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   expresion normal totalmente sustituida. Cotas locales en cada nodo implican
   que la normal queda bajo la frontera y que toda asignacion critica bajo un
   nodo expandido satisface la cota (305). Las filas fuente D1/D2/D3 construyen
-  este invariante sin datos de Figure A1. Falta preservarlo al expandir hojas
-  dentro de arboles existentes y al aplicar deletion.
+  este invariante sin datos de Figure A1. En ese punto faltaba preservarlo al
+  expandir hojas dentro de arboles existentes y al aplicar deletion.
+- La expansion de una hoja terminal dentro de un arbol existente ya preserva
+  la frontera completa y todas las cotas de nodos ancestros. La operacion usa
+  una ruta estructural, no una busqueda por etiqueta, y adjunta la fila fuente
+  parametrica. La deuda semantica restante comienza ahora en la operacion de
+  deletion y su preservacion de buena formacion.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere
