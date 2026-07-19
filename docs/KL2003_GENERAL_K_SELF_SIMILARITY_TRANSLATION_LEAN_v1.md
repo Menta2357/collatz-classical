@@ -21,6 +21,10 @@ splits. A symbolic translation `delta`:
 - transports dependent terminal/minimum paths through a source split and
   proves that the canonical D1/D3 advanced `minPath` is the translated
   canonical `minPath` after the source label is translated;
+- identifies all three canonical D1/D3 branch paths after translation,
+  transports their witness retention, and proves D1/D3 `sourceStep`
+  equivariance whenever the three original and translated advanced labels are
+  nonnegative;
 - proves full `sourceStep` translation equivariance for the D2 branch;
 - transports the reflexive-transitive closure of raw localized source splits.
 
@@ -37,12 +41,13 @@ This is deliberately weaker than global scheduler equivariance. Expandability
 depends on the absolute condition `0 <= shift.eval`; translating every shift
 does not preserve that condition without an additional bound. The geometry of
 deletion and its witness policy now transport for corresponding advanced
-configurations. The dependent descent through an outer split and the canonical
-D1/D3 minimum path correspondence are proved. For D1/D3 it remains to identify
-the three branch paths, transport their deletion-witness predicates under the
-required original/translated nonnegativity hypotheses, and hence identify
-`witnessRetention` and the resulting `sourceStep`. The scheduler also remains
-sign-sensitive. Therefore the module does not yet identify recurrent full
+configurations. The dependent descent through an outer split, all four paths
+of the canonical D1/D3 advanced configurations, `witnessRetention`, and the
+resulting D1/D3 `sourceStep` now commute with translation under the explicit
+original/translated nonnegativity hypotheses. D2 commutes without those
+advanced-branch hypotheses. The scheduler remains sign-sensitive: this module
+does not prove that a recurrent translation preserves eligibility or those six
+branch conditions. Therefore it does not yet identify recurrent full
 subtrees, derive one fixed increment between successive recurrent shifts, or
 prove termination/order independence.
 
@@ -71,14 +76,15 @@ GENERAL_K_DELETION_WITNESS_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 GENERAL_K_WITNESS_RETENTION_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 GENERAL_K_DEPENDENT_SOURCE_SPLIT_DESCENT_TRANSLATION_PROVED
 GENERAL_K_D1_D3_CANONICAL_MIN_PATH_TRANSLATION_PROVED
+GENERAL_K_D1_D3_BRANCH_PATH_TRANSLATION_PROVED
+GENERAL_K_D1_D3_ADVANCED_CONFIGURATION_TRANSLATION_PROVED
+GENERAL_K_D1_D3_WITNESS_RETENTION_TRANSLATION_PROVED_CONDITIONALLY
+GENERAL_K_D1_D3_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 GENERAL_K_D2_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED
 GENERAL_K_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_LOCAL_SELF_SIMILARITY_STEP_PROVED
 GENERAL_K_SELF_SIMILARITY_TRANSLATION_AXIOM_AUDIT_PASS
 GENERAL_K_SIGN_SENSITIVE_SCHEDULER_TRANSLATION_NOT_CLAIMED
-GENERAL_K_D1_D3_BRANCH_PATH_TRANSLATION_NOT_YET_PROVED
-GENERAL_K_D1_D3_WITNESS_RETENTION_TRANSLATION_NOT_YET_PROVED
-GENERAL_K_D1_D3_SOURCE_STEP_TRANSLATION_NOT_YET_PROVED
 THEOREM31_FULL_RECURRENT_SUBTREE_CORRESPONDENCE_NOT_YET_PROVED
 GENERAL_K_FULL_EXPANSION_DELETION_TERMINATION_NOT_YET_PROVED
 GENERAL_K_EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

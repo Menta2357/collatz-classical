@@ -227,12 +227,15 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `reduceAt` con retencion fija conmutan con la traslacion. La politica por
   testigos tambien se conserva entre configuraciones traducidas cuando las
   hojas comparadas son no negativas, y D2 conmuta por completo. El descenso
-  dependiente por un split exterior y el `minPath` canonico de las
-  configuraciones advanced D1/D3 ya se identifican con sus traducciones. Falta
-  extender esa correspondencia a los tres branch paths, transportar sus
-  testigos bajo las hipotesis de signo explicitas y cerrar `witnessRetention`
-  y `sourceStep`; el umbral absoluto del scheduler sigue siendo la segunda
-  decision pendiente de la correspondencia recurrente.
+  dependiente por un split exterior y los cuatro paths canonicos de las
+  configuraciones advanced D1/D3 ya se identifican con sus traducciones.
+  Bajo no negatividad explicita de las tres hojas originales y trasladadas,
+  tambien conmutan `witnessRetention`, la reduccion y `sourceStep`; D2 conmuta
+  sin esas seis premisas. La deuda local D1/D3 queda cerrada. El blocker de la
+  correspondencia recurrente es ahora exclusivamente global: el umbral
+  absoluto del scheduler puede cambiar bajo traslacion, por lo que falta
+  controlar elegibilidad y signos a lo largo de la secuencia o sustituir ese
+  argumento por un descenso bien fundado.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

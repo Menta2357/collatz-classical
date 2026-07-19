@@ -915,6 +915,408 @@ theorem advancedThirdPath_translate {k : Nat}
         (second.translate delta) (third.translate delta) := by
   rfl
 
+theorem translateSourceSplit_heq_translate {p : Nat} (hp : 1 <= p)
+    {target first second third : ELLabel (p + 1)}
+    (configuration : AdvancedMinConfiguration
+      (sourceSplitTree hp target) first second third)
+    (delta : SymbolicShift) :
+    HEq (configuration.translateSourceSplit hp delta)
+      (configuration.translate delta) := by
+  cases configuration
+  unfold translateSourceSplit translate
+  congr! 1
+  all_goals
+    first
+    | exact sourceSplitTree_translate hp target delta
+    | exact cast_heq _ _
+
+theorem translate_heq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {first second third : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA first second third)
+    (configurationB : AdvancedMinConfiguration treeB first second third)
+    (htree : treeA = treeB)
+    (hconfiguration : HEq configurationA configurationB)
+    (delta : SymbolicShift) :
+    HEq (configurationA.translate delta) (configurationB.translate delta) := by
+  subst treeB
+  have heq : configurationA = configurationB := eq_of_heq hconfiguration
+  subst configurationB
+  rfl
+
+theorem sourceD1AdvancedConfigurationData_heq_advanced {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) :
+    HEq (TerminalPath.sourceD1AdvancedConfigurationData hp label hm)
+      (TerminalPath.advancedMinConfiguration label
+        (retardedSplitLabel label)
+        (d1AdvancedSplitLabel hp label hm 0)
+        (d1AdvancedSplitLabel hp label hm 1)
+        (d1AdvancedSplitLabel hp label hm 2)) := by
+  unfold TerminalPath.sourceD1AdvancedConfigurationData
+  exact rec_heq_of_heq
+    (C := fun tree => AdvancedMinConfiguration tree
+      (d1AdvancedSplitLabel hp label hm 0)
+      (d1AdvancedSplitLabel hp label hm 1)
+      (d1AdvancedSplitLabel hp label hm 2))
+    (sourceSplitTree_eq_advanced_d1 hp label hm).symm HEq.rfl
+
+theorem sourceD3AdvancedConfigurationData_heq_advanced {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) :
+    HEq (TerminalPath.sourceD3AdvancedConfigurationData hp label hm)
+      (TerminalPath.advancedMinConfiguration label
+        (retardedSplitLabel label)
+        (d3AdvancedSplitLabel hp label hm 0)
+        (d3AdvancedSplitLabel hp label hm 1)
+        (d3AdvancedSplitLabel hp label hm 2)) := by
+  unfold TerminalPath.sourceD3AdvancedConfigurationData
+  exact rec_heq_of_heq
+    (C := fun tree => AdvancedMinConfiguration tree
+      (d3AdvancedSplitLabel hp label hm 0)
+      (d3AdvancedSplitLabel hp label hm 1)
+      (d3AdvancedSplitLabel hp label hm 2))
+    (sourceSplitTree_eq_advanced_d3 hp label hm).symm HEq.rfl
+
+theorem sourceD1AdvancedConfigurationData_translateSourceSplit_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) (delta : SymbolicShift) :
+    HEq ((TerminalPath.sourceD1AdvancedConfigurationData hp label hm)
+        |>.translateSourceSplit hp delta)
+      (TerminalPath.sourceD1AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)) := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp label hm
+  let advanced := TerminalPath.advancedMinConfiguration label
+    (retardedSplitLabel label)
+    (d1AdvancedSplitLabel hp label hm 0)
+    (d1AdvancedSplitLabel hp label hm 1)
+    (d1AdvancedSplitLabel hp label hm 2)
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  let translatedAdvanced := TerminalPath.advancedMinConfiguration
+    (label.translate delta) (retardedSplitLabel (label.translate delta))
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 0)
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 1)
+    (d1AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 2)
+  let translatedByParts := TerminalPath.advancedMinConfiguration
+    (label.translate delta) ((retardedSplitLabel label).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 0).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 1).translate delta)
+    ((d1AdvancedSplitLabel hp label hm 2).translate delta)
+  have houter : HEq (source.translateSourceSplit hp delta)
+      (source.translate delta) := by
+    exact translateSourceSplit_heq_translate hp source delta
+  have hsource : HEq source advanced := by
+    exact sourceD1AdvancedConfigurationData_heq_advanced hp label hm
+  have hsourceTranslated : HEq (source.translate delta)
+      (advanced.translate delta) := by
+    exact translate_heq_of_heq source advanced
+      (sourceSplitTree_eq_advanced_d1 hp label hm) hsource delta
+  have hparts : advanced.translate delta = translatedByParts := by
+    simpa [advanced, translatedByParts] using
+      advancedMinConfiguration_translate label (retardedSplitLabel label)
+        (d1AdvancedSplitLabel hp label hm 0)
+        (d1AdvancedSplitLabel hp label hm 1)
+        (d1AdvancedSplitLabel hp label hm 2) delta
+  have hcanonical : HEq translatedByParts translatedAdvanced := by
+    dsimp [translatedByParts, translatedAdvanced]
+    have hret := (retardedSplitLabel_translate label delta).symm
+    have h0 := (d1AdvancedSplitLabel_translate hp label hm delta 0).symm
+    have h1 := (d1AdvancedSplitLabel_translate hp label hm delta 1).symm
+    have h2 := (d1AdvancedSplitLabel_translate hp label hm delta 2).symm
+    rw [hret, h0, h1, h2]
+  have htranslated : HEq translatedSource translatedAdvanced := by
+    exact sourceD1AdvancedConfigurationData_heq_advanced hp
+      (label.translate delta) (by simpa using hm)
+  exact houter.trans (hsourceTranslated.trans ((heq_of_eq hparts).trans
+    (hcanonical.trans htranslated.symm)))
+
+theorem sourceD3AdvancedConfigurationData_translateSourceSplit_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) (delta : SymbolicShift) :
+    HEq ((TerminalPath.sourceD3AdvancedConfigurationData hp label hm)
+        |>.translateSourceSplit hp delta)
+      (TerminalPath.sourceD3AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)) := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp label hm
+  let advanced := TerminalPath.advancedMinConfiguration label
+    (retardedSplitLabel label)
+    (d3AdvancedSplitLabel hp label hm 0)
+    (d3AdvancedSplitLabel hp label hm 1)
+    (d3AdvancedSplitLabel hp label hm 2)
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  let translatedAdvanced := TerminalPath.advancedMinConfiguration
+    (label.translate delta) (retardedSplitLabel (label.translate delta))
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 0)
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 1)
+    (d3AdvancedSplitLabel hp (label.translate delta) (by simpa using hm) 2)
+  let translatedByParts := TerminalPath.advancedMinConfiguration
+    (label.translate delta) ((retardedSplitLabel label).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 0).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 1).translate delta)
+    ((d3AdvancedSplitLabel hp label hm 2).translate delta)
+  have houter : HEq (source.translateSourceSplit hp delta)
+      (source.translate delta) := by
+    exact translateSourceSplit_heq_translate hp source delta
+  have hsource : HEq source advanced := by
+    exact sourceD3AdvancedConfigurationData_heq_advanced hp label hm
+  have hsourceTranslated : HEq (source.translate delta)
+      (advanced.translate delta) := by
+    exact translate_heq_of_heq source advanced
+      (sourceSplitTree_eq_advanced_d3 hp label hm) hsource delta
+  have hparts : advanced.translate delta = translatedByParts := by
+    simpa [advanced, translatedByParts] using
+      advancedMinConfiguration_translate label (retardedSplitLabel label)
+        (d3AdvancedSplitLabel hp label hm 0)
+        (d3AdvancedSplitLabel hp label hm 1)
+        (d3AdvancedSplitLabel hp label hm 2) delta
+  have hcanonical : HEq translatedByParts translatedAdvanced := by
+    dsimp [translatedByParts, translatedAdvanced]
+    have hret := (retardedSplitLabel_translate label delta).symm
+    have h0 := (d3AdvancedSplitLabel_translate hp label hm delta 0).symm
+    have h1 := (d3AdvancedSplitLabel_translate hp label hm delta 1).symm
+    have h2 := (d3AdvancedSplitLabel_translate hp label hm delta 2).symm
+    rw [hret, h0, h1, h2]
+  have htranslated : HEq translatedSource translatedAdvanced := by
+    exact sourceD3AdvancedConfigurationData_heq_advanced hp
+      (label.translate delta) (by simpa using hm)
+  exact houter.trans (hsourceTranslated.trans ((heq_of_eq hparts).trans
+    (hcanonical.trans htranslated.symm)))
+
+theorem firstPath_heq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (htree : treeA = treeB) (hfirst : firstA = firstB)
+    (hsecond : secondA = secondB) (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB) :
+    HEq configurationA.firstPath configurationB.firstPath := by
+  subst treeB
+  subst firstB
+  subst secondB
+  subst thirdB
+  exact heq_of_eq (congrArg (fun configuration => configuration.firstPath)
+    (eq_of_heq hconfiguration))
+
+theorem secondPath_heq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (htree : treeA = treeB) (hfirst : firstA = firstB)
+    (hsecond : secondA = secondB) (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB) :
+    HEq configurationA.secondPath configurationB.secondPath := by
+  subst treeB
+  subst firstB
+  subst secondB
+  subst thirdB
+  exact heq_of_eq (congrArg (fun configuration => configuration.secondPath)
+    (eq_of_heq hconfiguration))
+
+theorem thirdPath_heq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (htree : treeA = treeB) (hfirst : firstA = firstB)
+    (hsecond : secondA = secondB) (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB) :
+    HEq configurationA.thirdPath configurationB.thirdPath := by
+  subst treeB
+  subst firstB
+  subst secondB
+  subst thirdB
+  exact heq_of_eq (congrArg (fun configuration => configuration.thirdPath)
+    (eq_of_heq hconfiguration))
+
+theorem descendSplit_heq_of_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel (p + 1)}
+    (configurationA : AdvancedMinConfiguration
+      (sourceSplitTree hp target) firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration
+      (sourceSplitTree hp target) firstB secondB thirdB)
+    (hfirst : firstA = firstB) (hsecond : secondA = secondB)
+    (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB)
+    (outer : TerminalPath tree target) :
+    HEq (configurationA.descendSplit hp outer)
+      (configurationB.descendSplit hp outer) := by
+  subst firstB
+  subst secondB
+  subst thirdB
+  have heq : configurationA = configurationB := eq_of_heq hconfiguration
+  subst configurationB
+  rfl
+
+theorem witnessRetention_eq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (htree : treeA = treeB) (hfirst : firstA = firstB)
+    (hsecond : secondA = secondB) (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB) :
+    configurationA.witnessRetention = configurationB.witnessRetention := by
+  subst treeB
+  subst firstB
+  subst secondB
+  subst thirdB
+  exact congrArg witnessRetention (eq_of_heq hconfiguration)
+
+theorem reduceAt_witnessRetention_eq_of_heq {k : Nat}
+    {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (htree : treeA = treeB) (hfirst : firstA = firstB)
+    (hsecond : secondA = secondB) (hthird : thirdA = thirdB)
+    (hconfiguration : HEq configurationA configurationB) :
+    configurationA.minPath.reduceAt configurationA.witnessRetention =
+      configurationB.minPath.reduceAt configurationB.witnessRetention := by
+  subst treeB
+  subst firstB
+  subst secondB
+  subst thirdB
+  have heq : configurationA = configurationB := eq_of_heq hconfiguration
+  subst configurationB
+  rfl
+
+theorem sourceD1AdvancedConfigurationData_firstPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD1AdvancedConfigurationData hp label hm).firstPath
+        delta)
+      (TerminalPath.sourceD1AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).firstPath := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD1AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := firstPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d1AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
+theorem sourceD1AdvancedConfigurationData_secondPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD1AdvancedConfigurationData hp label hm).secondPath
+        delta)
+      (TerminalPath.sourceD1AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).secondPath := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD1AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := secondPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d1AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
+theorem sourceD1AdvancedConfigurationData_thirdPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 2) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD1AdvancedConfigurationData hp label hm).thirdPath
+        delta)
+      (TerminalPath.sourceD1AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).thirdPath := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD1AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := thirdPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d1AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d1AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
+theorem sourceD3AdvancedConfigurationData_firstPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD3AdvancedConfigurationData hp label hm).firstPath
+        delta)
+      (TerminalPath.sourceD3AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).firstPath := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD3AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := firstPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d3AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
+theorem sourceD3AdvancedConfigurationData_secondPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD3AdvancedConfigurationData hp label hm).secondPath
+        delta)
+      (TerminalPath.sourceD3AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).secondPath := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD3AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := secondPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d3AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
+theorem sourceD3AdvancedConfigurationData_thirdPath_translate_heq {p : Nat}
+    (hp : 1 <= p) (label : ELLabel (p + 1))
+    (hm : label.mode.1.1 % 9 = 8) (delta : SymbolicShift) :
+    HEq (TerminalPath.translateSourceSplitPath hp
+        (TerminalPath.sourceD3AdvancedConfigurationData hp label hm).thirdPath
+        delta)
+      (TerminalPath.sourceD3AdvancedConfigurationData hp
+        (label.translate delta) (by simpa using hm)).thirdPath := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp label hm
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (label.translate delta) (by simpa using hm)
+  have hconfiguration : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact sourceD3AdvancedConfigurationData_translateSourceSplit_heq hp label
+      hm delta
+  have hpath := thirdPath_heq_of_heq
+    (source.translateSourceSplit hp delta) translatedSource rfl
+    (d3AdvancedSplitLabel_translate hp label hm delta 0).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 1).symm
+    (d3AdvancedSplitLabel_translate hp label hm delta 2).symm hconfiguration
+  simpa [source, translatedSource] using hpath
+
 theorem sourceD1AdvancedConfigurationData_minPath_heq_advanced {p : Nat}
     (hp : 1 <= p) (label : ELLabel (p + 1))
     (hm : label.mode.1.1 % 9 = 2) :
@@ -1165,6 +1567,244 @@ theorem split_translate {p : Nat} (hp : 1 <= p)
     (occurrence.translate delta hshift).split hp =
       (occurrence.split hp).translate delta := by
   exact occurrence.path.splitAt_translate hp delta
+
+theorem d1Configuration_translate_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 2) :
+    HEq ((occurrence.d1Configuration hp hm).translate delta)
+      ((occurrence.translate delta hshift).d1Configuration hp
+        (by simpa using hm)) := by
+  let source := TerminalPath.sourceD1AdvancedConfigurationData hp
+    occurrence.target hm
+  let translatedSource := TerminalPath.sourceD1AdvancedConfigurationData hp
+    (occurrence.target.translate delta) (by simpa using hm)
+  have hdescent : HEq
+      ((source.descendSplit hp occurrence.path).translate delta)
+      ((source.translateSourceSplit hp delta).descendSplit hp
+        (occurrence.path.translate delta)) := by
+    exact source.descendSplit_translate_heq hp occurrence.path delta
+  have hsource : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact TerminalPath.AdvancedMinConfiguration.sourceD1AdvancedConfigurationData_translateSourceSplit_heq
+      hp occurrence.target hm delta
+  have hcanonical : HEq
+      ((source.translateSourceSplit hp delta).descendSplit hp
+        (occurrence.path.translate delta))
+      (translatedSource.descendSplit hp (occurrence.path.translate delta)) := by
+    exact TerminalPath.AdvancedMinConfiguration.descendSplit_heq_of_heq hp
+      (source.translateSourceSplit hp delta) translatedSource
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hsource (occurrence.path.translate delta)
+  simpa [source, translatedSource, d1Configuration,
+    ExpandableOccurrence.translate] using hdescent.trans hcanonical
+
+theorem d3Configuration_translate_heq {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 8) :
+    HEq ((occurrence.d3Configuration hp hm).translate delta)
+      ((occurrence.translate delta hshift).d3Configuration hp
+        (by simpa using hm)) := by
+  let source := TerminalPath.sourceD3AdvancedConfigurationData hp
+    occurrence.target hm
+  let translatedSource := TerminalPath.sourceD3AdvancedConfigurationData hp
+    (occurrence.target.translate delta) (by simpa using hm)
+  have hdescent : HEq
+      ((source.descendSplit hp occurrence.path).translate delta)
+      ((source.translateSourceSplit hp delta).descendSplit hp
+        (occurrence.path.translate delta)) := by
+    exact source.descendSplit_translate_heq hp occurrence.path delta
+  have hsource : HEq (source.translateSourceSplit hp delta)
+      translatedSource := by
+    exact TerminalPath.AdvancedMinConfiguration.sourceD3AdvancedConfigurationData_translateSourceSplit_heq
+      hp occurrence.target hm delta
+  have hcanonical : HEq
+      ((source.translateSourceSplit hp delta).descendSplit hp
+        (occurrence.path.translate delta))
+      (translatedSource.descendSplit hp (occurrence.path.translate delta)) := by
+    exact TerminalPath.AdvancedMinConfiguration.descendSplit_heq_of_heq hp
+      (source.translateSourceSplit hp delta) translatedSource
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hsource (occurrence.path.translate delta)
+  simpa [source, translatedSource, d3Configuration,
+    ExpandableOccurrence.translate] using hdescent.trans hcanonical
+
+theorem d1Configuration_witnessRetention_translate {p : Nat}
+    (hp : 1 <= p) {tree : ELTree (p + 1)}
+    (occurrence : ExpandableOccurrence tree) (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 2)
+    (hfirst : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hfirstTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 0)
+      |>.translate delta).shift.eval)
+    (hsecond : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hsecondTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 1)
+      |>.translate delta).shift.eval)
+    (hthird : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 2).shift.eval)
+    (hthirdTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 2)
+      |>.translate delta).shift.eval) :
+    ((occurrence.translate delta hshift).d1Configuration hp
+        (by simpa using hm)).witnessRetention =
+      (occurrence.d1Configuration hp hm).witnessRetention := by
+  let original := occurrence.d1Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d1Configuration hp
+    (by simpa using hm)
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d1Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hretention : (original.translate delta).witnessRetention =
+      translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hconfiguration
+  have hinvariant : (original.translate delta).witnessRetention =
+      original.witnessRetention := by
+    exact original.witnessRetention_translate_of_nonnegative delta
+      hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
+  exact hretention.symm.trans hinvariant
+
+theorem d3Configuration_witnessRetention_translate {p : Nat}
+    (hp : 1 <= p) {tree : ELTree (p + 1)}
+    (occurrence : ExpandableOccurrence tree) (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 8)
+    (hfirst : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hfirstTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 0)
+      |>.translate delta).shift.eval)
+    (hsecond : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hsecondTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 1)
+      |>.translate delta).shift.eval)
+    (hthird : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 2).shift.eval)
+    (hthirdTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 2)
+      |>.translate delta).shift.eval) :
+    ((occurrence.translate delta hshift).d3Configuration hp
+        (by simpa using hm)).witnessRetention =
+      (occurrence.d3Configuration hp hm).witnessRetention := by
+  let original := occurrence.d3Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d3Configuration hp
+    (by simpa using hm)
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d3Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hretention : (original.translate delta).witnessRetention =
+      translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hconfiguration
+  have hinvariant : (original.translate delta).witnessRetention =
+      original.witnessRetention := by
+    exact original.witnessRetention_translate_of_nonnegative delta
+      hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
+  exact hretention.symm.trans hinvariant
+
+theorem sourceStep_translate_d1 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 2)
+    (hfirst : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hfirstTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 0)
+      |>.translate delta).shift.eval)
+    (hsecond : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hsecondTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 1)
+      |>.translate delta).shift.eval)
+    (hthird : 0 <= (d1AdvancedSplitLabel hp occurrence.target hm 2).shift.eval)
+    (hthirdTranslated : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 2)
+      |>.translate delta).shift.eval) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rw [(occurrence.translate delta hshift).sourceStep_eq_d1 hp
+      (by simpa using hm), occurrence.sourceStep_eq_d1 hp hm]
+  let original := occurrence.d1Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d1Configuration hp
+    (by simpa using hm)
+  change translated.minPath.reduceAt translated.witnessRetention =
+    (original.minPath.reduceAt original.witnessRetention).translate delta
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d1Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hreduce :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        translated.minPath.reduceAt translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+        hconfiguration
+  have hinvariant :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        (original.minPath.reduceAt original.witnessRetention).translate delta := by
+    exact original.reduceAt_witnessRetention_translate_of_nonnegative delta
+      hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
+  exact hreduce.symm.trans hinvariant
+
+theorem sourceStep_translate_d3 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 8)
+    (hfirst : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hfirstTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 0)
+      |>.translate delta).shift.eval)
+    (hsecond : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hsecondTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 1)
+      |>.translate delta).shift.eval)
+    (hthird : 0 <= (d3AdvancedSplitLabel hp occurrence.target hm 2).shift.eval)
+    (hthirdTranslated : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 2)
+      |>.translate delta).shift.eval) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rw [(occurrence.translate delta hshift).sourceStep_eq_d3 hp
+      (by simpa using hm), occurrence.sourceStep_eq_d3 hp hm]
+  let original := occurrence.d3Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d3Configuration hp
+    (by simpa using hm)
+  change translated.minPath.reduceAt translated.witnessRetention =
+    (original.minPath.reduceAt original.witnessRetention).translate delta
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d3Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hreduce :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        translated.minPath.reduceAt translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+        hconfiguration
+  have hinvariant :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        (original.minPath.reduceAt original.witnessRetention).translate delta := by
+    exact original.reduceAt_witnessRetention_translate_of_nonnegative delta
+      hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
+  exact hreduce.symm.trans hinvariant
 
 theorem sourceStep_translate_d2 {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
