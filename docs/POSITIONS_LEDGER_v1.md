@@ -86,6 +86,11 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   La transferencia member-wise segura `piStar (2c) <= piStar c` ya se movio a
   M0B y esta auditada; no se promociona a igualdad de infimos sin probar la
   direccion inversa.
+- Las tres familias fuente D1/D2/D3 ya estan probadas para nivel general
+  `p+1`, con operadores de clase derivados por aritmetica modular y ventanas
+  `floor`. El bundle `SatisfiesIk` queda probado bajo no-vacuidad; su instancia
+  `k=3` es incondicional y consume los nueve testigos explicitos. La igualdad
+  fuente (200) sigue separada, pero no es premisa del bundle ni de sus filas.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
