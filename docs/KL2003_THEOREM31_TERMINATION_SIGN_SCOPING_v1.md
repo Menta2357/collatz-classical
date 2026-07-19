@@ -80,8 +80,21 @@ It also proves directly that `beta_2 < beta_1` and
 correspondence needed to obtain a fixed increment remains open. Its local
 algebraic component is now proved separately: translating a root label by a
 symbolic shift commutes with one complete source D1/D2/D3 split and with both
-tree projections. Iterating this equivariance over the full recurrent subtree
-is the remaining correspondence step.
+tree projections. A dependent terminal path now transports through arbitrary
+tree contexts, splitting at that transported path commutes with translation,
+and the result iterates over every finite trace of explicitly matched raw
+source splits.
+
+The structural deletion operation is equivariant as well: a `Min3Path`
+transports through translation and `reduceAt` commutes for every fixed
+retention pattern. What remains is not the geometry of deletion but the proof
+that the source witness policy selects corresponding retentions.
+
+That finite result does not imply that the deterministic scheduler chooses the
+same leaf after translation: its eligibility test is the absolute inequality
+`0 <= shift.eval`. It also does not yet transport contextual deletion. The
+remaining correspondence step must control those two decisions or replace
+the source self-similarity argument with another well-founded descent.
 
 ## Current verdict
 
@@ -91,6 +104,10 @@ THEOREM31_DELTA_NORMALIZATION_PROPOSED_NEGATIVE
 THEOREM31_FINITE_MODE_RECURRENCE_PROVED
 THEOREM31_FIXED_NEGATIVE_INCREMENT_CONTRADICTION_PROVED
 THEOREM31_LOCAL_SOURCE_SPLIT_TRANSLATION_EQUIVARIANCE_PROVED
+THEOREM31_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
+THEOREM31_FIXED_RETENTION_DELETION_TRANSLATION_EQUIVARIANCE_PROVED
+THEOREM31_SIGN_SENSITIVE_SCHEDULER_EQUIVARIANCE_NOT_CLAIMED
+THEOREM31_SOURCE_RETENTION_POLICY_EQUIVARIANCE_NOT_YET_PROVED
 THEOREM31_SELF_SIMILARITY_LEMMA_REQUIRED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

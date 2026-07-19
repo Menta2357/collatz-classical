@@ -218,6 +218,16 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   evaluacion trasladada en `y` coincide con la original en `y + delta`. Falta
   iterar esta equivariancia sobre el subarbol completamente expandido y enlazar
   las copias recurrentes extraidas por la subsecuencia finita.
+- La iteracion finita raw ya no es una deuda. Una ruta terminal dependiente se
+  transporta por cualquier contexto del arbol, `splitAt` conmuta con la
+  traslacion y la clausura reflexivo-transitiva de splits localizados conserva
+  exactamente la forma trasladada. Esto no equivale aun a conmutacion del
+  scheduler: la elegibilidad usa el signo absoluto del shift, que puede cambiar
+  al trasladar. La geometria de deletion si transporta: `Min3Path` y
+  `reduceAt` con retencion fija conmutan con la traslacion. Falta probar que la
+  politica por testigos selecciona retenciones correspondientes. Esa decision
+  y el umbral del scheduler son ahora el contenido preciso de la
+  correspondencia recurrente pendiente.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

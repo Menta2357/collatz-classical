@@ -12,6 +12,12 @@ namespace KL2003
 #print axioms ELTree.ofExpr_shiftBy
 #print axioms ELTree.splitTopExpr_translate
 #print axioms ELTree.sourceSplitTree_translate
+#print axioms ELTree.Min3Retention.reduce_translate
+#print axioms ELTree.Min3Path.reduceAt_translate
+#print axioms ELTree.TerminalPath.splitAt_translate
+#print axioms ELTree.ExpandableOccurrence.split_translate
+#print axioms ELTree.RawSourceSplitStep.translate
+#print axioms ELTree.rawSourceSplitSteps_translate
 
 end KL2003
 end CollatzClassical
