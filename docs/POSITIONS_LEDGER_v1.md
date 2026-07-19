@@ -138,6 +138,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   y cotas de nodos incluso dentro de un arbol anidado. Falta derivar esa
   preservacion en la condicion mas debil de la fuente: no-criticidad total en
   el contexto global, que no implica necesariamente no-minimalidad local.
+- La preservacion contextual del valor normal ya esta formalizada con un
+  zipper de un hueco. La criticidad del hueco se propaga por cada minimo
+  ancestro; si una reduccion no vacia eleva el valor local pero la ocurrencia
+  no era globalmente critica, el valor normal de todo el arbol permanece
+  exactamente igual. `Min3Path` ya extrae ese contexto y el teorema se aplica
+  directamente a `reduceAt`. Sigue abierto derivar la no-criticidad contextual
+  desde `DeletionWitness` y preservar la informacion de frontera/cotas que
+  requiera la iteracion posterior.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

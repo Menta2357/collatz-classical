@@ -119,10 +119,15 @@ hold.
 This local condition is sufficient but stronger than the source deletion
 criterion. KL2003 removes a vertex that is *totally* noncritical in the full
 tree; such a vertex can still be a local minimizer inside a branch that no
-global critical assignment selects. The remaining source-specific step is
-therefore a contextual theorem: a deletion witness excludes the exact branch
-occurrence from every global critical assignment, and reducing that occurrence
-preserves the whole-tree value even when its local minimum changes.
+global critical assignment selects.
+
+The contextual value-preservation part is now proved in the separate module
+recorded by `KL2003_GENERAL_K_CONTEXTUAL_DELETION_LEAN_v1.md`: a typed one-hole
+context tracks criticality through every ancestor minimum, and replacing a
+totally noncritical occurrence by a larger local value leaves the whole normal
+evaluation unchanged. What remains source-specific is deriving that contextual
+noncriticality from the existing deletion witness and preserving any frontier
+or node-bound data needed by later iterations.
 
 ## Verification
 
@@ -140,8 +145,7 @@ Quot.sound]` (some structural projection equalities need only `propext`). No
 
 ```text
 DELETION_WITNESS_IMPLIES_TOTAL_NONCRITICALITY
-CONTEXTUAL_TOTAL_NONCRITICAL_DELETION_PRESERVATION
-CRITICAL_ASSIGNMENT_DELETION_PRESERVATION
+CONTEXTUAL_DELETION_FRONTIER_OR_NODE_BOUNDS_PRESERVATION
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
 SATISFIES_EL_OF_SATISFIES_IK
@@ -167,6 +171,7 @@ GENERAL_K_LOCAL_NONCRITICAL_DELETION_VALUE_PRESERVATION_PROVED
 GENERAL_K_LOCAL_NONCRITICAL_DELETION_NODE_BOUNDS_PRESERVED
 GENERAL_K_NESTED_MIN3_REDUCTION_DEFINED
 GENERAL_K_EL_TREE_AXIOM_AUDIT_PASS
+GENERAL_K_TOTAL_NONCRITICAL_CONTEXT_PRESERVATION_PROVED_IN_SEPARATE_MODULE
 EL_DELETION_PRESERVATION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 K3_PISTAR_THEOREM_NOT_YET_PROVED

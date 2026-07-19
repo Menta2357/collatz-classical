@@ -1,0 +1,11 @@
+import CollatzClassical.KL2003.KL2003GeneralKEliminationContext
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms ELTree.Context.plug_normalExpr_eval_mono
+#print axioms ELTree.Context.plug_normalExpr_eval_eq_of_not_holeCritical
+#print axioms ELTree.Min3Path.reduceAt_normalExpr_eval_eq_of_totallyNoncritical
+
+end KL2003
+end CollatzClassical
