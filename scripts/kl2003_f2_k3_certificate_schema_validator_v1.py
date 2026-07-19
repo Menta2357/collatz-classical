@@ -681,7 +681,16 @@ def check_v21_block_acyclic(blocks: dict[str, dict[str, Any]], issues: list[Vali
         visit(block_id, [])
 
 
-def check_v21_m1v3_m2v3(blocks: dict[str, dict[str, Any]], issues: list[ValidationIssue]) -> None:
+def check_v21_m1v3_m2v3(
+    blocks: dict[str, dict[str, Any]],
+    issues: list[ValidationIssue],
+    k: int | None,
+) -> None:
+    # M1V3/M2V3 are the source-fidelity guard for the k=2 row28 tree.
+    # Higher-k EL trees have generated block names and must not be forced into
+    # the k=2 nesting shape.
+    if k != 2:
+        return
     m1 = blocks.get("M1V3")
     if not isinstance(m1, dict):
         add_issue(issues, "error", "$.nested_blocks", "V21_M1V3_BLOCK_MISSING", "M1V3 block is required for row28 nested EL.")
@@ -923,7 +932,12 @@ def check_v21_post_deletion_edges(data: dict[str, Any], nodes: dict[str, dict[st
                     )
 
 
-def check_v21_source_refs(data: dict[str, Any], issues: list[ValidationIssue]) -> set[str]:
+def check_v21_source_refs(
+    data: dict[str, Any],
+    issues: list[ValidationIssue],
+    *,
+    require_figure_a1: bool,
+) -> set[str]:
     refs = data.get("source_refs", [])
     if not isinstance(refs, list):
         add_issue(issues, "error", "$.source_refs", "V21_SOURCE_REFS_NOT_ARRAY", "source_refs must be an array.")
@@ -953,7 +967,7 @@ def check_v21_source_refs(data: dict[str, Any], issues: list[ValidationIssue]) -
                 )
             else:
                 saw_figure_oracle = True
-    if not saw_figure_oracle:
+    if require_figure_a1 and not saw_figure_oracle:
         add_issue(
             issues,
             "error",
@@ -987,13 +1001,17 @@ def check_v21_termination_policy(
             "V21_TERMINATION_POLICY_KIND_INVALID",
             "Expected expand_until_deletion_saturation for row28 nested check.",
         )
-    if policy.get("status") != "hypothesis_untested":
+    allowed_statuses = {
+        "hypothesis_untested",
+        "source_theorem_run_witness_unverified_in_lean",
+    }
+    if policy.get("status") not in allowed_statuses:
         add_issue(
             issues,
             "error",
             "$.termination_policy.status",
             "V21_TERMINATION_POLICY_STATUS_INVALID",
-            "Expected hypothesis_untested; this validator does not accept a proof claim here.",
+            f"Expected one of {sorted(allowed_statuses)}; neither status is a Lean proof claim.",
         )
     source_ref = normalized_source_ref(policy.get("termination_rule_ref", policy.get("source_ref")))
     if source_ref not in source_ref_ids:
@@ -1013,14 +1031,16 @@ def check_v21_nested_schema(data: dict[str, Any], issues: list[ValidationIssue])
 
     nodes = collect_v21_nodes(data, issues)
     blocks = collect_v21_blocks(data, issues)
+    metadata = data.get("metadata", {})
+    k = parse_canonical_nonnegative_int(metadata.get("k")) if isinstance(metadata, dict) else None
     sibling_groups = collect_v21_sibling_groups(data, nodes, issues)
     check_v21_block_refs(blocks, issues)
     check_v21_block_acyclic(blocks, issues)
-    check_v21_m1v3_m2v3(blocks, issues)
+    check_v21_m1v3_m2v3(blocks, issues, k)
     check_v21_overlap_guards(data, issues)
     check_v21_deleted_and_overlap(blocks, nodes, sibling_groups, issues)
     check_v21_post_deletion_edges(data, nodes, issues)
-    source_ref_ids = check_v21_source_refs(data, issues)
+    source_ref_ids = check_v21_source_refs(data, issues, require_figure_a1=k == 2)
     check_v21_termination_policy(data, source_ref_ids, issues)
 
 

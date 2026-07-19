@@ -1,0 +1,8 @@
+check_id,actual,expected,status
+complete_kept_literals,8,8,pass
+complete_deleted,2,2,pass
+complete_depth,3,3,pass
+figure_projection_nodes,16,16,pass
+figure_projection_edges,15,15,pass
+figure_projection_signatures,0,0,pass
+manual_k2_full_regression_prerequisite,K2_REGRESSION_PASS,K2_REGRESSION_PASS,pass

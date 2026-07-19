@@ -1,0 +1,69 @@
+{
+  "child_count": 141,
+  "classifications": [
+    "K3_CERTIFICATE_SCHEMA_VALIDATOR_CREATED",
+    "SCHEMA_VALIDATOR_UPDATED",
+    "SCHEMA_VALIDATOR_ACCEPTS_GENERATED_ARTIFACTS",
+    "SCHEMA_VALIDATOR_ACCEPTS_V2_AND_V21",
+    "K_PARAMETRIC_CERTIFICATE_SCHEMA_DEFINED",
+    "JSON_LEAN_TWIN_ARTIFACT_POLICY_DEFINED",
+    "CANONICAL_RATIONAL_FORMAT_DEFINED",
+    "SCHEMA_VALIDATION_ATTEMPTED",
+    "K2_REGRESSION_GENERATED_JSON_NOT_VALIDATED_IN_THIS_RUN",
+    "FORMAT_WARNING_NAMED_OR_RESOLVED",
+    "FORMAT_CHECK_ONLY",
+    "NO_MATHEMATICAL_VERIFICATION",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "constant_count": 3,
+  "created_at": "2026-07-19T00:34:37.667527+00:00",
+  "error_count": 0,
+  "float_count": 0,
+  "guardrails": [
+    "NO_MATHEMATICAL_VERIFICATION",
+    "NO_K3_ROWS_GENERATED",
+    "NO_LP_SOLVED",
+    "NO_LEAN_OPENED",
+    "NO_HIGH_K_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "input_kind": "nested_v21_generated_or_fixture",
+  "input_path": "outputs/KL2003_F2_K3_GENERATOR_REAL_v1/kl2003_k3_certificate.json",
+  "input_sha256": "26c39b55637807368e2b6bf06403f7936e69d2b290c8d32740de7b17b8dfd1c9",
+  "is_fixture": false,
+  "json_parseable": true,
+  "known_warning_policy": {
+    "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED": "Accepted for schema validation v1: the validator reports sibling manifest presence but does not yet verify external artifact manifests."
+  },
+  "reported_artifact_hash_fields": {
+    "json_artifact": "outputs/KL2003_F2_K3_GENERATOR_REAL_v1/kl2003_k3_certificate.json",
+    "json_sha256": "RECORDED_IN_MANIFEST",
+    "json_to_lean_generator": "scripts/kl2003_f2_k3_generator_real_v1.py",
+    "json_to_lean_generator_sha256": "924b3cb79f5d76c9d8f65e9875380da35be0975878a0b471cb08af99c2e8c8f8",
+    "lean_data_artifact": "outputs/KL2003_F2_K3_GENERATOR_REAL_v1/KL2003K3CertificateData.lean",
+    "lean_data_sha256": "RECORDED_IN_MANIFEST"
+  },
+  "row_count": 9,
+  "run_id": "KL2003_F2_K3_CERTIFICATE_SCHEMA_VALIDATION_v1",
+  "schema_ok": true,
+  "schema_version": "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1",
+  "slack_count": 9,
+  "supported_schema_versions": [
+    "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2",
+    "KL2003_F2_HIGH_K_DATA_CERTIFICATE_FORMAT_v2_1"
+  ],
+  "verdict": "FORMAT_CHECK_ONLY",
+  "warning_codes": [
+    "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED"
+  ],
+  "warning_count": 1,
+  "warnings": [
+    {
+      "code": "EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED",
+      "disposition": "ACCEPTED_NAMED_WARNING",
+      "message": "External artifact manifest exists but this schema validator only reports its presence.",
+      "path": "outputs/KL2003_F2_K3_GENERATOR_REAL_v1/manifest_sha256.csv"
+    }
+  ]
+}
