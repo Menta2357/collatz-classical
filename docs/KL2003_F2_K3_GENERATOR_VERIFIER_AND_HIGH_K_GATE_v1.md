@@ -41,6 +41,7 @@ Source ranges consumed:
 - `L_k^NT`: lines 494-570;
 - splitting and deletion: lines 752-784;
 - termination and order independence: lines 794-858;
+- the non-critical-assignment argument: lines 967-1006;
 - EL growth statistics: lines 1022-1056;
 - published `k=3` values: line 1559.
 
@@ -117,8 +118,11 @@ gamma     0.6112573808...       0.6112620    0.0000046192...
 cmax      3.4881333480...       3.4881908    0.0000574520...
 ```
 
-The pilot deliberately uses a slightly smaller rational lambda. It does not
-claim to reproduce or certify the published optimum.
+The pilot deliberately truncates lambda downward to a rational strictly below
+the published decimal. Since `Real.logb 2` is increasing, the generated gamma
+is correspondingly below the published gamma. This is the safe side for a
+feasible witness and is a fidelity check, not a numerical discrepancy. The
+pilot does not claim to reproduce or certify the published optimum.
 
 ## Lean verifier
 
@@ -171,7 +175,9 @@ axiom audit                ~5 s
 The first checker version scanned all 247 nodes for every local lookup and did
 not finish within 90 seconds. The final checker uses root-indexed arrays and a
 verified adjacency table, reducing the build to about 14 seconds without
-using `native_decide`.
+using `native_decide`. This measured kernel-cost correction is part of the
+high-k gate: an unindexed checker is already non-viable at `k=3`, while the
+indexed design leaves the flat-row route open for a measured `k=9` benchmark.
 
 Axiom profile:
 
@@ -197,6 +203,14 @@ k   nested depth   terminal literals
 Therefore explicit EL-tree materialization is already infeasible at `k=5`,
 long before `k=9` or `k=11`. The successful 247-node `k=3` checker cannot be
 extrapolated by multiplying it by the number of tracked classes.
+
+This is also a statement-fidelity finding. KL2003 proves its `k=9` and `k=11`
+results despite the EL expansion already exceeding one billion literals at
+`k=5`; therefore the high-k proof cannot depend on materializing those trees.
+The source-level route is the abstract splitting/deletion and non-critical
+assignment argument, culminating in the general feasibility-to-bound theorem.
+Formalizing that argument is not a workaround invented by this project: it is
+the source-faithful high-k route exposed by the growth data.
 
 The reduced `L_k^NT` certificate has a different scale:
 
@@ -229,7 +243,8 @@ NO_GO_EXPLICIT_EL_ENUMERATION_TO_K9_OR_K11
 ```
 
 This route is rejected by the primary-source growth data, not merely by a
-runtime estimate.
+runtime estimate. The rejection concerns explicit materialization, not the
+abstract EL argument used by the paper.
 
 ### Verdict 3: reduced LNT route to k=9
 
@@ -243,13 +258,19 @@ The condition is architectural and binding:
    `L_k^NT(lambda)` certificate into the required lower bounds without
    materializing every EL tree. The Lean proof must internalize the
    well-founded splitting/deletion argument or an equivalent parametric
-   invariant.
+   invariant, including the source's non-critical-assignment step. This is the
+   principal new mathematical module, not a mechanical generalization of M0C.
 2. Generalize the flat `L_k^NT` data generator and exact checker from 9 to
    6561 tracked classes.
 3. Benchmark generated-data size, exact-rational digit growth, checker time,
    and minimum slack at a rational lambda below `1.7615320`.
 4. Proceed only if the generated k=9 certificate is kernel-rechecked within a
    documented resource budget.
+
+The measured `k=3` minimum slack is about `7.3e-8`, with rationals reaching 24
+numerator digits and 31 denominator digits. This does not predict failure at
+`k=9`, but it makes rational-size and minimum-slack growth explicit gate
+criteria rather than implementation details.
 
 The k=11 target is deferred until the k=9 gate has passed:
 
