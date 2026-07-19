@@ -87,14 +87,17 @@ source splits.
 
 The structural deletion operation is equivariant as well: a `Min3Path`
 transports through translation and `reduceAt` commutes for every fixed
-retention pattern. What remains is not the geometry of deletion but the proof
-that the source witness policy selects corresponding retentions.
+retention pattern. Deletion witnesses and `witnessRetention` also transport
+when every compared source/translated leaf is nonnegative. The D2
+`sourceStep` therefore commutes outright. For D1/D3, the remaining structural
+obligation is to identify the advanced configurations built around the
+translated split with translations of the original configurations.
 
 That finite result does not imply that the deterministic scheduler chooses the
 same leaf after translation: its eligibility test is the absolute inequality
-`0 <= shift.eval`. It also does not yet transport contextual deletion. The
-remaining correspondence step must control those two decisions or replace
-the source self-similarity argument with another well-founded descent.
+`0 <= shift.eval`. The remaining correspondence step must control that
+decision and the D1/D3 configuration correspondence, or replace the source
+self-similarity argument with another well-founded descent.
 
 ## Current verdict
 
@@ -106,8 +109,10 @@ THEOREM31_FIXED_NEGATIVE_INCREMENT_CONTRADICTION_PROVED
 THEOREM31_LOCAL_SOURCE_SPLIT_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_FIXED_RETENTION_DELETION_TRANSLATION_EQUIVARIANCE_PROVED
+THEOREM31_WITNESS_RETENTION_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
+THEOREM31_D2_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_SIGN_SENSITIVE_SCHEDULER_EQUIVARIANCE_NOT_CLAIMED
-THEOREM31_SOURCE_RETENTION_POLICY_EQUIVARIANCE_NOT_YET_PROVED
+THEOREM31_D1_D3_CONFIGURATION_EQUIVARIANCE_NOT_YET_PROVED
 THEOREM31_SELF_SIMILARITY_LEMMA_REQUIRED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

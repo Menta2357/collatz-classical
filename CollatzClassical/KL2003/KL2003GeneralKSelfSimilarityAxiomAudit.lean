@@ -9,13 +9,20 @@ namespace KL2003
 #print axioms ELTree.frontierExpr_translate
 #print axioms ELTree.normalExpr_translate
 #print axioms ELTree.normalExpr_eval_translate
+#print axioms ELTree.Context.plug_translate
+#print axioms ELTree.Context.expandedLabels_translate
 #print axioms ELTree.ofExpr_shiftBy
 #print axioms ELTree.splitTopExpr_translate
 #print axioms ELTree.sourceSplitTree_translate
 #print axioms ELTree.Min3Retention.reduce_translate
 #print axioms ELTree.Min3Path.reduceAt_translate
+#print axioms ELTree.TerminalPath.hasDeletionWitness_translate_iff_of_nonnegative
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_witness_iff
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_translate_of_nonnegative
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_translate_of_nonnegative
 #print axioms ELTree.TerminalPath.splitAt_translate
 #print axioms ELTree.ExpandableOccurrence.split_translate
+#print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d2
 #print axioms ELTree.RawSourceSplitStep.translate
 #print axioms ELTree.rawSourceSplitSteps_translate
 

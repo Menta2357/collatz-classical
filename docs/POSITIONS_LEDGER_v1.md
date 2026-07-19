@@ -224,10 +224,12 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   exactamente la forma trasladada. Esto no equivale aun a conmutacion del
   scheduler: la elegibilidad usa el signo absoluto del shift, que puede cambiar
   al trasladar. La geometria de deletion si transporta: `Min3Path` y
-  `reduceAt` con retencion fija conmutan con la traslacion. Falta probar que la
-  politica por testigos selecciona retenciones correspondientes. Esa decision
-  y el umbral del scheduler son ahora el contenido preciso de la
-  correspondencia recurrente pendiente.
+  `reduceAt` con retencion fija conmutan con la traslacion. La politica por
+  testigos tambien se conserva entre configuraciones traducidas cuando las
+  hojas comparadas son no negativas, y D2 conmuta por completo. En D1/D3 falta
+  identificar las configuraciones advanced construidas tras el split con sus
+  traducciones; el umbral absoluto del scheduler sigue siendo la segunda
+  decision pendiente de la correspondencia recurrente.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

@@ -10,9 +10,10 @@ This module formalizes the local algebra behind the self-similarity statement
 used in KL2003 Theorem 3.1: changing the root argument by one symbolic shift
 translates every descendant shift by the same amount, while preserving modes
 and tree shape. It covers arbitrary finite traces of explicitly matched raw
-source splits. It does not claim that the sign-sensitive scheduler chooses the
-same occurrence after translation, transport contextual deletion, identify
-recurrent infinite subtrees, or prove termination/order independence.
+source splits, fixed-retention deletion, and witness-retention deletion when
+the relevant leaves remain nonnegative. It does not claim that the
+sign-sensitive scheduler chooses the same occurrence after translation,
+identify recurrent infinite subtrees, or prove termination/order independence.
 -/
 
 namespace SymbolicShift
@@ -82,6 +83,66 @@ def translate {k : Nat} (delta : SymbolicShift) : ELTree k -> ELTree k
   | .min3 first second third =>
       .min3 (first.translate delta) (second.translate delta)
         (third.translate delta)
+
+namespace Context
+
+def translate {k : Nat} (delta : SymbolicShift) : Context k -> Context k
+  | .hole => .hole
+  | .expanded label context =>
+      .expanded (label.translate delta) (context.translate delta)
+  | .addLeft context right =>
+      .addLeft (context.translate delta) (right.translate delta)
+  | .addRight left context =>
+      .addRight (left.translate delta) (context.translate delta)
+  | .min2Left context right =>
+      .min2Left (context.translate delta) (right.translate delta)
+  | .min2Right left context =>
+      .min2Right (left.translate delta) (context.translate delta)
+  | .minFirst context second third =>
+      .minFirst (context.translate delta) (second.translate delta)
+        (third.translate delta)
+  | .minSecond first context third =>
+      .minSecond (first.translate delta) (context.translate delta)
+        (third.translate delta)
+  | .minThird first second context =>
+      .minThird (first.translate delta) (second.translate delta)
+        (context.translate delta)
+
+theorem plug_translate {k : Nat} (context : Context k) (tree : ELTree k)
+    (delta : SymbolicShift) :
+    (context.translate delta).plug (tree.translate delta) =
+      (context.plug tree).translate delta := by
+  induction context <;>
+    simp [translate, plug, ELTree.translate, *]
+
+theorem expandedLabels_translate {k : Nat} (context : Context k)
+    (delta : SymbolicShift) :
+    (context.translate delta).expandedLabels =
+      context.expandedLabels.map (ELLabel.translate delta) := by
+  induction context <;>
+    simp [translate, expandedLabels, *]
+
+theorem comp_translate {k : Nat} (outer inner : Context k)
+    (delta : SymbolicShift) :
+    (outer.comp inner).translate delta =
+      (outer.translate delta).comp (inner.translate delta) := by
+  induction outer <;>
+    simp [translate, comp, *]
+
+@[simp] theorem containsAdd_translate {k : Nat} (context : Context k)
+    (delta : SymbolicShift) :
+    (context.translate delta).ContainsAdd <-> context.ContainsAdd := by
+  induction context <;>
+    simp [translate, ContainsAdd, *]
+
+@[simp] theorem addBelowEveryExpanded_translate {k : Nat}
+    (context : Context k) (delta : SymbolicShift) :
+    (context.translate delta).AddBelowEveryExpanded <->
+      context.AddBelowEveryExpanded := by
+  induction context <;>
+    simp [translate, AddBelowEveryExpanded, *]
+
+end Context
 
 theorem frontierExpr_translate {k : Nat} (tree : ELTree k)
     (delta : SymbolicShift) :
@@ -185,6 +246,48 @@ def translate {k : Nat} {tree : ELTree k} (path : Min3Path tree)
       .minThird (first.translate delta) (second.translate delta)
         (third.translate delta) (subpath.translate delta)
 
+@[simp] theorem firstChild_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).firstChild = path.firstChild.translate delta := by
+  induction path <;> simp [translate, firstChild, *]
+
+@[simp] theorem secondChild_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).secondChild = path.secondChild.translate delta := by
+  induction path <;> simp [translate, secondChild, *]
+
+@[simp] theorem thirdChild_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).thirdChild = path.thirdChild.translate delta := by
+  induction path <;> simp [translate, thirdChild, *]
+
+theorem context_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).context = path.context.translate delta := by
+  induction path <;>
+    simp [translate, context, Context.translate, *]
+
+theorem firstBranchContext_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).firstBranchContext =
+      path.firstBranchContext.translate delta := by
+  simp [firstBranchContext, context_translate, Context.comp_translate,
+    Context.translate]
+
+theorem secondBranchContext_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).secondBranchContext =
+      path.secondBranchContext.translate delta := by
+  simp [secondBranchContext, context_translate, Context.comp_translate,
+    Context.translate]
+
+theorem thirdBranchContext_translate {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (delta : SymbolicShift) :
+    (path.translate delta).thirdBranchContext =
+      path.thirdBranchContext.translate delta := by
+  simp [thirdBranchContext, context_translate, Context.comp_translate,
+    Context.translate]
+
 theorem reduceAt_translate {k : Nat} {tree : ELTree k}
     (path : Min3Path tree) (retention : Min3Retention)
     (delta : SymbolicShift) :
@@ -247,6 +350,45 @@ def translate {k : Nat} {tree : ELTree k} {target : ELLabel k}
         (third.translate delta) (target.translate delta)
         (subpath.translate delta)
 
+theorem context_translate {k : Nat} {tree : ELTree k}
+    {target : ELLabel k} (path : TerminalPath tree target)
+    (delta : SymbolicShift) :
+    (path.translate delta).context = path.context.translate delta := by
+  induction path <;>
+    simp [TerminalPath.translate, TerminalPath.context, Context.translate, *]
+
+theorem leafState_translate_ancestors {k : Nat} {tree : ELTree k}
+    {target : ELLabel k} (path : TerminalPath tree target)
+    (delta : SymbolicShift) :
+    (path.translate delta).leafState.ancestors =
+      path.leafState.ancestors.map (ELLabel.translate delta) := by
+  simp [leafState, context_translate, Context.expandedLabels_translate]
+
+theorem hasDeletionWitness_translate_iff_of_nonnegative
+    {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) (delta : SymbolicShift)
+    (horiginal : 0 <= target.shift.eval)
+    (htranslated : 0 <= (target.translate delta).shift.eval) :
+    (path.translate delta).HasDeletionWitness <-> path.HasDeletionWitness := by
+  constructor
+  · intro hwitness
+    rcases hwitness with ⟨_, ancestor, hmem, hmode, hshift⟩
+    rw [leafState_translate_ancestors] at hmem
+    rcases List.mem_map.mp hmem with ⟨sourceAncestor, hsourceMem, heq⟩
+    subst ancestor
+    refine ⟨horiginal, sourceAncestor, hsourceMem, ?_, ?_⟩
+    · simpa using hmode
+    · simp only [leafState, ELLabel.translate_shift_eval] at hshift ⊢
+      linarith
+  · intro hwitness
+    rcases hwitness with ⟨_, ancestor, hmem, hmode, hshift⟩
+    refine ⟨htranslated, ancestor.translate delta, ?_, ?_, ?_⟩
+    · rw [leafState_translate_ancestors]
+      exact List.mem_map.mpr ⟨ancestor, hmem, rfl⟩
+    · simpa using hmode
+    · simp only [leafState, ELLabel.translate_shift_eval] at hshift ⊢
+      linarith
+
 theorem splitAt_translate {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
     (path : TerminalPath tree target) (delta : SymbolicShift) :
@@ -272,6 +414,127 @@ theorem splitAt_translate {p : Nat} (hp : 1 <= p)
 
 end TerminalPath
 
+namespace TerminalPath.AdvancedMinConfiguration
+
+def translate {k : Nat} {tree : ELTree k}
+    {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (delta : SymbolicShift) :
+    AdvancedMinConfiguration (tree.translate delta)
+      (first.translate delta) (second.translate delta)
+      (third.translate delta) where
+  minPath := configuration.minPath.translate delta
+  firstPath := configuration.firstPath.translate delta
+  secondPath := configuration.secondPath.translate delta
+  thirdPath := configuration.thirdPath.translate delta
+  firstChild_eq := by
+    rw [Min3Path.firstChild_translate, configuration.firstChild_eq]
+    rfl
+  secondChild_eq := by
+    rw [Min3Path.secondChild_translate, configuration.secondChild_eq]
+    rfl
+  thirdChild_eq := by
+    rw [Min3Path.thirdChild_translate, configuration.thirdChild_eq]
+    rfl
+  firstContext_eq := by
+    rw [Min3Path.firstBranchContext_translate,
+      configuration.firstContext_eq, TerminalPath.context_translate]
+  secondContext_eq := by
+    rw [Min3Path.secondBranchContext_translate,
+      configuration.secondContext_eq, TerminalPath.context_translate]
+  thirdContext_eq := by
+    rw [Min3Path.thirdBranchContext_translate,
+      configuration.thirdContext_eq, TerminalPath.context_translate]
+  firstContainsAdd := by
+    rw [TerminalPath.context_translate, Context.containsAdd_translate]
+    exact configuration.firstContainsAdd
+  secondContainsAdd := by
+    rw [TerminalPath.context_translate, Context.containsAdd_translate]
+    exact configuration.secondContainsAdd
+  thirdContainsAdd := by
+    rw [TerminalPath.context_translate, Context.containsAdd_translate]
+    exact configuration.thirdContainsAdd
+  firstAddBelow := by
+    change (configuration.firstPath.translate delta).context.AddBelowEveryExpanded
+    rw [TerminalPath.context_translate,
+      Context.addBelowEveryExpanded_translate]
+    exact configuration.firstAddBelow
+  secondAddBelow := by
+    change (configuration.secondPath.translate delta).context.AddBelowEveryExpanded
+    rw [TerminalPath.context_translate,
+      Context.addBelowEveryExpanded_translate]
+    exact configuration.secondAddBelow
+  thirdAddBelow := by
+    change (configuration.thirdPath.translate delta).context.AddBelowEveryExpanded
+    rw [TerminalPath.context_translate,
+      Context.addBelowEveryExpanded_translate]
+    exact configuration.thirdAddBelow
+
+theorem witnessRetention_eq_of_witness_iff
+    {k : Nat} {treeA treeB : ELTree k}
+    {firstA secondA thirdA firstB secondB thirdB : ELLabel k}
+    (configurationA : AdvancedMinConfiguration treeA firstA secondA thirdA)
+    (configurationB : AdvancedMinConfiguration treeB firstB secondB thirdB)
+    (hfirst : configurationA.firstPath.HasDeletionWitness <->
+      configurationB.firstPath.HasDeletionWitness)
+    (hsecond : configurationA.secondPath.HasDeletionWitness <->
+      configurationB.secondPath.HasDeletionWitness)
+    (hthird : configurationA.thirdPath.HasDeletionWitness <->
+      configurationB.thirdPath.HasDeletionWitness) :
+    configurationA.witnessRetention = configurationB.witnessRetention := by
+  classical
+  by_cases hfirstA : configurationA.firstPath.HasDeletionWitness <;>
+    by_cases hfirstB : configurationB.firstPath.HasDeletionWitness <;>
+    by_cases hsecondA : configurationA.secondPath.HasDeletionWitness <;>
+      by_cases hsecondB : configurationB.secondPath.HasDeletionWitness <;>
+      by_cases hthirdA : configurationA.thirdPath.HasDeletionWitness <;>
+        by_cases hthirdB : configurationB.thirdPath.HasDeletionWitness <;>
+          simp_all [witnessRetention]
+
+theorem witnessRetention_translate_of_nonnegative
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (delta : SymbolicShift)
+    (hfirst : 0 <= first.shift.eval)
+    (hfirstTranslated : 0 <= (first.translate delta).shift.eval)
+    (hsecond : 0 <= second.shift.eval)
+    (hsecondTranslated : 0 <= (second.translate delta).shift.eval)
+    (hthird : 0 <= third.shift.eval)
+    (hthirdTranslated : 0 <= (third.translate delta).shift.eval) :
+    (configuration.translate delta).witnessRetention =
+      configuration.witnessRetention := by
+  apply witnessRetention_eq_of_witness_iff
+  · exact configuration.firstPath
+      |>.hasDeletionWitness_translate_iff_of_nonnegative delta
+        hfirst hfirstTranslated
+  · exact configuration.secondPath
+      |>.hasDeletionWitness_translate_iff_of_nonnegative delta
+        hsecond hsecondTranslated
+  · exact configuration.thirdPath
+      |>.hasDeletionWitness_translate_iff_of_nonnegative delta
+        hthird hthirdTranslated
+
+theorem reduceAt_witnessRetention_translate_of_nonnegative
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (delta : SymbolicShift)
+    (hfirst : 0 <= first.shift.eval)
+    (hfirstTranslated : 0 <= (first.translate delta).shift.eval)
+    (hsecond : 0 <= second.shift.eval)
+    (hsecondTranslated : 0 <= (second.translate delta).shift.eval)
+    (hthird : 0 <= third.shift.eval)
+    (hthirdTranslated : 0 <= (third.translate delta).shift.eval) :
+    (configuration.translate delta).minPath.reduceAt
+        (configuration.translate delta).witnessRetention =
+      (configuration.minPath.reduceAt configuration.witnessRetention).translate
+        delta := by
+  rw [configuration.witnessRetention_translate_of_nonnegative delta
+    hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated]
+  exact configuration.minPath.reduceAt_translate
+    configuration.witnessRetention delta
+
+end TerminalPath.AdvancedMinConfiguration
+
 namespace ExpandableOccurrence
 
 def translate {k : Nat} {tree : ELTree k}
@@ -293,6 +556,17 @@ theorem split_translate {p : Nat} (hp : 1 <= p)
     (occurrence.translate delta hshift).split hp =
       (occurrence.split hp).translate delta := by
   exact occurrence.path.splitAt_translate hp delta
+
+theorem sourceStep_translate_d2 {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 5) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rw [(occurrence.translate delta hshift).sourceStep_eq_d2 hp (by simpa using hm),
+    occurrence.sourceStep_eq_d2 hp hm]
+  exact occurrence.split_translate hp delta hshift
 
 end ExpandableOccurrence
 

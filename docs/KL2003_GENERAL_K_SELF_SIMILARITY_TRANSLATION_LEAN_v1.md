@@ -14,6 +14,11 @@ splits. A symbolic translation `delta`:
 - commutes with `TerminalPath.splitAt` at the transported leaf;
 - transports a dependent `Min3Path` and commutes with `reduceAt` for every
   fixed nonempty retention pattern;
+- preserves deletion witnesses under a common translation whenever the source
+  and translated leaves are both nonnegative;
+- preserves `witnessRetention` and the resulting deletion for translated
+  advanced configurations under those explicit nonnegativity hypotheses;
+- proves full `sourceStep` translation equivariance for the D2 branch;
 - transports the reflexive-transitive closure of raw localized source splits.
 
 The main finite-trace theorem is `ELTree.rawSourceSplitSteps_translate`.
@@ -28,11 +33,12 @@ paths are supplied explicitly.
 This is deliberately weaker than global scheduler equivariance. Expandability
 depends on the absolute condition `0 <= shift.eval`; translating every shift
 does not preserve that condition without an additional bound. The geometry of
-deletion now transports for a fixed retention, but the source policy still has
-to be shown to choose the corresponding retention after translation. Therefore
-the module does not yet identify recurrent full subtrees, derive one fixed
-increment between successive recurrent shifts, or prove termination/order
-independence.
+deletion and its witness policy now transport for corresponding advanced
+configurations. For D1/D3 it remains to prove that the configurations built
+around the translated split are themselves translations of the originals. The
+scheduler also remains sign-sensitive. Therefore the module does not yet
+identify recurrent full subtrees, derive one fixed increment between
+successive recurrent shifts, or prove termination/order independence.
 
 ## Verification
 
@@ -55,11 +61,14 @@ GENERAL_K_TERMINAL_PATH_TRANSLATION_DEFINED
 GENERAL_K_LOCALIZED_SPLIT_TRANSLATION_EQUIVARIANCE_PROVED
 GENERAL_K_MIN3_PATH_TRANSLATION_DEFINED
 GENERAL_K_FIXED_RETENTION_DELETION_TRANSLATION_EQUIVARIANCE_PROVED
+GENERAL_K_DELETION_WITNESS_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
+GENERAL_K_WITNESS_RETENTION_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
+GENERAL_K_D2_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED
 GENERAL_K_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_LOCAL_SELF_SIMILARITY_STEP_PROVED
 GENERAL_K_SELF_SIMILARITY_TRANSLATION_AXIOM_AUDIT_PASS
 GENERAL_K_SIGN_SENSITIVE_SCHEDULER_TRANSLATION_NOT_CLAIMED
-GENERAL_K_SOURCE_RETENTION_POLICY_TRANSLATION_NOT_YET_PROVED
+GENERAL_K_D1_D3_CONFIGURATION_TRANSLATION_NOT_YET_PROVED
 THEOREM31_FULL_RECURRENT_SUBTREE_CORRESPONDENCE_NOT_YET_PROVED
 GENERAL_K_FULL_EXPANSION_DELETION_TERMINATION_NOT_YET_PROVED
 GENERAL_K_EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
