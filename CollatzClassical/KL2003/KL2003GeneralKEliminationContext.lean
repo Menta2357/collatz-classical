@@ -2436,6 +2436,117 @@ private theorem witness_ancestor_excludes_holeCritical {k : Nat}
         (by simpa [context, ELTree.Context.expandedLabels] using hmem)
         hmode hshift
 
+private theorem witness_ancestor_excludes_holeCritical_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) (outer : Context k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : outer.CriticalNodeBounds Phi y tree)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hadd : path.AddBelowEveryExpanded)
+    (hcritical : (outer.comp path.context).HoleCritical
+      (.terminal target) Phi y)
+    (htargetNonneg : 0 <= target.shift.eval)
+    (ancestor : ELLabel k)
+    (hmem : ancestor ∈ path.context.expandedLabels)
+    (hmode : ancestor.mode = target.mode)
+    (hshift : ancestor.shift.eval < target.shift.eval) : False := by
+  induction path generalizing ancestor outer with
+  | here label => simp [context, ELTree.Context.expandedLabels] at hmem
+  | expanded label body target path ih =>
+      change path.context.ContainsAdd /\ path.AddBelowEveryExpanded at hadd
+      simp only [context, ELTree.Context.expandedLabels, List.mem_cons] at hmem
+      have hcriticalParts :=
+        (outer.holeCritical_comp_iff
+          (.expanded label path.context) (.terminal target) Phi y).mp
+          (by simpa [context] using hcritical)
+      have hlocalCritical :
+          path.context.HoleCritical (.terminal target) Phi y := by
+        simpa [Context.HoleCritical] using hcriticalParts.1
+      have hnodeCritical :
+          outer.HoleCritical (.expanded label body) Phi y := by
+        simpa [Context.plug, path.context_plug_target] using hcriticalParts.2
+      rcases hmem with heq | hmem
+      · subst ancestor
+        rcases path.context.lift_criticalPath_with_companion
+            (.terminal target) target (.leaf target) (.leaf target)
+            Phi y trivial hlocalCritical (Or.inr hadd.1) with
+          ⟨assignment, hassignment, criticalPath, hnonempty⟩
+        let leaf : ELLeafState k :=
+          ⟨target, [label], .active⟩
+        have hwitness : KL2003.HasDeletionWitness leaf := by
+          refine ⟨htargetNonneg, label, ?_, hmode, hshift⟩
+          simp [leaf]
+        have hargs' : ELExpr.ArgumentsNonnegative y
+            (path.context.plug (.terminal target)).normalExpr := by
+          rw [path.context_plug_target]
+          exact hargs
+        apply deletionWitness_excludes_bounded_critical_path hpos hmono
+          hwitness assignment hassignment criticalPath hargs' hnonempty
+        intro candidate hcand _ _
+        have hcandEq : candidate = label := by
+          simpa [leaf] using hcand
+        subst candidate
+        have hbound := hbounds.1 hnodeCritical
+        rw [<- path.context_plug_target] at hbound
+        exact hbound
+      · exact ih (outer := outer.comp (.expanded label .hole)) hbounds.2
+          hargs hadd.2
+          (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+          htargetNonneg ancestor hmem hmode hshift
+  | addLeft left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.addLeft .hole right)) hbounds.1 hargs.1
+        hadd (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | addRight left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.addRight left .hole)) hbounds.2 hargs.2
+        hadd (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | min2Left left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.min2Left .hole right)) hbounds.1 hargs.1
+        hadd (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | min2Right left right target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.min2Right left .hole)) hbounds.2 hargs.2.1
+        hadd (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | minFirst first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.minFirst .hole second third)) hbounds.1
+        hargs.1 hadd
+        (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | minSecond first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.minSecond first .hole third)) hbounds.2.1
+        hargs.2.1 hadd
+        (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+  | minThird first second third target path ih =>
+      change path.AddBelowEveryExpanded at hadd
+      exact ih (outer := outer.comp (.minThird first second .hole)) hbounds.2.2
+        hargs.2.2 hadd
+        (by simpa [context, Context.comp_assoc, Context.comp] using hcritical)
+        htargetNonneg ancestor
+        (by simpa [context, ELTree.Context.expandedLabels] using hmem)
+        hmode hshift
+
 theorem deletionWitness_implies_not_holeCritical {k : Nat}
     {tree : ELTree k} {target : ELLabel k}
     (path : TerminalPath tree target)
@@ -2450,6 +2561,22 @@ theorem deletionWitness_implies_not_holeCritical {k : Nat}
   rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
   exact path.witness_ancestor_excludes_holeCritical hpos hmono hbounds
     hargs hadd hcritical hwitness.1 ancestor hmem hmode hshift
+
+theorem deletionWitness_implies_not_holeCritical_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) (outer : Context k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : outer.CriticalNodeBounds Phi y tree)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hadd : path.AddBelowEveryExpanded)
+    (hwitness : path.HasDeletionWitness) :
+    ¬ (outer.comp path.context).HoleCritical (.terminal target) Phi y := by
+  intro hcritical
+  rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
+  exact path.witness_ancestor_excludes_holeCritical_of_criticalNodeBounds
+    outer hpos hmono hbounds hargs hadd hcritical hwitness.1 ancestor hmem
+      hmode hshift
 
 namespace AdvancedMinConfiguration
 
@@ -2490,6 +2617,86 @@ theorem deletedBranchesTotallyNoncritical_of_witnesses {k : Nat}
   | keepFirst => exact ⟨hsecond hwitness.1, hthird hwitness.2⟩
   | keepSecond => exact ⟨hfirst hwitness.1, hthird hwitness.2⟩
   | keepThird => exact ⟨hfirst hwitness.1, hsecond hwitness.2⟩
+
+theorem deletedBranchesTotallyNoncritical_of_witnesses_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    configuration.minPath.DeletedBranchesTotallyNoncritical
+      retention Phi y := by
+  have hfirst (hw : configuration.firstPath.HasDeletionWitness) :
+      ¬ configuration.minPath.firstBranchContext.HoleCritical
+        configuration.minPath.firstChild Phi y := by
+    rw [configuration.firstContext_eq, configuration.firstChild_eq]
+    simpa [ELTree.CriticalNodeBounds, Context.comp] using
+      configuration.firstPath
+        |>.deletionWitness_implies_not_holeCritical_of_criticalNodeBounds
+          .hole hpos hmono hbounds hargs configuration.firstAddBelow hw
+  have hsecond (hw : configuration.secondPath.HasDeletionWitness) :
+      ¬ configuration.minPath.secondBranchContext.HoleCritical
+        configuration.minPath.secondChild Phi y := by
+    rw [configuration.secondContext_eq, configuration.secondChild_eq]
+    simpa [ELTree.CriticalNodeBounds, Context.comp] using
+      configuration.secondPath
+        |>.deletionWitness_implies_not_holeCritical_of_criticalNodeBounds
+          .hole hpos hmono hbounds hargs configuration.secondAddBelow hw
+  have hthird (hw : configuration.thirdPath.HasDeletionWitness) :
+      ¬ configuration.minPath.thirdBranchContext.HoleCritical
+        configuration.minPath.thirdChild Phi y := by
+    rw [configuration.thirdContext_eq, configuration.thirdChild_eq]
+    simpa [ELTree.CriticalNodeBounds, Context.comp] using
+      configuration.thirdPath
+        |>.deletionWitness_implies_not_holeCritical_of_criticalNodeBounds
+          .hole hpos hmono hbounds hargs configuration.thirdAddBelow hw
+  cases retention with
+  | keepAll => trivial
+  | keepFirstSecond => exact hthird hwitness
+  | keepFirstThird => exact hsecond hwitness
+  | keepSecondThird => exact hfirst hwitness
+  | keepFirst => exact ⟨hsecond hwitness.1, hthird hwitness.2⟩
+  | keepSecond => exact ⟨hfirst hwitness.1, hthird hwitness.2⟩
+  | keepThird => exact ⟨hfirst hwitness.1, hsecond hwitness.2⟩
+
+theorem reduceAt_normalExpr_eval_eq_of_witnesses_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    (configuration.minPath.reduceAt retention).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y :=
+  configuration.minPath
+    |>.reduceAt_normalExpr_eval_eq_of_deletedBranchesTotallyNoncritical
+      retention Phi y
+        (configuration.deletedBranchesTotallyNoncritical_of_witnesses_of_criticalNodeBounds
+          retention hpos hmono hbounds hargs hwitness)
+
+theorem reduceAt_criticalNodeBounds_of_witnesses_of_targetCritical_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (retention : Min3Retention)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y)
+    (hwitness : configuration.DeletedBranchesHaveWitness retention) :
+    (configuration.minPath.reduceAt retention).CriticalNodeBounds Phi y := by
+  exact configuration.minPath
+    |>.reduceAt_criticalNodeBounds_of_deletedBranchesTotallyNoncritical_of_targetCritical
+      retention Phi y
+        (configuration.deletedBranchesTotallyNoncritical_of_witnesses_of_criticalNodeBounds
+          retention hpos hmono hbounds hargs hwitness)
+      hcritical hbounds
 
 theorem reduceAt_normalExpr_eval_eq_of_witnesses {k : Nat}
     {tree : ELTree k} {first second third : ELLabel k}
@@ -2593,6 +2800,71 @@ theorem criticalWitnessRetention_reduceAt_criticalNodeBounds {k : Nat}
   · rw [criticalWitnessRetention]
     simp [hcritical, configuration.minPath.reduceAt_keepAll]
     exact criticalNodeBounds_of_nodeBounds tree Phi y hbounds
+
+theorem witnessRetention_reduceAt_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt configuration.witnessRetention).normalExpr.eval
+      Phi y = tree.normalExpr.eval Phi y :=
+  configuration.reduceAt_normalExpr_eval_eq_of_witnesses_of_criticalNodeBounds
+    configuration.witnessRetention hpos hmono hbounds hargs
+      configuration.witnessRetention_deletedBranchesHaveWitness
+
+theorem witnessRetention_reduceAt_criticalNodeBounds_of_targetCritical_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y) :
+    (configuration.minPath.reduceAt
+      configuration.witnessRetention).CriticalNodeBounds Phi y :=
+  configuration.reduceAt_criticalNodeBounds_of_witnesses_of_targetCritical_of_criticalNodeBounds
+    configuration.witnessRetention hpos hmono hbounds hargs hcritical
+      configuration.witnessRetention_deletedBranchesHaveWitness
+
+theorem criticalWitnessRetention_reduceAt_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt
+      (configuration.criticalWitnessRetention Phi y)).normalExpr.eval Phi y =
+        tree.normalExpr.eval Phi y := by
+  classical
+  by_cases hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y
+  · simpa [criticalWitnessRetention, hcritical] using
+      configuration.witnessRetention_reduceAt_normalExpr_eval_eq_of_criticalNodeBounds
+        hpos hmono hbounds hargs
+  · rw [criticalWitnessRetention]
+    simp [hcritical, configuration.minPath.reduceAt_keepAll]
+
+theorem criticalWitnessRetention_reduceAt_criticalNodeBounds_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (configuration.minPath.reduceAt
+      (configuration.criticalWitnessRetention Phi y)).CriticalNodeBounds Phi y := by
+  classical
+  by_cases hcritical : configuration.minPath.context.HoleCritical
+      configuration.minPath.target Phi y
+  · simpa [criticalWitnessRetention, hcritical] using
+      configuration.witnessRetention_reduceAt_criticalNodeBounds_of_targetCritical_of_criticalNodeBounds
+        hpos hmono hbounds hargs hcritical
+  · rw [criticalWitnessRetention]
+    simpa [hcritical, configuration.minPath.reduceAt_keepAll] using hbounds
 
 end AdvancedMinConfiguration
 

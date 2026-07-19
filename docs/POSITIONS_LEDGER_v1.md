@@ -190,6 +190,15 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   La frontera de iteracion queda aislada: el paso actual consume `NodeBounds`,
   mientras su salida conserva la version source-faithful `CriticalNodeBounds`;
   falta fortalecer el consumidor a esa premisa antes de iterar.
+- Ese fortalecimiento y la iteracion finita ya estan cerrados. La contradiccion
+  de testigo ahora consume `CriticalNodeBounds` en un contexto exterior, los
+  pasos preservan tambien argumentos no negativos, y una busqueda separada
+  elige solo ocurrencias criticas con al menos un testigo. Cada paso accionable
+  reduce estrictamente `nodeCount`; por ello el normalizador de deletion sobre
+  cualquier arbol finito ya expandido termina, conserva valor y cotas, y deja
+  cero ocurrencias accionables. Esto no es aun Theorem 3.1: falta alternar con
+  expansion de hojas, probar terminacion general-k de ese proceso y definir el
+  contrato `SatisfiesEL`.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere

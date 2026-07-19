@@ -15,6 +15,16 @@ namespace KL2003
 #print axioms ELTree.normalizeOne_eq_self_of_find_eq_none
 #print axioms ELTree.normalizeOne_normalExpr_eval_eq
 #print axioms ELTree.normalizeOne_criticalNodeBounds
+#print axioms ELTree.Min3Retention.nodeCount_reduce_lt
+#print axioms ELTree.Min3Path.nodeCount_reduceAt_lt
+#print axioms ELTree.AdvancedOccurrence.reduceWitness_normalExpr_eval_eq_of_criticalNodeBounds
+#print axioms ELTree.AdvancedOccurrence.reduceWitness_criticalNodeBounds_of_actionable
+#print axioms ELTree.AdvancedOccurrence.nodeCount_reduceWitness_lt_of_actionable
+#print axioms ELTree.normalizeActionableN_normalExpr_eval_eq
+#print axioms ELTree.normalizeActionableN_criticalNodeBounds
+#print axioms ELTree.normalizeActionable_normalExpr_eval_eq
+#print axioms ELTree.normalizeActionable_criticalNodeBounds
+#print axioms ELTree.findActionableAdvancedOccurrence_normalizeActionable_eq_none
 
 end KL2003
 end CollatzClassical

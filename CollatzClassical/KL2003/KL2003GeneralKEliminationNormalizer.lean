@@ -10,6 +10,17 @@ This module does not yet iterate deletion or claim termination.
 
 namespace ELTree
 
+def nodeCount {k : Nat} : ELTree k -> Nat
+  | .terminal _ => 1
+  | .expanded _ body => body.nodeCount + 1
+  | .add left right => left.nodeCount + right.nodeCount + 1
+  | .min2 left right => left.nodeCount + right.nodeCount + 1
+  | .min3 first second third =>
+      first.nodeCount + second.nodeCount + third.nodeCount + 1
+
+theorem nodeCount_pos {k : Nat} (tree : ELTree k) : 0 < tree.nodeCount := by
+  induction tree <;> simp_all [nodeCount]
+
 namespace Context
 
 def liftMin3Path {k : Nat} (outer : Context k) {tree : ELTree k}
@@ -311,6 +322,30 @@ def findAdvancedOccurrence {k : Nat} :
           | none => (findAdvancedOccurrence third).map (.minThird first second)
 termination_by tree => tree
 
+def advancedOccurrences {k : Nat} :
+    (tree : ELTree k) -> List (AdvancedOccurrence tree)
+  | .terminal _ => []
+  | .expanded root
+      (.add (.terminal retarded)
+        (.min3 (.terminal first) (.terminal second) (.terminal third))) =>
+      [.here root retarded first second third]
+  | .expanded root body =>
+      (advancedOccurrences body).map (fun occurrence => .expanded root occurrence)
+  | .add left right =>
+      (advancedOccurrences left).map (fun occurrence => .addLeft right occurrence) ++
+        (advancedOccurrences right).map (fun occurrence => .addRight left occurrence)
+  | .min2 left right =>
+      (advancedOccurrences left).map (fun occurrence => .min2Left right occurrence) ++
+        (advancedOccurrences right).map (fun occurrence => .min2Right left occurrence)
+  | .min3 first second third =>
+      (advancedOccurrences first).map
+          (fun occurrence => .minFirst second third occurrence) ++
+        (advancedOccurrences second).map
+          (fun occurrence => .minSecond first third occurrence) ++
+        (advancedOccurrences third).map
+          (fun occurrence => .minThird first second occurrence)
+termination_by tree => tree
+
 theorem findAdvancedOccurrence_advancedSplitTree {k : Nat}
     (root retarded first second third : ELLabel k) :
     findAdvancedOccurrence
@@ -318,7 +353,92 @@ theorem findAdvancedOccurrence_advancedSplitTree {k : Nat}
         some (.here root retarded first second third) := by
   simp [advancedSplitTree, findAdvancedOccurrence]
 
+namespace Min3Retention
+
+theorem reduce_normalExpr_argumentsNonnegative {k : Nat}
+    (retention : Min3Retention) (first second third : ELTree k) (y : Real)
+    (hargs : (ELTree.min3 first second third).normalExpr.ArgumentsNonnegative y) :
+    (retention.reduce first second third).normalExpr.ArgumentsNonnegative y := by
+  cases retention <;>
+    simp_all [reduce, ELTree.normalExpr, ELExpr.ArgumentsNonnegative]
+
+theorem nodeCount_reduce_lt {k : Nat} (retention : Min3Retention)
+    (first second third : ELTree k) (hretained : retention.retainedCount < 3) :
+    (retention.reduce first second third).nodeCount <
+      (ELTree.min3 first second third).nodeCount := by
+  have hfirst := first.nodeCount_pos
+  have hsecond := second.nodeCount_pos
+  have hthird := third.nodeCount_pos
+  cases retention <;>
+    simp_all [retainedCount, reduce, ELTree.nodeCount] <;> omega
+
+end Min3Retention
+
+namespace Min3Path
+
+theorem reduceAt_normalExpr_argumentsNonnegative {k : Nat}
+    {tree : ELTree k} (path : Min3Path tree) (retention : Min3Retention)
+    (y : Real) (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (path.reduceAt retention).normalExpr.ArgumentsNonnegative y := by
+  induction path with
+  | here first second third =>
+      exact retention.reduce_normalExpr_argumentsNonnegative
+        first second third y hargs
+  | expanded label body path ih => exact ih hargs
+  | addLeft left right path ih => exact ⟨ih hargs.1, hargs.2⟩
+  | addRight left right path ih => exact ⟨hargs.1, ih hargs.2⟩
+  | min2Left left right path ih => exact ⟨ih hargs.1, hargs.2⟩
+  | min2Right left right path ih =>
+      have hright := ih hargs.2.1
+      exact ⟨hargs.1, hright, hright⟩
+  | minFirst first second third path ih =>
+      exact ⟨ih hargs.1, hargs.2.1, hargs.2.2⟩
+  | minSecond first second third path ih =>
+      exact ⟨hargs.1, ih hargs.2.1, hargs.2.2⟩
+  | minThird first second third path ih =>
+      exact ⟨hargs.1, hargs.2.1, ih hargs.2.2⟩
+
+theorem nodeCount_reduceAt_lt {k : Nat} {tree : ELTree k}
+    (path : Min3Path tree) (retention : Min3Retention)
+    (hretained : retention.retainedCount < 3) :
+    (path.reduceAt retention).nodeCount < tree.nodeCount := by
+  induction path with
+  | here first second third =>
+      exact retention.nodeCount_reduce_lt first second third hretained
+  | expanded label body path ih =>
+      simpa [reduceAt, ELTree.nodeCount] using Nat.add_lt_add_right ih 1
+  | addLeft left right path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | addRight left right path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | min2Left left right path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | min2Right left right path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | minFirst first second third path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | minSecond first second third path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+  | minThird first second third path ih =>
+      simp only [reduceAt, ELTree.nodeCount]
+      omega
+
+end Min3Path
+
 namespace AdvancedOccurrence
+
+def Actionable {k : Nat} {tree : ELTree k}
+    (occurrence : AdvancedOccurrence tree)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
+  occurrence.configuration.minPath.context.HoleCritical
+      occurrence.configuration.minPath.target Phi y /\
+    0 < occurrence.configuration.witnessCount
 
 noncomputable def reduce {k : Nat} {tree : ELTree k}
     (occurrence : AdvancedOccurrence tree)
@@ -347,7 +467,305 @@ theorem reduce_criticalNodeBounds {k : Nat} {tree : ELTree k}
   exact TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_criticalNodeBounds
     occurrence.configuration hpos hmono hbounds hargs
 
+theorem reduce_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (occurrence.reduce Phi y).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  exact TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_normalExpr_eval_eq_of_criticalNodeBounds
+    occurrence.configuration hpos hmono hbounds hargs
+
+theorem reduce_criticalNodeBounds_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (occurrence.reduce Phi y).CriticalNodeBounds Phi y := by
+  exact TerminalPath.AdvancedMinConfiguration.criticalWitnessRetention_reduceAt_criticalNodeBounds_of_criticalNodeBounds
+    occurrence.configuration hpos hmono hbounds hargs
+
+theorem reduce_normalExpr_argumentsNonnegative {k : Nat}
+    {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (occurrence.reduce Phi y).normalExpr.ArgumentsNonnegative y :=
+  occurrence.configuration.minPath.reduceAt_normalExpr_argumentsNonnegative
+    (occurrence.configuration.criticalWitnessRetention Phi y) y hargs
+
+noncomputable def reduceWitness {k : Nat} {tree : ELTree k}
+    (occurrence : AdvancedOccurrence tree) : ELTree k :=
+  occurrence.configuration.minPath.reduceAt
+    occurrence.configuration.witnessRetention
+
+theorem reduceWitness_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    occurrence.reduceWitness.normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  exact TerminalPath.AdvancedMinConfiguration.witnessRetention_reduceAt_normalExpr_eval_eq_of_criticalNodeBounds
+    occurrence.configuration hpos hmono hbounds hargs
+
+theorem reduceWitness_criticalNodeBounds_of_actionable
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y)
+    (hactionable : occurrence.Actionable Phi y) :
+    occurrence.reduceWitness.CriticalNodeBounds Phi y := by
+  exact TerminalPath.AdvancedMinConfiguration.witnessRetention_reduceAt_criticalNodeBounds_of_targetCritical_of_criticalNodeBounds
+    occurrence.configuration hpos hmono hbounds hargs hactionable.1
+
+theorem reduceWitness_normalExpr_argumentsNonnegative
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    (y : Real) (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    occurrence.reduceWitness.normalExpr.ArgumentsNonnegative y :=
+  occurrence.configuration.minPath.reduceAt_normalExpr_argumentsNonnegative
+    occurrence.configuration.witnessRetention y hargs
+
+theorem witnessRetention_retainedCount_lt_of_actionable
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hactionable : occurrence.Actionable Phi y) :
+    occurrence.configuration.witnessRetention.retainedCount < 3 := by
+  rw [occurrence.configuration.witnessRetention_retainedCount]
+  have hpositive : 0 < occurrence.configuration.witnessCount :=
+    hactionable.2
+  by_cases htwo : 2 <= occurrence.configuration.witnessCount
+  · simp [Nat.min_eq_left htwo]
+  · have hone : occurrence.configuration.witnessCount = 1 := by
+      omega
+    simp [hone]
+
+theorem nodeCount_reduceWitness_lt_of_actionable
+    {k : Nat} {tree : ELTree k} (occurrence : AdvancedOccurrence tree)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hactionable : occurrence.Actionable Phi y) :
+    occurrence.reduceWitness.nodeCount < tree.nodeCount :=
+  occurrence.configuration.minPath.nodeCount_reduceAt_lt
+    occurrence.configuration.witnessRetention
+      (occurrence.witnessRetention_retainedCount_lt_of_actionable hactionable)
+
 end AdvancedOccurrence
+
+noncomputable def firstActionableOccurrence {k : Nat} {tree : ELTree k}
+    (occurrences : List (AdvancedOccurrence tree))
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    Option {occurrence : AdvancedOccurrence tree // occurrence.Actionable Phi y} := by
+  classical
+  exact match occurrences with
+  | [] => none
+  | occurrence :: rest =>
+      if h : occurrence.Actionable Phi y then some ⟨occurrence, h⟩
+      else firstActionableOccurrence rest Phi y
+termination_by occurrences.length
+
+noncomputable def findActionableAdvancedOccurrence {k : Nat}
+    (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    Option {occurrence : AdvancedOccurrence tree // occurrence.Actionable Phi y} :=
+  firstActionableOccurrence (advancedOccurrences tree) Phi y
+
+noncomputable def normalizeActionableOne {k : Nat} (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : ELTree k :=
+  match findActionableAdvancedOccurrence tree Phi y with
+  | none => tree
+  | some occurrence => occurrence.1.reduceWitness
+
+theorem normalizeActionableOne_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} (tree : ELTree k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableOne tree Phi y).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  classical
+  unfold normalizeActionableOne
+  split
+  · rfl
+  · exact AdvancedOccurrence.reduceWitness_normalExpr_eval_eq_of_criticalNodeBounds
+      _ hpos hmono hbounds hargs
+
+theorem normalizeActionableOne_criticalNodeBounds
+    {k : Nat} (tree : ELTree k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableOne tree Phi y).CriticalNodeBounds Phi y := by
+  classical
+  generalize hfind : findActionableAdvancedOccurrence tree Phi y = result
+  cases result with
+  | none => simpa [normalizeActionableOne, hfind] using hbounds
+  | some occurrence =>
+      simpa [normalizeActionableOne, hfind] using
+        AdvancedOccurrence.reduceWitness_criticalNodeBounds_of_actionable
+          occurrence.1 hpos hmono hbounds hargs occurrence.2
+
+theorem normalizeActionableOne_normalExpr_argumentsNonnegative
+    {k : Nat} (tree : ELTree k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableOne tree Phi y).normalExpr.ArgumentsNonnegative y := by
+  classical
+  unfold normalizeActionableOne
+  split
+  · exact hargs
+  · exact AdvancedOccurrence.reduceWitness_normalExpr_argumentsNonnegative
+      _ y hargs
+
+noncomputable def normalizeActionableN {k : Nat}
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    Nat -> ELTree k -> ELTree k
+  | 0, tree => tree
+  | steps + 1, tree =>
+      normalizeActionableN Phi y steps (normalizeActionableOne tree Phi y)
+
+theorem normalizeActionableN_normalExpr_argumentsNonnegative
+    {k : Nat} (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (steps : Nat) (tree : ELTree k)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableN Phi y steps tree).normalExpr.ArgumentsNonnegative y := by
+  induction steps generalizing tree with
+  | zero => exact hargs
+  | succ steps ih =>
+      exact ih _ (normalizeActionableOne_normalExpr_argumentsNonnegative
+        tree Phi y hargs)
+
+theorem normalizeActionableN_criticalNodeBounds
+    {k : Nat} {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (steps : Nat) (tree : ELTree k)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableN Phi y steps tree).CriticalNodeBounds Phi y := by
+  induction steps generalizing tree with
+  | zero => exact hbounds
+  | succ steps ih =>
+      exact ih _
+        (normalizeActionableOne_criticalNodeBounds tree hpos hmono hbounds hargs)
+        (normalizeActionableOne_normalExpr_argumentsNonnegative tree Phi y hargs)
+
+theorem normalizeActionableN_normalExpr_eval_eq
+    {k : Nat} {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (steps : Nat) (tree : ELTree k)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionableN Phi y steps tree).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  induction steps generalizing tree with
+  | zero => rfl
+  | succ steps ih =>
+      calc
+        (normalizeActionableN Phi y (steps + 1) tree).normalExpr.eval Phi y =
+            (normalizeActionableN Phi y steps
+              (normalizeActionableOne tree Phi y)).normalExpr.eval Phi y := rfl
+        _ = (normalizeActionableOne tree Phi y).normalExpr.eval Phi y :=
+          ih _
+            (normalizeActionableOne_criticalNodeBounds
+              tree hpos hmono hbounds hargs)
+            (normalizeActionableOne_normalExpr_argumentsNonnegative
+              tree Phi y hargs)
+        _ = tree.normalExpr.eval Phi y :=
+          normalizeActionableOne_normalExpr_eval_eq_of_criticalNodeBounds
+            tree hpos hmono hbounds hargs
+
+noncomputable def normalizeActionable {k : Nat}
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (tree : ELTree k) : ELTree k :=
+  match findActionableAdvancedOccurrence tree Phi y with
+  | none => tree
+  | some occurrence => normalizeActionable Phi y occurrence.1.reduceWitness
+termination_by tree.nodeCount
+decreasing_by
+  exact occurrence.1.nodeCount_reduceWitness_lt_of_actionable occurrence.2
+
+theorem normalizeActionable_normalExpr_argumentsNonnegative
+    {k : Nat} (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (tree : ELTree k) (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionable Phi y tree).normalExpr.ArgumentsNonnegative y := by
+  generalize hfind : findActionableAdvancedOccurrence tree Phi y = result
+  cases result with
+  | none => simpa [normalizeActionable, hfind] using hargs
+  | some occurrence =>
+      rw [normalizeActionable, hfind]
+      exact normalizeActionable_normalExpr_argumentsNonnegative Phi y
+        occurrence.1.reduceWitness
+          (occurrence.1.reduceWitness_normalExpr_argumentsNonnegative y hargs)
+termination_by tree.nodeCount
+decreasing_by
+  exact occurrence.1.nodeCount_reduceWitness_lt_of_actionable occurrence.2
+
+theorem normalizeActionable_criticalNodeBounds
+    {k : Nat} {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (tree : ELTree k) (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionable Phi y tree).CriticalNodeBounds Phi y := by
+  generalize hfind : findActionableAdvancedOccurrence tree Phi y = result
+  cases result with
+  | none => simpa [normalizeActionable, hfind] using hbounds
+  | some occurrence =>
+      rw [normalizeActionable, hfind]
+      exact normalizeActionable_criticalNodeBounds hpos hmono
+        occurrence.1.reduceWitness
+          (occurrence.1.reduceWitness_criticalNodeBounds_of_actionable
+            hpos hmono hbounds hargs occurrence.2)
+          (occurrence.1.reduceWitness_normalExpr_argumentsNonnegative y hargs)
+termination_by tree.nodeCount
+decreasing_by
+  exact occurrence.1.nodeCount_reduceWitness_lt_of_actionable occurrence.2
+
+theorem normalizeActionable_normalExpr_eval_eq
+    {k : Nat} {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (tree : ELTree k) (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeActionable Phi y tree).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  generalize hfind : findActionableAdvancedOccurrence tree Phi y = result
+  cases result with
+  | none => simp [normalizeActionable, hfind]
+  | some occurrence =>
+      rw [normalizeActionable, hfind]
+      calc
+        (normalizeActionable Phi y occurrence.1.reduceWitness).normalExpr.eval
+            Phi y = occurrence.1.reduceWitness.normalExpr.eval Phi y :=
+          normalizeActionable_normalExpr_eval_eq hpos hmono
+            occurrence.1.reduceWitness
+              (occurrence.1.reduceWitness_criticalNodeBounds_of_actionable
+                hpos hmono hbounds hargs occurrence.2)
+              (occurrence.1.reduceWitness_normalExpr_argumentsNonnegative y hargs)
+        _ = tree.normalExpr.eval Phi y :=
+          occurrence.1.reduceWitness_normalExpr_eval_eq_of_criticalNodeBounds
+            hpos hmono hbounds hargs
+termination_by tree.nodeCount
+decreasing_by
+  exact occurrence.1.nodeCount_reduceWitness_lt_of_actionable occurrence.2
+
+theorem findActionableAdvancedOccurrence_normalizeActionable_eq_none
+    {k : Nat} (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (tree : ELTree k) :
+    findActionableAdvancedOccurrence (normalizeActionable Phi y tree) Phi y =
+      none := by
+  generalize hfind : findActionableAdvancedOccurrence tree Phi y = result
+  cases result with
+  | none => rw [normalizeActionable, hfind, hfind]
+  | some occurrence =>
+      rw [normalizeActionable, hfind]
+      exact findActionableAdvancedOccurrence_normalizeActionable_eq_none
+        Phi y occurrence.1.reduceWitness
+termination_by tree.nodeCount
+decreasing_by
+  exact occurrence.1.nodeCount_reduceWitness_lt_of_actionable occurrence.2
 
 noncomputable def normalizeOne {k : Nat} (tree : ELTree k)
     (Phi : TrackedMode k -> Real -> Real) (y : Real) : ELTree k :=
@@ -387,6 +805,45 @@ theorem normalizeOne_criticalNodeBounds {k : Nat} (tree : ELTree k)
   · exact Context.criticalNodeBounds_of_nodeBounds .hole tree Phi y hbounds
   · exact AdvancedOccurrence.reduce_criticalNodeBounds _
       hpos hmono hbounds hargs
+
+theorem normalizeOne_normalExpr_eval_eq_of_criticalNodeBounds
+    {k : Nat} (tree : ELTree k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeOne tree Phi y).normalExpr.eval Phi y =
+      tree.normalExpr.eval Phi y := by
+  classical
+  unfold normalizeOne
+  split
+  · rfl
+  · exact AdvancedOccurrence.reduce_normalExpr_eval_eq_of_criticalNodeBounds _
+      hpos hmono hbounds hargs
+
+theorem normalizeOne_criticalNodeBounds_of_criticalNodeBounds
+    {k : Nat} (tree : ELTree k)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    (hbounds : tree.CriticalNodeBounds Phi y)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeOne tree Phi y).CriticalNodeBounds Phi y := by
+  classical
+  unfold normalizeOne
+  split
+  · exact hbounds
+  · exact AdvancedOccurrence.reduce_criticalNodeBounds_of_criticalNodeBounds _
+      hpos hmono hbounds hargs
+
+theorem normalizeOne_normalExpr_argumentsNonnegative {k : Nat}
+    (tree : ELTree k) (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hargs : tree.normalExpr.ArgumentsNonnegative y) :
+    (normalizeOne tree Phi y).normalExpr.ArgumentsNonnegative y := by
+  classical
+  unfold normalizeOne
+  split
+  · exact hargs
+  · exact AdvancedOccurrence.reduce_normalExpr_argumentsNonnegative _ Phi y hargs
 
 end ELTree
 end KL2003
