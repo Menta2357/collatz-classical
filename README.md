@@ -16,7 +16,8 @@ teoremas que **sí** son demostrables con matemática existente.
 |---|--------|-----------|--------|
 | 1 | Entrada como auditores al CC Challenge | `docs/CC_CHALLENGE_AUDIT_ENTRY_PLAN_v1.md` | ACTIVO |
 | 2 | KL2003: k=2 M1-surrogate over concrete ceil window | `docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md` | THEOREM COMPLETE |
-| 3 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
+| 3 | Auditoria bibliografica Liu 2025, arXiv:2512.13760 | `docs/LIU2025_COUNTING_COLLATZ_NUMBERS_SOURCE_AUDIT_v1.md` | SOURCE AUDIT COMPLETE |
+| 4 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
 
 ## Estado KL2003
 
@@ -37,6 +38,19 @@ Alcance exacto: `k=2` M1-surrogate sobre la ventana concreta
 Esto no es el M1 completo, no es ningun resultado KL2003 high-k (`k=9`
 con `gamma_9 = 0.8168300`, ni `k=11`/`0.84`), no cubre `x` pequeno bajo
 umbral y no es un claim global de Collatz.
+
+## Panorama bibliografico actual
+
+El preprint `arXiv:2512.13760v1`, enviado el `2025-12-15`, reclamo una cota
+`x^0.946`. La version `v2`, enviada el `2025-12-17`, la reemplazo por
+`x^0.3227`. La auditoria reproducible del repositorio
+encuentra blockers independientes en la demostracion v2 y, por tanto, no
+trata `0.3227` como una cota validada ni el `0.946` retirado como estado del
+arte. Esto no prueba que el teorema v2 sea falso.
+
+Para este proyecto, `gamma_11 = 0.8417560` sigue siendo el extremo de la tabla
+computada de KL2003; no se presenta como una imposibilidad para `k > 11` ni
+como un techo matematico global.
 
 ## Principios (heredados del programa anterior)
 

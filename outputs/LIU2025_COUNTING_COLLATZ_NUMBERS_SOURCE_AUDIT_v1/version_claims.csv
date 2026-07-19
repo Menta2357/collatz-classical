@@ -1,0 +1,3 @@
+version,submitted,source_url,source_sha256,headline_exponent,status
+v1,2025-12-15,https://arxiv.org/pdf/2512.13760v1,83ee3067889f9a78aaf8a7c7e3782ab53f417d73ba562c1908358f73dcba1004,0.946,SUPERSEDED_BY_V2
+v2,2025-12-17,https://arxiv.org/pdf/2512.13760v2,9d45249899c2f50b5b3b70ba4f822fba0ec449c01d9d7583ec7beee6a6f53faa,0.3227,CURRENT_VERSION_PROOF_NOT_VALIDATED

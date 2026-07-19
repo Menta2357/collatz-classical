@@ -1,0 +1,9 @@
+finding_id,severity,version,source_lines,finding,evidence
+F1,BLOCKER,v1,100-130,"The all-tuples existence claim fails at l=2, u=(3,1).",V1_LEVEL2_EXISTENCE
+F2,BLOCKER,v2,182-190,The stated w_l condition modulo 3 is impossible after the preceding choice of r_l.,V2_W_DIGIT_MOD3
+F3,BLOCKER,v2,166-203,"The claimed unique parametrization has four level-2 solutions for u=(2,2).",V2_LEVEL2_UNIQUENESS
+F4,BLOCKER,v2,166-169;217-233,"The parametrization assumes every u_j is coprime to 3, while omega counts all positive tuples.",source-domain comparison
+F5,BLOCKER,v2,225-233,"The displayed size estimate with 192^(-l) is false already for l=1, u1=2, v1=8.",V2_SIZE_BOUND_L1
+F6,BLOCKER,v2,238-247,The final chain lowers omega's argument and then compares it to a binomial using the larger n.,statement-level inequality mismatch
+F7,MAJOR,v2,207-212;238-249,"Stirling gives an O(log n) remainder here, not O(1); the (1+o(1)) multiplicative form is unsupported.",stirling_remainder_check.csv
+F8,MAJOR,v2,154;188-200,"Independent index/modulus inconsistencies remain: u1 vs ul, v1 vs vl, level l vs l-1, and 3^l vs 3^(l+1).",direct source comparison

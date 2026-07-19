@@ -1,0 +1,22 @@
+{
+  "blocker_count": 6,
+  "claim_falsity_proved": false,
+  "counterexample_check_count": 4,
+  "counterexample_failure_count": 4,
+  "guardrails": [
+    "NO_CLAIM_THAT_V2_THEOREM_IS_FALSE",
+    "NO_NEW_COLLATZ_BOUND_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "historical_kl2003_record_displaced": false,
+  "major_count": 2,
+  "proof_as_written_validated": false,
+  "run_id": "LIU2025_COUNTING_COLLATZ_NUMBERS_SOURCE_AUDIT_v1",
+  "source_commit": "61ce94aeb4eea653d193a4b4ca5a1990549bafc3",
+  "state_of_art_recalibration": "NO_UPWARD_RECALIBRATION_FROM_2512.13760",
+  "v1_claim": "pi(x) >= x^0.946",
+  "v1_status": "SUPERSEDED_BY_V2",
+  "v2_claim": "pi(x) >= x^0.3227",
+  "v2_status": "CURRENT_VERSION_PROOF_NOT_VALIDATED",
+  "verdict": "V1_0946_WITHDRAWN_V2_03227_PROOF_NOT_VALIDATED"
+}

@@ -1,0 +1,5 @@
+check_id,version,parameters,result,expected_by_statement,observed,pass
+V1_LEVEL2_EXISTENCE,v1,"l=2; u=(3,1)",[],exactly one solution,0 solutions,false
+V2_LEVEL2_UNIQUENESS,v2,"l=2; u=(2,2); each u_j coprime to 3","[(8, 6), (8, 8), (10, 5), (10, 7)]",exactly one solution,4 solutions,false
+V2_W_DIGIT_MOD3,v2,"[(1, 0, [1, 1, 1]), (2, 1, [1, 1, 1])]",all residues are 1 mod 3,a ternary digit w with residue != 1 mod 3,no such w exists,false
+V2_SIZE_BOUND_L1,v2,l=1; u1=2; v1=8,B=85; claimed_rhs=64/3,B <= claimed_rhs,false,false

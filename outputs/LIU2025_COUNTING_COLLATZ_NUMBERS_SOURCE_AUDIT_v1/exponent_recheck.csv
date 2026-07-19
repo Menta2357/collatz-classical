@@ -1,0 +1,3 @@
+version,formula_value,stated_safe_exponent,safe_side_check,status
+v1,0.949955527188,0.946,true,SUPERSEDED_CLAIM_ONLY
+v2,0.322756403360,0.3227,true,NUMERICAL_FORMULA_CHECK_ONLY

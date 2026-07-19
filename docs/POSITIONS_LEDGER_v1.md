@@ -38,6 +38,26 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `ceil`; no es M1 completo, no es un teorema de ventana arbitraria y no es
   un claim global de Collatz.
 
+## Actualizacion 2026-07-19: F2 y auditoria de arXiv:2512.13760
+
+- F2 cerro el piloto generador-verificador k=3 y dejo la ruta high-k como:
+  `NO_GO_EXPLICIT_EL_ENUMERATION_TO_K9_OR_K11`,
+  `CONDITIONAL_GO_TO_K9_LNT_CERTIFICATE_PIPELINE`,
+  `K11_DEFERRED_UNTIL_K9_PIPELINE_PASS`.
+- La generalizacion semantica no se clasifica como un unico lema: requiere
+  una cadena de modulos general-k antes de poder cerrar un teorema `piStar`
+  para k=3 o autorizar k=9.
+- La auditoria primaria de `arXiv:2512.13760` establece que `x^0.946` solo
+  aparecio en v1 y fue retirado en v2. La version actual reclama `x^0.3227`.
+- El proof audit v2 encontro contraejemplos pequenos y blockers independientes;
+  clasificacion: `V2_PROOF_AS_WRITTEN_NOT_VALIDATED`, sin afirmar que el
+  teorema v2 sea falso.
+- Consecuencia bibliografica: el preprint no desplaza el benchmark historico
+  `0.84` citado por su propia v2. `gamma_11 = 0.8417560` se describe solo como
+  extremo de la tabla KL2003, no como techo global ni imposibilidad para k>11.
+- El carril A conserva una unica fecha operativa absoluta:
+  `2026-07-21 01:21 CEST`.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
@@ -47,11 +67,11 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - Muro identificado: cota de decaimiento uniforme de Syracuse.
   ALL_K / MEASURE_TRANSFER / SUPERMARTINGALE / COLLATZ = OPEN, NOT_CLAIMED.
 
-## Pendiente de decision (se resuelve con datos, no ahora)
+## Pendiente de decision
 
 - Asignacion de tiempo tras Fase 1 del carril 1 (segunda auditoria vs
   KL2003 vs contribucion a Terras).
-- Techo del carril 2: M3 (0.84) o M2, segun tarea F2 del feasibility.
-  Actualizacion fuente 2026-07-16: el target `0.84` corresponde a k=11
-  (`gamma_11 = 0.8417560`); k=9 es estacion high-k intermedia
-  (`gamma_9 = 0.8168300`).
+- F2 ya resolvio que k=9 solo avanza bajo `CONDITIONAL_GO`: primero debe
+  formalizarse y validarse la cadena general-k usando k=3 como banco de
+  integracion. k=11 permanece diferido hasta que la ruta k=9 pase sus
+  mediciones de certificado y presupuesto de kernel.
