@@ -57,6 +57,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   extremo de la tabla KL2003, no como techo global ni imposibilidad para k>11.
 - El carril A conserva una unica fecha operativa absoluta:
   `2026-07-21 01:21 CEST`.
+- El doblete de escritura queda completo como borrador interno:
+  `docs/ELIAHOU1993_CC_CHALLENGE_AUDIT_REPORT_DRAFT_v1.md` y
+  `docs/KL2003_AUDITABLE_GENERATOR_VERIFIER_METHOD_PAPER_DRAFT_v1.md`.
+  El primero no se publica antes de resolver el protocolo author-first; el
+  segundo no se presenta como paper enviado.
+- La cadena semantica general-k queda disenada como cinco modulos separados:
+  semantica/filas originales, eliminacion EL, transferencia de factibilidad,
+  induccion retardada generica y composicion concreta. Contrato completo en
+  `docs/KL2003_GENERAL_K_SEMANTIC_CHAIN_SCOPING_v1.md`.
+- La nueva cadena propone una ventana `Nat.floor` fiel al enunciado fuente;
+  esa politica sigue pendiente de prueba y no modifica el teorema k=2
+  existente sobre `Nat.ceil`.
+- El certificado k=3 sigue clasificado como verificado sin teorema `piStar`.
+  k=3 sera el primer consumidor de la cadena; solo despues se medira k=9.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
