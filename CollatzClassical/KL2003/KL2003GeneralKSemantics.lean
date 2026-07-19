@@ -29,7 +29,7 @@ def GeneralKClassRootsNonempty (k : Nat) : Prop :=
 
 theorem generalK_T_two_pow {n : Nat} (hn : 0 < n) :
     T (2 ^ n) = 2 ^ (n - 1) := by
-  obtain ⟨r, rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : n != 0)
+  obtain ⟨r, rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : n ≠ 0)
   simp [T, pow_succ, Nat.add_sub_cancel]
 
 theorem generalK_iterate_T_two_pow_of_le {n q : Nat}
@@ -38,13 +38,12 @@ theorem generalK_iterate_T_two_pow_of_le {n q : Nat}
   induction q generalizing n with
   | zero => simp
   | succ q ih =>
-      have hn : 0 < n := by omega
       rw [Function.iterate_succ_apply']
-      rw [generalK_T_two_pow hn]
-      have hq' : q <= n - 1 := by omega
+      have hq' : q <= n := by omega
       rw [ih hq']
+      have hnq : 0 < n - q := by omega
+      rw [generalK_T_two_pow hnq]
       congr 1
-      omega
 
 theorem generalK_T_le_two_of_le_two {n : Nat} (hn : n <= 2) :
     T n <= 2 := by
@@ -230,11 +229,25 @@ def liftTrackedMode {k : Nat} (hk : 1 <= k)
     (m : TrackedMode k) (j : Fin 3) : TrackedMode (k + 1) := by
   refine ⟨⟨m.1.1 + j.1 * generalKModulus k, ?_⟩, ?_⟩
   · have hm := m.1.2
-    have hj := j.2
-    simp only [generalKModulus, pow_succ]
-    interval_cases j.1 <;> omega
+    have hj : j.1 <= 2 := by omega
+    have hjmul :
+        j.1 * generalKModulus k <= 2 * generalKModulus k := by
+      simpa [Nat.mul_comm] using Nat.mul_le_mul_right (generalKModulus k) hj
+    calc
+      m.1.1 + j.1 * generalKModulus k <
+          generalKModulus k + j.1 * generalKModulus k :=
+        Nat.add_lt_add_right hm _
+      _ <= generalKModulus k + 2 * generalKModulus k :=
+        Nat.add_le_add_left hjmul _
+      _ = generalKModulus (k + 1) := by
+        rw [generalKModulus, generalKModulus, pow_succ]
+        ring
   · obtain ⟨r, rfl⟩ := Nat.exists_eq_add_of_le hk
-    simpa [generalKModulus, pow_succ, Nat.add_mod] using m.2
+    have hpow : generalKModulus (1 + r) % 3 = 0 := by
+      rw [generalKModulus, show 1 + r = r + 1 by omega, pow_succ]
+      simp
+    rw [Nat.add_mod, Nat.mul_mod, hpow, m.2]
+    norm_num
 
 theorem liftTrackedMode_value {k : Nat} (hk : 1 <= k)
     (m : TrackedMode k) (j : Fin 3) :
@@ -257,7 +270,8 @@ def classRootOfLift {k : Nat} (hk : 1 <= k)
     _ = (m.1.1 + j.1 * generalKModulus k) % generalKModulus k := by
       rw [hchild, liftTrackedMode_value]
     _ = m.1.1 := by
-      rw [Nat.add_mul_mod_self_left, Nat.mod_eq_of_lt m.1.2]
+      rw [Nat.mul_comm j.1, Nat.add_mul_mod_self_left,
+        Nat.mod_eq_of_lt m.1.2]
 
 def classRootLiftIndex {k : Nat} (a : Nat) : Fin 3 :=
   ⟨(a / generalKModulus k) % 3, Nat.mod_lt _ (by norm_num)⟩
@@ -300,7 +314,7 @@ def classRootAtLift {k : Nat} (hk : 1 <= k)
   rw [liftTrackedMode_value]
   exact classRoot_parent_residue_at_lift m a
 
-def sourcePhiK_liftMin3 {k : Nat} (hk : 1 <= k)
+noncomputable def sourcePhiK_liftMin3 {k : Nat} (hk : 1 <= k)
     (m : TrackedMode k) (y : Real) : Real :=
   min (sourcePhiK (liftTrackedMode hk m 0) y)
     (min (sourcePhiK (liftTrackedMode hk m 1) y)

@@ -4,6 +4,7 @@ namespace CollatzClassical
 namespace KL2003
 
 #print axioms reachesWithin_self
+#print axioms reachesWithin_root_le_window
 #print axioms reachesWithin_window_mono
 #print axioms reachesWithin_append_path
 #print axioms mem_piStarPropFinset_iff
@@ -27,6 +28,8 @@ namespace KL2003
 #print axioms piStarPropFinset_eq_piStarFinset
 #print axioms piStarFinset_subset_window
 #print axioms piStar_window_mono
+#print axioms notInCycle_of_iterate_maps_to_notInCycle
+#print axioms piStar_two_mul_root_transfer_nat
 
 end KL2003
 end CollatzClassical

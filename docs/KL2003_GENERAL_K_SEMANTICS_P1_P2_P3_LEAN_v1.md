@@ -24,6 +24,17 @@ CollatzClassical/KL2003/KL2003M0BReachabilityAPI.lean
 `KL2003ConcretePhiRealization.lean` now consumes that lower-layer theorem
 instead of maintaining a duplicate.
 
+The same API now owns the route-closure and parity-root transfer used by the
+generic D1 normalization:
+
+```lean
+notInCycle_of_iterate_maps_to_notInCycle
+piStar_two_mul_root_transfer_nat
+```
+
+The latter proves the source-safe member-wise direction
+`piStar (2*c) xLift <= piStar c x` whenever `xLift <= x`.
+
 ## Indexed semantics
 
 The module defines:
@@ -139,6 +150,13 @@ GENERAL_K_SATISFIES_IK_CONTRACT
 K2_V3_UNPADDED_REGRESSION
 ```
 
+The member-wise parity transfer required by D1 is proved. The exact infimum
+identity printed as equation (200), which starts from a mode congruent to
+`1 mod 3`, is not yet claimed: the current indexed `sourcePhiK` deliberately
+contains only tracked modes congruent to `2 mod 3`. Its reverse inequality
+must be derived before the index type is widened or an equality theorem is
+introduced.
+
 ## Classification
 
 ```text
@@ -150,6 +168,8 @@ K3_SOURCE_P1_PROVED
 K3_SOURCE_P2_PROVED
 GENERAL_K_P3_PARTITION_PROVED
 K2_TO_K3_P3_PROVED
+GENERAL_K_PARITY_MEMBER_TRANSFER_PROVED
+SOURCE_EQUATION_200_EQUALITY_NOT_YET_PROVED
 GENERAL_K_SEMANTICS_AXIOM_AUDIT_PASS
 GENERAL_K_MODULE_1_NOT_YET_COMPLETE
 K3_PISTAR_THEOREM_NOT_YET_PROVED

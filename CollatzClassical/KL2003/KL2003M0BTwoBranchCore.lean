@@ -11,12 +11,6 @@ two-branch rows.  It contains no scaling, rounding ledger, LP data, `Real`,
 namespace CollatzClassical
 namespace KL2003
 
-theorem reachesWithin_root_le_window {a x n : Nat}
-    (h : ReachesWithin a x n) :
-    a <= x := by
-  rcases h with ⟨k, hwin, hhit⟩
-  simpa [hhit] using hwin k le_rfl
-
 theorem two_branch_advanced_child_maps_to_root {a c : Nat}
     (hc : 3 * c + 1 = 2 * a) :
     T c = a := by

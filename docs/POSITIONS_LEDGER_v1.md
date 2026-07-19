@@ -82,7 +82,10 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - P3 ya es una igualdad Lean de infimos derivada de la particion ternaria de
   las poblaciones de raices, no una hipotesis de puente. La instancia de nivel
   2 a nivel 3 queda cerrada con los testigos anteriores. El Modulo 1 sigue
-  abierto en normalizacion paritaria y filas D1/D2/D3 generales.
+  abierto en la igualdad paritaria fuente (200) y filas D1/D2/D3 generales.
+  La transferencia member-wise segura `piStar (2c) <= piStar c` ya se movio a
+  M0B y esta auditada; no se promociona a igualdad de infimos sin probar la
+  direccion inversa.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

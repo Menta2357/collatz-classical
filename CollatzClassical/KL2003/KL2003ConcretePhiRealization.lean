@@ -351,23 +351,6 @@ theorem row22_parity_lift_route_to_root {a : Nat}
     _ = T (row22AdvancedChild a) := by rw [row22_parity_lift_maps_to_child]
     _ = a := row22_advanced_child_maps_to_root ha
 
-theorem notInCycle_of_iterate_maps_to_notInCycle {a b k : Nat}
-    (ha : NotInCycle a)
-    (hmap : T^[k] b = a) :
-    NotInCycle b := by
-  intro q hq hcycle
-  have hcycle_a : T^[q] a = a := by
-    calc
-      T^[q] a = T^[q] (T^[k] b) := by rw [hmap]
-      _ = T^[q + k] b := by
-        exact (Function.iterate_add_apply T q k b).symm
-      _ = T^[k + q] b := by rw [Nat.add_comm]
-      _ = T^[k] (T^[q] b) := by
-        rw [Function.iterate_add_apply]
-      _ = T^[k] b := by rw [hcycle]
-      _ = a := hmap
-  exact (ha q hq) hcycle_a
-
 theorem row22_advanced_child_notInCycle {a : Nat}
     (ha_mod : a % 9 = 2)
     (ha_cycle : NotInCycle a) :
@@ -483,23 +466,7 @@ theorem row22_parity_concreteWindow (z : Real) (c : Nat) :
 theorem row22_parity_piStar_transfer_nat {c xLift x : Nat}
     (hxLift : xLift <= x) :
     piStar (2 * c) xLift <= piStar c x := by
-  dsimp [piStar]
-  refine Finset.card_le_card ?_
-  intro n hn
-  have hm :=
-    (mem_piStarFinset_reachesWithin_iff
-      (a := 2 * c) (x := xLift) (n := n)).1 hn
-  have hroot : 2 * c <= xLift :=
-    reachesWithin_root_le_window hm.2.2
-  have h2cx : 2 * c <= x := le_trans hroot hxLift
-  have hcx : c <= x := by omega
-  have hreach :
-      ReachesWithin c x n :=
-    reachesWithin_append_path
-      (reachesWithin_window_mono hm.2.2 hxLift) le_rfl
-      (two_branch_child_path_to_root (a := c) (x := x) h2cx hcx)
-  rw [mem_piStarFinset_reachesWithin_iff]
-  exact ⟨le_trans hm.1 hxLift, hm.2.1, hreach⟩
+  exact piStar_two_mul_root_transfer_nat hxLift
 
 theorem row22_parity_piStar_transfer (z : Real) (c : Nat) :
     (piStar (2 * c) (concreteWindow (z - 1) (2 * c)) : Real) <=

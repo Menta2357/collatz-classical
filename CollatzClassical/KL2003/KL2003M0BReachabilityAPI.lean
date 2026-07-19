@@ -21,6 +21,12 @@ def PathWithin (src dst x len : Nat) : Prop :=
   (∀ j, j <= len -> T^[j] src <= x) ∧
     T^[len] src = dst
 
+theorem reachesWithin_root_le_window {a x n : Nat}
+    (h : ReachesWithin a x n) :
+    a <= x := by
+  rcases h with ⟨k, hwin, hhit⟩
+  simpa [hhit] using hwin k le_rfl
+
 -- Auxiliary Prop-view finset for M0B reasoning.  The primary validated
 -- definition remains `piStarFinset` from M0A.
 noncomputable def piStarPropFinset (a x : Nat) : Finset Nat := by
@@ -353,6 +359,53 @@ theorem piStar_window_mono {a x1 x2 : Nat}
     piStar a x1 <= piStar a x2 := by
   dsimp [piStar]
   exact Finset.card_le_card (piStarFinset_subset_window (a := a) hx)
+
+theorem notInCycle_of_iterate_maps_to_notInCycle {a b k : Nat}
+    (ha : NotInCycle a)
+    (hmap : T^[k] b = a) :
+    NotInCycle b := by
+  intro q hq hcycle
+  have hcycle_a : T^[q] a = a := by
+    calc
+      T^[q] a = T^[q] (T^[k] b) := by rw [hmap]
+      _ = T^[q + k] b := by
+        exact (Function.iterate_add_apply T q k b).symm
+      _ = T^[k + q] b := by rw [Nat.add_comm]
+      _ = T^[k] (T^[q] b) := by
+        rw [Function.iterate_add_apply]
+      _ = T^[k] b := by rw [hcycle]
+      _ = a := hmap
+  exact (ha q hq) hcycle_a
+
+theorem piStar_two_mul_root_transfer_nat {c xLift x : Nat}
+    (hxLift : xLift <= x) :
+    piStar (2 * c) xLift <= piStar c x := by
+  dsimp [piStar]
+  refine Finset.card_le_card ?_
+  intro n hn
+  have hm :=
+    (mem_piStarFinset_reachesWithin_iff
+      (a := 2 * c) (x := xLift) (n := n)).1 hn
+  have hroot : 2 * c <= xLift :=
+    reachesWithin_root_le_window hm.2.2
+  have h2cx : 2 * c <= x := le_trans hroot hxLift
+  have hcx : c <= x := by omega
+  have hpath : PathWithin (2 * c) c x 1 := by
+    constructor
+    · intro j hj
+      cases j with
+      | zero => simpa using h2cx
+      | succ j =>
+          have hj0 : j = 0 := by omega
+          simpa [hj0, Function.iterate_one, T] using hcx
+    · simp [Function.iterate_one, T]
+  have hreach :
+      ReachesWithin c x n :=
+    reachesWithin_append_path
+      (reachesWithin_window_mono hm.2.2 hxLift) le_rfl
+      hpath
+  rw [mem_piStarFinset_reachesWithin_iff]
+  exact ⟨le_trans hm.1 hxLift, hm.2.1, hreach⟩
 
 end KL2003
 end CollatzClassical
