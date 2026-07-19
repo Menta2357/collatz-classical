@@ -212,6 +212,12 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   no puede permanecer no negativa. Esto no prueba aun terminacion: sigue
   faltando la correspondencia autosimilar que convierte subarboles recurrentes
   en un unico incremento fijo, ademas de la unicidad respecto del orden.
+- La parte local de esa correspondencia tambien esta cerrada. Una traslacion
+  simbolica conserva modos, se suma a todos los shifts y conmuta exactamente
+  con `frontierExpr`, `normalExpr`, `splitTopExpr` y `sourceSplitTree`; la
+  evaluacion trasladada en `y` coincide con la original en `y + delta`. Falta
+  iterar esta equivariancia sobre el subarbol completamente expandido y enlazar
+  las copias recurrentes extraidas por la subsecuencia finita.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

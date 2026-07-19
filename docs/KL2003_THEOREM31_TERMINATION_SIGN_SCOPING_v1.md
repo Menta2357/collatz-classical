@@ -77,7 +77,11 @@ list without assuming the missing correspondence:
 
 It also proves directly that `beta_2 < beta_1` and
 `delta = beta_2 - beta_1` imply `delta < 0`. The self-similar subtree
-correspondence needed to obtain a fixed increment remains open.
+correspondence needed to obtain a fixed increment remains open. Its local
+algebraic component is now proved separately: translating a root label by a
+symbolic shift commutes with one complete source D1/D2/D3 split and with both
+tree projections. Iterating this equivariance over the full recurrent subtree
+is the remaining correspondence step.
 
 ## Current verdict
 
@@ -86,6 +90,7 @@ THEOREM31_SOURCE_SIGN_INCONSISTENCY_RECORDED
 THEOREM31_DELTA_NORMALIZATION_PROPOSED_NEGATIVE
 THEOREM31_FINITE_MODE_RECURRENCE_PROVED
 THEOREM31_FIXED_NEGATIVE_INCREMENT_CONTRADICTION_PROVED
+THEOREM31_LOCAL_SOURCE_SPLIT_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_SELF_SIMILARITY_LEMMA_REQUIRED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
