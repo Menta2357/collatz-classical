@@ -182,6 +182,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   esa politica igualdad exacta del valor y preservacion de (305). El blocker
   inmediato pasa a ser el normalizador iterado: localizar el siguiente paso,
   transportar las hipotesis estructurales y terminar.
+- El primer paso del normalizador general-k ya esta construido sin una nueva
+  interfaz asumida. Un zipper tipado localiza deterministicamente el siguiente
+  split advanced, levanta sus rutas y su `AdvancedMinConfiguration` por el
+  contexto exterior, y aplica la politica canonica ya auditada. Lean prueba
+  igualdad exacta del valor normal y preservacion de `CriticalNodeBounds`.
+  La frontera de iteracion queda aislada: el paso actual consume `NodeBounds`,
+  mientras su salida conserva la version source-faithful `CriticalNodeBounds`;
+  falta fortalecer el consumidor a esa premisa antes de iterar.
 - La prueba fuente de terminacion de Theorem 3.1 contiene una inconsistencia
   de signo: despues de `beta_1 > beta_2 > ...` declara
   `delta = beta_2 - beta_1 > 0`, aunque la conclusion de negatividad requiere
