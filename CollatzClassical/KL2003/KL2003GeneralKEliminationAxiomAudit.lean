@@ -19,9 +19,14 @@ namespace KL2003
 #print axioms ELExpr.shiftBy_eval
 #print axioms splitTopExpr_eval_le_sourceLeaf
 #print axioms ELExpr.replaceLeaves_eval_le
+#print axioms ELExpr.CriticalAssignment.selectedExpr_eval_eq
+#print axioms ELExpr.CriticalAssignment.exists_isCritical
+#print axioms ELExpr.CriticalAssignment.selectedExpr_argumentsNonnegative
 #print axioms ELExpr.eval_pos
+#print axioms ELExpr.CriticalAssignment.selectedExpr_eval_pos
 #print axioms deletionWitness_critical_sum_contradiction
 #print axioms deletionWitness_excludes_critical_sum
+#print axioms deletionWitness_excludes_critical_assignment
 
 end KL2003
 end CollatzClassical

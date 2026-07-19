@@ -106,8 +106,13 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   argumentos no negativos son estrictamente positivas, y un ancestro del
   mismo modo a shift menor contradice cualquier desigualdad critica que
   intente pagar `hoja + subarbol companero positivo` con ese ancestro. Sigue
-  abierto construir el contexto de asignacion critica que entrega esas
-  premisas en cada deletion, asi como la preservacion global y la terminacion.
+  abierto construir el contexto de caminos que entrega esas premisas en cada
+  deletion, asi como la preservacion global y la terminacion.
+- Las asignaciones criticas ya son objetos Lean sobre el AST nested: conservan
+  ambos hijos de una suma, eligen un brazo que alcanza cada minimo, existen
+  para toda expresion finita y su expresion seleccionada evalua exactamente al
+  termino original. La contradiccion de deletion ya consume este objeto real;
+  falta el invariante de caminos internos equivalente a la ecuacion (305).
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

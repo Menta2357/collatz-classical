@@ -86,6 +86,31 @@ The generic replacement theorem lifts such leaf inequalities through any
 nested combination of sums and minima. Therefore the split substep of
 Theorem 3.2 is closed independently of deletion.
 
+## Critical assignments
+
+The source notion of a critical assignment is represented directly over the
+nested expression syntax:
+
+```lean
+ELExpr.CriticalAssignment
+ELExpr.CriticalAssignment.IsCritical
+ELExpr.CriticalAssignment.selectedExpr
+```
+
+An assignment retains both children of every sum and chooses one child of
+each `min3`. `IsCritical` requires the chosen child to attain the minimum.
+Lean proves that every finite EL expression has such an assignment and that
+its selected expression evaluates exactly to the original nested expression:
+
+```lean
+ELExpr.CriticalAssignment.exists_isCritical
+ELExpr.CriticalAssignment.selectedExpr_eval_eq
+```
+
+Nonnegative arguments also pass from the full expression to the selected
+subexpression, so positivity applies to the actual companion contribution of
+a critical assignment rather than to an untracked abstract summand.
+
 ## Deletion witness vocabulary
 
 `ELLeafState` records a leaf, its principal ancestors, and its status.
@@ -104,6 +129,7 @@ ELExpr.ArgumentsNonnegative
 ELExpr.eval_pos
 deletionWitness_critical_sum_contradiction
 deletionWitness_excludes_critical_sum
+deletionWitness_excludes_critical_assignment
 ```
 
 For an expression whose shifted arguments stay in the nonnegative region,
@@ -115,9 +141,11 @@ ancestor. This proves the algebraic contradiction at the heart of the source
 critical-assignment argument.
 
 This is still not the complete semantic deletion theorem. The remaining lift
-must define the source critical assignment and prove that every deletion
-context supplies the companion subtree, its nonnegative arguments, and the
-critical sum inequality without assuming the desired preservation theorem.
+must enrich the expression/tree connection with internal principal-node paths
+and prove the invariant corresponding to source equation (305): every
+critical assignment passing through such a node is bounded by the node value.
+That invariant must supply the companion subtree and critical sum inequality
+without assuming the desired preservation theorem.
 
 ## Verification
 
@@ -137,7 +165,7 @@ EL_WELL_FORMEDNESS_PRESERVATION
 DELETION_NEVER_REMOVES_ALL_MIN_CHILDREN
 EL_TERMINATION
 EL_ORDER_INDEPENDENCE_OR_CANONICAL_NORMALIZATION
-CRITICAL_ASSIGNMENT_CONTEXT_CONSTRUCTION
+CRITICAL_ASSIGNMENT_PATH_CONTEXT_INVARIANT
 CRITICAL_ASSIGNMENT_DELETION_PRESERVATION
 SATISFIES_EL_OF_SATISFIES_IK
 K2_FIGURE_A1_REGRESSION
@@ -154,10 +182,14 @@ GENERAL_K_TOP_LEVEL_ROW_EXPRESSIONS_DEFINED
 GENERAL_K_TOP_LEVEL_ROW_EXPRESSION_SEMANTICS_PROVED
 GENERAL_K_EL_SPLIT_EXPRESSION_DEFINED
 GENERAL_K_EL_SPLIT_SEMANTIC_PRESERVATION_PROVED
+EL_CRITICAL_ASSIGNMENT_DEFINED
+EL_CRITICAL_ASSIGNMENT_EXISTS
+EL_CRITICAL_ASSIGNMENT_EVAL_EXACT
 EL_DELETION_WITNESS_DEFINED
 EL_DELETION_MONOTONICITY_COMPONENT_PROVED
 EL_EXPRESSION_POSITIVITY_PROVED
 EL_DELETION_CRITICAL_SUM_CONTRADICTION_PROVED
+EL_DELETION_CRITICAL_ASSIGNMENT_CONTRADICTION_PROVED
 GENERAL_K_ELIMINATION_FOUNDATION_AXIOM_AUDIT_PASS
 EL_TERMINATION_NOT_YET_PROVED
 EL_SEMANTIC_PRESERVATION_NOT_YET_PROVED

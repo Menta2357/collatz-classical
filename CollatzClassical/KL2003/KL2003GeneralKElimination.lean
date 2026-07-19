@@ -396,6 +396,140 @@ def ELExpr.ArgumentsNonnegative {k : Nat} (y : Real) : ELExpr k -> Prop
       first.ArgumentsNonnegative y /\ second.ArgumentsNonnegative y /\
         third.ArgumentsNonnegative y
 
+inductive ELExpr.CriticalAssignment {k : Nat} : ELExpr k -> Type
+  | leaf (label : ELLabel k) : CriticalAssignment (.leaf label)
+  | add (left right : ELExpr k)
+      (leftChoice : CriticalAssignment left)
+      (rightChoice : CriticalAssignment right) :
+      CriticalAssignment (.add left right)
+  | minFirst (first second third : ELExpr k)
+      (choice : CriticalAssignment first) :
+      CriticalAssignment (.min3 first second third)
+  | minSecond (first second third : ELExpr k)
+      (choice : CriticalAssignment second) :
+      CriticalAssignment (.min3 first second third)
+  | minThird (first second third : ELExpr k)
+      (choice : CriticalAssignment third) :
+      CriticalAssignment (.min3 first second third)
+
+namespace ELExpr.CriticalAssignment
+
+def selectedExpr {k : Nat} {expr : ELExpr k}
+    (assignment : CriticalAssignment expr) : ELExpr k :=
+  match assignment with
+  | .leaf label => .leaf label
+  | .add _ _ leftChoice rightChoice =>
+      .add leftChoice.selectedExpr rightChoice.selectedExpr
+  | .minFirst _ _ _ choice => choice.selectedExpr
+  | .minSecond _ _ _ choice => choice.selectedExpr
+  | .minThird _ _ _ choice => choice.selectedExpr
+
+def IsCritical {k : Nat} {expr : ELExpr k}
+    (assignment : CriticalAssignment expr)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) : Prop :=
+  match assignment with
+  | .leaf _ => True
+  | .add _ _ leftChoice rightChoice =>
+      leftChoice.IsCritical Phi y /\ rightChoice.IsCritical Phi y
+  | .minFirst first second third choice =>
+      choice.IsCritical Phi y /\
+        first.eval Phi y <= second.eval Phi y /\
+        first.eval Phi y <= third.eval Phi y
+  | .minSecond first second third choice =>
+      choice.IsCritical Phi y /\
+        second.eval Phi y <= first.eval Phi y /\
+        second.eval Phi y <= third.eval Phi y
+  | .minThird first second third choice =>
+      choice.IsCritical Phi y /\
+        third.eval Phi y <= first.eval Phi y /\
+        third.eval Phi y <= second.eval Phi y
+
+theorem selectedExpr_eval_eq {k : Nat} {expr : ELExpr k}
+    (assignment : CriticalAssignment expr)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real)
+    (hcritical : assignment.IsCritical Phi y) :
+    assignment.selectedExpr.eval Phi y = expr.eval Phi y := by
+  induction assignment with
+  | leaf => rfl
+  | add left right leftChoice rightChoice ihLeft ihRight =>
+      simp only [selectedExpr, ELExpr.eval]
+      rw [ihLeft hcritical.1, ihRight hcritical.2]
+  | minFirst first second third choice ih =>
+      simp only [selectedExpr, ELExpr.eval]
+      rw [ih hcritical.1]
+      exact (min_eq_left (le_min hcritical.2.1 hcritical.2.2)).symm
+  | minSecond first second third choice ih =>
+      simp only [selectedExpr, ELExpr.eval]
+      rw [ih hcritical.1]
+      symm
+      calc
+        min (first.eval Phi y) (min (second.eval Phi y) (third.eval Phi y)) =
+            min (second.eval Phi y) (third.eval Phi y) :=
+          min_eq_right (le_trans (min_le_left _ _) hcritical.2.1)
+        _ = second.eval Phi y := min_eq_left hcritical.2.2
+  | minThird first second third choice ih =>
+      simp only [selectedExpr, ELExpr.eval]
+      rw [ih hcritical.1]
+      symm
+      calc
+        min (first.eval Phi y) (min (second.eval Phi y) (third.eval Phi y)) =
+            min (second.eval Phi y) (third.eval Phi y) :=
+          min_eq_right (le_trans (min_le_right _ _) hcritical.2.1)
+        _ = third.eval Phi y := min_eq_right hcritical.2.2
+
+theorem exists_isCritical {k : Nat} (expr : ELExpr k)
+    (Phi : TrackedMode k -> Real -> Real) (y : Real) :
+    exists assignment : CriticalAssignment expr,
+      assignment.IsCritical Phi y := by
+  induction expr with
+  | leaf label => exact ⟨.leaf label, trivial⟩
+  | add left right ihLeft ihRight =>
+      rcases ihLeft with ⟨leftChoice, hleft⟩
+      rcases ihRight with ⟨rightChoice, hright⟩
+      exact ⟨.add left right leftChoice rightChoice, hleft, hright⟩
+  | min3 first second third ihFirst ihSecond ihThird =>
+      rcases ihFirst with ⟨firstChoice, hfirst⟩
+      rcases ihSecond with ⟨secondChoice, hsecond⟩
+      rcases ihThird with ⟨thirdChoice, hthird⟩
+      by_cases hfirstMin :
+          first.eval Phi y <= second.eval Phi y /\
+            first.eval Phi y <= third.eval Phi y
+      · exact ⟨.minFirst first second third firstChoice, hfirst, hfirstMin⟩
+      by_cases hsecondMin :
+          second.eval Phi y <= first.eval Phi y /\
+            second.eval Phi y <= third.eval Phi y
+      · exact ⟨.minSecond first second third secondChoice, hsecond, hsecondMin⟩
+      · refine ⟨.minThird first second third thirdChoice, hthird, ?_, ?_⟩
+        · by_contra hnot
+          have hfirstLe : first.eval Phi y <= third.eval Phi y :=
+            le_of_not_ge hnot
+          have hsecondLt : second.eval Phi y < first.eval Phi y := by
+            by_contra hsecondNotLt
+            exact hsecondMin ⟨le_of_not_gt hsecondNotLt,
+              le_trans (le_of_not_gt hsecondNotLt) hfirstLe⟩
+          exact hfirstMin ⟨le_of_lt hsecondLt, hfirstLe⟩
+        · by_contra hnot
+          have hsecondLe : second.eval Phi y <= third.eval Phi y :=
+            le_of_not_ge hnot
+          have hfirstLt : first.eval Phi y < second.eval Phi y := by
+            by_contra hfirstNotLt
+            exact hfirstMin ⟨le_of_not_gt hfirstNotLt,
+              le_trans (le_of_not_gt hfirstNotLt) hsecondLe⟩
+          exact hsecondMin ⟨le_of_lt hfirstLt, hsecondLe⟩
+
+theorem selectedExpr_argumentsNonnegative {k : Nat} {expr : ELExpr k}
+    (assignment : CriticalAssignment expr) {y : Real}
+    (hargs : expr.ArgumentsNonnegative y) :
+    assignment.selectedExpr.ArgumentsNonnegative y := by
+  induction assignment with
+  | leaf => exact hargs
+  | add _ _ _ _ ihLeft ihRight => exact ⟨ihLeft hargs.1, ihRight hargs.2⟩
+  | minFirst _ _ _ _ ih => exact ih hargs.1
+  | minSecond _ _ _ _ ih => exact ih hargs.2.1
+  | minThird _ _ _ _ ih => exact ih hargs.2.2
+
+end ELExpr.CriticalAssignment
+
 theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
     {Phi : TrackedMode k -> Real -> Real} {y : Real}
     (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y) :
@@ -407,6 +541,14 @@ theorem ELExpr.eval_pos {k : Nat} (expr : ELExpr k)
   | min3 first second third ihFirst ihSecond ihThird =>
       exact lt_min (ihFirst hargs.1)
         (lt_min (ihSecond hargs.2.1) (ihThird hargs.2.2))
+
+theorem ELExpr.CriticalAssignment.selectedExpr_eval_pos {k : Nat}
+    {expr : ELExpr k} (assignment : CriticalAssignment expr)
+    {Phi : TrackedMode k -> Real -> Real} {y : Real}
+    (hpos : PositivePhi Phi) (hargs : expr.ArgumentsNonnegative y) :
+    0 < assignment.selectedExpr.eval Phi y :=
+  assignment.selectedExpr.eval_pos hpos
+    (assignment.selectedExpr_argumentsNonnegative hargs)
 
 theorem deletionWitness_critical_sum_contradiction {k : Nat}
     {Phi : TrackedMode k -> Real -> Real}
@@ -448,6 +590,27 @@ theorem deletionWitness_excludes_critical_sum {k : Nat}
   rcases hwitness.2 with ⟨ancestor, hmem, hmode, hshift⟩
   exact deletionWitness_critical_sum_contradiction hpos hmono hmem hmode
     hshift hargs (hcritical ancestor hmem hmode hshift)
+
+theorem deletionWitness_excludes_critical_assignment {k : Nat}
+    {Phi : TrackedMode k -> Real -> Real}
+    (hpos : PositivePhi Phi) (hmono : MonotonePhi Phi)
+    {y : Real} {leaf : ELLeafState k} {companion : ELExpr k}
+    (hwitness : HasDeletionWitness leaf)
+    (assignment : ELExpr.CriticalAssignment companion)
+    (hassignment : assignment.IsCritical Phi y)
+    (hargs : companion.ArgumentsNonnegative y)
+    (hcritical : forall ancestor,
+      ancestor ∈ leaf.ancestors ->
+      ancestor.mode = leaf.label.mode ->
+      ancestor.shift.eval < leaf.label.shift.eval ->
+      Phi leaf.label.mode (y + leaf.label.shift.eval) +
+          assignment.selectedExpr.eval Phi y <=
+        Phi ancestor.mode (y + ancestor.shift.eval)) :
+    False := by
+  apply deletionWitness_excludes_critical_sum hpos hmono hwitness hargs
+  intro ancestor hmem hmode hshift
+  rw [← assignment.selectedExpr_eval_eq Phi y hassignment]
+  exact hcritical ancestor hmem hmode hshift
 
 end KL2003
 end CollatzClassical
