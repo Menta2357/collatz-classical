@@ -17,9 +17,12 @@ namespace KL2003
 #print axioms ELTree.Min3Retention.reduce_translate
 #print axioms ELTree.Min3Path.reduceAt_translate
 #print axioms ELTree.TerminalPath.hasDeletionWitness_translate_iff_of_nonnegative
+#print axioms ELTree.TerminalPath.hasDeletionWitness_translate_iff_of_sign_iff
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_witness_iff
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_translate_of_nonnegative
 #print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_translate_of_nonnegative
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.witnessRetention_translate_of_sign_iff
+#print axioms ELTree.TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_translate_of_sign_iff
 #print axioms ELTree.TerminalPath.splitAt_translate
 #print axioms ELTree.TerminalPath.descendSplit_translate_heq
 #print axioms ELTree.TerminalPath.descendSplitMin3_translate_heq
@@ -39,9 +42,19 @@ namespace KL2003
 #print axioms ELTree.ExpandableOccurrence.d3Configuration_translate_heq
 #print axioms ELTree.ExpandableOccurrence.d1Configuration_witnessRetention_translate
 #print axioms ELTree.ExpandableOccurrence.d3Configuration_witnessRetention_translate
+#print axioms ELTree.ExpandableOccurrence.d1Configuration_witnessRetention_translate_of_sign_iff
+#print axioms ELTree.ExpandableOccurrence.d3Configuration_witnessRetention_translate_of_sign_iff
 #print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d1
 #print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d2
 #print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d3
+#print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d1_of_sign_iff
+#print axioms ELTree.ExpandableOccurrence.sourceStep_translate_d3_of_sign_iff
+#print axioms ELTree.ExpandableOccurrence.sourceStep_translate_of_eligibility
+#print axioms ELTree.terminalShiftsNegative_translate_iff
+#print axioms ELTree.findExpandableOccurrence_translate_eq_none_iff
+#print axioms ELTree.TerminalPath.target_nonnegative_translate_iff_of_terminalEligibilityEquivalent
+#print axioms ELTree.findExpandableOccurrence_translate
+#print axioms ELTree.sourceScheduledStep_translate
 #print axioms ELTree.RawSourceSplitStep.translate
 #print axioms ELTree.rawSourceSplitSteps_translate
 

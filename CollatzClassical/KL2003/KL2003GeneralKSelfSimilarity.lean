@@ -526,6 +526,21 @@ theorem hasDeletionWitness_translate_iff_of_nonnegative
     · simp only [leafState, ELLabel.translate_shift_eval] at hshift ⊢
       linarith
 
+theorem hasDeletionWitness_translate_iff_of_sign_iff
+    {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) (delta : SymbolicShift)
+    (hsign : 0 <= (target.translate delta).shift.eval <->
+      0 <= target.shift.eval) :
+    (path.translate delta).HasDeletionWitness <-> path.HasDeletionWitness := by
+  by_cases horiginal : 0 <= target.shift.eval
+  · exact path.hasDeletionWitness_translate_iff_of_nonnegative delta
+      horiginal (hsign.mpr horiginal)
+  · constructor
+    · intro hwitness
+      exact False.elim (horiginal (hsign.mp hwitness.1))
+    · intro hwitness
+      exact False.elim (horiginal hwitness.1)
+
 theorem splitAt_translate {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} {target : ELLabel (p + 1)}
     (path : TerminalPath tree target) (delta : SymbolicShift) :
@@ -1525,6 +1540,26 @@ theorem witnessRetention_translate_of_nonnegative
       |>.hasDeletionWitness_translate_iff_of_nonnegative delta
         hthird hthirdTranslated
 
+theorem witnessRetention_translate_of_sign_iff
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (delta : SymbolicShift)
+    (hfirst : 0 <= (first.translate delta).shift.eval <->
+      0 <= first.shift.eval)
+    (hsecond : 0 <= (second.translate delta).shift.eval <->
+      0 <= second.shift.eval)
+    (hthird : 0 <= (third.translate delta).shift.eval <->
+      0 <= third.shift.eval) :
+    (configuration.translate delta).witnessRetention =
+      configuration.witnessRetention := by
+  apply witnessRetention_eq_of_witness_iff
+  · exact configuration.firstPath
+      |>.hasDeletionWitness_translate_iff_of_sign_iff delta hfirst
+  · exact configuration.secondPath
+      |>.hasDeletionWitness_translate_iff_of_sign_iff delta hsecond
+  · exact configuration.thirdPath
+      |>.hasDeletionWitness_translate_iff_of_sign_iff delta hthird
+
 theorem reduceAt_witnessRetention_translate_of_nonnegative
     {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
     (configuration : AdvancedMinConfiguration tree first second third)
@@ -1541,6 +1576,25 @@ theorem reduceAt_witnessRetention_translate_of_nonnegative
         delta := by
   rw [configuration.witnessRetention_translate_of_nonnegative delta
     hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated]
+  exact configuration.minPath.reduceAt_translate
+    configuration.witnessRetention delta
+
+theorem reduceAt_witnessRetention_translate_of_sign_iff
+    {k : Nat} {tree : ELTree k} {first second third : ELLabel k}
+    (configuration : AdvancedMinConfiguration tree first second third)
+    (delta : SymbolicShift)
+    (hfirst : 0 <= (first.translate delta).shift.eval <->
+      0 <= first.shift.eval)
+    (hsecond : 0 <= (second.translate delta).shift.eval <->
+      0 <= second.shift.eval)
+    (hthird : 0 <= (third.translate delta).shift.eval <->
+      0 <= third.shift.eval) :
+    (configuration.translate delta).minPath.reduceAt
+        (configuration.translate delta).witnessRetention =
+      (configuration.minPath.reduceAt configuration.witnessRetention).translate
+        delta := by
+  rw [configuration.witnessRetention_translate_of_sign_iff delta
+    hfirst hsecond hthird]
   exact configuration.minPath.reduceAt_translate
     configuration.witnessRetention delta
 
@@ -1714,6 +1768,84 @@ theorem d3Configuration_witnessRetention_translate {p : Nat}
       hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
   exact hretention.symm.trans hinvariant
 
+theorem d1Configuration_witnessRetention_translate_of_sign_iff {p : Nat}
+    (hp : 1 <= p) {tree : ELTree (p + 1)}
+    (occurrence : ExpandableOccurrence tree) (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 2)
+    (hfirst : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 0)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hsecond : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 1)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hthird : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 2)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 2).shift.eval) :
+    ((occurrence.translate delta hshift).d1Configuration hp
+        (by simpa using hm)).witnessRetention =
+      (occurrence.d1Configuration hp hm).witnessRetention := by
+  let original := occurrence.d1Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d1Configuration hp
+    (by simpa using hm)
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d1Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hretention : (original.translate delta).witnessRetention =
+      translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hconfiguration
+  have hinvariant : (original.translate delta).witnessRetention =
+      original.witnessRetention := by
+    exact original.witnessRetention_translate_of_sign_iff delta
+      hfirst hsecond hthird
+  exact hretention.symm.trans hinvariant
+
+theorem d3Configuration_witnessRetention_translate_of_sign_iff {p : Nat}
+    (hp : 1 <= p) {tree : ELTree (p + 1)}
+    (occurrence : ExpandableOccurrence tree) (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 8)
+    (hfirst : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 0)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hsecond : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 1)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hthird : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 2)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 2).shift.eval) :
+    ((occurrence.translate delta hshift).d3Configuration hp
+        (by simpa using hm)).witnessRetention =
+      (occurrence.d3Configuration hp hm).witnessRetention := by
+  let original := occurrence.d3Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d3Configuration hp
+    (by simpa using hm)
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d3Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hretention : (original.translate delta).witnessRetention =
+      translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+      (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+      hconfiguration
+  have hinvariant : (original.translate delta).witnessRetention =
+      original.witnessRetention := by
+    exact original.witnessRetention_translate_of_sign_iff delta
+      hfirst hsecond hthird
+  exact hretention.symm.trans hinvariant
+
 theorem sourceStep_translate_d1 {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
     (delta : SymbolicShift)
@@ -1806,6 +1938,98 @@ theorem sourceStep_translate_d3 {p : Nat} (hp : 1 <= p)
       hfirst hfirstTranslated hsecond hsecondTranslated hthird hthirdTranslated
   exact hreduce.symm.trans hinvariant
 
+theorem sourceStep_translate_d1_of_sign_iff {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 2)
+    (hfirst : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 0)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hsecond : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 1)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hthird : 0 <= ((d1AdvancedSplitLabel hp occurrence.target hm 2)
+        |>.translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm 2).shift.eval) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rw [(occurrence.translate delta hshift).sourceStep_eq_d1 hp
+      (by simpa using hm), occurrence.sourceStep_eq_d1 hp hm]
+  let original := occurrence.d1Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d1Configuration hp
+    (by simpa using hm)
+  change translated.minPath.reduceAt translated.witnessRetention =
+    (original.minPath.reduceAt original.witnessRetention).translate delta
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d1Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hreduce :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        translated.minPath.reduceAt translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+        (d1AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+        hconfiguration
+  have hinvariant :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        (original.minPath.reduceAt original.witnessRetention).translate delta := by
+    exact original.reduceAt_witnessRetention_translate_of_sign_iff delta
+      hfirst hsecond hthird
+  exact hreduce.symm.trans hinvariant
+
+theorem sourceStep_translate_d3_of_sign_iff {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (hm : occurrence.target.mode.1.1 % 9 = 8)
+    (hfirst : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 0)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 0).shift.eval)
+    (hsecond : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 1)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 1).shift.eval)
+    (hthird : 0 <= ((d3AdvancedSplitLabel hp occurrence.target hm 2)
+        |>.translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm 2).shift.eval) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rw [(occurrence.translate delta hshift).sourceStep_eq_d3 hp
+      (by simpa using hm), occurrence.sourceStep_eq_d3 hp hm]
+  let original := occurrence.d3Configuration hp hm
+  let translated := (occurrence.translate delta hshift).d3Configuration hp
+    (by simpa using hm)
+  change translated.minPath.reduceAt translated.witnessRetention =
+    (original.minPath.reduceAt original.witnessRetention).translate delta
+  have hconfiguration : HEq (original.translate delta) translated := by
+    exact occurrence.d3Configuration_translate_heq hp delta hshift hm
+  have htree : (occurrence.split hp).translate delta =
+      (occurrence.translate delta hshift).split hp := by
+    exact (occurrence.split_translate hp delta hshift).symm
+  have hreduce :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        translated.minPath.reduceAt translated.witnessRetention := by
+    exact TerminalPath.AdvancedMinConfiguration.reduceAt_witnessRetention_eq_of_heq
+      (original.translate delta) translated htree
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 0).symm
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 1).symm
+        (d3AdvancedSplitLabel_translate hp occurrence.target hm delta 2).symm
+        hconfiguration
+  have hinvariant :
+      (original.translate delta).minPath.reduceAt
+          (original.translate delta).witnessRetention =
+        (original.minPath.reduceAt original.witnessRetention).translate delta := by
+    exact original.reduceAt_witnessRetention_translate_of_sign_iff delta
+      hfirst hsecond hthird
+  exact hreduce.symm.trans hinvariant
+
 theorem sourceStep_translate_d2 {p : Nat} (hp : 1 <= p)
     {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
     (delta : SymbolicShift)
@@ -1817,7 +2041,212 @@ theorem sourceStep_translate_d2 {p : Nat} (hp : 1 <= p)
     occurrence.sourceStep_eq_d2 hp hm]
   exact occurrence.split_translate hp delta hshift
 
+def SourceStepEligibilityEquivalent {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift) : Prop :=
+  (forall (hm : occurrence.target.mode.1.1 % 9 = 2) (j : Fin 3),
+    (0 <= ((d1AdvancedSplitLabel hp occurrence.target hm j).translate delta).shift.eval <->
+      0 <= (d1AdvancedSplitLabel hp occurrence.target hm j).shift.eval)) /\
+  (forall (hm : occurrence.target.mode.1.1 % 9 = 8) (j : Fin 3),
+    (0 <= ((d3AdvancedSplitLabel hp occurrence.target hm j).translate delta).shift.eval <->
+      0 <= (d3AdvancedSplitLabel hp occurrence.target hm j).shift.eval))
+
+theorem sourceStep_translate_of_eligibility {p : Nat} (hp : 1 <= p)
+    {tree : ELTree (p + 1)} (occurrence : ExpandableOccurrence tree)
+    (delta : SymbolicShift)
+    (hshift : 0 <= (occurrence.target.translate delta).shift.eval)
+    (heligibility : occurrence.SourceStepEligibilityEquivalent hp delta) :
+    (occurrence.translate delta hshift).sourceStep hp =
+      (occurrence.sourceStep hp).translate delta := by
+  rcases trackedMode_mod_nine_cases occurrence.target.mode with hm2 | hm5 | hm8
+  · exact occurrence.sourceStep_translate_d1_of_sign_iff hp delta hshift hm2
+      (heligibility.1 hm2 0) (heligibility.1 hm2 1)
+      (heligibility.1 hm2 2)
+  · exact occurrence.sourceStep_translate_d2 hp delta hshift hm5
+  · exact occurrence.sourceStep_translate_d3_of_sign_iff hp delta hshift hm8
+      (heligibility.2 hm8 0) (heligibility.2 hm8 1)
+      (heligibility.2 hm8 2)
+
 end ExpandableOccurrence
+
+def TerminalEligibilityEquivalent {k : Nat} (delta : SymbolicShift) :
+    ELTree k -> Prop
+  | .terminal label =>
+      0 <= (label.translate delta).shift.eval <-> 0 <= label.shift.eval
+  | .expanded _ body => body.TerminalEligibilityEquivalent delta
+  | .add left right | .min2 left right =>
+      left.TerminalEligibilityEquivalent delta /\
+        right.TerminalEligibilityEquivalent delta
+  | .min3 first second third =>
+      first.TerminalEligibilityEquivalent delta /\
+        second.TerminalEligibilityEquivalent delta /\
+          third.TerminalEligibilityEquivalent delta
+
+private theorem negative_iff_of_nonnegative_iff {x y : Real}
+    (h : 0 <= x <-> 0 <= y) : x < 0 <-> y < 0 := by
+  constructor
+  · intro hx
+    have hnot : Not (0 <= x) := not_le_of_gt hx
+    exact lt_of_not_ge (fun hy => hnot (h.mpr hy))
+  · intro hy
+    have hnot : Not (0 <= y) := not_le_of_gt hy
+    exact lt_of_not_ge (fun hx => hnot (h.mp hx))
+
+theorem terminalShiftsNegative_translate_iff {k : Nat}
+    (tree : ELTree k) (delta : SymbolicShift)
+    (hsign : tree.TerminalEligibilityEquivalent delta) :
+    (tree.translate delta).TerminalShiftsNegative <->
+      tree.TerminalShiftsNegative := by
+  induction tree with
+  | terminal label =>
+      exact negative_iff_of_nonnegative_iff hsign
+  | expanded label body ih =>
+      exact ih hsign
+  | add left right ihLeft ihRight =>
+      exact and_congr (ihLeft hsign.1) (ihRight hsign.2)
+  | min2 left right ihLeft ihRight =>
+      exact and_congr (ihLeft hsign.1) (ihRight hsign.2)
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact and_congr (ihFirst hsign.1)
+        (and_congr (ihSecond hsign.2.1) (ihThird hsign.2.2))
+
+theorem findExpandableOccurrence_translate_eq_none_iff {k : Nat}
+    (tree : ELTree k) (delta : SymbolicShift)
+    (hsign : tree.TerminalEligibilityEquivalent delta) :
+    findExpandableOccurrence (tree.translate delta) = none <->
+      findExpandableOccurrence tree = none := by
+  rw [findExpandableOccurrence_eq_none_iff,
+    findExpandableOccurrence_eq_none_iff]
+  exact tree.terminalShiftsNegative_translate_iff delta hsign
+
+namespace TerminalPath
+
+theorem target_nonnegative_translate_iff_of_terminalEligibilityEquivalent
+    {k : Nat} {tree : ELTree k} {target : ELLabel k}
+    (path : TerminalPath tree target) (delta : SymbolicShift)
+    (hsign : tree.TerminalEligibilityEquivalent delta) :
+    0 <= (target.translate delta).shift.eval <->
+      0 <= target.shift.eval := by
+  induction path with
+  | here label => exact hsign
+  | expanded label body target path ih => exact ih hsign
+  | addLeft left right target path ih => exact ih hsign.1
+  | addRight left right target path ih => exact ih hsign.2
+  | min2Left left right target path ih => exact ih hsign.1
+  | min2Right left right target path ih => exact ih hsign.2
+  | minFirst first second third target path ih => exact ih hsign.1
+  | minSecond first second third target path ih => exact ih hsign.2.1
+  | minThird first second third target path ih => exact ih hsign.2.2
+
+end TerminalPath
+
+theorem findExpandableOccurrence_translate {k : Nat}
+    (tree : ELTree k) (delta : SymbolicShift)
+    (hsign : tree.TerminalEligibilityEquivalent delta) :
+    findExpandableOccurrence (tree.translate delta) =
+      (findExpandableOccurrence tree).map fun occurrence =>
+        occurrence.translate delta
+          ((occurrence.path
+            |>.target_nonnegative_translate_iff_of_terminalEligibilityEquivalent
+              delta hsign).mpr occurrence.shift_nonnegative) := by
+  classical
+  induction tree with
+  | terminal label =>
+      by_cases horiginal : 0 <= label.shift.eval
+      · have htranslated : 0 <= (label.translate delta).shift.eval :=
+          hsign.mpr horiginal
+        have htranslated' : 0 <= delta.eval + label.shift.eval := by
+          simpa [ELLabel.translate, SymbolicShift.eval_add] using htranslated
+        simp [ELTree.translate, findExpandableOccurrence, horiginal,
+          htranslated, htranslated', ExpandableOccurrence.translate,
+          TerminalPath.translate,
+          ELLabel.translate, SymbolicShift.eval_add]
+      · have htranslated : Not (0 <= (label.translate delta).shift.eval) :=
+          fun h => horiginal (hsign.mp h)
+        have htranslated' : delta.eval + label.shift.eval < 0 := by
+          have hlt := lt_of_not_ge htranslated
+          simpa [ELLabel.translate, SymbolicShift.eval_add] using hlt
+        simp [ELTree.translate, findExpandableOccurrence, horiginal,
+          htranslated, htranslated', ELLabel.translate,
+          SymbolicShift.eval_add]
+  | expanded label body ih =>
+      simp only [ELTree.translate, findExpandableOccurrence]
+      rw [ih hsign]
+      generalize hbody : findExpandableOccurrence body = result
+      cases result <;>
+        simp [hbody, ExpandableOccurrence.translate, TerminalPath.translate]
+  | add left right ihLeft ihRight =>
+      simp only [ELTree.translate, findExpandableOccurrence]
+      rw [ihLeft hsign.1, ihRight hsign.2]
+      generalize hleft : findExpandableOccurrence left = leftResult
+      cases leftResult with
+      | some occurrence =>
+          simp [hleft, ExpandableOccurrence.translate, TerminalPath.translate]
+      | none =>
+          generalize hright : findExpandableOccurrence right = rightResult
+          cases rightResult <;>
+            simp [hleft, hright, ExpandableOccurrence.translate,
+              TerminalPath.translate]
+  | min2 left right ihLeft ihRight =>
+      simp only [ELTree.translate, findExpandableOccurrence]
+      rw [ihLeft hsign.1, ihRight hsign.2]
+      generalize hleft : findExpandableOccurrence left = leftResult
+      cases leftResult with
+      | some occurrence =>
+          simp [hleft, ExpandableOccurrence.translate, TerminalPath.translate]
+      | none =>
+          generalize hright : findExpandableOccurrence right = rightResult
+          cases rightResult <;>
+            simp [hleft, hright, ExpandableOccurrence.translate,
+              TerminalPath.translate]
+  | min3 first second third ihFirst ihSecond ihThird =>
+      simp only [ELTree.translate, findExpandableOccurrence]
+      rw [ihFirst hsign.1, ihSecond hsign.2.1, ihThird hsign.2.2]
+      generalize hfirst : findExpandableOccurrence first = firstResult
+      cases firstResult with
+      | some occurrence =>
+          simp [hfirst, ExpandableOccurrence.translate,
+            TerminalPath.translate]
+      | none =>
+          generalize hsecond : findExpandableOccurrence second = secondResult
+          cases secondResult with
+          | some occurrence =>
+              simp [hfirst, hsecond, ExpandableOccurrence.translate,
+                TerminalPath.translate]
+          | none =>
+              generalize hthird : findExpandableOccurrence third = thirdResult
+              cases thirdResult <;>
+                simp [hfirst, hsecond, hthird, ExpandableOccurrence.translate,
+                  TerminalPath.translate]
+
+theorem sourceScheduledStep_translate {p : Nat} (hp : 1 <= p)
+    (tree : ELTree (p + 1)) (delta : SymbolicShift)
+    (hsign : tree.TerminalEligibilityEquivalent delta)
+    (hstep : forall occurrence, findExpandableOccurrence tree = some occurrence ->
+      occurrence.SourceStepEligibilityEquivalent hp delta) :
+    sourceScheduledStep hp (tree.translate delta) =
+      (sourceScheduledStep hp tree).translate delta := by
+  classical
+  have hfinder := tree.findExpandableOccurrence_translate delta hsign
+  generalize hresult : findExpandableOccurrence tree = result
+  cases result with
+  | none =>
+      have htranslated : findExpandableOccurrence (tree.translate delta) = none := by
+        simpa [hresult] using hfinder
+      simp [sourceScheduledStep, hresult, htranslated]
+  | some occurrence =>
+      have htarget := occurrence.path
+        |>.target_nonnegative_translate_iff_of_terminalEligibilityEquivalent
+          delta hsign
+      have hshift : 0 <= (occurrence.target.translate delta).shift.eval :=
+        htarget.mpr occurrence.shift_nonnegative
+      have htranslated : findExpandableOccurrence (tree.translate delta) =
+          some (occurrence.translate delta hshift) := by
+        simpa [hresult] using hfinder
+      simp only [sourceScheduledStep]
+      rw [hresult, htranslated]
+      exact occurrence.sourceStep_translate_of_eligibility hp delta hshift
+        (hstep occurrence hresult)
 
 inductive RawSourceSplitStep {p : Nat} (hp : 1 <= p) :
     ELTree (p + 1) -> ELTree (p + 1) -> Prop

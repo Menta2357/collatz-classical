@@ -221,21 +221,23 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
 - La iteracion finita raw ya no es una deuda. Una ruta terminal dependiente se
   transporta por cualquier contexto del arbol, `splitAt` conmuta con la
   traslacion y la clausura reflexivo-transitiva de splits localizados conserva
-  exactamente la forma trasladada. Esto no equivale aun a conmutacion del
-  scheduler: la elegibilidad usa el signo absoluto del shift, que puede cambiar
-  al trasladar. La geometria de deletion si transporta: `Min3Path` y
+  exactamente la forma trasladada. La geometria de deletion si transporta:
+  `Min3Path` y
   `reduceAt` con retencion fija conmutan con la traslacion. La politica por
-  testigos tambien se conserva entre configuraciones traducidas cuando las
-  hojas comparadas son no negativas, y D2 conmuta por completo. El descenso
+  testigos tambien se conserva entre configuraciones traducidas cuando sus
+  tests de elegibilidad son equivalentes, incluido el caso en que ambas hojas
+  son negativas, y D2 conmuta por completo. El descenso
   dependiente por un split exterior y los cuatro paths canonicos de las
   configuraciones advanced D1/D3 ya se identifican con sus traducciones.
-  Bajo no negatividad explicita de las tres hojas originales y trasladadas,
-  tambien conmutan `witnessRetention`, la reduccion y `sourceStep`; D2 conmuta
-  sin esas seis premisas. La deuda local D1/D3 queda cerrada. El blocker de la
-  correspondencia recurrente es ahora exclusivamente global: el umbral
-  absoluto del scheduler puede cambiar bajo traslacion, por lo que falta
-  controlar elegibilidad y signos a lo largo de la secuencia o sustituir ese
-  argumento por un descenso bien fundado.
+  Bajo equivalencia de elegibilidad para las tres ramas, tambien conmutan
+  `witnessRetention`, la reduccion y `sourceStep`; D2 no requiere ese contrato.
+  A nivel del arbol, la equivalencia terminal global transporta exactamente el
+  selector determinista izquierda-a-derecha, y junto con la equivalencia local
+  de ramas transporta un `sourceScheduledStep`. La deuda mecanica del scheduler
+  queda cerrada condicionalmente. El blocker recurrente es demostrar esos
+  contratos de elegibilidad para las traslaciones de Theorem 3.1, o sustituir
+  la correspondencia por un descenso bien fundado; no se reclama conmutacion
+  incondicional.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
