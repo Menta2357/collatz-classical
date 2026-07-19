@@ -110,6 +110,45 @@ theorem theorem31_arithmetic_contradiction
   exact not_forall_nonnegative_of_hasFixedIncrement_of_delta_neg
     (hasFixedIncrement_of_constant_difference hdiff) hdelta hnonnegative
 
+def HasUniformRecurrentDrop {k : Nat}
+    (modes : Nat -> TrackedMode k) (beta : Nat -> Real)
+    (epsilon : Real) : Prop :=
+  0 < epsilon /\ forall i j : Nat, i < j -> modes i = modes j ->
+    beta j <= beta i - epsilon
+
+theorem exists_negative_of_hasUniformRecurrentDrop {k : Nat}
+    {modes : Nat -> TrackedMode k} {beta : Nat -> Real} {epsilon : Real}
+    (hdrop : HasUniformRecurrentDrop modes beta epsilon) :
+    exists n : Nat, beta n < 0 := by
+  obtain ⟨mode, positions, hpositions, hmodes⟩ :=
+    exists_recurrent_mode_subsequence modes
+  have hbound : forall n : Nat,
+      beta (positions n) <= beta (positions 0) - (n : Real) * epsilon := by
+    intro n
+    induction n with
+    | zero => simp
+    | succ n ih =>
+        have hposition : positions n < positions (n + 1) :=
+          hpositions (Nat.lt_succ_self n)
+        have hsame : modes (positions n) = modes (positions (n + 1)) := by
+          rw [hmodes n, hmodes (n + 1)]
+        have hstep := hdrop.2 (positions n) (positions (n + 1))
+          hposition hsame
+        push_cast
+        nlinarith [hdrop.1]
+  obtain ⟨n, hn⟩ := exists_nat_gt (beta (positions 0) / epsilon)
+  have hmul : beta (positions 0) < (n : Real) * epsilon :=
+    (div_lt_iff₀ hdrop.1).mp hn
+  exact ⟨positions n, lt_of_le_of_lt (hbound n) (by linarith)⟩
+
+theorem not_forall_nonnegative_of_hasUniformRecurrentDrop {k : Nat}
+    {modes : Nat -> TrackedMode k} {beta : Nat -> Real} {epsilon : Real}
+    (hdrop : HasUniformRecurrentDrop modes beta epsilon) :
+    Not (forall n : Nat, 0 <= beta n) := by
+  obtain ⟨n, hn⟩ := exists_negative_of_hasUniformRecurrentDrop hdrop
+  intro hnonnegative
+  exact (not_lt_of_ge (hnonnegative n)) hn
+
 end GeneralKTermination
 
 end KL2003

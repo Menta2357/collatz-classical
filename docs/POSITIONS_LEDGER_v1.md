@@ -238,6 +238,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   contratos de elegibilidad para las traslaciones de Theorem 3.1, o sustituir
   la correspondencia por un descenso bien fundado; no se reclama conmutacion
   incondicional.
+- La auditoria primaria de esa correspondencia ya muestra que los contratos no
+  son automaticos. Para una hoja terminal de shift cero, una traslacion
+  negativa cambia exactamente la elegibilidad; ademas, la misma hoja puede no
+  tener testigo de deletion como arbol desnudo y adquirirlo bajo un ancestro
+  exterior del mismo modo. Lean formaliza ambos contraejemplos y tambien la
+  direccion monotona util: una traslacion no positiva no crea hojas
+  expandibles en un arbol ya terminal. Esto no refuta Theorem 3.1, pero impide
+  deducir identidad de subarboles recurrentes solo de modo y traslacion.
+- El nucleo aritmetico dispone ahora de una salida mas debil que la identidad
+  exacta de subarboles. Si toda repeticion posterior de un modo pierde al menos
+  un `epsilon > 0` uniforme, alguna shift recurrente se vuelve negativa. Queda
+  abierta la parte matematica real: derivar ese margen uniforme de un grafo
+  finito de transiciones y ciclos simples admisibles, respetando el contexto de
+  deletion. No se reclama aun terminacion ni independencia de orden.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

@@ -33,6 +33,11 @@ splits. A symbolic translation `delta`:
 - proves conditional translation equivariance of `sourceScheduledStep` when
   tree-wide terminal eligibility and the selected D1/D3 branch eligibility are
   preserved;
+- proves that a nonpositive translation cannot create an expandable terminal
+  in a tree already having only negative terminal shifts;
+- exhibits exact counterexamples showing that negative translation need not
+  preserve terminal eligibility and that deletion witnesses depend on the
+  outer ancestor context;
 - transports the reflexive-transitive closure of raw localized source splits.
 
 The main finite-trace theorem is `ELTree.rawSourceSplitSteps_translate`; the
@@ -48,19 +53,27 @@ paths are supplied explicitly.
 This remains deliberately weaker than unconditional global scheduler
 equivariance. Expandability depends on the absolute condition
 `0 <= shift.eval`; translating every shift does not preserve that condition
-without an additional bound. The geometry of deletion and its witness policy
-now transport for corresponding advanced configurations whenever the relevant
-sign tests agree. The dependent descent through an outer split, all four paths
-of the canonical D1/D3 advanced configurations, `witnessRetention`, and the
-resulting D1/D3 `sourceStep` commute under three branch eligibility
-equivalences; D2 commutes unconditionally. At tree level,
+without an additional bound. This is not only an unproved side condition:
+`not_terminalEligibilityEquivalent_terminal_zero_of_delta_neg` gives a
+terminal counterexample for every negative translation. The geometry of
+deletion and its witness policy now transport for corresponding advanced
+configurations whenever the relevant sign tests agree, but
+`deletionWitness_depends_on_outer_context` shows that the witness predicate is
+not determined by the recurrent root label alone. The dependent descent
+through an outer split, all four paths of the canonical D1/D3 advanced
+configurations, `witnessRetention`, and the resulting D1/D3 `sourceStep`
+commute under three branch eligibility equivalences; D2 commutes
+unconditionally. At tree level,
 `TerminalEligibilityEquivalent` is sufficient to transport the exact selector,
 and together with `SourceStepEligibilityEquivalent` at the selected occurrence
 it transports one deterministic scheduled step. This module does not prove
 that the recurrent translations in Theorem 3.1 satisfy either eligibility
-contract. Therefore it does not yet identify recurrent full subtrees, derive
-one fixed increment between successive recurrent shifts, or prove
-termination/order independence.
+contract or preserve the outer deletion context. Therefore the source claim
+that the recurrent full subtrees are identical needs additional argument; the
+module does not derive one fixed increment between successive recurrent shifts
+or prove termination/order independence. It does prove the useful one-way
+fact that translating by a nonpositive shift preserves an already terminal
+tree, so negative translation prunes eligibility rather than creating it.
 
 ## Verification
 
@@ -97,10 +110,13 @@ GENERAL_K_SOURCE_STEP_ELIGIBILITY_EQUIVALENCE_DEFINED
 GENERAL_K_FIRST_EXPANDABLE_SELECTOR_TRANSLATION_PROVED_CONDITIONALLY
 GENERAL_K_SOURCE_SCHEDULER_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 GENERAL_K_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
+GENERAL_K_NEGATIVE_TRANSLATION_ONE_WAY_PRUNING_PROVED
+GENERAL_K_TERMINAL_ELIGIBILITY_NEGATIVE_TRANSLATION_COUNTEREXAMPLE_PROVED
+GENERAL_K_DELETION_WITNESS_OUTER_CONTEXT_DEPENDENCE_PROVED
 THEOREM31_LOCAL_SELF_SIMILARITY_STEP_PROVED
 GENERAL_K_SELF_SIMILARITY_TRANSLATION_AXIOM_AUDIT_PASS
 GENERAL_K_UNCONDITIONAL_SIGN_SENSITIVE_SCHEDULER_TRANSLATION_NOT_CLAIMED
-THEOREM31_RECURRENT_ELIGIBILITY_EQUIVALENCE_NOT_YET_PROVED
+THEOREM31_RECURRENT_ELIGIBILITY_EQUIVALENCE_NOT_TRUE_WITHOUT_EXTRA_HYPOTHESES
 THEOREM31_FULL_RECURRENT_SUBTREE_CORRESPONDENCE_NOT_YET_PROVED
 GENERAL_K_FULL_EXPANSION_DELETION_TERMINATION_NOT_YET_PROVED
 GENERAL_K_EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

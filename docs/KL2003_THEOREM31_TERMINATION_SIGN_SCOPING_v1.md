@@ -4,9 +4,9 @@ Date: 2026-07-19
 
 ## Purpose
 
-This note records a source-level sign inconsistency in the termination proof
-of KL2003 Theorem 3.1 before that argument is translated to Lean. It does not
-claim that Theorem 3.1 is false and does not claim EL termination.
+This note records a source-level sign inconsistency and audits the recurrent
+subtree correspondence used in the termination proof of KL2003 Theorem 3.1.
+It does not claim that Theorem 3.1 is false and does not claim EL termination.
 
 ## Source custody
 
@@ -49,10 +49,21 @@ intended direction.
 ## Formalization consequence
 
 The sign normalization is necessary but not sufficient for a Lean proof. The
-source also says that recurring rooted subtrees are identical and that their
-identification forces every consecutive shift difference to equal `delta`.
-That correspondence must be represented and proved; it cannot be inherited
-from the corrected sign.
+source also says at lines 834-846 that recurring rooted subtrees are identical
+and that their identification forces every consecutive shift difference to
+equal `delta`. Two independent features of the source construction prevent
+that correspondence from following from mode equality plus translation alone:
+
+1. splittability is the absolute test `0 <= beta`; a negative translation can
+   move a terminal label across that threshold;
+2. the deletion rule at lines 769-777 inspects all earlier labels on the path
+   from the original root, so the same recurrent root label can have different
+   deletion witnesses under different outer ancestor contexts.
+
+Both points now have concrete Lean witnesses. They invalidate an unconditional
+translation argument, not Theorem 3.1 itself. A successful proof must add the
+missing contextual invariant or replace exact subtree identity by another
+well-founded descent.
 
 The termination pass must therefore discharge, separately:
 
@@ -60,7 +71,7 @@ The termination pass must therefore discharge, separately:
 2. recurrence of a tracked mode along that path;
 3. strict decrease of the shift at every repeated-mode occurrence from the
    deletion rule;
-4. the self-similarity/correspondence lemma that yields a fixed negative shift
+4. a contextual self-similarity theorem that yields a fixed negative shift
    increment, or an alternative well-founded descent argument;
 5. eventual negativity and contradiction with continued splittability;
 6. order independence or a canonical normalization theorem.
@@ -88,16 +99,27 @@ source splits.
 The structural deletion operation is equivariant as well: a `Min3Path`
 transports through translation and `reduceAt` commutes for every fixed
 retention pattern. Deletion witnesses and `witnessRetention` also transport
-when every compared source/translated leaf is nonnegative. The D2
-`sourceStep` therefore commutes outright. For D1/D3, the remaining structural
-obligation is to identify the advanced configurations built around the
-translated split with translations of the original configurations.
+when source and translated branch eligibility agree. D2 `sourceStep` commutes
+outright; D1/D3 `sourceStep` commutes under the three explicit branch
+eligibility equivalences. At tree level, the exact left-to-right selector and
+one deterministic scheduled step commute under the corresponding tree-wide
+and local contracts.
 
-That finite result does not imply that the deterministic scheduler chooses the
-same leaf after translation: its eligibility test is the absolute inequality
-`0 <= shift.eval`. The remaining correspondence step must control that
-decision and the D1/D3 configuration correspondence, or replace the source
-self-similarity argument with another well-founded descent.
+The new audit proves why those contracts are substantive. For a terminal at
+shift zero, `TerminalEligibilityEquivalent delta` is equivalent to
+`0 <= delta.eval`; hence every negative `delta` is a counterexample. A second
+theorem constructs the same leaf both without ancestors and below an earlier
+same-mode node: only the latter has a deletion witness. Conversely, a
+nonpositive translation cannot create an expandable terminal in a tree that
+already has only negative terminal shifts. This gives one-way pruning, not
+subtree identity.
+
+The arithmetic core now also proves a weaker sufficient endpoint. If every
+later recurrence of one mode decreases the shift by at least one uniform
+`epsilon > 0`, then some recurrent shift is negative. The next mathematical
+obligation can therefore be phrased as a finite weighted-transition problem:
+derive such a uniform drop from admissible simple cycles while respecting the
+deletion context. That cycle argument is not yet formalized.
 
 ## Current verdict
 
@@ -106,14 +128,20 @@ THEOREM31_SOURCE_SIGN_INCONSISTENCY_RECORDED
 THEOREM31_DELTA_NORMALIZATION_PROPOSED_NEGATIVE
 THEOREM31_FINITE_MODE_RECURRENCE_PROVED
 THEOREM31_FIXED_NEGATIVE_INCREMENT_CONTRADICTION_PROVED
+THEOREM31_UNIFORM_RECURRENT_DROP_CONTRADICTION_PROVED
 THEOREM31_LOCAL_SOURCE_SPLIT_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_FINITE_RAW_SPLIT_TRACE_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_FIXED_RETENTION_DELETION_TRANSLATION_EQUIVARIANCE_PROVED
 THEOREM31_WITNESS_RETENTION_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
 THEOREM31_D2_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED
-THEOREM31_SIGN_SENSITIVE_SCHEDULER_EQUIVARIANCE_NOT_CLAIMED
-THEOREM31_D1_D3_CONFIGURATION_EQUIVARIANCE_NOT_YET_PROVED
-THEOREM31_SELF_SIMILARITY_LEMMA_REQUIRED
+THEOREM31_D1_D3_SOURCE_STEP_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
+THEOREM31_SOURCE_SCHEDULER_TRANSLATION_EQUIVARIANCE_PROVED_CONDITIONALLY
+THEOREM31_NEGATIVE_TRANSLATION_ONE_WAY_PRUNING_PROVED
+THEOREM31_TERMINAL_ELIGIBILITY_COUNTEREXAMPLE_PROVED
+THEOREM31_DELETION_OUTER_CONTEXT_COUNTEREXAMPLE_PROVED
+THEOREM31_UNCONDITIONAL_RECURRENT_SUBTREE_IDENTITY_NOT_JUSTIFIED
+THEOREM31_CONTEXTUAL_CORRESPONDENCE_OR_UNIFORM_CYCLE_DROP_REQUIRED
+THEOREM31_UNIFORM_DROP_FROM_ADMISSIBLE_CYCLES_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM

@@ -71,6 +71,14 @@ theorem translate_shift_eval {k : Nat} (delta : SymbolicShift)
     (label.translate delta).shift.eval = delta.eval + label.shift.eval := by
   rw [translate_shift, SymbolicShift.eval_add]
 
+theorem shift_nonnegative_of_translate_shift_nonnegative_of_delta_nonpos
+    {k : Nat} (delta : SymbolicShift) (label : ELLabel k)
+    (hdelta : delta.eval <= 0)
+    (htranslated : 0 <= (label.translate delta).shift.eval) :
+    0 <= label.shift.eval := by
+  rw [translate_shift_eval] at htranslated
+  linarith
+
 end ELLabel
 
 namespace ELTree
@@ -2081,6 +2089,75 @@ def TerminalEligibilityEquivalent {k : Nat} (delta : SymbolicShift) :
       first.TerminalEligibilityEquivalent delta /\
         second.TerminalEligibilityEquivalent delta /\
           third.TerminalEligibilityEquivalent delta
+
+theorem terminalEligibilityEquivalent_terminal_zero_iff {k : Nat}
+    (mode : TrackedMode k) (delta : SymbolicShift) :
+    TerminalEligibilityEquivalent delta
+        (ELTree.terminal (ELLabel.mk mode SymbolicShift.zero)) <->
+      0 <= delta.eval := by
+  simp [TerminalEligibilityEquivalent, ELLabel.translate_shift_eval,
+    SymbolicShift.eval_add, SymbolicShift.eval_zero]
+
+theorem not_terminalEligibilityEquivalent_terminal_zero_of_delta_neg
+    {k : Nat} (mode : TrackedMode k) (delta : SymbolicShift)
+    (hdelta : delta.eval < 0) :
+    Not (TerminalEligibilityEquivalent delta
+      (ELTree.terminal (ELLabel.mk mode SymbolicShift.zero))) := by
+  rw [terminalEligibilityEquivalent_terminal_zero_iff]
+  exact not_le_of_gt hdelta
+
+theorem deletionWitness_depends_on_outer_context {k : Nat}
+    (mode : TrackedMode k) :
+    let leaf : ELLabel k := ELLabel.mk mode (SymbolicShift.mk 0 1)
+    let ancestor : ELLabel k := ELLabel.mk mode SymbolicShift.zero
+    let bare : TerminalPath (ELTree.terminal leaf) leaf :=
+      TerminalPath.here leaf
+    let nested : TerminalPath
+        (ELTree.expanded ancestor (ELTree.terminal leaf)) leaf :=
+      TerminalPath.expanded ancestor (ELTree.terminal leaf) leaf
+        (TerminalPath.here leaf)
+    Not bare.HasDeletionWitness /\ nested.HasDeletionWitness := by
+  dsimp
+  constructor
+  · intro hwitness
+    rcases hwitness.2 with ⟨ancestor, hmember, _⟩
+    simp [TerminalPath.leafState, TerminalPath.context,
+      ELTree.Context.expandedLabels] at hmember
+  · constructor
+    · norm_num [TerminalPath.leafState, SymbolicShift.eval]
+    · refine ⟨ELLabel.mk mode SymbolicShift.zero, ?_, rfl, ?_⟩
+      · simp [TerminalPath.leafState, TerminalPath.context,
+          ELTree.Context.expandedLabels]
+      · norm_num [TerminalPath.leafState, SymbolicShift.zero,
+          SymbolicShift.eval]
+
+theorem terminalShiftsNegative_translate_of_delta_nonpos {k : Nat}
+    (tree : ELTree k) (delta : SymbolicShift) (hdelta : delta.eval <= 0)
+    (hnegative : tree.TerminalShiftsNegative) :
+    (tree.translate delta).TerminalShiftsNegative := by
+  induction tree with
+  | terminal label =>
+      simp only [ELTree.translate, TerminalShiftsNegative]
+      rw [ELLabel.translate_shift_eval]
+      exact add_neg_of_nonpos_of_neg hdelta hnegative
+  | expanded label body ih =>
+      exact ih hnegative
+  | add left right ihLeft ihRight =>
+      exact ⟨ihLeft hnegative.1, ihRight hnegative.2⟩
+  | min2 left right ihLeft ihRight =>
+      exact ⟨ihLeft hnegative.1, ihRight hnegative.2⟩
+  | min3 first second third ihFirst ihSecond ihThird =>
+      exact ⟨ihFirst hnegative.1,
+        ihSecond hnegative.2.1, ihThird hnegative.2.2⟩
+
+theorem findExpandableOccurrence_translate_eq_none_of_delta_nonpos
+    {k : Nat} (tree : ELTree k) (delta : SymbolicShift)
+    (hdelta : delta.eval <= 0)
+    (hfind : findExpandableOccurrence tree = none) :
+    findExpandableOccurrence (tree.translate delta) = none := by
+  apply (findExpandableOccurrence_eq_none_iff (tree.translate delta)).2
+  exact tree.terminalShiftsNegative_translate_of_delta_nonpos delta hdelta
+    ((findExpandableOccurrence_eq_none_iff tree).1 hfind)
 
 private theorem negative_iff_of_nonnegative_iff {x y : Real}
     (h : 0 <= x <-> 0 <= y) : x < 0 <-> y < 0 := by

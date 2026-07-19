@@ -10,6 +10,8 @@ namespace KL2003
 #print axioms GeneralKTermination.corrected_delta_negative
 #print axioms GeneralKTermination.exists_negative_of_hasFixedIncrement_of_delta_neg
 #print axioms GeneralKTermination.theorem31_arithmetic_contradiction
+#print axioms GeneralKTermination.exists_negative_of_hasUniformRecurrentDrop
+#print axioms GeneralKTermination.not_forall_nonnegative_of_hasUniformRecurrentDrop
 
 end KL2003
 end CollatzClassical
