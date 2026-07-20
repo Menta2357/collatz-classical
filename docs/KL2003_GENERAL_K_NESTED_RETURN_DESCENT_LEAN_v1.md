@@ -4,15 +4,17 @@ Date: 2026-07-20
 
 ## Scope
 
-This note records the first proved layer of the replacement for the invalid
+This note records the completed finite-support layer replacing the invalid
 raw-simple-cycle descent. The implementation is in:
 
 ```text
 CollatzClassical/KL2003/KL2003GeneralKNestedReturnDescent.lean
 ```
 
-It does not prove local finiteness, full EL termination, order independence,
-or `SatisfiesEL`.
+It proves local finiteness and a uniform negative gap for all context-
+admissible closed returns. It does not yet extract such a walk from scheduler
+nontermination, prove full EL termination, order independence, or
+`SatisfiesEL`.
 
 ## Proved definitions and lemmas
 
@@ -25,13 +27,18 @@ finite_sourceWalk_length_le
 BoundedPackedSourceWalk
 sourceWalkVertexTrace
 Supported
+SourceSupported
 exists_first_sourceWalk_factorization_at_of_mem_vertexTrace
+exists_sourceWalk_factorization_at_of_mem_dropLast_vertexTrace
 HasInternalVisit
 EndsAtFirstVisit
 IsFirstReturn
+firstStepTailCode
+firstStepTailCode_injective
 exists_firstReturn_split_of_length_pos
 appendClosedWalks
 exists_firstReturnList_decomposition
+exists_firstReturnList_terminal_decomposition
 appendClosedWalks_weight_eval
 sourceWalk_append_nil
 sourceWalk_append_assoc
@@ -42,6 +49,14 @@ admissibleClosedWeights
 admissibleClosedWeights_neg
 exists_uniform_negative_gap_of_finite_near_zero
 exists_uniform_admissible_return_drop_of_local_finiteness
+LocallyFiniteAdmissibleSourceWalks
+finite_firstReturns_above_of_localFiniteness_on_erased_support
+finite_terminalRemainders_above_of_localFiniteness_on_erased_support
+exists_uniform_firstReturn_drop_of_localFiniteness_on_erased_support
+finite_admissible_sourceWalks_above
+finite_admissible_walks_above
+finite_admissibleClosedWeights_near_zero
+exists_uniform_admissible_return_drop
 ```
 
 `ContextAdmissible` is factor-based: every exact nonempty closed factor of the
@@ -69,6 +84,22 @@ The finite-gap theorem considers the finite set of weights in `(-1, 0)`. If
 that set is empty it chooses epsilon `1`; otherwise it minimizes `-weight` over
 the finite set. Weights outside the interval are already at most `-1`.
 
+The local-finiteness theorem uses the source-only support invariant required
+by dependent endpoints. A first-return tail ends at the pivot, but all of its
+edge sources lie in `support.erase pivot`. An injective optional encoding by
+first action and tail transfers the induction hypothesis to first returns.
+Every open walk then decomposes exactly into a list of first returns at its
+source and one terminal remainder which never returns to that source.
+
+Strong induction on the finite source support proves that context-admissible
+walks above any real lower weight bound have bounded length. The induction
+extracts a finite terminal-weight upper bound, a finite first-return length
+bound, and a uniform return drop `epsilon`; these bound both the number and
+total length of return packages. Bounded typed source walks are already known
+finite, so the desired set is finite. Projecting to closed-walk weights proves
+finiteness in `(-1, 0)` and removes the final hypothesis from the uniform-gap
+consumer.
+
 ## Verification
 
 ```text
@@ -92,17 +123,12 @@ Lean files.
 
 ## Remaining mathematical target
 
-The hard theorem is now isolated:
-
-```text
-for every finite support and lower real bound,
-the set of supported ContextAdmissible source walks
-whose evaluated weight is at least that bound is finite.
-```
-
-The planned proof is induction on the finite support, using exact first-return
-decomposition at a pivot mode. The full contract is in
-`KL2003_THEOREM31_NESTED_RETURN_LOCAL_FINITENESS_SCOPING_v1.md`.
+The finite-support theorem and uniform return gap are closed. The next module
+must turn a hypothetical nonterminating EL scheduler execution into an
+infinite typed source walk and prove that every repeated-mode factor of that
+walk is context-admissible. Combining the resulting recurrent closed factors
+with `exists_uniform_admissible_return_drop` supplies the already-audited
+`HasUniformRecurrentDrop` arithmetic contradiction.
 
 ## Classification
 
@@ -119,8 +145,15 @@ NESTED_RETURN_PACKAGES_PRESERVED
 ADMISSIBLE_CLOSED_WEIGHTS_DEFINED
 FINITE_NEAR_ZERO_TO_UNIFORM_GAP_PROVED
 UNIFORM_ADMISSIBLE_RETURN_DROP_CONSUMER_PROVED
-FINITE_ADMISSIBLE_WALKS_ABOVE_NOT_YET_PROVED
+SOURCE_ONLY_SUPPORT_INDUCTION_INVARIANT_PROVED
+FIRST_RETURN_TAIL_SMALLER_SUPPORT_PROVED
+OPEN_WALK_TERMINAL_DECOMPOSITION_PROVED
+FIRST_RETURN_AND_TERMINAL_FINITE_ABOVE_PROVED
+FINITE_ADMISSIBLE_WALKS_ABOVE_PROVED
+FINITE_ADMISSIBLE_CLOSED_WEIGHTS_NEAR_ZERO_PROVED
+UNIFORM_ADMISSIBLE_RETURN_DROP_PROVED_UNCONDITIONALLY
 HAS_UNIFORM_RECURRENT_DROP_NOT_YET_CONSTRUCTED
+SURVIVING_BRANCH_EXTRACTION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM

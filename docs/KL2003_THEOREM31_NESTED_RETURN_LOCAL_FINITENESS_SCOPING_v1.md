@@ -56,16 +56,16 @@ exists_uniform_admissible_return_drop_of_local_finiteness
 Thus the order-theoretic end of the argument is closed: if admissible closed
 weights in `(-1, 0)` form a finite set, a single `epsilon > 0` bounds every
 admissible closed weight by `-epsilon`. Weights at most `-1` are handled by the
-same epsilon. Local finiteness itself is not assumed in a bundle and remains
-the mathematical target below.
+same epsilon. The finite-support induction described below is now also proved,
+so local finiteness is no longer an assumption or blocker.
 
 ## Exact combinatorial target
 
 The robust theorem is stronger than finiteness of weights. For a finite
-support of modes and every real lower bound, prove finiteness of the actual
-admissible walks above that bound.
+support of modes and every real lower bound, Lean now proves finiteness of the
+actual admissible walks above that bound.
 
-The intended Lean statement is equivalent to:
+The proved Lean statement is:
 
 ```text
 finite_admissible_walks_above
@@ -198,7 +198,7 @@ infinite context-admissible `SourceWalk`.
 
 ## Consumer chain
 
-Once the local-finiteness theorem is proved, the source-specific chain is:
+With local finiteness proved, the remaining source-specific chain is:
 
 ```text
 surviving branch
@@ -224,9 +224,9 @@ The final arithmetic contradiction already exists in
    Proved.
 3. First-pivot and closed-walk first-return-list decomposition with exact
    reconstruction. Proved; no last-pivot theorem is needed for closed walks.
-4. First-return encoding and finiteness from the smaller support.
-5. Induction theorem `finite_admissible_walks_above`.
-6. Local-finiteness and uniform-gap corollaries.
+4. First-return encoding and finiteness from the smaller support. Proved.
+5. Induction theorem `finite_admissible_walks_above`. Proved.
+6. Local-finiteness and uniform-gap corollaries. Proved.
 7. Scheduler extraction and construction of `HasUniformRecurrentDrop` in the
    separate termination module.
 
@@ -243,8 +243,6 @@ The final arithmetic contradiction already exists in
 ## Current blockers
 
 ```text
-BLOCKED_ON_FIRST_RETURN_FINITE_ABOVE_FROM_SMALLER_SUPPORT
-BLOCKED_ON_FINITE_ADMISSIBLE_WALKS_ABOVE_INDUCTION
 BLOCKED_ON_SURVIVING_TREE_PATH_TO_SOURCE_WALK_EXTRACTION
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
@@ -263,10 +261,14 @@ BOUNDED_SOURCE_WALKS_FINITE
 SOURCE_WALK_VERTEX_TRACE_AND_SUPPORT_DEFINED
 FIRST_PIVOT_FACTORIZATION_PROVED
 FIRST_RETURN_LIST_DECOMPOSITION_PROVED
+OPEN_WALK_TERMINAL_DECOMPOSITION_PROVED
+FIRST_RETURN_FINITE_ABOVE_FROM_SMALLER_SUPPORT_PROVED
+FINITE_ADMISSIBLE_WALKS_ABOVE_PROVED
+FINITE_ADMISSIBLE_CLOSED_WEIGHTS_NEAR_ZERO_PROVED
 FINITE_NEAR_ZERO_TO_UNIFORM_GAP_PROVED
-UNIFORM_EPSILON_CONSTRUCTION_CLOSED_CONDITIONALLY_ON_LOCAL_FINITENESS
+UNIFORM_EPSILON_CONSTRUCTION_CLOSED_UNCONDITIONALLY
 NAIVE_SIMPLE_CYCLE_DESCENT_REJECTED
-LOCAL_FINITENESS_NOT_YET_PROVED
+LOCAL_FINITENESS_PROVED
 SURVIVING_BRANCH_EXTRACTION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM

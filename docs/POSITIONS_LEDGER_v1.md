@@ -290,18 +290,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   siguiente modulo debe preservar paquetes anidados y demostrar una propiedad
   de first-return/local-finiteness, o encontrar otra medida bien fundada; no se
   reclama ya un gap por minimo de ciclos simples brutos.
-- La salida correcta ya tiene su primer consumidor kernel-clean. Un camino
+- La salida correcta ya tiene cerrado su nucleo combinatorio kernel-clean. Un camino
   source es `ContextAdmissible` cuando cada factor cerrado no vacio conserva
   su paquete anidado y tiene peso estrictamente negativo. Lean prueba que, si
   los pesos cerrados admisibles en `(-1,0)` forman un conjunto finito, existe
   un `epsilon > 0` que acota todos esos retornos por `-epsilon`; los
   pesos `<= -1` quedan cubiertos por la misma cota. La construccion del
-  epsilon deja de ser blocker. El contenido abierto se concentra ahora en un
-  teorema combinatorio preciso: para todo soporte finito y toda cota inferior,
-  hay solo finitos caminos admisibles soportados con peso por encima de esa
-  cota. Su prueba se ha scoped como induccion sobre el soporte mediante
-  descomposicion exacta en primeros retornos, sin loop erasure.
-  La primera capa finitaria de esa induccion tambien compila: cada caminata
+  epsilon deja de ser blocker. Lean prueba ademas el teorema combinatorio
+  completo: para todo soporte finito y toda cota inferior, hay solo finitos
+  caminos admisibles con fuentes soportadas y peso por encima de esa cota.
+  La prueba usa induccion fuerte sobre el soporte y descomposicion exacta en
+  primeros retornos, sin loop erasure. Cada caminata
   tipada se serializa inyectivamente como lista de acciones con modo fuente,
   la serializacion conserva longitud y, por finitud del alfabeto, todas las
   caminatas de longitud acotada forman un tipo finito. La admisibilidad
@@ -309,10 +308,15 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   el soporte ya estan definidos, todo pivote de la traza produce una
   factorizacion tipada y todo lazo cerrado se reconstruye exactamente como una
   lista de primeros retornos mediante induccion fuerte en longitud. Ningun
-  interior anidado se borra y peso/longitud siguen siendo aditivos. Queda
-  demostrar que los primeros retornos por encima de una cota son finitos a
-  partir del soporte estrictamente menor, y cerrar con ello la induccion global
-  `finite_admissible_walks_above`.
+  interior anidado se borra y peso/longitud siguen siendo aditivos. El tail de
+  cada primer retorno y el resto terminal se transfieren al soporte de fuentes
+  estrictamente menor; de ahi se obtienen finitud por encima de toda cota,
+  un gap uniforme y una cota de longitud para la caminata completa. Como
+  corolarios, los pesos cerrados admisibles en `(-1,0)` son finitos y existe
+  incondicionalmente un `epsilon > 0` uniforme. El blocker pasa a la capa de
+  extraccion: convertir una ejecucion no terminante del scheduler en una
+  caminata source infinita contextualmente admisible y, con ella, construir
+  `HasUniformRecurrentDrop`.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
