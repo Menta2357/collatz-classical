@@ -26,6 +26,11 @@ open GeneralKSourceGenealogy.ProvenancedTree
 open GeneralKProvenancedScheduler
 open ELTree
 
+/-- Homogeneous L1--L4 feasibility data.  The source normalization L0
+`1 <= c_k^m` and its objective variable are intentionally outside this
+structure: the transfer only needs positive coefficients, while concrete
+consumers prove the normalization separately when they drop the coefficient
+from a public lower bound. -/
 structure LNTCertificate {p : Nat} (hp : 1 <= p) where
   lambda : Real
   principal : TrackedMode (p + 1) -> Real

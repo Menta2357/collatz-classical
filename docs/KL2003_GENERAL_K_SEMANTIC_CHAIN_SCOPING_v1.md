@@ -284,6 +284,25 @@ Module 2 passes only if:
 - the `k=2` normal form reproduces the Figure A1 oracle; and
 - the `k=3` normal form reproduces Table 1 metrics as a test, not as proof.
 
+### Post-implementation architecture decision
+
+The implemented chain does not discharge the preceding gate by constructing
+the order-independent canonical normal form of KL2003 Theorem 3.1. Instead it
+uses a pointwise critical scheduler. For each source system, mode, and real
+argument, the scheduler produces a finite provenanced run and a critical
+assignment whose selected expression has only negative shifts and evaluates
+below the source root. A separate compactness argument proves a uniform depth
+bound over all modes and arguments, and a finite symbolic-weight argument then
+extracts one uniform retarded window.
+
+This replacement is sufficient for the later coefficient transfer and dynamic
+retarded induction, and it is validated end to end by the k=3 piStar theorem.
+It does **not** prove order independence, uniqueness of `I_k(EL)`, or the
+existence of one canonical materialized EL tree. Consequently the original
+canonical-normal-form acceptance gate above remains an unproved source theorem,
+while the theorem-producing route is classified as a reviewed proof
+re-architecture once its load-bearing modules pass adversarial review.
+
 ## Module 3: LNT-to-EL feasibility transfer
 
 Proposed file:

@@ -1,0 +1,8 @@
+import CollatzClassical.KL2003.KL2003K9PiStarTheorem
+
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.gammaK9_gt_four_fifths
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.gammaK9_gt_forty_nine_sixtieths
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.gammaK9_gt_eighty_one_hundredths
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.exists_k9_sourcePhiK_lower_bound
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.exists_k9_piStar_sourceWindow_lower_bound
+#print axioms CollatzClassical.KL2003.K9PiStarTheorem.exists_k9_piStar_arbitrary_x_lower_bound

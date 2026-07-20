@@ -6,9 +6,10 @@ namespace CollatzClassical
 namespace KL2003
 
 /-!
-Indexed source semantics for arbitrary `k`.  The current stage proves the
+Indexed source semantics for arbitrary `k`.  This module proves the
 mode-independent envelope traffic (nonnegativity, member transfer, P1, and
-P2).  Generic non-emptiness, P3, and D1/D2/D3 remain explicit consumers.
+P2), P3 for the tracked modes, and concrete non-emptiness at `k = 3`.
+Generic non-emptiness and D1/D2/D3 live in downstream modules.
 -/
 
 def generalKModulus (k : Nat) : Nat := 3 ^ k

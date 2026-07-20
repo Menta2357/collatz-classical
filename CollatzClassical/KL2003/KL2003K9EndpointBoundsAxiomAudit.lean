@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.KL2003K9EndpointBounds
+
+#print axioms CollatzClassical.KL2003.K9EndpointBounds.alpha_strong_lower_bound
+#print axioms CollatzClassical.KL2003.K9EndpointBounds.dLower_endpoint
+#print axioms CollatzClassical.KL2003.K9EndpointBounds.dReal9_lower
+#print axioms CollatzClassical.KL2003.K9EndpointBounds.bReal9_lower
+#print axioms CollatzClassical.KL2003.K9EndpointBounds.aCoeff_real_eq_lambda_neg_two
