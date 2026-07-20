@@ -1,0 +1,8 @@
+import CollatzClassical.KL2003.KL2003K9ClassRoots
+
+#print axioms CollatzClassical.KL2003.K9ClassRoots.k9NegTwoUnit_order
+#print axioms CollatzClassical.KL2003.K9ClassRoots.k9NegOneUnit_order
+#print axioms CollatzClassical.KL2003.K9ClassRoots.k9TwoUnit_order
+#print axioms CollatzClassical.KL2003.K9ClassRoots.k9TwoUnit_zpowers_eq_top
+#print axioms CollatzClassical.KL2003.K9ClassRoots.exists_k9_power_residue
+#print axioms CollatzClassical.KL2003.K9ClassRoots.k9_classRoots_nonempty
