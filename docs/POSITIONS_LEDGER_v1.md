@@ -565,6 +565,21 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   queda transportar esta condicion de parada a `SatisfiesEL`, seguido de la
   unicidad de forma normal necesaria para el consumidor k=3.
 
+- El transporte pointwise desde la parada critica a la semantica EL ya esta
+  cerrado. Para `Phi,y` fijos, Lean elige una asignacion critica del normal
+  expression del estado detenido; esa asignacion conserva exactamente el
+  valor y selecciona una sola rama de cada minimo. Una induccion sobre el
+  arbol provenanced transporta `CriticalTerminalShiftsNegative` por todos los
+  contextos `add/min2/min3` y prueba que cada hoja seleccionada tiene shift
+  estrictamente negativo. El testigo finito resultante queda por debajo del
+  valor de la raiz mediante la antitonia ya probada de la corrida. El teorema
+  `sourcePhiK_satisfiesEL` concluye este contrato para toda clase y todo
+  `y >= 2`. La forma normal canonica no se asume ni es necesaria para esta
+  conclusion pointwise; permanece como cuestion sintactica separada. El
+  blocker inmediato pasa a transferir la factibilidad LNT general-k a todo
+  testigo retardado seleccionado, usando el certificado k=3 como primer
+  consumidor.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

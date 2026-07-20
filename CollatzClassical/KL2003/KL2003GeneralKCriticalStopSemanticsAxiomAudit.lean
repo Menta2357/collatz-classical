@@ -1,0 +1,8 @@
+import CollatzClassical.KL2003.KL2003GeneralKCriticalStopSemantics
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKCriticalStopSemantics.provenanced_selectedExpr_allLeafShiftsNegative
+#print axioms KL2003.GeneralKCriticalStopSemantics.criticalStop_satisfiesELAt
+#print axioms KL2003.GeneralKCriticalStopSemantics.sourcePhiK_satisfiesELAt
+#print axioms KL2003.GeneralKCriticalStopSemantics.sourcePhiK_satisfiesEL
