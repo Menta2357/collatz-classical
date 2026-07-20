@@ -330,6 +330,16 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   sin cambios las genealogias retenidas. Queda levantar la eleccion global de
   `witnessRetention` y el paso completo del scheduler, no reconstruir la
   procedencia de hojas desde labels ya colapsados.
+- El lift completo del scheduler ya esta tambien probado. La retencion D1/D3
+  se decide con el mismo `AdvancedMinConfiguration` global del scheduler
+  crudo, pero se aplica localmente al min3 recien generado sobre el arbol
+  anotado. Lean prueba que reducir el min descendido equivale a reemplazar la
+  hoja por el split local reducido. El finder anotado conserva el orden
+  izquierda-a-derecha y todo resultado `none/some` olvida al resultado crudo.
+  Finalmente, una iteracion de `sourceScheduledStep` anotada olvida
+  exactamente a la iteracion existente. El blocker pasa a iterar esta
+  simulacion y extraer, desde profundidad genealogica no acotada, una rama
+  infinita superviviente con sus invariantes de admisibilidad y no negatividad.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
