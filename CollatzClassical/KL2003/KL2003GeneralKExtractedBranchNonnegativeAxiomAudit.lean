@@ -1,0 +1,10 @@
+import CollatzClassical.KL2003.KL2003GeneralKExtractedBranchNonnegative
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.packedWeightEval_sourceWalkActionList
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.StrictPrefixesNonnegative.child
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.AllStrictPrefixesNonnegative.sourceStep
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.run_allStrictPrefixesNonnegative
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.selectedCodePrefix_nonnegative
+#print axioms KL2003.GeneralKExtractedBranchNonnegative.extractedInfiniteSourceWalk_shiftsNonnegative

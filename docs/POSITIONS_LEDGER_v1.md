@@ -380,6 +380,19 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   semanticos del consumidor: admisibilidad contextual de todos los segmentos y
   no negatividad de los shifts acumulados.
 
+- La no negatividad de la rama extraida ya esta formalizada sin hook. Un
+  invariante sobre todo el arbol provenanced exige que cada prefijo estricto
+  de cada genealogia viva tenga shift absoluto no negativo. Cada source step
+  D1/D2/D3 lo preserva: los prefijos antiguos se heredan y el nuevo prefijo
+  padre completo es precisamente el terminal no negativo seleccionado por el
+  scheduler. La iteracion y la transferencia al prefijo coherente de Konig
+  prueban `extractedInfiniteSourceWalk_shiftsNonnegative`. El unico puente
+  semantico pendiente para la contradiccion infinita es ahora la
+  admisibilidad contextual. Su borde exacto queda identificado: cuando las
+  tres ramas advanced tienen testigo, `witnessRetention` conserva una para no
+  vaciar el minimo, de modo que ese caso no puede ocultarse bajo una regla de
+  supervivencia sin testigo.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

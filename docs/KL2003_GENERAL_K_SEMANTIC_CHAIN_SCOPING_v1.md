@@ -237,9 +237,15 @@ The source scheduler has an exact provenanced simulation and finite run; under
 walks have unbounded length. The inverse-system form of Konig's lemma now
 extracts one coherent typed infinite branch whose finite prefix codes all come
 from actual selected provenances. The remaining termination subproblem is to
-prove that all branch segments inherit contextual admissibility and that all
-accumulated branch shifts are nonnegative. No infinite branch is assumed as an
-input contract.
+prove that all branch segments inherit contextual admissibility. Accumulated
+shift nonnegativity is now closed by a tree-wide strict-prefix invariant: each
+new child inherits all old prefixes, and the new full parent prefix is the
+nonnegative terminal selected by the scheduler. This invariant is preserved
+by D1/D2/D3, finite runs, and transferred to the coherent Konig branch. The
+remaining admissibility proof must explicitly handle the case in which all
+three advanced children have deletion witnesses, because `witnessRetention`
+keeps one branch to maintain a nonempty minimum. No infinite branch or
+admissibility hook is assumed as an input contract.
 
 ### Semantic preservation
 
