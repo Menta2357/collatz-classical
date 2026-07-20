@@ -15,7 +15,7 @@ teoremas que **sí** son demostrables con matemática existente.
 | # | Carril | Documento | Estado |
 |---|--------|-----------|--------|
 | 1 | Entrada como auditores al CC Challenge | `docs/CC_CHALLENGE_AUDIT_ENTRY_PLAN_v1.md` | ACTIVO |
-| 2 | KL2003: k=2 surrogate plus k=3 and k=9 piStar bounds | `docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md` | K9 THEOREM COMPLETE; CUSTODY PENDING |
+| 2 | KL2003: k=2 surrogate plus k=3 and k=9 piStar bounds | `docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md` | K9 THEOREM COMPLETE |
 | 3 | Auditoria bibliografica Liu 2025, arXiv:2512.13760 | `docs/LIU2025_COUNTING_COLLATZ_NUMBERS_SOURCE_AUDIT_v1.md` | SOURCE AUDIT COMPLETE |
 | 4 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
 

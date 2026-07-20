@@ -7,7 +7,7 @@ de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 FASE ACTUAL:          Carril A en espera humana + KL2003 k=9 theorem complete
 
 HILO A (CC Challenge): ELIAHOU1993_HUMAN_DECISION_HOLD   UPSTREAM_RESPONSE_PENDING
-HILO B (Krasikov M1):  K9_PISTAR_ARBITRARY_X_THEOREM_PROVED   PENDING_CUSTODY_REVIEW
+HILO B (Krasikov M1):  K9_PISTAR_ARBITRARY_X_THEOREM_PROVED   CUSTODIED_PENDING_EXTERNAL_REVIEW
 COORDINACION:          Liu2025 v1 0.946 withdrawn; current v2 0.3227 proof not validated
 CLAUDE:                veredicto coordinado firmado sobre texto completo
 
@@ -52,7 +52,7 @@ KL2003:
   AI_ASSISTED = true
   AI_MODELS = Codex (GPT-5-based agents); Claude Fable 5
   HEAD_K2_FINAL = 71add7c
-  HEAD_K9 = PENDING_CUSTODY
+  HEAD_K9 = d1b9478
   THEOREM_K2 = kl2003_k2_m1_surrogate_ceil_window_lower_bound
   THEOREM_K2_FILE = CollatzClassical/KL2003/KL2003M1Surrogate.lean
   THEOREM_K9 = exists_k9_piStar_arbitrary_x_lower_bound
