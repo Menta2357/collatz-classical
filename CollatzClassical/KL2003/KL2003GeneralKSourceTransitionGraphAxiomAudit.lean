@@ -1,0 +1,24 @@
+import CollatzClassical.KL2003.KL2003GeneralKSourceTransitionGraph
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms GeneralKSourceGraph.retardedAction_target
+#print axioms GeneralKSourceGraph.d1AdvancedAction_target
+#print axioms GeneralKSourceGraph.d3AdvancedAction_target
+#print axioms GeneralKSourceGraph.childLabel_retarded
+#print axioms GeneralKSourceGraph.childLabel_d1Advanced
+#print axioms GeneralKSourceGraph.childLabel_d3Advanced
+#print axioms GeneralKSourceGraph.SourceAction.weight_alphaCoeff_nonneg
+#print axioms GeneralKSourceGraph.SourceAction.weight_constCoeff_neg
+#print axioms GeneralKSourceGraph.SourceWalk.length_append
+#print axioms GeneralKSourceGraph.SourceWalk.weight_append
+#print axioms GeneralKSourceGraph.SourceWalk.weight_alphaCoeff_nonneg
+#print axioms GeneralKSourceGraph.SourceWalk.weight_constCoeff_nonpos
+#print axioms GeneralKSourceGraph.SourceWalk.weight_constCoeff_neg_of_length_pos
+#print axioms GeneralKSourceGraph.SourceWalk.finalLabel_nil
+#print axioms GeneralKSourceGraph.SourceWalk.finalLabel_cons
+#print axioms GeneralKSourceGraph.SourceWalk.finalLabel_shift_eval
+
+end KL2003
+end CollatzClassical

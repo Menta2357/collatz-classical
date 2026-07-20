@@ -149,6 +149,14 @@ forces a negative shift.
 Order independence and canonical normal-form uniqueness remain a separate
 module after termination. They must not be bundled into the cycle descent.
 
+## Implementation status
+
+Module 1 is now implemented as
+`KL2003GeneralKSourceTransitionGraph.lean`. Its finite action type, typed
+endpoints, source-faithful weights, dependent walks, concatenation laws, and
+accumulated-shift theorem compile and pass axiom audit. Module 2 is the next
+active target; modules 3 and 4 remain unopened.
+
 ## Validation order
 
 1. Reproduce the k=2 D1/D2/D3 transition table and the deletion of the positive
@@ -172,6 +180,7 @@ EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 
 ```text
 THEOREM31_FINITE_CYCLE_DESCENT_SCOPED
+GENERAL_K_SOURCE_TRANSITION_GRAPH_PROVED
 RAW_SOURCE_GRAPH_POSITIVE_CYCLES_ACKNOWLEDGED
 DELETION_SUPPLIES_NONINCREASE_NOT_STRICT_DROP
 ZERO_WEIGHT_RECURRENCE_EXCLUSION_REQUIRED

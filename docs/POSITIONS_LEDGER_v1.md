@@ -266,6 +266,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   deletion los excluye solo en ramas supervivientes. Por eso el contrato no
   afirma negatividad del grafo bruto: combina no-aumento contextual, ausencia
   de peso cero y finitud para producir el margen uniforme.
+- El primer modulo de esa ruta ya esta en Lean. `SourceAction mode` es un tipo
+  finito cuya validez impide construir ramas D1/D3 fuera de sus residuos; sus
+  destinos y pesos coinciden con los child labels source existentes. Las
+  caminatas dependientes concatenan con longitud y peso aditivos, todo
+  coeficiente de alpha acumulado es no negativo y toda caminata no vacia tiene
+  coeficiente constante estrictamente negativo. El shift final coincide
+  exactamente con el inicial mas el peso. Sigue abierta la exclusion de peso
+  evaluado cero cuando aparece alpha, antes de la descomposicion en ciclos.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
