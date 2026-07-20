@@ -446,6 +446,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   que las realizaciones retained advanced relevantes son witness-free, cuyo
   unico borde conocido es la retencion cuando las tres ramas tienen testigo.
 
+- El consumidor de esa costura tambien esta cerrado bajo un contrato concreto,
+  no circular. `WitnessFreeAdvancedPrefixRealization` exige para cada llegada
+  advanced una terminal real de una corrida finita, su codigo prefijo exacto,
+  su modo objetivo y ausencia de testigo; no incluye ninguna desigualdad de
+  shifts. Lean deriva de esos datos `AdvancedArrivalsNonincreasing` y, al
+  combinarlo con no negatividad y recurrencia, una subsucesion infinita de
+  llegadas al mismo modo con shifts estrictamente decrecientes. El trabajo
+  scheduler-especifico pendiente queda reducido a construir esas realizaciones
+  desde la politica de retencion. El caso de tres testigos simultaneos sigue
+  siendo el unico borde donde la politica conserva una rama testificada.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
