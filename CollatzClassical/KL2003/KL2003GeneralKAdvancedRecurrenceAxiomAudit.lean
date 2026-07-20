@@ -1,0 +1,9 @@
+import CollatzClassical.KL2003.KL2003GeneralKAdvancedRecurrence
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKAdvancedRecurrence.weight_eval_eq_neg_two_of_not_isAdvanced
+#print axioms KL2003.GeneralKAdvancedRecurrence.segmentWeightEval_eq_neg_two_mul_of_no_advanced
+#print axioms KL2003.GeneralKAdvancedRecurrence.exists_advanced_at_or_after_of_shiftsNonnegative
+#print axioms KL2003.GeneralKAdvancedRecurrence.advancedIndices_infinite
+#print axioms KL2003.GeneralKAdvancedRecurrence.exists_recurrent_advanced_target_subsequence

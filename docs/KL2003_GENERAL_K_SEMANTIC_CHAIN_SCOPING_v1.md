@@ -599,6 +599,14 @@ removes it.  The remaining formal obligations are therefore:
 The nested-return and local-finiteness modules remain correct conditional
 results, but they are no longer listed as the intended scheduler consumer.
 
+The first replacement layer is now proved in
+`KL2003GeneralKAdvancedRecurrence.lean`.  Global nonnegativity forces advanced
+actions at arbitrarily large indices, and finite-mode recurrence produces one
+mode with an infinite strictly ordered subsequence of advanced arrivals.  The
+remaining termination theorem must connect those recurrent provenanced
+subtrees through scheduler translation equivariance and obtain the fixed
+negative increment used by the corrected arithmetic core.
+
 ## High-k gate after k=3
 
 Success at `k=3` authorizes measurement, not formalization, at `k=9`.

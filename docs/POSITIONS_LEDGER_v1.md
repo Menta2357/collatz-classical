@@ -419,6 +419,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   ningun minimo con tres testigos simultaneos; esto orienta, pero no sustituye,
   el lema general de exclusion que sigue abierto.
 
+- La recurrencia correcta de la prueba fuente ya tiene su nucleo combinatorio
+  en Lean. En una rama infinita cuyos shifts acumulados permanecen no
+  negativos, una cola sin acciones advanced restaria exactamente dos por paso
+  y produciria un shift negativo; por ello hay acciones advanced
+  arbitrariamente lejos y su conjunto de indices es infinito. La finitud de
+  `TrackedMode` extrae entonces una clase que recibe una subsucesion infinita
+  estrictamente ordenada de llegadas advanced. Quedan dos conexiones
+  scheduler-especificas: las ramas retained advanced deben carecer de testigo
+  (exclusion del caso triple), y la equivariancia por traslacion debe convertir
+  los subarboles recurrentes en un decremento fijo negativo. Ya no queda
+  ninguna obligacion sobre retornos cuyo ultimo paso sea retardado.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
