@@ -227,8 +227,14 @@ The final arithmetic contradiction already exists in
 4. First-return encoding and finiteness from the smaller support. Proved.
 5. Induction theorem `finite_admissible_walks_above`. Proved.
 6. Local-finiteness and uniform-gap corollaries. Proved.
-7. Scheduler extraction and construction of `HasUniformRecurrentDrop` in the
-   separate termination module.
+7. The scheduler-independent infinite-branch consumer is proved in
+   `KL2003GeneralKInfiniteBranchDescent.lean`: every coherent branch whose
+   finite segments are context-admissible yields `HasUniformRecurrentDrop`,
+   and hence cannot keep all accumulated shifts nonnegative.
+8. The remaining scheduler module must extract such a genealogy-coherent
+   branch from hypothetical nontermination and prove segment admissibility
+   plus branch-shift nonnegativity. Chronological selected terminals are not
+   assumed to form a typed path.
 
 ## Acceptance criteria
 

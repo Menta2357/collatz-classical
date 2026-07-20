@@ -313,10 +313,14 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   estrictamente menor; de ahi se obtienen finitud por encima de toda cota,
   un gap uniforme y una cota de longitud para la caminata completa. Como
   corolarios, los pesos cerrados admisibles en `(-1,0)` son finitos y existe
-  incondicionalmente un `epsilon > 0` uniforme. El blocker pasa a la capa de
-  extraccion: convertir una ejecucion no terminante del scheduler en una
-  caminata source infinita contextualmente admisible y, con ella, construir
-  `HasUniformRecurrentDrop`.
+  incondicionalmente un `epsilon > 0` uniforme. El consumidor de rama infinita
+  tambien esta cerrado: una caminata source coherente cuyos segmentos sean
+  contextualmente admisibles construye `HasUniformRecurrentDrop` y no puede
+  mantener todos sus shifts acumulados no negativos. El blocker queda
+  reducido a extraer esa caminata desde la genealogia superviviente de una
+  ejecucion no terminante y probar admisibilidad de segmentos y no negatividad
+  de shifts. La sucesion cronologica de terminales elegidos globalmente no se
+  identifica con una trayectoria tipada, pues puede saltar entre ramas.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
