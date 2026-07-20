@@ -525,6 +525,85 @@ theorem sourceScheduledStep_forget {p : Nat} {hp : 1 <= p}
       simp [sourceScheduledStep, hfind, ELTree.sourceScheduledStep, hforget,
         occurrence.sourceStep_forget]
 
+/-- Finite iteration of the provenanced scheduler. -/
+noncomputable def run {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} (initial : ProvenancedTree hp root) :
+    Nat -> ProvenancedTree hp root
+  | 0 => initial
+  | n + 1 => sourceScheduledStep (run initial n)
+
+/-- Matching finite iteration of the existing raw scheduler. -/
+noncomputable def rawRun {p : Nat} (hp : 1 <= p)
+    (initial : ELTree (p + 1)) : Nat -> ELTree (p + 1)
+  | 0 => initial
+  | n + 1 => ELTree.sourceScheduledStep hp (rawRun hp initial n)
+
+@[simp] theorem run_zero {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} (initial : ProvenancedTree hp root) :
+    run initial 0 = initial := rfl
+
+@[simp] theorem run_succ {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} (initial : ProvenancedTree hp root)
+    (n : Nat) :
+    run initial (n + 1) = sourceScheduledStep (run initial n) := rfl
+
+@[simp] theorem rawRun_zero {p : Nat} (hp : 1 <= p)
+    (initial : ELTree (p + 1)) : rawRun hp initial 0 = initial := rfl
+
+@[simp] theorem rawRun_succ {p : Nat} (hp : 1 <= p)
+    (initial : ELTree (p + 1)) (n : Nat) :
+    rawRun hp initial (n + 1) =
+      ELTree.sourceScheduledStep hp (rawRun hp initial n) := rfl
+
+theorem run_forget {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} (initial : ProvenancedTree hp root)
+    (n : Nat) :
+    (run initial n).forget = rawRun hp initial.forget n := by
+  induction n with
+  | zero => rfl
+  | succ n ih =>
+      rw [run_succ, rawRun_succ, sourceScheduledStep_forget, ih]
+
+/-- The instrumented scheduler finds an expandable terminal at every finite
+time. -/
+def NeverStops {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} (initial : ProvenancedTree hp root) : Prop :=
+  forall n : Nat, findExpandableOccurrence (run initial n) ≠ none
+
+theorem exists_selectedOccurrence {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} {initial : ProvenancedTree hp root}
+    (hne : NeverStops initial) (n : Nat) :
+    exists occurrence : ExpandableOccurrence (run initial n),
+      findExpandableOccurrence (run initial n) = some occurrence := by
+  generalize hfind : findExpandableOccurrence (run initial n) = result
+  cases result with
+  | none => exact False.elim (hne n hfind)
+  | some occurrence => exact ⟨occurrence, rfl⟩
+
+/-- The concrete selected occurrence at time `n` under `NeverStops`. -/
+noncomputable def selectedOccurrence {p : Nat} {hp : 1 <= p}
+    {root : ELLabel (p + 1)} {initial : ProvenancedTree hp root}
+    (hne : NeverStops initial) (n : Nat) :
+    ExpandableOccurrence (run initial n) :=
+  Classical.choose (exists_selectedOccurrence hne n)
+
+theorem findExpandableOccurrence_run_eq_selectedOccurrence
+    {p : Nat} {hp : 1 <= p} {root : ELLabel (p + 1)}
+    {initial : ProvenancedTree hp root} (hne : NeverStops initial)
+    (n : Nat) :
+    findExpandableOccurrence (run initial n) =
+      some (selectedOccurrence hne n) :=
+  Classical.choose_spec (exists_selectedOccurrence hne n)
+
+theorem run_succ_eq_selectedOccurrence_sourceStep
+    {p : Nat} {hp : 1 <= p} {root : ELLabel (p + 1)}
+    {initial : ProvenancedTree hp root} (hne : NeverStops initial)
+    (n : Nat) :
+    run initial (n + 1) = (selectedOccurrence hne n).sourceStep := by
+  rw [run_succ]
+  simp [sourceScheduledStep,
+    findExpandableOccurrence_run_eq_selectedOccurrence hne n]
+
 end ProvenancedTree
 
 end GeneralKProvenancedScheduler

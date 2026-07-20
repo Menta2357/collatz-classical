@@ -75,6 +75,24 @@ sourceScheduledStep_forget :
 The raw scheduler is unchanged; genealogy is a conservative instrumented
 lift.
 
+## Finite executions
+
+`run` and `rawRun` iterate the provenanced and raw schedulers respectively.
+Induction on the number of steps proves `run_forget`, so the conservative
+simulation holds at every finite time, not only for one step.
+
+`NeverStops initial` states propositionally that the annotated finder is never
+`none`. From it, Lean constructs `selectedOccurrence hne n` at every time and
+proves both its finder equation and:
+
+```text
+run_succ_eq_selectedOccurrence_sourceStep
+```
+
+Thus hypothetical nontermination now supplies a concrete sequence of selected
+provenanced occurrences. It still does not identify that chronological
+sequence with one typed branch.
+
 ## Verification
 
 ```text
@@ -124,8 +142,12 @@ PROVENANCED_SOURCE_STEP_FORGET_PROVED
 PROVENANCED_LEFT_TO_RIGHT_FINDER_DEFINED
 PROVENANCED_FINDER_FORGET_PROVED
 PROVENANCED_SOURCE_SCHEDULER_STEP_FORGET_PROVED
+PROVENANCED_FINITE_RUN_DEFINED
+PROVENANCED_RUN_FORGET_PROVED
+NEVER_STOPS_SELECTED_OCCURRENCE_CONSTRUCTED
+RUN_SUCCESSOR_EQ_SELECTED_SOURCE_STEP_PROVED
 RAW_SOURCE_SCHEDULER_UNCHANGED
-INFINITE_EXECUTION_NOT_YET_DEFINED
+UNBOUNDED_GENEALOGY_DEPTH_NOT_YET_PROVED
 SURVIVING_BRANCH_EXTRACTION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM
