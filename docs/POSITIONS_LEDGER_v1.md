@@ -609,6 +609,21 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   y tomar el minimo positivo de los shifts negativos dentro de esa familia
   finita.
 
+- La ventana retardada uniforme ya esta extraida de esa cota de profundidad.
+  Lean propaga `bound + 1` a todas las hojas terminales de cada corrida finita,
+  transporta la genealogia fuente exacta por `normalExpr` y por la asignacion
+  critica seleccionada, y serializa cada hoja como una palabra tipada acotada.
+  Los pesos negativos de todas esas palabras forman un finset no vacio: la
+  accion retardada de un paso aporta la magnitud 2. Su minimo y maximo exactos
+  producen `mu, nu` con `0 < mu <= nu`, uniformes sobre todas las clases raiz,
+  todo `y >= 2` y todo testigo pointwise. Cada selected expression convertido
+  a `RetardedExpr` satisface `ShiftsWithin mu nu`. No se usa forma normal EL
+  canonica ni estimacion numerica externa. El blocker inmediato es ahora de
+  interfaz inductiva: el consumidor generico existente fija una fila estatica
+  por indice, mientras que el witness source-faithful seleccionado puede
+  depender de `y`; debe probarse una variante dinamica antes de instanciar el
+  certificado k=3.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
