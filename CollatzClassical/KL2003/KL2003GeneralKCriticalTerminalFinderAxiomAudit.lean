@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.KL2003GeneralKCriticalTerminalFinder
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKCriticalTerminalFinder.findCriticalExpandableOccurrence_eq_none_iff
+#print axioms KL2003.GeneralKCriticalTerminalFinder.criticalExpandableOccurrence_fields
+#print axioms KL2003.GeneralKCriticalTerminalFinder.findCriticalExpandableOccurrence_ne_none_of_occurrence

@@ -487,6 +487,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   critica, o iterar directamente la politica Phi-sensible ya definida; no
   queda otra exclusion aritmetica local por inventar.
 
+- La primera capa del scheduler critico ya esta cerrada. Se define una
+  ocurrencia expandable provenanced que combina shift no negativo con una
+  prueba de que la terminal yace sobre una ruta globalmente critica para
+  `Phi,y` fijos. Un selector no computable, compatible con la libertad de
+  orden de la fuente, devuelve una ocurrencia de ese tipo cuando existe.
+  Lean caracteriza exactamente su parada: devuelve `none` si y solo si toda
+  terminal globalmente critica tiene shift negativo. Las ramas advanced
+  globalmente no criticas quedan fuera a proposito; no es necesario
+  normalizarlas para el consumidor semantico. La siguiente capa debe probar el
+  paso Phi-sensible con `criticalWitnessRetention` y preservar iterativamente
+  `CriticalNodeBounds`, argumentos no negativos, valor exacto y genealogia.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
