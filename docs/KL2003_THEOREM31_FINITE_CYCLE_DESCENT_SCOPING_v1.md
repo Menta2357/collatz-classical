@@ -162,8 +162,8 @@ by deletion.
    Irrationality of `logb 2 3` and nonzero evaluation of nonempty source-walk
    symbolic weights.
 3. `KL2003GeneralKNestedReturnDescent.lean`
-   Context-preserving first-return decomposition, local finiteness near zero,
-   and construction of `HasUniformRecurrentDrop` for surviving walks.
+   Context-admissible factors, context-preserving first-return decomposition,
+   local finiteness near zero, and construction of a uniform return gap.
 4. `KL2003GeneralKEliminationTermination.lean`
    Extraction of an infinite surviving walk from scheduler nontermination and
    the final contradiction.
@@ -182,7 +182,13 @@ excludes zero weight for nonempty source walks, and strengthens contextual
 nonpositivity to strict negativity. The audit module
 `KL2003GeneralKFiniteCycleDescentAudit.lean` has also shown that the naive
 simple-cycle decomposition proposed for module 3 is invalid even at `k = 2`.
-The revised nested-return module and module 4 remain unopened.
+The revised nested-return module is now open. It defines exact-factor
+`ContextAdmissible` source walks and proves that finiteness of admissible
+closed weights in `(-1, 0)` yields a uniform negative gap. The new scoping
+`KL2003_THEOREM31_NESTED_RETURN_LOCAL_FINITENESS_SCOPING_v1.md` fixes the
+remaining combinatorial target as finiteness of admissible supported walks
+above every lower bound, proved by induction on finite mode support. That
+local-finiteness theorem and module 4 remain open.
 
 ## Validation order
 
@@ -198,8 +204,7 @@ The revised nested-return module and module 4 remain unopened.
 ```text
 BLOCKED_ON_SURVIVING_TREE_PATH_TO_SOURCE_WALK_EXTRACTION
 BLOCKED_ON_CONTEXT_PRESERVING_FIRST_RETURN_DECOMPOSITION
-BLOCKED_ON_ADMISSIBLE_RETURN_WEIGHT_LOCAL_FINITENESS
-BLOCKED_ON_UNIFORM_EPSILON_CONSTRUCTION
+BLOCKED_ON_FINITE_ADMISSIBLE_WALKS_ABOVE_INDUCTION
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 ```
@@ -209,13 +214,16 @@ EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 ```text
 THEOREM31_FINITE_CYCLE_DESCENT_SCOPED
 NAIVE_SIMPLE_CYCLE_DESCENT_REFUTED_AT_K2
-NESTED_RETURN_DESCENT_RESCOPING_REQUIRED
+NESTED_RETURN_DESCENT_RESCOPED
 GENERAL_K_SOURCE_TRANSITION_GRAPH_PROVED
 RAW_SOURCE_GRAPH_POSITIVE_CYCLES_ACKNOWLEDGED
 DELETION_SUPPLIES_NONINCREASE_NOT_STRICT_DROP
 ZERO_WEIGHT_RECURRENCE_EXCLUSION_PROVED
 ALPHA_IRRATIONALITY_PROVED
 NONEMPTY_SOURCE_WALK_ZERO_WEIGHT_EXCLUDED
+CONTEXT_ADMISSIBLE_SOURCE_WALK_DEFINED
+FINITE_NEAR_ZERO_TO_UNIFORM_GAP_PROVED
+NESTED_RETURN_LOCAL_FINITENESS_SCOPED
 UNIFORM_RECURRENT_DROP_CONSUMER_ALREADY_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM
 NO_K9_FORMALISATION_AUTHORIZATION

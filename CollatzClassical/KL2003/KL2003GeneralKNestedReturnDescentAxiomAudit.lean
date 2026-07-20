@@ -1,0 +1,9 @@
+import CollatzClassical.KL2003.KL2003GeneralKNestedReturnDescent
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKNestedReturnDescent.sourceWalk_append_nil
+#print axioms KL2003.GeneralKNestedReturnDescent.ContextAdmissible.closed_weight_neg
+#print axioms KL2003.GeneralKNestedReturnDescent.admissibleClosedWeights_neg
+#print axioms KL2003.GeneralKNestedReturnDescent.exists_uniform_negative_gap_of_finite_near_zero
+#print axioms KL2003.GeneralKNestedReturnDescent.exists_uniform_admissible_return_drop_of_local_finiteness

@@ -260,8 +260,8 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   deletion. No se reclama aun terminacion ni independencia de orden.
 - La ruta alternativa queda ahora disenada como cuatro modulos: grafo finito
   de acciones source, exclusion de peso cero mediante irracionalidad de
-  `logb 2 3` o certificado kernel-checked, descomposicion en ciclos simples y
-  extraccion de una caminata superviviente desde la no terminacion. El grafo
+  `logb 2 3`, descenso por retornos anidados con finitud local y extraccion de
+  una caminata superviviente desde la no terminacion. El grafo
   bruto tiene ciclos positivos, incluido el auto-bucle D3 de clase 8 en k=2;
   deletion los excluye solo en ramas supervivientes. Por eso el contrato no
   afirma negatividad del grafo bruto: combina no-aumento contextual, ausencia
@@ -290,6 +290,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   siguiente modulo debe preservar paquetes anidados y demostrar una propiedad
   de first-return/local-finiteness, o encontrar otra medida bien fundada; no se
   reclama ya un gap por minimo de ciclos simples brutos.
+- La salida correcta ya tiene su primer consumidor kernel-clean. Un camino
+  source es `ContextAdmissible` cuando cada factor cerrado no vacio conserva
+  su paquete anidado y tiene peso estrictamente negativo. Lean prueba que, si
+  los pesos cerrados admisibles en `(-1,0)` forman un conjunto finito, existe
+  un `epsilon > 0` que acota todos esos retornos por `-epsilon`; los
+  pesos `<= -1` quedan cubiertos por la misma cota. La construccion del
+  epsilon deja de ser blocker. El contenido abierto se concentra ahora en un
+  teorema combinatorio preciso: para todo soporte finito y toda cota inferior,
+  hay solo finitos caminos admisibles soportados con peso por encima de esa
+  cota. Su prueba se ha scoped como induccion sobre el soporte mediante
+  descomposicion exacta en primeros retornos, sin loop erasure.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
