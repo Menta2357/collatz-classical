@@ -1,0 +1,14 @@
+import CollatzClassical.KL2003.KL2003GeneralKCriticalSchedulerRun
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKCriticalScheduler.criticalScheduledStepFacts
+#print axioms KL2003.GeneralKCriticalScheduler.run_invariants
+#print axioms KL2003.GeneralKCriticalScheduler.run_succ_normalExprEvalLe
+#print axioms KL2003.GeneralKCriticalScheduler.run_initial_traceConsistent
+#print axioms KL2003.GeneralKCriticalScheduler.run_initial_terminalPath_expandedLabels
+#print axioms KL2003.GeneralKCriticalScheduler.run_succ_eq_selectedOccurrence_sourceStep
+#print axioms KL2003.GeneralKCriticalScheduler.selected_d1_retainedBranchesWitnessFree
+#print axioms KL2003.GeneralKCriticalScheduler.selected_d3_retainedBranchesWitnessFree
+#print axioms KL2003.GeneralKCriticalScheduler.exists_selectedOccurrence_walk_length_gt
+#print axioms KL2003.GeneralKCriticalScheduler.stopped_iff_criticalTerminalShiftsNegative

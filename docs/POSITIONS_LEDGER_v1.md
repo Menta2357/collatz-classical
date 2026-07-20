@@ -512,6 +512,19 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   iterar este paso conservando una genealogia critica coherente y extraer de
   ella la rama recurrente que consumira el decremento fijo.
 
+- La iteracion finita de ese paso ya esta formalizada sin una interfaz de
+  arbol alternativa. El finder critico se evalua a `sourcePhiK,y` fijos y, si
+  encuentra una ocurrencia, aplica literalmente el `sourceStep` provenanced
+  existente. Por induccion, toda corrida finita preserva
+  `CriticalNodeBounds`, argumentos no negativos y la traza exacta de prefijos;
+  el valor normalizado es antitono. En cada indice no detenido, las ramas
+  retained D1/D3 son witness-free. Ademas, el fuel cuaternario existente se
+  aplica sin cambios y prueba que una corrida critica no terminante selecciona
+  source walks de longitud arbitrariamente grande. Esto todavia no es una rama
+  infinita coherente: el blocker inmediato es adaptar la familia inversa y la
+  extraccion de Konig al selector critico, para despues producir las
+  realizaciones witness-free que consume la recurrencia advanced.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
