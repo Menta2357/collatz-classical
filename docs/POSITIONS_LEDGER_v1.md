@@ -495,9 +495,22 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   Lean caracteriza exactamente su parada: devuelve `none` si y solo si toda
   terminal globalmente critica tiene shift negativo. Las ramas advanced
   globalmente no criticas quedan fuera a proposito; no es necesario
-  normalizarlas para el consumidor semantico. La siguiente capa debe probar el
-  paso Phi-sensible con `criticalWitnessRetention` y preservar iterativamente
-  `CriticalNodeBounds`, argumentos no negativos, valor exacto y genealogia.
+  normalizarlas para el consumidor semantico.
+
+- La segunda capa, el paso fuente critico individual, tambien esta cerrada
+  sobre el scheduler provenanced existente. Un lema contextual prueba que
+  reemplazar una ocurrencia globalmente critica por un subarbol de valor menor
+  preserva `CriticalNodeBounds`: los hermanos no afectados solo pueden dejar
+  de ser criticos, nunca convertirse en nuevos competidores criticos. Aplicado
+  al split D1/D2/D3, Lean preserva `CriticalNodeBounds`, no negatividad de los
+  argumentos y obtiene descenso debil del valor normalizado. En D1 y D3, la
+  criticalidad del minimo advanced descarga la exclusion triple ya probada y
+  deja las ramas retained sin testigo. La procedencia no se duplica: el paso
+  usa `sourceStep_forget`, que borra exactamente al scheduler raw existente.
+  No se afirma igualdad del valor normalizado, iteracion, terminacion,
+  compacidad de genealogia critica ni `SatisfiesEL`. El blocker inmediato es
+  iterar este paso conservando una genealogia critica coherente y extraer de
+  ella la rama recurrente que consumira el decremento fijo.
 
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 

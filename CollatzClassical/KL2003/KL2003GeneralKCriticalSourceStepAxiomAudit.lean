@@ -1,0 +1,12 @@
+import CollatzClassical.KL2003.KL2003GeneralKCriticalSourceStep
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.ELTree.Context.plug_criticalNodeBounds_of_le_of_targetCritical
+#print axioms KL2003.ELTree.TerminalPath.splitAt_criticalNodeBounds_of_targetCritical
+#print axioms KL2003.ELTree.ExpandableOccurrence.sourceStep_criticalNodeBounds_of_targetCritical
+#print axioms KL2003.ELTree.ExpandableOccurrence.sourceStep_normalExpr_argumentsNonnegative
+#print axioms KL2003.ELTree.ExpandableOccurrence.sourceStep_normalExpr_eval_le_of_targetCritical
+#print axioms KL2003.ELTree.ExpandableOccurrence.d1_retainedBranchesWitnessFree_of_targetCritical
+#print axioms KL2003.ELTree.ExpandableOccurrence.d3_retainedBranchesWitnessFree_of_targetCritical
+#print axioms KL2003.GeneralKCriticalSourceStep.criticalSourceStepFacts
