@@ -457,6 +457,22 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   desde la politica de retencion. El caso de tres testigos simultaneos sigue
   siendo el unico borde donde la politica conserva una rama testificada.
 
+- La exclusion puramente local del triple testigo queda refutada por un audit
+  kernel-clean en k=5. Lean construye una `SourceWalk` tipada de 13 pasos desde
+  modo 107 hasta modo 20, calcula literalmente sus catorce labels de prefijo y
+  prueba que todos tienen shift evaluado no negativo. El split D1 final crea
+  los modos 26, 107 y 188 a shift `13*alpha-19`; cada uno encuentra en la misma
+  traza un ancestro de igual modo y shift estrictamente menor. Por tanto las
+  tres hojas satisfacen simultaneamente el predicado sintactico
+  `HasDeletionWitness`. El resultado no prueba reachability en una corrida
+  completa y no refuta Theorem 3.1. Si prueba que tipado, genealogia local y
+  no negatividad no bastan para obtener la frase fuente de que no se borran
+  las tres hojas. El blocker correcto pasa a transportar el invariante
+  semantico de asignaciones criticas/equation (305) al scheduler provenanced,
+  o a demostrar un invariante global equivalente sobre estados alcanzables.
+  No se introduce minimo vacio y la API condicional de realizaciones
+  witness-free permanece valida.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

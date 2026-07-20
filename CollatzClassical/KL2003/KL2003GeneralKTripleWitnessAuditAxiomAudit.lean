@@ -1,0 +1,15 @@
+import CollatzClassical.KL2003.KL2003GeneralKTripleWitnessAudit
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKTripleWitnessAudit.candidateWalk_length
+#print axioms KL2003.GeneralKTripleWitnessAudit.candidateWalk_finalLabel
+#print axioms KL2003.GeneralKTripleWitnessAudit.candidateAncestors_eq_expected
+#print axioms KL2003.GeneralKTripleWitnessAudit.candidateAncestors_nonnegative
+#print axioms KL2003.GeneralKTripleWitnessAudit.child20First_label
+#print axioms KL2003.GeneralKTripleWitnessAudit.child20Second_label
+#print axioms KL2003.GeneralKTripleWitnessAudit.child20Third_label
+#print axioms KL2003.GeneralKTripleWitnessAudit.child26_hasDeletionWitness
+#print axioms KL2003.GeneralKTripleWitnessAudit.child107_hasDeletionWitness
+#print axioms KL2003.GeneralKTripleWitnessAudit.child188_hasDeletionWitness
+#print axioms KL2003.GeneralKTripleWitnessAudit.allThreeSourceChildrenHaveDeletionWitness
