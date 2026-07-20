@@ -58,7 +58,7 @@ Paper:
 
 Formalisation id 6:
 - proof assistant: `lean4`
-- repository: `http://github.com/tangentstorm/eliahou-collatz-bounds`
+- repository: `https://github.com/tangentstorm/eliahou-collatz-bounds`
 - status: `waiting_to_be_audited`
 - user_display_name: `tangentstorm`
 - AI-assisted: true
@@ -120,13 +120,18 @@ I intend to audit the Lean 4 formalisation registered for `Eliahou1993`,
 formalisation id `6`:
 
 - Paper: Shalom Eliahou, "The 3x+1 problem: New Lower Bounds on Nontrivial Cycle Lengths", Discrete Mathematics 118 (1993), 45--56.
-- Formalisation: http://github.com/tangentstorm/eliahou-collatz-bounds
+- Formalisation: https://github.com/tangentstorm/eliahou-collatz-bounds
 - Current CC Challenge status: `waiting_to_be_audited`
 - Registered as AI-assisted: `aristotle`
 
 I will start with a statement-fidelity pass: comparing the paper statements
 against the Lean statements and checking the basic conventions around the
 compressed Collatz map, cycles, lengths, hypotheses, and the numerical bound.
+
+I previously contacted the repository maintainers through issue #1 on
+2026-07-07 to coordinate author-first. If this Forum post is published, it is
+because no maintainer response was visible after the recorded response window:
+https://github.com/tangentstorm/eliahou-collatz-bounds/issues/1
 
 I have not added an audit report link yet. I plan to keep the first pass local
 and report back before adding any audit link.
@@ -145,8 +150,8 @@ Current recommendation:
 - The post above is ready to publish in Forum, subject to explicit user approval/action.
 - Do not include scope/glue findings in the initial Forum post.
 - Do not create an audit link yet.
-- Do not open a GitHub issue to the author yet.
-- Mechanical audit can proceed locally in parallel after or while the intention post is pending.
+- The author-first GitHub issue already exists; do not open a duplicate issue.
+- The mechanical and statement-fidelity audit has already been completed locally.
 
 MECHANICAL_AUDIT_LOCAL_PARALLEL_READY: yes.
 
@@ -154,6 +159,7 @@ MECHANICAL_AUDIT_LOCAL_PARALLEL_READY: yes.
 
 - ELIAHOU1993_API_SNAPSHOT_REFRESHED: yes
 - FORUM_INTENTION_POST_READY: yes
+- AUTHOR_FIRST_CONTACT_ALREADY_SENT: yes
 - FINDINGS_NOT_DISCLOSED_YET: yes
 - AUDIT_LINK_NOT_CREATED: yes
 - MECHANICAL_AUDIT_LOCAL_PARALLEL_READY: yes
