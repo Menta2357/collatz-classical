@@ -525,6 +525,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   extraccion de Konig al selector critico, para despues producir las
   realizaciones witness-free que consume la recurrencia advanced.
 
+- La compacidad de esa genealogia critica tambien esta cerrada. De las
+  terminales seleccionadas a profundidad arbitraria se forman tipos finitos de
+  codigos a profundidad exacta y proyecciones por `List.take`; la forma de
+  sistema inverso del lema de Konig produce una familia coherente y un
+  `InfiniteSourceWalk` tipado. Cada prefijo finito de esa rama es prefijo de
+  alguna terminal seleccionada criticamente, y el invariante de prefijos
+  estrictos prueba que todos sus shifts acumulados son no negativos. El paso
+  que sigue no es mas compactness: debe localizar cada llegada advanced de la
+  rama dentro de una seleccion D1/D3 concreta y transportar a ella la retencion
+  witness-free ya probada.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
