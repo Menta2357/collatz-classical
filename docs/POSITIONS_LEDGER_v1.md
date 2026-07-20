@@ -624,6 +624,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   depender de `y`; debe probarse una variante dinamica antes de instanciar el
   certificado k=3.
 
+- El consumidor retardado ya acepta filas source-faithful dependientes del
+  argumento real. `DynamicRetardedInputs` conserva la misma induccion fuerte
+  por `genericRetardedRank`, pero pide `ShiftsWithin`, semantica y factibilidad
+  solo en la rama `nu < y`, donde la fila se consume. Para cada `(mode,y)`, una
+  unica eleccion del witness producido por el scheduler descarga las tres
+  obligaciones: ventana uniforme, `row_le` y transferencia LNT. La base deja
+  tambien de ser una deuda externa: la suma finita de coeficientes principales
+  por `lambda^nu` domina todo termino con `0 <= y <= nu`; su reciproco es un
+  `Delta > 0`, y `sourcePhiK >= 1` cierra la desigualdad. Lean prueba asi una
+  cota exponencial general-k para `sourcePhiK` desde cualquier
+  `LNTCertificate` construido con `lambda >= 1`. El unico blocker antes del
+  primer teorema k=3 es convertir la data racional generada y ya verificada en
+  esa estructura LNT, sin confiar en el generador.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
