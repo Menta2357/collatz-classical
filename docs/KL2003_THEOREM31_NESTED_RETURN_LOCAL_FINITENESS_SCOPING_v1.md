@@ -217,10 +217,13 @@ The final arithmetic contradiction already exists in
 
 ## Lean implementation order
 
-1. Packed source walks, vertex traces, support, and finite bounded-length
-   enumeration.
+1. Packed source walks, action serialization, and finite bounded-length
+   enumeration. The action serialization and bounded enumeration are proved;
+   vertex traces and support are also defined.
 2. Factor admissibility and inheritance under exact append factorizations.
-3. First/last-pivot decomposition with exact reconstruction.
+   Proved.
+3. First-pivot and closed-walk first-return-list decomposition with exact
+   reconstruction. Proved; no last-pivot theorem is needed for closed walks.
 4. First-return encoding and finiteness from the smaller support.
 5. Induction theorem `finite_admissible_walks_above`.
 6. Local-finiteness and uniform-gap corollaries.
@@ -240,8 +243,7 @@ The final arithmetic contradiction already exists in
 ## Current blockers
 
 ```text
-BLOCKED_ON_PACKED_SOURCE_WALK_FINITE_ENUMERATION
-BLOCKED_ON_CONTEXT_PRESERVING_FIRST_RETURN_DECOMPOSITION
+BLOCKED_ON_FIRST_RETURN_FINITE_ABOVE_FROM_SMALLER_SUPPORT
 BLOCKED_ON_FINITE_ADMISSIBLE_WALKS_ABOVE_INDUCTION
 BLOCKED_ON_SURVIVING_TREE_PATH_TO_SOURCE_WALK_EXTRACTION
 EL_TERMINATION_NOT_YET_PROVED
@@ -256,6 +258,11 @@ finite-near-zero consumer is now proved in Lean.
 ```text
 NESTED_RETURN_LOCAL_FINITENESS_SCOPED
 CONTEXT_ADMISSIBLE_SOURCE_WALK_DEFINED
+CONTEXT_ADMISSIBILITY_FACTOR_INHERITANCE_PROVED
+BOUNDED_SOURCE_WALKS_FINITE
+SOURCE_WALK_VERTEX_TRACE_AND_SUPPORT_DEFINED
+FIRST_PIVOT_FACTORIZATION_PROVED
+FIRST_RETURN_LIST_DECOMPOSITION_PROVED
 FINITE_NEAR_ZERO_TO_UNIFORM_GAP_PROVED
 UNIFORM_EPSILON_CONSTRUCTION_CLOSED_CONDITIONALLY_ON_LOCAL_FINITENESS
 NAIVE_SIMPLE_CYCLE_DESCENT_REJECTED

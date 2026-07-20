@@ -301,6 +301,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   hay solo finitos caminos admisibles soportados con peso por encima de esa
   cota. Su prueba se ha scoped como induccion sobre el soporte mediante
   descomposicion exacta en primeros retornos, sin loop erasure.
+  La primera capa finitaria de esa induccion tambien compila: cada caminata
+  tipada se serializa inyectivamente como lista de acciones con modo fuente,
+  la serializacion conserva longitud y, por finitud del alfabeto, todas las
+  caminatas de longitud acotada forman un tipo finito. La admisibilidad
+  contextual se hereda ademas por todo factor exacto. La traza de vertices y
+  el soporte ya estan definidos, todo pivote de la traza produce una
+  factorizacion tipada y todo lazo cerrado se reconstruye exactamente como una
+  lista de primeros retornos mediante induccion fuerte en longitud. Ningun
+  interior anidado se borra y peso/longitud siguen siendo aditivos. Queda
+  demostrar que los primeros retornos por encima de una cota son finitos a
+  partir del soporte estrictamente menor, y cerrar con ello la induccion global
+  `finite_admissible_walks_above`.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts
