@@ -231,13 +231,15 @@ repeated symbolic shifts. Formalization may replace this with a finite-state
 well-founded measure, but any replacement must prove the same parametric
 claim and must explain why it is equivalent to the source argument.
 
-Current formal progress reaches the compactness boundary of that argument.
+Current formal progress has crossed the compactness boundary of that argument.
 The source scheduler has an exact provenanced simulation and finite run; under
 `NeverStops`, a quaternary-capacity fuel proves that selected typed source
-walks have unbounded length. The remaining termination subproblem is to extract
-one coherent infinite branch from those unbounded finite provenances and prove
-that all its finite segments inherit contextual admissibility and nonnegative
-accumulated shifts. No infinite branch is assumed as an input contract.
+walks have unbounded length. The inverse-system form of Konig's lemma now
+extracts one coherent typed infinite branch whose finite prefix codes all come
+from actual selected provenances. The remaining termination subproblem is to
+prove that all branch segments inherit contextual admissibility and that all
+accumulated branch shifts are nonnegative. No infinite branch is assumed as an
+input contract.
 
 ### Semantic preservation
 

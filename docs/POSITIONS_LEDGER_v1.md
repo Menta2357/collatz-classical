@@ -369,6 +369,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   unica rama coherente de esas genealogias finitas no acotadas y la conexion de
   sus segmentos con admisibilidad contextual y shifts no negativos.
 
+- La compactitud de la genealogia ya esta formalizada. Para cada profundidad,
+  los codigos de acciones que son prefijos de alguna ocurrencia seleccionada
+  forman un tipo finito y no vacio. La forma de sistemas inversos del lema de
+  Konig elige una familia coherente bajo `List.take`; un invariante de
+  adyacencia, probado para toda serializacion tipada y heredado por prefijos,
+  la decodifica como una unica `InfiniteSourceWalk`. Cada segmento inicial de
+  la rama serializa exactamente al prefijo seleccionado correspondiente. El
+  blocker de extraccion infinita queda cerrado; faltan los dos invariantes
+  semanticos del consumidor: admisibilidad contextual de todos los segmentos y
+  no negatividad de los shifts acumulados.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
