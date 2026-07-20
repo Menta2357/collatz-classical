@@ -405,6 +405,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   la promocion de no positivo a estrictamente negativo cuando ambas cotas se
   obtengan.
 
+- El contrato global de admisibilidad contextual queda descartado como
+  invariante del scheduler general-k, no meramente pendiente. Lean construye
+  en k=5 el ciclo tipado
+  `242 -> 161 -> 107 -> 152 -> 182 -> 242`, con cuatro pasos D3 advanced y
+  un ultimo paso retardado, y prueba que su peso es `4*alpha-6 > 0`; por
+  tanto el ciclo no es `ContextAdmissible`. Una repeticion del ciclo si seria
+  cortada por la delecion al volver advanced a 161, de modo que el argumento
+  correcto es el de la fuente: recurrencia entre llegadas advanced y
+  eliminacion de toda llegada no decreciente. Los lemas de finitud local bajo
+  `ContextAdmissible` permanecen validos como API condicional, pero ya no son
+  el puente de terminacion. En los arboles generados k=2/k=3/k=4 no aparecio
+  ningun minimo con tres testigos simultaneos; esto orienta, pero no sustituye,
+  el lema general de exclusion que sigue abierto.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

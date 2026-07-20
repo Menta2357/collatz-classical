@@ -1,0 +1,11 @@
+import CollatzClassical.KL2003.KL2003GeneralKRetardedCycleAudit
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKRetardedCycleAudit.edge242to161_target
+#print axioms KL2003.GeneralKRetardedCycleAudit.edge161to107_target
+#print axioms KL2003.GeneralKRetardedCycleAudit.edge107to152_target
+#print axioms KL2003.GeneralKRetardedCycleAudit.edge152to182_target
+#print axioms KL2003.GeneralKRetardedCycleAudit.retarded182to242_target
+#print axioms KL2003.GeneralKRetardedCycleAudit.positiveRetardedCycle_weight_eval_pos
+#print axioms KL2003.GeneralKRetardedCycleAudit.positiveRetardedCycle_not_contextAdmissible

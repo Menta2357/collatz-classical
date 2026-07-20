@@ -571,6 +571,34 @@ K3_PILOT_CERTIFICATE_VERIFIED
 K3_PISTAR_THEOREM_NOT_YET_PROVED
 ```
 
+## Termination-route correction after the k=5 audit
+
+The conditional descent API based on `AllSegmentsContextAdmissible` is not the
+source-faithful bridge from the scheduler.  The typed source graph at `k = 5`
+contains the simple cycle
+
+```text
+242 -> 161 -> 107 -> 152 -> 182 -> 242
+```
+
+with four D3 advanced steps, one retarded step, and positive weight
+`4 * alpha - 6`.  This is proved in
+`KL2003GeneralKRetardedCycleAudit.lean`, including the formal negation of
+`ContextAdmissible` for that walk.
+
+The termination implementation must instead follow the printed proof's
+advanced-arrival mechanism: a repeated traversal exposes the next advanced
+arrival at the same mode with nondecreasing shift, and the deletion rule
+removes it.  The remaining formal obligations are therefore:
+
+1. exclude three simultaneous deletion witnesses in an actual source
+   configuration, so every retained advanced branch is witness-free; and
+2. derive the infinite-branch contradiction from recurrent advanced arrivals,
+   rather than from negativity of every closed factor.
+
+The nested-return and local-finiteness modules remain correct conditional
+results, but they are no longer listed as the intended scheduler consumer.
+
 ## High-k gate after k=3
 
 Success at `k=3` authorizes measurement, not formalization, at `k=9`.
