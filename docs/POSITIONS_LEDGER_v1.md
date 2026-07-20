@@ -536,6 +536,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   rama dentro de una seleccion D1/D3 concreta y transportar a ella la retencion
   witness-free ya probada.
 
+- La dominancia de llegadas advanced de la rama critica ya esta cerrada sin
+  asumir realizaciones historicas. El invariante vive en cada genealogia
+  almacenada: una rama D1/D3 retained obtiene la desigualdad de su ultima
+  llegada desde su propia accion, la ruta raw exacta y
+  `RetainedBranchesWitnessFree`; las llegadas anteriores se heredan. D2 solo
+  crea una rama retardada. Lean itera este invariante sobre la corrida critica,
+  lo restringe a los prefijos coherentes extraidos por Konig y prueba
+  `AdvancedArrivalsNonincreasing` para la rama infinita. La recurrencia
+  existente da ya una subsucesion recurrente estrictamente decreciente, pero
+  eso por si solo no contradice una sucesion real no negativa. El blocker
+  inmediato es obtener un decremento negativo fijo o uniforme para esos
+  retornos advanced, sin reintroducir la admisibilidad contextual global que
+  el contraejemplo k=5 ya refuto.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
