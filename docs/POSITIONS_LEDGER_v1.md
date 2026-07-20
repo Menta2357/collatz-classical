@@ -638,6 +638,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   primer teorema k=3 es convertir la data racional generada y ya verificada en
   esa estructura LNT, sin confiar en el generador.
 
+- El primer consumidor semantico k=3 ya esta cerrado. Lean convierte los nueve
+  coeficientes principales y tres auxiliares generados en un `LNTCertificate`
+  real, rechecando exhaustivamente todas las clases modulo 27. Las ecuaciones
+  racionales se elevan a los factores trascendentes verdaderos mediante
+  `bReal3_lower` y `dReal3_lower`; el generador no entra en la base de
+  confianza. La cadena dinamica general-k produce un `Delta > 0` y una cota
+  para `sourcePhiK`. El trafico del infimo la baja a cada raiz concreta, y
+  `y = logb 2 (x/a)` convierte exactamente la ventana floor en el natural `x`.
+  El teorema publico afirma, para toda raiz admisible en las nueve clases y
+  todo `x >= a`, `Delta * (x/a)^gammaK3 <= piStar a x`, con
+  `gammaK3 > 3/5` probado por aritmetica exacta. No queda blocker k=3. El paso
+  high-k sigue condicionado a medir tamano de certificado, slack minimo y
+  presupuesto de kernel para k=9; k=11 permanece diferido.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

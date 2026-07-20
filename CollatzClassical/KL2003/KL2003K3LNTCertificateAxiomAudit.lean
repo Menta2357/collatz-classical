@@ -1,0 +1,11 @@
+import CollatzClassical.KL2003.KL2003K3LNTCertificate
+
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.k3Auxiliary_le_lift
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.k3_d1
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.k3_d2
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.k3_d3
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.k3LNTCertificate
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.gammaK3_gt_three_fifths
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.exists_k3_sourcePhiK_lower_bound
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.exists_k3_piStar_sourceWindow_lower_bound
+#print axioms CollatzClassical.KL2003.K3LNTCertificate.exists_k3_piStar_arbitrary_x_lower_bound

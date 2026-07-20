@@ -39,6 +39,19 @@ Esto no es el M1 completo, no es ningun resultado KL2003 high-k (`k=9`
 con `gamma_9 = 0.8168300`, ni `k=11`/`0.84`), no cubre `x` pequeno bajo
 umbral y no es un claim global de Collatz.
 
+La cadena general-k ya tiene tambien su primer consumidor semantico k=3. El
+teorema `exists_k3_piStar_arbitrary_x_lower_bound`, en
+`CollatzClassical/KL2003/KL2003K3LNTCertificate.lean`, prueba que existe
+`Delta > 0` tal que, para las nueve clases trackeadas modulo 27, cada raiz
+admisible `a` y todo `x >= a`,
+
+```text
+Delta * (x/a)^gammaK3 <= piStar a x,
+```
+
+con `gammaK3 > 3/5`. Es un resultado k=3; no autoriza ni afirma k=9, k=11 o
+Collatz global.
+
 ## Panorama bibliografico actual
 
 El preprint `arXiv:2512.13760v1`, enviado el `2025-12-15`, reclamo una cota
