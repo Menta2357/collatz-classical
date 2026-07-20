@@ -1,0 +1,54 @@
+{
+  "addendum": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2",
+  "date": "2026-07-21",
+  "status": "PAPER_GATE_OPEN_NO_COMPUTATIONAL_SWEEP_AUTHORIZED",
+  "sealed_package_anchor": {
+    "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1",
+    "manifest_sha256": "0704580adcb4d0019dae55dd81169f65e830747e8cf8d108dc1a676e0a335efa",
+    "local_verification": {
+      "checked_files": 74,
+      "failure_count": 0,
+      "status": "PASS"
+    }
+  },
+  "public_custody_anchor": {
+    "repo": "https://github.com/Menta2357/collatz-classical",
+    "branch": "codex/f3-density-capture-gate",
+    "commit": "f1af240a02785e916710d6f33019ca1a3a583f70",
+    "pull_request": "https://github.com/Menta2357/collatz-classical/pull/1"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "3f63f2232a8f7dffcf4c6cc26e530a159748bb74b5160d46a2c2f96210e34f76"
+    },
+    {
+      "path": "F3_PUBLIC_CUSTODY_RESOLUTION_v1.md",
+      "sha256": "c34051e120a322605299f37479208d2cde1f6202a9cb3e3c63640be00cc50d8a"
+    },
+    {
+      "path": "F3_CLAUDE_FORMAL_VERDICT_REQUEST_v3.md",
+      "sha256": "050b4dcd1a5df61e7efbf46af2c45d24016157405acd1b0bb013bce9685d179a"
+    },
+    {
+      "path": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_CONTRACT_v0_2.md",
+      "sha256": "91bd1c47137f924e13f50e111fa0d73437c54d172f28c20c2fad34617f3884ad"
+    },
+    {
+      "path": "F3_NEXT_EXPERIMENT_PREREGISTRATION_v0_1.md",
+      "sha256": "e18a42c382bb6c3e922aed002edf5f4cb53970e39de5175baff787141582cb0a"
+    }
+  ],
+  "non_claims": {
+    "no_lean": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true
+  },
+  "next_gate": {
+    "paper_only": "write F3 dynamic prefix weighted-tail page v0.3",
+    "external_review": "Claude formal verdict required",
+    "script_authorization": "blocked until v0.3 defines F_K, Q_K, route map, W_K denominator, and hook schema"
+  }
+}
