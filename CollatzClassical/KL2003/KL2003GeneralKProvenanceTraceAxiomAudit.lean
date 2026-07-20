@@ -1,0 +1,16 @@
+import CollatzClassical.KL2003.KL2003GeneralKProvenanceTrace
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKProvenanceTrace.advancePackedShift_append
+#print axioms KL2003.GeneralKProvenanceTrace.packedPrefixLabels_append
+#print axioms KL2003.GeneralKProvenanceTrace.advancePackedShift_sourceWalkActionList
+#print axioms KL2003.GeneralKProvenanceTrace.packedPrefixLabels_provenancedChild
+#print axioms KL2003.GeneralKProvenanceTrace.traceConsistentFrom_terminalPath
+#print axioms KL2003.GeneralKProvenanceTrace.traceConsistentFrom_sourceSplit
+#print axioms KL2003.GeneralKProvenanceTrace.TraceConsistentFrom.sourceStep
+#print axioms KL2003.GeneralKProvenanceTrace.TraceConsistentFrom.sourceScheduledStep
+#print axioms KL2003.GeneralKProvenanceTrace.run_initial_traceConsistent
+#print axioms KL2003.GeneralKProvenanceTrace.run_initial_terminalPath_expandedLabels
+#print axioms KL2003.GeneralKProvenanceTrace.hasDeletionWitness_iff_packedPrefixWitness
+#print axioms KL2003.GeneralKProvenanceTrace.target_shift_le_ancestor_shift_of_noDeletionWitness

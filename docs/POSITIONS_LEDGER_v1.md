@@ -435,6 +435,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   los subarboles recurrentes en un decremento fijo negativo. Ya no queda
   ninguna obligacion sobre retornos cuyo ultimo paso sea retardado.
 
+- La costura entre el contexto sintactico de delecion y la genealogia tipada
+  ya es exacta en Lean. `TraceConsistentFrom` registra la lista de labels de
+  todos los prefijos estrictos de cada `SourceWalk`; el split, cualquier
+  retencion, el reemplazo, el scheduler y sus iteraciones la preservan. En una
+  corrida canonica, `TerminalPath.context.expandedLabels` coincide literalmente
+  con esa traza. Por ello, un terminal no negativo sin testigo queda por debajo
+  de toda llegada anterior al mismo modo. Ya no falta ningun puente de trafico
+  entre `HasDeletionWitness` y la desigualdad de shifts; sigue faltando probar
+  que las realizaciones retained advanced relevantes son witness-free, cuyo
+  unico borde conocido es la retencion cuando las tres ramas tienen testigo.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
