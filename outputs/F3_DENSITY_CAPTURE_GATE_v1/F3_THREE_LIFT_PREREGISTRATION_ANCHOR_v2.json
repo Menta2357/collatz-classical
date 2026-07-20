@@ -1,0 +1,15 @@
+{
+  "calibration_accessed_after_freeze": false,
+  "holdout_accessed": false,
+  "invalidation_path": "F3_THREE_LIFT_BALANCE_PILOT_V1_INVALIDATION.md",
+  "invalidation_sha256": "63f4fc8de71a53048eb849916b882b5e4e47cbc0d725d9f0088861a94ecf52fe",
+  "preregistration_path": "F3_THREE_LIFT_BALANCE_PILOT_PREREGISTRATION_v2.md",
+  "preregistration_sha256": "25cb543a2f240c3e91e02a4a309596e612fde67964dd2352fa0a2218c24ab3b8",
+  "public_custody": false,
+  "script_path": "scripts/f3_three_lift_balance_pilot_v2.py",
+  "script_sha256": "de0d3e5c8497ec3776699d58fb6c26b2a2574c7c1e43b14ff58faf885ab19255",
+  "status": "V2_FROZEN_BEFORE_CALIBRATION_RUN",
+  "utc_date": "2026-07-21",
+  "v1_library_path": "scripts/f3_three_lift_balance_pilot_v1.py",
+  "v1_library_sha256": "b9d1be778c200d88ffe80b313bca5d5684e4a43ac465c05f1fc513443fb83b96"
+}

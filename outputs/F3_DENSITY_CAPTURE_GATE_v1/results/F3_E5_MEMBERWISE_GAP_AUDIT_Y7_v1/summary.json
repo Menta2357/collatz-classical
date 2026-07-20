@@ -1,0 +1,50 @@
+{
+  "aggregate": {
+    "advanced_gap_percent_of_target": 0.07787467323512662,
+    "advanced_share_of_total_gap_percent": 63.05555555555556,
+    "advanced_window_gap": 227,
+    "atom_gap_percent_of_target": 0.04562701119062485,
+    "closure_percent": 99.87649831557425,
+    "deterministic_atom_gap": 133,
+    "e5_numerator_sum": 291134,
+    "gap_decomposition_ok": true,
+    "shortfall_percent": 0.12350168442575148,
+    "target_sum": 291494,
+    "total_gap": 360
+  },
+  "classification": "FINITE_EMPIRICAL_MEMBERWISE_AUDIT",
+  "memberwise": {
+    "all_hooks_passes": 133,
+    "gap_identity_passes": 133,
+    "mismatches": 0,
+    "partition_passes": 133,
+    "rows": 133
+  },
+  "no_claims": {
+    "no_almost_all_claim": true,
+    "no_asymptotic_infimum_claim": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean": true
+  },
+  "outputs": {
+    "manifest_sha256_csv": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/manifest_sha256.csv",
+    "memberwise_csv": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/memberwise.csv",
+    "mismatches_csv": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/mismatches.csv",
+    "summary_json": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/summary.json"
+  },
+  "parameters": {
+    "max_a": 1200,
+    "root_count": 133,
+    "root_filter": "a % 9 == 8",
+    "scale": 128,
+    "xAdv_formula": "x - ceil(x/(2*a))",
+    "x_formula": "scale * a"
+  },
+  "runtime": {
+    "elapsed_seconds": 0.4951593750010943,
+    "platform": "macOS-13.6.4-arm64-arm-64bit-Mach-O",
+    "python": "3.13.7"
+  },
+  "status": "PASS"
+}
