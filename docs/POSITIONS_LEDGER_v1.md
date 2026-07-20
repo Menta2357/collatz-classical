@@ -550,6 +550,21 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   retornos advanced, sin reintroducir la admisibilidad contextual global que
   el contraejemplo k=5 ya refuto.
 
+- La terminacion de la corrida critica ya esta cerrada por una ruta finita que
+  no usa la auto-similitud exacta de subarboles recurrentes afirmada en la
+  prueba informal de Theorem 3.1. La dominancia advanced acota cada llegada
+  por la primera llegada a su modo destino finito; junto con no negatividad,
+  esto fuerza un hueco uniforme entre acciones advanced. Cada bloque de
+  `card(modos)+1` llegadas contiene por pigeonhole un par al mismo destino y
+  de longitud acotada. Los source walks tipados de esa longitud forman un
+  conjunto finito, por lo que sus pesos negativos tienen un epsilon uniforme.
+  Bloques disjuntos y recurrencia de un modo de par acumulan ese epsilon hasta
+  contradecir la no negatividad global. Lean concluye `Not NeverStops`, una
+  parada finita explicita y la existencia de un estado con
+  `CriticalTerminalShiftsNegative`. El blocker ya no es un decremento fijo:
+  queda transportar esta condicion de parada a `SatisfiesEL`, seguido de la
+  unicidad de forma normal necesaria para el consumidor k=3.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
