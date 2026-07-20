@@ -1,0 +1,10 @@
+import CollatzClassical.KL2003.KL2003GeneralKLNTFeasibilityTransfer
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.d1TopExpr_coefficient_feasible
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.splitTopExpr_coefficient_feasible
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.ELTree.ExpandableOccurrence.sourceStep_coefficient_mono
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.run_coefficient_mono
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.sourceELRetardedWitness_coefficient_feasible
+#print axioms KL2003.GeneralKLNTFeasibilityTransfer.sourcePhiK_pointwise_coefficient_feasible

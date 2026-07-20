@@ -580,6 +580,21 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   testigo retardado seleccionado, usando el certificado k=3 como primer
   consumidor.
 
+- La transferencia algebraica LNT a esos testigos pointwise ya esta cerrada.
+  `LNTCertificate` formaliza las filas fuente D1/D2/D3 y las box constraints
+  auxiliares; cada split fuente aumenta debilmente el valor normalizado de
+  coeficientes y la deletion posterior solo elimina brazos de un minimo, por
+  lo que conserva la misma direccion. Lean itera esta monotonia por la corrida
+  critica exacta y prueba que toda asignacion critica seleccionada domina el
+  coeficiente principal de la raiz. El corolario
+  `sourcePhiK_pointwise_coefficient_feasible` combina el certificado con los
+  testigos generados por `sourcePhiK_satisfiesEL`, sin asumir filas
+  existenciales artificiales. El paso no cierra todavia una ventana retardada
+  uniforme: negatividad estricta pointwise no excluye shifts simbolicos que se
+  aproximen a cero al variar `y`. El blocker inmediato es obtener un sistema
+  normal finito, o una cota uniforme equivalente, antes de instanciar el
+  certificado k=3 y consumir la induccion retardada generica.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
