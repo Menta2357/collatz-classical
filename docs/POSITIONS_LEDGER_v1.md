@@ -321,6 +321,15 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   ejecucion no terminante y probar admisibilidad de segmentos y no negatividad
   de shifts. La sucesion cronologica de terminales elegidos globalmente no se
   identifica con una trayectoria tipada, pues puede saltar entre ramas.
+- La instrumentacion de esa genealogia ya esta abierta y kernel-clean. Cada
+  etiqueta anotada almacena un `SourceWalk` concreto desde la raiz y una
+  igualdad simbolica exacta entre su shift y el peso acumulado. La expansion
+  D1/D2/D3 añade la accion source correspondiente a cada hijo; al olvidar las
+  anotaciones reproduce exactamente `sourceSplitTree`. Los paths terminales y
+  su sustitucion tambien conmutan con el olvido, y la retencion min3 preserva
+  sin cambios las genealogias retenidas. Queda levantar la eleccion global de
+  `witnessRetention` y el paso completo del scheduler, no reconstruir la
+  procedencia de hojas desde labels ya colapsados.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

@@ -1,0 +1,12 @@
+import CollatzClassical.KL2003.KL2003GeneralKSourceGenealogy
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedLabel.oneStepWalk_length
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedLabel.oneStepWalk_weight
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedLabel.child_walk_length
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedLabel.child_walk_weight
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedTree.forget_initial
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedTree.forget_reduce
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedTree.sourceSplit_forget
+#print axioms KL2003.GeneralKSourceGenealogy.ProvenancedTree.TerminalPath.forget_splitAt
