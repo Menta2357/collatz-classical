@@ -1,0 +1,6 @@
+condition,status,evidence
+1_general_k_semantic_bridge,PASS,general-k dynamic theorem and k3 piStar theorem are audited modules
+2_flat_k9_generator,PASS,6561 parametric L9NT rows; zero topology mismatches
+3_exact_certificate_scale,PASS,minimum slack 0.00000146374206669142451702881163610773258923533763788988667699193; digits 30/34
+4_schema_v21,PASS,schema v2.1 accepts 6561 rows; named manifest warning only
+5_kernel_resource_budget,PASS,"9/9 shards, wall 437.152929 s, budget 900 s"

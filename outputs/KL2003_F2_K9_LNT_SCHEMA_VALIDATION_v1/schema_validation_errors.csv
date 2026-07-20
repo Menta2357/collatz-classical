@@ -1,0 +1,2 @@
+severity,path,code,message
+warning,outputs/KL2003_F2_K9_LNT_MEASUREMENT_v1/manifest_sha256.csv,EXTERNAL_MANIFEST_PRESENT_NOT_VALIDATED,External artifact manifest exists but this schema validator only reports its presence.

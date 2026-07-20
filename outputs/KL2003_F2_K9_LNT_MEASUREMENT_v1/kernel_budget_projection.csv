@@ -1,0 +1,5 @@
+metric,k3_measured,k9_measured_or_projected,status
+row_count,9,6561,measured
+kernel_checker_seconds_linear,14,10206,projection_not_measurement
+rational_numerator_max_digits,24,30,measured_exact_candidate
+rational_denominator_max_digits,31,34,measured_exact_candidate

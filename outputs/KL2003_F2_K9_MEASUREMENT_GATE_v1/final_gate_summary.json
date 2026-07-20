@@ -1,0 +1,30 @@
+{
+  "classification": [
+    "K9_FORMALIZATION_ENGINEERING_GO",
+    "K9_LNT_CERTIFICATE_PIPELINE_MEASURED",
+    "K9_KERNEL_ARITHMETIC_RECHECK_PASS",
+    "K9_SEMANTIC_INTEGRATION_NOT_STARTED",
+    "NO_K9_THEOREM_CLAIM",
+    "K11_DEFERRED",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "condition_count": 5,
+  "conditions_failed": 0,
+  "conditions_passed": 5,
+  "formalization_scope_authorized": "generated k9 LNT certificate integration only",
+  "k11_status": "DEFERRED",
+  "measured": {
+    "gamma_diagnostic": "0.816824950064260405662809330997735178761089274348613123456206",
+    "kernel_wall_seconds": "437.152929",
+    "lambda": "70461/40000",
+    "minimum_row_slack": "8074574573/5516391690000000",
+    "tracked_class_count": 6561
+  },
+  "resource_policy": {
+    "max_kernel_wall_seconds": 900,
+    "max_rational_digits": 64
+  },
+  "run_id": "KL2003_F2_K9_MEASUREMENT_GATE_v1",
+  "semantic_k9_lower_bound_theorem_status": "NOT_PROVED",
+  "verdict": "K9_FORMALIZATION_ENGINEERING_GO"
+}

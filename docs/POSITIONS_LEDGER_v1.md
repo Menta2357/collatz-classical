@@ -38,6 +38,27 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   `ceil`; no es M1 completo, no es un teorema de ventana arbitraria y no es
   un claim global de Collatz.
 
+## Actualizacion 2026-07-20: gate cuantitativo k=9
+
+- La condicion matematica general-k ya esta cerrada y validada por el teorema
+  `exists_k3_piStar_arbitrary_x_lower_bound` con `gammaK3 > 3/5`.
+- El generador plano `L_9^NT` produce las 6561 clases trackeadas y 2187
+  auxiliares directamente desde las reglas parametricas, sin materializar
+  ningun arbol EL high-k.
+- Con `lambda = 70461/40000 = 1.761525`, el candidato exacto tiene
+  `Cmax = 43.33739799`, slack minimo aproximadamente `1.4637e-6` y racionales
+  de hasta 30/34 digitos. Las 6561 filas pasan el recheck `Fraction`.
+- El schema v2.1 acepta el artefacto. La representacion Lean monolitica fue
+  rechazada por coste de elaboracion; chunking de 81 redujo la elaboracion de
+  mas de 322 segundos a 22.27 segundos.
+- Nueve shards Lean recomprobaron con `norm_num` las 6561 ecuaciones y 2187
+  grupos L4: 9/9 PASS, cero timeout, 437.15 segundos de pared con tres workers.
+- Veredicto: `K9_FORMALIZATION_ENGINEERING_GO`. Solo autoriza integrar la data
+  en `LNTCertificate` y aplicar la cadena ya auditada. No existe todavia un
+  teorema k=9, k=11 permanece diferido y no hay claim global de Collatz.
+- Paquete:
+  `docs/KL2003_F2_K9_LNT_MEASUREMENT_GATE_v1.md`.
+
 ## Actualizacion 2026-07-19: F2 y auditoria de arXiv:2512.13760
 
 - F2 cerro el piloto generador-verificador k=3 y dejo la ruta high-k como:

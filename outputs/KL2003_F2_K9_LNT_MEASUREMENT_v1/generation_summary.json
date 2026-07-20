@@ -1,0 +1,62 @@
+{
+  "auxiliary_class_count": 2187,
+  "classification": [
+    "K9_FLAT_LNT_TOPOLOGY_GENERATED",
+    "K9_EXACT_RATIONAL_DATA_CANDIDATE_FOUND",
+    "K9_ALL_6561_ROW_SLACKS_POSITIVE_IN_FRACTION_RECHECK",
+    "K9_KERNEL_CHECKER_NOT_YET_IMPLEMENTED",
+    "K9_FORMALIZATION_NOT_AUTHORIZED",
+    "K11_DEFERRED",
+    "NO_K9_THEOREM_CLAIM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "cmax": "4333739799/100000000",
+  "exact_checks": {
+    "B_lower_integer_power_witness": true,
+    "D_lower_integer_power_witness": true,
+    "all_row_slacks_positive": true,
+    "auxiliary_box_lower": true,
+    "l4_nonnegative": true,
+    "principal_box_lower": true
+  },
+  "exact_recheck_runtime_seconds": "0.029437",
+  "f2_conditions": {
+    "1_general_k_semantic_bridge": "CLOSED",
+    "2_flat_k9_generator": "MEASURED_DATA_CANDIDATE_PASS",
+    "3_rational_size_and_slack": "MEASURED_DATA_CANDIDATE_PASS",
+    "4_kernel_resource_budget": "OPEN_REQUIRES_ACTUAL_K9_CHECKER"
+  },
+  "gamma_diagnostic": "0.816824950064260405662809330997735178761089274348613123456206",
+  "json_bytes": 12888409,
+  "k": 9,
+  "kernel_checker_status": "NOT_RUN_NOT_IMPLEMENTED",
+  "lambda": "70461/40000",
+  "lean_checker_shard_count": 9,
+  "lean_checker_total_bytes": 2948956,
+  "lean_data_bytes": 1258747,
+  "minimum_row_slack": "8074574573/5516391690000000",
+  "minimum_row_slack_decimal": "0.00000146374206669142451702881163610773258923533763788988667699193",
+  "minimum_row_slack_mode": 19355,
+  "mismatch_count": 0,
+  "power_iterations": 204,
+  "power_relative_change": "6.3244981543252199e-15",
+  "power_rho": "1.0000014642807535",
+  "pre_reduction_class_count": 19683,
+  "rational_denominator_max_digits": 34,
+  "rational_numerator_max_digits": 30,
+  "row_counts": {
+    "D1": 2187,
+    "D2": 2187,
+    "D3": 2187
+  },
+  "run_id": "KL2003_F2_K9_LNT_MEASUREMENT_v1",
+  "search_runtime_seconds": "0.025539",
+  "source_cmax9": "43.3394210",
+  "source_gamma9": "0.8168300",
+  "source_lambda9": "1.7615320",
+  "topology_runtime_seconds": "0.001558",
+  "total_generator_runtime_seconds": "0.239098",
+  "tracked_class_count": 6561,
+  "verdict": "K9_LNT_EXACT_DATA_CANDIDATE_PASS_KERNEL_GATE_OPEN",
+  "z3_exact_monolithic_status": "ABANDONED_AFTER_NO_RESULT_WITHIN_INTERACTIVE_BUDGET"
+}

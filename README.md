@@ -52,6 +52,14 @@ Delta * (x/a)^gammaK3 <= piStar a x,
 con `gammaK3 > 3/5`. Es un resultado k=3; no autoriza ni afirma k=9, k=11 o
 Collatz global.
 
+F2 ya midio la ruta plana `L_9^NT` sin materializar arboles EL. El generador
+produce 6561 filas y un candidato racional exacto con `lambda = 1.761525`,
+slack minimo positivo y racionales de hasta 30/34 digitos. Nueve shards Lean
+recomprobaron las 6561 ecuaciones y 2187 grupos L4 en 437.15 segundos de pared.
+El gate queda en `K9_FORMALIZATION_ENGINEERING_GO`: autoriza integrar este
+certificado en la cadena general-k, pero todavia no existe ni se reclama un
+teorema k=9. k=11 sigue diferido.
+
 ## Panorama bibliografico actual
 
 El preprint `arXiv:2512.13760v1`, enviado el `2025-12-15`, reclamo una cota

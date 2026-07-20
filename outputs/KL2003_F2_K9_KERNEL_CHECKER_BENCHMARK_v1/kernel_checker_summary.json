@@ -1,0 +1,27 @@
+{
+  "all_certificate_rows_kernel_rechecked": true,
+  "auxiliary_box_group_count": 2187,
+  "checker_shard_count": 9,
+  "checker_shards_failed": 0,
+  "checker_shards_passed": 9,
+  "checker_shards_timed_out": 0,
+  "classification": [
+    "K9_EXACT_CERTIFICATE_ARITHMETIC_KERNEL_RECHECK_ATTEMPTED",
+    "K9_MEASUREMENT_ONLY",
+    "NO_K9_LOWER_BOUND_THEOREM_CLAIM",
+    "K11_DEFERRED",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "generated_data_elaboration_seconds": "22.272169",
+  "generated_data_elaboration_status": "pass",
+  "max_workers": 3,
+  "maximum_shard_seconds": "153.850506",
+  "minimum_shard_seconds": "128.812215",
+  "per_file_timeout_seconds": 900,
+  "row_equation_count": 6561,
+  "run_id": "KL2003_F2_K9_KERNEL_CHECKER_BENCHMARK_v1",
+  "semantic_k9_theorem_status": "NOT_PROVED",
+  "sum_shard_seconds": "1244.451968",
+  "total_wall_seconds": "437.152929",
+  "verdict": "K9_KERNEL_CERTIFICATE_CHECKER_BENCHMARK_PASS"
+}

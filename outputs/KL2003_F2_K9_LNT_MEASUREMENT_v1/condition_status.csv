@@ -1,0 +1,5 @@
+condition,status,evidence
+1_general_k_semantic_bridge,CLOSED,KL2003GeneralKDynamicRetardedLowerBound + KL2003K3LNTCertificate
+2_flat_k9_generator,MEASURED_DATA_CANDIDATE_PASS,6561 topology rows generated parametrically; exact Fraction recheck pass
+3_rational_size_and_slack,MEASURED_DATA_CANDIDATE_PASS,exact rational candidate metrics in generation_summary.json
+4_kernel_resource_budget,OPEN_REQUIRES_ACTUAL_K9_CHECKER,only data elaboration/projection available; no kernel certificate recheck
