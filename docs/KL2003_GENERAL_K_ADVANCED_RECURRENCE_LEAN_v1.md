@@ -14,6 +14,8 @@ It defines `IsAdvancedAction` directly from the typed source branch and proves:
 - the set of advanced-action indices is infinite; and
 - some tracked mode receives an infinite strictly ordered subsequence of
   advanced arrivals.
+- under `AdvancedArrivalsNonincreasing`, the accumulated shifts on that
+  recurrent subsequence decrease strictly at every step.
 
 The last theorem is
 `exists_recurrent_advanced_target_subsequence`.  Its positions are action
@@ -22,11 +24,18 @@ action.  This is the recurrence shape to which the deletion rule applies.
 
 ## Boundary
 
-The module does not yet prove that the recurrent shifts have one fixed
-negative increment.  That step is scheduler-specific: it must connect the
-recurrent provenanced subtrees through the existing translation-equivariance
-API and show that their eligibility pattern is preserved.  Nor does this
-module discharge the separate triple-witness exclusion.
+`AdvancedArrivalsNonincreasing` is the exact branch-level contract supplied by
+witness-free retained advanced leaves: a later advanced arrival to an already
+seen target mode cannot lie above the earlier shift.  The existing
+irrationality theorem excludes equality on every nonempty intervening segment,
+so Lean upgrades this to strict decrease.
+
+The module does not yet prove that these decreases have one fixed negative
+increment.  That step is scheduler-specific: it must connect the recurrent
+provenanced subtrees through the existing translation-equivariance API and
+show that their eligibility pattern is preserved.  Nor does this module
+discharge the separate triple-witness exclusion needed to obtain
+`AdvancedArrivalsNonincreasing` from the concrete scheduler.
 
 ## Verification
 
@@ -41,6 +50,7 @@ lake env lean CollatzClassical/KL2003/KL2003GeneralKAdvancedRecurrenceAxiomAudit
 ADVANCED_ACTIONS_UNBOUNDED_ON_NONNEGATIVE_BRANCH
 ADVANCED_INDEX_SET_INFINITE
 RECURRENT_ADVANCED_TARGET_SUBSEQUENCE_PROVED
+RECURRENT_ADVANCED_TARGET_SHIFTS_STRICTLY_DECREASE_UNDER_WITNESS_FREE_CONTRACT
 FIXED_RECURRENT_INCREMENT_NOT_YET_PROVED
 TRIPLE_WITNESS_EXCLUSION_STILL_OPEN
 NO_K3_PISTAR_THEOREM_YET

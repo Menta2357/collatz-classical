@@ -135,6 +135,64 @@ theorem exists_recurrent_advanced_target_subsequence
   · intro j
     exact hmodes j
 
+/-- Every retained advanced arrival is no higher than every previous
+occurrence of its target mode.  This is the branch-level consequence which a
+witness-free retained advanced leaf supplies. -/
+def AdvancedArrivalsNonincreasing
+    {p : Nat} {hp : 1 <= p} (branch : InfiniteSourceWalk hp)
+    (initial : Real) : Prop :=
+  forall (arrival : Nat), IsAdvancedAction (branch.actions arrival) ->
+    forall earlier : Nat, earlier < arrival + 1 ->
+      branch.modes earlier = branch.modes (arrival + 1) ->
+        branch.beta initial (arrival + 1) <= branch.beta initial earlier
+
+theorem beta_ne_of_lt
+    {p : Nat} {hp : 1 <= p} (branch : InfiniteSourceWalk hp)
+    (initial : Real) {first second : Nat} (hlt : first < second) :
+    branch.beta initial second ≠ branch.beta initial first := by
+  let length := second - first
+  have hlength : 0 < length := by
+    dsimp only [length]
+    omega
+  have hadd : first + length = second := by
+    dsimp only [length]
+    omega
+  have hbeta := branch.beta_add initial first length
+  have hbeta' : branch.beta initial second =
+      branch.beta initial first + (branch.segment first length).weight.eval := by
+    simpa only [hadd] using hbeta
+  have hwalkLength : 0 < (branch.segment first length).length := by
+    rw [branch.segment_length]
+    exact hlength
+  have hweightNe :=
+    (branch.segment first length).weight_eval_ne_zero_of_length_pos hwalkLength
+  intro heq
+  apply hweightNe
+  linarith [hbeta']
+
+theorem exists_strictly_decreasing_recurrent_advanced_arrivals
+    {p : Nat} {hp : 1 <= p} (branch : InfiniteSourceWalk hp)
+    (initial : Real) (hnonnegative : branch.ShiftsNonnegative initial)
+    (hretained : AdvancedArrivalsNonincreasing branch initial) :
+    exists mode : TrackedMode (p + 1), exists positions : Nat -> Nat,
+      StrictMono positions /\
+        (forall j : Nat, IsAdvancedAction (branch.actions (positions j))) /\
+          (forall j : Nat, branch.modes (positions j + 1) = mode) /\
+            (forall j : Nat,
+              branch.beta initial (positions (j + 1) + 1) <
+                branch.beta initial (positions j + 1)) := by
+  obtain ⟨mode, positions, hpositions, hadvanced, hmodes⟩ :=
+    exists_recurrent_advanced_target_subsequence branch initial hnonnegative
+  refine ⟨mode, positions, hpositions, hadvanced, hmodes, ?_⟩
+  intro j
+  have hpos : positions j + 1 < positions (j + 1) + 1 := by
+    have hstep : positions j < positions (j + 1) :=
+      hpositions (show j < j + 1 by omega)
+    omega
+  have hle := hretained (positions (j + 1)) (hadvanced (j + 1))
+    (positions j + 1) hpos (by rw [hmodes j, hmodes (j + 1)])
+  exact lt_of_le_of_ne hle (beta_ne_of_lt branch initial hpos)
+
 end GeneralKAdvancedRecurrence
 end KL2003
 end CollatzClassical

@@ -603,9 +603,12 @@ The first replacement layer is now proved in
 `KL2003GeneralKAdvancedRecurrence.lean`.  Global nonnegativity forces advanced
 actions at arbitrarily large indices, and finite-mode recurrence produces one
 mode with an infinite strictly ordered subsequence of advanced arrivals.  The
-remaining termination theorem must connect those recurrent provenanced
-subtrees through scheduler translation equivariance and obtain the fixed
-negative increment used by the corrected arithmetic core.
+abstract property `AdvancedArrivalsNonincreasing` then gives strict decrease
+of the recurrent shifts, with equality excluded by irrationality of `alpha`.
+The remaining termination theorem must derive that property from retained
+witness-free advanced leaves and connect the recurrent provenanced subtrees
+through scheduler translation equivariance to obtain the fixed negative
+increment used by the corrected arithmetic core.
 
 ## High-k gate after k=3
 

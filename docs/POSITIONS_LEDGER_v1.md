@@ -425,7 +425,11 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   y produciria un shift negativo; por ello hay acciones advanced
   arbitrariamente lejos y su conjunto de indices es infinito. La finitud de
   `TrackedMode` extrae entonces una clase que recibe una subsucesion infinita
-  estrictamente ordenada de llegadas advanced. Quedan dos conexiones
+  estrictamente ordenada de llegadas advanced. La propiedad abstracta
+  `AdvancedArrivalsNonincreasing` encapsula exactamente la ausencia de testigo
+  en una llegada retained; junto con la irracionalidad de alpha, Lean ya
+  convierte esa propiedad en descenso estricto entre llegadas recurrentes.
+  Quedan dos conexiones
   scheduler-especificas: las ramas retained advanced deben carecer de testigo
   (exclusion del caso triple), y la equivariancia por traslacion debe convertir
   los subarboles recurrentes en un decremento fijo negativo. Ya no queda

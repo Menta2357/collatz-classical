@@ -7,3 +7,5 @@ open CollatzClassical KL2003
 #print axioms KL2003.GeneralKAdvancedRecurrence.exists_advanced_at_or_after_of_shiftsNonnegative
 #print axioms KL2003.GeneralKAdvancedRecurrence.advancedIndices_infinite
 #print axioms KL2003.GeneralKAdvancedRecurrence.exists_recurrent_advanced_target_subsequence
+#print axioms KL2003.GeneralKAdvancedRecurrence.beta_ne_of_lt
+#print axioms KL2003.GeneralKAdvancedRecurrence.exists_strictly_decreasing_recurrent_advanced_arrivals
