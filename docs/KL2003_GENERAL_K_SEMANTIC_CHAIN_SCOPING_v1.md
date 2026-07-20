@@ -231,6 +231,14 @@ repeated symbolic shifts. Formalization may replace this with a finite-state
 well-founded measure, but any replacement must prove the same parametric
 claim and must explain why it is equivalent to the source argument.
 
+Current formal progress reaches the compactness boundary of that argument.
+The source scheduler has an exact provenanced simulation and finite run; under
+`NeverStops`, a quaternary-capacity fuel proves that selected typed source
+walks have unbounded length. The remaining termination subproblem is to extract
+one coherent infinite branch from those unbounded finite provenances and prove
+that all its finite segments inherit contextual admissibility and nonnegative
+accumulated shifts. No infinite branch is assumed as an input contract.
+
 ### Semantic preservation
 
 Theorem 3.2 requires more than local tree validity. The module must define the

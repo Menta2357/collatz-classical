@@ -356,6 +356,19 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   del objetivo. Quedan la terminacion expansion-deletion, la independencia de
   orden, la forma normal canonica y `SatisfiesEL`.
 
+- La iteracion finita y la primera mitad de la extraccion ya estan cerradas.
+  Bajo `NeverStops`, Lean elige una ocurrencia provenanced concreta en cada
+  tiempo y reescribe el siguiente estado como su `sourceStep`. Para cada cota
+  de profundidad B, cada terminal recibe el combustible de un arbol cuaternario
+  completo de altura restante. Un split crea como maximo cuatro hijos y aumenta
+  en uno la longitud de cada genealogia, de modo que expandir una hoja de
+  profundidad a lo sumo B reduce estrictamente el combustible total. No puede
+  existir una sucesion natural infinitamente descendente; por ello se
+  seleccionan `SourceWalk`s de longitud arbitrariamente grande. Esta prueba no
+  necesita asumir prefix-freeness. Queda la capa de compactitud que extrae una
+  unica rama coherente de esas genealogias finitas no acotadas y la conexion de
+  sus segmentos con admisibilidad contextual y shifts no negativos.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
