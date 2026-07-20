@@ -64,6 +64,12 @@ exactas `gammaK9 > 81/100` y `gammaK9 > 49/60`. El build estable del paquete
 completo midio 343.02 segundos, dentro del presupuesto previo de 1320
 segundos. k=11 requiere un gate separado y no se reclama aqui.
 
+La desigualdad `gammaK9 > 81/100` supera exactamente el benchmark de exponente
+publicado por Applegate--Lagarias en 1995. Esto no se presenta como el record
+matematico actual, ni como una comparacion literal ya formalizada entre ambos
+contadores, ni como una afirmacion de prioridad mundial. El puente de
+statements y la auditoria bibliografica de prioridad son tareas separadas.
+
 ## Panorama bibliografico actual
 
 El preprint `arXiv:2512.13760v1`, enviado el `2025-12-15`, reclamo una cota

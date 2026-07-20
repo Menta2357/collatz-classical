@@ -31,6 +31,29 @@ gammaK9_gt_eighty_one_hundredths
 The decimal `0.816824950064...` is explanatory only. The theorem uses the
 exact rational base and exact real logarithm.
 
+## Benchmark calibration
+
+The named theorem `gammaK9_gt_eighty_one_hundredths` proves an exact
+comparison with the exponent `0.81` published by Applegate--Lagarias in 1995.
+This is currently a comparison of exponents, not a Lean theorem identifying
+the two counting statements.  The public k=9 theorem uses `ClassRootsK`, its
+`NotInCycle` condition, positive natural inputs, and the repository's bounded
+path counter `piStar`.  The 1995 statement uses its published `pi_a` counting
+function and a different root quantifier.
+
+Accordingly, public wording is restricted to:
+
+```text
+The formalized k=9 exponent exceeds the Applegate--Lagarias 1995 benchmark
+0.81.
+```
+
+The package does not claim that a literal statement-to-statement corollary has
+already been formalized, that this is the current mathematical record (the
+KL2003 k=11 row is larger), or that this is the first such formalization in the
+world.  The bridge and any priority audit are scoped separately in
+`docs/KL2003_K9_AL1995_COMPARISON_BRIDGE_SCOPING_v1.md`.
+
 ## Certificate checking
 
 The exact candidate contains:
@@ -94,11 +117,15 @@ lake env lean CollatzClassical/KL2003/KL2003K9LNTCertificateAxiomAudit.lean
 lake env lean CollatzClassical/KL2003/KL2003K9PiStarTheoremAxiomAudit.lean
 ```
 
-The audited theorem profile is exactly:
+The `#print axioms` profile of the audited theorems is exactly:
 
 ```text
 [propext, Classical.choice, Quot.sound]
 ```
+
+This is an axiom profile, not the whole trusted computing base.  Lean's kernel
+remains trusted.  The reported `343.02` seconds are total Lean build/checking
+wall time, not kernel-only execution time.
 
 ## Classification
 
@@ -111,6 +138,9 @@ K9_PISTAR_SOURCE_WINDOW_LOWER_BOUND_PROVED
 K9_PISTAR_ARBITRARY_X_LOWER_BOUND_PROVED
 GAMMA_K9_GT_FORTY_NINE_SIXTIETHS_PROVED
 GAMMA_K9_GT_EIGHTY_ONE_HUNDREDTHS_PROVED
+AL1995_EXPONENT_BENCHMARK_EXCEEDED
+AL1995_LITERAL_STATEMENT_BRIDGE_NOT_YET_PROVED
+WORLD_FIRST_PRIORITY_NOT_CLAIMED
 NO_K11_THEOREM_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
 ```

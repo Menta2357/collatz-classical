@@ -296,14 +296,15 @@ Gate decisions:
 ```text
 K3_GENERATOR_VERIFIER_PILOT_PASS
 NO_GO_EXPLICIT_EL_ENUMERATION_TO_K9_OR_K11
-CONDITIONAL_GO_TO_K9_LNT_CERTIFICATE_PIPELINE
-K11_DEFERRED_UNTIL_K9_PIPELINE_PASS
+K9_LNT_CERTIFICATE_PIPELINE_PASS
+K9_PISTAR_ARBITRARY_X_THEOREM_PROVED
+K11_GATE_NOT_STARTED
 ```
 
 ## 10. General-k work decomposition
 
-The missing semantic chain is not a single lemma. A source-faithful Lean plan
-has at least the following modules:
+The implemented semantic chain was not a single lemma. Its load-bearing
+decomposition has the following conceptual modules:
 
 1. General residue indexing, concrete predecessor semantics, and `Phi_k`.
 2. Well-founded splitting/deletion termination and semantic preservation.
@@ -311,9 +312,11 @@ has at least the following modules:
 4. Generic retarded/non-critical lower-bound induction.
 5. Composition to concrete `piStar`, first instantiated at `k=3`.
 
-Only after the `k=3` integration theorem closes should the flat generator and
-checker be benchmarked on 6,561 tracked `k=9` classes. `k=11` remains deferred
-until that gate passes.
+The `k=3` integration theorem closed first. The flat generator and match-
+dispatch checker were then measured on all 6,561 tracked `k=9` classes, and
+the resulting certificate was consumed by the same semantic chain to prove
+the k=9 arbitrary-`x` theorem. A separate measured gate is required before
+starting k=11.
 
 ## 11. Reproducibility
 
@@ -327,6 +330,10 @@ docs/KL2003_F2_K3_GENERATOR_VERIFIER_AND_HIGH_K_GATE_v1.md
 outputs/KL2003_F2_K2_FULL_GENERATOR_REGRESSION_v1/
 outputs/KL2003_F2_K3_GENERATOR_REAL_v1/
 CollatzClassical/KL2003/KL2003K3CertificateVerifier.lean
+CollatzClassical/KL2003/KL2003K9CertificateMatchAggregate.lean
+CollatzClassical/KL2003/KL2003K9LNTCertificate.lean
+CollatzClassical/KL2003/KL2003K9PiStarTheorem.lean
+docs/KL2003_K9_PISTAR_THEOREM_LEAN_v1.md
 ```
 
 Core reproduction commands:
@@ -337,13 +344,17 @@ python3 scripts/kl2003_f2_k3_generator_real_v1.py
 lake build CollatzClassical.KL2003.KL2003K3CertificateDataGenerated
 lake build CollatzClassical.KL2003.KL2003K3CertificateVerifier
 lake env lean CollatzClassical/KL2003/KL2003K3CertificateVerifierAxiomAudit.lean
+lake build CollatzClassical.KL2003.KL2003K9PiStarTheorem
+lake env lean CollatzClassical/KL2003/KL2003K9PiStarTheoremAxiomAudit.lean
 ```
 
 ## 12. Limitations and no-claims
 
 ```text
-No full KL2003 k=3 piStar theorem is claimed.
-No k=9 theorem or exponent 0.8168300 is claimed.
+The proved k=3 and k=9 results are stated only with their exact Lean domains.
+The k=9 comparison with Applegate--Lagarias 1995 is an exponent benchmark
+comparison; literal statement equivalence and world-first priority are not
+claimed.
 No k=11 theorem or exponent 0.8417560 is claimed.
 No claim is made that k=11 is a mathematical ceiling.
 No global Collatz claim is made.

@@ -66,7 +66,7 @@ Collatz.
 | Ceil-window theorem | `kl2003_k2_m1_surrogate_ceil_window_lower_bound` | For `14 <= y`, admissible roots in classes `{2,5,8}` satisfy the lower bound at `concreteWindow y a` | Not an arbitrary-`x` theorem by itself | This was the first packaged technical theorem. |
 | Arbitrary large `x` corollary | `kl2003_k2_m1_surrogate_arbitrary_x_lower_bound` | If `((2 : Nat)^14) * a.1 <= x`, then `DeltaV2 * (((x : Real)/(a.1 : Real))^gammaK2) <= piStar a.1 x` | No statement for `x` below the threshold | The `ceil` excess is eliminated by choosing `y = Real.logb 2 ((x:Real)/(a:Real))`. |
 | Public root-8 instance | `kl2003_k2_m1_surrogate_root8_lower_bound` | If `2^17 <= x`, then `DeltaV2 * ((x/8)^gammaK2) <= piStar 8 x` | Not an all-roots k=2 theorem and not a global Collatz claim | `8 : ClassRoots 8` is named by `classRoot_eight`. |
-| k=9 arbitrary-`x` theorem | `exists_k9_piStar_arbitrary_x_lower_bound` | One positive `Delta` works for every `TrackedMode 9`, every `ClassRootsK 9 mode`, and every natural `x >= a`, with exact exponent `gammaK9`; Lean proves `gammaK9 > 81/100` and `gammaK9 > 49/60` | No roots outside the tracked k=9 classes, no k=11 theorem, and no global Collatz claim | The certificate is checked row-wise in nine Lean shards and then consumed by the reviewed general-k semantic chain. |
+| k=9 arbitrary-`x` theorem | `exists_k9_piStar_arbitrary_x_lower_bound` | One positive `Delta` works for every `TrackedMode 9`, every `ClassRootsK 9 mode`, and every natural `x >= a`, with exact exponent `gammaK9`; Lean proves `gammaK9 > 81/100` and `gammaK9 > 49/60` | No literal equivalence yet with the published Applegate--Lagarias `pi_a` statement, no roots outside the tracked k=9 classes, no k=11 theorem, and no global Collatz claim | The certificate is checked row-wise in nine Lean shards and then consumed by the reviewed general-k semantic chain. The `0.81` comparison is currently an exact exponent benchmark comparison. |
 | Row28 paper fidelity | `I2ELAbstractRowsV3`, `concretePhi_rowsV3` | The concrete seam uses the source-faithful V3 `phi25` arm | V2 `phi22` arm is not used as the KL2003 row28 target | V2 remains historical/abstract only after the meta-errata. |
 
 The word `surrogate` is therefore correct: the result is a source-aware,
@@ -274,5 +274,8 @@ AXIOM_AUDIT_PROFILE_DOCUMENTED
 PUBLIC_ROOT8_STATEMENT_CALIBRATED
 K9_STATEMENT_FIDELITY_EXTENSION_COMPLETE
 K9_ARBITRARY_X_STATEMENT_CALIBRATED
+K9_AL1995_EXPONENT_COMPARISON_ONLY
+K9_AL1995_LITERAL_STATEMENT_BRIDGE_NOT_YET_PROVED
+K9_WORLD_FIRST_PRIORITY_NOT_CLAIMED
 NO_GLOBAL_COLLATZ_CLAIM
 ```

@@ -690,3 +690,36 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   formalizarse y validarse la cadena general-k usando k=3 como banco de
   integracion. k=11 permanece diferido hasta que la ruta k=9 pase sus
   mediciones de certificado y presupuesto de kernel.
+
+## Actualizacion 2026-07-20: k=9 y calibracion AL1995
+
+- La condicion k=9 anterior ya esta descargada. El certificado exacto de 6561
+  filas y 2187 grupos auxiliares se verifica en nueve shards Lean y se consume
+  mediante la cadena general-k. El teorema publico
+  `exists_k9_piStar_arbitrary_x_lower_bound` esta custodiado en `d1b9478`, con
+  `gammaK9 = logb 2 (70461/40000)`, `gammaK9 > 81/100` y
+  `gammaK9 > 49/60`. Los cuatro audits k=9 reportan
+  `[propext, Classical.choice, Quot.sound]`. Ese listado es el perfil de
+  axiomas, no toda la TCB; el kernel de Lean sigue siendo confiado. Los 343.02
+  segundos registrados son tiempo total de build/checking, no tiempo puro de
+  kernel.
+
+- La comparacion con Applegate--Lagarias 1995 queda calibrada como comparacion
+  exacta de exponentes: el exponente formalizado k=9 supera su benchmark 0.81.
+  No se afirma que k=9 supere el record matematico actual de esta familia, que
+  la tabla KL2003 lleva hasta k=11/0.841756, ni que exista ya equivalencia Lean
+  entre `ClassRootsK`/`piStar` y el statement publicado en 1995. Tampoco se
+  afirma prioridad mundial. La frase publica autorizada y los dos niveles de
+  puente estan en `KL2003_K9_AL1995_COMPARISON_BRIDGE_SCOPING_v1.md`.
+
+- Mejora corta propuesta: instanciar k=9 en la raiz 8, probar
+  `piStar 8 x <= piStar 1 x` mediante `8 -> 4 -> 2 -> 1` y absorber el factor
+  fijo de la raiz en `Delta`. Estimacion de plan: un modulo y un audit,
+  100--250 lineas, 0.5--1.5 dias enfocados. La fidelidad literal al contador y
+  dominio de AL1995 es una tarea separada de 2--4 modulos, 300--800 lineas y
+  2--5 dias estimados. Ninguna estimacion es un claim de cierre.
+
+- Si se desea alguna afirmacion de prioridad, antes debe ejecutarse una
+  auditoria bibliografica reproducible sobre catalogos y repositorios de Lean,
+  Coq, Isabelle y HOL. El resultado admisible de una busqueda negativa es
+  `no prior formalization found under this protocol`, no `first in the world`.
