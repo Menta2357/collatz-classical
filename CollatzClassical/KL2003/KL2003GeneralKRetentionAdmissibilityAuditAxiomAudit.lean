@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.KL2003GeneralKRetentionAdmissibilityAudit
+
+open CollatzClassical KL2003
+
+#print axioms KL2003.GeneralKRetentionAdmissibilityAudit.witnessRetention_eq_keepFirst_of_allThreeHaveWitness
+#print axioms KL2003.GeneralKRetentionAdmissibilityAudit.witnessRetention_retainedBranchesWitnessFree_iff
+#print axioms KL2003.GeneralKRetentionAdmissibilityAudit.allThreeHaveWitness_keeps_a_witnessed_branch

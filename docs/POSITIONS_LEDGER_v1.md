@@ -393,6 +393,18 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   vaciar el minimo, de modo que ese caso no puede ocultarse bajo una regla de
   supervivencia sin testigo.
 
+- El borde de admisibilidad de la retencion esta ahora auditado en Lean. La
+  propiedad “toda rama retenida carece de testigo” es equivalente exactamente
+  a que no existan tres testigos simultaneos; si los tres existen,
+  `witnessRetention` usa `keepFirst` y conserva una rama testificada para no
+  vaciar el minimo. Ademas, la rama retardada de D1/D3 y toda D2 viven fuera
+  del `min3`, por lo que no reciben esa prueba de no incremento. El cierre de
+  admisibilidad se divide honestamente en dos lemas: exclusion del triple
+  testigo en configuraciones source supervivientes y negatividad de retornos
+  anidados cuyo ultimo paso es retardado. La irracionalidad de alpha ya paga
+  la promocion de no positivo a estrictamente negativo cuando ambas cotas se
+  obtengan.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial

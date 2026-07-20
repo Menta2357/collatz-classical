@@ -244,8 +244,13 @@ nonnegative terminal selected by the scheduler. This invariant is preserved
 by D1/D2/D3, finite runs, and transferred to the coherent Konig branch. The
 remaining admissibility proof must explicitly handle the case in which all
 three advanced children have deletion witnesses, because `witnessRetention`
-keeps one branch to maintain a nonempty minimum. No infinite branch or
-admissibility hook is assumed as an input contract.
+keeps one branch to maintain a nonempty minimum. Lean now proves the exact
+biconditional: all retained branches are witness-free if and only if the three
+branches do not all have witnesses. A second source boundary is independent:
+the retarded child is outside the advanced minimum and never passes through
+`witnessRetention`, so repeated-mode factors ending in a retarded edge need a
+separate nested-return arithmetic proof. No infinite branch or admissibility
+hook is assumed as an input contract.
 
 ### Semantic preservation
 
