@@ -473,6 +473,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   No se introduce minimo vacio y la API condicional de realizaciones
   witness-free permanece valida.
 
+- La exclusion semantica correcta del triple testigo ya esta probada. Para
+  un minimo advanced globalmente critico, con `Phi` positiva y monotona,
+  argumentos no negativos y `CriticalNodeBounds`, cada testigo excluye a su
+  hoja de toda ruta critica por el teorema contextual existente. Como todo
+  `min3` tiene al menos una rama critica, las tres hojas no pueden tener
+  testigo simultaneamente. De aqui se obtiene que `witnessRetention`, y la
+  politica Phi-sensible `criticalWitnessRetention`, retienen solo ramas sin
+  testigo cuando el objetivo es critico. Esto reconcilia el audit local k=5
+  con la justificacion fuente: la diferencia exacta es el invariante global
+  de asignaciones criticas/equation (305). El unico puente abierto de esta
+  fase es conectar la no terminacion del scheduler con una rama globalmente
+  critica, o iterar directamente la politica Phi-sensible ya definida; no
+  queda otra exclusion aritmetica local por inventar.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
