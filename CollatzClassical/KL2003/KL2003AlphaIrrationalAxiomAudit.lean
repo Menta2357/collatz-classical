@@ -1,0 +1,13 @@
+import CollatzClassical.KL2003.KL2003AlphaIrrational
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms alpha_irrational
+#print axioms SymbolicShift.eval_irrational_of_alphaCoeff_ne_zero
+#print axioms SymbolicShift.eval_ne_zero_of_constCoeff_neg
+#print axioms GeneralKSourceGraph.SourceWalk.weight_eval_ne_zero_of_length_pos
+#print axioms GeneralKSourceGraph.SourceWalk.weight_eval_neg_of_length_pos_of_nonpos
+
+end KL2003
+end CollatzClassical

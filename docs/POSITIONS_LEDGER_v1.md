@@ -272,8 +272,15 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   caminatas dependientes concatenan con longitud y peso aditivos, todo
   coeficiente de alpha acumulado es no negativo y toda caminata no vacia tiene
   coeficiente constante estrictamente negativo. El shift final coincide
-  exactamente con el inicial mas el peso. Sigue abierta la exclusion de peso
-  evaluado cero cuando aparece alpha, antes de la descomposicion en ciclos.
+  exactamente con el inicial mas el peso.
+- El segundo modulo de la ruta de ciclos tambien esta cerrado. Lean prueba
+  elementalmente que `alpha = logb 2 3` es irracional: una representacion
+  racional, elevada a su denominador positivo, igualaria una potencia natural
+  par de 2 con una potencia impar de 3. Por ello todo camino source no vacio
+  tiene peso evaluado distinto de cero; combinado con una futura cota
+  contextual no positiva, el peso es estrictamente negativo. Quedan abiertos
+  la extraccion de esa no-positividad desde deletion, la descomposicion en
+  ciclos simples y el margen uniforme finito.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

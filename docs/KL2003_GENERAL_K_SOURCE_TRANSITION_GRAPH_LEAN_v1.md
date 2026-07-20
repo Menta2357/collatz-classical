@@ -61,8 +61,9 @@ The module proves:
 - `finalLabel` accumulates exactly the walk weight;
 - evaluated final shift equals initial shift plus evaluated walk weight.
 
-These are the inputs required by the finite-cycle descent scoping. They do not
-yet exclude zero evaluated weight when the alpha coefficient is positive.
+These are the inputs required by the finite-cycle descent scoping. The
+downstream module `KL2003AlphaIrrational.lean` now excludes zero evaluated
+weight for every nonempty source walk.
 
 ## Verification
 
@@ -89,7 +90,7 @@ GENERAL_K_SOURCE_WALK_APPEND_WEIGHT_PROVED
 GENERAL_K_NONEMPTY_SOURCE_WALK_CONST_COEFF_NEGATIVE_PROVED
 GENERAL_K_SOURCE_WALK_FINAL_LABEL_SHIFT_PROVED
 GENERAL_K_SOURCE_TRANSITION_GRAPH_AXIOM_AUDIT_PASS
-GENERAL_K_ZERO_EVALUATED_WALK_WEIGHT_NOT_YET_EXCLUDED
+GENERAL_K_ZERO_EVALUATED_WALK_WEIGHT_EXCLUDED_DOWNSTREAM
 GENERAL_K_SIMPLE_CYCLE_DECOMPOSITION_NOT_YET_PROVED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED

@@ -102,8 +102,9 @@ alpha_irrational : Irrational alpha
 
 with an elementary proof route: a rational identity `logb 2 3 = p / q`
 would imply an equality between a positive power of 2 and a positive power of
-3, contradicting parity or unique factorization. Until this lemma is proved,
-`NO_ZERO_SOURCE_WALK_WEIGHT` remains a named blocker.
+3, contradicting parity or unique factorization. This route is now proved in
+`KL2003AlphaIrrational.lean`; every nonempty source walk has nonzero evaluated
+weight, and a nonpositive such walk is strictly negative.
 
 A generated finite simple-cycle gap certificate is an acceptable fallback for
 a fixed `k`, but it must be checked by Lean and must not become an assumed
@@ -154,8 +155,10 @@ module after termination. They must not be bundled into the cycle descent.
 Module 1 is now implemented as
 `KL2003GeneralKSourceTransitionGraph.lean`. Its finite action type, typed
 endpoints, source-faithful weights, dependent walks, concatenation laws, and
-accumulated-shift theorem compile and pass axiom audit. Module 2 is the next
-active target; modules 3 and 4 remain unopened.
+accumulated-shift theorem compile and pass axiom audit. Module 2 is now
+implemented as `KL2003AlphaIrrational.lean`: it proves `alpha_irrational`,
+excludes zero weight for nonempty source walks, and strengthens contextual
+nonpositivity to strict negativity. Modules 3 and 4 remain unopened.
 
 ## Validation order
 
@@ -168,7 +171,6 @@ active target; modules 3 and 4 remain unopened.
 ## Blockers
 
 ```text
-BLOCKED_ON_ALPHA_IRRATIONALITY_OR_CHECKED_SIMPLE_CYCLE_GAP
 BLOCKED_ON_SURVIVING_TREE_PATH_TO_SOURCE_WALK_EXTRACTION
 BLOCKED_ON_SIMPLE_CYCLE_DECOMPOSITION_IN_LEAN
 BLOCKED_ON_UNIFORM_EPSILON_CONSTRUCTION
@@ -183,7 +185,9 @@ THEOREM31_FINITE_CYCLE_DESCENT_SCOPED
 GENERAL_K_SOURCE_TRANSITION_GRAPH_PROVED
 RAW_SOURCE_GRAPH_POSITIVE_CYCLES_ACKNOWLEDGED
 DELETION_SUPPLIES_NONINCREASE_NOT_STRICT_DROP
-ZERO_WEIGHT_RECURRENCE_EXCLUSION_REQUIRED
+ZERO_WEIGHT_RECURRENCE_EXCLUSION_PROVED
+ALPHA_IRRATIONALITY_PROVED
+NONEMPTY_SOURCE_WALK_ZERO_WEIGHT_EXCLUDED
 UNIFORM_RECURRENT_DROP_CONSUMER_ALREADY_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM
 NO_K9_FORMALISATION_AUTHORIZATION
