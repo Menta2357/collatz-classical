@@ -595,6 +595,20 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   normal finito, o una cota uniforme equivalente, antes de instanciar el
   certificado k=3 y consumir la induccion retardada generica.
 
+- La uniformidad de profundidad que faltaba tambien esta probada sin construir
+  una forma normal EL canonica. Lean considera conjuntamente todos los
+  prefijos seleccionados que aparecen en alguna corrida critica, para
+  cualquier clase raiz y cualquier `y >= 2`. Si sus profundidades fueran no
+  acotadas, esos tipos finitos no vacios en cada profundidad formarian un
+  sistema inverso; Konig extraeria una rama fuente infinita coherente. Cada
+  prefijo conserva no negatividad y dominancia de llegadas advanced porque
+  procede de una corrida finita real, y el teorema de descenso recurrente ya
+  auditado excluye esa rama. Por tanto existe un unico bound de profundidad
+  para todos los objetivos seleccionados. El trabajo restante de uniformidad
+  es ahora finitario: propagar `bound + 1` a todas las hojas del arbol detenido
+  y tomar el minimo positivo de los shifts negativos dentro de esa familia
+  finita.
+
 ## Cerrado del programa anterior (residuo defendible, sin cambios)
 
 - Input local de optional stopping: drift <= -13/10 y momento exponencial
