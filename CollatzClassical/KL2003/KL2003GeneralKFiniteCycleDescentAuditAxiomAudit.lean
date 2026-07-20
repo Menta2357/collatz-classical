@@ -1,0 +1,16 @@
+import CollatzClassical.KL2003.KL2003GeneralKFiniteCycleDescentAudit
+
+namespace CollatzClassical
+namespace KL2003
+
+#print axioms GeneralKFiniteCycleAudit.edge8to2_target
+#print axioms GeneralKFiniteCycleAudit.edge2loop_target
+#print axioms GeneralKFiniteCycleAudit.edge2to8_target
+#print axioms GeneralKFiniteCycleAudit.innerWeight_eval_neg
+#print axioms GeneralKFiniteCycleAudit.residualSimpleCycleWeight_eval_pos
+#print axioms GeneralKFiniteCycleAudit.nestedClosedWalkWeight_eval_neg
+#print axioms GeneralKFiniteCycleAudit.nested_weight_symbolic_decomposition
+#print axioms GeneralKFiniteCycleAudit.nested_weight_decomposition
+
+end KL2003
+end CollatzClassical

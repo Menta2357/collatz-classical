@@ -106,32 +106,53 @@ would imply an equality between a positive power of 2 and a positive power of
 `KL2003AlphaIrrational.lean`; every nonempty source walk has nonzero evaluated
 weight, and a nonpositive such walk is strictly negative.
 
-A generated finite simple-cycle gap certificate is an acceptable fallback for
-a fixed `k`, but it must be checked by Lean and must not become an assumed
-hook. The irrationality route is preferable because it scales to all `k`.
+A generated finite gap certificate over context-admissible nested returns is
+an acceptable fallback for a fixed `k`, but it must be checked by Lean and
+must not become an assumed hook. A certificate over raw simple cycles is not
+sufficient.
 
-## From strict cycles to a uniform drop
+## Why naive loop erasure is insufficient
 
-Once zero weight is excluded, every repeated-mode segment of a surviving
-branch is strictly negative: deletion gives nonpositivity and the no-zero
-lemma makes it strict.
+Once zero weight is excluded, every nonempty repeated-mode segment for which
+contextual deletion supplies nonpositivity is strictly negative. Strictness
+alone is not a uniform margin because such segments can be arbitrarily long.
 
-Strictness alone is not yet a uniform margin because repeated segments can be
-arbitrarily long. The proof must decompose each closed finite walk into simple
-cycles. For fixed `k`:
+The initially proposed next step was to erase nested loops, decompose a closed
+walk into simple cycles, and minimize over the finite set of simple cycles.
+`KL2003GeneralKFiniteCycleDescentAudit.lean` refutes that inference in the
+actual `k = 2` source graph. It proves the route
 
-- the mode type is finite;
-- every simple cycle has bounded length;
-- there are finitely many simple cycles;
-- every simple cycle appearing in a surviving branch has negative evaluated
-  weight;
-- the minimum absolute negative weight over that finite set supplies
-  `epsilon > 0`;
-- a closed walk is a nonempty sum of simple cycles, so its total is at most
-  `-epsilon`.
+```text
+8 --D3--> 2 --D1--> 2 --D1--> 8
+```
 
-This yields `HasUniformRecurrentDrop` and the existing arithmetic theorem then
-forces a negative shift.
+has negative total `3 * alpha - 5`, and its contiguous inner class-2 loop has
+negative weight `alpha - 2`. Removing that inner loop exposes the simple cycle
+`8 -> 2 -> 8` with positive weight `2 * alpha - 3`.
+
+Thus contextual nonpositivity of the original repeated-mode packages does not
+transfer to every residual simple cycle produced by loop erasure. A finite gap
+over negative raw simple cycles is not a valid proof of uniform recurrent
+drop.
+
+## Revised descent target
+
+The replacement must preserve nested return packages. A prospective route is
+a first-return/local-finiteness theorem proved by induction on the finite set
+of modes:
+
+- a first return to one mode has an interior walk avoiding that mode;
+- repeated interior modes form strictly negative nested return packages;
+- after removing those packages, the residual interior path is simple and has
+  bounded length;
+- one must prove that only finitely many admissible first-return weights occur
+  in every bounded interval near zero;
+- the resulting finite local set supplies a uniform negative gap.
+
+This local-finiteness claim is a new blocker, not a proved theorem. An
+alternative well-founded measure that works directly on contextual scheduler
+states is also acceptable. Either route must retain the ancestor context used
+by deletion.
 
 ## Proposed Lean modules
 
@@ -140,9 +161,9 @@ forces a negative shift.
 2. `KL2003AlphaIrrational.lean`
    Irrationality of `logb 2 3` and nonzero evaluation of nonempty source-walk
    symbolic weights.
-3. `KL2003GeneralKFiniteCycleDescent.lean`
-   Simple-cycle decomposition, finite negative gap, and construction of
-   `HasUniformRecurrentDrop` for surviving walks.
+3. `KL2003GeneralKNestedReturnDescent.lean`
+   Context-preserving first-return decomposition, local finiteness near zero,
+   and construction of `HasUniformRecurrentDrop` for surviving walks.
 4. `KL2003GeneralKEliminationTermination.lean`
    Extraction of an infinite surviving walk from scheduler nontermination and
    the final contradiction.
@@ -158,21 +179,26 @@ endpoints, source-faithful weights, dependent walks, concatenation laws, and
 accumulated-shift theorem compile and pass axiom audit. Module 2 is now
 implemented as `KL2003AlphaIrrational.lean`: it proves `alpha_irrational`,
 excludes zero weight for nonempty source walks, and strengthens contextual
-nonpositivity to strict negativity. Modules 3 and 4 remain unopened.
+nonpositivity to strict negativity. The audit module
+`KL2003GeneralKFiniteCycleDescentAudit.lean` has also shown that the naive
+simple-cycle decomposition proposed for module 3 is invalid even at `k = 2`.
+The revised nested-return module and module 4 remain unopened.
 
 ## Validation order
 
-1. Reproduce the k=2 D1/D2/D3 transition table and the deletion of the positive
-   class-8 D3 self-loop.
-2. Validate the walk and cycle checker at k=3 against the generated EL data.
-3. Prove the general finite-cycle theorem.
+1. Formalize the context-preserving first-return package and its relation to
+   scheduler paths.
+2. Prove or refute local finiteness of admissible return weights near zero.
+3. Validate the resulting descent theorem at k=2 and k=3 against generated EL
+   data.
 4. Close the k=3 `piStar` consumer before measuring k=9.
 
 ## Blockers
 
 ```text
 BLOCKED_ON_SURVIVING_TREE_PATH_TO_SOURCE_WALK_EXTRACTION
-BLOCKED_ON_SIMPLE_CYCLE_DECOMPOSITION_IN_LEAN
+BLOCKED_ON_CONTEXT_PRESERVING_FIRST_RETURN_DECOMPOSITION
+BLOCKED_ON_ADMISSIBLE_RETURN_WEIGHT_LOCAL_FINITENESS
 BLOCKED_ON_UNIFORM_EPSILON_CONSTRUCTION
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
@@ -182,6 +208,8 @@ EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 
 ```text
 THEOREM31_FINITE_CYCLE_DESCENT_SCOPED
+NAIVE_SIMPLE_CYCLE_DESCENT_REFUTED_AT_K2
+NESTED_RETURN_DESCENT_RESCOPING_REQUIRED
 GENERAL_K_SOURCE_TRANSITION_GRAPH_PROVED
 RAW_SOURCE_GRAPH_POSITIVE_CYCLES_ACKNOWLEDGED
 DELETION_SUPPLIES_NONINCREASE_NOT_STRICT_DROP

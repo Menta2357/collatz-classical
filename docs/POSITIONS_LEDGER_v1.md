@@ -279,8 +279,17 @@ Registro de posiciones al momento del giro de rumbo (julio 2026).
   par de 2 con una potencia impar de 3. Por ello todo camino source no vacio
   tiene peso evaluado distinto de cero; combinado con una futura cota
   contextual no positiva, el peso es estrictamente negativo. Quedan abiertos
-  la extraccion de esa no-positividad desde deletion, la descomposicion en
-  ciclos simples y el margen uniforme finito.
+  la extraccion de esa no-positividad desde deletion y la construccion honesta
+  de un margen uniforme.
+- La descomposicion ingenua en ciclos simples no sobrevive a su primer test
+  source-faithful. En k=2, Lean construye la ruta cerrada
+  `8 -> 2 -> 2 -> 8`: el retorno completo pesa `3*alpha-5 < 0` y el
+  auto-retorno interior pesa `alpha-2 < 0`, pero borrarlo deja el ciclo simple
+  `8 -> 2 -> 8` de peso `2*alpha-3 > 0`. Por tanto la no-positividad
+  contextual de los retornos originales no se hereda por loop erasure. El
+  siguiente modulo debe preservar paquetes anidados y demostrar una propiedad
+  de first-return/local-finiteness, o encontrar otra medida bien fundada; no se
+  reclama ya un gap por minimo de ciclos simples brutos.
 - El scheduler sintactico source-faithful ya esta formalizado. Un zipper
   terminal dependiente localiza de izquierda a derecha la primera hoja con
   shift no negativo; `none` equivale exactamente a que todos los shifts

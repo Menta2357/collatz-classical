@@ -52,7 +52,9 @@ weight_eval_neg_of_length_pos_of_nonpos
 
 Thus any future contextual argument giving `walk.weight.eval <= 0` for a
 nonempty repeated-mode segment may strengthen it to strict negativity without
-assuming a uniform gap.
+assuming a uniform gap. The separate finite-cycle audit shows that strictness
+does not by itself justify a gap over loop-erased simple cycles: nested
+negative packages can expose a positive residual cycle.
 
 ## Verification
 
@@ -76,8 +78,9 @@ GENERAL_K_NONEMPTY_SOURCE_WALK_ZERO_WEIGHT_EXCLUDED
 GENERAL_K_NONPOSITIVE_NONEMPTY_SOURCE_WALK_STRICTLY_NEGATIVE_PROVED
 GENERAL_K_ALPHA_IRRATIONAL_AXIOM_AUDIT_PASS
 GENERAL_K_CONTEXTUAL_NONINCREASE_NOT_YET_PROVED
-GENERAL_K_SIMPLE_CYCLE_DECOMPOSITION_NOT_YET_PROVED
+GENERAL_K_NESTED_RETURN_DESCENT_NOT_YET_PROVED
 GENERAL_K_UNIFORM_EPSILON_NOT_YET_PROVED
+NAIVE_SIMPLE_CYCLE_DESCENT_NOT_ASSUMED
 EL_TERMINATION_NOT_YET_PROVED
 EL_ORDER_INDEPENDENCE_NOT_YET_PROVED
 NO_K3_PISTAR_THEOREM_CLAIM
