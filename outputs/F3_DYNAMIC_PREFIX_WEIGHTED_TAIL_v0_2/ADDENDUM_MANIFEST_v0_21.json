@@ -1,0 +1,49 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.21",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_OBLIGATION_OPEN",
+    "TILT_VALLEY_PASS_GROWTH_ADJUSTED",
+    "LEMMA_B_CHERNOFF_DRAFT",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_TILTED_SPECTRAL_CLOSURE_AUDIT_v1_REPORT.md",
+      "sha256": "175b36624203fed7e8fc8a86fe500174115f4b50abcfb314f904c2f01b6e6293"
+    },
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_2.md",
+      "sha256": "eb3f40ce778370645220f581d687ef344cfc7b7484b1f78494ce8eebe27eab1b"
+    },
+    {
+      "path": "scripts/f3_tilted_spectral_closure_audit.py",
+      "sha256": "73d91b42fa5dee37f94712339231c7061c7072c8e6f3fc13b0a179280b9c3fb0"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/tilted_spectral_closure_audit.json",
+      "sha256": "cb05d1d6d91160767c5b975ea195eb443054f81e88d4a52f00c307041db75b68"
+    }
+  ],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "rho_star": 1.8,
+  "rho_prime_best": 2.5,
+  "theta_best": 0.32850406697203605,
+  "perron_best": 0.9576029720165454,
+  "gamma_best": 0.04239702798345457,
+  "delta": 0.01,
+  "effective_survival_factor_best": 0.9671790017367109,
+  "effective_gamma_best": 0.0328209982632891,
+  "local_verdict": "PASS_TILT_VALLEY_GROWTH_ADJUSTED",
+  "next_gate": "RATIONAL_PERRON_VECTOR_AND_BASE_HOOKS",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
