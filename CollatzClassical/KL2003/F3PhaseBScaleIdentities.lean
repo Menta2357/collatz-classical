@@ -17,15 +17,32 @@ def rhoStarNum : Nat := 9
 /-- Denominator of the rational target proposed for the first scale-aware F3 gate. -/
 def rhoStarDen : Nat := 5
 
-/-- Numerator of KL2003's k=11 lambda value `8961/5000`. -/
-def lambda11Num : Nat := 8961
+/-- Numerator of the official Lean k=11 lambda value `71689/40000`. -/
+def lambda11OfficialNum : Nat := 71689
 
-/-- Denominator of KL2003's k=11 lambda value `8961/5000`. -/
-def lambda11Den : Nat := 5000
+/-- Denominator of the official Lean k=11 lambda value `71689/40000`. -/
+def lambda11OfficialDen : Nat := 40000
 
-/-- Cross-multiplied form of `8961/5000 < 9/5`. -/
-theorem rhoStar_gt_lambda11_cross :
-    lambda11Num * rhoStarDen < rhoStarNum * lambda11Den := by
+/-- Numerator of the older decimal lambda approximation `8961/5000`. -/
+def lambda11DecimalNum : Nat := 8961
+
+/-- Denominator of the older decimal lambda approximation `8961/5000`. -/
+def lambda11DecimalDen : Nat := 5000
+
+/-- Cross-multiplied form of `71689/40000 < 9/5`. -/
+theorem rhoStar_gt_lambda11Official_cross :
+    lambda11OfficialNum * rhoStarDen <
+      rhoStarNum * lambda11OfficialDen := by
+  decide
+
+/-- Cross-multiplied form of `8961/5000 <= 71689/40000`.
+
+This keeps the older decimal approximation explicitly below the official Lean
+constant, avoiding drift between the three lambda conventions in the dossier.
+-/
+theorem lambda11Decimal_le_lambda11Official_cross :
+    lambda11DecimalNum * lambda11OfficialDen <=
+      lambda11OfficialNum * lambda11DecimalDen := by
   decide
 
 /-- Retarded branch scale in multiplicative form.

@@ -13,7 +13,8 @@ CollatzClassical/KL2003/F3PhaseBScaleIdentities.lean
 The module intentionally proves only arithmetic identities:
 
 ```text
-rho target 9/5 exceeds lambda_11 = 8961/5000, cross-multiplied
+rho target 9/5 exceeds official Lean lambda_11 = 71689/40000, cross-multiplied
+older decimal lambda 8961/5000 is <= official Lean lambda_11, cross-multiplied
 retarded multiplicative scale identity
 PHASE_B multiplicative scale identity
 critical split at rho = 2, cross-multiplied
@@ -43,3 +44,15 @@ NO_GLOBAL_COLLATZ_CLAIM
 NO_K11_THEOREM_CLAIM
 ```
 
+## Protocol note
+
+This module is only a Lean brick for exact arithmetic identities. The F3
+operator itself must not move to Lean until its paper page has fixed:
+
+```text
+M derived from rules
+w frozen before holdout
+tail in the same W_K denominator
+explicit y-uniformity
+member-wise inequality for each matrix entry
+```
