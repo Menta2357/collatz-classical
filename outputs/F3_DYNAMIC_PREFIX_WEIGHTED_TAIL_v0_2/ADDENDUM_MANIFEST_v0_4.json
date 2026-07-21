@@ -1,0 +1,110 @@
+{
+  "addendum": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2",
+  "date": "2026-07-21",
+  "status": "PRE_SPECTRAL_CANDIDATE_LOCAL_EMPIRICAL_GATE_PASS_HOOKS",
+  "claude": {
+    "status": "UNAVAILABLE_NO_CREDITS",
+    "formal_coordinated_verdict": "NOT_RECORDED"
+  },
+  "sealed_package_anchor": {
+    "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1",
+    "manifest_sha256": "0704580adcb4d0019dae55dd81169f65e830747e8cf8d108dc1a676e0a335efa",
+    "local_verification": {
+      "checked_files": 74,
+      "failure_count": 0,
+      "status": "PASS"
+    }
+  },
+  "public_custody_anchor": {
+    "repo": "https://github.com/Menta2357/collatz-classical",
+    "branch": "codex/f3-density-capture-gate",
+    "previous_public_addendum_commit": "868ea84",
+    "pull_request": "https://github.com/Menta2357/collatz-classical/pull/1"
+  },
+  "phase_b_all_residues_result": {
+    "K": 5,
+    "phase_replacement": "PHASE_B",
+    "visible_residues": "all",
+    "finite_base_exceptions": [2],
+    "y_values": [8, 9, 10],
+    "calibration": {
+      "unique_parent_roots": 3455,
+      "root_rows": 10365,
+      "mismatch_count": 0,
+      "visible_capture_fraction": 0.9994979387949482,
+      "q_fraction": 0.0005020612050518277,
+      "phase_loss_fraction": 0.00013084713861374986
+    },
+    "holdout": {
+      "unique_parent_roots": 3456,
+      "root_rows": 10368,
+      "mismatch_count": 0,
+      "visible_capture_fraction": 0.9995864651330338,
+      "q_fraction": 0.0004135348669661564,
+      "phase_loss_fraction": 0.0
+    },
+    "local_verdict": "PASS_HOOKS_ONLY_PRE_SPECTRAL_CANDIDATE"
+  },
+  "tracked_files": [
+    {
+      "path": "F3_ADVANCED_PHASE_REPLACEMENT_v0_1.md",
+      "sha256": "c06148a870f2aebf9d6209685fb32d3239f9cf8ca456811bb56e2c4d2416a36b"
+    },
+    {
+      "path": "F3_DYNAMIC_PREFIX_VISIBLE_RESIDUE_CORRECTION_v0_4.md",
+      "sha256": "940a2e7c5ca8ad189ddef72cd947f018aac27b0a6759327f44f2bb2b0712e9be"
+    },
+    {
+      "path": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_DECISION_v0_3.md",
+      "sha256": "ab81ee67263e2530ffeff744b8c9f477efe870f6e53577c73d312d1c5f6717f8"
+    },
+    {
+      "path": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PAGE_v0_3.md",
+      "sha256": "e352041271f2d5657612e7836e4016f54d379c5119a88bac4a6e1cbd21158618"
+    },
+    {
+      "path": "F3_NO_CLAUDE_CONTINUATION_v1.md",
+      "sha256": "a31228d9b29bbf98e044af3ac28852d2a40353fb32dff809bfdb1896609e4c73"
+    },
+    {
+      "path": "F3_PHASE_B_ALL_RESIDUES_PILOT_REPORT_v1.md",
+      "sha256": "3138d6806e26cdf3e8571f7974cbfe48e61c5302247fbb344875ba0d881aa246"
+    },
+    {
+      "path": "scripts/f3_dynamic_prefix_weighted_tail_phase_a_pilot_v1.py",
+      "sha256": "37b4ca95dd28835bf56231984b474a438f89bf8568470b0766f2380a6553417a"
+    },
+    {
+      "path": "results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/summary.json",
+      "sha256": "130aaa11c7ac19cbcc35297da192d5679db0b4748337a7d68b5f9c2df776c643"
+    },
+    {
+      "path": "results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/manifest_sha256.csv",
+      "sha256": "b6c2cde3c8bc11bbe468f6b492a75da093e1a282a5b5fe461d039fcaac89d3f4"
+    },
+    {
+      "path": "results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/summary.json",
+      "sha256": "7089dee5089698d55a064d35f702a35a528bf389f90d56e370bfefcd25cd25d2"
+    },
+    {
+      "path": "results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/manifest_sha256.csv",
+      "sha256": "e2e81796ca475dc3e673ba69282952bda14a9d42bfe57e6ff80d8106a2f52d52"
+    }
+  ],
+  "non_claims": {
+    "no_lean": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true
+  },
+  "next_gate": {
+    "name": "F3_PHASE_B_DYNAMIC_OPERATOR_v1",
+    "required_before_claim": [
+      "construct finite transition operator on all visible states",
+      "put PHASE_B loss in the same W_K denominator",
+      "find rational weights or prove no feasible rho",
+      "certify rho > 1.7922 before any Lean work"
+    ]
+  }
+}

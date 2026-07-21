@@ -1,0 +1,47 @@
+{
+  "K": 5,
+  "advanced_tail_phase_a_fraction": 0.0,
+  "atom_tail_fraction": 0.0004810081931728904,
+  "elapsed_seconds": 2.7038093750015832,
+  "finite_base_exceptions": [
+    2
+  ],
+  "interval_half_open": [
+    10369,
+    20737
+  ],
+  "max_roots_cap": 20,
+  "mismatch_count": 0,
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean": true,
+    "no_rho_certificate": true
+  },
+  "phase": "holdout",
+  "phase_loss_fraction": 0.0,
+  "phase_replacement": "PHASE_B",
+  "platform": "macOS-13.6.4-arm64-arm-64bit-Mach-O",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "q_fraction": 0.0004810081931728904,
+  "root_rows": 60,
+  "status": "PASS_HOOKS_ONLY",
+  "totals": {
+    "advanced_tail_phase_a": 0,
+    "advanced_visible_phase_a": 151233,
+    "atom_tail": 120,
+    "phase_loss_tail": 0,
+    "q_total": 120,
+    "retarded_visible": 98123,
+    "target": 249476,
+    "visible_total": 249356
+  },
+  "unique_parent_roots": 20,
+  "visible_capture_fraction": 0.9995189918068271,
+  "y_values": [
+    8,
+    9,
+    10
+  ]
+}
