@@ -1,0 +1,44 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.23",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_GATE_COMPLETE_PENDING_ADVERSARIAL_REVIEW",
+    "PASS_COMBINED_LEDGER",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_COMBINED_LEDGER_v1_REPORT.md",
+      "sha256": "6468ebed5268e3637d69bd1761c8a8f37a466926aab18fec402b28c7db801e3c"
+    },
+    {
+      "path": "scripts/f3_combined_ledger_v1.py",
+      "sha256": "c34cd4a47fc15f5c36635ad7b3ddf41b8c6615e86feb2b2b8e03f881487095bb"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1.json",
+      "sha256": "70f0c50f90a39b84fc2d8d615d942bcbbd620e4097dd96e8f5e9fc722c6cbe78"
+    },
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_4.md",
+      "sha256": "a2d4f116eef2bcb53533eb7d146e861a1a000ed3d2088cc4003a0081413cfdf7"
+    }
+  ],
+  "eta_exact": "2734375/9565938",
+  "eta_decimal": 0.2858449427541763,
+  "eta_pass": true,
+  "final_coefficient": 0.02213880677462053,
+  "K_upper": "559/100000",
+  "K_reverify_bad_count": 0,
+  "next_gate": "ADVERSARIAL_REVIEW_OF_DENOMINATORS_AND_REAL_ENVELOPES",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
