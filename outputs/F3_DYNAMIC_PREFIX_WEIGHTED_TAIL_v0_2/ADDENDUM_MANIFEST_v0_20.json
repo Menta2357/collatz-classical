@@ -1,0 +1,50 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.20",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_OBLIGATION_OPEN",
+    "LEMMA_A_PAPER_ROUTE_ACCEPTED",
+    "LEMMA_B_CLOSURE_GATE_STOP",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_1.md",
+      "sha256": "f5a2f9d35c0b03579c634b394a3f36ae478eac3c21b4078add3b22305a759a69"
+    },
+    {
+      "path": "scripts/f3_perron_drift_audit.py",
+      "sha256": "5c57d3958f1eb4d0d69c075cfa664491303b97970b94084d55162f9db6a053de"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/perron_drift_audit.json",
+      "sha256": "6391e49a52de475a610f6b1b117704fb47b112be12caf0b3b32cb976de707baa"
+    }
+  ],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "step_alphabet": [
+    -2,
+    "log2(3)-1",
+    "log2(3)-2"
+  ],
+  "mu_decimal": -0.7831050099641175,
+  "local_drift_min": -2.0,
+  "local_drift_max": 0.26022969445499045,
+  "uniform_T_first_negative": 4,
+  "R_max": 1.040065004084614,
+  "closure_lhs": 0.00025219478679256493,
+  "closure_rhs": 0.15713286051002268,
+  "closure_pass": false,
+  "local_verdict": "STOP_CLOSURE_GATE",
+  "next_gate": "DESIGN_PREDECLARED_SHARPER_CLOSURE_OR_STOP_F3",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

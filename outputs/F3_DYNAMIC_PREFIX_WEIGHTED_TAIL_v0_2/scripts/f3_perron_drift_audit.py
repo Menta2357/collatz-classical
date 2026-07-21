@@ -29,11 +29,13 @@ CHANNELS = {
 def main() -> None:
     state_ids: list[int] = []
     weights: dict[int, float] = {}
+    frozen_rows: dict[int, dict[str, str]] = {}
     with (RESULTS / "frozen_w_split_core.csv").open(newline="") as handle:
         for row in csv.DictReader(handle):
             state_id = int(row["state_id"])
             state_ids.append(state_id)
             weights[state_id] = float(row["rational_weight_decimal"])
+            frozen_rows[state_id] = row
 
     index = {state_id: i for i, state_id in enumerate(state_ids)}
     n = len(state_ids)
@@ -80,6 +82,44 @@ def main() -> None:
         channel: float(np.sum(stationary * channel_mass[channel] / row_denominator))
         for channel in CHANNELS
     }
+
+    # One-step uniform drift is not available if even one row has nonnegative
+    # local drift.  Search the predeclared finite block horizons for the first
+    # T whose expected cumulative drift is negative from every starting state.
+    cumulative = np.zeros(n, dtype=float)
+    transition_power = np.eye(n, dtype=float)
+    uniform_T = None
+    uniform_cumulative_max = None
+    for T in range(1, 65):
+        cumulative += transition_power @ local_drift
+        if float(np.max(cumulative)) < 0:
+            uniform_T = T
+            uniform_cumulative_max = float(np.max(cumulative))
+            break
+        transition_power = transition_power @ q
+
+    row_ratios = {
+        state_id: float(frozen_rows[state_id]["lhs_wM_decimal"])
+        / weights[state_id]
+        for state_id in state_ids
+    }
+    r_max_state = max(row_ratios, key=row_ratios.get)
+    r_max = row_ratios[r_max_state]
+    if uniform_T is None:
+        closure_lhs = None
+        closure_rhs = None
+        closure_pass = False
+    else:
+        block_drift_gap = -uniform_cumulative_max
+        block_increment_bound = 2.0 * uniform_T
+        closure_lhs = block_drift_gap**2 / (2.0 * block_increment_bound**2)
+        closure_rhs = uniform_T * math.log(r_max)
+        closure_pass = closure_lhs > closure_rhs
+
+    channel_mu_terms = {
+        channel: channel_shares[channel] * CHANNELS[channel]
+        for channel in CHANNELS
+    }
     payload = {
         "definition": "q(s,t)=M_split(s,t)*w_t / sum_u M_split(s,u)*w_u; mu=sum_s pi(s) sum_t q(s,t) h(channel)",
         "core_state_count": n,
@@ -90,13 +130,24 @@ def main() -> None:
         },
         "mu_decimal": mu,
         "channel_stationary_shares": channel_shares,
+        "mu_channel_terms": channel_mu_terms,
+        "mu_decomposition": "pi_R*(-2) + pi_D*(log2(3)-1) + pi_L*(log2(3)-2)",
         "local_drift_min": float(np.min(local_drift)),
         "local_drift_max": float(np.max(local_drift)),
+        "local_drift_argmax_state_id": int(state_ids[int(np.argmax(local_drift))]),
         "stationary_residual": stationary_residual,
         "stationary_min": float(np.min(stationary)),
+        "R_max": r_max,
+        "R_max_argmax_state_id": int(r_max_state),
+        "uniform_T_first_negative": uniform_T,
+        "uniform_cumulative_drift_max": uniform_cumulative_max,
+        "closure_definition": "block_drift_gap^2/(2*block_increment_bound^2) > T*log(R_max), with block_increment_bound=2T",
+        "closure_lhs": closure_lhs,
+        "closure_rhs": closure_rhs,
+        "closure_pass": closure_pass,
         "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
-        "stop_condition": "PASS_DRIFT_ROUTE if mu < 0 else STOP_DRIFT_ROUTE",
-        "local_verdict": "PASS_DRIFT_ROUTE" if mu < 0 else "STOP_DRIFT_ROUTE",
+        "stop_condition": "STOP_CLOSURE_GATE if uniform drift or Azuma closure fails",
+        "local_verdict": "PASS_CLOSURE_GATE" if closure_pass else "STOP_CLOSURE_GATE",
         "status": "DIAGNOSTIC_INPUT_TO_LEMMA_B",
         "non_claims": ["NO_FORMAL_RHO_CERTIFICATE", "NO_DENSITY_THEOREM", "NO_LEAN_OPERATOR"],
     }

@@ -7,7 +7,7 @@ Status:
 ```text
 PAPER_OBLIGATION_OPEN
 PAPER_PAGE_v1_1_REVIEWED
-LEMMA_B_DRIFT_SIGN_PASS_QUANTITATIVE_BOUND_PENDING
+LEMMA_B_CLOSURE_GATE_STOP
 CANDIDATE_CERTIFICATE_EMPIRICAL_INPUT
 NO_FORMAL_RHO_CERTIFICATE
 NO_DENSITY_THEOREM
@@ -273,22 +273,55 @@ stationary channel shares:
 stationary residual        = 1.734723475976807e-17
 ```
 
-The published audit therefore passes the predeclared sign test
-`mu < 0` (`PASS_DRIFT_ROUTE`).  This value differs from the earlier scalar
-estimate `-0.4334`; that estimate is not substituted for the matrix audit.
-The discrepancy is recorded, not rounded away.  The reproducible matrix value
-is the one eligible for Lemma B.
+The stationary mean is negative, but the one-step local drift is not uniform:
 
-With the three bounded increments and this negative stationary drift, the
-remaining paper step is the standard finite-state Markov-additive first-
-passage estimate: construct the centered martingale, apply a bounded-
-increment Azuma/Freedman bound at `n = O(y-y_base)`, and convert the small
-survivor probability into an explicit weighted remainder `E_y`.  The theorem
-must state its constants and its dependence on the finite mixing/initial
-segment; `mu<0` alone is not a license to write “the live mass vanishes”.
+```text
+min_s mu_s = -2.0
+max_s mu_s = 0.26022969445499045   (state_id = 24)
+```
+
+The one-step condition is `max_s mu_s < 0`; a negative minimum alone only
+certifies that some rows descend and is insufficient for a uniform
+supermartingale.
+
+Therefore the direct one-step supermartingale route is unavailable.  The first
+uniformly negative block is `T=4`:
+
+```text
+max_s E_s[H_4] = -0.17966895310389136
+R_max = 1.040065004084614          (state_id = 7)
+```
+
+Using the predeclared bounded-increment closure test with block increment bound
+`B_T=2T=8` gives
+
+```text
+closure_lhs = (-max_s E_s[H_4])^2 / (2*B_T^2)
+            = 0.00025219478679256493
+closure_rhs = T*log(R_max)
+            = 0.15713286051002268
+```
+
+The inequality fails by a wide margin.  The audit verdict is therefore
+`STOP_CLOSURE_GATE`: negative stationary drift alone does not yet beat the
+growth of the weighted live mass under this Azuma bound.  The earlier scalar
+estimate `-0.4334` is not substituted for the matrix audit; the discrepancy is
+recorded, and the channel terms explain the real value:
+
+```text
+pi_R*(-2)                  = -0.8307030938383884
+pi_D*(alpha-1)             =  0.1697848486094036
+pi_L*(alpha-2)             = -0.12218676473513297
+sum                        = -0.7831050099641175
+```
+
+The standard Markov-additive first-passage route remains mathematically
+available, but it needs a sharper concentration/renewal estimate, a better
+Lyapunov weight, or a different predeclared block inequality.  The current
+Azuma closure does not license writing “the live mass vanishes”.
 
 The proof therefore closes the tree bookkeeping and first-entry geometry, but
-Lemma B remains open precisely at this quantitative first-passage estimate,
+Lemma B is stopped at this quantitative closure gate,
 plus the finite base-segment verification in Lemma C and the explicit all-`y`
 bounds in §5.  It does not assume a future value is known and does not replace
 the advanced shift by `-2`.
@@ -337,8 +370,8 @@ The next paper checks are predeclared:
 1. publish the 243-state base-segment table and verify Lemma C;
 2. write the exact first-passage partition and no-double-charge invariant;
 3. prove the all-y sterile-ray and boundary counting bounds;
-4. prove the bounded-lag first-passage estimate using the audited negative
-   `mu` (and an explicit finite-state concentration/mixing bound), then
+4. replace or sharpen the failed Azuma closure by a predeclared finite-state
+   concentration/Lyapunov inequality whose constants beat `R_max`, then
    instantiate Lemma B with an explicit eta<1;
 5. only then budget an M0 Lean renewal kernel.
 ```
@@ -353,9 +386,9 @@ renewal conversion is proved.
 ```text
 PAGE_STATUS = PAPER_OBLIGATION_OPEN
 LEMMA_A = PAPER_ROUTE_ACCEPTED
-LEMMA_B = PROOF_ATTEMPT_OPEN_PENDING_BASE_AND_Q_CHECKS
+LEMMA_B = STOPPED_AT_AZUMA_CLOSURE_GATE
 LEMMA_C = FINITE_VERIFICATION_PENDING
-NEXT_GATE = COMPLETE_LEMMA_B_ON_PAPER
+NEXT_GATE = DESIGN_PREDECLARED_SHARPER_CLOSURE_OR_STOP_F3
 NO_FORMAL_RHO_CERTIFICATE
 NO_DENSITY_THEOREM
 NO_ALMOST_ALL
