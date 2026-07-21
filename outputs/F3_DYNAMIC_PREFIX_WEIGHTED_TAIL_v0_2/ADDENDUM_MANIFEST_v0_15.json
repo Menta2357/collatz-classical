@@ -1,0 +1,50 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.15",
+  "date": "2026-07-22",
+  "status": [
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "SPLIT_EDGE_HOLDOUT_PASS",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_REPORT.md",
+      "sha256": "d3fa77d805bf977e2d2e513f30832b567e2543672ed7f79d5e6dfa45d4479b5a"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/summary.json",
+      "sha256": "9e8f435462bec1dc184bd87a82b832d09104c31fbd7240528a6bc54b6cf5f0c3"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/split_state_counts.csv",
+      "sha256": "d75da2ab37e67069e108d44e5608c25288df398e819bf2423880bd9fccae7059"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/split_mismatches.csv",
+      "sha256": "b3eaed574bc528d5ba30594a40ac0b720c97719c8e829b8ccbc321dbe4841c4d"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/manifest_sha256.csv",
+      "sha256": "1c1faa14e4cef762f28e53239c5d1d6db0aeeb6d8491d94a712c469c96f7f763"
+    }
+  ],
+  "local_verdict": "CANDIDATE_CERTIFICATE_EMPIRICAL",
+  "holdout_consumed": true,
+  "holdout_range": [
+    41473,
+    82945
+  ],
+  "q_boundary_core_row_fraction": 0.015625,
+  "q_boundary_acceptance_budget": 0.029582817727073607,
+  "split_mismatch_count": 0,
+  "weighted_ratio_lhs_over_rhs": 1.0296185828555777,
+  "non_claims": {
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
