@@ -140,15 +140,17 @@ family of paths whose partial sums start outside `I` and enter `I` for the
 first time at their final vertex.  Then, for every starting coordinate `y`,
 
 ```text
-sum_{p in P_I(y)} W(p) * rho_star^(H(p))
-    >= C_I * (1+delta)^m_y * rho_star^(y-y_base) ,                (B.1)
+sum_{p in P_I(y)} W(p) * (1+delta)^|p| * rho_star^(H(p))
+    >= C_I * rho_star^(y-y_base) ,                               (B.1)
 ```
 
 after summing over the finitely many first-entry states, where `C_I>0` is a
-base mass independent of `y`, `m_y` is the number of certified row
-compositions on the path, and all omitted terms are the explicitly accumulated
-`Q` and `Q_boundary` charges.  In particular, if their normalized total is at
-most `eta<1`, then
+base mass independent of `y`, `|p|` is the number of certified live-row
+compositions on that stopped path, and all omitted terms are the explicitly
+accumulated `Q` and `Q_boundary` charges.  Equivalently, if one has a
+predeclared lower bound `|p| >= m_y` on the selected stopped family, its
+contribution is at least `C_I*(1+delta)^m_y*rho_star^(y-y_base)`.  If the
+normalized remainder is at most `eta<1`, then
 
 ```text
 V_y >= (1-eta) * C_I * rho_star^(y-y_base).                       (B.2)
@@ -156,42 +158,95 @@ V_y >= (1-eta) * C_I * rho_star^(y-y_base).                       (B.2)
 
 **Proof attempt.**
 
-1. For a path with partial sums `u_j = y + h_1+...+h_j`, stop at the first
-   `j` for which `u_j in I`.  Since `|h_R|=2`, `0<h_A<1`, and `L>2`, a path
-   crossing into `I` cannot jump over the whole interval: if it comes from
-   below, the positive overshoot is less than one; if it comes from above, the
-   downward overshoot is at most two.  Hence the stopped endpoint is in `I`.
+1. Work on the tree of population paths, not on a power of `M_split`.  For a
+   path `P` of length `j`, define its ledger atom
 
-2. Apply Lemma A to all stopped paths with the same first-entry state.  The
-   sibling-fibre disjointness makes the sum legitimate even though the paths
-   have different lengths and different numbers of advanced steps.  The
-   product of scale factors along a path is `rho_star^(H(p))`.
+   ```text
+   A(P) = (1+delta)^j * m_P * rho_star^(H(P)) * w_(endpoint(P)),
+   ```
 
-3. Apply (2.1) at each non-stopped row before stopping.  A composition of `m`
-   certified rows contributes at least `(1+delta)^m` in the weighted endpoint
-   functional.  This factor is never obtained by an upward induction in `y`;
-   it comes from the product along the stopped path.
+   where `m_P` is its exact split multiplicity.  At depth `n`, partition the
+   atoms into `Alive_n` (no first entry into `I` yet) and `Stopped_{<=n}` (the
+   first-entry time is at most `n`).  A stopped atom is frozen and is never
+   expanded again.
 
-4. Partition the stopped paths by their first-entry state and by the integer
-   number of retarded steps.  The net displacement is
-   `H(p) = -2 r + (alpha-1) a`.  The irrationality of `alpha` prevents two
-   distinct `(r,a)` pairs from producing the same displacement, so this is a
-   disjoint renewal decomposition rather than a cancellation identity.
+2. The induction invariant is the tree statement
 
-5. The base interval has finite width and the core graph is irreducible.  A
+   ```text
+   sum_{P in Alive_n union Stopped_{<=n}} A(P)
+       >= the initial core atom.                                  (B.3)
+   ```
+
+   To pass from `n` to `n+1`, apply (2.1) separately to each *alive* endpoint
+   state and expand only that atom.  The factor `(1+delta)` is paid by the
+   live row; stopped atoms are carried unchanged.  This proves (B.3) by
+   induction without ever asserting that a future value of `B_s(y+h_A)` is
+   already known.
+
+3. For a path with partial sums `u_j = y+h_1+...+h_j`, stop at the first `j`
+   for which `u_j in I`.  Since `|h_R|=2`, `0<h_A<1`, and `L>2`, a crossing
+   cannot jump over the whole base interval: the upward overshoot is less than
+   one and the downward overshoot is at most two.  Hence every first-entry
+   endpoint is genuinely in `I`.
+
+4. Apply Lemma A to the stopped tree, indexed by complete paths from the root.
+   Two paths with the same prefix share the population only up to their first
+   differing edge; after that edge their fine sibling fibres are disjoint.
+   Thus the sum over stopped paths is a sum of disjoint population fibres, not
+   a sum over matrix powers with hidden collisions.  The path scale is exactly
+   `rho_star^(H(P))`.
+
+5. The certified factor is now attached only to live rows.  A stopped path
+   with `j` live compositions has the explicit factor `(1+delta)^j`; there is
+   no claim that all paths have the same `j`.  Grouping by first-entry state
+   and by `(r,a)`, where `H(P)=-2r+(alpha-1)a`, gives the renewal classes.  The
+   irrationality of `alpha` makes distinct pairs have distinct net shifts.
+
+6. The base interval has finite width and the core graph is irreducible.  A
    finite connecting path from every core state to a positive base state gives
    a strictly positive minimum base mass `C_I`; this is Lemma C.  Summing the
    first-entry classes and factoring the common scale `rho_star^(y-y_base)`
    gives (B.1).
 
-6. The only terms not covered by the product are first omissions.  Charge each
+7. The only terms not covered by the product are first omissions.  Charge each
    to `Q_s` or `Q_boundary,s` at the row where it is first omitted.  Positivity
    and the no-double-charge convention yield the remainder `E_y`.  If
    `E_y <= eta*C_I*rho_star^(y-y_base)`, subtracting it gives (B.2).
 
-The proof is complete modulo the finite base-segment verification in Lemma C
-and the explicit all-`y` bounds in §5.  In particular, it does not assume a
-future value is known and does not replace the advanced shift by `-2`.
+### Quantitative live-mass lemma — the extracted `p0`
+
+For a core source `s`, let `L_s=(w^T M_split)_s` and let `R_s` be the
+retarded-edge contribution to `L_s`.  The frozen matrix gives the exact finite
+diagnostic
+
+```text
+p0 = min_s R_s/L_s
+   = 0.19485689248944574,
+argmin source_id = 6, target_id = 26.
+```
+
+The computation is reproduced by
+`scripts/f3_retarded_channel_p0_audit.py` and its output
+`results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/retarded_channel_p0_audit.json`,
+both tied to the frozen vector hash above.  Therefore every live row sends at
+least a `p0` share of its *weighted one-step expansion* through a descending
+retarded edge.  This is the required finite matrix input to a quantitative
+stopping estimate.
+
+The implication `p0>0 => all live mass is geometrically exhausted` is **not**
+asserted here: positive advanced shifts can keep a path above the base.  The
+remaining paper obligation is the bounded-lag first-passage estimate that
+combines this `p0` share with the two-step downward jump, the `0<h_A<1`
+upward jump, and the frozen row weights to produce an explicit `n=O(y-y_base)`
+cutoff and a remainder `E_y`.  Any proof of that estimate must cite (B.3), the
+finite `p0` audit, or a stated rational drift/renewal inequality; “the live
+paths die out” by itself is not accepted.
+
+The proof therefore closes the tree bookkeeping and first-entry geometry, but
+Lemma B remains open precisely at this quantitative first-passage estimate,
+plus the finite base-segment verification in Lemma C and the explicit all-`y`
+bounds in §5.  It does not assume a future value is known and does not replace
+the advanced shift by `-2`.
 
 ### Lemma C — positive base mass
 
@@ -237,7 +292,9 @@ The next paper checks are predeclared:
 1. publish the 243-state base-segment table and verify Lemma C;
 2. write the exact first-passage partition and no-double-charge invariant;
 3. prove the all-y sterile-ray and boundary counting bounds;
-4. instantiate Lemma B with an explicit eta<1;
+4. prove the bounded-lag first-passage estimate using the audited `p0` (or
+   document a stronger rational drift inequality) and instantiate Lemma B with
+   an explicit eta<1;
 5. only then budget an M0 Lean renewal kernel.
 ```
 
@@ -260,4 +317,3 @@ NO_ALMOST_ALL
 NO_GLOBAL_COLLATZ_CLAIM
 NO_LEAN_OPERATOR
 ```
-
