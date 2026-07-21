@@ -1,0 +1,64 @@
+{
+  "aggregate_setup": {
+    "elapsed_seconds": 0.0,
+    "peak_single_process_rss_mib": null,
+    "stub_shard_count": 81,
+    "workers": 3
+  },
+  "architecture": {
+    "auxiliary_count": 19683,
+    "auxiliary_groups_per_shard": 243,
+    "data_chunk_size": 27,
+    "monolithic_59049_match_generated": false,
+    "principal_count": 59049,
+    "principal_rows_per_shard": 729,
+    "shard_count": 81
+  },
+  "budget_doc": "docs/KL2003_K11_PREFLIGHT_BUDGET_AND_ARCHITECTURE_GATE_v1.md",
+  "budget_doc_sha256": "40e68f199dd9b21395b5ddef88c25d5fe32facc039c0228d7339e8daaf9901b5",
+  "free_disk_gib_at_start": 29.82,
+  "generated_source_sha256": {
+    "Data.lean": "a0701323d0275ded2a81ea364c82ee08767614caf7dd7d49e285ad165d0df2c7"
+  },
+  "generated_temporary_olean_bytes": 0,
+  "generated_temporary_source_bytes": 7808575,
+  "git_head": "e8022f02ad49a436ff46989645b00086febe4332",
+  "global_collatz_claimed": false,
+  "k11_theorem_claimed": false,
+  "measurements": [
+    {
+      "elapsed_seconds": 450.339782,
+      "exit_code": 124,
+      "olean_bytes": 0,
+      "peak_rss_mib": null,
+      "probe_id": "K11_CHUNKED_DATA_PROBE",
+      "source_bytes": 7808575,
+      "status": "ARCHITECTURE_FAIL",
+      "stdout_tail": ""
+    },
+    {
+      "elapsed_seconds": 31.590608,
+      "exit_code": 0,
+      "olean_bytes": 9438224,
+      "peak_rss_mib": null,
+      "probe_id": "K11_REPRESENTATIVE_SHARD_PROBE",
+      "source_bytes": 461704,
+      "status": "PASS",
+      "stdout_tail": ""
+    },
+    {
+      "elapsed_seconds": 0.0,
+      "exit_code": -2,
+      "olean_bytes": 0,
+      "peak_rss_mib": null,
+      "probe_id": "K11_81_SHARD_AGGREGATE_PROBE",
+      "source_bytes": 0,
+      "status": "BLOCKED_BY_DEPENDENCY",
+      "stdout_tail": "k=11-scale chunked data module did not compile"
+    }
+  ],
+  "real_k11_certificate_generated": false,
+  "synthetic_sources_retained": false,
+  "total_elapsed_seconds": 482.103629,
+  "verdict": "K11_PREFLIGHT_ARCHITECTURE_FAIL"
+}

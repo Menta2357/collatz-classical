@@ -1,0 +1,40 @@
+target,status,elapsed_seconds,exit_code,preexisting,output_tail
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup3,PASS,13.340804,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup3
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup0,PASS,13.390538,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup0
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup2,PASS,13.396711,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup2
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup1,PASS,13.413523,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup1
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup5,PASS,13.651903,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup5
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup4,PASS,13.713268,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup4
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup7,PASS,13.696199,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup7
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup6,PASS,13.718548,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup6
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchGroup8,PASS,3.06523,0,False,"✔ [860/860] Built CollatzClassical.KL2003.KL2003K11CertificateMatchGroup8
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchAggregate,PASS,5.016909,0,False,"✔ [941/941] Built CollatzClassical.KL2003.KL2003K11CertificateMatchAggregate
+Build completed successfully.
+"
+CollatzClassical.KL2003.KL2003K11CertificateMatchAggregateAxiomAudit,PASS,10.2245,0,False,"ℹ [942/942] Built CollatzClassical.KL2003.KL2003K11CertificateMatchAggregateAxiomAudit
+info: CollatzClassical/KL2003/KL2003K11CertificateMatchAggregateAxiomAudit.lean:3:0: 'CollatzClassical.KL2003.K11CertificateMatch.k11_all_rows_valid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: CollatzClassical/KL2003/KL2003K11CertificateMatchAggregateAxiomAudit.lean:4:0: 'CollatzClassical.KL2003.K11CertificateMatch.k11_all_auxiliary_valid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully.
+"

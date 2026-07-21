@@ -1,0 +1,4 @@
+import CollatzClassical.KL2003.KL2003K11CertificateMatchAggregate
+
+#print axioms CollatzClassical.KL2003.K11CertificateMatch.k11_all_rows_valid
+#print axioms CollatzClassical.KL2003.K11CertificateMatch.k11_all_auxiliary_valid

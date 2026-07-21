@@ -4,10 +4,10 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Carril A en espera humana + KL2003 k=9 theorem complete
+FASE ACTUAL:          Carril A en espera humana + KL2003 k=11 theorem complete
 
 HILO A (CC Challenge): ELIAHOU1993_HUMAN_DECISION_HOLD   UPSTREAM_RESPONSE_PENDING
-HILO B (Krasikov M1):  K9_PISTAR_ARBITRARY_X_THEOREM_PROVED   CUSTODIED_PENDING_EXTERNAL_REVIEW
+HILO B (Krasikov M1):  K11_PISTAR_ARBITRARY_X_THEOREM_PROVED   CUSTODIED_PENDING_EXTERNAL_REVIEW
 COORDINACION:          Liu2025 v1 0.946 withdrawn; current v2 0.3227 proof not validated
 CLAUDE:                veredicto coordinado firmado sobre texto completo
 
@@ -21,11 +21,14 @@ REGLA ACTUAL:
   El carril B cerro el resultado tecnico calibrado:
   KL2003 k=2 M1-surrogate over concrete ceil window, ahora con corolario
   para x arbitrario grande. No marcar como M1 completo, no marcar como
-  k=11/0.8418, no cubrir x menor que la raiz en el teorema k=9 y no marcar
+  no cubrir x menor que la raiz en los teoremas k=9/k=11 y no marcar
   como claim global de Collatz. El resultado k=9 usa la base racional exacta
   70461/40000 y prueba gammaK9 > 81/100 y gammaK9 > 49/60.
+  El resultado k=11 usa la base racional exacta 71689/40000 y prueba
+  gammaK11 > 21/25; el theorem esta probado aunque el checker k=11 excede
+  el presupuesto de mantenibilidad original.
 
-LEAN ESCRITO:          KL2003 k=2 + k=3 + k=9 piStar arbitrary-x, build/audit PASS
+LEAN ESCRITO:          KL2003 k=2 + k=3 + k=9 + k=11 piStar arbitrary-x, build/audit PASS
 TARGETS REGISTRADOS:   KrasikovLagarias2003 formalisation id 10, status formalising
 
 ELIAHOU1993:
@@ -53,10 +56,13 @@ KL2003:
   AI_MODELS = Codex (GPT-5-based agents); Claude Fable 5
   HEAD_K2_FINAL = 71add7c
   HEAD_K9 = d1b9478
+  HEAD_K11_LOCAL = pending commit
   THEOREM_K2 = kl2003_k2_m1_surrogate_ceil_window_lower_bound
   THEOREM_K2_FILE = CollatzClassical/KL2003/KL2003M1Surrogate.lean
   THEOREM_K9 = exists_k9_piStar_arbitrary_x_lower_bound
   THEOREM_K9_FILE = CollatzClassical/KL2003/KL2003K9PiStarTheorem.lean
+  THEOREM_K11 = exists_k11_piStar_arbitrary_x_lower_bound
+  THEOREM_K11_FILE = CollatzClassical/KL2003/KL2003K11PiStarTheorem.lean
   FINAL_REVIEW_NOTE = docs/KL2003_M1_SURROGATE_FINAL_REVIEW_AND_PACKAGE_v1.md
   PROJECT_STATUS_NOTE = docs/KL2003_PROJECT_STATUS_AFTER_M1_SURROGATE_COMPLETION_v1.md
   DATA_ONLY_LEAN_BUILD_PASS
@@ -118,6 +124,18 @@ KL2003:
   K9_WORLD_FIRST_PRIORITY_NOT_CLAIMED
   K9_AXIOM_PROFILE_IS_NOT_WHOLE_TCB
   K9_343_SECONDS_IS_TOTAL_BUILD_TIME_NOT_KERNEL_ONLY
+  K11_REAL_CERTIFICATE_METRICS_PASS
+  K11_MATCH_DISPATCH_CERTIFICATE_CHECKED
+  K11_LNT_CERTIFICATE_PROVED
+  K11_REAL_ENDPOINTS_PROVED
+  K11_CLASSROOTS_NONEMPTY_PROVED
+  K11_SOURCEPHIK_LOWER_BOUND_PROVED
+  K11_PISTAR_SOURCE_WINDOW_LOWER_BOUND_PROVED
+  K11_PISTAR_ARBITRARY_X_LOWER_BOUND_PROVED
+  GAMMA_K11_GT_TWENTY_ONE_TWENTY_FIFTHS_PROVED
+  K11_KL2003_084_TABLE_MARK_EXCEEDED
+  K11_RESOURCE_BUDGET_ARCHITECTURE_FAIL
+  K11_MAINTAINABILITY_OPTIMIZATION_STILL_OPEN
   GENERAL_K_SEMANTIC_CHAIN_SCOPED
   GENERAL_K_CHAIN_SPLIT_INTO_FIVE_MODULES
   GENERAL_K_SOURCE_FAITHFUL_FLOOR_WINDOW_POLICY_PROVED

@@ -15,7 +15,7 @@ teoremas que **sí** son demostrables con matemática existente.
 | # | Carril | Documento | Estado |
 |---|--------|-----------|--------|
 | 1 | Entrada como auditores al CC Challenge | `docs/CC_CHALLENGE_AUDIT_ENTRY_PLAN_v1.md` | ACTIVO |
-| 2 | KL2003: k=2 surrogate plus k=3 and k=9 piStar bounds | `docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md` | K9 THEOREM COMPLETE |
+| 2 | KL2003: k=2 surrogate plus k=3/k=9/k=11 piStar bounds | `docs/KL2003_AUDIT_READY_FIDELITY_PACKAGE_v1.md` | K11 THEOREM COMPLETE |
 | 3 | Auditoria bibliografica Liu 2025, arXiv:2512.13760 | `docs/LIU2025_COUNTING_COLLATZ_NUMBERS_SOURCE_AUDIT_v1.md` | SOURCE AUDIT COMPLETE |
 | 4 | Terras 1976 / Everett 1977 / Terras 1979 | (solo colaborar/auditar; no duplicar) | EN ESPERA |
 
@@ -70,6 +70,20 @@ matematico actual, ni como una comparacion literal ya formalizada entre ambos
 contadores, ni como una afirmacion de prioridad mundial. El puente de
 statements y la auditoria bibliografica de prioridad son tareas separadas.
 
+El gate k=11 completa la cima de la tabla computada de KL2003. El candidato
+usa `lambda = 71689/40000`, recomprueba 59049 filas y 19683 auxiliares, y la
+cadena general-k cierra:
+
+```lean
+exists_k11_piStar_arbitrary_x_lower_bound
+```
+
+Lean prueba `gammaK11 > 21/25`, es decir, supera la marca `0.84` de la tabla
+KL2003. El theorem esta kernel-clean con el perfil de axiomas esperado, pero
+el checker k=11 excede el presupuesto de mantenibilidad originalmente fijado:
+la cota esta probada, y la arquitectura todavia requiere optimizacion si se
+quiere un paquete de re-verificacion barato.
+
 ## Panorama bibliografico actual
 
 El preprint `arXiv:2512.13760v1`, enviado el `2025-12-15`, reclamo una cota
@@ -79,9 +93,9 @@ encuentra blockers independientes en la demostracion v2 y, por tanto, no
 trata `0.3227` como una cota validada ni el `0.946` retirado como estado del
 arte. Esto no prueba que el teorema v2 sea falso.
 
-Para este proyecto, `gamma_11 = 0.8417560` sigue siendo el extremo de la tabla
-computada de KL2003; no se presenta como una imposibilidad para `k > 11` ni
-como un techo matematico global.
+Para este proyecto, `gamma_11 = 0.8417560` es el extremo formalizado de la
+tabla computada de KL2003; no se presenta como una imposibilidad para `k > 11`
+ni como un techo matematico global.
 
 ## Principios (heredados del programa anterior)
 
@@ -101,9 +115,9 @@ El checklist operativo completo está en
 
 - No afirma progreso hacia la conjetura de Collatz completa.
 - No afirma supermartingalas globales ni productores all-k.
-- No afirma que el resultado KL2003 actual sea el M1 completo, ni un teorema
-  k=11/`0.8418`, ni una cota k=2 para `x` pequeno bajo umbral. Si afirma los
-  teoremas calibrados k=2, k=3 y k=9 descritos arriba.
+- No afirma que el resultado KL2003 actual sea el M1 completo ni una cota k=2
+  para `x` pequeno bajo umbral. Si afirma los teoremas calibrados k=2, k=3,
+  k=9 y k=11 descritos arriba.
 - Los objetivos son formalizaciones de teoremas publicados
   (Krasikov 1989, Applegate–Lagarias 1995, Krasikov–Lagarias 2003)
   y auditorías con crédito explícito a los autores originales.

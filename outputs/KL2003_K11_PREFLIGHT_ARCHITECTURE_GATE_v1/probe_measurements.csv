@@ -1,0 +1,4 @@
+probe_id,status,elapsed_seconds,peak_rss_mib,exit_code,source_bytes,olean_bytes,stdout_tail
+K11_CHUNKED_DATA_PROBE,ARCHITECTURE_FAIL,450.339782,,124,7808575,0,
+K11_REPRESENTATIVE_SHARD_PROBE,PASS,31.590608,,0,461704,9438224,
+K11_81_SHARD_AGGREGATE_PROBE,BLOCKED_BY_DEPENDENCY,0.0,,-2,0,0,k=11-scale chunked data module did not compile
