@@ -1,0 +1,43 @@
+{
+  "table": "F3_UNIFORM_Q_BOUNDS_v1",
+  "fine_period": 2916,
+  "y0": 8,
+  "sterile_formula": "count(y)=floor(log2(3*2^(y-1)))+1=y+1",
+  "sterile_monotonicity_check": "((y+2)/(y+1))/rho_star < 1 for y>=8",
+  "sterile_normalized_max_y8": {
+    "y": 8,
+    "exact_count": 9,
+    "normalized_count": 0.08166998364405036,
+    "exact_formula_holds": true
+  },
+  "sterile_all_formula_checks_pass": true,
+  "boundary_formula": "three fine residue counts differ by at most one; remainder <= 2 per core state",
+  "boundary_max_roots_per_state": 2,
+  "boundary_checks": [
+    {
+      "interval": [
+        3,
+        10369
+      ],
+      "max_boundary_roots_per_state": 1,
+      "bound_pass": true
+    },
+    {
+      "interval": [
+        41473,
+        82945
+      ],
+      "max_boundary_roots_per_state": 2,
+      "bound_pass": true
+    }
+  ],
+  "boundary_all_pass": true,
+  "uniform_counting_verdict": "PASS_UNIFORM_COUNTING_LEMMAS",
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "status": "FINITE_ARITHMETIC_COUNTING_AUDIT",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}
