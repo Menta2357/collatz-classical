@@ -1,0 +1,892 @@
+source_id,source,channel,child_mod3,target_id,target,weight_decimal,weight_formula,memberwise_precedent
+0,d5:r0:podd:b0,retarded,,2,d5:r0:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+1,d5:r0:peven:b1,retarded,,2,d5:r0:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+2,d5:r0:peven:b2,retarded,,2,d5:r0:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+3,d5:r1:podd:b0,retarded,,14,d5:r4:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+4,d5:r1:peven:b1,retarded,,14,d5:r4:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+5,d5:r1:peven:b2,retarded,,14,d5:r4:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+6,d5:r2:podd:b0,retarded,,26,d5:r8:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+6,d5:r2:podd:b0,advanced_parity_lift_c1,1,7,d5:r2:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+7,d5:r2:peven:b1,retarded,,26,d5:r8:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+7,d5:r2:peven:b1,advanced_parity_lift_c1,1,7,d5:r2:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+8,d5:r2:peven:b2,retarded,,26,d5:r8:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+8,d5:r2:peven:b2,advanced_parity_lift_c1,1,7,d5:r2:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+9,d5:r3:podd:b0,retarded,,38,d5:r12:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+10,d5:r3:peven:b1,retarded,,38,d5:r12:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+11,d5:r3:peven:b2,retarded,,38,d5:r12:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+12,d5:r4:podd:b0,retarded,,50,d5:r16:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+13,d5:r4:peven:b1,retarded,,50,d5:r16:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+14,d5:r4:peven:b2,retarded,,50,d5:r16:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+15,d5:r5:podd:b0,retarded,,62,d5:r20:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+16,d5:r5:peven:b1,retarded,,62,d5:r20:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+17,d5:r5:peven:b2,retarded,,62,d5:r20:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+18,d5:r6:podd:b0,retarded,,74,d5:r24:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+19,d5:r6:peven:b1,retarded,,74,d5:r24:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+20,d5:r6:peven:b2,retarded,,74,d5:r24:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+21,d5:r7:podd:b0,retarded,,86,d5:r28:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+22,d5:r7:peven:b1,retarded,,86,d5:r28:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+23,d5:r7:peven:b2,retarded,,86,d5:r28:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+24,d5:r8:podd:b0,retarded,,98,d5:r32:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+24,d5:r8:podd:b0,advanced_direct_c2,2,15,d5:r5:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+25,d5:r8:peven:b1,retarded,,98,d5:r32:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+25,d5:r8:peven:b1,advanced_direct_c2,2,15,d5:r5:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+26,d5:r8:peven:b2,retarded,,98,d5:r32:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+26,d5:r8:peven:b2,advanced_direct_c2,2,15,d5:r5:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+27,d5:r9:podd:b0,retarded,,110,d5:r36:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+28,d5:r9:peven:b1,retarded,,110,d5:r36:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+29,d5:r9:peven:b2,retarded,,110,d5:r36:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+30,d5:r10:podd:b0,retarded,,122,d5:r40:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+31,d5:r10:peven:b1,retarded,,122,d5:r40:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+32,d5:r10:peven:b2,retarded,,122,d5:r40:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+33,d5:r11:podd:b0,retarded,,134,d5:r44:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+33,d5:r11:podd:b0,advanced_parity_lift_c1,1,43,d5:r14:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+34,d5:r11:peven:b1,retarded,,134,d5:r44:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+34,d5:r11:peven:b1,advanced_parity_lift_c1,1,43,d5:r14:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+35,d5:r11:peven:b2,retarded,,134,d5:r44:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+35,d5:r11:peven:b2,advanced_parity_lift_c1,1,43,d5:r14:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+36,d5:r12:podd:b0,retarded,,146,d5:r48:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+37,d5:r12:peven:b1,retarded,,146,d5:r48:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+38,d5:r12:peven:b2,retarded,,146,d5:r48:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+39,d5:r13:podd:b0,retarded,,158,d5:r52:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+40,d5:r13:peven:b1,retarded,,158,d5:r52:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+41,d5:r13:peven:b2,retarded,,158,d5:r52:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+42,d5:r14:podd:b0,retarded,,170,d5:r56:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+43,d5:r14:peven:b1,retarded,,170,d5:r56:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+44,d5:r14:peven:b2,retarded,,170,d5:r56:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+45,d5:r15:podd:b0,retarded,,182,d5:r60:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+46,d5:r15:peven:b1,retarded,,182,d5:r60:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+47,d5:r15:peven:b2,retarded,,182,d5:r60:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+48,d5:r16:podd:b0,retarded,,194,d5:r64:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+49,d5:r16:peven:b1,retarded,,194,d5:r64:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+50,d5:r16:peven:b2,retarded,,194,d5:r64:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+51,d5:r17:podd:b0,retarded,,206,d5:r68:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+51,d5:r17:podd:b0,advanced_direct_c2,2,33,d5:r11:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+52,d5:r17:peven:b1,retarded,,206,d5:r68:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+52,d5:r17:peven:b1,advanced_direct_c2,2,33,d5:r11:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+53,d5:r17:peven:b2,retarded,,206,d5:r68:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+53,d5:r17:peven:b2,advanced_direct_c2,2,33,d5:r11:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+54,d5:r18:podd:b0,retarded,,218,d5:r72:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+55,d5:r18:peven:b1,retarded,,218,d5:r72:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+56,d5:r18:peven:b2,retarded,,218,d5:r72:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+57,d5:r19:podd:b0,retarded,,230,d5:r76:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+58,d5:r19:peven:b1,retarded,,230,d5:r76:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+59,d5:r19:peven:b2,retarded,,230,d5:r76:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+60,d5:r20:podd:b0,retarded,,242,d5:r80:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+60,d5:r20:podd:b0,advanced_parity_lift_c1,1,79,d5:r26:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+61,d5:r20:peven:b1,retarded,,242,d5:r80:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+61,d5:r20:peven:b1,advanced_parity_lift_c1,1,79,d5:r26:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+62,d5:r20:peven:b2,retarded,,242,d5:r80:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+62,d5:r20:peven:b2,advanced_parity_lift_c1,1,79,d5:r26:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+63,d5:r21:podd:b0,retarded,,254,d5:r84:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+64,d5:r21:peven:b1,retarded,,254,d5:r84:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+65,d5:r21:peven:b2,retarded,,254,d5:r84:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+66,d5:r22:podd:b0,retarded,,266,d5:r88:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+67,d5:r22:peven:b1,retarded,,266,d5:r88:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+68,d5:r22:peven:b2,retarded,,266,d5:r88:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+69,d5:r23:podd:b0,retarded,,278,d5:r92:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+70,d5:r23:peven:b1,retarded,,278,d5:r92:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+71,d5:r23:peven:b2,retarded,,278,d5:r92:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+72,d5:r24:podd:b0,retarded,,290,d5:r96:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+73,d5:r24:peven:b1,retarded,,290,d5:r96:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+74,d5:r24:peven:b2,retarded,,290,d5:r96:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+75,d5:r25:podd:b0,retarded,,302,d5:r100:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+76,d5:r25:peven:b1,retarded,,302,d5:r100:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+77,d5:r25:peven:b2,retarded,,302,d5:r100:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+78,d5:r26:podd:b0,retarded,,314,d5:r104:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+78,d5:r26:podd:b0,advanced_direct_c2,2,51,d5:r17:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+79,d5:r26:peven:b1,retarded,,314,d5:r104:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+79,d5:r26:peven:b1,advanced_direct_c2,2,51,d5:r17:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+80,d5:r26:peven:b2,retarded,,314,d5:r104:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+80,d5:r26:peven:b2,advanced_direct_c2,2,51,d5:r17:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+81,d5:r27:podd:b0,retarded,,326,d5:r108:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+82,d5:r27:peven:b1,retarded,,326,d5:r108:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+83,d5:r27:peven:b2,retarded,,326,d5:r108:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+84,d5:r28:podd:b0,retarded,,338,d5:r112:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+85,d5:r28:peven:b1,retarded,,338,d5:r112:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+86,d5:r28:peven:b2,retarded,,338,d5:r112:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+87,d5:r29:podd:b0,retarded,,350,d5:r116:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+87,d5:r29:podd:b0,advanced_parity_lift_c1,1,115,d5:r38:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+88,d5:r29:peven:b1,retarded,,350,d5:r116:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+88,d5:r29:peven:b1,advanced_parity_lift_c1,1,115,d5:r38:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+89,d5:r29:peven:b2,retarded,,350,d5:r116:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+89,d5:r29:peven:b2,advanced_parity_lift_c1,1,115,d5:r38:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+90,d5:r30:podd:b0,retarded,,362,d5:r120:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+91,d5:r30:peven:b1,retarded,,362,d5:r120:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+92,d5:r30:peven:b2,retarded,,362,d5:r120:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+93,d5:r31:podd:b0,retarded,,374,d5:r124:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+94,d5:r31:peven:b1,retarded,,374,d5:r124:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+95,d5:r31:peven:b2,retarded,,374,d5:r124:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+96,d5:r32:podd:b0,retarded,,386,d5:r128:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+97,d5:r32:peven:b1,retarded,,386,d5:r128:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+98,d5:r32:peven:b2,retarded,,386,d5:r128:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+99,d5:r33:podd:b0,retarded,,398,d5:r132:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+100,d5:r33:peven:b1,retarded,,398,d5:r132:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+101,d5:r33:peven:b2,retarded,,398,d5:r132:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+102,d5:r34:podd:b0,retarded,,410,d5:r136:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+103,d5:r34:peven:b1,retarded,,410,d5:r136:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+104,d5:r34:peven:b2,retarded,,410,d5:r136:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+105,d5:r35:podd:b0,retarded,,422,d5:r140:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+105,d5:r35:podd:b0,advanced_direct_c2,2,69,d5:r23:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+106,d5:r35:peven:b1,retarded,,422,d5:r140:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+106,d5:r35:peven:b1,advanced_direct_c2,2,69,d5:r23:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+107,d5:r35:peven:b2,retarded,,422,d5:r140:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+107,d5:r35:peven:b2,advanced_direct_c2,2,69,d5:r23:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+108,d5:r36:podd:b0,retarded,,434,d5:r144:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+109,d5:r36:peven:b1,retarded,,434,d5:r144:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+110,d5:r36:peven:b2,retarded,,434,d5:r144:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+111,d5:r37:podd:b0,retarded,,446,d5:r148:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+112,d5:r37:peven:b1,retarded,,446,d5:r148:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+113,d5:r37:peven:b2,retarded,,446,d5:r148:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+114,d5:r38:podd:b0,retarded,,458,d5:r152:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+114,d5:r38:podd:b0,advanced_parity_lift_c1,1,151,d5:r50:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+115,d5:r38:peven:b1,retarded,,458,d5:r152:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+115,d5:r38:peven:b1,advanced_parity_lift_c1,1,151,d5:r50:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+116,d5:r38:peven:b2,retarded,,458,d5:r152:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+116,d5:r38:peven:b2,advanced_parity_lift_c1,1,151,d5:r50:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+117,d5:r39:podd:b0,retarded,,470,d5:r156:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+118,d5:r39:peven:b1,retarded,,470,d5:r156:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+119,d5:r39:peven:b2,retarded,,470,d5:r156:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+120,d5:r40:podd:b0,retarded,,482,d5:r160:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+121,d5:r40:peven:b1,retarded,,482,d5:r160:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+122,d5:r40:peven:b2,retarded,,482,d5:r160:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+123,d5:r41:podd:b0,retarded,,494,d5:r164:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+124,d5:r41:peven:b1,retarded,,494,d5:r164:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+125,d5:r41:peven:b2,retarded,,494,d5:r164:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+126,d5:r42:podd:b0,retarded,,506,d5:r168:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+127,d5:r42:peven:b1,retarded,,506,d5:r168:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+128,d5:r42:peven:b2,retarded,,506,d5:r168:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+129,d5:r43:podd:b0,retarded,,518,d5:r172:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+130,d5:r43:peven:b1,retarded,,518,d5:r172:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+131,d5:r43:peven:b2,retarded,,518,d5:r172:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+132,d5:r44:podd:b0,retarded,,530,d5:r176:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+132,d5:r44:podd:b0,advanced_direct_c2,2,87,d5:r29:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+133,d5:r44:peven:b1,retarded,,530,d5:r176:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+133,d5:r44:peven:b1,advanced_direct_c2,2,87,d5:r29:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+134,d5:r44:peven:b2,retarded,,530,d5:r176:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+134,d5:r44:peven:b2,advanced_direct_c2,2,87,d5:r29:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+135,d5:r45:podd:b0,retarded,,542,d5:r180:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+136,d5:r45:peven:b1,retarded,,542,d5:r180:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+137,d5:r45:peven:b2,retarded,,542,d5:r180:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+138,d5:r46:podd:b0,retarded,,554,d5:r184:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+139,d5:r46:peven:b1,retarded,,554,d5:r184:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+140,d5:r46:peven:b2,retarded,,554,d5:r184:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+141,d5:r47:podd:b0,retarded,,566,d5:r188:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+141,d5:r47:podd:b0,advanced_parity_lift_c1,1,187,d5:r62:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+142,d5:r47:peven:b1,retarded,,566,d5:r188:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+142,d5:r47:peven:b1,advanced_parity_lift_c1,1,187,d5:r62:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+143,d5:r47:peven:b2,retarded,,566,d5:r188:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+143,d5:r47:peven:b2,advanced_parity_lift_c1,1,187,d5:r62:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+144,d5:r48:podd:b0,retarded,,578,d5:r192:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+145,d5:r48:peven:b1,retarded,,578,d5:r192:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+146,d5:r48:peven:b2,retarded,,578,d5:r192:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+147,d5:r49:podd:b0,retarded,,590,d5:r196:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+148,d5:r49:peven:b1,retarded,,590,d5:r196:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+149,d5:r49:peven:b2,retarded,,590,d5:r196:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+150,d5:r50:podd:b0,retarded,,602,d5:r200:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+151,d5:r50:peven:b1,retarded,,602,d5:r200:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+152,d5:r50:peven:b2,retarded,,602,d5:r200:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+153,d5:r51:podd:b0,retarded,,614,d5:r204:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+154,d5:r51:peven:b1,retarded,,614,d5:r204:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+155,d5:r51:peven:b2,retarded,,614,d5:r204:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+156,d5:r52:podd:b0,retarded,,626,d5:r208:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+157,d5:r52:peven:b1,retarded,,626,d5:r208:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+158,d5:r52:peven:b2,retarded,,626,d5:r208:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+159,d5:r53:podd:b0,retarded,,638,d5:r212:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+159,d5:r53:podd:b0,advanced_direct_c2,2,105,d5:r35:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+160,d5:r53:peven:b1,retarded,,638,d5:r212:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+160,d5:r53:peven:b1,advanced_direct_c2,2,105,d5:r35:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+161,d5:r53:peven:b2,retarded,,638,d5:r212:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+161,d5:r53:peven:b2,advanced_direct_c2,2,105,d5:r35:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+162,d5:r54:podd:b0,retarded,,650,d5:r216:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+163,d5:r54:peven:b1,retarded,,650,d5:r216:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+164,d5:r54:peven:b2,retarded,,650,d5:r216:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+165,d5:r55:podd:b0,retarded,,662,d5:r220:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+166,d5:r55:peven:b1,retarded,,662,d5:r220:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+167,d5:r55:peven:b2,retarded,,662,d5:r220:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+168,d5:r56:podd:b0,retarded,,674,d5:r224:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+168,d5:r56:podd:b0,advanced_parity_lift_c1,1,223,d5:r74:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+169,d5:r56:peven:b1,retarded,,674,d5:r224:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+169,d5:r56:peven:b1,advanced_parity_lift_c1,1,223,d5:r74:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+170,d5:r56:peven:b2,retarded,,674,d5:r224:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+170,d5:r56:peven:b2,advanced_parity_lift_c1,1,223,d5:r74:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+171,d5:r57:podd:b0,retarded,,686,d5:r228:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+172,d5:r57:peven:b1,retarded,,686,d5:r228:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+173,d5:r57:peven:b2,retarded,,686,d5:r228:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+174,d5:r58:podd:b0,retarded,,698,d5:r232:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+175,d5:r58:peven:b1,retarded,,698,d5:r232:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+176,d5:r58:peven:b2,retarded,,698,d5:r232:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+177,d5:r59:podd:b0,retarded,,710,d5:r236:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+178,d5:r59:peven:b1,retarded,,710,d5:r236:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+179,d5:r59:peven:b2,retarded,,710,d5:r236:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+180,d5:r60:podd:b0,retarded,,722,d5:r240:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+181,d5:r60:peven:b1,retarded,,722,d5:r240:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+182,d5:r60:peven:b2,retarded,,722,d5:r240:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+183,d5:r61:podd:b0,retarded,,5,d5:r1:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+184,d5:r61:peven:b1,retarded,,5,d5:r1:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+185,d5:r61:peven:b2,retarded,,5,d5:r1:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+186,d5:r62:podd:b0,retarded,,17,d5:r5:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+186,d5:r62:podd:b0,advanced_direct_c2,2,123,d5:r41:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+187,d5:r62:peven:b1,retarded,,17,d5:r5:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+187,d5:r62:peven:b1,advanced_direct_c2,2,123,d5:r41:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+188,d5:r62:peven:b2,retarded,,17,d5:r5:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+188,d5:r62:peven:b2,advanced_direct_c2,2,123,d5:r41:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+189,d5:r63:podd:b0,retarded,,29,d5:r9:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+190,d5:r63:peven:b1,retarded,,29,d5:r9:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+191,d5:r63:peven:b2,retarded,,29,d5:r9:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+192,d5:r64:podd:b0,retarded,,41,d5:r13:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+193,d5:r64:peven:b1,retarded,,41,d5:r13:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+194,d5:r64:peven:b2,retarded,,41,d5:r13:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+195,d5:r65:podd:b0,retarded,,53,d5:r17:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+195,d5:r65:podd:b0,advanced_parity_lift_c1,1,259,d5:r86:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+196,d5:r65:peven:b1,retarded,,53,d5:r17:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+196,d5:r65:peven:b1,advanced_parity_lift_c1,1,259,d5:r86:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+197,d5:r65:peven:b2,retarded,,53,d5:r17:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+197,d5:r65:peven:b2,advanced_parity_lift_c1,1,259,d5:r86:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+198,d5:r66:podd:b0,retarded,,65,d5:r21:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+199,d5:r66:peven:b1,retarded,,65,d5:r21:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+200,d5:r66:peven:b2,retarded,,65,d5:r21:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+201,d5:r67:podd:b0,retarded,,77,d5:r25:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+202,d5:r67:peven:b1,retarded,,77,d5:r25:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+203,d5:r67:peven:b2,retarded,,77,d5:r25:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+204,d5:r68:podd:b0,retarded,,89,d5:r29:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+205,d5:r68:peven:b1,retarded,,89,d5:r29:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+206,d5:r68:peven:b2,retarded,,89,d5:r29:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+207,d5:r69:podd:b0,retarded,,101,d5:r33:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+208,d5:r69:peven:b1,retarded,,101,d5:r33:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+209,d5:r69:peven:b2,retarded,,101,d5:r33:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+210,d5:r70:podd:b0,retarded,,113,d5:r37:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+211,d5:r70:peven:b1,retarded,,113,d5:r37:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+212,d5:r70:peven:b2,retarded,,113,d5:r37:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+213,d5:r71:podd:b0,retarded,,125,d5:r41:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+213,d5:r71:podd:b0,advanced_direct_c2,2,141,d5:r47:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+214,d5:r71:peven:b1,retarded,,125,d5:r41:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+214,d5:r71:peven:b1,advanced_direct_c2,2,141,d5:r47:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+215,d5:r71:peven:b2,retarded,,125,d5:r41:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+215,d5:r71:peven:b2,advanced_direct_c2,2,141,d5:r47:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+216,d5:r72:podd:b0,retarded,,137,d5:r45:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+217,d5:r72:peven:b1,retarded,,137,d5:r45:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+218,d5:r72:peven:b2,retarded,,137,d5:r45:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+219,d5:r73:podd:b0,retarded,,149,d5:r49:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+220,d5:r73:peven:b1,retarded,,149,d5:r49:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+221,d5:r73:peven:b2,retarded,,149,d5:r49:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+222,d5:r74:podd:b0,retarded,,161,d5:r53:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+222,d5:r74:podd:b0,advanced_parity_lift_c1,1,295,d5:r98:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+223,d5:r74:peven:b1,retarded,,161,d5:r53:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+223,d5:r74:peven:b1,advanced_parity_lift_c1,1,295,d5:r98:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+224,d5:r74:peven:b2,retarded,,161,d5:r53:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+224,d5:r74:peven:b2,advanced_parity_lift_c1,1,295,d5:r98:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+225,d5:r75:podd:b0,retarded,,173,d5:r57:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+226,d5:r75:peven:b1,retarded,,173,d5:r57:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+227,d5:r75:peven:b2,retarded,,173,d5:r57:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+228,d5:r76:podd:b0,retarded,,185,d5:r61:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+229,d5:r76:peven:b1,retarded,,185,d5:r61:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+230,d5:r76:peven:b2,retarded,,185,d5:r61:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+231,d5:r77:podd:b0,retarded,,197,d5:r65:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+232,d5:r77:peven:b1,retarded,,197,d5:r65:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+233,d5:r77:peven:b2,retarded,,197,d5:r65:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+234,d5:r78:podd:b0,retarded,,209,d5:r69:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+235,d5:r78:peven:b1,retarded,,209,d5:r69:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+236,d5:r78:peven:b2,retarded,,209,d5:r69:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+237,d5:r79:podd:b0,retarded,,221,d5:r73:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+238,d5:r79:peven:b1,retarded,,221,d5:r73:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+239,d5:r79:peven:b2,retarded,,221,d5:r73:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+240,d5:r80:podd:b0,retarded,,233,d5:r77:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+240,d5:r80:podd:b0,advanced_direct_c2,2,159,d5:r53:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+241,d5:r80:peven:b1,retarded,,233,d5:r77:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+241,d5:r80:peven:b1,advanced_direct_c2,2,159,d5:r53:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+242,d5:r80:peven:b2,retarded,,233,d5:r77:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+242,d5:r80:peven:b2,advanced_direct_c2,2,159,d5:r53:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+243,d5:r81:podd:b0,retarded,,245,d5:r81:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+244,d5:r81:peven:b1,retarded,,245,d5:r81:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+245,d5:r81:peven:b2,retarded,,245,d5:r81:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+246,d5:r82:podd:b0,retarded,,257,d5:r85:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+247,d5:r82:peven:b1,retarded,,257,d5:r85:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+248,d5:r82:peven:b2,retarded,,257,d5:r85:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+249,d5:r83:podd:b0,retarded,,269,d5:r89:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+249,d5:r83:podd:b0,advanced_parity_lift_c1,1,331,d5:r110:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+250,d5:r83:peven:b1,retarded,,269,d5:r89:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+250,d5:r83:peven:b1,advanced_parity_lift_c1,1,331,d5:r110:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+251,d5:r83:peven:b2,retarded,,269,d5:r89:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+251,d5:r83:peven:b2,advanced_parity_lift_c1,1,331,d5:r110:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+252,d5:r84:podd:b0,retarded,,281,d5:r93:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+253,d5:r84:peven:b1,retarded,,281,d5:r93:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+254,d5:r84:peven:b2,retarded,,281,d5:r93:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+255,d5:r85:podd:b0,retarded,,293,d5:r97:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+256,d5:r85:peven:b1,retarded,,293,d5:r97:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+257,d5:r85:peven:b2,retarded,,293,d5:r97:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+258,d5:r86:podd:b0,retarded,,305,d5:r101:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+259,d5:r86:peven:b1,retarded,,305,d5:r101:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+260,d5:r86:peven:b2,retarded,,305,d5:r101:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+261,d5:r87:podd:b0,retarded,,317,d5:r105:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+262,d5:r87:peven:b1,retarded,,317,d5:r105:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+263,d5:r87:peven:b2,retarded,,317,d5:r105:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+264,d5:r88:podd:b0,retarded,,329,d5:r109:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+265,d5:r88:peven:b1,retarded,,329,d5:r109:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+266,d5:r88:peven:b2,retarded,,329,d5:r109:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+267,d5:r89:podd:b0,retarded,,341,d5:r113:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+267,d5:r89:podd:b0,advanced_direct_c2,2,177,d5:r59:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+268,d5:r89:peven:b1,retarded,,341,d5:r113:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+268,d5:r89:peven:b1,advanced_direct_c2,2,177,d5:r59:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+269,d5:r89:peven:b2,retarded,,341,d5:r113:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+269,d5:r89:peven:b2,advanced_direct_c2,2,177,d5:r59:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+270,d5:r90:podd:b0,retarded,,353,d5:r117:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+271,d5:r90:peven:b1,retarded,,353,d5:r117:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+272,d5:r90:peven:b2,retarded,,353,d5:r117:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+273,d5:r91:podd:b0,retarded,,365,d5:r121:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+274,d5:r91:peven:b1,retarded,,365,d5:r121:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+275,d5:r91:peven:b2,retarded,,365,d5:r121:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+276,d5:r92:podd:b0,retarded,,377,d5:r125:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+276,d5:r92:podd:b0,advanced_parity_lift_c1,1,367,d5:r122:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+277,d5:r92:peven:b1,retarded,,377,d5:r125:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+277,d5:r92:peven:b1,advanced_parity_lift_c1,1,367,d5:r122:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+278,d5:r92:peven:b2,retarded,,377,d5:r125:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+278,d5:r92:peven:b2,advanced_parity_lift_c1,1,367,d5:r122:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+279,d5:r93:podd:b0,retarded,,389,d5:r129:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+280,d5:r93:peven:b1,retarded,,389,d5:r129:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+281,d5:r93:peven:b2,retarded,,389,d5:r129:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+282,d5:r94:podd:b0,retarded,,401,d5:r133:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+283,d5:r94:peven:b1,retarded,,401,d5:r133:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+284,d5:r94:peven:b2,retarded,,401,d5:r133:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+285,d5:r95:podd:b0,retarded,,413,d5:r137:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+286,d5:r95:peven:b1,retarded,,413,d5:r137:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+287,d5:r95:peven:b2,retarded,,413,d5:r137:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+288,d5:r96:podd:b0,retarded,,425,d5:r141:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+289,d5:r96:peven:b1,retarded,,425,d5:r141:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+290,d5:r96:peven:b2,retarded,,425,d5:r141:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+291,d5:r97:podd:b0,retarded,,437,d5:r145:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+292,d5:r97:peven:b1,retarded,,437,d5:r145:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+293,d5:r97:peven:b2,retarded,,437,d5:r145:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+294,d5:r98:podd:b0,retarded,,449,d5:r149:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+294,d5:r98:podd:b0,advanced_direct_c2,2,195,d5:r65:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+295,d5:r98:peven:b1,retarded,,449,d5:r149:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+295,d5:r98:peven:b1,advanced_direct_c2,2,195,d5:r65:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+296,d5:r98:peven:b2,retarded,,449,d5:r149:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+296,d5:r98:peven:b2,advanced_direct_c2,2,195,d5:r65:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+297,d5:r99:podd:b0,retarded,,461,d5:r153:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+298,d5:r99:peven:b1,retarded,,461,d5:r153:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+299,d5:r99:peven:b2,retarded,,461,d5:r153:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+300,d5:r100:podd:b0,retarded,,473,d5:r157:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+301,d5:r100:peven:b1,retarded,,473,d5:r157:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+302,d5:r100:peven:b2,retarded,,473,d5:r157:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+303,d5:r101:podd:b0,retarded,,485,d5:r161:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+303,d5:r101:podd:b0,advanced_parity_lift_c1,1,403,d5:r134:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+304,d5:r101:peven:b1,retarded,,485,d5:r161:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+304,d5:r101:peven:b1,advanced_parity_lift_c1,1,403,d5:r134:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+305,d5:r101:peven:b2,retarded,,485,d5:r161:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+305,d5:r101:peven:b2,advanced_parity_lift_c1,1,403,d5:r134:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+306,d5:r102:podd:b0,retarded,,497,d5:r165:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+307,d5:r102:peven:b1,retarded,,497,d5:r165:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+308,d5:r102:peven:b2,retarded,,497,d5:r165:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+309,d5:r103:podd:b0,retarded,,509,d5:r169:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+310,d5:r103:peven:b1,retarded,,509,d5:r169:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+311,d5:r103:peven:b2,retarded,,509,d5:r169:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+312,d5:r104:podd:b0,retarded,,521,d5:r173:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+313,d5:r104:peven:b1,retarded,,521,d5:r173:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+314,d5:r104:peven:b2,retarded,,521,d5:r173:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+315,d5:r105:podd:b0,retarded,,533,d5:r177:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+316,d5:r105:peven:b1,retarded,,533,d5:r177:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+317,d5:r105:peven:b2,retarded,,533,d5:r177:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+318,d5:r106:podd:b0,retarded,,545,d5:r181:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+319,d5:r106:peven:b1,retarded,,545,d5:r181:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+320,d5:r106:peven:b2,retarded,,545,d5:r181:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+321,d5:r107:podd:b0,retarded,,557,d5:r185:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+321,d5:r107:podd:b0,advanced_direct_c2,2,213,d5:r71:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+322,d5:r107:peven:b1,retarded,,557,d5:r185:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+322,d5:r107:peven:b1,advanced_direct_c2,2,213,d5:r71:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+323,d5:r107:peven:b2,retarded,,557,d5:r185:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+323,d5:r107:peven:b2,advanced_direct_c2,2,213,d5:r71:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+324,d5:r108:podd:b0,retarded,,569,d5:r189:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+325,d5:r108:peven:b1,retarded,,569,d5:r189:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+326,d5:r108:peven:b2,retarded,,569,d5:r189:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+327,d5:r109:podd:b0,retarded,,581,d5:r193:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+328,d5:r109:peven:b1,retarded,,581,d5:r193:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+329,d5:r109:peven:b2,retarded,,581,d5:r193:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+330,d5:r110:podd:b0,retarded,,593,d5:r197:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+330,d5:r110:podd:b0,advanced_parity_lift_c1,1,439,d5:r146:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+331,d5:r110:peven:b1,retarded,,593,d5:r197:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+331,d5:r110:peven:b1,advanced_parity_lift_c1,1,439,d5:r146:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+332,d5:r110:peven:b2,retarded,,593,d5:r197:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+332,d5:r110:peven:b2,advanced_parity_lift_c1,1,439,d5:r146:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+333,d5:r111:podd:b0,retarded,,605,d5:r201:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+334,d5:r111:peven:b1,retarded,,605,d5:r201:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+335,d5:r111:peven:b2,retarded,,605,d5:r201:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+336,d5:r112:podd:b0,retarded,,617,d5:r205:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+337,d5:r112:peven:b1,retarded,,617,d5:r205:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+338,d5:r112:peven:b2,retarded,,617,d5:r205:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+339,d5:r113:podd:b0,retarded,,629,d5:r209:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+340,d5:r113:peven:b1,retarded,,629,d5:r209:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+341,d5:r113:peven:b2,retarded,,629,d5:r209:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+342,d5:r114:podd:b0,retarded,,641,d5:r213:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+343,d5:r114:peven:b1,retarded,,641,d5:r213:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+344,d5:r114:peven:b2,retarded,,641,d5:r213:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+345,d5:r115:podd:b0,retarded,,653,d5:r217:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+346,d5:r115:peven:b1,retarded,,653,d5:r217:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+347,d5:r115:peven:b2,retarded,,653,d5:r217:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+348,d5:r116:podd:b0,retarded,,665,d5:r221:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+348,d5:r116:podd:b0,advanced_direct_c2,2,231,d5:r77:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+349,d5:r116:peven:b1,retarded,,665,d5:r221:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+349,d5:r116:peven:b1,advanced_direct_c2,2,231,d5:r77:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+350,d5:r116:peven:b2,retarded,,665,d5:r221:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+350,d5:r116:peven:b2,advanced_direct_c2,2,231,d5:r77:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+351,d5:r117:podd:b0,retarded,,677,d5:r225:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+352,d5:r117:peven:b1,retarded,,677,d5:r225:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+353,d5:r117:peven:b2,retarded,,677,d5:r225:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+354,d5:r118:podd:b0,retarded,,689,d5:r229:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+355,d5:r118:peven:b1,retarded,,689,d5:r229:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+356,d5:r118:peven:b2,retarded,,689,d5:r229:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+357,d5:r119:podd:b0,retarded,,701,d5:r233:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+357,d5:r119:podd:b0,advanced_parity_lift_c1,1,475,d5:r158:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+358,d5:r119:peven:b1,retarded,,701,d5:r233:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+358,d5:r119:peven:b1,advanced_parity_lift_c1,1,475,d5:r158:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+359,d5:r119:peven:b2,retarded,,701,d5:r233:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+359,d5:r119:peven:b2,advanced_parity_lift_c1,1,475,d5:r158:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+360,d5:r120:podd:b0,retarded,,713,d5:r237:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+361,d5:r120:peven:b1,retarded,,713,d5:r237:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+362,d5:r120:peven:b2,retarded,,713,d5:r237:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+363,d5:r121:podd:b0,retarded,,725,d5:r241:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+364,d5:r121:peven:b1,retarded,,725,d5:r241:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+365,d5:r121:peven:b2,retarded,,725,d5:r241:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+366,d5:r122:podd:b0,retarded,,8,d5:r2:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+367,d5:r122:peven:b1,retarded,,8,d5:r2:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+368,d5:r122:peven:b2,retarded,,8,d5:r2:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+369,d5:r123:podd:b0,retarded,,20,d5:r6:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+370,d5:r123:peven:b1,retarded,,20,d5:r6:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+371,d5:r123:peven:b2,retarded,,20,d5:r6:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+372,d5:r124:podd:b0,retarded,,32,d5:r10:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+373,d5:r124:peven:b1,retarded,,32,d5:r10:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+374,d5:r124:peven:b2,retarded,,32,d5:r10:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+375,d5:r125:podd:b0,retarded,,44,d5:r14:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+375,d5:r125:podd:b0,advanced_direct_c2,2,249,d5:r83:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+376,d5:r125:peven:b1,retarded,,44,d5:r14:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+376,d5:r125:peven:b1,advanced_direct_c2,2,249,d5:r83:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+377,d5:r125:peven:b2,retarded,,44,d5:r14:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+377,d5:r125:peven:b2,advanced_direct_c2,2,249,d5:r83:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+378,d5:r126:podd:b0,retarded,,56,d5:r18:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+379,d5:r126:peven:b1,retarded,,56,d5:r18:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+380,d5:r126:peven:b2,retarded,,56,d5:r18:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+381,d5:r127:podd:b0,retarded,,68,d5:r22:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+382,d5:r127:peven:b1,retarded,,68,d5:r22:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+383,d5:r127:peven:b2,retarded,,68,d5:r22:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+384,d5:r128:podd:b0,retarded,,80,d5:r26:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+384,d5:r128:podd:b0,advanced_parity_lift_c1,1,511,d5:r170:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+385,d5:r128:peven:b1,retarded,,80,d5:r26:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+385,d5:r128:peven:b1,advanced_parity_lift_c1,1,511,d5:r170:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+386,d5:r128:peven:b2,retarded,,80,d5:r26:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+386,d5:r128:peven:b2,advanced_parity_lift_c1,1,511,d5:r170:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+387,d5:r129:podd:b0,retarded,,92,d5:r30:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+388,d5:r129:peven:b1,retarded,,92,d5:r30:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+389,d5:r129:peven:b2,retarded,,92,d5:r30:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+390,d5:r130:podd:b0,retarded,,104,d5:r34:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+391,d5:r130:peven:b1,retarded,,104,d5:r34:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+392,d5:r130:peven:b2,retarded,,104,d5:r34:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+393,d5:r131:podd:b0,retarded,,116,d5:r38:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+394,d5:r131:peven:b1,retarded,,116,d5:r38:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+395,d5:r131:peven:b2,retarded,,116,d5:r38:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+396,d5:r132:podd:b0,retarded,,128,d5:r42:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+397,d5:r132:peven:b1,retarded,,128,d5:r42:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+398,d5:r132:peven:b2,retarded,,128,d5:r42:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+399,d5:r133:podd:b0,retarded,,140,d5:r46:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+400,d5:r133:peven:b1,retarded,,140,d5:r46:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+401,d5:r133:peven:b2,retarded,,140,d5:r46:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+402,d5:r134:podd:b0,retarded,,152,d5:r50:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+402,d5:r134:podd:b0,advanced_direct_c2,2,267,d5:r89:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+403,d5:r134:peven:b1,retarded,,152,d5:r50:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+403,d5:r134:peven:b1,advanced_direct_c2,2,267,d5:r89:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+404,d5:r134:peven:b2,retarded,,152,d5:r50:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+404,d5:r134:peven:b2,advanced_direct_c2,2,267,d5:r89:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+405,d5:r135:podd:b0,retarded,,164,d5:r54:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+406,d5:r135:peven:b1,retarded,,164,d5:r54:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+407,d5:r135:peven:b2,retarded,,164,d5:r54:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+408,d5:r136:podd:b0,retarded,,176,d5:r58:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+409,d5:r136:peven:b1,retarded,,176,d5:r58:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+410,d5:r136:peven:b2,retarded,,176,d5:r58:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+411,d5:r137:podd:b0,retarded,,188,d5:r62:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+411,d5:r137:podd:b0,advanced_parity_lift_c1,1,547,d5:r182:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+412,d5:r137:peven:b1,retarded,,188,d5:r62:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+412,d5:r137:peven:b1,advanced_parity_lift_c1,1,547,d5:r182:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+413,d5:r137:peven:b2,retarded,,188,d5:r62:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+413,d5:r137:peven:b2,advanced_parity_lift_c1,1,547,d5:r182:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+414,d5:r138:podd:b0,retarded,,200,d5:r66:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+415,d5:r138:peven:b1,retarded,,200,d5:r66:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+416,d5:r138:peven:b2,retarded,,200,d5:r66:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+417,d5:r139:podd:b0,retarded,,212,d5:r70:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+418,d5:r139:peven:b1,retarded,,212,d5:r70:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+419,d5:r139:peven:b2,retarded,,212,d5:r70:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+420,d5:r140:podd:b0,retarded,,224,d5:r74:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+421,d5:r140:peven:b1,retarded,,224,d5:r74:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+422,d5:r140:peven:b2,retarded,,224,d5:r74:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+423,d5:r141:podd:b0,retarded,,236,d5:r78:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+424,d5:r141:peven:b1,retarded,,236,d5:r78:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+425,d5:r141:peven:b2,retarded,,236,d5:r78:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+426,d5:r142:podd:b0,retarded,,248,d5:r82:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+427,d5:r142:peven:b1,retarded,,248,d5:r82:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+428,d5:r142:peven:b2,retarded,,248,d5:r82:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+429,d5:r143:podd:b0,retarded,,260,d5:r86:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+429,d5:r143:podd:b0,advanced_direct_c2,2,285,d5:r95:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+430,d5:r143:peven:b1,retarded,,260,d5:r86:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+430,d5:r143:peven:b1,advanced_direct_c2,2,285,d5:r95:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+431,d5:r143:peven:b2,retarded,,260,d5:r86:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+431,d5:r143:peven:b2,advanced_direct_c2,2,285,d5:r95:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+432,d5:r144:podd:b0,retarded,,272,d5:r90:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+433,d5:r144:peven:b1,retarded,,272,d5:r90:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+434,d5:r144:peven:b2,retarded,,272,d5:r90:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+435,d5:r145:podd:b0,retarded,,284,d5:r94:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+436,d5:r145:peven:b1,retarded,,284,d5:r94:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+437,d5:r145:peven:b2,retarded,,284,d5:r94:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+438,d5:r146:podd:b0,retarded,,296,d5:r98:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+438,d5:r146:podd:b0,advanced_parity_lift_c1,1,583,d5:r194:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+439,d5:r146:peven:b1,retarded,,296,d5:r98:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+439,d5:r146:peven:b1,advanced_parity_lift_c1,1,583,d5:r194:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+440,d5:r146:peven:b2,retarded,,296,d5:r98:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+440,d5:r146:peven:b2,advanced_parity_lift_c1,1,583,d5:r194:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+441,d5:r147:podd:b0,retarded,,308,d5:r102:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+442,d5:r147:peven:b1,retarded,,308,d5:r102:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+443,d5:r147:peven:b2,retarded,,308,d5:r102:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+444,d5:r148:podd:b0,retarded,,320,d5:r106:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+445,d5:r148:peven:b1,retarded,,320,d5:r106:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+446,d5:r148:peven:b2,retarded,,320,d5:r106:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+447,d5:r149:podd:b0,retarded,,332,d5:r110:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+448,d5:r149:peven:b1,retarded,,332,d5:r110:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+449,d5:r149:peven:b2,retarded,,332,d5:r110:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+450,d5:r150:podd:b0,retarded,,344,d5:r114:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+451,d5:r150:peven:b1,retarded,,344,d5:r114:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+452,d5:r150:peven:b2,retarded,,344,d5:r114:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+453,d5:r151:podd:b0,retarded,,356,d5:r118:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+454,d5:r151:peven:b1,retarded,,356,d5:r118:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+455,d5:r151:peven:b2,retarded,,356,d5:r118:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+456,d5:r152:podd:b0,retarded,,368,d5:r122:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+456,d5:r152:podd:b0,advanced_direct_c2,2,303,d5:r101:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+457,d5:r152:peven:b1,retarded,,368,d5:r122:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+457,d5:r152:peven:b1,advanced_direct_c2,2,303,d5:r101:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+458,d5:r152:peven:b2,retarded,,368,d5:r122:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+458,d5:r152:peven:b2,advanced_direct_c2,2,303,d5:r101:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+459,d5:r153:podd:b0,retarded,,380,d5:r126:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+460,d5:r153:peven:b1,retarded,,380,d5:r126:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+461,d5:r153:peven:b2,retarded,,380,d5:r126:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+462,d5:r154:podd:b0,retarded,,392,d5:r130:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+463,d5:r154:peven:b1,retarded,,392,d5:r130:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+464,d5:r154:peven:b2,retarded,,392,d5:r130:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+465,d5:r155:podd:b0,retarded,,404,d5:r134:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+465,d5:r155:podd:b0,advanced_parity_lift_c1,1,619,d5:r206:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+466,d5:r155:peven:b1,retarded,,404,d5:r134:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+466,d5:r155:peven:b1,advanced_parity_lift_c1,1,619,d5:r206:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+467,d5:r155:peven:b2,retarded,,404,d5:r134:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+467,d5:r155:peven:b2,advanced_parity_lift_c1,1,619,d5:r206:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+468,d5:r156:podd:b0,retarded,,416,d5:r138:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+469,d5:r156:peven:b1,retarded,,416,d5:r138:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+470,d5:r156:peven:b2,retarded,,416,d5:r138:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+471,d5:r157:podd:b0,retarded,,428,d5:r142:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+472,d5:r157:peven:b1,retarded,,428,d5:r142:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+473,d5:r157:peven:b2,retarded,,428,d5:r142:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+474,d5:r158:podd:b0,retarded,,440,d5:r146:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+475,d5:r158:peven:b1,retarded,,440,d5:r146:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+476,d5:r158:peven:b2,retarded,,440,d5:r146:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+477,d5:r159:podd:b0,retarded,,452,d5:r150:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+478,d5:r159:peven:b1,retarded,,452,d5:r150:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+479,d5:r159:peven:b2,retarded,,452,d5:r150:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+480,d5:r160:podd:b0,retarded,,464,d5:r154:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+481,d5:r160:peven:b1,retarded,,464,d5:r154:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+482,d5:r160:peven:b2,retarded,,464,d5:r154:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+483,d5:r161:podd:b0,retarded,,476,d5:r158:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+483,d5:r161:podd:b0,advanced_direct_c2,2,321,d5:r107:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+484,d5:r161:peven:b1,retarded,,476,d5:r158:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+484,d5:r161:peven:b1,advanced_direct_c2,2,321,d5:r107:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+485,d5:r161:peven:b2,retarded,,476,d5:r158:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+485,d5:r161:peven:b2,advanced_direct_c2,2,321,d5:r107:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+486,d5:r162:podd:b0,retarded,,488,d5:r162:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+487,d5:r162:peven:b1,retarded,,488,d5:r162:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+488,d5:r162:peven:b2,retarded,,488,d5:r162:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+489,d5:r163:podd:b0,retarded,,500,d5:r166:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+490,d5:r163:peven:b1,retarded,,500,d5:r166:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+491,d5:r163:peven:b2,retarded,,500,d5:r166:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+492,d5:r164:podd:b0,retarded,,512,d5:r170:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+492,d5:r164:podd:b0,advanced_parity_lift_c1,1,655,d5:r218:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+493,d5:r164:peven:b1,retarded,,512,d5:r170:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+493,d5:r164:peven:b1,advanced_parity_lift_c1,1,655,d5:r218:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+494,d5:r164:peven:b2,retarded,,512,d5:r170:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+494,d5:r164:peven:b2,advanced_parity_lift_c1,1,655,d5:r218:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+495,d5:r165:podd:b0,retarded,,524,d5:r174:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+496,d5:r165:peven:b1,retarded,,524,d5:r174:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+497,d5:r165:peven:b2,retarded,,524,d5:r174:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+498,d5:r166:podd:b0,retarded,,536,d5:r178:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+499,d5:r166:peven:b1,retarded,,536,d5:r178:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+500,d5:r166:peven:b2,retarded,,536,d5:r178:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+501,d5:r167:podd:b0,retarded,,548,d5:r182:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+502,d5:r167:peven:b1,retarded,,548,d5:r182:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+503,d5:r167:peven:b2,retarded,,548,d5:r182:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+504,d5:r168:podd:b0,retarded,,560,d5:r186:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+505,d5:r168:peven:b1,retarded,,560,d5:r186:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+506,d5:r168:peven:b2,retarded,,560,d5:r186:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+507,d5:r169:podd:b0,retarded,,572,d5:r190:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+508,d5:r169:peven:b1,retarded,,572,d5:r190:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+509,d5:r169:peven:b2,retarded,,572,d5:r190:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+510,d5:r170:podd:b0,retarded,,584,d5:r194:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+510,d5:r170:podd:b0,advanced_direct_c2,2,339,d5:r113:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+511,d5:r170:peven:b1,retarded,,584,d5:r194:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+511,d5:r170:peven:b1,advanced_direct_c2,2,339,d5:r113:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+512,d5:r170:peven:b2,retarded,,584,d5:r194:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+512,d5:r170:peven:b2,advanced_direct_c2,2,339,d5:r113:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+513,d5:r171:podd:b0,retarded,,596,d5:r198:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+514,d5:r171:peven:b1,retarded,,596,d5:r198:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+515,d5:r171:peven:b2,retarded,,596,d5:r198:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+516,d5:r172:podd:b0,retarded,,608,d5:r202:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+517,d5:r172:peven:b1,retarded,,608,d5:r202:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+518,d5:r172:peven:b2,retarded,,608,d5:r202:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+519,d5:r173:podd:b0,retarded,,620,d5:r206:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+519,d5:r173:podd:b0,advanced_parity_lift_c1,1,691,d5:r230:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+520,d5:r173:peven:b1,retarded,,620,d5:r206:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+520,d5:r173:peven:b1,advanced_parity_lift_c1,1,691,d5:r230:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+521,d5:r173:peven:b2,retarded,,620,d5:r206:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+521,d5:r173:peven:b2,advanced_parity_lift_c1,1,691,d5:r230:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+522,d5:r174:podd:b0,retarded,,632,d5:r210:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+523,d5:r174:peven:b1,retarded,,632,d5:r210:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+524,d5:r174:peven:b2,retarded,,632,d5:r210:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+525,d5:r175:podd:b0,retarded,,644,d5:r214:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+526,d5:r175:peven:b1,retarded,,644,d5:r214:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+527,d5:r175:peven:b2,retarded,,644,d5:r214:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+528,d5:r176:podd:b0,retarded,,656,d5:r218:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+529,d5:r176:peven:b1,retarded,,656,d5:r218:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+530,d5:r176:peven:b2,retarded,,656,d5:r218:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+531,d5:r177:podd:b0,retarded,,668,d5:r222:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+532,d5:r177:peven:b1,retarded,,668,d5:r222:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+533,d5:r177:peven:b2,retarded,,668,d5:r222:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+534,d5:r178:podd:b0,retarded,,680,d5:r226:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+535,d5:r178:peven:b1,retarded,,680,d5:r226:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+536,d5:r178:peven:b2,retarded,,680,d5:r226:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+537,d5:r179:podd:b0,retarded,,692,d5:r230:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+537,d5:r179:podd:b0,advanced_direct_c2,2,357,d5:r119:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+538,d5:r179:peven:b1,retarded,,692,d5:r230:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+538,d5:r179:peven:b1,advanced_direct_c2,2,357,d5:r119:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+539,d5:r179:peven:b2,retarded,,692,d5:r230:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+539,d5:r179:peven:b2,advanced_direct_c2,2,357,d5:r119:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+540,d5:r180:podd:b0,retarded,,704,d5:r234:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+541,d5:r180:peven:b1,retarded,,704,d5:r234:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+542,d5:r180:peven:b2,retarded,,704,d5:r234:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+543,d5:r181:podd:b0,retarded,,716,d5:r238:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+544,d5:r181:peven:b1,retarded,,716,d5:r238:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+545,d5:r181:peven:b2,retarded,,716,d5:r238:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+546,d5:r182:podd:b0,retarded,,728,d5:r242:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+546,d5:r182:podd:b0,advanced_parity_lift_c1,1,727,d5:r242:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+547,d5:r182:peven:b1,retarded,,728,d5:r242:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+547,d5:r182:peven:b1,advanced_parity_lift_c1,1,727,d5:r242:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+548,d5:r182:peven:b2,retarded,,728,d5:r242:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+548,d5:r182:peven:b2,advanced_parity_lift_c1,1,727,d5:r242:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+549,d5:r183:podd:b0,retarded,,11,d5:r3:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+550,d5:r183:peven:b1,retarded,,11,d5:r3:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+551,d5:r183:peven:b2,retarded,,11,d5:r3:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+552,d5:r184:podd:b0,retarded,,23,d5:r7:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+553,d5:r184:peven:b1,retarded,,23,d5:r7:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+554,d5:r184:peven:b2,retarded,,23,d5:r7:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+555,d5:r185:podd:b0,retarded,,35,d5:r11:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+556,d5:r185:peven:b1,retarded,,35,d5:r11:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+557,d5:r185:peven:b2,retarded,,35,d5:r11:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+558,d5:r186:podd:b0,retarded,,47,d5:r15:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+559,d5:r186:peven:b1,retarded,,47,d5:r15:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+560,d5:r186:peven:b2,retarded,,47,d5:r15:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+561,d5:r187:podd:b0,retarded,,59,d5:r19:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+562,d5:r187:peven:b1,retarded,,59,d5:r19:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+563,d5:r187:peven:b2,retarded,,59,d5:r19:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+564,d5:r188:podd:b0,retarded,,71,d5:r23:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+564,d5:r188:podd:b0,advanced_direct_c2,2,375,d5:r125:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+565,d5:r188:peven:b1,retarded,,71,d5:r23:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+565,d5:r188:peven:b1,advanced_direct_c2,2,375,d5:r125:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+566,d5:r188:peven:b2,retarded,,71,d5:r23:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+566,d5:r188:peven:b2,advanced_direct_c2,2,375,d5:r125:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+567,d5:r189:podd:b0,retarded,,83,d5:r27:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+568,d5:r189:peven:b1,retarded,,83,d5:r27:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+569,d5:r189:peven:b2,retarded,,83,d5:r27:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+570,d5:r190:podd:b0,retarded,,95,d5:r31:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+571,d5:r190:peven:b1,retarded,,95,d5:r31:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+572,d5:r190:peven:b2,retarded,,95,d5:r31:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+573,d5:r191:podd:b0,retarded,,107,d5:r35:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+573,d5:r191:podd:b0,advanced_parity_lift_c1,1,34,d5:r11:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+574,d5:r191:peven:b1,retarded,,107,d5:r35:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+574,d5:r191:peven:b1,advanced_parity_lift_c1,1,34,d5:r11:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+575,d5:r191:peven:b2,retarded,,107,d5:r35:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+575,d5:r191:peven:b2,advanced_parity_lift_c1,1,34,d5:r11:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+576,d5:r192:podd:b0,retarded,,119,d5:r39:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+577,d5:r192:peven:b1,retarded,,119,d5:r39:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+578,d5:r192:peven:b2,retarded,,119,d5:r39:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+579,d5:r193:podd:b0,retarded,,131,d5:r43:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+580,d5:r193:peven:b1,retarded,,131,d5:r43:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+581,d5:r193:peven:b2,retarded,,131,d5:r43:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+582,d5:r194:podd:b0,retarded,,143,d5:r47:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+583,d5:r194:peven:b1,retarded,,143,d5:r47:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+584,d5:r194:peven:b2,retarded,,143,d5:r47:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+585,d5:r195:podd:b0,retarded,,155,d5:r51:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+586,d5:r195:peven:b1,retarded,,155,d5:r51:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+587,d5:r195:peven:b2,retarded,,155,d5:r51:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+588,d5:r196:podd:b0,retarded,,167,d5:r55:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+589,d5:r196:peven:b1,retarded,,167,d5:r55:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+590,d5:r196:peven:b2,retarded,,167,d5:r55:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+591,d5:r197:podd:b0,retarded,,179,d5:r59:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+591,d5:r197:podd:b0,advanced_direct_c2,2,393,d5:r131:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+592,d5:r197:peven:b1,retarded,,179,d5:r59:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+592,d5:r197:peven:b1,advanced_direct_c2,2,393,d5:r131:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+593,d5:r197:peven:b2,retarded,,179,d5:r59:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+593,d5:r197:peven:b2,advanced_direct_c2,2,393,d5:r131:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+594,d5:r198:podd:b0,retarded,,191,d5:r63:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+595,d5:r198:peven:b1,retarded,,191,d5:r63:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+596,d5:r198:peven:b2,retarded,,191,d5:r63:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+597,d5:r199:podd:b0,retarded,,203,d5:r67:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+598,d5:r199:peven:b1,retarded,,203,d5:r67:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+599,d5:r199:peven:b2,retarded,,203,d5:r67:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+600,d5:r200:podd:b0,retarded,,215,d5:r71:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+600,d5:r200:podd:b0,advanced_parity_lift_c1,1,70,d5:r23:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+601,d5:r200:peven:b1,retarded,,215,d5:r71:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+601,d5:r200:peven:b1,advanced_parity_lift_c1,1,70,d5:r23:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+602,d5:r200:peven:b2,retarded,,215,d5:r71:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+602,d5:r200:peven:b2,advanced_parity_lift_c1,1,70,d5:r23:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+603,d5:r201:podd:b0,retarded,,227,d5:r75:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+604,d5:r201:peven:b1,retarded,,227,d5:r75:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+605,d5:r201:peven:b2,retarded,,227,d5:r75:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+606,d5:r202:podd:b0,retarded,,239,d5:r79:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+607,d5:r202:peven:b1,retarded,,239,d5:r79:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+608,d5:r202:peven:b2,retarded,,239,d5:r79:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+609,d5:r203:podd:b0,retarded,,251,d5:r83:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+610,d5:r203:peven:b1,retarded,,251,d5:r83:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+611,d5:r203:peven:b2,retarded,,251,d5:r83:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+612,d5:r204:podd:b0,retarded,,263,d5:r87:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+613,d5:r204:peven:b1,retarded,,263,d5:r87:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+614,d5:r204:peven:b2,retarded,,263,d5:r87:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+615,d5:r205:podd:b0,retarded,,275,d5:r91:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+616,d5:r205:peven:b1,retarded,,275,d5:r91:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+617,d5:r205:peven:b2,retarded,,275,d5:r91:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+618,d5:r206:podd:b0,retarded,,287,d5:r95:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+618,d5:r206:podd:b0,advanced_direct_c2,2,411,d5:r137:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+619,d5:r206:peven:b1,retarded,,287,d5:r95:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+619,d5:r206:peven:b1,advanced_direct_c2,2,411,d5:r137:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+620,d5:r206:peven:b2,retarded,,287,d5:r95:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+620,d5:r206:peven:b2,advanced_direct_c2,2,411,d5:r137:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+621,d5:r207:podd:b0,retarded,,299,d5:r99:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+622,d5:r207:peven:b1,retarded,,299,d5:r99:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+623,d5:r207:peven:b2,retarded,,299,d5:r99:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+624,d5:r208:podd:b0,retarded,,311,d5:r103:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+625,d5:r208:peven:b1,retarded,,311,d5:r103:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+626,d5:r208:peven:b2,retarded,,311,d5:r103:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+627,d5:r209:podd:b0,retarded,,323,d5:r107:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+627,d5:r209:podd:b0,advanced_parity_lift_c1,1,106,d5:r35:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+628,d5:r209:peven:b1,retarded,,323,d5:r107:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+628,d5:r209:peven:b1,advanced_parity_lift_c1,1,106,d5:r35:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+629,d5:r209:peven:b2,retarded,,323,d5:r107:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+629,d5:r209:peven:b2,advanced_parity_lift_c1,1,106,d5:r35:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+630,d5:r210:podd:b0,retarded,,335,d5:r111:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+631,d5:r210:peven:b1,retarded,,335,d5:r111:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+632,d5:r210:peven:b2,retarded,,335,d5:r111:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+633,d5:r211:podd:b0,retarded,,347,d5:r115:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+634,d5:r211:peven:b1,retarded,,347,d5:r115:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+635,d5:r211:peven:b2,retarded,,347,d5:r115:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+636,d5:r212:podd:b0,retarded,,359,d5:r119:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+637,d5:r212:peven:b1,retarded,,359,d5:r119:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+638,d5:r212:peven:b2,retarded,,359,d5:r119:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+639,d5:r213:podd:b0,retarded,,371,d5:r123:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+640,d5:r213:peven:b1,retarded,,371,d5:r123:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+641,d5:r213:peven:b2,retarded,,371,d5:r123:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+642,d5:r214:podd:b0,retarded,,383,d5:r127:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+643,d5:r214:peven:b1,retarded,,383,d5:r127:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+644,d5:r214:peven:b2,retarded,,383,d5:r127:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+645,d5:r215:podd:b0,retarded,,395,d5:r131:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+645,d5:r215:podd:b0,advanced_direct_c2,2,429,d5:r143:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+646,d5:r215:peven:b1,retarded,,395,d5:r131:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+646,d5:r215:peven:b1,advanced_direct_c2,2,429,d5:r143:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+647,d5:r215:peven:b2,retarded,,395,d5:r131:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+647,d5:r215:peven:b2,advanced_direct_c2,2,429,d5:r143:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+648,d5:r216:podd:b0,retarded,,407,d5:r135:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+649,d5:r216:peven:b1,retarded,,407,d5:r135:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+650,d5:r216:peven:b2,retarded,,407,d5:r135:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+651,d5:r217:podd:b0,retarded,,419,d5:r139:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+652,d5:r217:peven:b1,retarded,,419,d5:r139:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+653,d5:r217:peven:b2,retarded,,419,d5:r139:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+654,d5:r218:podd:b0,retarded,,431,d5:r143:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+654,d5:r218:podd:b0,advanced_parity_lift_c1,1,142,d5:r47:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+655,d5:r218:peven:b1,retarded,,431,d5:r143:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+655,d5:r218:peven:b1,advanced_parity_lift_c1,1,142,d5:r47:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+656,d5:r218:peven:b2,retarded,,431,d5:r143:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+656,d5:r218:peven:b2,advanced_parity_lift_c1,1,142,d5:r47:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+657,d5:r219:podd:b0,retarded,,443,d5:r147:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+658,d5:r219:peven:b1,retarded,,443,d5:r147:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+659,d5:r219:peven:b2,retarded,,443,d5:r147:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+660,d5:r220:podd:b0,retarded,,455,d5:r151:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+661,d5:r220:peven:b1,retarded,,455,d5:r151:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+662,d5:r220:peven:b2,retarded,,455,d5:r151:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+663,d5:r221:podd:b0,retarded,,467,d5:r155:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+664,d5:r221:peven:b1,retarded,,467,d5:r155:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+665,d5:r221:peven:b2,retarded,,467,d5:r155:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+666,d5:r222:podd:b0,retarded,,479,d5:r159:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+667,d5:r222:peven:b1,retarded,,479,d5:r159:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+668,d5:r222:peven:b2,retarded,,479,d5:r159:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+669,d5:r223:podd:b0,retarded,,491,d5:r163:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+670,d5:r223:peven:b1,retarded,,491,d5:r163:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+671,d5:r223:peven:b2,retarded,,491,d5:r163:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+672,d5:r224:podd:b0,retarded,,503,d5:r167:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+672,d5:r224:podd:b0,advanced_direct_c2,2,447,d5:r149:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+673,d5:r224:peven:b1,retarded,,503,d5:r167:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+673,d5:r224:peven:b1,advanced_direct_c2,2,447,d5:r149:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+674,d5:r224:peven:b2,retarded,,503,d5:r167:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+674,d5:r224:peven:b2,advanced_direct_c2,2,447,d5:r149:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+675,d5:r225:podd:b0,retarded,,515,d5:r171:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+676,d5:r225:peven:b1,retarded,,515,d5:r171:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+677,d5:r225:peven:b2,retarded,,515,d5:r171:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+678,d5:r226:podd:b0,retarded,,527,d5:r175:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+679,d5:r226:peven:b1,retarded,,527,d5:r175:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+680,d5:r226:peven:b2,retarded,,527,d5:r175:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+681,d5:r227:podd:b0,retarded,,539,d5:r179:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+681,d5:r227:podd:b0,advanced_parity_lift_c1,1,178,d5:r59:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+682,d5:r227:peven:b1,retarded,,539,d5:r179:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+682,d5:r227:peven:b1,advanced_parity_lift_c1,1,178,d5:r59:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+683,d5:r227:peven:b2,retarded,,539,d5:r179:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+683,d5:r227:peven:b2,advanced_parity_lift_c1,1,178,d5:r59:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+684,d5:r228:podd:b0,retarded,,551,d5:r183:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+685,d5:r228:peven:b1,retarded,,551,d5:r183:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+686,d5:r228:peven:b2,retarded,,551,d5:r183:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+687,d5:r229:podd:b0,retarded,,563,d5:r187:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+688,d5:r229:peven:b1,retarded,,563,d5:r187:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+689,d5:r229:peven:b2,retarded,,563,d5:r187:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+690,d5:r230:podd:b0,retarded,,575,d5:r191:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+691,d5:r230:peven:b1,retarded,,575,d5:r191:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+692,d5:r230:peven:b2,retarded,,575,d5:r191:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+693,d5:r231:podd:b0,retarded,,587,d5:r195:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+694,d5:r231:peven:b1,retarded,,587,d5:r195:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+695,d5:r231:peven:b2,retarded,,587,d5:r195:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+696,d5:r232:podd:b0,retarded,,599,d5:r199:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+697,d5:r232:peven:b1,retarded,,599,d5:r199:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+698,d5:r232:peven:b2,retarded,,599,d5:r199:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+699,d5:r233:podd:b0,retarded,,611,d5:r203:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+699,d5:r233:podd:b0,advanced_direct_c2,2,465,d5:r155:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+700,d5:r233:peven:b1,retarded,,611,d5:r203:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+700,d5:r233:peven:b1,advanced_direct_c2,2,465,d5:r155:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+701,d5:r233:peven:b2,retarded,,611,d5:r203:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+701,d5:r233:peven:b2,advanced_direct_c2,2,465,d5:r155:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+702,d5:r234:podd:b0,retarded,,623,d5:r207:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+703,d5:r234:peven:b1,retarded,,623,d5:r207:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+704,d5:r234:peven:b2,retarded,,623,d5:r207:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+705,d5:r235:podd:b0,retarded,,635,d5:r211:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+706,d5:r235:peven:b1,retarded,,635,d5:r211:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+707,d5:r235:peven:b2,retarded,,635,d5:r211:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+708,d5:r236:podd:b0,retarded,,647,d5:r215:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+708,d5:r236:podd:b0,advanced_parity_lift_c1,1,214,d5:r71:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+709,d5:r236:peven:b1,retarded,,647,d5:r215:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+709,d5:r236:peven:b1,advanced_parity_lift_c1,1,214,d5:r71:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+710,d5:r236:peven:b2,retarded,,647,d5:r215:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+710,d5:r236:peven:b2,advanced_parity_lift_c1,1,214,d5:r71:peven:b1,0.783524061400317,rho_star^(log_2(3)-1)*rho_star^(-1),row22 parity lift
+711,d5:r237:podd:b0,retarded,,659,d5:r219:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+712,d5:r237:peven:b1,retarded,,659,d5:r219:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+713,d5:r237:peven:b2,retarded,,659,d5:r219:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+714,d5:r238:podd:b0,retarded,,671,d5:r223:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+715,d5:r238:peven:b1,retarded,,671,d5:r223:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+716,d5:r238:peven:b2,retarded,,671,d5:r223:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+717,d5:r239:podd:b0,retarded,,683,d5:r227:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+718,d5:r239:peven:b1,retarded,,683,d5:r227:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+719,d5:r239:peven:b2,retarded,,683,d5:r227:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+720,d5:r240:podd:b0,retarded,,695,d5:r231:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+721,d5:r240:peven:b1,retarded,,695,d5:r231:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+722,d5:r240:peven:b2,retarded,,695,d5:r231:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+723,d5:r241:podd:b0,retarded,,707,d5:r235:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+724,d5:r241:peven:b1,retarded,,707,d5:r235:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+725,d5:r241:peven:b2,retarded,,707,d5:r235:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+726,d5:r242:podd:b0,retarded,,719,d5:r239:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+726,d5:r242:podd:b0,advanced_direct_c2,2,483,d5:r161:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+727,d5:r242:peven:b1,retarded,,719,d5:r239:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+727,d5:r242:peven:b1,advanced_direct_c2,2,483,d5:r161:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity
+728,d5:r242:peven:b2,retarded,,719,d5:r239:peven:b2,0.308641975308642,rho_star^(-2),retarded core
+728,d5:r242:peven:b2,advanced_direct_c2,2,483,d5:r161:podd:b0,1.410343310520570,rho_star^(log_2(3)-1),PHASE_B advanced identity

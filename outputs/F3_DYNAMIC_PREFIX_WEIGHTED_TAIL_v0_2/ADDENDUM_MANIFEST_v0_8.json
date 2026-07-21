@@ -1,0 +1,51 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.8",
+  "date": "2026-07-21",
+  "status": [
+    "RETURN_EXCURSION_OPERATOR_V2_CONTRACT",
+    "RETURN_EXCURSION_V2_BUILT_DIAGNOSTIC_ONLY",
+    "PERRON_DIAGNOSTIC_ABOVE_ONE_AT_PREDECLARED_D0",
+    "STOP_V2_MEMBERWISE_HOOKS_MISSING",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2_CONTRACT.md",
+      "sha256": "585f30cc194e2850d100e53aed9aeb2b36cf5b8cce05b57db4bd810fb111018a"
+    },
+    {
+      "path": "F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2_REPORT.md",
+      "sha256": "4cdb94ca5e396abf3f7bd71f5c0c07e64451a4e791db80dd7164ae818cc6c45d"
+    },
+    {
+      "path": "scripts/f3_phase_b_return_excursion_operator_v2.py",
+      "sha256": "f72b1fc102ad4c37406951256330cf723c6e0e9916fe425f45c12cab246ecde7"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/summary.json",
+      "sha256": "7ab39a60981237ea3b38eff62f411c5b61b37eb952c64468f93f41bcc72e5d67"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/return_excursion_edges.csv",
+      "sha256": "14859e7813ddcd40909ad332c0fa9dadd00ca0afca8b6550de4232a0aac5f3c0"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/row_tail_Q.csv",
+      "sha256": "a2b06f6024a023378dc1b05d5dbe117152b00942fa1952aea8a9f7b9b7224a83"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/manifest_sha256.csv",
+      "sha256": "3b61dacd436a5ac8b441b4eb673fae38ffb3af9102cc01f8fa76157b03a2004b"
+    }
+  ],
+  "local_verdict": "STOP_V2_MEMBERWISE_HOOKS_MISSING",
+  "non_claims": {
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
