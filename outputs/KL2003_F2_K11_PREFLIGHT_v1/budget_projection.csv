@@ -1,0 +1,6 @@
+metric,k9_measured,k11_projected,scale_from_k9,status
+tracked_class_count,6561,59049,9.000000,source_scale_exact
+auxiliary_box_group_count,2187,19683,9.000000,source_scale_exact
+kernel_wall_seconds_linear_same_workers,437.152929,3934.376361,9.000000,projection_not_measurement
+kernel_sum_shard_seconds_linear,1244.451968,11200.067712,9.000000,projection_not_measurement
+maximum_shard_seconds_linear,153.850506,1384.654554,9.000000,projection_not_measurement

@@ -1,0 +1,6 @@
+condition,status,evidence
+source_target_recorded,PASS,k=11 gamma_11=0.8417560 lambda_11=1.7922310 recorded in high-k source review
+printed_k11_structural_data,FAIL,source review classifies printed_k11_084_data as MISSING_PRINTED_STRUCTURAL
+k11_generator_exists,FAIL,no k=11 generator or certificate output is present in this repo
+k11_cold_rerun_available,FAIL,cold rerun requires generator output; only budget projection is possible now
+k9_baseline_custodied,PASS,k=9 gate verdict K9_FORMALIZATION_ENGINEERING_GO; kernel wall 437.152929s
