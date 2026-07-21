@@ -7,7 +7,7 @@ Status:
 ```text
 PAPER_OBLIGATION_OPEN
 PAPER_PAGE_v1_1_REVIEWED
-LEMMA_B_PROOF_ATTEMPT_OPEN
+LEMMA_B_DRIFT_SIGN_PASS_QUANTITATIVE_BOUND_PENDING
 CANDIDATE_CERTIFICATE_EMPIRICAL_INPUT
 NO_FORMAL_RHO_CERTIFICATE
 NO_DENSITY_THEOREM
@@ -59,17 +59,20 @@ nonnegative row-wise populations removed from the lower-bound functional.  Set
 V_y = sum_{s in Core} w_s * B_s(y).
 ```
 
-The two scale shifts are
+The three scale shifts are
 
 ```text
 h_R = -2                         (retarded)
-h_A = alpha - 1 > 0              (advanced),
+h_A = alpha - 1 > 0              (advanced direct)
+h_L = alpha - 2 < 0              (advanced parity lift),
 alpha = log_2(3).
 ```
 
-Thus an advanced edge points to the larger coordinate `y+h_A`.  This is why an
-induction that only knows lower `y` is invalid.  The proof below is a first-
-passage renewal argument and never replaces `h_A` by a negative shift.
+The direct advanced edge points to the larger coordinate `y+h_A`; the parity
+lift is advanced plus one duplication and therefore has its own descending
+shift `y+h_L`.  This third letter is part of the renewal alphabet, not a
+notation change.  An induction that only knows lower `y` is still invalid for
+the direct edge, so the proof below is a first-passage renewal argument.
 
 For a path `p = (s_0,...,s_m)` with channel shifts `h_1,...,h_m`, write
 
@@ -133,11 +136,12 @@ the M0b composition rule.
 
 ### Lemma B — first passage through a base interval
 
-**Statement.** Let `I = [y_base, y_base+L]` with `L > 2`.  Assume the two shifts
-are `h_R=-2` and `h_A=alpha-1`, the core split graph is irreducible, and the
-row-wise inequality (2.1) holds at every complete-block row.  Let `P_I` be the
-family of paths whose partial sums start outside `I` and enter `I` for the
-first time at their final vertex.  Then, for every starting coordinate `y`,
+**Statement.** Let `I = [y_base, y_base+L]` with `L > 2`.  Assume the three
+shifts are `h_R=-2`, `h_A=alpha-1`, and `h_L=alpha-2`, the core split graph is
+irreducible, and the row-wise inequality (2.1) holds at every complete-block
+row.  Let `P_I` be the family of paths whose partial sums start outside `I`
+and enter `I` for the first time at their final vertex.  Then, for every
+starting coordinate `y`,
 
 ```text
 sum_{p in P_I(y)} W(p) * (1+delta)^|p| * rho_star^(H(p))
@@ -184,10 +188,10 @@ V_y >= (1-eta) * C_I * rho_star^(y-y_base).                       (B.2)
    already known.
 
 3. For a path with partial sums `u_j = y+h_1+...+h_j`, stop at the first `j`
-   for which `u_j in I`.  Since `|h_R|=2`, `0<h_A<1`, and `L>2`, a crossing
-   cannot jump over the whole base interval: the upward overshoot is less than
-   one and the downward overshoot is at most two.  Hence every first-entry
-   endpoint is genuinely in `I`.
+   for which `u_j in I`.  Since the largest upward jump is `h_A<1`, the
+   largest downward magnitude is `|h_R|=2`, and `L>2`, a crossing cannot jump
+   over the whole base interval.  The lift jump `h_L` is already descending.
+   Hence every first-entry endpoint is genuinely in `I`.
 
 4. Apply Lemma A to the stopped tree, indexed by complete paths from the root.
    Two paths with the same prefix share the population only up to their first
@@ -199,8 +203,10 @@ V_y >= (1-eta) * C_I * rho_star^(y-y_base).                       (B.2)
 5. The certified factor is now attached only to live rows.  A stopped path
    with `j` live compositions has the explicit factor `(1+delta)^j`; there is
    no claim that all paths have the same `j`.  Grouping by first-entry state
-   and by `(r,a)`, where `H(P)=-2r+(alpha-1)a`, gives the renewal classes.  The
-   irrationality of `alpha` makes distinct pairs have distinct net shifts.
+   and by `(r,a,l)`, where
+   `H(P)=-2r+(alpha-1)a+(alpha-2)l`, gives the renewal classes.  Equal net
+   shifts, if produced by different triples, are grouped and their
+   multiplicities add; no injectivity of the triple-to-shift map is assumed.
 
 6. The base interval has finite width and the core graph is irreducible.  A
    finite connecting path from every core state to a positive base state gives
@@ -236,11 +242,50 @@ stopping estimate.
 The implication `p0>0 => all live mass is geometrically exhausted` is **not**
 asserted here: positive advanced shifts can keep a path above the base.  The
 remaining paper obligation is the bounded-lag first-passage estimate that
-combines this `p0` share with the two-step downward jump, the `0<h_A<1`
-upward jump, and the frozen row weights to produce an explicit `n=O(y-y_base)`
+combines this `p0` share with the retarded downward jump of magnitude two, the
+lift downward jump `h_L`, the `0<h_A<1` upward jump, and the frozen row weights
+to produce an explicit `n=O(y-y_base)`
 cutoff and a remainder `E_y`.  Any proof of that estimate must cite (B.3), the
-finite `p0` audit, or a stated rational drift/renewal inequality; “the live
-paths die out” by itself is not accepted.
+   finite `p0` audit, or a stated rational drift/renewal inequality; “the live
+   paths die out” by itself is not accepted.
+
+### Perron-normalized drift audit
+
+Define the Doob–Perron row kernel from the frozen objects by
+
+```text
+q(s,t) = M_split(s,t) * w_t / sum_u M_split(s,u) * w_u.
+```
+
+The sterile `c=0` rows are excluded from `q` because they are `Q` rows.  Let
+`pi` be the stationary distribution of this finite core kernel and attach the
+three shifts to their channel edges.  The audit
+`scripts/f3_perron_drift_audit.py` reports
+
+```text
+mu = sum_s pi(s) sum_t q(s,t) h(s,t)
+   = -0.7831050099641175
+
+stationary channel shares:
+  retarded                 = 0.4153515469191942
+  advanced_direct_c2       = 0.29024911579817286
+  advanced_parity_lift_c1  = 0.2943993372826331
+stationary residual        = 1.734723475976807e-17
+```
+
+The published audit therefore passes the predeclared sign test
+`mu < 0` (`PASS_DRIFT_ROUTE`).  This value differs from the earlier scalar
+estimate `-0.4334`; that estimate is not substituted for the matrix audit.
+The discrepancy is recorded, not rounded away.  The reproducible matrix value
+is the one eligible for Lemma B.
+
+With the three bounded increments and this negative stationary drift, the
+remaining paper step is the standard finite-state Markov-additive first-
+passage estimate: construct the centered martingale, apply a bounded-
+increment Azuma/Freedman bound at `n = O(y-y_base)`, and convert the small
+survivor probability into an explicit weighted remainder `E_y`.  The theorem
+must state its constants and its dependence on the finite mixing/initial
+segment; `mu<0` alone is not a license to write “the live mass vanishes”.
 
 The proof therefore closes the tree bookkeeping and first-entry geometry, but
 Lemma B remains open precisely at this quantitative first-passage estimate,
@@ -292,9 +337,9 @@ The next paper checks are predeclared:
 1. publish the 243-state base-segment table and verify Lemma C;
 2. write the exact first-passage partition and no-double-charge invariant;
 3. prove the all-y sterile-ray and boundary counting bounds;
-4. prove the bounded-lag first-passage estimate using the audited `p0` (or
-   document a stronger rational drift inequality) and instantiate Lemma B with
-   an explicit eta<1;
+4. prove the bounded-lag first-passage estimate using the audited negative
+   `mu` (and an explicit finite-state concentration/mixing bound), then
+   instantiate Lemma B with an explicit eta<1;
 5. only then budget an M0 Lean renewal kernel.
 ```
 

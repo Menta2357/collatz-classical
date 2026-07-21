@@ -1,0 +1,28 @@
+{
+  "definition": "q(s,t)=M_split(s,t)*w_t / sum_u M_split(s,u)*w_u; mu=sum_s pi(s) sum_t q(s,t) h(channel)",
+  "core_state_count": 243,
+  "step_alphabet": {
+    "retarded": -2.0,
+    "advanced_direct_c2": "log2(3)-1",
+    "advanced_parity_lift_c1": "log2(3)-2"
+  },
+  "mu_decimal": -0.7831050099641175,
+  "channel_stationary_shares": {
+    "retarded": 0.4153515469191942,
+    "advanced_direct_c2": 0.29024911579817286,
+    "advanced_parity_lift_c1": 0.2943993372826331
+  },
+  "local_drift_min": -2.0,
+  "local_drift_max": 0.26022969445499045,
+  "stationary_residual": 1.734723475976807e-17,
+  "stationary_min": 0.0015444744582842145,
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "stop_condition": "PASS_DRIFT_ROUTE if mu < 0 else STOP_DRIFT_ROUTE",
+  "local_verdict": "PASS_DRIFT_ROUTE",
+  "status": "DIAGNOSTIC_INPUT_TO_LEMMA_B",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}
