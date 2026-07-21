@@ -1,0 +1,58 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.14",
+  "date": "2026-07-22",
+  "status": [
+    "SPLIT_EDGE_HOLDOUT_CONTRACT_PREDECLARED",
+    "Q_BOUNDARY_CALIBRATION_PUBLISHED",
+    "HOLDOUT_NOT_OPENED",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_CONTRACT.md",
+      "sha256": "d78ccc4dca867d29d737f9810748f53f910d4fb9ab12146cb6986969bec5d190"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_CALIBRATION_REPORT.md",
+      "sha256": "6ea9c9a4c4cf15f2f64a1493faa51fef93e0ca1b2d4da9724f552c71ec524ab2"
+    },
+    {
+      "path": "scripts/f3_return_excursion_split_edge_holdout_v1.py",
+      "sha256": "55c0fa1d47bfa84ed1d99cafff5cf8ed1f12e47fe60bd348fee93f2ca6996906"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/summary.json",
+      "sha256": "07859fb691bda44b0f46429f283f04284cbf65c1a57bce7acb4a14fc8ce01b47"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/split_state_counts.csv",
+      "sha256": "87f83e0f05a8447001a8737789baa64191a8dd60628c9857c53098d320337479"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/split_mismatches.csv",
+      "sha256": "b3eaed574bc528d5ba30594a40ac0b720c97719c8e829b8ccbc321dbe4841c4d"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/manifest_sha256.csv",
+      "sha256": "f25add86a2045302fe595c3a3a13c26d6d05873b61fedb8179851e5f9e9ae44d"
+    }
+  ],
+  "local_verdict": "Q_BOUNDARY_CALIBRATION_PUBLISHED",
+  "q_boundary_core_row_fraction": 0.08567293777134588,
+  "q_boundary_acceptance_budget": 0.029582817727073607,
+  "holdout_consumed": false,
+  "next_holdout_range_unopened": [
+    41473,
+    82945
+  ],
+  "non_claims": {
+    "no_holdout_result": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
