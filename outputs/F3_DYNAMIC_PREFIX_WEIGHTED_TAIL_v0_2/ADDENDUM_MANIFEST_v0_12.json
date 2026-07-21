@@ -1,0 +1,68 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.12",
+  "date": "2026-07-22",
+  "status": [
+    "CORE_HOLDOUT_PREDECLARED",
+    "HOLDOUT_FAIL_HOOK_MISMATCH",
+    "HOLDOUT_RANGE_BURNED",
+    "WEIGHTED_INEQUALITY_PASS_BUT_NOT_ACCEPTED",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_CORE_HOLDOUT_v1_CONTRACT.md",
+      "sha256": "e025d957bf40e41d47aa46c63fd7cdbbecbbd332ecf9924c98c8eb9de4febb49"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_CORE_HOLDOUT_v1_REPORT.md",
+      "sha256": "b2d8b44ed4b60cea599c80e1bc089bb23ae8f62e43edd08fd4ee8ad8df52ceab"
+    },
+    {
+      "path": "scripts/f3_return_excursion_core_holdout_v1.py",
+      "sha256": "5f9db767d5fe82eb3af303baac0d1cadc33675da7264c28c817fad0bdf380d96"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/summary.json",
+      "sha256": "cff8865a7e8bda3359ee14c02a429eeb4a2b1d480dcef6a0c7add49b92b47574"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/core_holdout_rows.csv",
+      "sha256": "a314f52b21d30815e943ebd838f5bc8e296099e80a31de08876e0575f74c1249"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/partition_mismatches.csv",
+      "sha256": "0b12795aae8db86d9094755e28fcdafb73165c02b912dd3355e7795a07ac1344"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/core_mismatches.csv",
+      "sha256": "425353a566df3ec06b71a7f23974b563c0fb37144de5bba6e96df5425fa9c4c4"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/weighted_state_summary.csv",
+      "sha256": "273da7b15b7eff781a859fcd3eb68fb741d86086128e01a4881aa22020329d10"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/manifest_sha256.csv",
+      "sha256": "5d8c8323560ce86f6b31bba2f33dde13f9a09a835ab0406ea900751e1e3cd60a"
+    }
+  ],
+  "local_verdict": "HOLDOUT_FAIL_HOOK_MISMATCH",
+  "holdout_consumed": true,
+  "holdout_range_burned": [
+    20737,
+    41473
+  ],
+  "weighted_ratio_lhs_over_rhs": 1.0047285335805172,
+  "partition_mismatch_count": 0,
+  "core_mismatch_count": 4644,
+  "non_claims": {
+    "no_candidate_certificate_empirical": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

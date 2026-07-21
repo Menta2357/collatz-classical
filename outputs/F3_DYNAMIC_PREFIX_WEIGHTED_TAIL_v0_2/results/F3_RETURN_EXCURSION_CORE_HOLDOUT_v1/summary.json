@@ -1,0 +1,56 @@
+{
+  "atom_tail_fraction": 0.0004112033560031922,
+  "channel_counts_core_rows": {
+    "advanced_direct_c2": 3456,
+    "advanced_parity_lift_c1": 3456,
+    "advanced_sterile_tail_c0": 3456
+  },
+  "core_mismatch_count": 4644,
+  "core_source_rows": 10368,
+  "core_state_support_touched": 135,
+  "delta": "1/100",
+  "elapsed_seconds": 127.70164937499794,
+  "excluded_source_rows": 10368,
+  "frozen_w_core_sha256": "ad4c4627f575f60911f3b943c92cd3937686f9924592dbf33f6e988d7a9dbb53",
+  "holdout_consumed": true,
+  "interval_half_open": [
+    20737,
+    41473
+  ],
+  "lhs_total_decimal": 92.19388298720824,
+  "local_verdict": "HOLDOUT_FAIL_HOOK_MISMATCH",
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "partition_mismatch_count": 0,
+  "phase_loss_fraction": 0.0,
+  "platform": "macOS-13.6.4-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 15.0.0 (clang-1500.1.0.2.5)]",
+  "q_fraction": 0.0004112033560031922,
+  "ratio_definition": "lhs_total / rhs_total, where rhs_total = sum_i count_i * (1+delta) * w_i",
+  "rhs_total_decimal": 91.75999278,
+  "root_rows": 20736,
+  "totals": {
+    "advanced_full": 75464835,
+    "advanced_phase_b": 75464835,
+    "atom_tail": 41472,
+    "phase_loss_tail": 0,
+    "q_total": 41472,
+    "retarded_visible": 25348901,
+    "target": 100855208,
+    "visible_total": 100813736
+  },
+  "unique_parent_roots": 6912,
+  "visible_capture_fraction": 0.9995887966439968,
+  "weighted_pass_ratio_ge_1": true,
+  "weighted_ratio_lhs_over_rhs": 1.0047285335805172,
+  "y_values": [
+    8,
+    9,
+    10
+  ]
+}
