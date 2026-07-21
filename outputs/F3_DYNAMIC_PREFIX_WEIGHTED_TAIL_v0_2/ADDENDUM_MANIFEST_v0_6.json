@@ -1,0 +1,54 @@
+{
+  "addendum": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2",
+  "date": "2026-07-21",
+  "status": "PRE_SPECTRAL_CANDIDATE_RECURRENCE_ORIENTATION_REQUIRED",
+  "scale_aware_operator_v1": {
+    "operator": "scale_aware_parent_to_child_orientation_audit",
+    "rho_star": "9/5",
+    "lambda_11_official": "71689/40000",
+    "state_count": 1089,
+    "edge_count": 1452,
+    "retarded_weight": "25/81",
+    "advanced_weight_formula": "rho_star^(log_2(3)-2)",
+    "advanced_weight_decimal": 0.7835240614003165,
+    "branch_sum_for_advanced_states_decimal": 1.0921660367089585,
+    "parent_to_child_spectral_radius": "25/81",
+    "local_verdict": "STOP_PARENT_TO_CHILD_ORIENTATION_REFORMULATE_RECURRENCE"
+  },
+  "tracked_files": [
+    {
+      "path": "scripts/f3_phase_b_scale_aware_operator_v1.py",
+      "sha256": "c5e8f05bc3b47ec2c269d322fc2e0844b0f6c2bb12a781fff2c7abe06410bbde"
+    },
+    {
+      "path": "F3_PHASE_B_SCALE_AWARE_OPERATOR_REPORT_v1.md",
+      "sha256": "5b9f401a5e501b589a0474b667f81c8f816abffb9eebd0d7fe5093da023d070c"
+    },
+    {
+      "path": "results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/summary.json",
+      "sha256": "e867bfc442bec94bad065c4b4a0ad73e9b881e2d1c9632c5ea32e872812d1cfc"
+    },
+    {
+      "path": "results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/manifest_sha256.csv",
+      "sha256": "71b92e7aaf4027819b868e7ee135584adce40cacd792c62dd93e84994625eb62"
+    }
+  ],
+  "next_gate": {
+    "name": "F3_PHASE_B_SCALE_AWARE_RECURRENCE_ORIENTATION_v0_2",
+    "reason": "parent-to-child matrix remains triangular by depth and cannot certify growth",
+    "must_choose": [
+      "child-to-parent recurrence",
+      "renewal/return operator",
+      "depth-collapsed operator with certified tail",
+      "another member-wise equivalent orientation"
+    ]
+  },
+  "non_claims": {
+    "no_lean_operator": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_k11_theorem_claim": true
+  }
+}
