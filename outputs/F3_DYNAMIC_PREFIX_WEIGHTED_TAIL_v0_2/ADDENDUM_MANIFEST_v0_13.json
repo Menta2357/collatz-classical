@@ -1,0 +1,76 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.13",
+  "date": "2026-07-22",
+  "status": [
+    "SPLIT_EDGE_CONTRACT_PREDECLARED",
+    "SPLIT_EDGE_FREEZE_PASS_HOLDOUT_READY",
+    "FROZEN_W_SPLIT_CORE_PUBLISHED",
+    "HOLDOUT_NOT_OPENED",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_v1_CONTRACT.md",
+      "sha256": "ee106236416a7251d514a3a5d526c579c07efece8ece03b064c69c515c00aede"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_v1_REPORT.md",
+      "sha256": "e52d71352500914b30eaa49953385f83f5542892b28952890aff190db2c943e2"
+    },
+    {
+      "path": "scripts/f3_return_excursion_split_edge_v1.py",
+      "sha256": "ebe28079cdb93af68bb0d17d398669f99138c721ab5941bbe840cc139a216734"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/summary.json",
+      "sha256": "43048b6783716d1bb8ccf867fa2d1f6739be73f86b5c4ea2f92cd32c746ccf88"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/split_edges.csv",
+      "sha256": "c4266676a06da0ffe376bb223fddce17f88b4c2bcebd4eaf049b73612b9c8278"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/split_tail_Q.csv",
+      "sha256": "4f627b25a99c0450ef53dbda5d8014b2980e0f299e3b15cadf6895be1ae5c235"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/scc_components.csv",
+      "sha256": "99ba9161c00e9790ab1a04ee57692aa71b1f6971e3ca7318e9c7f7ac38f3e6be"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/frozen_w_split_core.csv",
+      "sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/core_reverify_failures.csv",
+      "sha256": "224b70fc54f9825f1da5afc0bea741acf981409ed02666375a96d889adc171c8"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/manifest_sha256.csv",
+      "sha256": "7386fd3e211cc9f70a0570a2a470ed67eef1691f1338ce8fa6985620c8677cc1"
+    }
+  ],
+  "local_verdict": "SPLIT_EDGE_FREEZE_PASS_HOLDOUT_READY",
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "holdout_consumed": false,
+  "burned_ranges": [
+    [
+      20737,
+      41473
+    ]
+  ],
+  "next_holdout_range_eligible_if_review_accepts": [
+    41473,
+    82945
+  ],
+  "non_claims": {
+    "no_holdout_result": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
