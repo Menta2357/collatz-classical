@@ -1,0 +1,38 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.24",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_CONSOLIDATED_v2_0",
+    "PAPER_GATE_COMPLETE_PENDING_ADVERSARIAL_REVIEW",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_PAPER_CONSOLIDATED_v2_0.md",
+      "sha256": "cc47eefb22fc539953bfaf70f85d3d07eb4090ac48fed1d8502d9e457854665b"
+    },
+    {
+      "path": "F3_COMBINED_LEDGER_v1_REPORT.md",
+      "sha256": "6468ebed5268e3637d69bd1761c8a8f37a466926aab18fec402b28c7db801e3c"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1.json",
+      "sha256": "70f0c50f90a39b84fc2d8d615d942bcbbd620e4097dd96e8f5e9fc722c6cbe78"
+    }
+  ],
+  "eta_exact": "2734375/9565938",
+  "eta_decimal": 0.2858449427541763,
+  "final_coefficient": 0.02213880677462053,
+  "denominator_gate": "D_s(y)=rho_star^y identification is explicit and awaits adversarial review",
+  "next_gate": "ADVERSARIAL_REVIEW_F3_PAPER_CONSOLIDATED_v2_0",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
