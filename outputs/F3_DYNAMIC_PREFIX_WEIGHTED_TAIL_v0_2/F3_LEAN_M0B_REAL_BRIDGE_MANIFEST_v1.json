@@ -92,6 +92,21 @@
       "sha256": "35fca312c59c348dd21513366bd10edb5feca3c3ccd2d64d5aa6ddf20240dccb"
     },
     {
+      "bytes": 917,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RENEWAL_INTERFACE_v1/F3_RENEWAL_INTERFACE_REPORT_v1.md",
+      "sha256": "bf7665f4a233eaddfa579206c7bc39725d4abe602722a8f08211d0822f01d511"
+    },
+    {
+      "bytes": 160,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RENEWAL_INTERFACE_v1/interface_compile.txt",
+      "sha256": "cc0d40491c10c03f24839e8400e45d18e56c1d0eaeedec5854daab8870e6a880"
+    },
+    {
+      "bytes": 562,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RENEWAL_INTERFACE_v1/interface_axiom_audit.txt",
+      "sha256": "375348025a8bd2187ced689ddc9000ce53519d5dcfeb825f03df3742a49c7dae"
+    },
+    {
       "bytes": 1116,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_REAL_OPERATOR_INSTANCE_BUDGET_v1.md",
       "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
@@ -172,9 +187,9 @@
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 8146,
+      "bytes": 8723,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "f0039faa76bef922ec6db59c3b8f096dd8c98d99cf1f9a9b60a97f44feb06d3c"
+      "sha256": "84784da65624be3dd74cfeed0496e9ec779638d9bf9be84671ff743e5f50c5ca"
     },
     {
       "bytes": 6945,
@@ -210,6 +225,16 @@
       "bytes": 280,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionRealIterateBridgeAxiomAudit.lean",
       "sha256": "e4c75a6d61adec4ea60c301a20f682ef215345ddacf4eb5dfa177b7f6b8c9a35"
+    },
+    {
+      "bytes": 2026,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionRenewalInterface.lean",
+      "sha256": "9f0063eac907b517d3d65397866abee8578f233cd8d4b1f1d4e927e0baa9bd19"
+    },
+    {
+      "bytes": 344,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionRenewalInterfaceAxiomAudit.lean",
+      "sha256": "2600b61f1e89d9a1f7b167db3584ec074b866c28e2f5bf4bbe498abcfed5128d"
     },
     {
       "bytes": 128832,
@@ -307,6 +332,7 @@
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "real_operator_bridge": "REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
+    "renewal_interface": "REAL_RENEWAL_CONVERSION_INTERFACE_PASS_PATH_LEAKAGE_OPEN",
     "rho_certificate": "NO",
     "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
     "semantic_bridge": "RULE_TO_PISTAR_FINSET_CARD_BRIDGE_PASS_COVERAGE_OPEN",

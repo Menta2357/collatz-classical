@@ -1,0 +1,2 @@
+Command: `lake env lean -o /private/tmp/F3ReturnExcursionRenewalInterface.olean CollatzClassical/KL2003/F3ReturnExcursionRenewalInterface.lean`
+Result: EXIT 0.

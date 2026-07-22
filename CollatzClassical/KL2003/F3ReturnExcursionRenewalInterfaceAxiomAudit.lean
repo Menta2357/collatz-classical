@@ -1,0 +1,13 @@
+import CollatzClassical.KL2003.F3ReturnExcursionRenewalInterface
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3RenewalInterface
+
+#print axioms LeakageCertificate.lower_bound
+#print axioms LeakageCertificate.limit_lower_bound
+#print axioms qStar_leakage_certificate_lower_bound
+
+end F3RenewalInterface
+end KL2003
+end CollatzClassical
