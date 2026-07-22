@@ -59,7 +59,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/F3_CHANNEL_SCALAR_BOUNDS_REPORT_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/channel_compile.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/channel_axiom_audit.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/exact_matrix_channel_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/exact_matrix_channel_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionChannelBounds.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBounds.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBoundsAxiomAudit.lean",
 )
 
 
@@ -76,7 +80,7 @@ def main() -> None:
         records.append({"path": rel, "bytes": path.stat().st_size, "sha256": sha256(path)})
     payload = {
         "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
-        "base_commit": "1c460a4d76ab22944fae9498f5ad48a271d3db58",
+        "base_commit": "ad1a1d7b9eb8cf5af7250fff951537c17aeee0fe",
         "real_pilot_budget_seconds": 900,
         "operator_instance_budget_seconds": 600,
         "scope": [
@@ -88,7 +92,7 @@ def main() -> None:
             "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
             "semantic_bridge": "RULE_TO_PISTAR_BRIDGE_FINITE_INVENTORY_PASS",
             "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
-            "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED",
+            "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
             "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
             "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
             "real_operator_bridge": "REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN",

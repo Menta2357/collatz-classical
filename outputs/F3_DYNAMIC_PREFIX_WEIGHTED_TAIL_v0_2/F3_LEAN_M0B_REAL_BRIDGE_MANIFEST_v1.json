@@ -1,5 +1,5 @@
 {
-  "base_commit": "1c460a4d76ab22944fae9498f5ad48a271d3db58",
+  "base_commit": "ad1a1d7b9eb8cf5af7250fff951537c17aeee0fe",
   "files": [
     {
       "bytes": 1432,
@@ -162,9 +162,9 @@
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 7297,
+      "bytes": 7743,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "d1d7008db579dd5641e0d2ee06a40a5b06f7acd6b0020e9f12b0af887d7e3244"
+      "sha256": "445eb2db5815068ce2c276bbd65c348f0d8df268a9ad5bfacad9a2cfa1ee1df5"
     },
     {
       "bytes": 6945,
@@ -232,9 +232,9 @@
       "sha256": "c67817aee8495b0fe9ffc96757d09ce6950052b58eab938455a739335af87886"
     },
     {
-      "bytes": 1164,
+      "bytes": 1784,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/F3_CHANNEL_SCALAR_BOUNDS_REPORT_v1.md",
-      "sha256": "843d9e5a975c9703274a516e3b245b7ef4598574c3abb547748f73873664d042"
+      "sha256": "426f8ebbe07f102e7ed1de516b9b3f2de4a46173f62d1a05ff88e9100e9589d2"
     },
     {
       "bytes": 37,
@@ -247,9 +247,29 @@
       "sha256": "b26f49035a9fd103483f310e95b3a7b9706731b0205aa21808ce6466ea82a31d"
     },
     {
+      "bytes": 355,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/exact_matrix_channel_compile.txt",
+      "sha256": "dab95915218706beabb47ad5df9cb152abef8e0cc28583feca174937779c4343"
+    },
+    {
+      "bytes": 553,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/exact_matrix_channel_axiom_audit.txt",
+      "sha256": "483f162e134cd9a4398c63fb77a034d0fc4cf69ebfbc71eb5008ea6256ed58a3"
+    },
+    {
       "bytes": 3417,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionChannelBounds.lean",
       "sha256": "d42073cd0f5ec078baa5a0e36f1e12bdd8bfa03629484c4d42ac0992cef510c3"
+    },
+    {
+      "bytes": 894,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBounds.lean",
+      "sha256": "30f1bed5a415b6b725476997c44ef853d05d9cefce26e9965c7c0eaaa19f0e04"
+    },
+    {
+      "bytes": 336,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBoundsAxiomAudit.lean",
+      "sha256": "fafb014b7f074a81106d21da1d41865f6ce0009d81b13b0809395d1c403d7797"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -262,7 +282,7 @@
   ],
   "statuses": {
     "density_theorem": "NO",
-    "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED",
+    "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
     "global_collatz_claim": "NO",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "real_operator_bridge": "REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN",

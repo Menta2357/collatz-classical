@@ -1,0 +1,5 @@
+Command: `lake env lean -o /private/tmp/F3ReturnExcursionExactCoreMatrixChannelBounds.olean CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBounds.lean`
+Result: EXIT 0; real time 199.23 s.
+
+The compatibility module was compiled against the exact matrix definitions
+using the verified scalar bounds. It contains no row or matrix inequality.

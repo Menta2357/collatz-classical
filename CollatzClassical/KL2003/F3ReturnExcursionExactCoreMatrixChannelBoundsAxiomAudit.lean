@@ -1,0 +1,13 @@
+import CollatzClassical.KL2003.F3ReturnExcursionExactCoreMatrixChannelBounds
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3ExactCoreMatrix
+
+#print axioms exact_channelWeight_zero_eq
+#print axioms exact_channelWeight_one_lower
+#print axioms exact_channelWeight_two_lower
+
+end F3ExactCoreMatrix
+end KL2003
+end CollatzClassical

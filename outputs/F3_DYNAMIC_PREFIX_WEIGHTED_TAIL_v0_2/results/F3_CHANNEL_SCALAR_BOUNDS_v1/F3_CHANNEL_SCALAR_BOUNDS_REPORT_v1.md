@@ -1,6 +1,6 @@
 # F3 scalar channel bounds — informe v1
 
-Estado: `SCALAR_CHANNEL_BOUNDS_PASS_MATRIX_REDUCTION_OPEN`.
+Estado: `SCALAR_CHANNEL_BOUNDS_PASS_EXACT_DEFINITION_COMPATIBILITY_PASS_MATRIX_REDUCTION_OPEN`.
 
 El módulo Lean `F3ReturnExcursionChannelBounds.lean` prueba, para
 `rho★ = 9/5` y `alpha = log(3)/log(2)`:
@@ -26,5 +26,15 @@ la acción izquierda congelada se reduce exactamente a las tres clases de
 entrada (retarded, direct y lift). Hasta entonces el certificado
 `leftCertificate` sigue abierto y no hay certificado de `rho` ni teorema de
 densidad.
+
+La compatibilidad nominal con las definiciones exactas sí está ahora
+verificada por `F3ReturnExcursionExactCoreMatrixChannelBounds.lean`: las tres
+cotas se reexpresan sobre `channelWeight`, `rhoStar` y `alpha` del módulo de
+la matriz exacta. El módulo no afirma ninguna desigualdad de fila ni suma
+sobre las 243 entradas; por eso esta conexión no cierra aún la reducción
+combinatoria ni cambia el estado de `leftCertificate`.
+
+La auditoría de axiomas del módulo de compatibilidad termina con código 0 y
+solo `[propext, Classical.choice, Quot.sound]`; no aparece `sorryAx`.
 
 No se declara resultado global de Collatz ni claim “almost all”.
