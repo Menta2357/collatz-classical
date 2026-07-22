@@ -15,6 +15,8 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_REAL_PILOT_v1/F3_LEAN_M0B_REAL_PILOT_REPORT_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_REAL_PILOT_v1/pilot_compile.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_REAL_PILOT_v1/axiom_audit.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_REAL_PILOT_v1/pilot_compile_latest.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_REAL_PILOT_v1/axiom_audit_latest.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/F3_SEMANTIC_BRIDGE_REPORT_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/bridge_compile.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/axiom_audit.txt",
