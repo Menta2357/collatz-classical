@@ -1,0 +1,48 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.28",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_GATE_PASS",
+    "PAPER_GATE_PASS_CONTENT",
+    "PAPER_GATE_PASS_FORM",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "DOUBLET_PR_FIRST",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_PAPER_CONSOLIDATED_v3_0.md",
+      "sha256": "8349a50bb24dff47b43f771b5365c2acbf00e90e0661088c9163cb58dca789c8"
+    },
+    {
+      "path": "scripts/f3_nblock_memberwise_lemma_v1.py",
+      "sha256": "dd99acde8b844825cd2f389cf67dd161c5d29f9d8c10ccf199fd6e9d22ccf050"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/nblock_memberwise_lemma_v1.json",
+      "sha256": "25f3a2609e0167ebc0d816cbf2ec56470e782b1d57f5f68abddb28451d0a7f3f"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1_2.json",
+      "sha256": "e5fb99533dbadb8554a88713730452453d925a0ce26b6e21475ece44c3c79460"
+    }
+  ],
+  "paper_gate": {
+    "C1_self_contained_v3": true,
+    "C1_q_derivation_inside_lemma_V": true,
+    "C2_omega_independence_appendix": true,
+    "selected_eta": "202/443",
+    "omega_fallback_eta": 0.5529656687661839,
+    "fine_margin": "24341/24300",
+    "net_gain": "41/24300"
+  },
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
