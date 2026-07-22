@@ -1,0 +1,49 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.26",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_GATE_REOPENED_D3_ROUTE_COMPARISON",
+    "ROUTE_I_OMEGA_AGGREGATE_NUMERIC_PASS",
+    "ROUTE_II_NUMERIC_PASS_PENDING_MEMBERWISE_DENOMINATOR_LEMMA",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_COMBINED_LEDGER_v1_2_REPORT.md",
+      "sha256": "46d0652d36b3487998061a0fea84be939789765ce40816ac97e511b841e58ec3"
+    },
+    {
+      "path": "scripts/f3_combined_ledger_v1_2.py",
+      "sha256": "1077909d35a7b317a649fa9555e4e5ffa2240548fe9b6b3cc016601332b1fbcd"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1_2.json",
+      "sha256": "e5fb99533dbadb8554a88713730452453d925a0ce26b6e21475ece44c3c79460"
+    },
+    {
+      "path": "F3_PAPER_CONSOLIDATED_v2_2.md",
+      "sha256": "058aed01536631984567868672a1c8147e8103b7bf31fd45ff2610aa4526ac90"
+    }
+  ],
+  "D3": {
+    "route_i_eta": 0.5529656687661839,
+    "route_i_status": "PASS_OMEGA_AGGREGATE",
+    "route_i_extra_cell_guard_eta": 1.6588970062985515,
+    "route_i_extra_cell_guard_status": "STOP_DOUBLE_COUNT_GUARD",
+    "route_ii_eta_per_row": "202/443",
+    "route_ii_eta_per_row_decimal": 0.45598194130925507,
+    "route_ii_extra_cell_eta": "606/443",
+    "route_ii_extra_cell_status": "STOP",
+    "selected_route": "II_PER_ROW_ROUTE_I_ALSO_NUMERIC_PASS_PENDING_MEMBERWISE_DENOMINATOR_LEMMA"
+  },
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true,
+    "no_paper_gate_complete": true
+  }
+}
