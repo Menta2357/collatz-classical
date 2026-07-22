@@ -1,6 +1,7 @@
 # F3 M0-b Real pilot — presupuesto separado v1
 
-Estado: `OPEN_REAL_ONLY_PILOT`; no reutiliza el presupuesto racional M0-a.
+Estado: `REAL_RENEWAL_INTERFACE_PASS_PATH_LEAKAGE_OPEN`; no reutiliza el
+presupuesto racional M0-a.
 
 Base congelada:
 
@@ -22,6 +23,12 @@ No se añaden filas del operador, no se reabre el checker racional y no se
 formalizan todavía Doob, Chernoff, caminos del árbol ni la interpretación de
 `rho★` como crecimiento de `piStar`. Esta fase mide exclusivamente el lema
 analítico en `Real`.
+
+El piloto inicial pasó y ahora está encapsulado por
+`F3ReturnExcursionRenewalInterface.lean`: la conversión queda demostrada
+cuando se entrega un `LeakageCertificate`. La producción de ese certificado
+desde caminos F3 permanece abierta; esta separación evita convertir una
+hipótesis de fuga en un resultado sobre el operador.
 
 ## Presupuesto y gate
 
