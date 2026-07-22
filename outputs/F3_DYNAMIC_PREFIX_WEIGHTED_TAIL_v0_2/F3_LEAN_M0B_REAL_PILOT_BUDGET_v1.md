@@ -49,7 +49,8 @@ racional y exige una causa escrita antes de cualquier reformulación.
 NO_RHO_CERTIFICATE = true
 NO_DENSITY_THEOREM = true
 NO_GLOBAL_COLLATZ_CLAIM = true
-NO_RENEWAL_CONVERSION_THEOREM = true
+NO_F3_RENEWAL_CONVERSION_THEOREM = true
+NO_OPERATOR_TO_PISTAR_GROWTH_THEOREM = true
 ```
 
 El resultado esperado, incluso con `PASS`, es `REAL_RENEWAL_LEMMA_PILOT` y

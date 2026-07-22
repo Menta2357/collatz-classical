@@ -42,7 +42,7 @@ producen dicha fuga.
 La auditoría queda dentro de `[propext, Classical.choice, Quot.sound]` y no
 usa `sorryAx`. El estado no sube a certificado de `rho`: permanecen
 `NO_RHO_CERTIFICATE`, `NO_DENSITY_THEOREM`, `NO_GLOBAL_COLLATZ_CLAIM` y
-`NO_RENEWAL_CONVERSION_THEOREM`.
+`NO_F3_RENEWAL_CONVERSION_THEOREM` and `NO_OPERATOR_TO_PISTAR_GROWTH_THEOREM`.
 
 ## Ledger de implementación
 
