@@ -1,0 +1,28 @@
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.qStar_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.qStar_lt_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.qStar_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.eta_row_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.geometric_telescoping_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.renewal_conversion_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.renewal_retained_mass_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.renewal_conversion_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ReturnExcursionM0BReal.qStar_conversion_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+real 11.94
+user 1.94
+sys 1.50

@@ -1,0 +1,11 @@
+import CollatzClassical.KL2003.F3ReturnExcursionFrozenSemanticInventory
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3SemanticInventory
+
+#print axioms semantic_rule_piStar
+
+end F3SemanticInventory
+end KL2003
+end CollatzClassical

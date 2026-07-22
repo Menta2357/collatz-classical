@@ -1,0 +1,14 @@
+import CollatzClassical.KL2003.F3ReturnExcursionSemanticBridge
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3SemanticBridge
+
+#print axioms two_branch_parity_lift_injection
+#print axioms frozen_rule_preserves
+#print axioms realized_row_channel_is_rule
+#print axioms realized_row_piStar_bridge
+
+end F3SemanticBridge
+end KL2003
+end CollatzClassical

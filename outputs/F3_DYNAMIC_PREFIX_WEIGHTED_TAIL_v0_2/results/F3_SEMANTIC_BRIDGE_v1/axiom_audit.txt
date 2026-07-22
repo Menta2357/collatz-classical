@@ -1,0 +1,13 @@
+'CollatzClassical.KL2003.F3SemanticBridge.two_branch_parity_lift_injection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3SemanticBridge.frozen_rule_preserves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3SemanticBridge.realized_row_channel_is_rule' does not depend on any axioms
+'CollatzClassical.KL2003.F3SemanticBridge.realized_row_piStar_bridge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+real 3.88
+user 1.01
+sys 0.86

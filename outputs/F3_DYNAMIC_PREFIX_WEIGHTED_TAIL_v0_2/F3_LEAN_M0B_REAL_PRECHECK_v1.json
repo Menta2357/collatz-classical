@@ -1,0 +1,14 @@
+{
+  "schema": "F3_LEAN_M0B_REAL_PRECHECK_v1",
+  "timestamp_local": "2026-07-22",
+  "base_commit": "515221dbf60dfff3a13da85fec423eb88fc028a8",
+  "disk_available_bytes": 36205109248,
+  "disk_available_gib": 33.71863555908203,
+  "disk_minimum_required_gib": 12.0,
+  "disk_status": "PASS",
+  "physical_memory_gib": 8.0,
+  "free_inactive_speculative_estimate_gib": 1.6661834716796875,
+  "memory_status": "PASS_WITH_PRESSURE_NOTE",
+  "toolchain_status": "READY",
+  "policy": "STOP_AND_RECORD"
+}
