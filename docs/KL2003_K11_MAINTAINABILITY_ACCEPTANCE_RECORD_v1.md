@@ -46,7 +46,7 @@ optimized_elapsed_seconds = 211.37
 single_shard_reduction = 44.7%
 ```
 
-The complete post-optimization cold total is **not available**. Two clean-up
+The complete post-optimization cold total is **not measured**. Two clean-up
 and rerun attempts were classified as environmental/non-comparable rather than
 silently folded into a total:
 
@@ -63,8 +63,20 @@ The previous complete controlled total remains the only complete total:
 controlled_recovery_total_seconds = 5286.696696
 ```
 
-Thus this record does not claim a fabricated post-optimization total or a
-maintainability PASS. The full cold rerun is classified
+For orientation only, applying the measured shard reduction to the previous
+aggregate suggests roughly `2900--3500 s`; this is an extrapolation, not a
+measurement and is not used as the final budget number.
+
+Thus this record reports both statuses explicitly:
+
+```text
+total_measured_pre_optimization = 5286.696696 s
+improvement_measured_on_heavy_shard = -44.7%
+total_post_optimization = NOT_MEASURED
+post_optimization_projection = ~2900--3500 s (extrapolation only)
+```
+
+The full cold rerun is classified
 `K11_FULL_COLD_RERUN_NOT_REPRODUCIBLE_IN_CURRENT_ENVIRONMENT`.
 
 ### Decision
@@ -77,8 +89,10 @@ while retaining the budget failure in the public ledger and fidelity package.
 
 Reopen the budget only if a separately scoped engineering project introduces a
 verified arithmetic checker, a different rational representation, or a finer
-sharding/CI policy with a fresh predeclared budget. No further micro-tuning is
-implicitly promised by this record.
+sharding/CI policy with a fresh predeclared budget. If the asterisk is reopened,
+the first required action is one complete post-optimization rerun in an
+environment with enough disk and memory to produce a measured total. No further
+micro-tuning is implicitly promised by this record.
 
 ## Scope and guardrails
 

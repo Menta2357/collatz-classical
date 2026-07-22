@@ -13,6 +13,11 @@
     "reduction_percent": 44.7
   },
   "post_optimization_full_cold_total_seconds": null,
+  "post_optimization_projection_seconds": {
+    "lower": 2900,
+    "upper": 3500,
+    "status": "EXTRAPOLATION_ONLY"
+  },
   "post_optimization_rerun_status": "K11_FULL_COLD_RERUN_NOT_REPRODUCIBLE_IN_CURRENT_ENVIRONMENT",
   "rerun_observations": {
     "data_shards_rebuilt": 81,
@@ -21,7 +26,7 @@
     "free_disk_gib_at_sequential_start": 12.141
   },
   "decision": "K11_RESOURCE_BUDGET_ARCHITECTURE_FAIL_ACCEPTED",
-  "exit_condition": "Reopen only as a separately scoped verified-checker, representation, or finer-sharding/CI project with a fresh budget.",
+  "exit_condition": "If reopened, first perform one complete post-optimization rerun in an environment with enough disk and memory to measure the total; any verified-checker, representation, or finer-sharding/CI redesign gets a fresh budget.",
   "theorem_statement_changed": false,
   "certificate_data_changed": false,
   "global_collatz_claimed": false
