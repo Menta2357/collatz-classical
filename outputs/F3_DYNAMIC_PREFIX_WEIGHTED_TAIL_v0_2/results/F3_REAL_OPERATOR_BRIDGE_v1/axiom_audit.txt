@@ -1,0 +1,13 @@
+'CollatzClassical.KL2003.F3RealOperatorBridge.weighted_mass_push_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3RealOperatorBridge.weighted_mass_push_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3RealOperatorBridge.push_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3RealOperatorBridge.weighted_mass_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+real 1.66
+user 1.11
+sys 0.53

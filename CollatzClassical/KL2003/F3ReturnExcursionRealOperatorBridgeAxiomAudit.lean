@@ -1,0 +1,14 @@
+import CollatzClassical.KL2003.F3ReturnExcursionRealOperatorBridge
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3RealOperatorBridge
+
+#print axioms weighted_mass_push_identity
+#print axioms weighted_mass_push_lower_bound
+#print axioms push_nonneg
+#print axioms weighted_mass_nonneg
+
+end F3RealOperatorBridge
+end KL2003
+end CollatzClassical
