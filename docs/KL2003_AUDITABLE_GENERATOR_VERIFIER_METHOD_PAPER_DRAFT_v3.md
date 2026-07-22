@@ -51,8 +51,9 @@ docs/KL2003_META_ERRATA_M1_PHI5_REINSTATEMENT_v1.md
 docs/KL2003_F2_K9_KERNEL_INTEGRATION_BUDGET_AND_COST_LEDGER_v1.md
 docs/KL2003_K11_PISTAR_THEOREM_FINAL_v1.md
 docs/KL2003_K11_REAL_LEAN_CHECKER_RESULT_v1.md
-docs/KL2003_K11_REAL_CERTIFICATE_METRICS_RESULT_v1.md
 CollatzClassical/KL2003/KL2003K11PiStarTheorem.lean
+CollatzClassical/KL2003/KL2003K11ClassRootsAxiomAudit.lean
+CollatzClassical/KL2003/KL2003K11LNTCertificateAxiomAudit.lean
 CollatzClassical/KL2003/KL2003K11PiStarTheoremAxiomAudit.lean
 outputs/KL2003_F2_K3_GENERATOR_REAL_v1/generation_summary.json
 outputs/KL2003_F2_K9_LNT_MEASUREMENT_v1/generation_summary.json
@@ -245,6 +246,8 @@ Pointers:
 
 ```text
 CollatzClassical/KL2003/KL2003K11PiStarTheorem.lean
+CollatzClassical/KL2003/KL2003K11ClassRootsAxiomAudit.lean
+CollatzClassical/KL2003/KL2003K11LNTCertificateAxiomAudit.lean
 CollatzClassical/KL2003/KL2003K11PiStarTheoremAxiomAudit.lean
 docs/KL2003_K11_PISTAR_THEOREM_FINAL_v1.md
 outputs/KL2003_F2_K11_LNT_MEASUREMENT_v1/generation_summary.json

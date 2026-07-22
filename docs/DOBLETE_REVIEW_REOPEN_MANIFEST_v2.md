@@ -30,7 +30,7 @@ Current artifact hashes:
 
 ```text
 KL2003_AUDITABLE_GENERATOR_VERIFIER_METHOD_PAPER_DRAFT_v3.md
-  6b57649195bb5b90934f5c53947c5f3872f9bdc7ff961c41945c2ebdc0ff4560
+  10530c9496f13866a259cb5c8bf9ae5656f497e3c1ae92e19e126db4aa26eb96
 ```
 
 ## Master-grounded k=11 facts
