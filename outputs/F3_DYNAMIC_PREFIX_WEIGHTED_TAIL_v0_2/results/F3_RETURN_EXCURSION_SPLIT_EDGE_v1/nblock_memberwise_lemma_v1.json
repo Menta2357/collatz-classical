@@ -1,0 +1,88 @@
+{
+  "lemma": "F3_NBLOCK_MEMBERWISE_LEMMA_v1",
+  "status": "COUNTING_AUDIT",
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "parameters": {
+    "d0": 5,
+    "d_fine": 6,
+    "state_period_3adic": 729,
+    "fine_period_with_2adic_reticle": 2916,
+    "fine_lift_density": "1/3",
+    "boundary_roots": 2,
+    "delta": "1/100",
+    "rho_star": "9/5"
+  },
+  "arithmetic_derivation": {
+    "formula": "3^6 * (1/3) = 3^5",
+    "derived_n_block_exact": "243/1",
+    "admissible_residue_classes": 81,
+    "bucket_reticle_types": 3,
+    "state_product": 243,
+    "arithmetic_pass": true
+  },
+  "frozen_state_enumeration": {
+    "frozen_state_count": 243,
+    "expected_state_count": 243,
+    "state_set_equal": true,
+    "residue_group_count": 81,
+    "residue_group_size_min": 3,
+    "residue_group_size_max": 3,
+    "residue_groups_are_three_reticles": true,
+    "representative_count_total": 729,
+    "representatives_distinct": true,
+    "per_lift_counts": {
+      "0": 243,
+      "1": 243,
+      "2": 243
+    },
+    "per_lift_counts_exact_243": true,
+    "per_state_three_lifts": true,
+    "representative_mismatch_count": 0,
+    "enumeration_pass": true
+  },
+  "threshold_and_margin": {
+    "N_block": 243,
+    "minimum_N_block_strict": 203,
+    "threshold_formula": "N_block > 202, hence integer N_block >= 203",
+    "epsilon_exact": "2/243",
+    "net_factor_exact": "24341/24300",
+    "net_gain_exact": "41/24300",
+    "net_factor_decimal": 1.0016872427983539,
+    "net_gain_percent": 0.16872427983539096,
+    "threshold_pass": true
+  },
+  "omega_fallback": {
+    "eta_omega": 0.5529656687661839,
+    "eta_omega_formula": "[2/(9/5)^8] / (1 - (1+delta)*Perron(2.5))",
+    "eta_omega_pass": true,
+    "tested_unused_N_block_values": [
+      81,
+      203,
+      243,
+      729
+    ],
+    "eta_by_unused_N_block": {
+      "81": 0.5529656687661839,
+      "203": 0.5529656687661839,
+      "243": 0.5529656687661839,
+      "729": 0.5529656687661839
+    },
+    "independent_of_N_block": true,
+    "fallback_status": "AVAILABLE"
+  },
+  "route_ii_verdict": "PASS",
+  "local_verdict": "PASS_NBLOCK_MEMBERWISE_LEMMA_ROUTE_II_READY_FOR_FINAL_REVIEW",
+  "remaining_protocol": "append this lemma and the 24341/24300 margin to consolidated v2.2; then adversarial final review before any Lean budget",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_ALMOST_ALL",
+    "NO_GLOBAL_COLLATZ_CLAIM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "inputs": {
+    "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+    "ledger_v1_2_sha256": "e5fb99533dbadb8554a88713730452453d925a0ce26b6e21475ece44c3c79460",
+    "uniform_q_bounds_sha256": "c2a8c884178ceb864b447abd5b7828e571a23094741cd6e5b9f6256277864012"
+  }
+}

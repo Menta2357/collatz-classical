@@ -67,18 +67,53 @@ Route (ii) has the larger margin and is selected, but only under the explicit
 denominator lemma that `N_block` already is the complete per-row block. That
 lemma prevents charging the same composition-cell loss twice.
 
-## 3. Paper status
+## 3. N_block member-wise lemma
+
+The remaining count is now audited by two independent constructions. With
+`d0=5` and `D_fine=6`, a fixed fine fibre has density `1/3` in the period
+`3^6`, so
 
 ```text
-PAPER_GATE_REOPENED_D3_ROUTE_II_SELECTED_ROUTE_I_ALSO_NUMERIC_PASS
+N_block = 3^6*(1/3) = 3^5 = 243.
+```
+
+Equivalently, the frozen state space has `3^4=81` admissible residue classes
+and three parity/nu2 reticle types per residue, again giving `81*3=243`.
+Exhaustive enumeration of the frozen vector confirms `243` states, `81`
+three-state residue groups, and exactly `243` representatives in each of the
+three fine-lift fibres; all `729` representatives are distinct and have zero
+state/fibre mismatches.
+
+The threshold is explicit:
+
+```text
+(1+1/100)(1-2/N_block) > 1
+iff N_block >= 203.
+```
+
+At `N_block=243`,
+
+```text
+(1+delta)(1-epsilon) = (101/100)(241/243)
+                         = 24341/24300,
+net gain = 41/24300 = 0.16872427983539096% per step.
+```
+
+The Omega fallback remains independent of `N_block`; recomputing it for
+`N_block` values `81,203,243,729` returns the same
+`eta_Omega=0.5529656687661839<1`.
+
+## 4. Paper status
+
+```text
+PAPER_GATE_READY_FOR_ADVERSARIAL_FINAL_REVIEW
+ROUTE_II_NBLOCK_LEMMA_PASS
 ROUTE_I_OMEGA_AGGREGATE_NUMERIC_PASS
-ROUTE_II_NUMERIC_PASS_PENDING_MEMBERWISE_DENOMINATOR_LEMMA
 NO_FORMAL_RHO_CERTIFICATE
 NO_DENSITY_THEOREM
 NO_LEAN_OPERATOR
 ```
 
-The next paper action is to state and review the per-row denominator lemma.
-Only after it passes may the combined ledger be reinstated and the paper move
-to the adversarial review of the complete document. No holdout number is used
-as a hypothesis.
+The next paper action is the adversarial final review of this consolidated
+document. Only after that review may a Lean budget be written. No holdout
+number is used as a hypothesis.

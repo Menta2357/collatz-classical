@@ -1,0 +1,49 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.27",
+  "date": "2026-07-22",
+  "status": [
+    "F3_NBLOCK_MEMBERWISE_LEMMA_PASS",
+    "PAPER_GATE_READY_FOR_ADVERSARIAL_FINAL_REVIEW",
+    "ROUTE_II_SELECTED_ROUTE_I_FALLBACK_INDEPENDENT",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_NBLOCK_MEMBERWISE_LEMMA_v1_REPORT.md",
+      "sha256": "1f52a5ed6c74e7868818c29c9a67d66905b475678d08a81aaf49c562142acc45"
+    },
+    {
+      "path": "scripts/f3_nblock_memberwise_lemma_v1.py",
+      "sha256": "dd99acde8b844825cd2f389cf67dd161c5d29f9d8c10ccf199fd6e9d22ccf050"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/nblock_memberwise_lemma_v1.json",
+      "sha256": "25f3a2609e0167ebc0d816cbf2ec56470e782b1d57f5f68abddb28451d0a7f3f"
+    },
+    {
+      "path": "F3_PAPER_CONSOLIDATED_v2_2.md",
+      "sha256": "09388cb00d84f31539014058f361297ae9fbf70b520f0bfb706ad9037cca95f7"
+    }
+  ],
+  "arithmetic": {
+    "fine_period_3adic": 729,
+    "fine_lift_density": "1/3",
+    "N_block": 243,
+    "minimum_N_block_strict": 203,
+    "net_factor": "24341/24300",
+    "net_gain": "41/24300"
+  },
+  "omega_fallback": {
+    "eta": 0.5529656687661839,
+    "independent_of_N_block": true
+  },
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}
