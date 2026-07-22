@@ -4,7 +4,12 @@ Espejo vivo de `docs/POSITIONS_LEDGER_v1.md`. Se actualiza en cada sesion
 de coordinacion; el ledger guarda el historial, este archivo solo el presente.
 
 ```
-FASE ACTUAL:          Carril A en espera humana + KL2003 k=11 theorem complete
+FASE ACTUAL:          Dobleto abierto; Carril A en espera humana + KL2003 k=11 theorem complete
+
+DOBLETE:              docs/DOBLETE_OPENING_MANIFEST_v1.md
+  PIEZA 1 = Eliahou audit consequence-only, draft pending hostile review
+  PIEZA 2 = KL2003 generator-verifier method paper, draft pending hostile review
+  ORDEN = doblete primero; presupuesto Lean F3 todavía no abierto
 
 HILO A (CC Challenge): ELIAHOU1993_HUMAN_DECISION_HOLD   UPSTREAM_RESPONSE_PENDING
 HILO B (Krasikov M1):  K11_PISTAR_ARBITRARY_X_THEOREM_PROVED   CUSTODIED_PENDING_EXTERNAL_REVIEW
