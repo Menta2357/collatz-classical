@@ -1,0 +1,32 @@
+{
+  "schema": "F3_LEAN_M0_PRECHECK_v1",
+  "timestamp_local": "2026-07-22",
+  "base_commit": "98d073a07e6be26d9748049f353605579847b0e4",
+  "worktree": "/Users/MoiTam/Documents/Codex/2026-07-21/f3-density-update",
+  "branch": "codex/f3-density-capture-gate",
+  "disk": {
+    "path": "/Users/MoiTam/Documents/Codex/2026-07-21/f3-density-update",
+    "available_bytes": 36343033856,
+    "available_gib": 33.84708786010742,
+    "minimum_required_gib": 12.0,
+    "status": "PASS"
+  },
+  "memory": {
+    "physical_gib": 8.0,
+    "free_pages": 3147,
+    "inactive_pages": 78486,
+    "speculative_pages": 1513,
+    "page_size_bytes": 16384,
+    "free_plus_reclaimable_estimate_gib": 1.268707275390625,
+    "status": "PASS_WITH_PRESSURE_NOTE",
+    "note": "The environment exposes 8 GiB physical memory and approximately 1.27 GiB free/inactive/speculative pages at precheck. No separate minimum-memory budget was authorized; resource rejection or allocation failure is STOP_AND_RECORD."
+  },
+  "toolchain": {
+    "lean_toolchain_file_present": true,
+    "lakefile_present": true,
+    "lake_manifest_present": true,
+    "status": "READY_FOR_SCOPED_RUN"
+  },
+  "overall": "PASS_WITH_PRESSURE_NOTE",
+  "policy": "STOP_AND_RECORD"
+}

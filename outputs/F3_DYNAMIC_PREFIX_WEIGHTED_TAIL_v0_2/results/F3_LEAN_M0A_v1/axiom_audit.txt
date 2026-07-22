@@ -1,0 +1,16 @@
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.nBlock_eq_243' depends on axioms: [propext]
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.supersolution_row_count' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.supersolution_rows_positive' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.supersolution_rows_pass' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.split_edge_count' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.split_edges_valid' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.channel_count_retarded' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.channel_count_advanced_direct' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.channel_count_advanced_lift' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.channel_count_sterile_tail' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.channel_count_total' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.frozen_vector_hash_is_recorded' does not depend on any axioms
+'CollatzClassical.KL2003.F3ReturnExcursionM0A.frozen_weight_hash_is_recorded' does not depend on any axioms
+real 4.59
+user 0.88
+sys 0.79

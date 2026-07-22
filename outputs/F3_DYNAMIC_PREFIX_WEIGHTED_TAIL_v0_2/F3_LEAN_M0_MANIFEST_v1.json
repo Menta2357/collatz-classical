@@ -1,0 +1,94 @@
+{
+  "base_commit": "98d073a07e6be26d9748049f353605579847b0e4",
+  "budgets": {
+    "global_seconds": 2400,
+    "m0a_seconds": 1800,
+    "m0b_pilot_seconds": 600
+  },
+  "files": [
+    {
+      "bytes": 3796,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0_BUDGET_v1.md",
+      "sha256": "b754fc69c0f1e387b5dfa97cd311af6e9af7a9f0c53fd2a59e2a8a7c9b176c66"
+    },
+    {
+      "bytes": 1219,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0_PRECHECK_v1.json",
+      "sha256": "8b26b5e5c11c03c2ba510a3c9a3e0e80e20cc97fe66f776f9800796840088e6f"
+    },
+    {
+      "bytes": 793,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0A_GENERATION_SUMMARY_v1.json",
+      "sha256": "6fd4c424dd9887d6aa687ca1166848cdb0dcbc4ee006ea6f18fc3e3792242135"
+    },
+    {
+      "bytes": 6821,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0_generate_certificate.py",
+      "sha256": "9ca744fce56bd0e9a12235d4670fa790510f772dd24542c5f49f31b86f8e299d"
+    },
+    {
+      "bytes": 3340,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0_manifest_v1.py",
+      "sha256": "2ad00ebc705c62b50715f9f9d1ff0293b26def65b91a38f3924fb2cc73b10d51"
+    },
+    {
+      "bytes": 2184,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0A_v1/F3_LEAN_M0A_REPORT_v1.md",
+      "sha256": "5a2275eddb9ebe2f934fd3858d97f6a89c5dbb1ca06f446d1819e6e009f6c1bd"
+    },
+    {
+      "bytes": 1344,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0A_v1/axiom_audit.txt",
+      "sha256": "3224e353b43d5992dd159fef86aa464b73f9f6ee81ec23e7fbec21e9f4d05ad4"
+    },
+    {
+      "bytes": 31,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0A_v1/certificate_compile.txt",
+      "sha256": "ec9238224d16078645f52889c91b1bab9065115b365026090bcaa2c757d04d0c"
+    },
+    {
+      "bytes": 1297,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_PILOT_v1/F3_LEAN_M0B_PILOT_REPORT_v1.md",
+      "sha256": "2311bb22e4d0a516d60e6b8e8262e39f7858e9f70fe443ad8acc76353c812b56"
+    },
+    {
+      "bytes": 541,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_PILOT_v1/axiom_audit.txt",
+      "sha256": "b05a8de8452681f59c28b0f3a76559053c8e624118b3c1b639a076c122a7c5ee"
+    },
+    {
+      "bytes": 29,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEAN_M0B_PILOT_v1/pilot_compile.txt",
+      "sha256": "c822081057baa1a311710a9ef07e0ea25580b907193ba50299a54021d822536f"
+    },
+    {
+      "bytes": 118413,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionM0ACertificate.lean",
+      "sha256": "3b19c71cdac8589030ccd0aafdb8da332942c5ad2e2b32194d440617c0d9134f"
+    },
+    {
+      "bytes": 695,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionM0ACertificateAxiomAudit.lean",
+      "sha256": "7c48838647f2655fe510cc5f33bab60720ee01d3e7b763f7af62b180185ea36c"
+    },
+    {
+      "bytes": 1332,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionM0BPilot.lean",
+      "sha256": "237ff41a9a98b7b3c1040ba75a6094be24e45680544c38507ca3b250a6e794bc"
+    },
+    {
+      "bytes": 330,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionM0BPilotAxiomAudit.lean",
+      "sha256": "6896e292ac82cd76fcbcbe8758c8ed42f796abda9bf749f28106c7d33f40acee"
+    }
+  ],
+  "manifest_version": "F3_LEAN_M0_MANIFEST_v1",
+  "scope": "F3 M0-a certificate checker + M0-b isolated pilot",
+  "statuses": {
+    "density_theorem": "NO",
+    "formal_rho_certificate": "NO",
+    "global_collatz_claim": "NO",
+    "m0a": "PASS_CERTIFICATE_CHECKER_ONLY",
+    "m0b": "PASS_PILOT_ONLY"
+  }
+}
