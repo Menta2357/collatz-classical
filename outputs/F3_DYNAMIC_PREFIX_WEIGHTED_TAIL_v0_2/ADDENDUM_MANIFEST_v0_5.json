@@ -1,0 +1,79 @@
+{
+  "addendum": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2",
+  "date": "2026-07-21",
+  "status": "PRE_SPECTRAL_CANDIDATE_SCALE_AWARE_OPERATOR_REQUIRED",
+  "claude": {
+    "status": "RETURNED",
+    "pre_spectral_candidate": "ACCEPT",
+    "obligations": [
+      "M derived from rules, not data",
+      "weights frozen before holdout",
+      "tail in same member-wise inequality",
+      "y-uniformity explicit",
+      "each M entry tied to demonstrable member-wise inequality"
+    ]
+  },
+  "sealed_package_anchor": {
+    "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1",
+    "manifest_sha256": "0704580adcb4d0019dae55dd81169f65e830747e8cf8d108dc1a676e0a335efa",
+    "local_verification": {
+      "checked_files": 74,
+      "failure_count": 0,
+      "status": "PASS"
+    }
+  },
+  "phase_b_operator_v1": {
+    "operator": "M_naive_rule_derived_incidence",
+    "K": 5,
+    "state_count": 1089,
+    "edge_count": 1452,
+    "tail_edges": 3,
+    "spectral_radius": "1",
+    "lambda_11": "1.7922",
+    "rho_greater_than_lambda_11": false,
+    "local_verdict": "STOP_NAIVE_OPERATOR_TOO_WEAK_SCALE_AWARE_OPERATOR_REQUIRED"
+  },
+  "tracked_files": [
+    {
+      "path": "F3_CLAUDE_RETURN_VERDICT_v1.md",
+      "sha256": "424f52bcbd11dbf3a3c5502cbc1760470f61640330f1bbc98853d3f5596675d0"
+    },
+    {
+      "path": "F3_PHASE_B_DYNAMIC_OPERATOR_CONTRACT_v1.md",
+      "sha256": "ecef5f7cb7e117c877a4c19b712ec04b7dcefba4082257b5f7e48c86a7294594"
+    },
+    {
+      "path": "F3_PHASE_B_DYNAMIC_OPERATOR_REPORT_v1.md",
+      "sha256": "3408df0331c96647bfccbf7832c46c7bd972440a116b94ccb2e01f2d63525505"
+    },
+    {
+      "path": "scripts/f3_phase_b_dynamic_operator_v1.py",
+      "sha256": "e71170eb185eb43c82fa79a18e9bfeb997a263f79a03559b13944e1eb4134670"
+    },
+    {
+      "path": "results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/summary.json",
+      "sha256": "dc8b7132ec3a8deb2f14f278d3bd7a47ab562302b6ae94d0dc6d203e9e64cf5b"
+    },
+    {
+      "path": "results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/manifest_sha256.csv",
+      "sha256": "6ac2f6201c1ea032e3e4206f716d6b8db3a3c504043da352a0b88037200b96b8"
+    }
+  ],
+  "non_claims": {
+    "no_lean": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true
+  },
+  "next_gate": {
+    "name": "F3_PHASE_B_SCALE_AWARE_OPERATOR_v1",
+    "must_model": [
+      "retarded window shift x_a/(4a)=2^(y-2)",
+      "advanced PHASE_B window scale (x_a-2^(y-1))/c(a)=3*2^(y-1)",
+      "single W_K denominator",
+      "member-wise inequalities per matrix entry",
+      "explicit y-uniformity"
+    ]
+  }
+}

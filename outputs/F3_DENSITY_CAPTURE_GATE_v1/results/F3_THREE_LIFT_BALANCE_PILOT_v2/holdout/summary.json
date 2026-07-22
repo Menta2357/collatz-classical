@@ -1,0 +1,69 @@
+{
+  "beta_frozen": 0.033,
+  "beta_frozen_fraction": "33/1000",
+  "classification": "V2_HOLDOUT_VALID_LOCAL_PENDING_PUBLIC_CUSTODY",
+  "config": {
+    "calibration_interval_half_open": [
+      1,
+      10369
+    ],
+    "freeze_grid": 1000,
+    "freeze_margin": "1/50",
+    "holdout_interval_half_open": [
+      10369,
+      20737
+    ],
+    "holdout_unit": "parent_root_a",
+    "moduli": [
+      36,
+      108
+    ],
+    "parent_classes": [
+      2,
+      8
+    ],
+    "scales_y": [
+      8,
+      9,
+      10
+    ],
+    "utility_floor": "1/5"
+  },
+  "contract_path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/FROZEN_CONTRACT.json",
+  "contract_sha256": "8b61fb8c07c990f27005f6ba1e4962213d9df54fd0aeb755715fc49fa27ecb21",
+  "elapsed_seconds": 23.894153000001097,
+  "formal_coordinated_verdict": "PENDING_PUBLIC_CUSTODY",
+  "global_parent_root_intersection_count": 0,
+  "group_rows": 96,
+  "holdout_balance_pass": true,
+  "hooks_pass": true,
+  "interval_half_open": [
+    10369,
+    20737
+  ],
+  "local_verdict": "STOP_OR_REDESIGN",
+  "maximum_parent_root": 20735,
+  "minimum_advanced_share": 0.08996117367536556,
+  "minimum_advanced_share_fraction": "23286/258845",
+  "minimum_location": {
+    "lift": 2,
+    "modulus": 108,
+    "parent_class": 2,
+    "parent_residue": 74,
+    "y": 8
+  },
+  "minimum_parent_root": 10370,
+  "mismatch_count": 0,
+  "paths": {
+    "group_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/group_rows.csv",
+    "mismatches_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/mismatches.csv",
+    "root_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/root_rows.csv"
+  },
+  "phase": "holdout",
+  "piStar_profiles_computed": 4608,
+  "public_custody": false,
+  "root_rows": 13824,
+  "status": "PASS",
+  "unique_parent_roots": 2304,
+  "utility_pass": false
+}

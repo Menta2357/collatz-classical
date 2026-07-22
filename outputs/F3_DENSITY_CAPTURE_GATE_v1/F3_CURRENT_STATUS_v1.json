@@ -1,0 +1,42 @@
+{
+  "formal_coordinated_verdict": "PENDING_PUBLIC_CUSTODY",
+  "github_publication": {
+    "blocker": "gh authentication token invalid",
+    "branch_created": false,
+    "commit_created": false,
+    "pr_created": false,
+    "push_completed": false
+  },
+  "no_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean": true,
+    "no_rho_certificate": true,
+    "no_uniform_balance_lemma": true
+  },
+  "route_status": {
+    "dynamic_3adic_prefix_with_certified_weighted_tail": "OPEN_PAPER_ONLY",
+    "fixed_modulus_deterministic_closure": "STOP",
+    "uniform_useful_balance_for_every_fixed_lift_type": "STOP"
+  },
+  "status": "LOCAL_AUDIT_COMPLETE_PUBLIC_CUSTODY_BLOCKED",
+  "three_lift_pilot": {
+    "v1": {
+      "parent_root_overlap": 192,
+      "status": "INVALID_HOLDOUT"
+    },
+    "v2": {
+      "calibration_minimum_share": 0.053619928805380836,
+      "contract_sha256": "8b61fb8c07c990f27005f6ba1e4962213d9df54fd0aeb755715fc49fa27ecb21",
+      "frozen_beta": 0.033,
+      "holdout_minimum_share": 0.08996117367536556,
+      "hooks_mismatches": 0,
+      "local_verdict": "STOP_OR_REDESIGN",
+      "parent_root_overlap": 0,
+      "status": "VALID_LOCAL_HOLDOUT_PENDING_PUBLIC_CUSTODY",
+      "utility_floor": 0.2,
+      "utility_pass": false
+    }
+  }
+}

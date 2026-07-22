@@ -1,0 +1,69 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.22",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_HOOKS_PASS",
+    "CHERNOFF_ROUTE_READY_FOR_COMBINED_LEDGER",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_TILTED_SUPERSOLUTION_CERTIFICATE_v1_REPORT.md",
+      "sha256": "e7165c87d0961a53def73c1080f26b725225c0e4c7933265a56539fd52189f01"
+    },
+    {
+      "path": "scripts/f3_tilted_supersolution_certificate_v1.py",
+      "sha256": "ed86230184b2be78831955d5429ad504c08b1fdd2d9dc4d7703e79d0f07cde58"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/tilted_supersolution_v1.csv",
+      "sha256": "55b2288824dccfe56fcb3a951bdfb47583ac7d4abd00576ed7c273448b2a777a"
+    },
+    {
+      "path": "F3_BASE_SEGMENT_TABLE_v1_REPORT.md",
+      "sha256": "c476323251b18ca6f6157238dad3804446e04f510728bcf7eb3d2e8931794b53"
+    },
+    {
+      "path": "scripts/f3_base_segment_table_v1.py",
+      "sha256": "becb09305de9a119cc3a9b8517efec509d0a699b749cac497c4246e0ad2826f2"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/base_segment_table_v1.csv",
+      "sha256": "2d5fbf7d0fa6dd61e5444cc5dea4f117497e5642a464d92d7380838c532ee0aa"
+    },
+    {
+      "path": "F3_UNIFORM_Q_BOUNDS_v1_REPORT.md",
+      "sha256": "a4eae118a29a25d6b91d7ebc29c32696474d8bc41a28a4588c80ebdedc309975"
+    },
+    {
+      "path": "scripts/f3_uniform_q_bounds_v1.py",
+      "sha256": "9f0e25d54007b9ec6a7d471e9809cfb26723f6dea60d020e7e6ae07a2a411ad7"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/uniform_q_bounds_v1.json",
+      "sha256": "c2a8c884178ceb864b447abd5b7828e571a23094741cd6e5b9f6256277864012"
+    },
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_3.md",
+      "sha256": "8e3e4ed7556705dc0ef4036512f8a844e369073002ba888a976f39efeb46c005"
+    }
+  ],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "supersolution_lambda_prime": "49/50",
+  "supersolution_bad_rows": 0,
+  "base_root_count_min": 10,
+  "base_weighted_mass_min": 0.031,
+  "uniform_sterile_normalized_max_y8": 0.08166998364405036,
+  "uniform_boundary_max_per_state": 2,
+  "next_gate": "COMBINE_E_Y_LEDGER_AND_REVIEW_REAL_ENCLOSURES",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

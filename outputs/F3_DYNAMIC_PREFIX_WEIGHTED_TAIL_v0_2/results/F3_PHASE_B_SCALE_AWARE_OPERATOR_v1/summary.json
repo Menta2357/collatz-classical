@@ -1,0 +1,31 @@
+{
+  "K": 5,
+  "advanced_weight_decimal": 0.7835240614003165,
+  "advanced_weight_formula": "rho_star^(log_2(3)-2)",
+  "branch_sum_for_advanced_states_decimal": 1.0921660367089585,
+  "edge_count": 1452,
+  "lambda_11_branch_sum_decimal": 1.0962586919443154,
+  "lambda_11_official": "71689/40000",
+  "lambda_11_official_decimal": 1.792225,
+  "local_verdict": "STOP_PARENT_TO_CHILD_ORIENTATION_REFORMULATE_RECURRENCE",
+  "next_required_object": "F3_PHASE_B_SCALE_AWARE_RECURRENCE_ORIENTATION_v0_2",
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "operator": "scale_aware_parent_to_child_orientation_audit",
+  "parent_to_child_orientation_certifies_growth": false,
+  "parent_to_child_spectral_radius": "25/81",
+  "parent_to_child_spectral_radius_decimal": 0.30864197530864196,
+  "retarded_weight": "25/81",
+  "retarded_weight_decimal": 0.30864197530864196,
+  "rho_star": "9/5",
+  "rho_star_decimal": 1.8,
+  "rho_star_gt_lambda_11_official": true,
+  "state_count": 1089,
+  "tail_edges": 3,
+  "visible_advanced_source_states": 360
+}

@@ -1,0 +1,31 @@
+{
+  "certificate": "F3_TILTED_SUPERSOLUTION_v1",
+  "core_state_count": 243,
+  "lambda_prime": "49/50",
+  "lambda_prime_decimal": 0.98,
+  "lambda_limit_1_over_1_plus_delta": "100/101",
+  "lambda_limit_check": true,
+  "vector_denominator_D": 1000000,
+  "base_edge_upper_denominator": 1000000000000000000000000,
+  "scale_upper_denominator": 1000000000000000000,
+  "scale_upper": {
+    "retarded": "324/625",
+    "advanced_direct_c2": "605933751378193227/500000000000000000",
+    "advanced_parity_lift_c1": "872544601984598247/1000000000000000000"
+  },
+  "bad_row_count": 0,
+  "min_slack_decimal": 22396.960000000054,
+  "max_lhs_over_rhs_decimal": 0.9771460555825788,
+  "min_lhs_over_rhs_decimal": 0.9771452773828146,
+  "vector_min_integer": 1000000,
+  "vector_max_integer": 308950868,
+  "vector_sha256": "55b2288824dccfe56fcb3a951bdfb47583ac7d4abd00576ed7c273448b2a777a",
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "local_verdict": "PASS_RATIONAL_SUPERSOLUTION",
+  "status": "DIAGNOSTIC_RATIONAL_ENVELOPE",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}

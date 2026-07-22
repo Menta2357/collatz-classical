@@ -1,0 +1,62 @@
+{
+  "beta_frozen": 0.033,
+  "beta_frozen_fraction": "33/1000",
+  "classification": "V2_CALIBRATION_GLOBAL_SPLIT_HOLDOUT_UNACCESSED",
+  "config": {
+    "calibration_interval_half_open": [
+      1,
+      10369
+    ],
+    "freeze_grid": 1000,
+    "freeze_margin": "1/50",
+    "holdout_interval_half_open": [
+      10369,
+      20737
+    ],
+    "holdout_unit": "parent_root_a",
+    "moduli": [
+      36,
+      108
+    ],
+    "parent_classes": [
+      2,
+      8
+    ],
+    "scales_y": [
+      8,
+      9,
+      10
+    ],
+    "utility_floor": "1/5"
+  },
+  "elapsed_seconds": 27.317794374997902,
+  "group_rows": 96,
+  "interval_half_open": [
+    1,
+    10369
+  ],
+  "maximum_parent_root": 10367,
+  "minimum_advanced_share": 0.053619928805380836,
+  "minimum_advanced_share_fraction": "45249/843884",
+  "minimum_location": {
+    "lift": 2,
+    "modulus": 108,
+    "parent_class": 8,
+    "parent_residue": 80,
+    "y": 8
+  },
+  "minimum_parent_root": 2,
+  "mismatch_count": 0,
+  "paths": {
+    "group_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/group_rows.csv",
+    "mismatches_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/mismatches.csv",
+    "root_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/root_rows.csv"
+  },
+  "phase": "calibration",
+  "piStar_profiles_computed": 4608,
+  "public_custody": false,
+  "root_rows": 13824,
+  "status": "PASS",
+  "unique_parent_roots": 2304,
+  "utility_pass": false
+}

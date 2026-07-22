@@ -1,0 +1,377 @@
+{
+  "file_count": 74,
+  "files": [
+    {
+      "bytes": 3104,
+      "path": "F3_AUDIT_FINDINGS_v1_1.md",
+      "sha256": "19719c14f544e27f2568a6897ded982de8979eaf6be7e00535a4027ffded2aaa"
+    },
+    {
+      "bytes": 3093,
+      "path": "F3_CLAUDE_REVIEW_PACKET_v1.md",
+      "sha256": "7d9608d2629910889f0a1782db9c455121d7bbbdac2eecf5b4f8f9828b438a6b"
+    },
+    {
+      "bytes": 2621,
+      "path": "F3_CLAUDE_REVIEW_PACKET_v2.md",
+      "sha256": "2ba0549b398a1de19febfed95f432869de0c443bff39fee9564b95b740670885"
+    },
+    {
+      "bytes": 1321,
+      "path": "F3_CURRENT_STATUS_v1.json",
+      "sha256": "08209e5052faa876e50da57b0dcf12431bb16052ec7f6e0fb92ef0fd58f131af"
+    },
+    {
+      "bytes": 2694,
+      "path": "F3_DENSITY_CAPTURE_GATE_SOURCE_v1.md",
+      "sha256": "25f89e1707da43a77e3b5030bf9f3a458d03a17c08531885e8ca29dfdd8a0689"
+    },
+    {
+      "bytes": 1164,
+      "path": "F3_PUBLIC_CUSTODY_STATUS_v1.md",
+      "sha256": "703da88d42e96cdff2ad95f9ac52abfda0fee58e7a1914191ce356832d4d4b19"
+    },
+    {
+      "bytes": 9495,
+      "path": "F3_SUM_INEQUALITY_PAPER_PAGE_v0_1.md",
+      "sha256": "064b7c5d9126244a12277b2906b92c80fc64f48891dfc44251f4879fe9fc12f4"
+    },
+    {
+      "bytes": 3741,
+      "path": "F3_THREE_LIFT_BALANCE_PILOT_PREREGISTRATION_v1.md",
+      "sha256": "c22986909431966bac0c09b524f46d6e82f68a9c09e244224011fb152de2ba17"
+    },
+    {
+      "bytes": 2394,
+      "path": "F3_THREE_LIFT_BALANCE_PILOT_PREREGISTRATION_v2.md",
+      "sha256": "25cb543a2f240c3e91e02a4a309596e612fde67964dd2352fa0a2218c24ab3b8"
+    },
+    {
+      "bytes": 3865,
+      "path": "F3_THREE_LIFT_BALANCE_PILOT_REPORT_v2.md",
+      "sha256": "fbce14d751ec12a0cde6bb63f80890bfa50180f6be048fbd16bb4a7cf94cf9db"
+    },
+    {
+      "bytes": 1724,
+      "path": "F3_THREE_LIFT_BALANCE_PILOT_V1_INVALIDATION.md",
+      "sha256": "63f4fc8de71a53048eb849916b882b5e4e47cbc0d725d9f0088861a94ecf52fe"
+    },
+    {
+      "bytes": 485,
+      "path": "F3_THREE_LIFT_PREREGISTRATION_ANCHOR_v1.json",
+      "sha256": "81b2dac79cc855f4700025886184d718d5d2a331c4dc6b3c947a4e5dfe6687a5"
+    },
+    {
+      "bytes": 828,
+      "path": "F3_THREE_LIFT_PREREGISTRATION_ANCHOR_v2.json",
+      "sha256": "f107efb84d1e671be1e4203c1790a5be8cc059f44269b4945943c597989c32c5"
+    },
+    {
+      "bytes": 1929,
+      "path": "README.md",
+      "sha256": "30e8f09039ec2a1a3291d553d06762b89196c1de301f19b1cbe642a1b2534594"
+    },
+    {
+      "bytes": 3549,
+      "path": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/grid.csv",
+      "sha256": "1de66968a0d5a2c92638bf4b2ad8fb5b31c73bf88e9ffd7e1d02585ff7ddfeac"
+    },
+    {
+      "bytes": 594,
+      "path": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/manifest_sha256.csv",
+      "sha256": "271ea6e22fb16e0b9ee2a36c2e749cfc993b84bc86189ca54ecd6baadbb3e278"
+    },
+    {
+      "bytes": 2775,
+      "path": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/nonclosure_witnesses.csv",
+      "sha256": "b1c661c1dcd09eb8b93cbb30a48e729e0023a07a11a035a17512d17c786f7b95"
+    },
+    {
+      "bytes": 1646,
+      "path": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/summary.json",
+      "sha256": "d1ad65af947b9028689bd2d10a889f6a68db773aabd02695e6883ea024987cb8"
+    },
+    {
+      "bytes": 594,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/manifest_sha256.csv",
+      "sha256": "f3a3da5c312e046b001f8f62bc21b035cec30167d3ab511682a3ef31491c7c0c"
+    },
+    {
+      "bytes": 50548,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/memberwise.csv",
+      "sha256": "738f466bd2d92ef803ec55356ef041a43feddc6a6647c0bea7763a2f67850351"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1567,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/summary.json",
+      "sha256": "9c19ef2fa784ed4afd2b9e44598b03a2581d25d6e17d83b6b902491792538074"
+    },
+    {
+      "bytes": 594,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/manifest_sha256.csv",
+      "sha256": "14d0df1963cd3c82752e77a842451bbc504cd02f9ab845978133a299422aca5a"
+    },
+    {
+      "bytes": 51293,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/memberwise.csv",
+      "sha256": "0dd3903b8143205b0548d6a7a4eb6895a137b273e9eba174c4a2e73ef27da6e6"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1564,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/summary.json",
+      "sha256": "f3fd8d0526678fa40346f70a1e5cfc109072e7aa4d22df19acffda4f827e1c49"
+    },
+    {
+      "bytes": 594,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/manifest_sha256.csv",
+      "sha256": "7a4644dd975216410dc9bf00cb5cdd633c61eb41cf9e921d664bb78522ba98b6"
+    },
+    {
+      "bytes": 52119,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/memberwise.csv",
+      "sha256": "bda75b1b974fbcdb4f97a419de2421db49b080498e90bbafe4070a0a4dca329c"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1570,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/summary.json",
+      "sha256": "761068cce9a65b33b54a4ebe0dedb3d68139b7937a330219c654618702770236"
+    },
+    {
+      "bytes": 591,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/manifest_sha256.csv",
+      "sha256": "e820dd8f2493da19765e9734dc263aa60349830d7dbb5e49cb23215ff133b6c7"
+    },
+    {
+      "bytes": 48370,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/memberwise.csv",
+      "sha256": "7a4c7ee22105b6c4201a1a19ffbcc7ebdc7b1a0934bd9035bee777d86a9a90ea"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1557,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/summary.json",
+      "sha256": "70178169e8b46691d124f2f029fd4ed13614ef920e7d61cd99e6d37f18841a0c"
+    },
+    {
+      "bytes": 591,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/manifest_sha256.csv",
+      "sha256": "034dddeaeaa78bc36f96db499367d988c4a05148f5df0c00e13fb75477de7d95"
+    },
+    {
+      "bytes": 49212,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/memberwise.csv",
+      "sha256": "163ce2c3bee055e9ddd90dbbb74cd1bd1a28a68ae14be48628fbce184fdcb4c8"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1558,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/summary.json",
+      "sha256": "99b3f40cfae3a6d727d393b02088d6e7a6ebe00b8fe384fdeca39f2d912f3b72"
+    },
+    {
+      "bytes": 591,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/manifest_sha256.csv",
+      "sha256": "cd25c3cead422011b3dd230d56271056150b559731a476ac8a8899df24f1bbcd"
+    },
+    {
+      "bytes": 49780,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/memberwise.csv",
+      "sha256": "2548c6ba7deea06395a7e80e931e4ddd55c590f3a05a31870a4fa738691be342"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1561,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/summary.json",
+      "sha256": "e5d250eb78305122373c1252bba38022419e5d2fedd60daddfc564d239e9ced3"
+    },
+    {
+      "bytes": 582,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/manifest_sha256.csv",
+      "sha256": "c71d06c4be0acc31eac98f9db3cdf984722387f34a758cdff53098fa314bddec"
+    },
+    {
+      "bytes": 49780,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/memberwise.csv",
+      "sha256": "2548c6ba7deea06395a7e80e931e4ddd55c590f3a05a31870a4fa738691be342"
+    },
+    {
+      "bytes": 380,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1549,
+      "path": "results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/summary.json",
+      "sha256": "9d2a783ec14018383ee4c0b42eb536fbd884c761065554d317013c1696e74f66"
+    },
+    {
+      "bytes": 1134,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/FROZEN_CONTRACT.json",
+      "sha256": "07a245e7324618d1e8f34d686a6e7f5f7d837e56b6d0e807f8c9efc55baa209a"
+    },
+    {
+      "bytes": 20068,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/group_rows.csv",
+      "sha256": "86451dd9c8376f030d84a14b83bcea7aa261c1df69116931cb35c9487ed9f78a"
+    },
+    {
+      "bytes": 1492,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/manifest_sha256.csv",
+      "sha256": "b8c17d2efd0c8b0c99c924ec613961262e92da1fbb5fb223ebb47f66b41bc28d"
+    },
+    {
+      "bytes": 234,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/mismatches.csv",
+      "sha256": "0e3752b1639dfeb3a6eb168d2a000b9863f89e8342ceb224fccd1779e279221a"
+    },
+    {
+      "bytes": 242443,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/root_rows.csv",
+      "sha256": "f7c89c92b599d8059c8ad4461d7532aea8fb4b1bc2dc9f6c5b2e8b43a4b34a31"
+    },
+    {
+      "bytes": 1637,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/summary.json",
+      "sha256": "2fe0f8575fa0cf03e878c057ac31e0285f14a2f3096107e14ac8c35f5493c0ca"
+    },
+    {
+      "bytes": 19558,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/group_rows.csv",
+      "sha256": "08c51704df6586228d101c86a6193b334ced8989b9be82b61693a07b77d68d4e"
+    },
+    {
+      "bytes": 1396,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/manifest_sha256.csv",
+      "sha256": "e39a54ecee2ca79db06a53914809dc133d0a5b629bf6a0069185f07a7c17a2cc"
+    },
+    {
+      "bytes": 234,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/mismatches.csv",
+      "sha256": "0e3752b1639dfeb3a6eb168d2a000b9863f89e8342ceb224fccd1779e279221a"
+    },
+    {
+      "bytes": 241641,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/root_rows.csv",
+      "sha256": "cf1d59aef6e52be2d34a14c11541f40bb1302f7676a761f7b5fe0cd807536937"
+    },
+    {
+      "bytes": 1960,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/summary.json",
+      "sha256": "64564dac7d39c77dd644cf011e1a5bc069f3f1a41801410e3369b6ab99c6cd9b"
+    },
+    {
+      "bytes": 1024,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/FROZEN_CONTRACT.json",
+      "sha256": "8b61fb8c07c990f27005f6ba1e4962213d9df54fd0aeb755715fc49fa27ecb21"
+    },
+    {
+      "bytes": 21772,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/group_rows.csv",
+      "sha256": "f78bc90684f7fd0f4c2808f6b31b21ae8d04a12855863f91f3b192738d6dc518"
+    },
+    {
+      "bytes": 1885,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/manifest_sha256.csv",
+      "sha256": "985d101d2eb0313b9ac1472a1ebd2b2f90c4130f3bdc09c5adc07552f5925a57"
+    },
+    {
+      "bytes": 268,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/mismatches.csv",
+      "sha256": "b7b21b7412d163aeb653548389eecabc76b06055188da64b6f500267327f2384"
+    },
+    {
+      "bytes": 1575824,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/root_rows.csv",
+      "sha256": "a6598b87e2c3e740591ae67db6f81cb7faca090ae4120e857f1c2492e84c1ebc"
+    },
+    {
+      "bytes": 1684,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/summary.json",
+      "sha256": "50a20a946cff4f22a8a80a51fa9b1e6f90863199815614f56cccf247536f1076"
+    },
+    {
+      "bytes": 21320,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/group_rows.csv",
+      "sha256": "d6f63400a135309ef9d3d492a37097cf96c42e3a6eb7571467bcdd96b3a04c8b"
+    },
+    {
+      "bytes": 1789,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/manifest_sha256.csv",
+      "sha256": "47ed2842477084bf60895e83623554ae824d290376cc84bcb1725be4432e604a"
+    },
+    {
+      "bytes": 268,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/mismatches.csv",
+      "sha256": "b7b21b7412d163aeb653548389eecabc76b06055188da64b6f500267327f2384"
+    },
+    {
+      "bytes": 1627752,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/root_rows.csv",
+      "sha256": "2829429e957392f08b44c7f463f72d6291dff800f6a8335c9fbece8593698b24"
+    },
+    {
+      "bytes": 2042,
+      "path": "results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/summary.json",
+      "sha256": "a649ca98f94642daa488d2e68f7c5b48f9038a7621f69084c74cf5867ddee6e0"
+    },
+    {
+      "bytes": 10701,
+      "path": "scripts/f3_affine_type_closure_audit_v1.py",
+      "sha256": "64399780ce8625d1225dd23c768855722848881638e5c9c361c70c86b18845a5"
+    },
+    {
+      "bytes": 11906,
+      "path": "scripts/f3_e5_memberwise_gap_audit_v1.py",
+      "sha256": "1a6bb66758cbd8949ba7c02d1b8672b9bc8e1d230de60156357eb6b3c7a41f4e"
+    },
+    {
+      "bytes": 1293,
+      "path": "scripts/f3_package_manifest_v1.py",
+      "sha256": "f9f1ad3a15a77f6ad457c2f99420daa9e558130b10c763ac744e286c6403fe61"
+    },
+    {
+      "bytes": 20640,
+      "path": "scripts/f3_three_lift_balance_pilot_v1.py",
+      "sha256": "b9d1be778c200d88ffe80b313bca5d5684e4a43ac465c05f1fc513443fb83b96"
+    },
+    {
+      "bytes": 18961,
+      "path": "scripts/f3_three_lift_balance_pilot_v2.py",
+      "sha256": "de0d3e5c8497ec3776699d58fb6c26b2a2574c7c1e43b14ff58faf885ab19255"
+    },
+    {
+      "bytes": 1801,
+      "path": "scripts/f3_verify_package_v1.py",
+      "sha256": "b083a22d342d96edb711704e56d5a386cc9d57655e1ddc81b58919f50f05c6bc"
+    }
+  ],
+  "package": "F3_DENSITY_CAPTURE_GATE_v1",
+  "status": "CUSTODY_MANIFEST"
+}

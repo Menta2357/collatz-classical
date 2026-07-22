@@ -1,0 +1,16 @@
+{
+  "definition": "p0 = min_s (retarded contribution to (w^T M_split)_s) / (w^T M_split)_s",
+  "core_state_count": 243,
+  "p0_decimal": 0.19485689248944574,
+  "argmin_source_id": 6,
+  "argmin_target_id": 26,
+  "argmin_retarded_contribution": 0.0011308641975308641,
+  "argmin_frozen_row_lhs_wM": 0.0058035627227921455,
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "status": "DIAGNOSTIC_INPUT_TO_LEMMA_B",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}

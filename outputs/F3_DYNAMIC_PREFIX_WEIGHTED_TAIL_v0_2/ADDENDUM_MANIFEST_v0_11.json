@@ -1,0 +1,66 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.11",
+  "date": "2026-07-22",
+  "status": [
+    "SUPPORT_REPAIR_CORE_RESTRICTION_PREDECLARED",
+    "CORE_RESTRICTION_FREEZE_PASS_HOLDOUT_READY",
+    "FROZEN_W_CORE_PUBLISHED",
+    "HOLDOUT_NOT_OPENED",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1_CONTRACT.md",
+      "sha256": "f5733deaf142a4ae9d313260a9fd1565afc8c56b6efe7188adb4480874a4e6af"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1_REPORT.md",
+      "sha256": "77f3cce22571a0d7fcc3155852a40846fcb42757c5c0ac2e4bf527d56bfd0723"
+    },
+    {
+      "path": "scripts/f3_return_excursion_support_repair_v1.py",
+      "sha256": "6e843f54c2bfe7ba7937d66b51a316532dc3fd396c6a72180b25fa4e3fe69dec"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/summary.json",
+      "sha256": "ad5a84be04975de5bd247ee70e0a91a1ef59d4cbf97aea14dc8fa39fe551ff60"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/frozen_w_core.csv",
+      "sha256": "ad4c4627f575f60911f3b943c92cd3937686f9924592dbf33f6e988d7a9dbb53"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/core_states.csv",
+      "sha256": "533b2bcd4df6649752217d42986b70e532a529d3f89ab9f7e06e35066cfc9a2b"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/scc_components.csv",
+      "sha256": "0170a1f055fbdd5108e170f63eb90de7d107777ed02f9d77325505296d686283"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/core_reverify_failures.csv",
+      "sha256": "2a1c30d175f4179795e4dd74fdba17abe7da802d5a8f3f438794bd957ff6b052"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/manifest_sha256.csv",
+      "sha256": "91a41deb74ad98bc8226397245f3ee1679675242cf7fe349ca331c53d218035a"
+    }
+  ],
+  "local_verdict": "CORE_RESTRICTION_FREEZE_PASS_HOLDOUT_READY",
+  "frozen_w_core_sha256": "ad4c4627f575f60911f3b943c92cd3937686f9924592dbf33f6e988d7a9dbb53",
+  "holdout_consumed": false,
+  "holdout_range_unopened": [
+    20737,
+    41473
+  ],
+  "non_claims": {
+    "no_holdout_result": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

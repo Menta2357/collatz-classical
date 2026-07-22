@@ -1,0 +1,50 @@
+{
+  "ledger": "F3_COMBINED_LEDGER_v1",
+  "rho_star": "9/5",
+  "y_base": 8,
+  "denominator_definition": "q_norm_line(y) = Q_line(y) / rho_star^y; final base coefficient = C_I*w_min",
+  "C_I_root_count": 10,
+  "w_min": "3099999999999999891/1000000000000000000000",
+  "base_coefficient_CI_wmin": 0.031,
+  "K_upper": "559/100000",
+  "K_exact_max_decimal": 0.005581,
+  "K_argmax_state_id": 474,
+  "K_reverify_bad_count": 0,
+  "sterile": {
+    "q0_at_y_base": 0.08166998364405038,
+    "kappa": "3/2",
+    "decay_proof": "(y+2)/(y+1)/rho_star <= 25/27 < 1 for y>=8",
+    "eta_line": 0.24500995093215114
+  },
+  "boundary": {
+    "q0_at_y_base": 0.01814888525423342,
+    "kappa": "9/5",
+    "decay_proof": "boundary_roots<=2 per state and denominator grows as rho_star^y",
+    "eta_line": 0.04083499182202519
+  },
+  "phase": {
+    "eta_line": 0.0,
+    "reason": "exact PHASE_B identity"
+  },
+  "eta_sterile": 0.24500995093215114,
+  "eta_boundary": 0.04083499182202519,
+  "eta_total": 0.2858449427541763,
+  "eta_exact_num": 2734375,
+  "eta_exact_den": 9565938,
+  "eta_pass": true,
+  "final_coefficient": 0.02213880677462053,
+  "final_bound_form": "V_y >= (1-eta)*C_I*w_min*rho_star^(y-y_base)",
+  "local_verdict": "PASS_COMBINED_LEDGER",
+  "inputs": {
+    "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+    "base_table_sha256": "2d5fbf7d0fa6dd61e5444cc5dea4f117497e5642a464d92d7380838c532ee0aa",
+    "q_bounds_sha256": "c2a8c884178ceb864b447abd5b7828e571a23094741cd6e5b9f6256277864012",
+    "supersolution_vector_sha256": "55b2288824dccfe56fcb3a951bdfb47583ac7d4abd00576ed7c273448b2a777a"
+  },
+  "status": "PAPER_LEDGER_AUDIT",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}

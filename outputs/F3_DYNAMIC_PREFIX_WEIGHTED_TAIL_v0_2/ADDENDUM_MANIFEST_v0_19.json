@@ -1,0 +1,44 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.19",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_OBLIGATION_OPEN",
+    "LEMMA_A_PAPER_ROUTE_ACCEPTED",
+    "LEMMA_B_DRIFT_SIGN_PASS_QUANTITATIVE_BOUND_PENDING",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_1.md",
+      "sha256": "6a46ddbc1a69cec3e776b1744426a1981e6cc4468eed6c558e9e9ffb1c49e49e"
+    },
+    {
+      "path": "scripts/f3_perron_drift_audit.py",
+      "sha256": "a5efd27e8ac05ca50fb9eefefd27056b5e55fecf5ea1b3daa95804f520b83dcd"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/perron_drift_audit.json",
+      "sha256": "eaade1d8f6a5d87957860024f9ac06f801c03fa7b292ec3514a82d0ca0cac0c1"
+    }
+  ],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "step_alphabet": [
+    -2,
+    "log2(3)-1",
+    "log2(3)-2"
+  ],
+  "mu_decimal": -0.7831050099641175,
+  "mu_route_verdict": "PASS_DRIFT_ROUTE",
+  "predeclared_stop": "mu >= 0 => STOP_DRIFT_ROUTE",
+  "next_gate": "WRITE_BOUNDED_LAG_FIRST_PASSAGE_BOUND",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

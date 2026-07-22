@@ -1,0 +1,62 @@
+{
+  "D": 1000000,
+  "burned_ranges": [
+    [
+      20737,
+      41473
+    ]
+  ],
+  "channel_counts": {
+    "advanced_direct_c2": 243,
+    "advanced_parity_lift_c1": 243,
+    "advanced_sterile_tail_c0": 243,
+    "retarded": 729
+  },
+  "core_bad_state_count": 0,
+  "core_bucket_counts": {
+    "0": 81,
+    "1": 81,
+    "2": 81
+  },
+  "core_component_id": 328,
+  "core_left_eigenvalue_decimal": 1.0399310992822712,
+  "core_min_ratio_lhs_over_rhs": 1.0295828177270736,
+  "core_residue_mod_9_counts": {
+    "2": 81,
+    "5": 81,
+    "8": 81
+  },
+  "core_reverify_pass": true,
+  "core_spectral_radius_decimal": 1.0399310992822715,
+  "core_state_count": 243,
+  "d0": 5,
+  "delta": "1/100",
+  "edge_count": 1215,
+  "excluded_state_count": 486,
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "global_scc_count": 335,
+  "global_spectral_radius_decimal": 1.0399310992822737,
+  "holdout_consumed": false,
+  "lambda_11_official": "71689/40000",
+  "local_verdict": "SPLIT_EDGE_FREEZE_PASS_HOLDOUT_READY",
+  "next_holdout_range_predeclared_if_freeze_accepted": [
+    41473,
+    82945
+  ],
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_holdout_result": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "rho_star": "9/5",
+  "split_counts_by_source": {
+    "advanced_direct_c2:3": 81,
+    "advanced_parity_lift_c1:3": 81,
+    "advanced_sterile_tail_c0:3": 81
+  },
+  "state_count": 729,
+  "tail_row_count": 243
+}

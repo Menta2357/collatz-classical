@@ -1,0 +1,30 @@
+{
+  "K": 5,
+  "edge_count": 1452,
+  "lambda_11_decimal": 1.7922,
+  "lambda_11_fraction": "8961/5000",
+  "local_verdict": "STOP_NAIVE_OPERATOR_TOO_WEAK_SCALE_AWARE_OPERATOR_REQUIRED",
+  "max_visible_column_sum": "2/1",
+  "min_visible_column_sum": "1/1",
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean": true,
+    "no_rho_certificate": true
+  },
+  "obligations_status": {
+    "O1_rule_derived_M": "PASS",
+    "O2_weights_frozen": "NOT_APPLICABLE_NO_WEIGHTS_SOLVED",
+    "O3_tail_same_inequality": "PARTIAL_TAIL_EDGES_LISTED",
+    "O4_y_uniformity": "FAIL_NOT_MODELED",
+    "O5_memberwise_entry_inequality": "FAIL_NOT_PROVED"
+  },
+  "operator": "M_naive_rule_derived_incidence",
+  "rho_greater_than_lambda_11": false,
+  "spectral_radius_decimal": 1.0,
+  "spectral_radius_fraction": "1/1",
+  "state_count": 1089,
+  "tail_edges": 3,
+  "visible_advanced_source_states": 360
+}

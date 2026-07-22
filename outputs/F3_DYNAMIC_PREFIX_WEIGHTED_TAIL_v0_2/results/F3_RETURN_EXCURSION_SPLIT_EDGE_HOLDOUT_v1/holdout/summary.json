@@ -1,0 +1,56 @@
+{
+  "boundary_core_rows": 648,
+  "burned_ranges": [
+    [
+      20737,
+      41473
+    ]
+  ],
+  "channel_counts_core_roots": {
+    "advanced_direct_c2": 4608,
+    "advanced_parity_lift_c1": 4608,
+    "advanced_sterile_tail_c0": 4608
+  },
+  "complete_core_rows": 40824,
+  "core_roots": 13824,
+  "core_state_count": 243,
+  "delta": "1/100",
+  "elapsed_seconds": 0.02176004200009629,
+  "excluded_roots": 0,
+  "fine_period": 2916,
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "holdout_consumed": true,
+  "interval_half_open": [
+    41473,
+    82945
+  ],
+  "lhs_total_decimal": 190.25527293586472,
+  "local_verdict": "CANDIDATE_CERTIFICATE_EMPIRICAL",
+  "min_frozen_row_ratio_lhs_over_rhs": 1.0295828177270736,
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "phase": "holdout",
+  "platform": "macOS-13.6.4-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 15.0.0 (clang-1500.1.0.2.5)]",
+  "q_boundary_acceptance_budget": 0.029582817727073607,
+  "q_boundary_budget_from_calibration": 0.029582817727073607,
+  "q_boundary_budget_rule": "min(calibration_q_boundary_core_row_fraction, min_frozen_row_ratio_lhs_over_rhs - 1)",
+  "q_boundary_core_row_fraction": 0.015625,
+  "q_boundary_pass": true,
+  "ratio_definition": "lhs_total / rhs_total, where rhs_total = sum_i complete_core_row_count_i * (1+delta) * w_i",
+  "rhs_total_decimal": 184.78228356,
+  "split_mismatch_count": 0,
+  "unique_parent_roots": 13824,
+  "weighted_pass_ratio_ge_1": true,
+  "weighted_ratio_lhs_over_rhs": 1.0296185828555777,
+  "y_values": [
+    8,
+    9,
+    10
+  ]
+}

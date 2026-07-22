@@ -1,0 +1,51 @@
+{
+  "D": 1000000,
+  "core_bad_state_count": 0,
+  "core_bucket_counts": {
+    "0": 27,
+    "1": 27,
+    "2": 81
+  },
+  "core_checks_pass": true,
+  "core_component_id": 436,
+  "core_integer_weight_sum": 999935,
+  "core_left_eigenvalue_decimal": 1.0147870480474157,
+  "core_max_real_weight_decimal": 0.07429481393740925,
+  "core_min_ratio_lhs_over_rhs": 1.0016695723565237,
+  "core_min_real_weight_decimal": 1.7287021909888443e-05,
+  "core_parity_counts": {
+    "even": 108,
+    "odd": 27
+  },
+  "core_residue_mod_9_counts": {
+    "2": 45,
+    "5": 45,
+    "8": 45
+  },
+  "core_reverify_pass": true,
+  "core_spectral_radius_decimal": 1.0147870480474128,
+  "core_state_count": 135,
+  "d0": 5,
+  "delta": "1/100",
+  "excluded_state_count": 594,
+  "frozen_w_sha256": "ad4c4627f575f60911f3b943c92cd3937686f9924592dbf33f6e988d7a9dbb53",
+  "global_scc_count": 443,
+  "global_spectral_radius_decimal": 1.0147870480474108,
+  "global_state_count": 729,
+  "holdout_consumed": false,
+  "holdout_range_predeclared": [
+    20737,
+    41473
+  ],
+  "lambda_11_official": "71689/40000",
+  "local_verdict": "CORE_RESTRICTION_FREEZE_PASS_HOLDOUT_READY",
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_holdout_result": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "rho_star": "9/5"
+}

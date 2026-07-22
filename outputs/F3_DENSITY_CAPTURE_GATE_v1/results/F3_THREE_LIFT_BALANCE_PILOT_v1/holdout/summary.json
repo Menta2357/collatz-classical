@@ -1,0 +1,82 @@
+{
+  "beta_frozen": 0.015,
+  "beta_frozen_fraction": "3/200",
+  "classification": "HOLDOUT_RESULT_LOCAL_PENDING_PUBLIC_CUSTODY",
+  "config": {
+    "calibration_q": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "freeze_grid": 1000,
+    "freeze_margin": "1/50",
+    "holdout_q": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "moduli": [
+      36,
+      108
+    ],
+    "parent_classes": [
+      2,
+      8
+    ],
+    "scales_y": [
+      8,
+      9,
+      10
+    ],
+    "utility_floor": "1/5"
+  },
+  "contract_path": "results/F3_THREE_LIFT_BALANCE_PILOT_v1/FROZEN_CONTRACT.json",
+  "contract_sha256": "07a245e7324618d1e8f34d686a6e7f5f7d837e56b6d0e807f8c9efc55baa209a",
+  "elapsed_seconds": 10.316821084001276,
+  "formal_coordinated_verdict": "PENDING_PUBLIC_CUSTODY",
+  "group_rows": 96,
+  "holdout_balance_pass": true,
+  "hooks_pass": true,
+  "local_verdict": "STOP_OR_REDESIGN",
+  "minimum_advanced_share": 0.018495482459429943,
+  "minimum_advanced_share_fraction": "20221/1093294",
+  "minimum_location": {
+    "lift": 2,
+    "modulus": 108,
+    "parent_class": 8,
+    "parent_residue": 80,
+    "y": 10
+  },
+  "mismatch_count": 0,
+  "paths": {
+    "group_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/group_rows.csv",
+    "mismatches_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/mismatches.csv",
+    "root_rows_csv": "/Users/MoiTam/Documents/Codex/2026-07-21/rev/outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/root_rows.csv"
+  },
+  "phase": "holdout",
+  "piStar_profiles_computed": 1536,
+  "public_custody": false,
+  "q_values": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "root_rows": 2304,
+  "status": "PASS",
+  "utility_pass": false
+}

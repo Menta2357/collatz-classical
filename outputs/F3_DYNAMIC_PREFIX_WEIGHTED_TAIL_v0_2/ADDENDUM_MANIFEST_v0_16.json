@@ -1,0 +1,41 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.16",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_PAGE_DRAFT",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1.md",
+      "sha256": "98ee7c10084eb3b0651ca1f24925dbacd0510bf15c58a955391eeff13ae2a8c5"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_REPORT.md",
+      "sha256": "d3fa77d805bf977e2d2e513f30832b567e2543672ed7f79d5e6dfa45d4479b5a"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/summary.json",
+      "sha256": "9e8f435462bec1dc184bd87a82b832d09104c31fbd7240528a6bc54b6cf5f0c3"
+    }
+  ],
+  "local_verdict": "PAPER_OBLIGATION_OPEN",
+  "empirical_input": "CANDIDATE_CERTIFICATE_EMPIRICAL",
+  "next_gate": "REVIEW_RENEWAL_CONVERSION",
+  "holdout_range": [41473, 82945],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "q_boundary_core_row_fraction": 0.015625,
+  "q_boundary_acceptance_budget": 0.029582817727073607,
+  "split_mismatch_count": 0,
+  "weighted_ratio_lhs_over_rhs": 1.0296185828555777,
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

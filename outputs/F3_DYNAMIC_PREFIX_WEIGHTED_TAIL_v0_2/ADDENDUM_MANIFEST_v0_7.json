@@ -1,0 +1,46 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.7",
+  "date": "2026-07-21",
+  "status": [
+    "RECURRENCE_ORIENTATION_PAGE",
+    "RETURN_INVENTORY_BUILT",
+    "STOP_REBASING_NOT_MEMBERWISE",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_PHASE_B_SCALE_AWARE_RECURRENCE_ORIENTATION_v0_2.md",
+      "sha256": "c61ee848b3bd63ce6f024c1dda62b7e4d8aa7e1e23bf7c521cfdf70f5483a841"
+    },
+    {
+      "path": "F3_PHASE_B_RETURN_OPERATOR_INVENTORY_REPORT_v1.md",
+      "sha256": "4d7b4639ecf8e062f5bff82afce6a9827a72cb4965c0e3ef36c877eca95b14fe"
+    },
+    {
+      "path": "scripts/f3_phase_b_return_operator_inventory_v1.py",
+      "sha256": "603bdce00a82ecacd51981826a3057667a9e0bae1b9e9d948021e77b83c1f0f8"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/summary.json",
+      "sha256": "43a9cc1b530365d275ba8fea6adf36aa139c4195090e90591d5f5e0c3f0df2db"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/return_edges.csv",
+      "sha256": "b683a1dea9a8160afbaf73c6a8415c651e5965750af6efb6a7e6f13a7bd3a714"
+    },
+    {
+      "path": "results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/manifest_sha256.csv",
+      "sha256": "b49d803c1085b3e88d58ce3e480ae891e688626dfde13350122f9edada8fd75b"
+    }
+  ],
+  "local_verdict": "STOP_REBASING_NOT_MEMBERWISE",
+  "non_claims": {
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

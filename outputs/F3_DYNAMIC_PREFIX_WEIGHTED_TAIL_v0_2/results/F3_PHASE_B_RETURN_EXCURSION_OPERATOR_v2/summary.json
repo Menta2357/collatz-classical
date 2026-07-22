@@ -1,0 +1,41 @@
+{
+  "advanced_base_weight_decimal": 1.4103433105205698,
+  "advanced_base_weight_formula": "rho_star^(log_2(3)-1)",
+  "channel_counts": {
+    "advanced_direct_c2": 81,
+    "advanced_parity_lift_c1": 81,
+    "advanced_sterile_tail_c0": 81,
+    "retarded": 729
+  },
+  "collatz_wielandt_max_ratio": 1.0147870480474173,
+  "collatz_wielandt_min_ratio": 1.0147870480473962,
+  "d0": 5,
+  "direct_source_weight_decimal": 1.4103433105205698,
+  "edge_count": 891,
+  "inventory_status": "RETURN_EXCURSION_V2_BUILT_DIAGNOSTIC_ONLY",
+  "lambda_11_official": "71689/40000",
+  "local_verdict": "STOP_V2_MEMBERWISE_HOOKS_MISSING",
+  "max_outgoing_weight_excluding_tail": 1.7189852858292118,
+  "max_tail_weight_per_source": 1.4103433105205698,
+  "min_outgoing_weight_excluding_tail": 0.30864197530864196,
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "parity_lift_source_weight_decimal": 0.7835240614003166,
+  "power_iteration_estimate": 1.0147870480474077,
+  "retarded_weight_decimal": 0.30864197530864196,
+  "rho_star": "9/5",
+  "scalar_F_sector_lambda_11": 1.0418955393868232,
+  "scalar_F_sector_rho_star": 1.0399310992822708,
+  "scalar_direct_contribution_decimal": 0.47011443684018994,
+  "scalar_margin_rho_star": 0.03993109928227079,
+  "scalar_parity_lift_contribution_decimal": 0.2611746871334389,
+  "state_count": 729,
+  "sterile_tail_source_weight_decimal": 1.4103433105205698,
+  "tail_row_count": 81,
+  "total_tail_weight": 114.23780815216615
+}

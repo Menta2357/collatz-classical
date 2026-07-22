@@ -1,0 +1,58 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.10",
+  "date": "2026-07-22",
+  "status": [
+    "FREEZE_W_CONTRACT_PREDECLARED",
+    "STOP_FREEZE_W_SUPPORT_REDUCIBLE",
+    "HOLDOUT_NOT_OPENED",
+    "NO_FROZEN_W",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_FREEZE_W_AND_HOLDOUT_CONTRACT_v1.md",
+      "sha256": "f98b9dc9ead55c38f4a36f8c8e3c257109a1b5fe60bf2fd58cca6eef52fa2dcd"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_FREEZE_W_v1_REPORT.md",
+      "sha256": "cef41466ae138cc5be774aef6aa841d9ac55a3be463613a1deab8cabbd9719b8"
+    },
+    {
+      "path": "scripts/f3_return_excursion_freeze_w_v1.py",
+      "sha256": "b68d00b37c62b0ea9b9e4015802b08f59b1ce87c4c52129293206f41c4b79d68"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_FREEZE_W_v1/summary.json",
+      "sha256": "0ecaa3cb188366bccd373b1b605d6ca4d52ed06717ebbb8342154e55bbd97aaf"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_FREEZE_W_v1/candidate_w_not_frozen.csv",
+      "sha256": "5a571875a6e018719b17b70198923f51889f561ac02886c3cd7b14dd21307c5f"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_FREEZE_W_v1/freeze_reverify_failures.csv",
+      "sha256": "b714590a0c68198859fb0d83c9b19b1270ca4f309c5b24e700274115f56706b4"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_FREEZE_W_v1/manifest_sha256.csv",
+      "sha256": "56f3eec37887fe546723a605a7ec1d0a99f1b02b850051e65f3e1521e0eb970d"
+    }
+  ],
+  "local_verdict": "STOP_FREEZE_W_SUPPORT_REDUCIBLE",
+  "holdout_consumed": false,
+  "holdout_range_unopened": [
+    20737,
+    41473
+  ],
+  "non_claims": {
+    "no_frozen_w": true,
+    "no_holdout_result": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

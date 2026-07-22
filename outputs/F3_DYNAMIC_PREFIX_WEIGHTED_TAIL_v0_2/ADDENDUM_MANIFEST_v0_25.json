@@ -1,0 +1,46 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.25",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_CONSOLIDATED_v2_1",
+    "PAPER_GATE_REPAIRED_PENDING_ADVERSARIAL_REVIEW",
+    "PASS_COMBINED_LEDGER_D1_D2_REPAIRED",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_COMBINED_LEDGER_v1_1_REPORT.md",
+      "sha256": "3d076011c9d8ccbf5a62e7634c0167b2e618add6718b88924b05bf7d2a5fc4dd"
+    },
+    {
+      "path": "scripts/f3_combined_ledger_v1_1.py",
+      "sha256": "e7cfe8b2d724bfa2a81fa564ee99c56e0c2c43adcef15f2c793f9f4f0503b0bc"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1_1.json",
+      "sha256": "8525716fa383051dc53f6c7a547e3d71572b80c17d879183ab17872e00d01ac7"
+    },
+    {
+      "path": "F3_PAPER_CONSOLIDATED_v2_1.md",
+      "sha256": "56dacd48fa0e8d1faf5d07bd9f3ea521a24034910d05a2c1bc7f6a19bdfb27d1"
+    }
+  ],
+  "D2_sterile_in_matrix_edges": 0,
+  "D2_sterile_Q_rows": 243,
+  "D1_cell_absorption": "C(n+2,2)*(2/3)^n <= 80/27 < 3",
+  "eta_sterile": 0.0,
+  "eta_boundary_cell_corrected": 0.32667993457620154,
+  "eta_exact": "1562500/4782969",
+  "eta_decimal": 0.32667993457620154,
+  "final_coefficient": 0.02087292202813775,
+  "next_gate": "ADVERSARIAL_REVIEW_F3_PAPER_CONSOLIDATED_v2_1",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

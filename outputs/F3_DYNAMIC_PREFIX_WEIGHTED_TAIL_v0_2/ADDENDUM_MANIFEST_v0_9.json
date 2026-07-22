@@ -1,0 +1,51 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.9",
+  "date": "2026-07-21",
+  "status": [
+    "HOOK_BUDGET_PREDECLARED",
+    "EMPIRICAL_CANDIDATE_HOOKS_PASS",
+    "NO_HOLDOUT_CONSUMPTION",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1_BUDGET.md",
+      "sha256": "d30394d1ef82102621278c5d997f9bb637f1536da7c128705dd221cacf3a33c4"
+    },
+    {
+      "path": "F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1_REPORT.md",
+      "sha256": "bde4a5d36e499e058cf6bb8b272ca033040cd0bd45ecfbc5272d5769adc75c88"
+    },
+    {
+      "path": "scripts/f3_return_excursion_memberwise_hooks_v1.py",
+      "sha256": "ec50b56e682d5962900b10b0e85b3a13625833ba0836764bcc6f4d6590a5da13"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/summary.json",
+      "sha256": "64e8c12b41f8830ec93869c716c7ac2954d6c22efc02a6b64dcbd516327235c8"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/hook_checks.csv",
+      "sha256": "9c79c058e4b8542812a14db252204593ebd5d70fafe2ed250b4d1fffc8662711"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/hook_failures.csv",
+      "sha256": "0ca48b8714c2b68490f81d0ec34ded5a20d3faea8fc3adce8101a38f0f6e0c27"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/manifest_sha256.csv",
+      "sha256": "82237d0d2f03b27ca456878d37c3c53abdfad3d8d2653766bca0fe3de083dc04"
+    }
+  ],
+  "local_verdict": "EMPIRICAL_CANDIDATE_HOOKS_PASS",
+  "holdout_consumed": false,
+  "non_claims": {
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

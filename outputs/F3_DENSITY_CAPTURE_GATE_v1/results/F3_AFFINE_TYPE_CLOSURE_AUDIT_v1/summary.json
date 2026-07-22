@@ -1,0 +1,52 @@
+{
+  "algebraic_explanation": {
+    "consequence": "for t=0,1,2 the child residues modulo M are three distinct types",
+    "d1_lifted_advanced_step": "2c(a+tM) = 2c(a) + 4tM/3",
+    "direct_advanced_lift_step": "c(a+tM) = c(a) + 2tM/3"
+  },
+  "classification": "FIXED_MODULUS_NONCLOSURE_CONFIRMED",
+  "interpretation": {
+    "not_proved": "no finite-state weighted or nondeterministic closure exists",
+    "proved_by_finite_audit": "fixed residue modulo M does not determine the D1/D3 advanced child residue modulo M",
+    "remaining_route": "dynamic 3-adic prefix refinement plus a certified tail/redistribution lemma"
+  },
+  "no_claims": {
+    "no_asymptotic_claim": true,
+    "no_density_theorem": true,
+    "no_global_collatz_claim": true,
+    "no_lean": true
+  },
+  "outputs": {
+    "grid_csv": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/grid.csv",
+    "manifest_sha256_csv": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/manifest_sha256.csv",
+    "nonclosure_witnesses_csv": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/nonclosure_witnesses.csv",
+    "summary_json": "results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/summary.json"
+  },
+  "parameters": {
+    "k3_range": [
+      2,
+      7
+    ],
+    "l2_range": [
+      0,
+      5
+    ],
+    "modulus_formula": "3^k3 * 2^l2",
+    "tracked_parent_classes_mod9": [
+      2,
+      5,
+      8
+    ]
+  },
+  "results": {
+    "d1_d3_all_parent_types_have_three_advanced_images": true,
+    "d1_d3_nonclosed_rows": 72,
+    "d1_d3_rows": 72,
+    "d2_closed_single_branch_rows": 36,
+    "d2_rows": 36,
+    "grid_rows": 108,
+    "representative_nonclosure_witnesses": 72,
+    "unexpected_rows": 0
+  },
+  "status": "PASS"
+}

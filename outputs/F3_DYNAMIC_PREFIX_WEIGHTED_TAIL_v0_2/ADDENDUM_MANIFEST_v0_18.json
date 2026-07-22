@@ -1,0 +1,40 @@
+{
+  "name": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2 addendum manifest v0.18",
+  "date": "2026-07-22",
+  "status": [
+    "PAPER_OBLIGATION_OPEN",
+    "LEMMA_A_PAPER_ROUTE_ACCEPTED",
+    "LEMMA_B_PROOF_ATTEMPT_OPEN_QUANTITATIVE_FIRST_PASSAGE",
+    "CANDIDATE_CERTIFICATE_EMPIRICAL",
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ],
+  "files": [
+    {
+      "path": "F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_1.md",
+      "sha256": "30942a8d3d0983e805ce46406e2b8f6ad4514fe17b48ca8139d809e7ce51e038"
+    },
+    {
+      "path": "scripts/f3_retarded_channel_p0_audit.py",
+      "sha256": "bd295c5773045aa3bdc408794f1e2ece95a5a94a9d5fb21d88055bde69af0de6"
+    },
+    {
+      "path": "results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/retarded_channel_p0_audit.json",
+      "sha256": "dfaf7b09c97cd2bd8c3d5e45a3ecd5bb33aada67c81600236e39ba339665efea"
+    }
+  ],
+  "frozen_w_split_core_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "p0_definition": "min_s retarded_contribution_s / (w^T M_split)_s",
+  "p0_decimal": 0.19485689248944574,
+  "p0_argmin_source_id": 6,
+  "p0_argmin_target_id": 26,
+  "next_gate": "COMPLETE_LEMMA_B_ON_PAPER",
+  "non_claims": {
+    "no_formal_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true,
+    "no_lean_operator": true
+  }
+}

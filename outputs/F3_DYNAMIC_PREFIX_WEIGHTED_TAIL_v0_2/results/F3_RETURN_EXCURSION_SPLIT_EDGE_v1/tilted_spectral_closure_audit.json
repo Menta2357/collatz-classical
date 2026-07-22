@@ -1,0 +1,97 @@
+{
+  "definition": "M(rho') edge = M(rho_star) edge * (rho'/rho_star)^h",
+  "rho_star": 1.8,
+  "delta": 0.01,
+  "rho_grid": [
+    1.9,
+    2.0,
+    2.05,
+    2.1,
+    2.2,
+    2.35,
+    2.5
+  ],
+  "step_alphabet": {
+    "retarded": -2.0,
+    "advanced_direct_c2": 0.5849625007211561,
+    "advanced_parity_lift_c1": -0.4150374992788439
+  },
+  "core_state_count": 243,
+  "edge_count_core": 729,
+  "rho_star_reconstruction_perron": 1.0399310992822715,
+  "curve": [
+    {
+      "rho_prime": 1.9,
+      "theta": 0.05406722127027579,
+      "perron": 1.017608034011145,
+      "gamma": -0.01760803401114508,
+      "below_one": false
+    },
+    {
+      "rho_prime": 2.0,
+      "theta": 0.10536051565782635,
+      "perron": 1.0000000000000013,
+      "gamma": -1.3322676295501878e-15,
+      "below_one": false
+    },
+    {
+      "rho_prime": 2.05,
+      "theta": 0.13005312824819776,
+      "perron": 0.9926791302343122,
+      "gamma": 0.007320869765687799,
+      "below_one": true
+    },
+    {
+      "rho_prime": 2.1,
+      "theta": 0.15415067982725836,
+      "perron": 0.986221643264355,
+      "gamma": 0.013778356735644981,
+      "below_one": true
+    },
+    {
+      "rho_prime": 2.2,
+      "theta": 0.20067069546215124,
+      "perron": 0.9755834711018048,
+      "gamma": 0.024416528898195233,
+      "below_one": true
+    },
+    {
+      "rho_prime": 2.35,
+      "theta": 0.26662866325394863,
+      "perron": 0.9643563954328697,
+      "gamma": 0.03564360456713034,
+      "below_one": true
+    },
+    {
+      "rho_prime": 2.5,
+      "theta": 0.32850406697203605,
+      "perron": 0.9576029720165454,
+      "gamma": 0.04239702798345457,
+      "below_one": true
+    }
+  ],
+  "best_grid_point": {
+    "rho_prime": 2.5,
+    "theta": 0.32850406697203605,
+    "perron": 0.9576029720165454,
+    "gamma": 0.04239702798345457,
+    "below_one": true
+  },
+  "theta_best": 0.32850406697203605,
+  "gamma_best": 0.04239702798345457,
+  "effective_survival_factor_best": 0.9671790017367109,
+  "effective_gamma_best": 0.0328209982632891,
+  "C_vector_min": 0.0031,
+  "C_status": "vector-minimum proxy; base constant C is not yet proved",
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "pass_condition": "(1+delta)*min_grid_perron < 1",
+  "spectral_valley_pass": true,
+  "growth_adjusted_pass": true,
+  "local_verdict": "PASS_TILT_VALLEY_GROWTH_ADJUSTED",
+  "status": "DIAGNOSTIC_INPUT_TO_LEMMA_B",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}

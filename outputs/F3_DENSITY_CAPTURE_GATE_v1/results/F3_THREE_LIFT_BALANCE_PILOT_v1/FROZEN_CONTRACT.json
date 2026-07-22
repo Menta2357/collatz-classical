@@ -1,0 +1,63 @@
+{
+  "beta_frozen": 0.015,
+  "beta_frozen_fraction": "3/200",
+  "calibration_minimum_share": 0.03596542697923855,
+  "calibration_minimum_share_fraction": "11830/328927",
+  "config": {
+    "calibration_q": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "freeze_grid": 1000,
+    "freeze_margin": "1/50",
+    "holdout_q": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "moduli": [
+      36,
+      108
+    ],
+    "parent_classes": [
+      2,
+      8
+    ],
+    "scales_y": [
+      8,
+      9,
+      10
+    ],
+    "utility_floor": "1/5"
+  },
+  "freeze_rule": "floor_0.001(max(0, calibration_minimum_share - 0.02))",
+  "holdout_accessed": false,
+  "holdout_q": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "preregistration_sha256": "c22986909431966bac0c09b524f46d6e82f68a9c09e244224011fb152de2ba17",
+  "public_custody": false,
+  "script_sha256": "b9d1be778c200d88ffe80b313bca5d5684e4a43ac465c05f1fc513443fb83b96",
+  "status": "FROZEN_BEFORE_HOLDOUT",
+  "utility_floor": 0.2,
+  "utility_floor_fraction": "1/5",
+  "utility_pass": false
+}

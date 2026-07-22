@@ -1,0 +1,28 @@
+{
+  "table": "F3_BASE_SEGMENT_TABLE_v1",
+  "interval_half_open": [
+    3,
+    10369
+  ],
+  "y_base": 8,
+  "target_state": "d5:r2:podd:b0",
+  "core_state_count": 243,
+  "root_count_total": 3455,
+  "root_count_min": 10,
+  "root_count_max": 22,
+  "zero_witness_states": 0,
+  "unreachable_states": 0,
+  "distance_max": 6,
+  "weighted_base_mass_min": 0.031,
+  "weighted_base_mass_max": 0.122782,
+  "weighted_base_mass_min_state": "d5:r101:peven:b1",
+  "table_sha256": "2d5fbf7d0fa6dd61e5444cc5dea4f117497e5642a464d92d7380838c532ee0aa",
+  "status": "PASS_FINITE_BASE_SEGMENT",
+  "interpretation": "root witnesses are members of piStar(root, 2^y_base*root); no asymptotic claim",
+  "frozen_w_sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40",
+  "non_claims": [
+    "NO_FORMAL_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_LEAN_OPERATOR"
+  ]
+}

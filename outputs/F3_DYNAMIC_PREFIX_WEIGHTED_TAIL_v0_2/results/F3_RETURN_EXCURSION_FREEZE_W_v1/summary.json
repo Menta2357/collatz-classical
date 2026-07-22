@@ -1,0 +1,48 @@
+{
+  "D": 1000000,
+  "d0": 5,
+  "delta": "1/100",
+  "graph_scc": {
+    "largest_scc": 135,
+    "scc_count": 443,
+    "sink_scc_count": 11,
+    "sink_scc_sizes_desc": [
+      135,
+      81,
+      27,
+      27,
+      9,
+      9,
+      3,
+      3,
+      1,
+      1,
+      1
+    ]
+  },
+  "holdout_consumed": false,
+  "holdout_range_predeclared": [
+    20737,
+    41473
+  ],
+  "integer_weight_sum": 1000529,
+  "lambda_11_official": "71689/40000",
+  "left_perron_eigenvalue_decimal": 1.0147870480474062,
+  "left_perron_zero_real_support_count": 594,
+  "local_verdict": "STOP_FREEZE_W_SUPPORT_REDUCIBLE",
+  "matrix_edge_count": 891,
+  "non_claims": {
+    "no_almost_all": true,
+    "no_density_theorem": true,
+    "no_frozen_w": true,
+    "no_global_collatz_claim": true,
+    "no_holdout_result": true,
+    "no_lean_operator": true,
+    "no_rho_certificate": true
+  },
+  "rational_bad_state_count": 594,
+  "rational_min_ratio_lhs_over_rhs": 0.0,
+  "rational_reverify_pass": false,
+  "rho_star": "9/5",
+  "state_count": 729
+}
