@@ -9,7 +9,8 @@
   "rho_star": "9/5",
   "alpha": "log(3)/log(2)",
   "decimal_promotion": false,
-  "row_certificate_status": "EXPLICIT_OBLIGATION_NOT_CLAIMED",
+  "row_certificate_status": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
+  "orientation_audit_status": "ORIENTATION_CONVENTION_REOPENED",
   "non_claims": [
     "NO_RHO_CERTIFICATE",
     "NO_DENSITY_THEOREM",

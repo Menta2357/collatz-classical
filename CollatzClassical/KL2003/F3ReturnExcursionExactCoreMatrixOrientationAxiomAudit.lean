@@ -1,0 +1,13 @@
+import CollatzClassical.KL2003.F3ReturnExcursionExactCoreMatrixOrientation
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3ExactCoreMatrix
+
+#print axioms leftCertificate_iff_transitionCertificate
+#print axioms coreTransition_nonneg
+#print axioms transitionCertificate_implies_bridge_assumption
+
+end F3ExactCoreMatrix
+end KL2003
+end CollatzClassical

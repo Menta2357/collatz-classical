@@ -1,0 +1,18 @@
+{
+  "frozen_csv_action": "left w^T*M",
+  "left_fail_count": 0,
+  "left_min_ratio": 1.0295828177270736,
+  "matrix_definition": "source_to_target M[source,target]",
+  "no_claims": [
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_GLOBAL_COLLATZ_CLAIM",
+    "NO_F3_THEOREM"
+  ],
+  "paper_and_bridge_required_action": "right M*w",
+  "right_fail_count": 135,
+  "right_min_ratio": 0.200621308422825,
+  "state_count": 243,
+  "status": "ORIENTATION_CONVENTION_REOPENED",
+  "transpose_repair_equivalence": "(M.T)*w = w^T*M"
+}

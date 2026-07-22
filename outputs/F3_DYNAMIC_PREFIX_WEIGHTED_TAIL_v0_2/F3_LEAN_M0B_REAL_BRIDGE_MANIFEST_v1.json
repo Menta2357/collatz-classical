@@ -77,14 +77,14 @@
       "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
     },
     {
-      "bytes": 401,
+      "bytes": 474,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_EXACT_CORE_MATRIX_SUMMARY_v1.json",
-      "sha256": "0bf5d0823d7d17404542dc3b999a55fddba1b570b6942e0a207368025c79f3ed"
+      "sha256": "30fca77377d843a292e01da01469bc7e8af4d56c93013bd8c7be292863e512da"
     },
     {
-      "bytes": 2004,
+      "bytes": 2337,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/F3_EXACT_CORE_MATRIX_REPORT_v1.md",
-      "sha256": "648d56cb5115e80bd7c984e2b103dd70fb108504f7351c6d9abdb3853e50fdfa"
+      "sha256": "79ac3876bf7c17091dd54e9b6310daeae7950759479823b58b4b2163ca9f3de0"
     },
     {
       "bytes": 73,
@@ -102,14 +102,49 @@
       "sha256": "7a26741f7e8f22ccb8be181e6c28aa5b0f3b953b205186b8b16ac8bc29e4a206"
     },
     {
+      "bytes": 3741,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_orientation_audit_v1.py",
+      "sha256": "63767e55bf8be91a9a72d4a2e47340ac4274c807fe96530fa56687417034b350"
+    },
+    {
+      "bytes": 2026,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/F3_ORIENTATION_AUDIT_REPORT_v1.md",
+      "sha256": "d1192fd53713ad2ba2d7247ba10329591a545308d757441705c1b6acb7f7e713"
+    },
+    {
+      "bytes": 24915,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/orientation_rows.csv",
+      "sha256": "fb7f8af40b8ca88df9916e1d8c6167c5aa640088187b7d30fbc9ffd3f470f744"
+    },
+    {
+      "bytes": 529,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/summary.json",
+      "sha256": "89656cd9a5cd01bf791e2485144d3a28281a1e0c2bd17ba49b5d835e0459ebbe"
+    },
+    {
+      "bytes": 176,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/manifest_sha256.csv",
+      "sha256": "4cb90db7b695059438aa612e0fe2446f4d257d779d96eeecbf411771e98d5d75"
+    },
+    {
+      "bytes": 427,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/axiom_audit.txt",
+      "sha256": "c8d6c2e2c315b356d95a3bcd841280399db972d26f92e720b046dff873d5218d"
+    },
+    {
+      "bytes": 191,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/orientation_compile.txt",
+      "sha256": "e93064c80509cfc8b843f24b4dcd1c53f49926b4cc5343206b1a31f615d43596"
+    },
+    {
       "bytes": 273,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 5370,
+      "bytes": 6356,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "d41812a5730186a261461e92ea00df972a33fc0c0be42879b2c93cd6bc070ed4"
+      "sha256": "1697bf89fbcfdf257808824c48bef89c87b82d4691da0d46720e5f25370f85da"
     },
     {
       "bytes": 6945,
@@ -165,6 +200,16 @@
       "bytes": 455,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixAxiomAudit.lean",
       "sha256": "0c15958c0a8c1865f9f4ca0320508e627da48f73204df37f1b05409d6594c29d"
+    },
+    {
+      "bytes": 1439,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientation.lean",
+      "sha256": "acfe9013dfa69cbd6f7fde50e2809577eb3ae86bf3a1b6c43610a1b2fdf965fe"
+    },
+    {
+      "bytes": 358,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientationAxiomAudit.lean",
+      "sha256": "5a656e8222e90b4b71622d277e0198120d13ea611f79b1b18ebcabaeb023c65b"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -177,11 +222,12 @@
   ],
   "statuses": {
     "density_theorem": "NO",
-    "exact_core_matrix": "EXACT_MATRIX_DEFINED_ROW_CERTIFICATE_OPEN",
+    "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED",
     "global_collatz_claim": "NO",
+    "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
     "rho_certificate": "NO",
-    "row_certificate": "OPEN_NOT_CLAIMED",
+    "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
     "semantic_bridge": "RULE_TO_PISTAR_BRIDGE_FINITE_INVENTORY_PASS",
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS"
   }

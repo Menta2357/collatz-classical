@@ -1,6 +1,6 @@
 # F3 exact 243-state core matrix — informe v1
 
-Estado: `EXACT_MATRIX_DEFINED_ROW_CERTIFICATE_OPEN`.
+Estado: `EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED`.
 
 ## Resultado
 
@@ -34,9 +34,13 @@ El módulo define, pero no afirma, la proposición
 ```
 
 Esta desigualdad member-wise todavía debe demostrarse a partir de las
-entradas exactas. El CSV contiene valores decimales de auditoría y no se han
-convertido en prueba Lean. Por tanto este informe **no** declara certificado
-de `rho`, teorema de densidad ni resultado global de Collatz.
+entradas exactas. Además, la auditoría de orientación mostró que el CSV
+congelado usa `w^T M`, mientras que esta proposición usa `M w` para la matriz
+fuente→destino. La acción derecha falla en 135/243 filas con el vector
+congelado; la izquierda pasa. El hallazgo y las dos reparaciones legítimas
+están en `F3_ORIENTATION_AUDIT_REPORT_v1.md`. Por tanto este informe **no**
+declara certificado de `rho`, teorema de densidad ni resultado global de
+Collatz.
 
 ## Auditoría
 
@@ -45,6 +49,7 @@ la no negatividad y la interfaz de la obligación. La presencia de
 `Real.rpow`, `Classical.choice` o axiomas estándar de Mathlib no se presenta
 como ausencia de axiomas: el perfil se conserva en el log de compilación.
 
-Siguiente gate: probar `rowCertificate` o registrar un STOP reproducible. Solo
+Siguiente gate: fijar una sola convención (transposición explícita o matriz
+destino→fuente), actualizar el contrato y re-verificar `rowCertificate`. Solo
 después puede instanciarse el puente de masa ponderada y comenzar la
 conversión renewal completa.

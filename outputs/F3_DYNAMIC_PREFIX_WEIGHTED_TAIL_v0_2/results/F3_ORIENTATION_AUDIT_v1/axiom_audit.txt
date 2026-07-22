@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3ExactCoreMatrix.leftCertificate_iff_transitionCertificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.coreTransition_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.transitionCertificate_implies_bridge_assumption' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
