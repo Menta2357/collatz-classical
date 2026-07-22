@@ -1,0 +1,16 @@
+'CollatzClassical.KL2003.F3ExactCoreMatrix.core_edge_count' depends on axioms: [Lean.ofReduceBool]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.frozen_weight_count' depends on axioms: [Lean.ofReduceBool]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.core_edges_have_valid_channels' depends on axioms: [Lean.ofReduceBool]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.channelWeight_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.coreMatrix_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.frozenWeight_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ExactCoreMatrix.rowCertificate_is_explicit_obligation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+real 161.91
+user 4.10
+sys 14.18

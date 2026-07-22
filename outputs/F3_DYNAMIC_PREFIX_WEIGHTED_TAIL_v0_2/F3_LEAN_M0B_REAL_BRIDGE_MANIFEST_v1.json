@@ -1,5 +1,5 @@
 {
-  "base_commit": "515221dbf60dfff3a13da85fec423eb88fc028a8",
+  "base_commit": "1c460a4d76ab22944fae9498f5ad48a271d3db58",
   "files": [
     {
       "bytes": 1432,
@@ -72,14 +72,44 @@
       "sha256": "2468b860211830109311d49580f22f26bf9e80f54e5ea490fd8212d0d008b685"
     },
     {
+      "bytes": 1116,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_REAL_OPERATOR_INSTANCE_BUDGET_v1.md",
+      "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
+    },
+    {
+      "bytes": 401,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_EXACT_CORE_MATRIX_SUMMARY_v1.json",
+      "sha256": "0bf5d0823d7d17404542dc3b999a55fddba1b570b6942e0a207368025c79f3ed"
+    },
+    {
+      "bytes": 2004,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/F3_EXACT_CORE_MATRIX_REPORT_v1.md",
+      "sha256": "648d56cb5115e80bd7c984e2b103dd70fb108504f7351c6d9abdb3853e50fdfa"
+    },
+    {
+      "bytes": 73,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/matrix_compile.txt",
+      "sha256": "50736e3641e66d7619b2e69fae98a01059da91e0c5ab365fc54b9853d71c2e6d"
+    },
+    {
+      "bytes": 863,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/axiom_audit.txt",
+      "sha256": "89742e2f3e5b4ad2faff4f8d5eb30c3024eab584c65fd8384df40cf167942c73"
+    },
+    {
+      "bytes": 5525,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_exact_core_matrix_v1.py",
+      "sha256": "7a26741f7e8f22ccb8be181e6c28aa5b0f3b953b205186b8b16ac8bc29e4a206"
+    },
+    {
       "bytes": 273,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 4346,
+      "bytes": 5370,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "f281f147ea1f10ac50e37b28fa5f00ee34546234ef03a9978cea7b43dce234f1"
+      "sha256": "d41812a5730186a261461e92ea00df972a33fc0c0be42879b2c93cd6bc070ed4"
     },
     {
       "bytes": 6945,
@@ -125,19 +155,33 @@
       "bytes": 350,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionRealOperatorBridgeAxiomAudit.lean",
       "sha256": "80c7e54a3d1a737ddb84ab4ab25b4086ccaafa745ec607f76fea457f3e9e00ec"
+    },
+    {
+      "bytes": 67453,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrix.lean",
+      "sha256": "58ab7b1acdb7bc6d69fffa04c4baa7ae29ac31e24e80834387974113b70d2ba5"
+    },
+    {
+      "bytes": 455,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixAxiomAudit.lean",
+      "sha256": "0c15958c0a8c1865f9f4ca0320508e627da48f73204df37f1b05409d6594c29d"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
+  "operator_instance_budget_seconds": 600,
   "real_pilot_budget_seconds": 900,
   "scope": [
     "Real renewal pilot",
-    "rule-to-piStar semantic bridge API"
+    "rule-to-piStar semantic bridge API",
+    "exact 243-state core matrix representation"
   ],
   "statuses": {
     "density_theorem": "NO",
+    "exact_core_matrix": "EXACT_MATRIX_DEFINED_ROW_CERTIFICATE_OPEN",
     "global_collatz_claim": "NO",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
     "rho_certificate": "NO",
+    "row_certificate": "OPEN_NOT_CLAIMED",
     "semantic_bridge": "RULE_TO_PISTAR_BRIDGE_FINITE_INVENTORY_PASS",
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS"
   }

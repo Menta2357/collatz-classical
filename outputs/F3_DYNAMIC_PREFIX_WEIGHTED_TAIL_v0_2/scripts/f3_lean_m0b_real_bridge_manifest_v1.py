@@ -24,6 +24,12 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/F3_REAL_OPERATOR_BRIDGE_REPORT_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/bridge_compile.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/axiom_audit.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_REAL_OPERATOR_INSTANCE_BUDGET_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_EXACT_CORE_MATRIX_SUMMARY_v1.json",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/F3_EXACT_CORE_MATRIX_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/matrix_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/axiom_audit.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_exact_core_matrix_v1.py",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_semantic_inventory_v1.py",
@@ -35,6 +41,8 @@ FILES = (
     "CollatzClassical/KL2003/F3ReturnExcursionFrozenSemanticInventoryAxiomAudit.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionRealOperatorBridge.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionRealOperatorBridgeAxiomAudit.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrix.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixAxiomAudit.lean",
 )
 
 
@@ -51,13 +59,20 @@ def main() -> None:
         records.append({"path": rel, "bytes": path.stat().st_size, "sha256": sha256(path)})
     payload = {
         "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
-        "base_commit": "515221dbf60dfff3a13da85fec423eb88fc028a8",
+        "base_commit": "1c460a4d76ab22944fae9498f5ad48a271d3db58",
         "real_pilot_budget_seconds": 900,
-        "scope": ["Real renewal pilot", "rule-to-piStar semantic bridge API"],
+        "operator_instance_budget_seconds": 600,
+        "scope": [
+            "Real renewal pilot",
+            "rule-to-piStar semantic bridge API",
+            "exact 243-state core matrix representation"
+        ],
         "statuses": {
             "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
             "semantic_bridge": "RULE_TO_PISTAR_BRIDGE_FINITE_INVENTORY_PASS",
             "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
+            "exact_core_matrix": "EXACT_MATRIX_DEFINED_ROW_CERTIFICATE_OPEN",
+            "row_certificate": "OPEN_NOT_CLAIMED",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",

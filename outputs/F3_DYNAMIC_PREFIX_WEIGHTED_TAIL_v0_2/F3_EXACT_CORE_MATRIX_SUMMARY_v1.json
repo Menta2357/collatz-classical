@@ -1,0 +1,18 @@
+{
+  "core_states": 243,
+  "core_edges": 729,
+  "channels": {
+    "retarded": 243,
+    "advanced_direct_c2": 243,
+    "advanced_parity_lift_c1": 243
+  },
+  "rho_star": "9/5",
+  "alpha": "log(3)/log(2)",
+  "decimal_promotion": false,
+  "row_certificate_status": "EXPLICIT_OBLIGATION_NOT_CLAIMED",
+  "non_claims": [
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ]
+}
