@@ -56,6 +56,10 @@ FILES = (
     "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixAxiomAudit.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientation.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientationAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/F3_CHANNEL_SCALAR_BOUNDS_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/channel_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/channel_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionChannelBounds.lean",
 )
 
 

@@ -1,0 +1,6 @@
+'CollatzClassical.KL2003.F3ChannelBounds.alpha_lower_bound_f3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ChannelBounds.rhoStar_rpow_seventh_twelfth_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ChannelBounds.channelWeight_zero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ChannelBounds.channelWeight_one_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ChannelBounds.channelWeight_two_eq_channelWeight_one_div_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3ChannelBounds.channelWeight_two_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+EXIT:0
+real 19.22
+user 1.95
+sys 2.21
