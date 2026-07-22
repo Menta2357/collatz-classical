@@ -39,6 +39,8 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/manifest_sha256.csv",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/axiom_audit.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/orientation_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/axiom_audit_latest.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/orientation_compile_latest.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_semantic_inventory_v1.py",

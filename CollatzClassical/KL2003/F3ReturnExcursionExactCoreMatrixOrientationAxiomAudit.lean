@@ -7,6 +7,8 @@ namespace F3ExactCoreMatrix
 #print axioms leftCertificate_iff_transitionCertificate
 #print axioms coreTransition_nonneg
 #print axioms transitionCertificate_implies_bridge_assumption
+#print axioms exact_core_weighted_mass_step
+#print axioms exact_core_push_nonneg
 
 end F3ExactCoreMatrix
 end KL2003

@@ -32,6 +32,11 @@ por reducción definicional que el certificado izquierdo equivale al certificado
 derecho del operador transpuesto. Sigue sin afirmar ninguna de las dos
 desigualdades.
 
+Además, el módulo compila la interfaz `exact_core_weighted_mass_step`: dado el
+certificado izquierdo como hipótesis, el puente Real entrega el crecimiento de
+masa para `coreTransition`. La hipótesis sigue siendo explícita; no se ha
+convertido el resultado numérico en una prueba.
+
 ## Veredicto
 
 `STOP_ORIENTATION_CONVENTION`.

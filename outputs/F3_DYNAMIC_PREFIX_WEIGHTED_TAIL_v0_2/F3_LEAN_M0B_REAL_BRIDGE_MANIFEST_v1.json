@@ -117,9 +117,9 @@
       "sha256": "63767e55bf8be91a9a72d4a2e47340ac4274c807fe96530fa56687417034b350"
     },
     {
-      "bytes": 2026,
+      "bytes": 2313,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/F3_ORIENTATION_AUDIT_REPORT_v1.md",
-      "sha256": "d1192fd53713ad2ba2d7247ba10329591a545308d757441705c1b6acb7f7e713"
+      "sha256": "f09d0d1ed984dcc143290591ebb64458ac1b23f8811dc452c6f788e3320f2daa"
     },
     {
       "bytes": 24915,
@@ -147,14 +147,24 @@
       "sha256": "e93064c80509cfc8b843f24b4dcd1c53f49926b4cc5343206b1a31f615d43596"
     },
     {
+      "bytes": 690,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/axiom_audit_latest.txt",
+      "sha256": "9c5b3417639d0cef2d8902e1dfc6bf870b1e85ebdff55a62dba63f5620d5d114"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ORIENTATION_AUDIT_v1/orientation_compile_latest.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "bytes": 273,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 6662,
+      "bytes": 6884,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "e91b77388f04f6f5b6616a71b6aa3b51ffb96e177b9acbea82d36de2f1ff60f2"
+      "sha256": "2fc3203ed95cfaed2e49e1a91936475f221107d08cd9925c3df403c1fd635d4f"
     },
     {
       "bytes": 6945,
@@ -212,14 +222,14 @@
       "sha256": "0c15958c0a8c1865f9f4ca0320508e627da48f73204df37f1b05409d6594c29d"
     },
     {
-      "bytes": 1439,
+      "bytes": 2463,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientation.lean",
-      "sha256": "acfe9013dfa69cbd6f7fde50e2809577eb3ae86bf3a1b6c43610a1b2fdf965fe"
+      "sha256": "75b0ff5f9bb3bedc13fb1c237e0eadc8088f7379773b0d0a3b0327f8c144f7bf"
     },
     {
-      "bytes": 358,
+      "bytes": 439,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixOrientationAxiomAudit.lean",
-      "sha256": "5a656e8222e90b4b71622d277e0198120d13ea611f79b1b18ebcabaeb023c65b"
+      "sha256": "c67817aee8495b0fe9ffc96757d09ce6950052b58eab938455a739335af87886"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
