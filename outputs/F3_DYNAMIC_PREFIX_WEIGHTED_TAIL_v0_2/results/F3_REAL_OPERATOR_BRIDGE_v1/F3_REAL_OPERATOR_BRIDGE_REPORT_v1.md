@@ -1,6 +1,6 @@
 # F3 Real operator-to-functional bridge — informe v1
 
-Estado: `REAL_OPERATOR_ROW_MASS_BRIDGE_PASS_INSTANTIATION_OPEN`.
+Estado: `REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN`.
 
 El módulo prueba en `ℝ`, para un tipo finito arbitrario de estados, la
 identidad de masa tras un push-forward y la implicación:
@@ -17,9 +17,12 @@ member-wise y la secuencia de masas usada por el lema renewal.
 
 ## Límite
 
-El teorema está parametrizado por `M` y `w`; todavía no instancia la matriz
-real de 243 estados a partir del CSV ni prueba la conversión global de
-`piStar`. El siguiente paso es conectar esta interfaz con el inventario
-semántico y una representación exacta de las entradas congeladas.
+El teorema está parametrizado por `M` y `w`; la representación exacta de 243
+estados ya está custodiada, pero la auditoría de orientación mostró que el CSV
+congelado usa `w^T M` mientras que la interfaz fuente→destino usa `M w`.
+La reparación transpuesta está definida en
+`F3ReturnExcursionExactCoreMatrixOrientation.lean`, sin afirmar todavía la
+desigualdad numérica. El siguiente paso es fijar esa convención y probar el
+certificado member-wise sobre las entradas exactas.
 
 No se declara certificado de `rho`, densidad ni Collatz global.

@@ -83,6 +83,7 @@ def main() -> None:
             "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED",
             "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
             "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
+            "real_operator_bridge": "REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",
