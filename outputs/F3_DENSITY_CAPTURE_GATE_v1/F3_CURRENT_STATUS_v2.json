@@ -1,0 +1,85 @@
+{
+  "status_version": "v2",
+  "status": "F3_FORMAL_REVIEW_PENDING_PUBLIC_CUSTODY",
+  "formal_verdict": "PENDING_PUBLIC_CUSTODY",
+  "formal_coordinated_verdict": "PENDING_PUBLIC_CUSTODY",
+  "classification": {
+    "v1_invalidation": "F3_V1_INVALIDATION_ACCEPTED",
+    "v2_holdout_integrity": "F3_V2_HOLDOUT_INTEGRITY_ACCEPTED",
+    "uniform_lift_balance": "F3_UNIFORM_LIFT_BALANCE_STOP",
+    "dynamic_prefix_weighted_tail": "F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_OPEN",
+    "nblock_memberwise": "F3_NBLOCK_MEMBERWISE_ROUTE_II_READY",
+    "split_edge_holdout": "F3_SPLIT_EDGE_HOLDOUT_EMPIRICAL_PASS",
+    "formal_review": "F3_FORMAL_REVIEW_PENDING_PUBLIC_CUSTODY"
+  },
+  "no_claims": {
+    "no_lean": true,
+    "no_rho_certificate": true,
+    "no_density_theorem": true,
+    "no_almost_all": true,
+    "no_global_collatz_claim": true
+  },
+  "route_status": {
+    "uniform_useful_lift_balance": "STOP",
+    "dynamic_3adic_prefix_with_certified_weighted_tail": "OPEN_PAPER_ONLY",
+    "next_gate": "FINAL_PAPER_REVIEW",
+    "lean_status": "NOT_AUTHORIZED"
+  },
+  "three_lift_pilot": {
+    "v1": {
+      "parent_root_overlap": 192,
+      "status": "INVALID_HOLDOUT",
+      "verdict": "F3_V1_INVALIDATION_ACCEPTED"
+    },
+    "v2": {
+      "calibration_parent_roots": 2304,
+      "holdout_parent_roots": 2304,
+      "parent_root_overlap": 0,
+      "rows_per_phase": 13824,
+      "holdout_integrity": "ACCEPTED",
+      "utility_floor": 0.2,
+      "utility_pass": false,
+      "local_verdict": "STOP_OR_REDESIGN",
+      "status": "VALID_LOCAL_HOLDOUT_UTILITY_STOP",
+      "verdict": "F3_V2_HOLDOUT_INTEGRITY_ACCEPTED"
+    }
+  },
+  "n_block": {
+    "value": 243,
+    "derivation": "3^6 * (1/3) = 3^5 = 243",
+    "frozen_state_count": 243,
+    "residue_group_count": 81,
+    "reticle_states_per_group": 3,
+    "epsilon": "2/243",
+    "route_ii_status": "PASS_NBLOCK_MEMBERWISE_LEMMA_ROUTE_II_READY_FOR_FINAL_REVIEW"
+  },
+  "split_edge_holdout": {
+    "interval_half_open": [
+      41473,
+      82945
+    ],
+    "unique_parent_roots": 13824,
+    "complete_core_rows": 40824,
+    "boundary_core_rows": 648,
+    "split_mismatch_count": 0,
+    "q_boundary": 0.015625,
+    "q_boundary_budget": 0.0295828177,
+    "weighted_ratio_lhs_over_rhs": 1.0296185828,
+    "weighted_ratio_threshold": 1.0,
+    "holdout_consumed": true,
+    "reexecution_policy": "DO_NOT_RERUN_CONSUMED_RANGE; VALIDATE_STORED_OUTPUTS_AND_HASHES"
+  },
+  "paper": {
+    "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v3_1.md",
+    "status": "CANDIDATE_EMPIRICAL_PENDING_FINAL_REVIEW",
+    "uniform_domain_claim": "PAPER_ONLY_UNDER_EXPLICIT_LEMMAS",
+    "evidence_formal_separation": true
+  },
+  "custody": {
+    "historical_status_preserved": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CURRENT_STATUS_v1.json",
+    "historical_manifest_preserved": "outputs/F3_DENSITY_CAPTURE_GATE_v1/PACKAGE_MANIFEST_v1.json",
+    "update_manifest": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_UPDATE_MANIFEST_v2.json",
+    "scope": "F3 documents, scripts, outputs, and manifests only",
+    "exclude_kl2003_k9_k11": true
+  }
+}

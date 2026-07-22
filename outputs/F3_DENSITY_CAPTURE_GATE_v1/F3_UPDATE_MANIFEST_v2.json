@@ -1,0 +1,1411 @@
+{
+  "excluded": [
+    "__pycache__",
+    "*.pyc",
+    "outputs/KL2003_*",
+    "scripts/kl2003_*"
+  ],
+  "files": [
+    {
+      "bytes": 3104,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_AUDIT_FINDINGS_v1_1.md",
+      "sha256": "19719c14f544e27f2568a6897ded982de8979eaf6be7e00535a4027ffded2aaa"
+    },
+    {
+      "bytes": 3093,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CLAUDE_REVIEW_PACKET_v1.md",
+      "sha256": "7d9608d2629910889f0a1782db9c455121d7bbbdac2eecf5b4f8f9828b438a6b"
+    },
+    {
+      "bytes": 2621,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CLAUDE_REVIEW_PACKET_v2.md",
+      "sha256": "2ba0549b398a1de19febfed95f432869de0c443bff39fee9564b95b740670885"
+    },
+    {
+      "bytes": 2484,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CLAUDE_REVIEW_PACKET_v3.md",
+      "sha256": "ba43f4579a7322002198fb2870c8f846dac7e66be6d54f35e122747a3914d54f"
+    },
+    {
+      "bytes": 1321,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CURRENT_STATUS_v1.json",
+      "sha256": "08209e5052faa876e50da57b0dcf12431bb16052ec7f6e0fb92ef0fd58f131af"
+    },
+    {
+      "bytes": 3077,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_CURRENT_STATUS_v2.json",
+      "sha256": "ddee4fda39d307a0d2fa6aff425bd8dc441fd656af75d8a864058fc9951e153c"
+    },
+    {
+      "bytes": 2694,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_DENSITY_CAPTURE_GATE_SOURCE_v1.md",
+      "sha256": "25f89e1707da43a77e3b5030bf9f3a458d03a17c08531885e8ca29dfdd8a0689"
+    },
+    {
+      "bytes": 1164,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_PUBLIC_CUSTODY_STATUS_v1.md",
+      "sha256": "703da88d42e96cdff2ad95f9ac52abfda0fee58e7a1914191ce356832d4d4b19"
+    },
+    {
+      "bytes": 9495,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_SUM_INEQUALITY_PAPER_PAGE_v0_1.md",
+      "sha256": "064b7c5d9126244a12277b2906b92c80fc64f48891dfc44251f4879fe9fc12f4"
+    },
+    {
+      "bytes": 3741,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_BALANCE_PILOT_PREREGISTRATION_v1.md",
+      "sha256": "c22986909431966bac0c09b524f46d6e82f68a9c09e244224011fb152de2ba17"
+    },
+    {
+      "bytes": 2394,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_BALANCE_PILOT_PREREGISTRATION_v2.md",
+      "sha256": "25cb543a2f240c3e91e02a4a309596e612fde67964dd2352fa0a2218c24ab3b8"
+    },
+    {
+      "bytes": 3865,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_BALANCE_PILOT_REPORT_v2.md",
+      "sha256": "fbce14d751ec12a0cde6bb63f80890bfa50180f6be048fbd16bb4a7cf94cf9db"
+    },
+    {
+      "bytes": 1724,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_BALANCE_PILOT_V1_INVALIDATION.md",
+      "sha256": "63f4fc8de71a53048eb849916b882b5e4e47cbc0d725d9f0088861a94ecf52fe"
+    },
+    {
+      "bytes": 485,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_PREREGISTRATION_ANCHOR_v1.json",
+      "sha256": "81b2dac79cc855f4700025886184d718d5d2a331c4dc6b3c947a4e5dfe6687a5"
+    },
+    {
+      "bytes": 828,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/F3_THREE_LIFT_PREREGISTRATION_ANCHOR_v2.json",
+      "sha256": "f107efb84d1e671be1e4203c1790a5be8cc059f44269b4945943c597989c32c5"
+    },
+    {
+      "bytes": 13998,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/PACKAGE_MANIFEST_v1.json",
+      "sha256": "0704580adcb4d0019dae55dd81169f65e830747e8cf8d108dc1a676e0a335efa"
+    },
+    {
+      "bytes": 1929,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/README.md",
+      "sha256": "30e8f09039ec2a1a3291d553d06762b89196c1de301f19b1cbe642a1b2534594"
+    },
+    {
+      "bytes": 3549,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/grid.csv",
+      "sha256": "1de66968a0d5a2c92638bf4b2ad8fb5b31c73bf88e9ffd7e1d02585ff7ddfeac"
+    },
+    {
+      "bytes": 594,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/manifest_sha256.csv",
+      "sha256": "271ea6e22fb16e0b9ee2a36c2e749cfc993b84bc86189ca54ecd6baadbb3e278"
+    },
+    {
+      "bytes": 2775,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/nonclosure_witnesses.csv",
+      "sha256": "b1c661c1dcd09eb8b93cbb30a48e729e0023a07a11a035a17512d17c786f7b95"
+    },
+    {
+      "bytes": 1646,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_AFFINE_TYPE_CLOSURE_AUDIT_v1/summary.json",
+      "sha256": "d1ad65af947b9028689bd2d10a889f6a68db773aabd02695e6883ea024987cb8"
+    },
+    {
+      "bytes": 594,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/manifest_sha256.csv",
+      "sha256": "f3a3da5c312e046b001f8f62bc21b035cec30167d3ab511682a3ef31491c7c0c"
+    },
+    {
+      "bytes": 50548,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/memberwise.csv",
+      "sha256": "738f466bd2d92ef803ec55356ef041a43feddc6a6647c0bea7763a2f67850351"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1567,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y10_v1/summary.json",
+      "sha256": "9c19ef2fa784ed4afd2b9e44598b03a2581d25d6e17d83b6b902491792538074"
+    },
+    {
+      "bytes": 594,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/manifest_sha256.csv",
+      "sha256": "14d0df1963cd3c82752e77a842451bbc504cd02f9ab845978133a299422aca5a"
+    },
+    {
+      "bytes": 51293,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/memberwise.csv",
+      "sha256": "0dd3903b8143205b0548d6a7a4eb6895a137b273e9eba174c4a2e73ef27da6e6"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1564,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y11_v1/summary.json",
+      "sha256": "f3fd8d0526678fa40346f70a1e5cfc109072e7aa4d22df19acffda4f827e1c49"
+    },
+    {
+      "bytes": 594,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/manifest_sha256.csv",
+      "sha256": "7a4644dd975216410dc9bf00cb5cdd633c61eb41cf9e921d664bb78522ba98b6"
+    },
+    {
+      "bytes": 52119,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/memberwise.csv",
+      "sha256": "bda75b1b974fbcdb4f97a419de2421db49b080498e90bbafe4070a0a4dca329c"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1570,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y12_v1/summary.json",
+      "sha256": "761068cce9a65b33b54a4ebe0dedb3d68139b7937a330219c654618702770236"
+    },
+    {
+      "bytes": 591,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/manifest_sha256.csv",
+      "sha256": "e820dd8f2493da19765e9734dc263aa60349830d7dbb5e49cb23215ff133b6c7"
+    },
+    {
+      "bytes": 48370,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/memberwise.csv",
+      "sha256": "7a4c7ee22105b6c4201a1a19ffbcc7ebdc7b1a0934bd9035bee777d86a9a90ea"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1557,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y7_v1/summary.json",
+      "sha256": "70178169e8b46691d124f2f029fd4ed13614ef920e7d61cd99e6d37f18841a0c"
+    },
+    {
+      "bytes": 591,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/manifest_sha256.csv",
+      "sha256": "034dddeaeaa78bc36f96db499367d988c4a05148f5df0c00e13fb75477de7d95"
+    },
+    {
+      "bytes": 49212,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/memberwise.csv",
+      "sha256": "163ce2c3bee055e9ddd90dbbb74cd1bd1a28a68ae14be48628fbce184fdcb4c8"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1558,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y8_v1/summary.json",
+      "sha256": "99b3f40cfae3a6d727d393b02088d6e7a6ebe00b8fe384fdeca39f2d912f3b72"
+    },
+    {
+      "bytes": 591,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/manifest_sha256.csv",
+      "sha256": "cd25c3cead422011b3dd230d56271056150b559731a476ac8a8899df24f1bbcd"
+    },
+    {
+      "bytes": 49780,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/memberwise.csv",
+      "sha256": "2548c6ba7deea06395a7e80e931e4ddd55c590f3a05a31870a4fa738691be342"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1561,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_Y9_v1/summary.json",
+      "sha256": "e5d250eb78305122373c1252bba38022419e5d2fedd60daddfc564d239e9ced3"
+    },
+    {
+      "bytes": 582,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/manifest_sha256.csv",
+      "sha256": "c71d06c4be0acc31eac98f9db3cdf984722387f34a758cdff53098fa314bddec"
+    },
+    {
+      "bytes": 49780,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/memberwise.csv",
+      "sha256": "2548c6ba7deea06395a7e80e931e4ddd55c590f3a05a31870a4fa738691be342"
+    },
+    {
+      "bytes": 380,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/mismatches.csv",
+      "sha256": "17e6fa402aa73b8fcf9f7c07f1c2cf229cae063015ad718160e430f2aced055e"
+    },
+    {
+      "bytes": 1549,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_E5_MEMBERWISE_GAP_AUDIT_v1/summary.json",
+      "sha256": "9d2a783ec14018383ee4c0b42eb536fbd884c761065554d317013c1696e74f66"
+    },
+    {
+      "bytes": 1134,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/FROZEN_CONTRACT.json",
+      "sha256": "07a245e7324618d1e8f34d686a6e7f5f7d837e56b6d0e807f8c9efc55baa209a"
+    },
+    {
+      "bytes": 20068,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/group_rows.csv",
+      "sha256": "86451dd9c8376f030d84a14b83bcea7aa261c1df69116931cb35c9487ed9f78a"
+    },
+    {
+      "bytes": 1492,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/manifest_sha256.csv",
+      "sha256": "b8c17d2efd0c8b0c99c924ec613961262e92da1fbb5fb223ebb47f66b41bc28d"
+    },
+    {
+      "bytes": 234,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/mismatches.csv",
+      "sha256": "0e3752b1639dfeb3a6eb168d2a000b9863f89e8342ceb224fccd1779e279221a"
+    },
+    {
+      "bytes": 242443,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/root_rows.csv",
+      "sha256": "f7c89c92b599d8059c8ad4461d7532aea8fb4b1bc2dc9f6c5b2e8b43a4b34a31"
+    },
+    {
+      "bytes": 1637,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/calibration/summary.json",
+      "sha256": "2fe0f8575fa0cf03e878c057ac31e0285f14a2f3096107e14ac8c35f5493c0ca"
+    },
+    {
+      "bytes": 19558,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/group_rows.csv",
+      "sha256": "08c51704df6586228d101c86a6193b334ced8989b9be82b61693a07b77d68d4e"
+    },
+    {
+      "bytes": 1396,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/manifest_sha256.csv",
+      "sha256": "e39a54ecee2ca79db06a53914809dc133d0a5b629bf6a0069185f07a7c17a2cc"
+    },
+    {
+      "bytes": 234,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/mismatches.csv",
+      "sha256": "0e3752b1639dfeb3a6eb168d2a000b9863f89e8342ceb224fccd1779e279221a"
+    },
+    {
+      "bytes": 241641,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/root_rows.csv",
+      "sha256": "cf1d59aef6e52be2d34a14c11541f40bb1302f7676a761f7b5fe0cd807536937"
+    },
+    {
+      "bytes": 1960,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v1/holdout/summary.json",
+      "sha256": "64564dac7d39c77dd644cf011e1a5bc069f3f1a41801410e3369b6ab99c6cd9b"
+    },
+    {
+      "bytes": 1024,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/FROZEN_CONTRACT.json",
+      "sha256": "8b61fb8c07c990f27005f6ba1e4962213d9df54fd0aeb755715fc49fa27ecb21"
+    },
+    {
+      "bytes": 21772,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/group_rows.csv",
+      "sha256": "f78bc90684f7fd0f4c2808f6b31b21ae8d04a12855863f91f3b192738d6dc518"
+    },
+    {
+      "bytes": 1885,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/manifest_sha256.csv",
+      "sha256": "985d101d2eb0313b9ac1472a1ebd2b2f90c4130f3bdc09c5adc07552f5925a57"
+    },
+    {
+      "bytes": 268,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/mismatches.csv",
+      "sha256": "b7b21b7412d163aeb653548389eecabc76b06055188da64b6f500267327f2384"
+    },
+    {
+      "bytes": 1575824,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/root_rows.csv",
+      "sha256": "a6598b87e2c3e740591ae67db6f81cb7faca090ae4120e857f1c2492e84c1ebc"
+    },
+    {
+      "bytes": 1684,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/calibration/summary.json",
+      "sha256": "50a20a946cff4f22a8a80a51fa9b1e6f90863199815614f56cccf247536f1076"
+    },
+    {
+      "bytes": 21320,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/group_rows.csv",
+      "sha256": "d6f63400a135309ef9d3d492a37097cf96c42e3a6eb7571467bcdd96b3a04c8b"
+    },
+    {
+      "bytes": 1789,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/manifest_sha256.csv",
+      "sha256": "47ed2842477084bf60895e83623554ae824d290376cc84bcb1725be4432e604a"
+    },
+    {
+      "bytes": 268,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/mismatches.csv",
+      "sha256": "b7b21b7412d163aeb653548389eecabc76b06055188da64b6f500267327f2384"
+    },
+    {
+      "bytes": 1627752,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/root_rows.csv",
+      "sha256": "2829429e957392f08b44c7f463f72d6291dff800f6a8335c9fbece8593698b24"
+    },
+    {
+      "bytes": 2042,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/results/F3_THREE_LIFT_BALANCE_PILOT_v2/holdout/summary.json",
+      "sha256": "a649ca98f94642daa488d2e68f7c5b48f9038a7621f69084c74cf5867ddee6e0"
+    },
+    {
+      "bytes": 10701,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_affine_type_closure_audit_v1.py",
+      "sha256": "64399780ce8625d1225dd23c768855722848881638e5c9c361c70c86b18845a5"
+    },
+    {
+      "bytes": 11906,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_e5_memberwise_gap_audit_v1.py",
+      "sha256": "1a6bb66758cbd8949ba7c02d1b8672b9bc8e1d230de60156357eb6b3c7a41f4e"
+    },
+    {
+      "bytes": 1293,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_package_manifest_v1.py",
+      "sha256": "f9f1ad3a15a77f6ad457c2f99420daa9e558130b10c763ac744e286c6403fe61"
+    },
+    {
+      "bytes": 1846,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_package_manifest_v2.py",
+      "sha256": "85278107ffeba4654e34bcd3b4aaf77a24e8391a703f780eca1db1424b10eccf"
+    },
+    {
+      "bytes": 20640,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_three_lift_balance_pilot_v1.py",
+      "sha256": "b9d1be778c200d88ffe80b313bca5d5684e4a43ac465c05f1fc513443fb83b96"
+    },
+    {
+      "bytes": 18961,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_three_lift_balance_pilot_v2.py",
+      "sha256": "de0d3e5c8497ec3776699d58fb6c26b2a2574c7c1e43b14ff58faf885ab19255"
+    },
+    {
+      "bytes": 1801,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_verify_package_v1.py",
+      "sha256": "b083a22d342d96edb711704e56d5a386cc9d57655e1ddc81b58919f50f05c6bc"
+    },
+    {
+      "bytes": 2138,
+      "path": "outputs/F3_DENSITY_CAPTURE_GATE_v1/scripts/f3_verify_update_manifest_v2.py",
+      "sha256": "bf682e261bcc8e15f3ee7ca1edb6378900ab81d69e3b26c46ec8df17297c0df6"
+    },
+    {
+      "bytes": 1889,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_10.json",
+      "sha256": "06f923a36581bbe1f760e2af1f2a966827415a81b1495adbf657b1dc989df425"
+    },
+    {
+      "bytes": 2378,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_11.json",
+      "sha256": "22209776cab8da91d1de888cb475298ed32eb9b67cbc4674638f212c317fcc55"
+    },
+    {
+      "bytes": 2380,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_12.json",
+      "sha256": "5744b456293419894ea176eeedaa9035789c7cc1f264d7a64888f6d9d2b0eb13"
+    },
+    {
+      "bytes": 2594,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_13.json",
+      "sha256": "86fe155499377fbe5c91ee2399a9e7404c86d29bb58bc7a349e954fbd7766ec7"
+    },
+    {
+      "bytes": 2079,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_14.json",
+      "sha256": "526bb5f90394b3efd017cbe4299aaa5fe02abcca78314cd7e96e9cb1382b3d21"
+    },
+    {
+      "bytes": 1699,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_15.json",
+      "sha256": "4593fa6191b9dfc4a936ae48a0330f3d4b98e0fbec51da49ede5067da721d951"
+    },
+    {
+      "bytes": 1435,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_16.json",
+      "sha256": "fd692b5d4feab3698ffad36548c7c68708594027f47f5edbb16b82f94b81f8d0"
+    },
+    {
+      "bytes": 1384,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_17.json",
+      "sha256": "63c5042ae5bb1d03263589bc3a88073871b551d5b18903a5815ae36bda50f35d"
+    },
+    {
+      "bytes": 1376,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_18.json",
+      "sha256": "f4032489336eb11d2d02667fc82a1be7159522d649cf6e584c5582d2a8ceeaa5"
+    },
+    {
+      "bytes": 1406,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_19.json",
+      "sha256": "885660252eeec47ab5bfa66e7c0c106b067fb85b4129865fc4a69cd8d29c4566"
+    },
+    {
+      "bytes": 1896,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_2.json",
+      "sha256": "ee18f5a91a66c877c9523e4e1f4b226f9d6bf127be9de400166ae16efe7ca106"
+    },
+    {
+      "bytes": 1570,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_20.json",
+      "sha256": "1210577f81f43d477c6384bcf3e9fa4db7e4b5ef06043e138a3bb49521b28560"
+    },
+    {
+      "bytes": 1693,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_21.json",
+      "sha256": "5b17d4de8c96bfc75a037d2f090d78b5ac6563bf50725665234103b7b0ce5060"
+    },
+    {
+      "bytes": 2533,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_22.json",
+      "sha256": "2464071d9827fee40c7dfc444d3f92b43a4009191073f9bd9bc18d10a0d90d1f"
+    },
+    {
+      "bytes": 1418,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_23.json",
+      "sha256": "b73b7bdf1fd221b73f3558f133a84a154597cb9bcd60df5d0335812545d6d2b8"
+    },
+    {
+      "bytes": 1276,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_24.json",
+      "sha256": "fca4aa6e4bfb8823a48d3d1b50bcbdc059d8d579e64b6a4f62610cc2ea731232"
+    },
+    {
+      "bytes": 1529,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_25.json",
+      "sha256": "ac42da223d4535fd7a8c45be0b7a5f9e326997d7837a95d304b70d36e30acfc4"
+    },
+    {
+      "bytes": 1718,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_26.json",
+      "sha256": "07ebb1cca35a7d6fcb9027c96a16d8ba801535baac379c168e3097f9213f1486"
+    },
+    {
+      "bytes": 1482,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_27.json",
+      "sha256": "5a326c868c1d6d07988aebdd37aea80019f6c9e5f421cdecb1ad811ddb36cf6a"
+    },
+    {
+      "bytes": 1499,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_28.json",
+      "sha256": "bf1a36522a4db6ea598aa20bc1c2a1173e14be199fb7750e47201492c83ed5ba"
+    },
+    {
+      "bytes": 4042,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_4.json",
+      "sha256": "4c69b7b5030245aa3d8836fc13086644e0aab9aa3b15efbb07f13063becc0b7c"
+    },
+    {
+      "bytes": 2577,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_5.json",
+      "sha256": "e74dc61abf7cb1d720d8def2211e9964a10e6a158f59aa33bfe921db4ad07fe6"
+    },
+    {
+      "bytes": 1981,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_6.json",
+      "sha256": "7271e68902f22c49cb5db8a6f8c4f91f272894bf8f7fd21e5bac57fcb59a2bd3"
+    },
+    {
+      "bytes": 1570,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_7.json",
+      "sha256": "eed8b7ca8a769af8d4698c9cdcaeca5b77025efb677c6f145606fecec7c2555d"
+    },
+    {
+      "bytes": 1844,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_8.json",
+      "sha256": "77ef403adf3cc0f58e62bb0527a16c2d2d5d7d1d66cde8bd4946936b5013c918"
+    },
+    {
+      "bytes": 1773,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/ADDENDUM_MANIFEST_v0_9.json",
+      "sha256": "19685b201bdd07fed070c626b3b252bf1ff7850b45d530b4df1a92b81d6ead6c"
+    },
+    {
+      "bytes": 1625,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_ADVANCED_PHASE_REPLACEMENT_v0_1.md",
+      "sha256": "c06148a870f2aebf9d6209685fb32d3239f9cf8ca456811bb56e2c4d2416a36b"
+    },
+    {
+      "bytes": 1506,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_BASE_SEGMENT_TABLE_v1_REPORT.md",
+      "sha256": "c476323251b18ca6f6157238dad3804446e04f510728bcf7eb3d2e8931794b53"
+    },
+    {
+      "bytes": 1893,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CLAUDE_FORMAL_VERDICT_REQUEST_v3.md",
+      "sha256": "050b4dcd1a5df61e7efbf46af2c45d24016157405acd1b0bb013bce9685d179a"
+    },
+    {
+      "bytes": 1155,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CLAUDE_RETURN_VERDICT_v1.md",
+      "sha256": "424f52bcbd11dbf3a3c5502cbc1760470f61640330f1bbc98853d3f5596675d0"
+    },
+    {
+      "bytes": 2336,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_COMBINED_LEDGER_v1_1_REPORT.md",
+      "sha256": "3d076011c9d8ccbf5a62e7634c0167b2e618add6718b88924b05bf7d2a5fc4dd"
+    },
+    {
+      "bytes": 3883,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_COMBINED_LEDGER_v1_2_REPORT.md",
+      "sha256": "46d0652d36b3487998061a0fea84be939789765ce40816ac97e511b841e58ec3"
+    },
+    {
+      "bytes": 2374,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_COMBINED_LEDGER_v1_REPORT.md",
+      "sha256": "6468ebed5268e3637d69bd1761c8a8f37a466926aab18fec402b28c7db801e3c"
+    },
+    {
+      "bytes": 1293,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_DYNAMIC_PREFIX_VISIBLE_RESIDUE_CORRECTION_v0_4.md",
+      "sha256": "940a2e7c5ca8ad189ddef72cd947f018aac27b0a6759327f44f2bb2b0712e9be"
+    },
+    {
+      "bytes": 4142,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_CONTRACT_v0_2.md",
+      "sha256": "91bd1c47137f924e13f50e111fa0d73437c54d172f28c20c2fad34617f3884ad"
+    },
+    {
+      "bytes": 2402,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_DECISION_v0_3.md",
+      "sha256": "ab81ee67263e2530ffeff744b8c9f477efe870f6e53577c73d312d1c5f6717f8"
+    },
+    {
+      "bytes": 6610,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PAGE_v0_3.md",
+      "sha256": "e352041271f2d5657612e7836e4016f54d379c5119a88bac4a6e1cbd21158618"
+    },
+    {
+      "bytes": 2740,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_NBLOCK_MEMBERWISE_LEMMA_v1_REPORT.md",
+      "sha256": "1f52a5ed6c74e7868818c29c9a67d66905b475678d08a81aaf49c562142acc45"
+    },
+    {
+      "bytes": 1669,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_NEXT_EXPERIMENT_PREREGISTRATION_v0_1.md",
+      "sha256": "e18a42c382bb6c3e922aed002edf5f4cb53970e39de5175baff787141582cb0a"
+    },
+    {
+      "bytes": 1332,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_NO_CLAUDE_CONTINUATION_v1.md",
+      "sha256": "a31228d9b29bbf98e044af3ac28852d2a40353fb32dff809bfdb1896609e4c73"
+    },
+    {
+      "bytes": 8183,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v2_0.md",
+      "sha256": "cc47eefb22fc539953bfaf70f85d3d07eb4090ac48fed1d8502d9e457854665b"
+    },
+    {
+      "bytes": 2362,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v2_1.md",
+      "sha256": "56dacd48fa0e8d1faf5d07bd9f3ea521a24034910d05a2c1bc7f6a19bdfb27d1"
+    },
+    {
+      "bytes": 3602,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v2_2.md",
+      "sha256": "09388cb00d84f31539014058f361297ae9fbf70b520f0bfb706ad9037cca95f7"
+    },
+    {
+      "bytes": 8509,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v3_0.md",
+      "sha256": "8349a50bb24dff47b43f771b5365c2acbf00e90e0661088c9163cb58dca789c8"
+    },
+    {
+      "bytes": 9613,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PAPER_CONSOLIDATED_v3_1.md",
+      "sha256": "af05d571c1b37d50515e163b9c089bef66eea1bb5bc4cd86fb2e7970cd5932a9"
+    },
+    {
+      "bytes": 3456,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_ALL_RESIDUES_PILOT_REPORT_v1.md",
+      "sha256": "3138d6806e26cdf3e8571f7974cbfe48e61c5302247fbb344875ba0d881aa246"
+    },
+    {
+      "bytes": 1862,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_DYNAMIC_OPERATOR_CONTRACT_v1.md",
+      "sha256": "ecef5f7cb7e117c877a4c19b712ec04b7dcefba4082257b5f7e48c86a7294594"
+    },
+    {
+      "bytes": 2332,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_DYNAMIC_OPERATOR_REPORT_v1.md",
+      "sha256": "3408df0331c96647bfccbf7832c46c7bd972440a116b94ccb2e01f2d63525505"
+    },
+    {
+      "bytes": 3198,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2_CONTRACT.md",
+      "sha256": "585f30cc194e2850d100e53aed9aeb2b36cf5b8cce05b57db4bd810fb111018a"
+    },
+    {
+      "bytes": 3936,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2_REPORT.md",
+      "sha256": "4cdb94ca5e396abf3f7bd71f5c0c07e64451a4e791db80dd7164ae818cc6c45d"
+    },
+    {
+      "bytes": 3239,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_REPORT_v1.md",
+      "sha256": "4d7b4639ecf8e062f5bff82afce6a9827a72cb4965c0e3ef36c877eca95b14fe"
+    },
+    {
+      "bytes": 3065,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_SCALE_AWARE_OPERATOR_PAGE_v0_1.md",
+      "sha256": "1023ec1d087df67d7857defc75a9249d806323e430f659f366fca2be061a5ea1"
+    },
+    {
+      "bytes": 2283,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_SCALE_AWARE_OPERATOR_REPORT_v1.md",
+      "sha256": "5b9f401a5e501b589a0474b667f81c8f816abffb9eebd0d7fe5093da023d070c"
+    },
+    {
+      "bytes": 3327,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PHASE_B_SCALE_AWARE_RECURRENCE_ORIENTATION_v0_2.md",
+      "sha256": "c61ee848b3bd63ce6f024c1dda62b7e4d8aa7e1e23bf7c521cfdf70f5483a841"
+    },
+    {
+      "bytes": 1145,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_PUBLIC_CUSTODY_RESOLUTION_v1.md",
+      "sha256": "c34051e120a322605299f37479208d2cde1f6202a9cb3e3c63640be00cc50d8a"
+    },
+    {
+      "bytes": 2050,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1_CONTRACT.md",
+      "sha256": "e025d957bf40e41d47aa46c63fd7cdbbecbbd332ecf9924c98c8eb9de4febb49"
+    },
+    {
+      "bytes": 3602,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1_REPORT.md",
+      "sha256": "b2d8b44ed4b60cea599c80e1bc089bb23ae8f62e43edd08fd4ee8ad8df52ceab"
+    },
+    {
+      "bytes": 1949,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_FREEZE_W_AND_HOLDOUT_CONTRACT_v1.md",
+      "sha256": "f98b9dc9ead55c38f4a36f8c8e3c257109a1b5fe60bf2fd58cca6eef52fa2dcd"
+    },
+    {
+      "bytes": 2853,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_FREEZE_W_v1_REPORT.md",
+      "sha256": "cef41466ae138cc5be774aef6aa841d9ac55a3be463613a1deab8cabbd9719b8"
+    },
+    {
+      "bytes": 2489,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1_BUDGET.md",
+      "sha256": "d30394d1ef82102621278c5d997f9bb637f1536da7c128705dd221cacf3a33c4"
+    },
+    {
+      "bytes": 2720,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1_REPORT.md",
+      "sha256": "bde4a5d36e499e058cf6bb8b272ca033040cd0bd45ecfbc5272d5769adc75c88"
+    },
+    {
+      "bytes": 2063,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_CALIBRATION_REPORT.md",
+      "sha256": "6ea9c9a4c4cf15f2f64a1493faa51fef93e0ca1b2d4da9724f552c71ec524ab2"
+    },
+    {
+      "bytes": 2467,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_CONTRACT.md",
+      "sha256": "d78ccc4dca867d29d737f9810748f53f910d4fb9ab12146cb6986969bec5d190"
+    },
+    {
+      "bytes": 3017,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1_REPORT.md",
+      "sha256": "d3fa77d805bf977e2d2e513f30832b567e2543672ed7f79d5e6dfa45d4479b5a"
+    },
+    {
+      "bytes": 2536,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SPLIT_EDGE_v1_CONTRACT.md",
+      "sha256": "ee106236416a7251d514a3a5d526c579c07efece8ece03b064c69c515c00aede"
+    },
+    {
+      "bytes": 2933,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SPLIT_EDGE_v1_REPORT.md",
+      "sha256": "e52d71352500914b30eaa49953385f83f5542892b28952890aff190db2c943e2"
+    },
+    {
+      "bytes": 2325,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1_CONTRACT.md",
+      "sha256": "f5733deaf142a4ae9d313260a9fd1565afc8c56b6efe7188adb4480874a4e6af"
+    },
+    {
+      "bytes": 3288,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1_REPORT.md",
+      "sha256": "77f3cce22571a0d7fcc3155852a40846fcb42757c5c0ac2e4bf527d56bfd0723"
+    },
+    {
+      "bytes": 8347,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1.md",
+      "sha256": "98ee7c10084eb3b0651ca1f24925dbacd0510bf15c58a955391eeff13ae2a8c5"
+    },
+    {
+      "bytes": 15466,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_1.md",
+      "sha256": "f5a2f9d35c0b03579c634b394a3f36ae478eac3c21b4078add3b22305a759a69"
+    },
+    {
+      "bytes": 5811,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_2.md",
+      "sha256": "eb3f40ce778370645220f581d687ef344cfc7b7484b1f78494ce8eebe27eab1b"
+    },
+    {
+      "bytes": 3289,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_3.md",
+      "sha256": "8e3e4ed7556705dc0ef4036512f8a844e369073002ba888a976f39efeb46c005"
+    },
+    {
+      "bytes": 1645,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SPLIT_EDGE_CERTIFICATE_PAPER_PAGE_v1_4.md",
+      "sha256": "a2d4f116eef2bcb53533eb7d146e861a1a000ed3d2088cc4003a0081413cfdf7"
+    },
+    {
+      "bytes": 3660,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_TILTED_SPECTRAL_CLOSURE_AUDIT_v1_REPORT.md",
+      "sha256": "175b36624203fed7e8fc8a86fe500174115f4b50abcfb314f904c2f01b6e6293"
+    },
+    {
+      "bytes": 2120,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_TILTED_SUPERSOLUTION_CERTIFICATE_v1_REPORT.md",
+      "sha256": "e7165c87d0961a53def73c1080f26b725225c0e4c7933265a56539fd52189f01"
+    },
+    {
+      "bytes": 1703,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_UNIFORM_Q_BOUNDS_v1_REPORT.md",
+      "sha256": "a4eae118a29a25d6b91d7ebc29c32696474d8bc41a28a4588c80ebdedc309975"
+    },
+    {
+      "bytes": 1444,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/README.md",
+      "sha256": "3f63f2232a8f7dffcf4c6cc26e530a159748bb74b5160d46a2c2f96210e34f76"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1/calibration/manifest_sha256.csv",
+      "sha256": "0008197593dd406c06ef9685a784527dbf50720a32a06fedc33a0aa4f8c5e9e5"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1/calibration/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 1904020,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1/calibration/root_rows.csv",
+      "sha256": "6bd77cb749e72f7d07da5f49d710afdf9a439dc849a1e9eaa5ff9b77139f7fc7"
+    },
+    {
+      "bytes": 1202,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1/calibration/summary.json",
+      "sha256": "f9aa0e52d34404dea066a7d888d8a23a0e6ee358b965b15b34fe59894fe49a40"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/calibration/manifest_sha256.csv",
+      "sha256": "e8476fb06cadd74ebea8faa7c324c2bbdd0b1b990c6af40a082bd069b1ce6486"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/calibration/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 10859,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/calibration/root_rows.csv",
+      "sha256": "765778054d44b311e02e992705972b0577b291db7a2978a267ef6108270f64a1"
+    },
+    {
+      "bytes": 1177,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/calibration/summary.json",
+      "sha256": "c899edfd37c2d60b922f8f4a5781759e1b0b5ef42b49fe7e9cadcd8b9e5af467"
+    },
+    {
+      "bytes": 2549,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/combined_summary.json",
+      "sha256": "e8244d9992b6d4c5c2f365900e9eeb979f06dcc22d23bdf052fd29aa472d7135"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/holdout/manifest_sha256.csv",
+      "sha256": "14dd72c639f890348598c7203dc34efed63ec102a6a702cf211099a3124e758e"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/holdout/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 11321,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/holdout/root_rows.csv",
+      "sha256": "a55b94a780119f484c97fe8db48e3b76180e2c8af8fdc6bfb9edd21af0e13d3a"
+    },
+    {
+      "bytes": 1179,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_A_PILOT_v1_smoke/holdout/summary.json",
+      "sha256": "6e514efefc2e7bae26d559e00be776c747a7c8a564853bc0270c5169765a0fe9"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/manifest_sha256.csv",
+      "sha256": "b6c2cde3c8bc11bbe468f6b492a75da093e1a282a5b5fe461d039fcaac89d3f4"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 1933699,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/root_rows.csv",
+      "sha256": "b07f57d9c03c9b1ecd040d53b62d15ff26477b92c31afcec69a2fcdfd8fe5308"
+    },
+    {
+      "bytes": 1178,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/calibration/summary.json",
+      "sha256": "130aaa11c7ac19cbcc35297da192d5679db0b4748337a7d68b5f9c2df776c643"
+    },
+    {
+      "bytes": 1254,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/combined_summary.json",
+      "sha256": "a11bcb4b6941698fef6c70bfa0dd470a1dbef786d417b55a4cc17fffa01320a0"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/manifest_sha256.csv",
+      "sha256": "e2e81796ca475dc3e673ba69282952bda14a9d42bfe57e6ff80d8106a2f52d52"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 1923615,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/root_rows.csv",
+      "sha256": "f7b340f5e3a64280fa3587ba67b73b8402d30bfbdef3af9775437783e7aa8ff3"
+    },
+    {
+      "bytes": 1156,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1/holdout/summary.json",
+      "sha256": "7089dee5089698d55a064d35f702a35a528bf389f90d56e370bfefcd25cd25d2"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/calibration/manifest_sha256.csv",
+      "sha256": "308c2a772a27dd3e92aee8e26ba7d38b2ce909d809b1ec60a8300ed8eb03faa9"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/calibration/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 11097,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/calibration/root_rows.csv",
+      "sha256": "9a4aa841705fe4a57609d5c99cc5160cc281e35bc49a26eff5ba7b7f1971192f"
+    },
+    {
+      "bytes": 1158,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/calibration/summary.json",
+      "sha256": "239a3cb04296e4ae805fdc3666b56c7b51c0c1dd073542d19cbedd4a492f1e16"
+    },
+    {
+      "bytes": 2491,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/combined_summary.json",
+      "sha256": "9064238a443c8182f87de75257baa81b188ab161f07fa2e49ba52bef49156b3f"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/holdout/manifest_sha256.csv",
+      "sha256": "6d275d9795dc754f3028974c3f05264e84c07a8e66d49e6ed7832b794e5feb61"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/holdout/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 11535,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/holdout/root_rows.csv",
+      "sha256": "3d925b6c9f444a72252d8ccae24cccaf5578724a88ac8d592534adb616cb694d"
+    },
+    {
+      "bytes": 1140,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_ALL_RESIDUES_PILOT_v1_smoke/holdout/summary.json",
+      "sha256": "9c33d09be9a57d32ce636279fc5d83c55aa5fa62b44de2768a798fa0e982a3a2"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/calibration/manifest_sha256.csv",
+      "sha256": "77eaa59a959231a497fb88e7207b85c830177eb9487cdea56832d3352dedabac"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/calibration/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 10802,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/calibration/root_rows.csv",
+      "sha256": "b20b07623d74e41ee74a877de7f4824b262154a391385e296c3b106585148c29"
+    },
+    {
+      "bytes": 1177,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/calibration/summary.json",
+      "sha256": "a99a6cf4ee77ae9c5c802194289b1cbcbbc16d0e31dadbd929ca23aaaff429df"
+    },
+    {
+      "bytes": 2529,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/combined_summary.json",
+      "sha256": "bcbd734240adb4d110b7ec42d7debc6ad6baa88a6085748044a5c313b9ace764"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/holdout/manifest_sha256.csv",
+      "sha256": "241717b90013c341eb05df7e4451ea21d62a11e1929875ed59abe9ace092fd1c"
+    },
+    {
+      "bytes": 409,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/holdout/mismatches.csv",
+      "sha256": "2674ca3a8acdeb3328298dff08459667b9804d4f7d4320254451f297ecdcf935"
+    },
+    {
+      "bytes": 11221,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/holdout/root_rows.csv",
+      "sha256": "a84c3667c67500fd0be32249ddc700a8faa130b6fa6e6da22d2bb6caf3a2bda9"
+    },
+    {
+      "bytes": 1159,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_PHASE_B_PILOT_v1_smoke/holdout/summary.json",
+      "sha256": "5bb3531238f51005d6fdc62ed253863453b08e61a232e9b7035b8f75b47f472e"
+    },
+    {
+      "bytes": 250,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/manifest_sha256.csv",
+      "sha256": "6ac2f6201c1ea032e3e4206f716d6b8db3a3c504043da352a0b88037200b96b8"
+    },
+    {
+      "bytes": 93355,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/rule_edges.csv",
+      "sha256": "f2e3dbade75c41763a06623866c29a487951d9130c86d505cb770062a03494f7"
+    },
+    {
+      "bytes": 43875,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/states.csv",
+      "sha256": "7f8859bd6f7b7446c549b97471479c6d0150c5c5ce83b4c0bb1ab17ea7eb78dd"
+    },
+    {
+      "bytes": 950,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_DYNAMIC_OPERATOR_v1/summary.json",
+      "sha256": "dc8b7132ec3a8deb2f14f278d3bd7a47ab562302b6ae94d0dc6d203e9e64cf5b"
+    },
+    {
+      "bytes": 262,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/manifest_sha256.csv",
+      "sha256": "3b61dacd436a5ac8b441b4eb673fae38ffb3af9102cc01f8fa76157b03a2004b"
+    },
+    {
+      "bytes": 91851,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/return_excursion_edges.csv",
+      "sha256": "14859e7813ddcd40909ad332c0fa9dadd00ca0afca8b6550de4232a0aac5f3c0"
+    },
+    {
+      "bytes": 7294,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/row_tail_Q.csv",
+      "sha256": "a2b06f6024a023378dc1b05d5dbe117152b00942fa1952aea8a9f7b9b7224a83"
+    },
+    {
+      "bytes": 1573,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_EXCURSION_OPERATOR_v2/summary.json",
+      "sha256": "7ab39a60981237ea3b38eff62f411c5b61b37eb952c64468f93f41bcc72e5d67"
+    },
+    {
+      "bytes": 172,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/manifest_sha256.csv",
+      "sha256": "b49d803c1085b3e88d58ce3e480ae891e688626dfde13350122f9edada8fd75b"
+    },
+    {
+      "bytes": 169172,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/return_edges.csv",
+      "sha256": "b683a1dea9a8160afbaf73c6a8415c651e5965750af6efb6a7e6f13a7bd3a714"
+    },
+    {
+      "bytes": 1029,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_RETURN_OPERATOR_INVENTORY_v1/summary.json",
+      "sha256": "43a9cc1b530365d275ba8fea6adf36aa139c4195090e90591d5f5e0c3f0df2db"
+    },
+    {
+      "bytes": 247,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/manifest_sha256.csv",
+      "sha256": "71b92e7aaf4027819b868e7ee135584adce40cacd792c62dd93e84994625eb62"
+    },
+    {
+      "bytes": 131494,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/scale_edges.csv",
+      "sha256": "72f2ff15c246c0590e082151cc1f720f12ff8f4789ac771ba4ae1b6f46247722"
+    },
+    {
+      "bytes": 58031,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/states.csv",
+      "sha256": "d6e3c1992f745fe61784ed285e95649c1978e9e065efca5ab26fc3f9a3c34c3b"
+    },
+    {
+      "bytes": 1160,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PHASE_B_SCALE_AWARE_OPERATOR_v1/summary.json",
+      "sha256": "e867bfc442bec94bad065c4b4a0ad73e9b881e2d1c9632c5ea32e872812d1cfc"
+    },
+    {
+      "bytes": 1327219,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/core_holdout_rows.csv",
+      "sha256": "a314f52b21d30815e943ebd838f5bc8e296099e80a31de08876e0575f74c1249"
+    },
+    {
+      "bytes": 628866,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/core_mismatches.csv",
+      "sha256": "425353a566df3ec06b71a7f23974b563c0fb37144de5bba6e96df5425fa9c4c4"
+    },
+    {
+      "bytes": 444,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/manifest_sha256.csv",
+      "sha256": "5d8c8323560ce86f6b31bba2f33dde13f9a09a835ab0406ea900751e1e3cd60a"
+    },
+    {
+      "bytes": 184,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/partition_mismatches.csv",
+      "sha256": "0b12795aae8db86d9094755e28fcdafb73165c02b912dd3355e7795a07ac1344"
+    },
+    {
+      "bytes": 1686,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/summary.json",
+      "sha256": "cff8865a7e8bda3359ee14c02a429eeb4a2b1d480dcef6a0c7add49b92b47574"
+    },
+    {
+      "bytes": 19653,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_CORE_HOLDOUT_v1/weighted_state_summary.csv",
+      "sha256": "273da7b15b7eff781a859fcd3eb68fb741d86086128e01a4881aa22020329d10"
+    },
+    {
+      "bytes": 98250,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_FREEZE_W_v1/candidate_w_not_frozen.csv",
+      "sha256": "5a571875a6e018719b17b70198923f51889f561ac02886c3cd7b14dd21307c5f"
+    },
+    {
+      "bytes": 79652,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_FREEZE_W_v1/freeze_reverify_failures.csv",
+      "sha256": "b714590a0c68198859fb0d83c9b19b1270ca4f309c5b24e700274115f56706b4"
+    },
+    {
+      "bytes": 276,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_FREEZE_W_v1/manifest_sha256.csv",
+      "sha256": "56f3eec37887fe546723a605a7ec1d0a99f1b02b850051e65f3e1521e0eb970d"
+    },
+    {
+      "bytes": 1017,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_FREEZE_W_v1/summary.json",
+      "sha256": "0ecaa3cb188366bccd373b1b605d6ca4d52ed06717ebbb8342154e55bbd97aaf"
+    },
+    {
+      "bytes": 269550,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/hook_checks.csv",
+      "sha256": "9c79c058e4b8542812a14db252204593ebd5d70fafe2ed250b4d1fffc8662711"
+    },
+    {
+      "bytes": 26,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/hook_failures.csv",
+      "sha256": "0ca48b8714c2b68490f81d0ec34ded5a20d3faea8fc3adce8101a38f0f6e0c27"
+    },
+    {
+      "bytes": 254,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/manifest_sha256.csv",
+      "sha256": "82237d0d2f03b27ca456878d37c3c53abdfad3d8d2653766bca0fe3de083dc04"
+    },
+    {
+      "bytes": 966,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_MEMBERWISE_HOOKS_v1/summary.json",
+      "sha256": "64e8c12b41f8830ec93869c716c7ac2954d6c22efc02a6b64dcbd516327235c8"
+    },
+    {
+      "bytes": 264,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/manifest_sha256.csv",
+      "sha256": "f25add86a2045302fe595c3a3a13c26d6d05873b61fedb8179851e5f9e9ae44d"
+    },
+    {
+      "bytes": 41,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/split_mismatches.csv",
+      "sha256": "b3eaed574bc528d5ba30594a40ac0b720c97719c8e829b8ccbc321dbe4841c4d"
+    },
+    {
+      "bytes": 8286,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/split_state_counts.csv",
+      "sha256": "87f83e0f05a8447001a8737789baa64191a8dd60628c9857c53098d320337479"
+    },
+    {
+      "bytes": 1781,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/calibration/summary.json",
+      "sha256": "07859fb691bda44b0f46429f283f04284cbf65c1a57bce7acb4a14fc8ce01b47"
+    },
+    {
+      "bytes": 264,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/manifest_sha256.csv",
+      "sha256": "1c1faa14e4cef762f28e53239c5d1d6db0aeeb6d8491d94a712c469c96f7f763"
+    },
+    {
+      "bytes": 41,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/split_mismatches.csv",
+      "sha256": "b3eaed574bc528d5ba30594a40ac0b720c97719c8e829b8ccbc321dbe4841c4d"
+    },
+    {
+      "bytes": 9663,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/split_state_counts.csv",
+      "sha256": "d75da2ab37e67069e108d44e5608c25288df398e819bf2423880bd9fccae7059"
+    },
+    {
+      "bytes": 1757,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_HOLDOUT_v1/holdout/summary.json",
+      "sha256": "9e8f435462bec1dc184bd87a82b832d09104c31fbd7240528a6bc54b6cf5f0c3"
+    },
+    {
+      "bytes": 12753,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/base_segment_table_v1.csv",
+      "sha256": "2d5fbf7d0fa6dd61e5444cc5dea4f117497e5642a464d92d7380838c532ee0aa"
+    },
+    {
+      "bytes": 868,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/base_segment_table_v1_summary.json",
+      "sha256": "7479858b1f2878c8bb485f0893052d2f448099d919755f82b60edd21bff38420"
+    },
+    {
+      "bytes": 1764,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1.json",
+      "sha256": "70f0c50f90a39b84fc2d8d615d942bcbbd620e4097dd96e8f5e9fc722c6cbe78"
+    },
+    {
+      "bytes": 1765,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1_1.json",
+      "sha256": "8525716fa383051dc53f6c7a547e3d71572b80c17d879183ab17872e00d01ac7"
+    },
+    {
+      "bytes": 3522,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/combined_ledger_v1_2.json",
+      "sha256": "e5fb99533dbadb8554a88713730452453d925a0ce26b6e21475ece44c3c79460"
+    },
+    {
+      "bytes": 164,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/core_reverify_failures.csv",
+      "sha256": "224b70fc54f9825f1da5afc0bea741acf981409ed02666375a96d889adc171c8"
+    },
+    {
+      "bytes": 33363,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/frozen_w_split_core.csv",
+      "sha256": "580e7abd8740342e52b3712aea5aaf9e2affc50888e5535e4c3bd697ed5dbb40"
+    },
+    {
+      "bytes": 518,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/manifest_sha256.csv",
+      "sha256": "7386fd3e211cc9f70a0570a2a470ed67eef1691f1338ce8fa6985620c8677cc1"
+    },
+    {
+      "bytes": 2787,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/nblock_memberwise_lemma_v1.json",
+      "sha256": "25f3a2609e0167ebc0d816cbf2ec56470e782b1d57f5f68abddb28451d0a7f3f"
+    },
+    {
+      "bytes": 1640,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/perron_drift_audit.json",
+      "sha256": "6391e49a52de475a610f6b1b117704fb47b112be12caf0b3b32cb976de707baa"
+    },
+    {
+      "bytes": 556,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/retarded_channel_p0_audit.json",
+      "sha256": "dfaf7b09c97cd2bd8c3d5e45a3ecd5bb33aada67c81600236e39ba339665efea"
+    },
+    {
+      "bytes": 11346,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/scc_components.csv",
+      "sha256": "99ba9161c00e9790ab1a04ee57692aa71b1f6971e3ca7318e9c7f7ac38f3e6be"
+    },
+    {
+      "bytes": 101496,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/split_edges.csv",
+      "sha256": "c4266676a06da0ffe376bb223fddce17f88b4c2bcebd4eaf049b73612b9c8278"
+    },
+    {
+      "bytes": 23910,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/split_tail_Q.csv",
+      "sha256": "4f627b25a99c0450ef53dbda5d8014b2980e0f299e3b15cadf6895be1ae5c235"
+    },
+    {
+      "bytes": 1550,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/summary.json",
+      "sha256": "43048b6783716d1bb8ccf867fa2d1f6739be73f86b5c4ea2f92cd32c746ccf88"
+    },
+    {
+      "bytes": 2517,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/tilted_spectral_closure_audit.json",
+      "sha256": "cb05d1d6d91160767c5b975ea195eb443054f81e88d4a52f00c307041db75b68"
+    },
+    {
+      "bytes": 48428,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/tilted_supersolution_v1.csv",
+      "sha256": "55b2288824dccfe56fcb3a951bdfb47583ac7d4abd00576ed7c273448b2a777a"
+    },
+    {
+      "bytes": 1158,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/tilted_supersolution_v1_summary.json",
+      "sha256": "3da2b6f432a7b2cbf506670ed9fad3a55a1ad82e6512e03b67af1ff7c6d432b2"
+    },
+    {
+      "bytes": 1170,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SPLIT_EDGE_v1/uniform_q_bounds_v1.json",
+      "sha256": "c2a8c884178ceb864b447abd5b7828e571a23094741cd6e5b9f6256277864012"
+    },
+    {
+      "bytes": 171,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/core_reverify_failures.csv",
+      "sha256": "2a1c30d175f4179795e4dd74fdba17abe7da802d5a8f3f438794bd957ff6b052"
+    },
+    {
+      "bytes": 4391,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/core_states.csv",
+      "sha256": "533b2bcd4df6649752217d42986b70e532a529d3f89ab9f7e06e35066cfc9a2b"
+    },
+    {
+      "bytes": 19211,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/frozen_w_core.csv",
+      "sha256": "ad4c4627f575f60911f3b943c92cd3937686f9924592dbf33f6e988d7a9dbb53"
+    },
+    {
+      "bytes": 430,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/manifest_sha256.csv",
+      "sha256": "91a41deb74ad98bc8226397245f3ee1679675242cf7fe349ca331c53d218035a"
+    },
+    {
+      "bytes": 15018,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/scc_components.csv",
+      "sha256": "0170a1f055fbdd5108e170f63eb90de7d107777ed02f9d77325505296d686283"
+    },
+    {
+      "bytes": 1366,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_RETURN_EXCURSION_SUPPORT_REPAIR_v1/summary.json",
+      "sha256": "ad5a84be04975de5bd247ee70e0a91a1ef59d4cbf97aea14dc8fa39fe551ff60"
+    },
+    {
+      "bytes": 4803,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_base_segment_table_v1.py",
+      "sha256": "becb09305de9a119cc3a9b8517efec509d0a699b749cac497c4246e0ad2826f2"
+    },
+    {
+      "bytes": 4438,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_combined_ledger_v1.py",
+      "sha256": "c34cd4a47fc15f5c36635ad7b3ddf41b8c6615e86feb2b2b8e03f881487095bb"
+    },
+    {
+      "bytes": 5659,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_combined_ledger_v1_1.py",
+      "sha256": "e7cfe8b2d724bfa2a81fa564ee99c56e0c2c43adcef15f2c793f9f4f0503b0bc"
+    },
+    {
+      "bytes": 10422,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_combined_ledger_v1_2.py",
+      "sha256": "1077909d35a7b317a649fa9555e4e5ffa2240548fe9b6b3cc016601332b1fbcd"
+    },
+    {
+      "bytes": 11394,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_dynamic_prefix_weighted_tail_phase_a_pilot_v1.py",
+      "sha256": "37b4ca95dd28835bf56231984b474a438f89bf8568470b0766f2380a6553417a"
+    },
+    {
+      "bytes": 10904,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_nblock_memberwise_lemma_v1.py",
+      "sha256": "dd99acde8b844825cd2f389cf67dd161c5d29f9d8c10ccf199fd6e9d22ccf050"
+    },
+    {
+      "bytes": 6396,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_perron_drift_audit.py",
+      "sha256": "5c57d3958f1eb4d0d69c075cfa664491303b97970b94084d55162f9db6a053de"
+    },
+    {
+      "bytes": 9548,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_phase_b_dynamic_operator_v1.py",
+      "sha256": "e71170eb185eb43c82fa79a18e9bfeb997a263f79a03559b13944e1eb4134670"
+    },
+    {
+      "bytes": 11339,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_phase_b_return_excursion_operator_v2.py",
+      "sha256": "f72b1fc102ad4c37406951256330cf723c6e0e9916fe425f45c12cab246ecde7"
+    },
+    {
+      "bytes": 9433,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_phase_b_return_operator_inventory_v1.py",
+      "sha256": "603bdce00a82ecacd51981826a3057667a9e0bae1b9e9d948021e77b83c1f0f8"
+    },
+    {
+      "bytes": 10439,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_phase_b_scale_aware_operator_v1.py",
+      "sha256": "c5e8f05bc3b47ec2c269d322fc2e0844b0f6c2bb12a781fff2c7abe06410bbde"
+    },
+    {
+      "bytes": 2882,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_retarded_channel_p0_audit.py",
+      "sha256": "bd295c5773045aa3bdc408794f1e2ece95a5a94a9d5fb21d88055bde69af0de6"
+    },
+    {
+      "bytes": 14906,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_core_holdout_v1.py",
+      "sha256": "5f9db767d5fe82eb3af303baac0d1cadc33675da7264c28c817fad0bdf380d96"
+    },
+    {
+      "bytes": 8178,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_freeze_w_v1.py",
+      "sha256": "b68d00b37c62b0ea9b9e4015802b08f59b1ce87c4c52129293206f41c4b79d68"
+    },
+    {
+      "bytes": 9936,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_memberwise_hooks_v1.py",
+      "sha256": "ec50b56e682d5962900b10b0e85b3a13625833ba0836764bcc6f4d6590a5da13"
+    },
+    {
+      "bytes": 11347,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_split_edge_holdout_v1.py",
+      "sha256": "55c0fa1d47bfa84ed1d99cafff5cf8ed1f12e47fe60bd348fee93f2ca6996906"
+    },
+    {
+      "bytes": 13704,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_split_edge_v1.py",
+      "sha256": "ebe28079cdb93af68bb0d17d398669f99138c721ab5941bbe840cc139a216734"
+    },
+    {
+      "bytes": 11524,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_return_excursion_support_repair_v1.py",
+      "sha256": "6e843f54c2bfe7ba7937d66b51a316532dc3fd396c6a72180b25fa4e3fe69dec"
+    },
+    {
+      "bytes": 4369,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_tilted_spectral_closure_audit.py",
+      "sha256": "73d91b42fa5dee37f94712339231c7061c7072c8e6f3fc13b0a179280b9c3fb0"
+    },
+    {
+      "bytes": 6646,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_tilted_supersolution_certificate_v1.py",
+      "sha256": "ed86230184b2be78831955d5429ad504c08b1fdd2d9dc4d7703e79d0f07cde58"
+    },
+    {
+      "bytes": 3981,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_uniform_q_bounds_v1.py",
+      "sha256": "9f0e25d54007b9ec6a7d471e9809cfb26723f6dea60d020e7e6ae07a2a411ad7"
+    }
+  ],
+  "historical_manifest_preserved": "outputs/F3_DENSITY_CAPTURE_GATE_v1/PACKAGE_MANIFEST_v1.json",
+  "manifest_version": "F3_UPDATE_MANIFEST_v2",
+  "scope": [
+    "outputs/F3_DENSITY_CAPTURE_GATE_v1",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2"
+  ]
+}
