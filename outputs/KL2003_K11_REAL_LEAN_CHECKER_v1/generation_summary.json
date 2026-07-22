@@ -5,7 +5,7 @@
   "checker_shard_count": 81,
   "data_shard_count": 81,
   "generated_lean_file_count": 174,
-  "generated_lean_source_bytes": 46646625,
+  "generated_lean_source_bytes": 49421928,
   "global_collatz_claimed": false,
   "group_count": 9,
   "k11_theorem_claimed": false,
@@ -14,6 +14,6 @@
   "principal_count": 59049,
   "source_candidate": "outputs/KL2003_F2_K11_LNT_MEASUREMENT_v1/kl2003_k11_lnt_certificate.candidate.json",
   "source_candidate_sha256": "38cda619be386d29d88bfc39df042e60a6025bf021b0638704adf52a4d2143df",
-  "source_commit": "e8022f02ad49a436ff46989645b00086febe4332",
+  "source_commit": "42e866b1d8d6ab43468e1102febe8b3a084c3da5",
   "verdict": "K11_REAL_LEAN_CHECKER_SOURCES_EMITTED"
 }

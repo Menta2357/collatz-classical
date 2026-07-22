@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-22",
+  "reason": "K11 is the terminal KL2003-table theorem; verification is archived and future rebuild cost is declared rather than hidden.",
+  "predeclared_budget_seconds": {
+    "pass_at_or_below": 1320,
+    "fail_above": 1800
+  },
+  "baseline_complete_total_seconds": 5286.696696,
+  "best_post_optimization_shard": {
+    "target": "CollatzClassical.KL2003.KL2003K11CertificateMatchShard77",
+    "baseline_seconds": 382.333903,
+    "optimized_seconds": 211.37,
+    "reduction_percent": 44.7
+  },
+  "post_optimization_full_cold_total_seconds": null,
+  "post_optimization_rerun_status": "K11_FULL_COLD_RERUN_NOT_REPRODUCIBLE_IN_CURRENT_ENVIRONMENT",
+  "rerun_observations": {
+    "data_shards_rebuilt": 81,
+    "parallel_match_shards_00_03": "TIMEOUT_approximately_450.2_seconds_each",
+    "sequential_match_shard_77": "TIMEOUT_450.080_seconds",
+    "free_disk_gib_at_sequential_start": 12.141
+  },
+  "decision": "K11_RESOURCE_BUDGET_ARCHITECTURE_FAIL_ACCEPTED",
+  "exit_condition": "Reopen only as a separately scoped verified-checker, representation, or finer-sharding/CI project with a fresh budget.",
+  "theorem_statement_changed": false,
+  "certificate_data_changed": false,
+  "global_collatz_claimed": false
+}

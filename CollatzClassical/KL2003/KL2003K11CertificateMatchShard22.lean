@@ -11,7 +11,7 @@ theorem k11_row_valid_16038 : K11RowValid 16038 := by
     (253423315070456932073257 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (94327381 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (75491817 / 12500000 : Rat) - (77609907 / 12500000 : Rat) /\
     (0 : Rat) < (253423315070456932073257 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -20,7 +20,7 @@ theorem k11_row_valid_16039 : K11RowValid 16039 := by
     (1040736434597 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1022821667 / 100000000 : Rat) - (318430443 / 100000000 : Rat) /\
     (0 : Rat) < (1040736434597 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -29,7 +29,7 @@ theorem k11_row_valid_16040 : K11RowValid 16040 := by
     (64683731949053009565933594549 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (36843521 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (312331021 / 100000000 : Rat) - (248365111 / 50000000 : Rat) /\
     (0 : Rat) < (64683731949053009565933594549 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -38,7 +38,7 @@ theorem k11_row_valid_16041 : K11RowValid 16041 := by
     (775940166142626142394051 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (997183653 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (104912131 / 50000000 : Rat) - (475146151 / 100000000 : Rat) /\
     (0 : Rat) < (775940166142626142394051 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -47,7 +47,7 @@ theorem k11_row_valid_16042 : K11RowValid 16042 := by
     (656136218113 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2524539 / 390625 : Rat) - (201204047 / 100000000 : Rat) /\
     (0 : Rat) < (656136218113 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -56,7 +56,7 @@ theorem k11_row_valid_16043 : K11RowValid 16043 := by
     (113890723433687479597315136231 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (119955511 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (567463599 / 100000000 : Rat) - (872982411 / 100000000 : Rat) /\
     (0 : Rat) < (113890723433687479597315136231 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -65,7 +65,7 @@ theorem k11_row_valid_16044 : K11RowValid 16044 := by
     (1624301579785570890093629 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (8165641 / 1250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (504509949 / 50000000 : Rat) - (995384317 / 100000000 : Rat) /\
     (0 : Rat) < (1624301579785570890093629 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -74,7 +74,7 @@ theorem k11_row_valid_16045 : K11RowValid 16045 := by
     (66522769237 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (525767519 / 100000000 : Rat) - (20460603 / 12500000 : Rat) /\
     (0 : Rat) < (66522769237 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -83,7 +83,7 @@ theorem k11_row_valid_16046 : K11RowValid 16046 := by
     (141801011673868669258596263381 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (146971017 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (707835949 / 100000000 : Rat) - (1087275557 / 100000000 : Rat) /\
     (0 : Rat) < (141801011673868669258596263381 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -92,7 +92,7 @@ theorem k11_row_valid_16047 : K11RowValid 16047 := by
     (484398276005893783776277 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (379462589 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (151316437 / 25000000 : Rat) - (37076747 / 6250000 : Rat) /\
     (0 : Rat) < (484398276005893783776277 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -101,7 +101,7 @@ theorem k11_row_valid_16048 : K11RowValid 16048 := by
     (156616434811 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (618345911 / 100000000 : Rat) - (48126709 / 25000000 : Rat) /\
     (0 : Rat) < (156616434811 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -110,7 +110,7 @@ theorem k11_row_valid_16049 : K11RowValid 16049 := by
     (2179277708407279886795964591 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (6868143 / 3125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (8810039 / 6250000 : Rat) - (10668911 / 4000000 : Rat) /\
     (0 : Rat) < (2179277708407279886795964591 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -119,7 +119,7 @@ theorem k11_row_valid_16050 : K11RowValid 16050 := by
     (14314535181420481935797 / 4111450176800000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (175726511 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1117557 / 800000 : Rat) - (273657849 / 50000000 : Rat) /\
     (0 : Rat) < (14314535181420481935797 / 4111450176800000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -128,7 +128,7 @@ theorem k11_row_valid_16051 : K11RowValid 16051 := by
     (660446588981 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (647704587 / 100000000 : Rat) - (201646939 / 100000000 : Rat) /\
     (0 : Rat) < (660446588981 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -137,7 +137,7 @@ theorem k11_row_valid_16052 : K11RowValid 16052 := by
     (60995214934460028070299749799 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (207837391 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (309308271 / 50000000 : Rat) - (934957609 / 100000000 : Rat) /\
     (0 : Rat) < (60995214934460028070299749799 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -146,7 +146,7 @@ theorem k11_row_valid_16053 : K11RowValid 16053 := by
     (604000745190019477935849 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (208717661 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (132409769 / 25000000 : Rat) - (370312761 / 50000000 : Rat) /\
     (0 : Rat) < (604000745190019477935849 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -155,7 +155,7 @@ theorem k11_row_valid_16054 : K11RowValid 16054 := by
     (33298359821 / 32120704506250000 : Rat) = (1600000000 / 5139312721 : Rat) * (131372467 / 25000000 : Rat) - (10224899 / 6250000 : Rat) /\
     (0 : Rat) < (33298359821 / 32120704506250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -164,7 +164,7 @@ theorem k11_row_valid_16055 : K11RowValid 16055 := by
     (50453928288774438834705218339 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (125740739 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (247281931 / 100000000 : Rat) - (193507817 / 50000000 : Rat) /\
     (0 : Rat) < (50453928288774438834705218339 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -173,7 +173,7 @@ theorem k11_row_valid_16056 : K11RowValid 16056 := by
     (710392632221718176360139 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (317645441 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (246037259 / 25000000 : Rat) - (87137977 / 10000000 : Rat) /\
     (0 : Rat) < (710392632221718176360139 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -182,7 +182,7 @@ theorem k11_row_valid_16057 : K11RowValid 16057 := by
     (1647379783679 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (810328159 / 50000000 : Rat) - (504551601 / 100000000 : Rat) /\
     (0 : Rat) < (1647379783679 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -191,7 +191,7 @@ theorem k11_row_valid_16058 : K11RowValid 16058 := by
     (79223770351135599783108465517 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (173488069 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (240300293 / 100000000 : Rat) - (152026011 / 25000000 : Rat) /\
     (0 : Rat) < (79223770351135599783108465517 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -200,7 +200,7 @@ theorem k11_row_valid_16059 : K11RowValid 16059 := by
     (460132831566024930295597 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (807709771 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (99461357 / 25000000 : Rat) - (563741663 / 100000000 : Rat) /\
     (0 : Rat) < (460132831566024930295597 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -209,7 +209,7 @@ theorem k11_row_valid_16060 : K11RowValid 16060 := by
     (620941855333 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (610027901 / 100000000 : Rat) - (189917227 / 100000000 : Rat) /\
     (0 : Rat) < (620941855333 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -218,7 +218,7 @@ theorem k11_row_valid_16061 : K11RowValid 16061 := by
     (142699281391755746533833359 / 20557250884000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (38289387 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (735511 / 100000 : Rat) - (1094298713 / 100000000 : Rat) /\
     (0 : Rat) < (142699281391755746533833359 / 20557250884000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -227,7 +227,7 @@ theorem k11_row_valid_16062 : K11RowValid 16062 := by
     (2938168473596296599448323 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (28232943 / 5000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (922276163 / 100000000 : Rat) - (899715431 / 100000000 : Rat) /\
     (0 : Rat) < (2938168473596296599448323 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -236,7 +236,7 @@ theorem k11_row_valid_16063 : K11RowValid 16063 := by
     (716650185109 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (70494639 / 10000000 : Rat) - (219467771 / 100000000 : Rat) /\
     (0 : Rat) < (716650185109 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -245,7 +245,7 @@ theorem k11_row_valid_16064 : K11RowValid 16064 := by
     (41294890910444922157756480163 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (102059569 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (202636427 / 50000000 : Rat) - (31683703 / 5000000 : Rat) /\
     (0 : Rat) < (41294890910444922157756480163 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -254,7 +254,7 @@ theorem k11_row_valid_16065 : K11RowValid 16065 := by
     (5414072214089673423937 / 1511562565000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (709570803 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (21887249 / 5000000 : Rat) - (441021 / 78125 : Rat) /\
     (0 : Rat) < (5414072214089673423937 / 1511562565000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -263,7 +263,7 @@ theorem k11_row_valid_16066 : K11RowValid 16066 := by
     (558688864921 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1102073627 / 100000000 : Rat) - (171551799 / 50000000 : Rat) /\
     (0 : Rat) < (558688864921 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -272,7 +272,7 @@ theorem k11_row_valid_16067 : K11RowValid 16067 := by
     (7601206366865766910230527667 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (323240439 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (34287643 / 10000000 : Rat) - (582982003 / 100000000 : Rat) /\
     (0 : Rat) < (7601206366865766910230527667 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -281,7 +281,7 @@ theorem k11_row_valid_16068 : K11RowValid 16068 := by
     (330587227749509183282857 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1049150641 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (45869417 / 20000000 : Rat) - (506648859 / 100000000 : Rat) /\
     (0 : Rat) < (330587227749509183282857 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -290,7 +290,7 @@ theorem k11_row_valid_16069 : K11RowValid 16069 := by
     (21295539427 / 8030176126562500 : Rat) = (1600000000 / 5139312721 : Rat) * (671319347 / 50000000 : Rat) - (6531213 / 1562500 : Rat) /\
     (0 : Rat) < (21295539427 / 8030176126562500 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -299,7 +299,7 @@ theorem k11_row_valid_16070 : K11RowValid 16070 := by
     (104568769393437612279651782313 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5956617 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (536583777 / 100000000 : Rat) - (801212289 / 100000000 : Rat) /\
     (0 : Rat) < (104568769393437612279651782313 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -308,7 +308,7 @@ theorem k11_row_valid_16071 : K11RowValid 16071 := by
     (3124380439897040196701917 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (215699223 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (536453277 / 100000000 : Rat) - (479149939 / 50000000 : Rat) /\
     (0 : Rat) < (3124380439897040196701917 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -317,7 +317,7 @@ theorem k11_row_valid_16072 : K11RowValid 16072 := by
     (83097815331 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (2564899 / 390625 : Rat) - (25552589 / 12500000 : Rat) /\
     (0 : Rat) < (83097815331 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -326,7 +326,7 @@ theorem k11_row_valid_16073 : K11RowValid 16073 := by
     (221624667579862787399481328997 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (16916083 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1177873213 / 100000000 : Rat) - (339826103 / 20000000 : Rat) /\
     (0 : Rat) < (221624667579862787399481328997 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -335,7 +335,7 @@ theorem k11_row_valid_16074 : K11RowValid 16074 := by
     (37422552040231149480491 / 15115625650000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (200600187 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (168654107 / 50000000 : Rat) - (194833711 / 50000000 : Rat) /\
     (0 : Rat) < (37422552040231149480491 / 15115625650000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -344,7 +344,7 @@ theorem k11_row_valid_16075 : K11RowValid 16075 := by
     (647277174277 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (317591039 / 50000000 : Rat) - (197748363 / 100000000 : Rat) /\
     (0 : Rat) < (647277174277 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -353,7 +353,7 @@ theorem k11_row_valid_16076 : K11RowValid 16076 := by
     (24142108063163133046057767799 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (75383113 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (98030271 / 50000000 : Rat) - (23105453 / 6250000 : Rat) /\
     (0 : Rat) < (24142108063163133046057767799 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -362,7 +362,7 @@ theorem k11_row_valid_16077 : K11RowValid 16077 := by
     (809887584485523299456387 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (611491019 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (73745347 / 50000000 : Rat) - (496515419 / 100000000 : Rat) /\
     (0 : Rat) < (809887584485523299456387 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -371,7 +371,7 @@ theorem k11_row_valid_16078 : K11RowValid 16078 := by
     (481956960711 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (948774321 / 100000000 : Rat) - (147688809 / 50000000 : Rat) /\
     (0 : Rat) < (481956960711 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -380,7 +380,7 @@ theorem k11_row_valid_16079 : K11RowValid 16079 := by
     (15376119819000685186167742163 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (158230843 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (75034427 / 12500000 : Rat) - (471486667 / 50000000 : Rat) /\
     (0 : Rat) < (15376119819000685186167742163 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -389,7 +389,7 @@ theorem k11_row_valid_16080 : K11RowValid 16080 := by
     (2265959779633010283782513 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1207578639 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (405205553 / 100000000 : Rat) - (86751027 / 12500000 : Rat) /\
     (0 : Rat) < (2265959779633010283782513 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -398,7 +398,7 @@ theorem k11_row_valid_16081 : K11RowValid 16081 := by
     (606715356257 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1193349063 / 100000000 : Rat) - (185759983 / 50000000 : Rat) /\
     (0 : Rat) < (606715356257 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -407,7 +407,7 @@ theorem k11_row_valid_16082 : K11RowValid 16082 := by
     (168381105380395718513621829753 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (33774453 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (887855537 / 100000000 : Rat) - (25821397 / 2000000 : Rat) /\
     (0 : Rat) < (168381105380395718513621829753 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -416,7 +416,7 @@ theorem k11_row_valid_16083 : K11RowValid 16083 := by
     (677298678607395559175749 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (84810471 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (243441669 / 12500000 : Rat) - (1660696741 / 100000000 : Rat) /\
     (0 : Rat) < (677298678607395559175749 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -425,7 +425,7 @@ theorem k11_row_valid_16084 : K11RowValid 16084 := by
     (777412480629 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (153394867 / 20000000 : Rat) - (238778651 / 100000000 : Rat) /\
     (0 : Rat) < (777412480629 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -434,7 +434,7 @@ theorem k11_row_valid_16085 : K11RowValid 16085 := by
     (103891760374065929501623219943 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5230899 / 2000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (507792047 / 100000000 : Rat) - (31830933 / 4000000 : Rat) /\
     (0 : Rat) < (103891760374065929501623219943 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -443,7 +443,7 @@ theorem k11_row_valid_16086 : K11RowValid 16086 := by
     (1358723805837129891406877 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (669870587 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (265795037 / 100000000 : Rat) - (417178427 / 100000000 : Rat) /\
     (0 : Rat) < (1358723805837129891406877 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -452,7 +452,7 @@ theorem k11_row_valid_16087 : K11RowValid 16087 := by
     (505716578523 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (124463663 / 25000000 : Rat) - (154994837 / 100000000 : Rat) /\
     (0 : Rat) < (505716578523 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -461,7 +461,7 @@ theorem k11_row_valid_16088 : K11RowValid 16088 := by
     (200602942871393623888857779783 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (174507489 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1053083407 / 100000000 : Rat) - (767888527 / 50000000 : Rat) /\
     (0 : Rat) < (200602942871393623888857779783 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -470,7 +470,7 @@ theorem k11_row_valid_16089 : K11RowValid 16089 := by
     (4141139754562741968919169 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (887323 / 160000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1398138689 / 100000000 : Rat) - (1270095691 / 100000000 : Rat) /\
     (0 : Rat) < (4141139754562741968919169 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -479,7 +479,7 @@ theorem k11_row_valid_16090 : K11RowValid 16090 := by
     (255177573707 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (501253761 / 100000000 : Rat) - (78026533 / 50000000 : Rat) /\
     (0 : Rat) < (255177573707 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -488,7 +488,7 @@ theorem k11_row_valid_16091 : K11RowValid 16091 := by
     (3192002798057141218346901047 / 205572508840000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (28167149 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (17057663 / 1000000 : Rat) - (244347031 / 10000000 : Rat) /\
     (0 : Rat) < (3192002798057141218346901047 / 205572508840000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -497,7 +497,7 @@ theorem k11_row_valid_16092 : K11RowValid 16092 := by
     (2384366384353660299448301 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (389912973 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (775806381 / 100000000 : Rat) - (730343977 / 100000000 : Rat) /\
     (0 : Rat) < (2384366384353660299448301 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -506,7 +506,7 @@ theorem k11_row_valid_16093 : K11RowValid 16093 := by
     (3392666021429 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3340214431 / 100000000 : Rat) - (1039893851 / 100000000 : Rat) /\
     (0 : Rat) < (3392666021429 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -515,7 +515,7 @@ theorem k11_row_valid_16094 : K11RowValid 16094 := by
     (28519591444571230238648755821 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (270019541 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (125512709 / 50000000 : Rat) - (218599767 / 50000000 : Rat) /\
     (0 : Rat) < (28519591444571230238648755821 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -524,7 +524,7 @@ theorem k11_row_valid_16095 : K11RowValid 16095 := by
     (833329048562845124442007 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1291219947 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (69860567 / 50000000 : Rat) - (255830527 / 50000000 : Rat) /\
     (0 : Rat) < (833329048562845124442007 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -533,7 +533,7 @@ theorem k11_row_valid_16096 : K11RowValid 16096 := by
     (22527890951 / 16060352253125000 : Rat) = (1600000000 / 5139312721 : Rat) * (44425333 / 6250000 : Rat) - (6915369 / 3125000 : Rat) /\
     (0 : Rat) < (22527890951 / 16060352253125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -542,7 +542,7 @@ theorem k11_row_valid_16097 : K11RowValid 16097 := by
     (70688494463201716195644713407 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (25867373 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (356540103 / 100000000 : Rat) - (108367311 / 20000000 : Rat) /\
     (0 : Rat) < (70688494463201716195644713407 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -551,7 +551,7 @@ theorem k11_row_valid_16098 : K11RowValid 16098 := by
     (1968785884965079707221993 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1300242251 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (510923433 / 25000000 : Rat) - (1206877369 / 50000000 : Rat) /\
     (0 : Rat) < (1968785884965079707221993 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -560,7 +560,7 @@ theorem k11_row_valid_16099 : K11RowValid 16099 := by
     (80333939191 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (398038881 / 100000000 : Rat) - (24783929 / 20000000 : Rat) /\
     (0 : Rat) < (80333939191 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -569,7 +569,7 @@ theorem k11_row_valid_16100 : K11RowValid 16100 := by
     (13923050000818886558396123077 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (43229789 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (71973533 / 10000000 : Rat) - (1066337769 / 100000000 : Rat) /\
     (0 : Rat) < (13923050000818886558396123077 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -578,7 +578,7 @@ theorem k11_row_valid_16101 : K11RowValid 16101 := by
     (2063340812358635496412603 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5141227 / 1562500 : Rat) + (784931055601 / 1000000000000 : Rat) * (674702843 / 100000000 : Rat) - (126406591 / 20000000 : Rat) /\
     (0 : Rat) < (2063340812358635496412603 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -587,7 +587,7 @@ theorem k11_row_valid_16102 : K11RowValid 16102 := by
     (729575112137 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (71836621 / 10000000 : Rat) - (223645703 / 100000000 : Rat) /\
     (0 : Rat) < (729575112137 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -596,7 +596,7 @@ theorem k11_row_valid_16103 : K11RowValid 16103 := by
     (21064611329574896627051691237 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (174543517 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (95594173 / 25000000 : Rat) - (20206143 / 3125000 : Rat) /\
     (0 : Rat) < (21064611329574896627051691237 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -605,7 +605,7 @@ theorem k11_row_valid_16104 : K11RowValid 16104 := by
     (33120992856802269738931 / 7557812825000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (868840709 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (47645987 / 25000000 : Rat) - (690579661 / 100000000 : Rat) /\
     (0 : Rat) < (33120992856802269738931 / 7557812825000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -614,7 +614,7 @@ theorem k11_row_valid_16105 : K11RowValid 16105 := by
     (742866159489 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (366264581 / 50000000 : Rat) - (228054991 / 100000000 : Rat) /\
     (0 : Rat) < (742866159489 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -623,7 +623,7 @@ theorem k11_row_valid_16106 : K11RowValid 16106 := by
     (53414984852366751869485418521 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (153041337 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (273661009 / 25000000 : Rat) - (1635206097 / 100000000 : Rat) /\
     (0 : Rat) < (53414984852366751869485418521 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -632,7 +632,7 @@ theorem k11_row_valid_16107 : K11RowValid 16107 := by
     (15067679308267278620329 / 3023125130000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1904010251 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (24535033 / 10000000 : Rat) - (785349871 / 100000000 : Rat) /\
     (0 : Rat) < (15067679308267278620329 / 3023125130000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -641,7 +641,7 @@ theorem k11_row_valid_16108 : K11RowValid 16108 := by
     (376613666153 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2312869 / 625000 : Rat) - (115208807 / 100000000 : Rat) /\
     (0 : Rat) < (376613666153 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -650,7 +650,7 @@ theorem k11_row_valid_16109 : K11RowValid 16109 := by
     (18326069517470503667677297909 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (46655901 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (89552461 / 20000000 : Rat) - (351262701 / 50000000 : Rat) /\
     (0 : Rat) < (18326069517470503667677297909 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -659,7 +659,7 @@ theorem k11_row_valid_16110 : K11RowValid 16110 := by
     (149436172801607913148141 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (802119877 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (38453421 / 6250000 : Rat) - (183163149 / 25000000 : Rat) /\
     (0 : Rat) < (149436172801607913148141 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -668,7 +668,7 @@ theorem k11_row_valid_16111 : K11RowValid 16111 := by
     (1391593879209 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1368618063 / 100000000 : Rat) - (426085671 / 100000000 : Rat) /\
     (0 : Rat) < (1391593879209 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -677,7 +677,7 @@ theorem k11_row_valid_16112 : K11RowValid 16112 := by
     (49830304566679963501268065291 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (460637487 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (168860339 / 100000000 : Rat) - (38095621 / 10000000 : Rat) /\
     (0 : Rat) < (49830304566679963501268065291 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -686,7 +686,7 @@ theorem k11_row_valid_16113 : K11RowValid 16113 := by
     (230652873663968586177209 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (763787433 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (59799929 / 10000000 : Rat) - (707174403 / 100000000 : Rat) /\
     (0 : Rat) < (230652873663968586177209 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -695,7 +695,7 @@ theorem k11_row_valid_16114 : K11RowValid 16114 := by
     (407645301841 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (400767969 / 100000000 : Rat) - (124769279 / 100000000 : Rat) /\
     (0 : Rat) < (407645301841 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -704,7 +704,7 @@ theorem k11_row_valid_16115 : K11RowValid 16115 := by
     (36876100649866883008191012101 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (17673131 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (192996829 / 20000000 : Rat) - (1412533797 / 100000000 : Rat) /\
     (0 : Rat) < (36876100649866883008191012101 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -713,7 +713,7 @@ theorem k11_row_valid_16116 : K11RowValid 16116 := by
     (36006504010443707811341 / 4015088063281250000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (670952789 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (11972621 / 781250 : Rat) - (705893617 / 50000000 : Rat) /\
     (0 : Rat) < (36006504010443707811341 / 4015088063281250000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -722,7 +722,7 @@ theorem k11_row_valid_16117 : K11RowValid 16117 := by
     (137882945067 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (67791389 / 12500000 : Rat) - (42210373 / 25000000 : Rat) /\
     (0 : Rat) < (137882945067 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -731,7 +731,7 @@ theorem k11_row_valid_16118 : K11RowValid 16118 := by
     (174800029719424966878815996213 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (17828681 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (935796877 / 50000000 : Rat) - (2677310183 / 100000000 : Rat) /\
     (0 : Rat) < (174800029719424966878815996213 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -740,7 +740,7 @@ theorem k11_row_valid_16119 : K11RowValid 16119 := by
     (49278267795206843020569 / 12848281802500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (183072479 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (11952089 / 2500000 : Rat) - (301621451 / 50000000 : Rat) /\
     (0 : Rat) < (49278267795206843020569 / 12848281802500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -749,7 +749,7 @@ theorem k11_row_valid_16120 : K11RowValid 16120 := by
     (2942403530439 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2895002523 / 100000000 : Rat) - (901288041 / 100000000 : Rat) /\
     (0 : Rat) < (2942403530439 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -758,7 +758,7 @@ theorem k11_row_valid_16121 : K11RowValid 16121 := by
     (35253220739923667011619161657 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (86854033 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (172714353 / 25000000 : Rat) - (135004809 / 12500000 : Rat) /\
     (0 : Rat) < (35253220739923667011619161657 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -767,7 +767,7 @@ theorem k11_row_valid_16122 : K11RowValid 16122 := by
     (611510922178042160038211 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (152866781 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (117129091 / 50000000 : Rat) - (374241699 / 100000000 : Rat) /\
     (0 : Rat) < (611510922178042160038211 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -776,7 +776,7 @@ theorem k11_row_valid_16123 : K11RowValid 16123 := by
     (578299223583 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (227272087 / 20000000 : Rat) - (176888977 / 50000000 : Rat) /\
     (0 : Rat) < (578299223583 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -785,7 +785,7 @@ theorem k11_row_valid_16124 : K11RowValid 16124 := by
     (93190707464671226920853485353 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (18626269 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (473907937 / 100000000 : Rat) - (44566947 / 6250000 : Rat) /\
     (0 : Rat) < (93190707464671226920853485353 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -794,7 +794,7 @@ theorem k11_row_valid_16125 : K11RowValid 16125 := by
     (1742130736520172508399139 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (369016057 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (607196259 / 25000000 : Rat) - (133512237 / 6250000 : Rat) /\
     (0 : Rat) < (1742130736520172508399139 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -803,7 +803,7 @@ theorem k11_row_valid_16126 : K11RowValid 16126 := by
     (151947205201 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (299757793 / 50000000 : Rat) - (46661119 / 25000000 : Rat) /\
     (0 : Rat) < (151947205201 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -812,7 +812,7 @@ theorem k11_row_valid_16127 : K11RowValid 16127 := by
     (59789226037926796117983265391 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (93954789 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (315253239 / 25000000 : Rat) - (1832458969 / 100000000 : Rat) /\
     (0 : Rat) < (59789226037926796117983265391 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -821,7 +821,7 @@ theorem k11_row_valid_16128 : K11RowValid 16128 := by
     (434946379797230847193723 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (10327521 / 3125000 : Rat) + (784931055601 / 1000000000000 : Rat) * (137253563 / 25000000 : Rat) - (133456279 / 25000000 : Rat) /\
     (0 : Rat) < (434946379797230847193723 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -830,7 +830,7 @@ theorem k11_row_valid_16129 : K11RowValid 16129 := by
     (744083883663 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (146222853 / 20000000 : Rat) - (227614497 / 100000000 : Rat) /\
     (0 : Rat) < (744083883663 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -839,7 +839,7 @@ theorem k11_row_valid_16130 : K11RowValid 16130 := by
     (43220958593725452285000074439 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (55073917 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (174098831 / 100000000 : Rat) - (330646957 / 100000000 : Rat) /\
     (0 : Rat) < (43220958593725452285000074439 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -848,7 +848,7 @@ theorem k11_row_valid_16131 : K11RowValid 16131 := by
     (257749559179740357255661 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1587854667 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (22042541 / 12500000 : Rat) - (158188631 / 25000000 : Rat) /\
     (0 : Rat) < (257749559179740357255661 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -857,7 +857,7 @@ theorem k11_row_valid_16132 : K11RowValid 16132 := by
     (598189681349 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (588606923 / 100000000 : Rat) - (183248331 / 100000000 : Rat) /\
     (0 : Rat) < (598189681349 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -866,7 +866,7 @@ theorem k11_row_valid_16133 : K11RowValid 16133 := by
     (98864615567037413587565108539 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (47296489 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (486277731 / 100000000 : Rat) - (189426247 / 25000000 : Rat) /\
     (0 : Rat) < (98864615567037413587565108539 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -875,7 +875,7 @@ theorem k11_row_valid_16134 : K11RowValid 16134 := by
     (5858891249804191041043 / 1284828180250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1331822539 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (966483 / 250000 : Rat) - (718079103 / 100000000 : Rat) /\
     (0 : Rat) < (5858891249804191041043 / 1284828180250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -884,7 +884,7 @@ theorem k11_row_valid_16135 : K11RowValid 16135 := by
     (100200986899 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (61870099 / 12500000 : Rat) - (30818781 / 20000000 : Rat) /\
     (0 : Rat) < (100200986899 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -893,7 +893,7 @@ theorem k11_row_valid_16136 : K11RowValid 16136 := by
     (7332781633487139784553026523 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (22045897 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (36004867 / 10000000 : Rat) - (561414043 / 100000000 : Rat) /\
     (0 : Rat) < (7332781633487139784553026523 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -902,7 +902,7 @@ theorem k11_row_valid_16137 : K11RowValid 16137 := by
     (2859615826401379294401847 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (722591557 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (829567607 / 100000000 : Rat) - (7008913 / 800000 : Rat) /\
     (0 : Rat) < (2859615826401379294401847 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -911,7 +911,7 @@ theorem k11_row_valid_16138 : K11RowValid 16138 := by
     (14471479189 / 6424140901250000 : Rat) = (1600000000 / 5139312721 : Rat) * (1140745959 / 100000000 : Rat) - (4439291 / 1250000 : Rat) /\
     (0 : Rat) < (14471479189 / 6424140901250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -920,7 +920,7 @@ theorem k11_row_valid_16139 : K11RowValid 16139 := by
     (28244708544848688242761001799 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (730803833 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (72416271 / 50000000 : Rat) - (5390803 / 1250000 : Rat) /\
     (0 : Rat) < (28244708544848688242761001799 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -929,7 +929,7 @@ theorem k11_row_valid_16140 : K11RowValid 16140 := by
     (191045057168172762311383 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (33499939 / 4000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (53824023 / 6250000 : Rat) - (468352269 / 50000000 : Rat) /\
     (0 : Rat) < (191045057168172762311383 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -938,7 +938,7 @@ theorem k11_row_valid_16141 : K11RowValid 16141 := by
     (317559189811 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (622960319 / 100000000 : Rat) - (96971709 / 50000000 : Rat) /\
     (0 : Rat) < (317559189811 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -947,7 +947,7 @@ theorem k11_row_valid_16142 : K11RowValid 16142 := by
     (150734438890954666205966609223 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (14019013 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (742833167 / 100000000 : Rat) - (577054461 / 50000000 : Rat) /\
     (0 : Rat) < (150734438890954666205966609223 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -956,7 +956,7 @@ theorem k11_row_valid_16143 : K11RowValid 16143 := by
     (2694210645932218043529133 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (504867283 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (850961773 / 100000000 : Rat) - (412561973 / 50000000 : Rat) /\
     (0 : Rat) < (2694210645932218043529133 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -965,7 +965,7 @@ theorem k11_row_valid_16144 : K11RowValid 16144 := by
     (835553719791 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (411137777 / 50000000 : Rat) - (255995329 / 100000000 : Rat) /\
     (0 : Rat) < (835553719791 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -974,7 +974,7 @@ theorem k11_row_valid_16145 : K11RowValid 16145 := by
     (85251677111954208240309915463 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (171004307 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (445530127 / 50000000 : Rat) - (1306756763 / 100000000 : Rat) /\
     (0 : Rat) < (85251677111954208240309915463 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -983,7 +983,7 @@ theorem k11_row_valid_16146 : K11RowValid 16146 := by
     (97207211167251001787833 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (413946377 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (27716473 / 6250000 : Rat) - (476960159 / 100000000 : Rat) /\
     (0 : Rat) < (97207211167251001787833 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -992,7 +992,7 @@ theorem k11_row_valid_16147 : K11RowValid 16147 := by
     (78440004239 / 32120704506250000 : Rat) = (1600000000 / 5139312721 : Rat) * (1234990017 / 100000000 : Rat) - (24030241 / 6250000 : Rat) /\
     (0 : Rat) < (78440004239 / 32120704506250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1001,7 +1001,7 @@ theorem k11_row_valid_16148 : K11RowValid 16148 := by
     (39310685844245592640147631301 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (228724141 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (188233629 / 50000000 : Rat) - (37550707 / 6250000 : Rat) /\
     (0 : Rat) < (39310685844245592640147631301 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1010,7 +1010,7 @@ theorem k11_row_valid_16149 : K11RowValid 16149 := by
     (747408487430887323760971 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1117952109 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (70112651 / 50000000 : Rat) - (229057049 / 50000000 : Rat) /\
     (0 : Rat) < (747408487430887323760971 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1019,7 +1019,7 @@ theorem k11_row_valid_16150 : K11RowValid 16150 := by
     (200957544147 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (197468237 / 20000000 : Rat) - (61476893 / 20000000 : Rat) /\
     (0 : Rat) < (200957544147 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1028,7 +1028,7 @@ theorem k11_row_valid_16151 : K11RowValid 16151 := by
     (88945378685671693503808957517 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62308459 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (457368293 / 100000000 : Rat) - (682209407 / 100000000 : Rat) /\
     (0 : Rat) < (88945378685671693503808957517 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1037,7 +1037,7 @@ theorem k11_row_valid_16152 : K11RowValid 16152 := by
     (226407166900217329233383 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2894927 / 156250 : Rat) + (784931055601 / 1000000000000 : Rat) * (42506023 / 6250000 : Rat) - (27765943 / 2500000 : Rat) /\
     (0 : Rat) < (226407166900217329233383 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1046,7 +1046,7 @@ theorem k11_row_valid_16153 : K11RowValid 16153 := by
     (447789276871 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (87923321 / 20000000 : Rat) - (136863849 / 100000000 : Rat) /\
     (0 : Rat) < (447789276871 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1055,7 +1055,7 @@ theorem k11_row_valid_16154 : K11RowValid 16154 := by
     (191920842801259654453314469321 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (66405269 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1015854209 / 100000000 : Rat) - (367605683 / 25000000 : Rat) /\
     (0 : Rat) < (191920842801259654453314469321 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1064,7 +1064,7 @@ theorem k11_row_valid_16155 : K11RowValid 16155 := by
     (104588129374872623551243 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (310789867 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (33092683 / 6250000 : Rat) - (512364133 / 100000000 : Rat) /\
     (0 : Rat) < (104588129374872623551243 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1073,7 +1073,7 @@ theorem k11_row_valid_16156 : K11RowValid 16156 := by
     (14378267621 / 5139312721000000 : Rat) = (1600000000 / 5139312721 : Rat) * (354379847 / 25000000 : Rat) - (4413099 / 1000000 : Rat) /\
     (0 : Rat) < (14378267621 / 5139312721000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1082,7 +1082,7 @@ theorem k11_row_valid_16157 : K11RowValid 16157 := by
     (6404633640917024003405131 / 2437426000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (423053657 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (100254683 / 50000000 : Rat) - (413778377 / 100000000 : Rat) /\
     (0 : Rat) < (6404633640917024003405131 / 2437426000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1091,7 +1091,7 @@ theorem k11_row_valid_16158 : K11RowValid 16158 := by
     (1112198763049935488355643 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1808314261 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (75849083 / 50000000 : Rat) - (341023413 / 50000000 : Rat) /\
     (0 : Rat) < (1112198763049935488355643 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1100,7 +1100,7 @@ theorem k11_row_valid_16159 : K11RowValid 16159 := by
     (510103267291 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1006328363 / 100000000 : Rat) - (156647829 / 50000000 : Rat) /\
     (0 : Rat) < (510103267291 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1109,7 +1109,7 @@ theorem k11_row_valid_16160 : K11RowValid 16160 := by
     (120309863171451761604212368831 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (25450941 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (609548999 / 100000000 : Rat) - (920884777 / 100000000 : Rat) /\
     (0 : Rat) < (120309863171451761604212368831 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1118,7 +1118,7 @@ theorem k11_row_valid_16161 : K11RowValid 16161 := by
     (591080491323149227256599 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (259235761 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (127890519 / 25000000 : Rat) - (724367493 / 100000000 : Rat) /\
     (0 : Rat) < (591080491323149227256599 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1127,7 +1127,7 @@ theorem k11_row_valid_16162 : K11RowValid 16162 := by
     (348767732047 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (344388753 / 50000000 : Rat) - (107216993 / 50000000 : Rat) /\
     (0 : Rat) < (348767732047 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1136,7 +1136,7 @@ theorem k11_row_valid_16163 : K11RowValid 16163 := by
     (20202416567918959608741952513 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (155664663 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (105699577 / 12500000 : Rat) - (7737651 / 625000 : Rat) /\
     (0 : Rat) < (20202416567918959608741952513 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1145,7 +1145,7 @@ theorem k11_row_valid_16164 : K11RowValid 16164 := by
     (4040279133964974940299957 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (470419111 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1391654517 / 100000000 : Rat) - (123880561 / 10000000 : Rat) /\
     (0 : Rat) < (4040279133964974940299957 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1154,7 +1154,7 @@ theorem k11_row_valid_16165 : K11RowValid 16165 := by
     (662950076611 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (163382797 / 25000000 : Rat) - (203460909 / 100000000 : Rat) /\
     (0 : Rat) < (662950076611 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1163,7 +1163,7 @@ theorem k11_row_valid_16166 : K11RowValid 16166 := by
     (53167715691496727255042102817 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (16022781 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (200851993 / 100000000 : Rat) - (101815123 / 25000000 : Rat) /\
     (0 : Rat) < (53167715691496727255042102817 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1172,7 +1172,7 @@ theorem k11_row_valid_16167 : K11RowValid 16167 := by
     (1711221552279469318326727 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (975448531 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (282202887 / 100000000 : Rat) - (525191649 / 100000000 : Rat) /\
     (0 : Rat) < (1711221552279469318326727 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1181,7 +1181,7 @@ theorem k11_row_valid_16168 : K11RowValid 16168 := by
     (135383454377 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (132659439 / 25000000 : Rat) - (41300263 / 25000000 : Rat) /\
     (0 : Rat) < (135383454377 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1190,7 +1190,7 @@ theorem k11_row_valid_16169 : K11RowValid 16169 := by
     (8768339867471749510082308233 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (215192061 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (44763457 / 3125000 : Rat) - (537273269 / 25000000 : Rat) /\
     (0 : Rat) < (8768339867471749510082308233 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1199,7 +1199,7 @@ theorem k11_row_valid_16170 : K11RowValid 16170 := by
     (253375488687963296307301 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (198838981 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (67385381 / 10000000 : Rat) - (776543009 / 100000000 : Rat) /\
     (0 : Rat) < (253375488687963296307301 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1208,7 +1208,7 @@ theorem k11_row_valid_16171 : K11RowValid 16171 := by
     (106293310907 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (418768593 / 100000000 : Rat) - (32593333 / 25000000 : Rat) /\
     (0 : Rat) < (106293310907 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1217,7 +1217,7 @@ theorem k11_row_valid_16172 : K11RowValid 16172 := by
     (271406958353763333148476005609 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (6995051 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1452505761 / 100000000 : Rat) - (2078188479 / 100000000 : Rat) /\
     (0 : Rat) < (271406958353763333148476005609 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1226,7 +1226,7 @@ theorem k11_row_valid_16173 : K11RowValid 16173 := by
     (2580036729284238292835627 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (109205947 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (834023787 / 100000000 : Rat) - (79064513 / 10000000 : Rat) /\
     (0 : Rat) < (2580036729284238292835627 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1235,7 +1235,7 @@ theorem k11_row_valid_16174 : K11RowValid 16174 := by
     (2893233287303 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (712000561 / 25000000 : Rat) - (886655657 / 100000000 : Rat) /\
     (0 : Rat) < (2893233287303 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1244,7 +1244,7 @@ theorem k11_row_valid_16175 : K11RowValid 16175 := by
     (54498198084114831242963807513 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (142336039 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (233994577 / 100000000 : Rat) - (417802729 / 100000000 : Rat) /\
     (0 : Rat) < (54498198084114831242963807513 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1253,7 +1253,7 @@ theorem k11_row_valid_16176 : K11RowValid 16176 := by
     (2083044057032523841321809 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (362154319 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (238912529 / 100000000 : Rat) - (638521209 / 100000000 : Rat) /\
     (0 : Rat) < (2083044057032523841321809 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1262,7 +1262,7 @@ theorem k11_row_valid_16177 : K11RowValid 16177 := by
     (422258289329 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (829703707 / 100000000 : Rat) - (129153951 / 50000000 : Rat) /\
     (0 : Rat) < (422258289329 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1271,7 +1271,7 @@ theorem k11_row_valid_16178 : K11RowValid 16178 := by
     (193413592609989620326009795651 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (30814427 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (998164779 / 100000000 : Rat) - (1480936959 / 100000000 : Rat) /\
     (0 : Rat) < (193413592609989620326009795651 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1280,7 +1280,7 @@ theorem k11_row_valid_16179 : K11RowValid 16179 := by
     (1328887863119915761843269 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (263054421 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (310390789 / 25000000 : Rat) - (325941041 / 20000000 : Rat) /\
     (0 : Rat) < (1328887863119915761843269 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1289,7 +1289,7 @@ theorem k11_row_valid_16180 : K11RowValid 16180 := by
     (95525134781 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (117871573 / 25000000 : Rat) - (29357139 / 20000000 : Rat) /\
     (0 : Rat) < (95525134781 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1298,7 +1298,7 @@ theorem k11_row_valid_16181 : K11RowValid 16181 := by
     (1604080097815270586284783707 / 256965636050000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (8461667 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (8348803 / 1250000 : Rat) - (196347683 / 20000000 : Rat) /\
     (0 : Rat) < (1604080097815270586284783707 / 256965636050000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1307,7 +1307,7 @@ theorem k11_row_valid_16182 : K11RowValid 16182 := by
     (1470181227797914616644457 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (7362093 / 2500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (458559017 / 100000000 : Rat) - (45161727 / 10000000 : Rat) /\
     (0 : Rat) < (1470181227797914616644457 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1316,7 +1316,7 @@ theorem k11_row_valid_16183 : K11RowValid 16183 := by
     (438019735251 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (429926489 / 50000000 : Rat) - (133847069 / 50000000 : Rat) /\
     (0 : Rat) < (438019735251 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1325,7 +1325,7 @@ theorem k11_row_valid_16184 : K11RowValid 16184 := by
     (8146676928295801921605616671 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (642802081 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (15992359 / 10000000 : Rat) - (125043477 / 20000000 : Rat) /\
     (0 : Rat) < (8146676928295801921605616671 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1334,7 +1334,7 @@ theorem k11_row_valid_16185 : K11RowValid 16185 := by
     (68311246569861024783537 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (486339637 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (7344497 / 5000000 : Rat) - (418118241 / 100000000 : Rat) /\
     (0 : Rat) < (68311246569861024783537 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1343,7 +1343,7 @@ theorem k11_row_valid_16186 : K11RowValid 16186 := by
     (227632898319 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (6966359 / 1562500 : Rat) - (69401761 / 50000000 : Rat) /\
     (0 : Rat) < (227632898319 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1352,7 +1352,7 @@ theorem k11_row_valid_16187 : K11RowValid 16187 := by
     (21291041520255881945715218583 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (294107737 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (107728607 / 12500000 : Rat) - (1303960079 / 100000000 : Rat) /\
     (0 : Rat) < (21291041520255881945715218583 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1361,7 +1361,7 @@ theorem k11_row_valid_16188 : K11RowValid 16188 := by
     (2105704026685465863121841 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (715393839 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (254123121 / 100000000 : Rat) - (644909659 / 100000000 : Rat) /\
     (0 : Rat) < (2105704026685465863121841 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1370,7 +1370,7 @@ theorem k11_row_valid_16189 : K11RowValid 16189 := by
     (1496026873 / 889154450000000 : Rat) = (1600000000 / 5139312721 : Rat) * (852116211 / 100000000 : Rat) - (132642743 / 50000000 : Rat) /\
     (0 : Rat) < (1496026873 / 889154450000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1379,7 +1379,7 @@ theorem k11_row_valid_16190 : K11RowValid 16190 := by
     (5183548609553060190843555191 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (345547793 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (23477439 / 6250000 : Rat) - (159004089 / 25000000 : Rat) /\
     (0 : Rat) < (5183548609553060190843555191 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1388,7 +1388,7 @@ theorem k11_row_valid_16191 : K11RowValid 16191 := by
     (2649354625848384730994421 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (866808317 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (690322101 / 100000000 : Rat) - (101464303 / 12500000 : Rat) /\
     (0 : Rat) < (2649354625848384730994421 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1397,7 +1397,7 @@ theorem k11_row_valid_16192 : K11RowValid 16192 := by
     (49303018901 / 30231251300000000 : Rat) = (1600000000 / 5139312721 : Rat) * (412324307 / 50000000 : Rat) - (256734123 / 100000000 : Rat) /\
     (0 : Rat) < (49303018901 / 30231251300000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1406,7 +1406,7 @@ theorem k11_row_valid_16193 : K11RowValid 16193 := by
     (130278590761599490385184103 / 60462502600000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (271396483 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (6043679 / 5000000 : Rat) - (339026867 / 100000000 : Rat) /\
     (0 : Rat) < (130278590761599490385184103 / 60462502600000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1415,7 +1415,7 @@ theorem k11_row_valid_16194 : K11RowValid 16194 := by
     (1012611967084027031239789 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (723343107 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (108388909 / 50000000 : Rat) - (620545809 / 100000000 : Rat) /\
     (0 : Rat) < (1012611967084027031239789 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1424,7 +1424,7 @@ theorem k11_row_valid_16195 : K11RowValid 16195 := by
     (91980338899 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (451405091 / 100000000 : Rat) - (28106781 / 20000000 : Rat) /\
     (0 : Rat) < (91980338899 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1433,7 +1433,7 @@ theorem k11_row_valid_16196 : K11RowValid 16196 := by
     (15982163986894330525333177107 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (188053029 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (82817403 / 10000000 : Rat) - (611798937 / 50000000 : Rat) /\
     (0 : Rat) < (15982163986894330525333177107 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1442,7 +1442,7 @@ theorem k11_row_valid_16197 : K11RowValid 16197 := by
     (9866912465782988755761037 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (629322539 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (3601521997 / 100000000 : Rat) - (3022868807 / 100000000 : Rat) /\
     (0 : Rat) < (9866912465782988755761037 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1451,7 +1451,7 @@ theorem k11_row_valid_16198 : K11RowValid 16198 := by
     (84592199129 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (417250641 / 100000000 : Rat) - (25980151 / 20000000 : Rat) /\
     (0 : Rat) < (84592199129 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1460,7 +1460,7 @@ theorem k11_row_valid_16199 : K11RowValid 16199 := by
     (156530026206865402008407883287 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (35683219 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (820758623 / 100000000 : Rat) - (9367631 / 781250 : Rat) /\
     (0 : Rat) < (156530026206865402008407883287 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1469,7 +1469,7 @@ theorem k11_row_valid_16200 : K11RowValid 16200 := by
     (2680134272372108469792719 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (39936017 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (792596239 / 100000000 : Rat) - (4105313 / 500000 : Rat) /\
     (0 : Rat) < (2680134272372108469792719 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1478,7 +1478,7 @@ theorem k11_row_valid_16201 : K11RowValid 16201 := by
     (771290878887 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (304169071 / 20000000 : Rat) - (236738953 / 50000000 : Rat) /\
     (0 : Rat) < (771290878887 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1487,7 +1487,7 @@ theorem k11_row_valid_16202 : K11RowValid 16202 := by
     (9029962979661912199253180329 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (35247531 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (41420641 / 12500000 : Rat) - (4431543 / 800000 : Rat) /\
     (0 : Rat) < (9029962979661912199253180329 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1496,7 +1496,7 @@ theorem k11_row_valid_16203 : K11RowValid 16203 := by
     (87653354253592549023593 / 30231251300000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (170723911 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (243301561 / 100000000 : Rat) - (91345669 / 20000000 : Rat) /\
     (0 : Rat) < (87653354253592549023593 / 30231251300000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1505,7 +1505,7 @@ theorem k11_row_valid_16204 : K11RowValid 16204 := by
     (45908254187 / 20557250884000000 : Rat) = (1600000000 / 5139312721 : Rat) * (17640869 / 1562500 : Rat) - (14059653 / 4000000 : Rat) /\
     (0 : Rat) < (45908254187 / 20557250884000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1514,7 +1514,7 @@ theorem k11_row_valid_16205 : K11RowValid 16205 := by
     (85870503869534691460773665863 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (205365523 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (421651727 / 100000000 : Rat) - (657103433 / 100000000 : Rat) /\
     (0 : Rat) < (85870503869534691460773665863 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1523,7 +1523,7 @@ theorem k11_row_valid_16206 : K11RowValid 16206 := by
     (1700110792796895177173181 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (782251529 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (586241661 / 25000000 : Rat) - (416834161 / 20000000 : Rat) /\
     (0 : Rat) < (1700110792796895177173181 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1532,7 +1532,7 @@ theorem k11_row_valid_16207 : K11RowValid 16207 := by
     (518249586251 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (508522691 / 100000000 : Rat) - (158316069 / 100000000 : Rat) /\
     (0 : Rat) < (518249586251 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1541,7 +1541,7 @@ theorem k11_row_valid_16208 : K11RowValid 16208 := by
     (29385853916121012965914474053 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (166997597 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (150910237 / 25000000 : Rat) - (225293973 / 25000000 : Rat) /\
     (0 : Rat) < (29385853916121012965914474053 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1550,7 +1550,7 @@ theorem k11_row_valid_16209 : K11RowValid 16209 := by
     (1329498287215419986856083 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (170765147 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (383744723 / 100000000 : Rat) - (407540041 / 100000000 : Rat) /\
     (0 : Rat) < (1329498287215419986856083 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1559,7 +1559,7 @@ theorem k11_row_valid_16210 : K11RowValid 16210 := by
     (7863611373 / 6046250260000000 : Rat) = (1600000000 / 5139312721 : Rat) * (82224597 / 12500000 : Rat) - (40957779 / 20000000 : Rat) /\
     (0 : Rat) < (7863611373 / 6046250260000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1568,7 +1568,7 @@ theorem k11_row_valid_16211 : K11RowValid 16211 := by
     (17973469551581403112234100419 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (129511201 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (69134251 / 50000000 : Rat) - (275152553 / 100000000 : Rat) /\
     (0 : Rat) < (17973469551581403112234100419 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1577,7 +1577,7 @@ theorem k11_row_valid_16212 : K11RowValid 16212 := by
     (3360706077646123990524501 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2912852671 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (155778581 / 100000000 : Rat) - (205824123 / 20000000 : Rat) /\
     (0 : Rat) < (3360706077646123990524501 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1586,7 +1586,7 @@ theorem k11_row_valid_16213 : K11RowValid 16213 := by
     (859539342451 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (844594769 / 100000000 : Rat) - (262943869 / 100000000 : Rat) /\
     (0 : Rat) < (859539342451 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1595,7 +1595,7 @@ theorem k11_row_valid_16214 : K11RowValid 16214 := by
     (95073548810821167444331082141 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1043412 / 390625 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (458263989 / 100000000 : Rat) - (363916127 / 50000000 : Rat) /\
     (0 : Rat) < (95073548810821167444331082141 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1604,7 +1604,7 @@ theorem k11_row_valid_16215 : K11RowValid 16215 := by
     (2453473603124050292141521 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1431877719 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (390637201 / 100000000 : Rat) - (75240309 / 10000000 : Rat) /\
     (0 : Rat) < (2453473603124050292141521 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1613,7 +1613,7 @@ theorem k11_row_valid_16216 : K11RowValid 16216 := by
     (535544383373 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (264099791 / 50000000 : Rat) - (164441987 / 100000000 : Rat) /\
     (0 : Rat) < (535544383373 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1622,7 +1622,7 @@ theorem k11_row_valid_16217 : K11RowValid 16217 := by
     (16886948083296003389070181521 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (147785857 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (83488009 / 25000000 : Rat) - (515803931 / 100000000 : Rat) /\
     (0 : Rat) < (16886948083296003389070181521 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1631,7 +1631,7 @@ theorem k11_row_valid_16218 : K11RowValid 16218 := by
     (2793097018605757640175559 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (359653427 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (948566279 / 100000000 : Rat) - (856527933 / 100000000 : Rat) /\
     (0 : Rat) < (2793097018605757640175559 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1640,7 +1640,7 @@ theorem k11_row_valid_16219 : K11RowValid 16219 := by
     (1615636977407 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (318128049 / 20000000 : Rat) - (495206833 / 100000000 : Rat) /\
     (0 : Rat) < (1615636977407 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1649,7 +1649,7 @@ theorem k11_row_valid_16220 : K11RowValid 16220 := by
     (51122382252178465658187437757 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (12976707 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (206711253 / 100000000 : Rat) - (3134361 / 800000 : Rat) /\
     (0 : Rat) < (51122382252178465658187437757 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1658,7 +1658,7 @@ theorem k11_row_valid_16221 : K11RowValid 16221 := by
     (1466597655663977585216567 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (13058141 / 2000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (313239927 / 100000000 : Rat) - (449138189 / 100000000 : Rat) /\
     (0 : Rat) < (1466597655663977585216567 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1667,7 +1667,7 @@ theorem k11_row_valid_16222 : K11RowValid 16222 := by
     (584691048783 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (576656233 / 100000000 : Rat) - (179527777 / 100000000 : Rat) /\
     (0 : Rat) < (584691048783 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1676,7 +1676,7 @@ theorem k11_row_valid_16223 : K11RowValid 16223 := by
     (29506038642262978490023775247 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (116963107 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (154189463 / 12500000 : Rat) - (1808102751 / 100000000 : Rat) /\
     (0 : Rat) < (29506038642262978490023775247 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1685,7 +1685,7 @@ theorem k11_row_valid_16224 : K11RowValid 16224 := by
     (2051378293818753943280701 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (374935621 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (651830781 / 100000000 : Rat) - (628368909 / 100000000 : Rat) /\
     (0 : Rat) < (2051378293818753943280701 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1694,7 +1694,7 @@ theorem k11_row_valid_16225 : K11RowValid 16225 := by
     (236623069903 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (232891499 / 50000000 : Rat) - (72505057 / 50000000 : Rat) /\
     (0 : Rat) < (236623069903 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1703,7 +1703,7 @@ theorem k11_row_valid_16226 : K11RowValid 16226 := by
     (79018140346425088439553207943 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (53698823 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (406644047 / 50000000 : Rat) - (605491151 / 50000000 : Rat) /\
     (0 : Rat) < (79018140346425088439553207943 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1712,7 +1712,7 @@ theorem k11_row_valid_16227 : K11RowValid 16227 := by
     (2552994884676095574161969 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (478178893 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (806005489 / 100000000 : Rat) - (781527609 / 100000000 : Rat) /\
     (0 : Rat) < (2552994884676095574161969 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1721,7 +1721,7 @@ theorem k11_row_valid_16228 : K11RowValid 16228 := by
     (1132719087353 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (557248977 / 50000000 : Rat) - (346971607 / 100000000 : Rat) /\
     (0 : Rat) < (1132719087353 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1730,7 +1730,7 @@ theorem k11_row_valid_16229 : K11RowValid 16229 := by
     (4689236814688126071198641631 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (13042733 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (20980199 / 10000000 : Rat) - (180056081 / 50000000 : Rat) /\
     (0 : Rat) < (4689236814688126071198641631 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1739,7 +1739,7 @@ theorem k11_row_valid_16230 : K11RowValid 16230 := by
     (685631530102753941230371 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (56310087 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (88734051 / 50000000 : Rat) - (419792371 / 100000000 : Rat) /\
     (0 : Rat) < (685631530102753941230371 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1748,7 +1748,7 @@ theorem k11_row_valid_16231 : K11RowValid 16231 := by
     (2199894284187 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1081873639 / 50000000 : Rat) - (673629653 / 100000000 : Rat) /\
     (0 : Rat) < (2199894284187 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1757,7 +1757,7 @@ theorem k11_row_valid_16232 : K11RowValid 16232 := by
     (6031863635451081673005876557 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (36714881 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (30356453 / 6250000 : Rat) - (740425201 / 100000000 : Rat) /\
     (0 : Rat) < (6031863635451081673005876557 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1766,7 +1766,7 @@ theorem k11_row_valid_16233 : K11RowValid 16233 := by
     (35067014812672262818287 / 6424140901250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (455372979 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (4659247 / 1250000 : Rat) - (859651667 / 100000000 : Rat) /\
     (0 : Rat) < (35067014812672262818287 / 6424140901250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1775,7 +1775,7 @@ theorem k11_row_valid_16234 : K11RowValid 16234 := by
     (428034603033 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (105864711 / 25000000 : Rat) - (131833527 / 100000000 : Rat) /\
     (0 : Rat) < (428034603033 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1784,7 +1784,7 @@ theorem k11_row_valid_16235 : K11RowValid 16235 := by
     (52279633448734718850659277417 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5192651 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (279055393 / 20000000 : Rat) - (400650383 / 20000000 : Rat) /\
     (0 : Rat) < (52279633448734718850659277417 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1793,7 +1793,7 @@ theorem k11_row_valid_16236 : K11RowValid 16236 := by
     (541722672139917014858641 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (95465921 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (164003921 / 25000000 : Rat) - (663531623 / 100000000 : Rat) /\
     (0 : Rat) < (541722672139917014858641 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1802,7 +1802,7 @@ theorem k11_row_valid_16237 : K11RowValid 16237 := by
     (323646699253 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (635782899 / 100000000 : Rat) - (98967707 / 50000000 : Rat) /\
     (0 : Rat) < (323646699253 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1811,7 +1811,7 @@ theorem k11_row_valid_16238 : K11RowValid 16238 := by
     (2263132840399046856298289393 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (12000867 / 3125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (7061097 / 6250000 : Rat) - (278491297 / 100000000 : Rat) /\
     (0 : Rat) < (2263132840399046856298289393 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1820,7 +1820,7 @@ theorem k11_row_valid_16239 : K11RowValid 16239 := by
     (273966598305836869692711 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1708127783 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (22143591 / 12500000 : Rat) - (335416573 / 50000000 : Rat) /\
     (0 : Rat) < (273966598305836869692711 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1829,7 +1829,7 @@ theorem k11_row_valid_16240 : K11RowValid 16240 := by
     (548156107093 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (538820879 / 100000000 : Rat) - (167748667 / 100000000 : Rat) /\
     (0 : Rat) < (548156107093 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1838,7 +1838,7 @@ theorem k11_row_valid_16241 : K11RowValid 16241 := by
     (4954245511798706122318319561 / 604625026000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (142597037 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (426761873 / 50000000 : Rat) - (1289501631 / 100000000 : Rat) /\
     (0 : Rat) < (4954245511798706122318319561 / 604625026000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1847,7 +1847,7 @@ theorem k11_row_valid_16242 : K11RowValid 16242 := by
     (3863183310127283543123991 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (683316153 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (966397271 / 100000000 : Rat) - (1184022203 / 100000000 : Rat) /\
     (0 : Rat) < (3863183310127283543123991 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1856,7 +1856,7 @@ theorem k11_row_valid_16243 : K11RowValid 16243 := by
     (596424478119 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (587674233 / 100000000 : Rat) - (182957961 / 100000000 : Rat) /\
     (0 : Rat) < (596424478119 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1865,7 +1865,7 @@ theorem k11_row_valid_16244 : K11RowValid 16244 := by
     (31524699803417184015953131157 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1332473 / 781250 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (152879853 / 50000000 : Rat) - (241616421 / 50000000 : Rat) /\
     (0 : Rat) < (31524699803417184015953131157 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1874,7 +1874,7 @@ theorem k11_row_valid_16245 : K11RowValid 16245 := by
     (2910906822354961411579567 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (418582747 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (970642927 / 100000000 : Rat) - (892202767 / 100000000 : Rat) /\
     (0 : Rat) < (2910906822354961411579567 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1883,7 +1883,7 @@ theorem k11_row_valid_16246 : K11RowValid 16246 := by
     (1248605199361 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (615301649 / 50000000 : Rat) - (383118159 / 100000000 : Rat) /\
     (0 : Rat) < (1248605199361 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1892,7 +1892,7 @@ theorem k11_row_valid_16247 : K11RowValid 16247 := by
     (7772300696751360016082702019 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (521131191 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (28020651 / 12500000 : Rat) - (477590793 / 100000000 : Rat) /\
     (0 : Rat) < (7772300696751360016082702019 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1901,7 +1901,7 @@ theorem k11_row_valid_16248 : K11RowValid 16248 := by
     (154468248782709400538853 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (213462743 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (26429093 / 10000000 : Rat) - (118318897 / 25000000 : Rat) /\
     (0 : Rat) < (154468248782709400538853 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1910,7 +1910,7 @@ theorem k11_row_valid_16249 : K11RowValid 16249 := by
     (240043368663 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (471079321 / 100000000 : Rat) - (73329497 / 50000000 : Rat) /\
     (0 : Rat) < (240043368663 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1919,7 +1919,7 @@ theorem k11_row_valid_16250 : K11RowValid 16250 := by
     (269618560904166040797425711781 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (276882939 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1407399549 / 100000000 : Rat) - (516522807 / 25000000 : Rat) /\
     (0 : Rat) < (269618560904166040797425711781 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1928,7 +1928,7 @@ theorem k11_row_valid_16251 : K11RowValid 16251 := by
     (53382890363666737274741 / 10278625442000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (243459019 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (13108021 / 2000000 : Rat) - (204406073 / 25000000 : Rat) /\
     (0 : Rat) < (53382890363666737274741 / 10278625442000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1937,7 +1937,7 @@ theorem k11_row_valid_16252 : K11RowValid 16252 := by
     (256607117667 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (504101199 / 100000000 : Rat) - (78469773 / 50000000 : Rat) /\
     (0 : Rat) < (256607117667 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1946,7 +1946,7 @@ theorem k11_row_valid_16253 : K11RowValid 16253 := by
     (228380314488381404333782632819 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (117791627 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1217733851 / 100000000 : Rat) - (218718203 / 12500000 : Rat) /\
     (0 : Rat) < (228380314488381404333782632819 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1955,7 +1955,7 @@ theorem k11_row_valid_16254 : K11RowValid 16254 := by
     (663226972195038981493891 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (430062977 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (224959171 / 20000000 : Rat) - (1016776199 / 100000000 : Rat) /\
     (0 : Rat) < (663226972195038981493891 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1964,7 +1964,7 @@ theorem k11_row_valid_16255 : K11RowValid 16255 := by
     (1391716485247 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (273596493 / 20000000 : Rat) - (425887793 / 100000000 : Rat) /\
     (0 : Rat) < (1391716485247 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1973,7 +1973,7 @@ theorem k11_row_valid_16256 : K11RowValid 16256 := by
     (3142438686736163275554626067 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (246313237 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (13701243 / 6250000 : Rat) - (385076023 / 100000000 : Rat) /\
     (0 : Rat) < (3142438686736163275554626067 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1982,7 +1982,7 @@ theorem k11_row_valid_16257 : K11RowValid 16257 := by
     (1742727566352762820432759 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (647783531 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (166199479 / 100000000 : Rat) - (533798083 / 100000000 : Rat) /\
     (0 : Rat) < (1742727566352762820432759 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -1991,7 +1991,7 @@ theorem k11_row_valid_16258 : K11RowValid 16258 := by
     (89652150741 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (35163687 / 5000000 : Rat) - (27368379 / 12500000 : Rat) /\
     (0 : Rat) < (89652150741 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2000,7 +2000,7 @@ theorem k11_row_valid_16259 : K11RowValid 16259 := by
     (57416537166749494157860893987 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (18816561 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (296198923 / 50000000 : Rat) - (880233401 / 100000000 : Rat) /\
     (0 : Rat) < (57416537166749494157860893987 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2009,7 +2009,7 @@ theorem k11_row_valid_16260 : K11RowValid 16260 := by
     (5822696836503201989156959 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (662600039 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1747659679 / 100000000 : Rat) - (55761251 / 3125000 : Rat) /\
     (0 : Rat) < (5822696836503201989156959 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2018,7 +2018,7 @@ theorem k11_row_valid_16261 : K11RowValid 16261 := by
     (372041504279 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (368177387 / 100000000 : Rat) - (114623001 / 100000000 : Rat) /\
     (0 : Rat) < (372041504279 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2027,7 +2027,7 @@ theorem k11_row_valid_16262 : K11RowValid 16262 := by
     (456585045120715043386418303501 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (9325139 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2453707429 / 100000000 : Rat) - (3498257773 / 100000000 : Rat) /\
     (0 : Rat) < (456585045120715043386418303501 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2036,7 +2036,7 @@ theorem k11_row_valid_16263 : K11RowValid 16263 := by
     (87245249085682423372703 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62558213 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (27870943 / 5000000 : Rat) - (133728731 / 25000000 : Rat) /\
     (0 : Rat) < (87245249085682423372703 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2045,7 +2045,7 @@ theorem k11_row_valid_16264 : K11RowValid 16264 := by
     (872169584163 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (857861039 / 100000000 : Rat) - (267073997 / 100000000 : Rat) /\
     (0 : Rat) < (872169584163 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2054,7 +2054,7 @@ theorem k11_row_valid_16265 : K11RowValid 16265 := by
     (1602585963253745357576467503 / 604625026000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (583294531 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (83779879 / 50000000 : Rat) - (104328213 / 25000000 : Rat) /\
     (0 : Rat) < (1602585963253745357576467503 / 604625026000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2063,7 +2063,7 @@ theorem k11_row_valid_16266 : K11RowValid 16266 := by
     (1510295847668125294022687 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1168962591 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (125815647 / 100000000 : Rat) - (231342191 / 50000000 : Rat) /\
     (0 : Rat) < (1510295847668125294022687 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2072,7 +2072,7 @@ theorem k11_row_valid_16267 : K11RowValid 16267 := by
     (651113833591 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (642085353 / 100000000 : Rat) - (199897529 / 100000000 : Rat) /\
     (0 : Rat) < (651113833591 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2081,7 +2081,7 @@ theorem k11_row_valid_16268 : K11RowValid 16268 := by
     (155781203026719291571485845891 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (242538839 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (740037739 / 100000000 : Rat) - (1192081533 / 100000000 : Rat) /\
     (0 : Rat) < (155781203026719291571485845891 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2090,7 +2090,7 @@ theorem k11_row_valid_16269 : K11RowValid 16269 := by
     (2990872669153089000749879 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (240590563 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (405166199 / 100000000 : Rat) - (183448621 / 20000000 : Rat) /\
     (0 : Rat) < (2990872669153089000749879 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2099,7 +2099,7 @@ theorem k11_row_valid_16270 : K11RowValid 16270 := by
     (151122859393 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (744114607 / 100000000 : Rat) - (46332367 / 20000000 : Rat) /\
     (0 : Rat) < (151122859393 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2108,7 +2108,7 @@ theorem k11_row_valid_16271 : K11RowValid 16271 := by
     (123589698327330333815107491057 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (207666647 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (627726953 / 100000000 : Rat) - (37908829 / 4000000 : Rat) /\
     (0 : Rat) < (123589698327330333815107491057 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2117,7 +2117,7 @@ theorem k11_row_valid_16272 : K11RowValid 16272 := by
     (1409027049966697422769307 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (450998277 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (460571867 / 50000000 : Rat) - (431720559 / 50000000 : Rat) /\
     (0 : Rat) < (1409027049966697422769307 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2126,7 +2126,7 @@ theorem k11_row_valid_16273 : K11RowValid 16273 := by
     (121696690267 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (37470003 / 3125000 : Rat) - (37329173 / 10000000 : Rat) /\
     (0 : Rat) < (121696690267 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2135,7 +2135,7 @@ theorem k11_row_valid_16274 : K11RowValid 16274 := by
     (10980217822860274772529427601 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (18639621 / 3125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (33496329 / 20000000 : Rat) - (210652081 / 50000000 : Rat) /\
     (0 : Rat) < (10980217822860274772529427601 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2144,7 +2144,7 @@ theorem k11_row_valid_16275 : K11RowValid 16275 := by
     (1989143057765089457029297 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3070389 / 400000 : Rat) + (784931055601 / 1000000000000 : Rat) * (472691057 / 100000000 : Rat) - (122000447 / 20000000 : Rat) /\
     (0 : Rat) < (1989143057765089457029297 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2153,7 +2153,7 @@ theorem k11_row_valid_16276 : K11RowValid 16276 := by
     (395264863517 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (388968883 / 100000000 : Rat) - (121095923 / 100000000 : Rat) /\
     (0 : Rat) < (395264863517 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2162,7 +2162,7 @@ theorem k11_row_valid_16277 : K11RowValid 16277 := by
     (47582194731510985290135087899 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (94666781 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (253903171 / 12500000 : Rat) - (729103919 / 25000000 : Rat) /\
     (0 : Rat) < (47582194731510985290135087899 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2171,7 +2171,7 @@ theorem k11_row_valid_16278 : K11RowValid 16278 := by
     (3671026225477306463523383 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (635855779 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1179996023 / 100000000 : Rat) - (1124173039 / 100000000 : Rat) /\
     (0 : Rat) < (3671026225477306463523383 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2180,7 +2180,7 @@ theorem k11_row_valid_16279 : K11RowValid 16279 := by
     (499108856439 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (122285239 / 25000000 : Rat) - (152282041 / 100000000 : Rat) /\
     (0 : Rat) < (499108856439 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2189,7 +2189,7 @@ theorem k11_row_valid_16280 : K11RowValid 16280 := by
     (27702865338793337093248607669 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (204550691 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (145119501 / 12500000 : Rat) - (1696882441 / 100000000 : Rat) /\
     (0 : Rat) < (27702865338793337093248607669 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2198,7 +2198,7 @@ theorem k11_row_valid_16281 : K11RowValid 16281 := by
     (2563691442040267957825513 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (899282103 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (644688553 / 100000000 : Rat) - (31440207 / 4000000 : Rat) /\
     (0 : Rat) < (2563691442040267957825513 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2207,7 +2207,7 @@ theorem k11_row_valid_16282 : K11RowValid 16282 := by
     (1071791380383 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (527596039 / 50000000 : Rat) - (328508177 / 100000000 : Rat) /\
     (0 : Rat) < (1071791380383 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2216,7 +2216,7 @@ theorem k11_row_valid_16283 : K11RowValid 16283 := by
     (59065341929199066653916362171 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (189255463 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (301061859 / 50000000 : Rat) - (113246367 / 12500000 : Rat) /\
     (0 : Rat) < (59065341929199066653916362171 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2225,7 +2225,7 @@ theorem k11_row_valid_16284 : K11RowValid 16284 := by
     (1270782447948232848002179 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (726336601 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (208802499 / 100000000 : Rat) - (390022551 / 100000000 : Rat) /\
     (0 : Rat) < (1270782447948232848002179 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2234,7 +2234,7 @@ theorem k11_row_valid_16285 : K11RowValid 16285 := by
     (1095697075883 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1080453421 / 100000000 : Rat) - (336372677 / 100000000 : Rat) /\
     (0 : Rat) < (1095697075883 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2243,7 +2243,7 @@ theorem k11_row_valid_16286 : K11RowValid 16286 := by
     (83058187943768012153707898543 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (19978907 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (417211447 / 100000000 : Rat) - (318340497 / 50000000 : Rat) /\
     (0 : Rat) < (83058187943768012153707898543 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2252,7 +2252,7 @@ theorem k11_row_valid_16287 : K11RowValid 16287 := by
     (719394255498984380432617 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (146604157 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (244439977 / 12500000 : Rat) - (220394413 / 12500000 : Rat) /\
     (0 : Rat) < (719394255498984380432617 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2261,7 +2261,7 @@ theorem k11_row_valid_16288 : K11RowValid 16288 := by
     (538497718857 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (528801513 / 100000000 : Rat) - (164629383 / 100000000 : Rat) /\
     (0 : Rat) < (538497718857 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2270,7 +2270,7 @@ theorem k11_row_valid_16289 : K11RowValid 16289 := by
     (27202266667099884767151732947 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (178077577 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (140392763 / 20000000 : Rat) - (208588649 / 20000000 : Rat) /\
     (0 : Rat) < (27202266667099884767151732947 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2279,7 +2279,7 @@ theorem k11_row_valid_16290 : K11RowValid 16290 := by
     (4577828879893806103529033 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (66651481 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1681553673 / 100000000 : Rat) - (701452039 / 50000000 : Rat) /\
     (0 : Rat) < (4577828879893806103529033 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2288,7 +2288,7 @@ theorem k11_row_valid_16291 : K11RowValid 16291 := by
     (190722138737 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (374727463 / 50000000 : Rat) - (58331103 / 25000000 : Rat) /\
     (0 : Rat) < (190722138737 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2297,7 +2297,7 @@ theorem k11_row_valid_16292 : K11RowValid 16292 := by
     (40478939232982338257429988333 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62265409 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (165076357 / 100000000 : Rat) - (309764057 / 100000000 : Rat) /\
     (0 : Rat) < (40478939232982338257429988333 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2306,7 +2306,7 @@ theorem k11_row_valid_16293 : K11RowValid 16293 := by
     (2775583950480837987131473 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1151802661 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (170711313 / 100000000 : Rat) - (13299493 / 1562500 : Rat) /\
     (0 : Rat) < (2775583950480837987131473 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2315,7 +2315,7 @@ theorem k11_row_valid_16294 : K11RowValid 16294 := by
     (763616061151 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (375184793 / 50000000 : Rat) - (233609169 / 100000000 : Rat) /\
     (0 : Rat) < (763616061151 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2324,7 +2324,7 @@ theorem k11_row_valid_16295 : K11RowValid 16295 := by
     (11266088013045407450113684327 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (280313411 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (55124783 / 10000000 : Rat) - (862748811 / 100000000 : Rat) /\
     (0 : Rat) < (11266088013045407450113684327 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2333,7 +2333,7 @@ theorem k11_row_valid_16296 : K11RowValid 16296 := by
     (1260941950258182611455787 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (13021049 / 800000 : Rat) + (784931055601 / 1000000000000 : Rat) * (169296747 / 50000000 : Rat) - (96561927 / 12500000 : Rat) /\
     (0 : Rat) < (1260941950258182611455787 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2342,7 +2342,7 @@ theorem k11_row_valid_16297 : K11RowValid 16297 := by
     (10123757523 / 12848281802500000 : Rat) = (1600000000 / 5139312721 : Rat) * (79552423 / 20000000 : Rat) - (3095837 / 2500000 : Rat) /\
     (0 : Rat) < (10123757523 / 12848281802500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2351,7 +2351,7 @@ theorem k11_row_valid_16298 : K11RowValid 16298 := by
     (1704148680236803984156758419 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (64232599 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (8416251 / 3125000 : Rat) - (83773283 / 20000000 : Rat) /\
     (0 : Rat) < (1704148680236803984156758419 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2360,7 +2360,7 @@ theorem k11_row_valid_16299 : K11RowValid 16299 := by
     (2341240054766635122133437 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (47299739 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (763286397 / 100000000 : Rat) - (716931727 / 100000000 : Rat) /\
     (0 : Rat) < (2341240054766635122133437 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2369,7 +2369,7 @@ theorem k11_row_valid_16300 : K11RowValid 16300 := by
     (509377936181 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1000905809 / 100000000 : Rat) - (155803739 / 50000000 : Rat) /\
     (0 : Rat) < (509377936181 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2378,7 +2378,7 @@ theorem k11_row_valid_16301 : K11RowValid 16301 := by
     (16363078081486001721456022449 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (243298119 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (62350121 / 25000000 : Rat) - (251169733 / 50000000 : Rat) /\
     (0 : Rat) < (16363078081486001721456022449 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2387,7 +2387,7 @@ theorem k11_row_valid_16302 : K11RowValid 16302 := by
     (1503833088695773950729447 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (351870571 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (306503207 / 100000000 : Rat) - (459676279 / 100000000 : Rat) /\
     (0 : Rat) < (1503833088695773950729447 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2396,7 +2396,7 @@ theorem k11_row_valid_16303 : K11RowValid 16303 := by
     (421918512191 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (26011951 / 3125000 : Rat) - (129570929 / 50000000 : Rat) /\
     (0 : Rat) < (421918512191 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2405,7 +2405,7 @@ theorem k11_row_valid_16304 : K11RowValid 16304 := by
     (188015017289540846566031333469 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (214695247 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (976387701 / 100000000 : Rat) - (1440395143 / 100000000 : Rat) /\
     (0 : Rat) < (188015017289540846566031333469 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2414,7 +2414,7 @@ theorem k11_row_valid_16305 : K11RowValid 16305 := by
     (1068065276206219460915851 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (258399299 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (314377931 / 50000000 : Rat) - (654422259 / 100000000 : Rat) /\
     (0 : Rat) < (1068065276206219460915851 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2423,7 +2423,7 @@ theorem k11_row_valid_16306 : K11RowValid 16306 := by
     (725762279247 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (713638329 / 100000000 : Rat) - (222173793 / 100000000 : Rat) /\
     (0 : Rat) < (725762279247 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2432,7 +2432,7 @@ theorem k11_row_valid_16307 : K11RowValid 16307 := by
     (99240211768737916876809051213 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (145723051 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (508891877 / 100000000 : Rat) - (190315557 / 25000000 : Rat) /\
     (0 : Rat) < (99240211768737916876809051213 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2441,7 +2441,7 @@ theorem k11_row_valid_16308 : K11RowValid 16308 := by
     (410508242529852451536397 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (453725331 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (115166157 / 25000000 : Rat) - (251422999 / 50000000 : Rat) /\
     (0 : Rat) < (410508242529852451536397 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2450,7 +2450,7 @@ theorem k11_row_valid_16309 : K11RowValid 16309 := by
     (202380161169 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1989908171 / 100000000 : Rat) - (61950911 / 10000000 : Rat) /\
     (0 : Rat) < (202380161169 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2459,7 +2459,7 @@ theorem k11_row_valid_16310 : K11RowValid 16310 := by
     (88319661276629741424174446993 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (305939747 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (345471497 / 100000000 : Rat) - (338246681 / 50000000 : Rat) /\
     (0 : Rat) < (88319661276629741424174446993 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2468,7 +2468,7 @@ theorem k11_row_valid_16311 : K11RowValid 16311 := by
     (1796510714743655110149431 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (331343669 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (174817911 / 100000000 : Rat) - (549842823 / 100000000 : Rat) /\
     (0 : Rat) < (1796510714743655110149431 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2477,7 +2477,7 @@ theorem k11_row_valid_16312 : K11RowValid 16312 := by
     (890663940129 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (6859761 / 781250 : Rat) - (273359151 / 100000000 : Rat) /\
     (0 : Rat) < (890663940129 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2486,7 +2486,7 @@ theorem k11_row_valid_16313 : K11RowValid 16313 := by
     (12133541561118048767154214369 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (13814501 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (62243801 / 12500000 : Rat) - (185877709 / 25000000 : Rat) /\
     (0 : Rat) < (12133541561118048767154214369 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2495,7 +2495,7 @@ theorem k11_row_valid_16314 : K11RowValid 16314 := by
     (3840574078707378185463949 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (125339441 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (703585869 / 100000000 : Rat) - (294151957 / 25000000 : Rat) /\
     (0 : Rat) < (3840574078707378185463949 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2504,7 +2504,7 @@ theorem k11_row_valid_16315 : K11RowValid 16315 := by
     (654530831781 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128932679 / 10000000 : Rat) - (200700139 / 50000000 : Rat) /\
     (0 : Rat) < (654530831781 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2513,7 +2513,7 @@ theorem k11_row_valid_16316 : K11RowValid 16316 := by
     (181157035630754001883415112193 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (42327181 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (949442297 / 100000000 : Rat) - (694179559 / 50000000 : Rat) /\
     (0 : Rat) < (181157035630754001883415112193 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2522,7 +2522,7 @@ theorem k11_row_valid_16317 : K11RowValid 16317 := by
     (833749152494812587918909 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (82722239 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (260677629 / 50000000 : Rat) - (128060459 / 25000000 : Rat) /\
     (0 : Rat) < (833749152494812587918909 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2531,7 +2531,7 @@ theorem k11_row_valid_16318 : K11RowValid 16318 := by
     (738846818739 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (182169271 / 25000000 : Rat) - (226855741 / 100000000 : Rat) /\
     (0 : Rat) < (738846818739 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2540,7 +2540,7 @@ theorem k11_row_valid_16319 : K11RowValid 16319 := by
     (39080963782870738708546042347 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (278049 / 100000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (150825363 / 100000000 : Rat) - (14937033 / 5000000 : Rat) /\
     (0 : Rat) < (39080963782870738708546042347 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2549,7 +2549,7 @@ theorem k11_row_valid_16320 : K11RowValid 16320 := by
     (1231781376804413651453407 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (233888491 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (109383967 / 100000000 : Rat) - (188560301 / 50000000 : Rat) /\
     (0 : Rat) < (1231781376804413651453407 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2558,7 +2558,7 @@ theorem k11_row_valid_16321 : K11RowValid 16321 := by
     (687978465059 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (676693161 / 100000000 : Rat) - (210671821 / 100000000 : Rat) /\
     (0 : Rat) < (687978465059 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2567,7 +2567,7 @@ theorem k11_row_valid_16322 : K11RowValid 16322 := by
     (65443348948430216207136084129 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (51253911 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (328050841 / 50000000 : Rat) - (1002768827 / 100000000 : Rat) /\
     (0 : Rat) < (65443348948430216207136084129 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2576,7 +2576,7 @@ theorem k11_row_valid_16323 : K11RowValid 16323 := by
     (637251598904238008610511 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1422447641 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (107685391 / 25000000 : Rat) - (390473203 / 50000000 : Rat) /\
     (0 : Rat) < (637251598904238008610511 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2585,7 +2585,7 @@ theorem k11_row_valid_16324 : K11RowValid 16324 := by
     (1059164641563 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1044516497 / 100000000 : Rat) - (325184597 / 100000000 : Rat) /\
     (0 : Rat) < (1059164641563 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2594,7 +2594,7 @@ theorem k11_row_valid_16325 : K11RowValid 16325 := by
     (258640659796595559029341649 / 75578128250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (68833493 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (22077657 / 6250000 : Rat) - (21591639 / 4000000 : Rat) /\
     (0 : Rat) < (258640659796595559029341649 / 75578128250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2603,7 +2603,7 @@ theorem k11_row_valid_16326 : K11RowValid 16326 := by
     (4219386461152785155225319 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (187794177 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1497036839 / 100000000 : Rat) - (1292000183 / 100000000 : Rat) /\
     (0 : Rat) < (4219386461152785155225319 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2612,7 +2612,7 @@ theorem k11_row_valid_16327 : K11RowValid 16327 := by
     (328568363279 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (323275827 / 50000000 : Rat) - (100644001 / 50000000 : Rat) /\
     (0 : Rat) < (328568363279 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2621,7 +2621,7 @@ theorem k11_row_valid_16328 : K11RowValid 16328 := by
     (89324181821504510400269987353 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (329351427 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (414265937 / 100000000 : Rat) - (685313281 / 100000000 : Rat) /\
     (0 : Rat) < (89324181821504510400269987353 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2630,7 +2630,7 @@ theorem k11_row_valid_16329 : K11RowValid 16329 := by
     (45736280521806237167069 / 20557250884000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (142431157 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (8818589 / 4000000 : Rat) - (350419291 / 100000000 : Rat) /\
     (0 : Rat) < (45736280521806237167069 / 20557250884000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2639,7 +2639,7 @@ theorem k11_row_valid_16330 : K11RowValid 16330 := by
     (58035599517 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (287158043 / 50000000 : Rat) - (17879923 / 10000000 : Rat) /\
     (0 : Rat) < (58035599517 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2648,7 +2648,7 @@ theorem k11_row_valid_16331 : K11RowValid 16331 := by
     (175873521086131718482730505433 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (234586987 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (905962257 / 100000000 : Rat) - (673757697 / 50000000 : Rat) /\
     (0 : Rat) < (175873521086131718482730505433 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2657,7 +2657,7 @@ theorem k11_row_valid_16332 : K11RowValid 16332 := by
     (968839013784099513301371 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (196455771 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (300485051 / 20000000 : Rat) - (742553963 / 50000000 : Rat) /\
     (0 : Rat) < (968839013784099513301371 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2666,7 +2666,7 @@ theorem k11_row_valid_16333 : K11RowValid 16333 := by
     (807684973421 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (396953217 / 50000000 : Rat) - (247163299 / 100000000 : Rat) /\
     (0 : Rat) < (807684973421 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2675,7 +2675,7 @@ theorem k11_row_valid_16334 : K11RowValid 16334 := by
     (14524505859989975236649639247 / 604625026000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (57702539 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1331372871 / 50000000 : Rat) - (189090257 / 5000000 : Rat) /\
     (0 : Rat) < (14524505859989975236649639247 / 604625026000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2684,7 +2684,7 @@ theorem k11_row_valid_16335 : K11RowValid 16335 := by
     (464385879334599623604629 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (358009931 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (152900949 / 20000000 : Rat) - (177885187 / 25000000 : Rat) /\
     (0 : Rat) < (464385879334599623604629 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2693,7 +2693,7 @@ theorem k11_row_valid_16336 : K11RowValid 16336 := by
     (1414790087063 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (139178811 / 10000000 : Rat) - (433299097 / 100000000 : Rat) /\
     (0 : Rat) < (1414790087063 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2702,7 +2702,7 @@ theorem k11_row_valid_16337 : K11RowValid 16337 := by
     (26792684201139479489751169487 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1130563 / 400000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (114638423 / 50000000 : Rat) - (25658347 / 6250000 : Rat) /\
     (0 : Rat) < (26792684201139479489751169487 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2711,7 +2711,7 @@ theorem k11_row_valid_16338 : K11RowValid 16338 := by
     (158656968306025050618893 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1194627089 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (14672333 / 10000000 : Rat) - (243542737 / 50000000 : Rat) /\
     (0 : Rat) < (158656968306025050618893 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2720,7 +2720,7 @@ theorem k11_row_valid_16339 : K11RowValid 16339 := by
     (724325498859 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (178313403 / 25000000 : Rat) - (222054021 / 100000000 : Rat) /\
     (0 : Rat) < (724325498859 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2729,7 +2729,7 @@ theorem k11_row_valid_16340 : K11RowValid 16340 := by
     (21547116915456423823894467911 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (110847697 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (104994319 / 25000000 : Rat) - (659831767 / 100000000 : Rat) /\
     (0 : Rat) < (21547116915456423823894467911 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2738,7 +2738,7 @@ theorem k11_row_valid_16341 : K11RowValid 16341 := by
     (3093466274094843959089069 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (825113421 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (552500589 / 50000000 : Rat) - (1894864507 / 100000000 : Rat) /\
     (0 : Rat) < (3093466274094843959089069 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2747,7 +2747,7 @@ theorem k11_row_valid_16342 : K11RowValid 16342 := by
     (79241810279 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (311404017 / 50000000 : Rat) - (24237001 / 12500000 : Rat) /\
     (0 : Rat) < (79241810279 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2756,7 +2756,7 @@ theorem k11_row_valid_16343 : K11RowValid 16343 := by
     (10387471994922296428539274627 / 1027862544200000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (136398853 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (55013483 / 5000000 : Rat) - (397573293 / 25000000 : Rat) /\
     (0 : Rat) < (10387471994922296428539274627 / 1027862544200000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2765,7 +2765,7 @@ theorem k11_row_valid_16344 : K11RowValid 16344 := by
     (27915352187520773145387 / 10278625442000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (74243201 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (8554347 / 2000000 : Rat) - (214091809 / 50000000 : Rat) /\
     (0 : Rat) < (27915352187520773145387 / 10278625442000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2774,7 +2774,7 @@ theorem k11_row_valid_16345 : K11RowValid 16345 := by
     (196724939179 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (966128787 / 100000000 : Rat) - (60156101 / 20000000 : Rat) /\
     (0 : Rat) < (196724939179 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2783,7 +2783,7 @@ theorem k11_row_valid_16346 : K11RowValid 16346 := by
     (76222115495273615558610418429 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (375203387 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (331115541 / 100000000 : Rat) - (1165229 / 200000 : Rat) /\
     (0 : Rat) < (76222115495273615558610418429 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2792,7 +2792,7 @@ theorem k11_row_valid_16347 : K11RowValid 16347 := by
     (1485250917590473655733731 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (135263903 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (151346211 / 100000000 : Rat) - (455685059 / 100000000 : Rat) /\
     (0 : Rat) < (1485250917590473655733731 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2801,7 +2801,7 @@ theorem k11_row_valid_16348 : K11RowValid 16348 := by
     (1306729 / 1218713000000 : Rat) = (1600000000 / 5139312721 : Rat) * (271671791 / 50000000 : Rat) - (1691567 / 1000000 : Rat) /\
     (0 : Rat) < (1306729 / 1218713000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2810,7 +2810,7 @@ theorem k11_row_valid_16349 : K11RowValid 16349 := by
     (215454596911776307997823391599 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (321004781 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1031540471 / 100000000 : Rat) - (825508179 / 50000000 : Rat) /\
     (0 : Rat) < (215454596911776307997823391599 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2819,7 +2819,7 @@ theorem k11_row_valid_16350 : K11RowValid 16350 := by
     (171029899843158747276791 / 30231251300000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1125965403 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (241559207 / 100000000 : Rat) - (178138127 / 20000000 : Rat) /\
     (0 : Rat) < (171029899843158747276791 / 30231251300000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2828,7 +2828,7 @@ theorem k11_row_valid_16351 : K11RowValid 16351 := by
     (55046156409 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (217296331 / 50000000 : Rat) - (16912471 / 12500000 : Rat) /\
     (0 : Rat) < (55046156409 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2837,7 +2837,7 @@ theorem k11_row_valid_16352 : K11RowValid 16352 := by
     (46608616431764487808264201573 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (218020803 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (205376317 / 50000000 : Rat) - (356793117 / 50000000 : Rat) /\
     (0 : Rat) < (46608616431764487808264201573 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2846,7 +2846,7 @@ theorem k11_row_valid_16353 : K11RowValid 16353 := by
     (3195613109882853097787151 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (231205067 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1063153231 / 100000000 : Rat) - (978461513 / 100000000 : Rat) /\
     (0 : Rat) < (3195613109882853097787151 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2855,7 +2855,7 @@ theorem k11_row_valid_16354 : K11RowValid 16354 := by
     (68408693323 / 30231251300000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1145658339 / 100000000 : Rat) - (356672629 / 100000000 : Rat) /\
     (0 : Rat) < (68408693323 / 30231251300000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2864,7 +2864,7 @@ theorem k11_row_valid_16355 : K11RowValid 16355 := by
     (46687188747609544991854127719 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (535934937 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (135995951 / 100000000 : Rat) - (358165519 / 100000000 : Rat) /\
     (0 : Rat) < (46687188747609544991854127719 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2873,7 +2873,7 @@ theorem k11_row_valid_16356 : K11RowValid 16356 := by
     (1847236440194017151517193 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1090150797 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (287634633 / 100000000 : Rat) - (565164929 / 100000000 : Rat) /\
     (0 : Rat) < (1847236440194017151517193 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2882,7 +2882,7 @@ theorem k11_row_valid_16357 : K11RowValid 16357 := by
     (247597673841 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (484620019 / 100000000 : Rat) - (75437279 / 50000000 : Rat) /\
     (0 : Rat) < (247597673841 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2891,7 +2891,7 @@ theorem k11_row_valid_16358 : K11RowValid 16358 := by
     (265070761977820635242754757159 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (200937 / 125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1407945711 / 100000000 : Rat) - (1015352143 / 50000000 : Rat) /\
     (0 : Rat) < (265070761977820635242754757159 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2900,7 +2900,7 @@ theorem k11_row_valid_16359 : K11RowValid 16359 := by
     (69334549603054587026637 / 10278625442000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (20948351 / 2500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (20435597 / 2000000 : Rat) - (531448221 / 50000000 : Rat) /\
     (0 : Rat) < (69334549603054587026637 / 10278625442000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2909,7 +2909,7 @@ theorem k11_row_valid_16360 : K11RowValid 16360 := by
     (521473947347 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (515530223 / 100000000 : Rat) - (160497693 / 100000000 : Rat) /\
     (0 : Rat) < (521473947347 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2918,7 +2918,7 @@ theorem k11_row_valid_16361 : K11RowValid 16361 := by
     (439999519811709705116471313803 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (30530783 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2341287987 / 100000000 : Rat) - (3369698861 / 100000000 : Rat) /\
     (0 : Rat) < (439999519811709705116471313803 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2927,7 +2927,7 @@ theorem k11_row_valid_16362 : K11RowValid 16362 := by
     (391653486167519291298197 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (120271801 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (105071957 / 12500000 : Rat) - (239835731 / 25000000 : Rat) /\
     (0 : Rat) < (391653486167519291298197 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2936,7 +2936,7 @@ theorem k11_row_valid_16363 : K11RowValid 16363 := by
     (301285030497 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1482733503 / 100000000 : Rat) - (92322543 / 20000000 : Rat) /\
     (0 : Rat) < (301285030497 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2945,7 +2945,7 @@ theorem k11_row_valid_16364 : K11RowValid 16364 := by
     (107894759282454605615117401393 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (299262431 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (522109097 / 100000000 : Rat) - (413828283 / 50000000 : Rat) /\
     (0 : Rat) < (107894759282454605615117401393 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2954,7 +2954,7 @@ theorem k11_row_valid_16365 : K11RowValid 16365 := by
     (1639285688463458384521883 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (377527297 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (339874523 / 100000000 : Rat) - (50184563 / 10000000 : Rat) /\
     (0 : Rat) < (1639285688463458384521883 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2963,7 +2963,7 @@ theorem k11_row_valid_16366 : K11RowValid 16366 := by
     (1062076141239 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (523139391 / 50000000 : Rat) - (325733241 / 100000000 : Rat) /\
     (0 : Rat) < (1062076141239 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2972,7 +2972,7 @@ theorem k11_row_valid_16367 : K11RowValid 16367 := by
     (4570983315454662354921316619 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (12849491 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (23984051 / 3125000 : Rat) - (139960849 / 12500000 : Rat) /\
     (0 : Rat) < (4570983315454662354921316619 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2981,7 +2981,7 @@ theorem k11_row_valid_16368 : K11RowValid 16368 := by
     (10412921651079731688239373 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (962689441 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (3683051213 / 100000000 : Rat) - (319064919 / 10000000 : Rat) /\
     (0 : Rat) < (10412921651079731688239373 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2990,7 +2990,7 @@ theorem k11_row_valid_16369 : K11RowValid 16369 := by
     (243401186799 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (477872109 / 100000000 : Rat) - (74386881 / 50000000 : Rat) /\
     (0 : Rat) < (243401186799 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -2999,7 +2999,7 @@ theorem k11_row_valid_16370 : K11RowValid 16370 := by
     (116359474957119446817627973957 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (33572507 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (595841053 / 100000000 : Rat) - (890472493 / 100000000 : Rat) /\
     (0 : Rat) < (116359474957119446817627973957 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3008,7 +3008,7 @@ theorem k11_row_valid_16371 : K11RowValid 16371 := by
     (1499814780620189646145431 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (26898703 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (414493911 / 100000000 : Rat) - (459336961 / 100000000 : Rat) /\
     (0 : Rat) < (1499814780620189646145431 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3017,7 +3017,7 @@ theorem k11_row_valid_16372 : K11RowValid 16372 := by
     (501048759673 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (983418953 / 100000000 : Rat) - (153081687 / 50000000 : Rat) /\
     (0 : Rat) < (501048759673 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3026,7 +3026,7 @@ theorem k11_row_valid_16373 : K11RowValid 16373 := by
     (2000385707518057287499853897 / 1209250052000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (10308069 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (129090321 / 100000000 : Rat) - (32728723 / 12500000 : Rat) /\
     (0 : Rat) < (2000385707518057287499853897 / 1209250052000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3035,7 +3035,7 @@ theorem k11_row_valid_16374 : K11RowValid 16374 := by
     (158513438152815382197541 / 30231251300000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (19458149 / 1250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (435931957 / 100000000 : Rat) - (206700429 / 25000000 : Rat) /\
     (0 : Rat) < (158513438152815382197541 / 30231251300000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3044,7 +3044,7 @@ theorem k11_row_valid_16375 : K11RowValid 16375 := by
     (978556177653 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (961621613 / 100000000 : Rat) - (299377307 / 100000000 : Rat) /\
     (0 : Rat) < (978556177653 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3053,7 +3053,7 @@ theorem k11_row_valid_16376 : K11RowValid 16376 := by
     (57384524578527115212446893669 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (132891361 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (282813501 / 50000000 : Rat) - (109806657 / 12500000 : Rat) /\
     (0 : Rat) < (57384524578527115212446893669 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3062,7 +3062,7 @@ theorem k11_row_valid_16377 : K11RowValid 16377 := by
     (2005856804060739780752293 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1025120629 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (375077733 / 100000000 : Rat) - (306778071 / 50000000 : Rat) /\
     (0 : Rat) < (2005856804060739780752293 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3071,7 +3071,7 @@ theorem k11_row_valid_16378 : K11RowValid 16378 := by
     (35194452493 / 32120704506250000 : Rat) = (1600000000 / 5139312721 : Rat) * (275756861 / 50000000 : Rat) - (10731267 / 6250000 : Rat) /\
     (0 : Rat) < (35194452493 / 32120704506250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3080,7 +3080,7 @@ theorem k11_row_valid_16379 : K11RowValid 16379 := by
     (66657044855926443414629289023 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (9432293 / 5000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (321367367 / 100000000 : Rat) - (51082093 / 10000000 : Rat) /\
     (0 : Rat) < (66657044855926443414629289023 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3089,7 +3089,7 @@ theorem k11_row_valid_16380 : K11RowValid 16380 := by
     (1716015894734006983342181 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (490567577 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (571930661 / 50000000 : Rat) - (1050577889 / 100000000 : Rat) /\
     (0 : Rat) < (1716015894734006983342181 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3098,7 +3098,7 @@ theorem k11_row_valid_16381 : K11RowValid 16381 := by
     (1719698681853 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1691532323 / 100000000 : Rat) - (526617107 / 100000000 : Rat) /\
     (0 : Rat) < (1719698681853 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3107,7 +3107,7 @@ theorem k11_row_valid_16382 : K11RowValid 16382 := by
     (834246564248996277843011233 / 321207045062500000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (48532827 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2850457 / 1562500 : Rat) - (407731443 / 100000000 : Rat) /\
     (0 : Rat) < (834246564248996277843011233 / 321207045062500000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3116,7 +3116,7 @@ theorem k11_row_valid_16383 : K11RowValid 16383 := by
     (1975590925063564158363987 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (736348193 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (479660947 / 100000000 : Rat) - (605744487 / 100000000 : Rat) /\
     (0 : Rat) < (1975590925063564158363987 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3125,7 +3125,7 @@ theorem k11_row_valid_16384 : K11RowValid 16384 := by
     (566143787159 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (554473483 / 100000000 : Rat) - (172621721 / 100000000 : Rat) /\
     (0 : Rat) < (566143787159 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3134,7 +3134,7 @@ theorem k11_row_valid_16385 : K11RowValid 16385 := by
     (225565884189559255979710460799 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (35770213 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1164827271 / 100000000 : Rat) - (863868007 / 50000000 : Rat) /\
     (0 : Rat) < (225565884189559255979710460799 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3143,7 +3143,7 @@ theorem k11_row_valid_16386 : K11RowValid 16386 := by
     (2059231859825276462191479 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (48248407 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (612335799 / 100000000 : Rat) - (630850663 / 100000000 : Rat) /\
     (0 : Rat) < (2059231859825276462191479 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3152,7 +3152,7 @@ theorem k11_row_valid_16387 : K11RowValid 16387 := by
     (345441586133 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (169665567 / 25000000 : Rat) - (105642427 / 50000000 : Rat) /\
     (0 : Rat) < (345441586133 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3161,7 +3161,7 @@ theorem k11_row_valid_16388 : K11RowValid 16388 := by
     (136304999072418676058317444361 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (211545717 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (694866369 / 100000000 : Rat) - (1043378239 / 100000000 : Rat) /\
     (0 : Rat) < (136304999072418676058317444361 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3170,7 +3170,7 @@ theorem k11_row_valid_16389 : K11RowValid 16389 := by
     (356501841544480601666427 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (219711853 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (104518587 / 20000000 : Rat) - (547002959 / 100000000 : Rat) /\
     (0 : Rat) < (356501841544480601666427 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3179,7 +3179,7 @@ theorem k11_row_valid_16390 : K11RowValid 16390 := by
     (95346347341 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (58788513 / 6250000 : Rat) - (29283779 / 10000000 : Rat) /\
     (0 : Rat) < (95346347341 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3188,7 +3188,7 @@ theorem k11_row_valid_16391 : K11RowValid 16391 := by
     (52851968028328200259206892641 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (110155703 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (263718489 / 50000000 : Rat) - (162114443 / 20000000 : Rat) /\
     (0 : Rat) < (52851968028328200259206892641 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3197,7 +3197,7 @@ theorem k11_row_valid_16392 : K11RowValid 16392 := by
     (977685804407120037444731 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (140108307 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (103937211 / 50000000 : Rat) - (599359841 / 100000000 : Rat) /\
     (0 : Rat) < (977685804407120037444731 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3206,7 +3206,7 @@ theorem k11_row_valid_16393 : K11RowValid 16393 := by
     (938280937421 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (462023381 / 50000000 : Rat) - (287679299 / 100000000 : Rat) /\
     (0 : Rat) < (938280937421 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3215,7 +3215,7 @@ theorem k11_row_valid_16394 : K11RowValid 16394 := by
     (218974554292133784488465157 / 48370002080000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (162943657 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (18819501 / 4000000 : Rat) - (712597267 / 100000000 : Rat) /\
     (0 : Rat) < (218974554292133784488465157 / 48370002080000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3224,7 +3224,7 @@ theorem k11_row_valid_16395 : K11RowValid 16395 := by
     (233465284246986510073959 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (413283207 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (39936679 / 6250000 : Rat) - (1144888273 / 100000000 : Rat) /\
     (0 : Rat) < (233465284246986510073959 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3233,7 +3233,7 @@ theorem k11_row_valid_16396 : K11RowValid 16396 := by
     (664546970937 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (327957263 / 50000000 : Rat) - (204202903 / 100000000 : Rat) /\
     (0 : Rat) < (664546970937 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3242,7 +3242,7 @@ theorem k11_row_valid_16397 : K11RowValid 16397 := by
     (446089060657107143724860595487 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128932383 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2401392423 / 100000000 : Rat) - (3418351961 / 100000000 : Rat) /\
     (0 : Rat) < (446089060657107143724860595487 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3251,7 +3251,7 @@ theorem k11_row_valid_16398 : K11RowValid 16398 := by
     (102486560137905505137199 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (298387083 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (32619119 / 6250000 : Rat) - (502555393 / 100000000 : Rat) /\
     (0 : Rat) < (102486560137905505137199 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3260,7 +3260,7 @@ theorem k11_row_valid_16399 : K11RowValid 16399 := by
     (281091118499 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (220988483 / 20000000 : Rat) - (85999181 / 25000000 : Rat) /\
     (0 : Rat) < (281091118499 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3269,7 +3269,7 @@ theorem k11_row_valid_16400 : K11RowValid 16400 := by
     (37729374941551090573451789299 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (353130051 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (126503771 / 100000000 : Rat) - (57580073 / 20000000 : Rat) /\
     (0 : Rat) < (37729374941551090573451789299 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3278,7 +3278,7 @@ theorem k11_row_valid_16401 : K11RowValid 16401 := by
     (2702340609232361714536591 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2269656707 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (155217871 / 100000000 : Rat) - (828437207 / 100000000 : Rat) /\
     (0 : Rat) < (2702340609232361714536591 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3287,7 +3287,7 @@ theorem k11_row_valid_16402 : K11RowValid 16402 := by
     (755759655859 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (372820469 / 50000000 : Rat) - (232137021 / 100000000 : Rat) /\
     (0 : Rat) < (755759655859 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3296,7 +3296,7 @@ theorem k11_row_valid_16403 : K11RowValid 16403 := by
     (18107887435965996864549502337 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (218140863 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (92606073 / 12500000 : Rat) - (1110117977 / 100000000 : Rat) /\
     (0 : Rat) < (18107887435965996864549502337 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3305,7 +3305,7 @@ theorem k11_row_valid_16404 : K11RowValid 16404 := by
     (279353927586658336198863 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (103403751 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (57829903 / 12500000 : Rat) - (137012377 / 20000000 : Rat) /\
     (0 : Rat) < (279353927586658336198863 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3314,7 +3314,7 @@ theorem k11_row_valid_16405 : K11RowValid 16405 := by
     (361343223757 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (709819731 / 100000000 : Rat) - (110492483 / 50000000 : Rat) /\
     (0 : Rat) < (361343223757 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3323,7 +3323,7 @@ theorem k11_row_valid_16406 : K11RowValid 16406 := by
     (1550128897210826598803788179 / 321207045062500000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (163841883 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (7863291 / 1562500 : Rat) - (758967123 / 100000000 : Rat) /\
     (0 : Rat) < (1550128897210826598803788179 / 321207045062500000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3332,7 +3332,7 @@ theorem k11_row_valid_16407 : K11RowValid 16407 := by
     (144599355227124041309047 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (21494873 / 4000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (45850807 / 5000000 : Rat) - (88709153 / 10000000 : Rat) /\
     (0 : Rat) < (144599355227124041309047 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3341,7 +3341,7 @@ theorem k11_row_valid_16408 : K11RowValid 16408 := by
     (404836090277 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (796287951 / 100000000 : Rat) - (123952363 / 50000000 : Rat) /\
     (0 : Rat) < (404836090277 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3350,7 +3350,7 @@ theorem k11_row_valid_16409 : K11RowValid 16409 := by
     (1961396398290385025880545187 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (179242421 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (8163723 / 3125000 : Rat) - (479109409 / 100000000 : Rat) /\
     (0 : Rat) < (1961396398290385025880545187 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3359,7 +3359,7 @@ theorem k11_row_valid_16410 : K11RowValid 16410 := by
     (1333500373822474140677991 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (139444627 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (244271271 / 100000000 : Rat) - (40879931 / 10000000 : Rat) /\
     (0 : Rat) < (1333500373822474140677991 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3368,7 +3368,7 @@ theorem k11_row_valid_16411 : K11RowValid 16411 := by
     (6089066827 / 7557812825000000 : Rat) = (1600000000 / 5139312721 : Rat) * (203779153 / 50000000 : Rat) - (31720821 / 25000000 : Rat) /\
     (0 : Rat) < (6089066827 / 7557812825000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3377,7 +3377,7 @@ theorem k11_row_valid_16412 : K11RowValid 16412 := by
     (87235486079980222688243912859 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (42991371 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (437091011 / 50000000 : Rat) - (1336849411 / 100000000 : Rat) /\
     (0 : Rat) < (87235486079980222688243912859 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3386,7 +3386,7 @@ theorem k11_row_valid_16413 : K11RowValid 16413 := by
     (3076892207342357375378453 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (187190469 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (830836693 / 100000000 : Rat) - (943534919 / 100000000 : Rat) /\
     (0 : Rat) < (3076892207342357375378453 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3395,7 +3395,7 @@ theorem k11_row_valid_16414 : K11RowValid 16414 := by
     (4367173237 / 5139312721000000 : Rat) = (1600000000 / 5139312721 : Rat) * (429326573 / 100000000 : Rat) - (1336603 / 1000000 : Rat) /\
     (0 : Rat) < (4367173237 / 5139312721000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3404,7 +3404,7 @@ theorem k11_row_valid_16415 : K11RowValid 16415 := by
     (181453058798439873285765753993 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (30579947 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (954674497 / 100000000 : Rat) - (278122219 / 20000000 : Rat) /\
     (0 : Rat) < (181453058798439873285765753993 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3413,7 +3413,7 @@ theorem k11_row_valid_16416 : K11RowValid 16416 := by
     (225310107690139561845593 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (178915129 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (73835033 / 10000000 : Rat) - (172738853 / 25000000 : Rat) /\
     (0 : Rat) < (225310107690139561845593 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3422,7 +3422,7 @@ theorem k11_row_valid_16417 : K11RowValid 16417 := by
     (2611196846057 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (514321019 / 20000000 : Rat) - (800606183 / 100000000 : Rat) /\
     (0 : Rat) < (2611196846057 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3431,7 +3431,7 @@ theorem k11_row_valid_16418 : K11RowValid 16418 := by
     (23626424885051549984114571607 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (73506961 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (95807903 / 50000000 : Rat) - (361098141 / 100000000 : Rat) /\
     (0 : Rat) < (23626424885051549984114571607 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3440,7 +3440,7 @@ theorem k11_row_valid_16419 : K11RowValid 16419 := by
     (2846155080648763138348019 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2286424413 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (203775539 / 100000000 : Rat) - (435885909 / 50000000 : Rat) /\
     (0 : Rat) < (2846155080648763138348019 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3449,7 +3449,7 @@ theorem k11_row_valid_16420 : K11RowValid 16420 := by
     (393950986353 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (387866127 / 50000000 : Rat) - (120752607 / 50000000 : Rat) /\
     (0 : Rat) < (393950986353 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3458,7 +3458,7 @@ theorem k11_row_valid_16421 : K11RowValid 16421 := by
     (104308106618998874698181603443 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128970779 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (538563547 / 100000000 : Rat) - (797788097 / 100000000 : Rat) /\
     (0 : Rat) < (104308106618998874698181603443 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3467,7 +3467,7 @@ theorem k11_row_valid_16422 : K11RowValid 16422 := by
     (4415077300288932841466599 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (696103151 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (618900519 / 100000000 : Rat) - (1352652511 / 100000000 : Rat) /\
     (0 : Rat) < (4415077300288932841466599 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3476,7 +3476,7 @@ theorem k11_row_valid_16423 : K11RowValid 16423 := by
     (224208554131 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (442172543 / 100000000 : Rat) - (68829789 / 50000000 : Rat) /\
     (0 : Rat) < (224208554131 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3485,7 +3485,7 @@ theorem k11_row_valid_16424 : K11RowValid 16424 := by
     (181939077351671727861686168827 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (228386933 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (940725283 / 100000000 : Rat) - (1394488817 / 100000000 : Rat) /\
     (0 : Rat) < (181939077351671727861686168827 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3494,7 +3494,7 @@ theorem k11_row_valid_16425 : K11RowValid 16425 := by
     (160378213265811038777649 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (161719323 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (49795569 / 10000000 : Rat) - (1920138 / 390625 : Rat) /\
     (0 : Rat) < (160378213265811038777649 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3503,7 +3503,7 @@ theorem k11_row_valid_16426 : K11RowValid 16426 := by
     (661166385093 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (650221977 / 100000000 : Rat) - (202430667 / 100000000 : Rat) /\
     (0 : Rat) < (661166385093 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3512,7 +3512,7 @@ theorem k11_row_valid_16427 : K11RowValid 16427 := by
     (372394810705954921871403351 / 151156256500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (11304847 / 2000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (18707343 / 12500000 : Rat) - (386510099 / 100000000 : Rat) /\
     (0 : Rat) < (372394810705954921871403351 / 151156256500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3521,7 +3521,7 @@ theorem k11_row_valid_16428 : K11RowValid 16428 := by
     (331227206329280383326357 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1147364747 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (38392917 / 20000000 : Rat) - (253941373 / 50000000 : Rat) /\
     (0 : Rat) < (331227206329280383326357 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3530,7 +3530,7 @@ theorem k11_row_valid_16429 : K11RowValid 16429 := by
     (230361995253 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (113051633 / 25000000 : Rat) - (70391707 / 50000000 : Rat) /\
     (0 : Rat) < (230361995253 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3539,7 +3539,7 @@ theorem k11_row_valid_16430 : K11RowValid 16430 := by
     (149579753849331979922324701881 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (156062713 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (744702449 / 100000000 : Rat) - (45791971 / 4000000 : Rat) /\
     (0 : Rat) < (149579753849331979922324701881 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3548,7 +3548,7 @@ theorem k11_row_valid_16431 : K11RowValid 16431 := by
     (3497287314770472537851359 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1284470327 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (345506079 / 100000000 : Rat) - (1070974953 / 100000000 : Rat) /\
     (0 : Rat) < (3497287314770472537851359 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3557,7 +3557,7 @@ theorem k11_row_valid_16432 : K11RowValid 16432 := by
     (136481879453 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (537720297 / 100000000 : Rat) - (41851507 / 25000000 : Rat) /\
     (0 : Rat) < (136481879453 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3566,7 +3566,7 @@ theorem k11_row_valid_16433 : K11RowValid 16433 := by
     (24555637589332475866531509759 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (172242661 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (124111111 / 25000000 : Rat) - (150401551 / 20000000 : Rat) /\
     (0 : Rat) < (24555637589332475866531509759 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3575,7 +3575,7 @@ theorem k11_row_valid_16434 : K11RowValid 16434 := by
     (591678474465954800049043 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (61071301 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (182614483 / 25000000 : Rat) - (725463167 / 100000000 : Rat) /\
     (0 : Rat) < (591678474465954800049043 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3584,7 +3584,7 @@ theorem k11_row_valid_16435 : K11RowValid 16435 := by
     (195487115637 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (383921057 / 50000000 : Rat) - (59762203 / 25000000 : Rat) /\
     (0 : Rat) < (195487115637 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3593,7 +3593,7 @@ theorem k11_row_valid_16436 : K11RowValid 16436 := by
     (76802950575986119903182149001 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (140748433 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (168676929 / 100000000 : Rat) - (587838593 / 100000000 : Rat) /\
     (0 : Rat) < (76802950575986119903182149001 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3602,7 +3602,7 @@ theorem k11_row_valid_16437 : K11RowValid 16437 := by
     (41831589095024980683139 / 15115625650000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (949633991 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (89404403 / 50000000 : Rat) - (435997751 / 100000000 : Rat) /\
     (0 : Rat) < (41831589095024980683139 / 15115625650000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3611,7 +3611,7 @@ theorem k11_row_valid_16438 : K11RowValid 16438 := by
     (450521624213 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (44310523 / 10000000 : Rat) - (137949947 / 100000000 : Rat) /\
     (0 : Rat) < (450521624213 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3620,7 +3620,7 @@ theorem k11_row_valid_16439 : K11RowValid 16439 := by
     (34340280191052207831639098457 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (166364897 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (178001553 / 25000000 : Rat) - (526712077 / 50000000 : Rat) /\
     (0 : Rat) < (34340280191052207831639098457 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3629,7 +3629,7 @@ theorem k11_row_valid_16440 : K11RowValid 16440 := by
     (372847736546268810595041 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (19933097 / 3125000 : Rat) + (784931055601 / 1000000000000 : Rat) * (120252321 / 10000000 : Rat) - (1142479003 / 100000000 : Rat) /\
     (0 : Rat) < (372847736546268810595041 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3638,7 +3638,7 @@ theorem k11_row_valid_16441 : K11RowValid 16441 := by
     (298274402913 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (36840563 / 6250000 : Rat) - (91755247 / 50000000 : Rat) /\
     (0 : Rat) < (298274402913 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3647,7 +3647,7 @@ theorem k11_row_valid_16442 : K11RowValid 16442 := by
     (113952851720835798601425366489 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128955361 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (593163281 / 100000000 : Rat) - (174918537 / 20000000 : Rat) /\
     (0 : Rat) < (113952851720835798601425366489 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3656,7 +3656,7 @@ theorem k11_row_valid_16443 : K11RowValid 16443 := by
     (303622915237592171390899 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (127594923 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (86968819 / 12500000 : Rat) - (37236681 / 5000000 : Rat) /\
     (0 : Rat) < (303622915237592171390899 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3665,7 +3665,7 @@ theorem k11_row_valid_16444 : K11RowValid 16444 := by
     (856471148223 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1683955581 / 100000000 : Rat) - (262129137 / 50000000 : Rat) /\
     (0 : Rat) < (856471148223 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3674,7 +3674,7 @@ theorem k11_row_valid_16445 : K11RowValid 16445 := by
     (84025545684176654201550187407 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (203824069 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (411886103 / 100000000 : Rat) - (642885531 / 100000000 : Rat) /\
     (0 : Rat) < (84025545684176654201550187407 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3683,7 +3683,7 @@ theorem k11_row_valid_16446 : K11RowValid 16446 := by
     (1386131436357557913412561 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (42979871 / 5000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (199351441 / 100000000 : Rat) - (212045807 / 50000000 : Rat) /\
     (0 : Rat) < (1386131436357557913412561 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3692,7 +3692,7 @@ theorem k11_row_valid_16447 : K11RowValid 16447 := by
     (1225868831857 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (48267991 / 4000000 : Rat) - (375676383 / 100000000 : Rat) /\
     (0 : Rat) < (1225868831857 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3701,7 +3701,7 @@ theorem k11_row_valid_16448 : K11RowValid 16448 := by
     (48437962362317352398000632667 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (11967247 / 5000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (236832643 / 50000000 : Rat) - (370426659 / 50000000 : Rat) /\
     (0 : Rat) < (48437962362317352398000632667 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3710,7 +3710,7 @@ theorem k11_row_valid_16449 : K11RowValid 16449 := by
     (246002726009655697259667 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1812856219 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (60131027 / 5000000 : Rat) - (754180969 / 50000000 : Rat) /\
     (0 : Rat) < (246002726009655697259667 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3719,7 +3719,7 @@ theorem k11_row_valid_16450 : K11RowValid 16450 := by
     (449382671799 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (110898313 / 25000000 : Rat) - (138101881 / 100000000 : Rat) /\
     (0 : Rat) < (449382671799 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3728,7 +3728,7 @@ theorem k11_row_valid_16451 : K11RowValid 16451 := by
     (30247551062545465365563995831 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (199686953 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (156031999 / 20000000 : Rat) - (289918751 / 25000000 : Rat) /\
     (0 : Rat) < (30247551062545465365563995831 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3737,7 +3737,7 @@ theorem k11_row_valid_16452 : K11RowValid 16452 := by
     (97681271454550698233649 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (67918041 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (29731569 / 6250000 : Rat) - (95823711 / 20000000 : Rat) /\
     (0 : Rat) < (97681271454550698233649 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3746,7 +3746,7 @@ theorem k11_row_valid_16453 : K11RowValid 16453 := by
     (198588563681 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (489650249 / 50000000 : Rat) - (60976239 / 20000000 : Rat) /\
     (0 : Rat) < (198588563681 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3755,7 +3755,7 @@ theorem k11_row_valid_16454 : K11RowValid 16454 := by
     (42473970682334166538706468479 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (259064187 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (174361991 / 100000000 : Rat) - (162970439 / 50000000 : Rat) /\
     (0 : Rat) < (42473970682334166538706468479 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3764,7 +3764,7 @@ theorem k11_row_valid_16455 : K11RowValid 16455 := by
     (685697429999096929010283 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2366074811 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (33034923 / 25000000 : Rat) - (840339851 / 100000000 : Rat) /\
     (0 : Rat) < (685697429999096929010283 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3773,7 +3773,7 @@ theorem k11_row_valid_16456 : K11RowValid 16456 := by
     (264824319853 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (521249387 / 50000000 : Rat) - (81139107 / 25000000 : Rat) /\
     (0 : Rat) < (264824319853 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3782,7 +3782,7 @@ theorem k11_row_valid_16457 : K11RowValid 16457 := by
     (82043009118060645118745134047 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (51422733 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (390514663 / 100000000 : Rat) - (314705597 / 50000000 : Rat) /\
     (0 : Rat) < (82043009118060645118745134047 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3791,7 +3791,7 @@ theorem k11_row_valid_16458 : K11RowValid 16458 := by
     (2838761384671712164569791 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1864164591 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (368707071 / 100000000 : Rat) - (869771377 / 100000000 : Rat) /\
     (0 : Rat) < (2838761384671712164569791 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3800,7 +3800,7 @@ theorem k11_row_valid_16459 : K11RowValid 16459 := by
     (308578061723 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (303655319 / 50000000 : Rat) - (94535637 / 50000000 : Rat) /\
     (0 : Rat) < (308578061723 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3809,7 +3809,7 @@ theorem k11_row_valid_16460 : K11RowValid 16460 := by
     (39238139024456850634333563661 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (199011043 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (191196069 / 50000000 : Rat) - (37493489 / 6250000 : Rat) /\
     (0 : Rat) < (39238139024456850634333563661 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3818,7 +3818,7 @@ theorem k11_row_valid_16461 : K11RowValid 16461 := by
     (759421658875714089422801 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (299899997 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (266740881 / 25000000 : Rat) - (930858783 / 100000000 : Rat) /\
     (0 : Rat) < (759421658875714089422801 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3827,7 +3827,7 @@ theorem k11_row_valid_16462 : K11RowValid 16462 := by
     (346198902413 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1363148921 / 100000000 : Rat) - (106095747 / 25000000 : Rat) /\
     (0 : Rat) < (346198902413 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3836,7 +3836,7 @@ theorem k11_row_valid_16463 : K11RowValid 16463 := by
     (3931659804076922376735732939 / 822290035360000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (69603773 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (18345331 / 4000000 : Rat) - (376769833 / 50000000 : Rat) /\
     (0 : Rat) < (3931659804076922376735732939 / 822290035360000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3845,7 +3845,7 @@ theorem k11_row_valid_16464 : K11RowValid 16464 := by
     (2191004675379067006708787 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (363156473 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (566789747 / 100000000 : Rat) - (167752579 / 25000000 : Rat) /\
     (0 : Rat) < (2191004675379067006708787 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3854,7 +3854,7 @@ theorem k11_row_valid_16465 : K11RowValid 16465 := by
     (726392842827 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (179166041 / 25000000 : Rat) - (223115813 / 100000000 : Rat) /\
     (0 : Rat) < (726392842827 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3863,7 +3863,7 @@ theorem k11_row_valid_16466 : K11RowValid 16466 := by
     (115728804322894391793955275117 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62928239 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (574418693 / 100000000 : Rat) - (443220443 / 50000000 : Rat) /\
     (0 : Rat) < (115728804322894391793955275117 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3872,7 +3872,7 @@ theorem k11_row_valid_16467 : K11RowValid 16467 := by
     (967161665192873892964663 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (77358481 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (301059703 / 50000000 : Rat) - (593040251 / 100000000 : Rat) /\
     (0 : Rat) < (967161665192873892964663 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3881,7 +3881,7 @@ theorem k11_row_valid_16468 : K11RowValid 16468 := by
     (516578808663 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (509722167 / 100000000 : Rat) - (158689497 / 100000000 : Rat) /\
     (0 : Rat) < (516578808663 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3890,7 +3890,7 @@ theorem k11_row_valid_16469 : K11RowValid 16469 := by
     (32321216118799452940476288111 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (202243261 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (166960119 / 20000000 : Rat) - (618668861 / 50000000 : Rat) /\
     (0 : Rat) < (32321216118799452940476288111 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3899,7 +3899,7 @@ theorem k11_row_valid_16470 : K11RowValid 16470 := by
     (661999795927257591970311 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1186375623 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (141029191 / 25000000 : Rat) - (812141443 / 100000000 : Rat) /\
     (0 : Rat) < (661999795927257591970311 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3908,7 +3908,7 @@ theorem k11_row_valid_16471 : K11RowValid 16471 := by
     (1360071919693 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1339974071 / 100000000 : Rat) - (417168067 / 100000000 : Rat) /\
     (0 : Rat) < (1360071919693 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3917,7 +3917,7 @@ theorem k11_row_valid_16472 : K11RowValid 16472 := by
     (9388445081845848819056855089 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (270161069 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (39072681 / 20000000 : Rat) - (22433739 / 6250000 : Rat) /\
     (0 : Rat) < (9388445081845848819056855089 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3926,7 +3926,7 @@ theorem k11_row_valid_16473 : K11RowValid 16473 := by
     (744145310183545644166661 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (244884039 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (95833541 / 50000000 : Rat) - (45539991 / 10000000 : Rat) /\
     (0 : Rat) < (744145310183545644166661 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3935,7 +3935,7 @@ theorem k11_row_valid_16474 : K11RowValid 16474 := by
     (227966452133 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (898049561 / 50000000 : Rat) - (69896427 / 12500000 : Rat) /\
     (0 : Rat) < (227966452133 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3944,7 +3944,7 @@ theorem k11_row_valid_16475 : K11RowValid 16475 := by
     (44731320201906339106719986189 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (226855023 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (218364581 / 50000000 : Rat) - (342502089 / 50000000 : Rat) /\
     (0 : Rat) < (44731320201906339106719986189 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3953,7 +3953,7 @@ theorem k11_row_valid_16476 : K11RowValid 16476 := by
     (2946747914524246318661861 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (4190352377 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (318744741 / 50000000 : Rat) - (902474213 / 50000000 : Rat) /\
     (0 : Rat) < (2946747914524246318661861 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3962,7 +3962,7 @@ theorem k11_row_valid_16477 : K11RowValid 16477 := by
     (11897431409 / 12848281802500000 : Rat) = (1600000000 / 5139312721 : Rat) * (233676411 / 50000000 : Rat) - (3637471 / 2500000 : Rat) /\
     (0 : Rat) < (11897431409 / 12848281802500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3971,7 +3971,7 @@ theorem k11_row_valid_16478 : K11RowValid 16478 := by
     (304983904775366617038930205253 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (182614623 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1621195037 / 100000000 : Rat) - (1168752321 / 50000000 : Rat) /\
     (0 : Rat) < (304983904775366617038930205253 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3980,7 +3980,7 @@ theorem k11_row_valid_16479 : K11RowValid 16479 := by
     (29217960293532944175373 / 6046250260000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (383385921 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (163742621 / 20000000 : Rat) - (761990739 / 100000000 : Rat) /\
     (0 : Rat) < (29217960293532944175373 / 6046250260000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3989,7 +3989,7 @@ theorem k11_row_valid_16480 : K11RowValid 16480 := by
     (751512172663 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (184537979 / 25000000 : Rat) - (229805497 / 100000000 : Rat) /\
     (0 : Rat) < (751512172663 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -3998,7 +3998,7 @@ theorem k11_row_valid_16481 : K11RowValid 16481 := by
     (4304213369203433126967330767 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (310151271 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (14867543 / 12500000 : Rat) - (131939979 / 50000000 : Rat) /\
     (0 : Rat) < (4304213369203433126967330767 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4007,7 +4007,7 @@ theorem k11_row_valid_16482 : K11RowValid 16482 := by
     (2258708580965033303764447 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (43567373 / 2500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (192338207 / 100000000 : Rat) - (86689683 / 12500000 : Rat) /\
     (0 : Rat) < (2258708580965033303764447 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4016,7 +4016,7 @@ theorem k11_row_valid_16483 : K11RowValid 16483 := by
     (455734555989 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (896415497 / 100000000 : Rat) - (139538491 / 50000000 : Rat) /\
     (0 : Rat) < (455734555989 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4025,7 +4025,7 @@ theorem k11_row_valid_16484 : K11RowValid 16484 := by
     (33943106385958122556860252287 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (65867019 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (166559623 / 25000000 : Rat) - (1039776173 / 100000000 : Rat) /\
     (0 : Rat) < (33943106385958122556860252287 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4034,7 +4034,7 @@ theorem k11_row_valid_16485 : K11RowValid 16485 := by
     (1240917991891769064952761 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (96704387 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (292907641 / 50000000 : Rat) - (76088971 / 10000000 : Rat) /\
     (0 : Rat) < (1240917991891769064952761 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4043,7 +4043,7 @@ theorem k11_row_valid_16486 : K11RowValid 16486 := by
     (235267738679 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (927602863 / 100000000 : Rat) - (72196601 / 25000000 : Rat) /\
     (0 : Rat) < (235267738679 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4052,7 +4052,7 @@ theorem k11_row_valid_16487 : K11RowValid 16487 := by
     (7276947300583480279300201447 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1609837 / 781250 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (35129263 / 10000000 : Rat) - (279170077 / 50000000 : Rat) /\
     (0 : Rat) < (7276947300583480279300201447 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4061,7 +4061,7 @@ theorem k11_row_valid_16488 : K11RowValid 16488 := by
     (3141442985611327831756989 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (554833197 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1007082109 / 100000000 : Rat) - (963223231 / 100000000 : Rat) /\
     (0 : Rat) < (3141442985611327831756989 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4070,7 +4070,7 @@ theorem k11_row_valid_16489 : K11RowValid 16489 := by
     (124213747401 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (610661861 / 100000000 : Rat) - (38022919 / 20000000 : Rat) /\
     (0 : Rat) < (124213747401 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4079,7 +4079,7 @@ theorem k11_row_valid_16490 : K11RowValid 16490 := by
     (69383326040660928102730051911 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (215178687 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (282530319 / 100000000 : Rat) - (132859251 / 25000000 : Rat) /\
     (0 : Rat) < (69383326040660928102730051911 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4088,7 +4088,7 @@ theorem k11_row_valid_16491 : K11RowValid 16491 := by
     (1674021754702989879422783 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (57046299 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (291447423 / 100000000 : Rat) - (64115681 / 12500000 : Rat) /\
     (0 : Rat) < (1674021754702989879422783 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4097,7 +4097,7 @@ theorem k11_row_valid_16492 : K11RowValid 16492 := by
     (6379051381 / 6424140901250000 : Rat) = (1600000000 / 5139312721 : Rat) * (100347149 / 20000000 : Rat) - (1952539 / 1250000 : Rat) /\
     (0 : Rat) < (6379051381 / 6424140901250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4106,7 +4106,7 @@ theorem k11_row_valid_16493 : K11RowValid 16493 := by
     (51152205415181606274129568209 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (123294759 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (275161161 / 6250000 : Rat) - (6270194607 / 100000000 : Rat) /\
     (0 : Rat) < (51152205415181606274129568209 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4115,7 +4115,7 @@ theorem k11_row_valid_16494 : K11RowValid 16494 := by
     (3038376511051073977702303 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (449456589 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (830968543 / 100000000 : Rat) - (116513397 / 12500000 : Rat) /\
     (0 : Rat) < (3038376511051073977702303 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4124,7 +4124,7 @@ theorem k11_row_valid_16495 : K11RowValid 16495 := by
     (604815483 / 822290035360000 : Rat) = (1600000000 / 5139312721 : Rat) * (371550463 / 100000000 : Rat) - (185077 / 160000 : Rat) /\
     (0 : Rat) < (604815483 / 822290035360000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4133,7 +4133,7 @@ theorem k11_row_valid_16496 : K11RowValid 16496 := by
     (218706285185720752375027458471 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5661807 / 5000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1166024559 / 100000000 : Rat) - (26181003 / 1562500 : Rat) /\
     (0 : Rat) < (218706285185720752375027458471 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4142,7 +4142,7 @@ theorem k11_row_valid_16497 : K11RowValid 16497 := by
     (4293145036845713562229341 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (118778141 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1486830621 / 100000000 : Rat) - (1314973433 / 100000000 : Rat) /\
     (0 : Rat) < (4293145036845713562229341 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4151,7 +4151,7 @@ theorem k11_row_valid_16498 : K11RowValid 16498 := by
     (2223983173663 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (109391063 / 5000000 : Rat) - (681124497 / 100000000 : Rat) /\
     (0 : Rat) < (2223983173663 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4160,7 +4160,7 @@ theorem k11_row_valid_16499 : K11RowValid 16499 := by
     (4506970637715199817282160401 / 1209250052000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (227141811 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (366547993 / 100000000 : Rat) - (586364547 / 100000000 : Rat) /\
     (0 : Rat) < (4506970637715199817282160401 / 1209250052000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4169,7 +4169,7 @@ theorem k11_row_valid_16500 : K11RowValid 16500 := by
     (143372301888734007507367 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1058158043 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (13994727 / 10000000 : Rat) - (219640223 / 50000000 : Rat) /\
     (0 : Rat) < (143372301888734007507367 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4178,7 +4178,7 @@ theorem k11_row_valid_16501 : K11RowValid 16501 := by
     (7902069089 / 6424140901250000 : Rat) = (1600000000 / 5139312721 : Rat) * (621186811 / 100000000 : Rat) - (2417391 / 1250000 : Rat) /\
     (0 : Rat) < (7902069089 / 6424140901250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4187,7 +4187,7 @@ theorem k11_row_valid_16502 : K11RowValid 16502 := by
     (94630029417248467225470255571 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (17492567 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (485030459 / 100000000 : Rat) - (145178881 / 20000000 : Rat) /\
     (0 : Rat) < (94630029417248467225470255571 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4196,7 +4196,7 @@ theorem k11_row_valid_16503 : K11RowValid 16503 := by
     (4595324960429498798087743 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (494163369 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1401549183 / 100000000 : Rat) - (703905037 / 50000000 : Rat) /\
     (0 : Rat) < (4595324960429498798087743 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4205,7 +4205,7 @@ theorem k11_row_valid_16504 : K11RowValid 16504 := by
     (227971640693 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (45076341 / 10000000 : Rat) - (70167067 / 50000000 : Rat) /\
     (0 : Rat) < (227971640693 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4214,7 +4214,7 @@ theorem k11_row_valid_16505 : K11RowValid 16505 := by
     (378501440229849989930388760513 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (27272089 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2030331577 / 100000000 : Rat) - (1449333217 / 50000000 : Rat) /\
     (0 : Rat) < (378501440229849989930388760513 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4223,7 +4223,7 @@ theorem k11_row_valid_16506 : K11RowValid 16506 := by
     (8449636289295182691579 / 2055725088400000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (133614007 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (2243899 / 400000 : Rat) - (324156723 / 50000000 : Rat) /\
     (0 : Rat) < (8449636289295182691579 / 2055725088400000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4232,7 +4232,7 @@ theorem k11_row_valid_16507 : K11RowValid 16507 := by
     (151579306639 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (185881997 / 25000000 : Rat) - (46295841 / 20000000 : Rat) /\
     (0 : Rat) < (151579306639 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4241,7 +4241,7 @@ theorem k11_row_valid_16508 : K11RowValid 16508 := by
     (24114080476072519376430254407 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (232898687 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (79129103 / 50000000 : Rat) - (91911957 / 25000000 : Rat) /\
     (0 : Rat) < (24114080476072519376430254407 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4250,7 +4250,7 @@ theorem k11_row_valid_16509 : K11RowValid 16509 := by
     (256229424292464650871657 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (913907069 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (27762217 / 20000000 : Rat) - (393479617 / 100000000 : Rat) /\
     (0 : Rat) < (256229424292464650871657 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4259,7 +4259,7 @@ theorem k11_row_valid_16510 : K11RowValid 16510 := by
     (567982234431 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (111423897 / 20000000 : Rat) - (173445489 / 100000000 : Rat) /\
     (0 : Rat) < (567982234431 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4268,7 +4268,7 @@ theorem k11_row_valid_16511 : K11RowValid 16511 := by
     (16854963673073525437394787991 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (411537931 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (82748639 / 10000000 : Rat) - (646103533 / 50000000 : Rat) /\
     (0 : Rat) < (16854963673073525437394787991 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4277,7 +4277,7 @@ theorem k11_row_valid_16512 : K11RowValid 16512 := by
     (1468457910439929925638323 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1863043591 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (203666163 / 50000000 : Rat) - (224935131 / 25000000 : Rat) /\
     (0 : Rat) < (1468457910439929925638323 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4286,7 +4286,7 @@ theorem k11_row_valid_16513 : K11RowValid 16513 := by
     (295044937527 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (291415639 / 50000000 : Rat) - (90725113 / 50000000 : Rat) /\
     (0 : Rat) < (295044937527 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4295,7 +4295,7 @@ theorem k11_row_valid_16514 : K11RowValid 16514 := by
     (40310968499661463533115561707 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128872777 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (191110803 / 50000000 : Rat) - (24717659 / 4000000 : Rat) /\
     (0 : Rat) < (40310968499661463533115561707 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4304,7 +4304,7 @@ theorem k11_row_valid_16515 : K11RowValid 16515 := by
     (992230950841550028475653 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (396245489 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (308509893 / 50000000 : Rat) - (607679 / 100000 : Rat) /\
     (0 : Rat) < (992230950841550028475653 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4313,7 +4313,7 @@ theorem k11_row_valid_16516 : K11RowValid 16516 := by
     (1172905436649 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (36114639 / 3125000 : Rat) - (359789031 / 100000000 : Rat) /\
     (0 : Rat) < (1172905436649 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4322,7 +4322,7 @@ theorem k11_row_valid_16517 : K11RowValid 16517 := by
     (5836378391517176748851116193 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (527515867 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (17158297 / 12500000 : Rat) - (178665823 / 50000000 : Rat) /\
     (0 : Rat) < (5836378391517176748851116193 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4331,7 +4331,7 @@ theorem k11_row_valid_16518 : K11RowValid 16518 := by
     (9530792564872373579497 / 3778906412500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (768271089 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (24973369 / 12500000 : Rat) - (198000623 / 50000000 : Rat) /\
     (0 : Rat) < (9530792564872373579497 / 3778906412500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4340,7 +4340,7 @@ theorem k11_row_valid_16519 : K11RowValid 16519 := by
     (236590740261 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (46552733 / 10000000 : Rat) - (72465259 / 50000000 : Rat) /\
     (0 : Rat) < (236590740261 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4349,7 +4349,7 @@ theorem k11_row_valid_16520 : K11RowValid 16520 := by
     (99721495780958425254988272373 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (24759959 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (521149517 / 50000000 : Rat) - (38198613 / 2500000 : Rat) /\
     (0 : Rat) < (99721495780958425254988272373 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4358,7 +4358,7 @@ theorem k11_row_valid_16521 : K11RowValid 16521 := by
     (5235484824871277558684767 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (144316609 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1814964127 / 100000000 : Rat) - (200542319 / 12500000 : Rat) /\
     (0 : Rat) < (5235484824871277558684767 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4367,7 +4367,7 @@ theorem k11_row_valid_16522 : K11RowValid 16522 := by
     (426801381069 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (52557139 / 12500000 : Rat) - (130899011 / 100000000 : Rat) /\
     (0 : Rat) < (426801381069 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4376,7 +4376,7 @@ theorem k11_row_valid_16523 : K11RowValid 16523 := by
     (165361570358584468169041058773 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (155587121 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (891715117 / 25000000 : Rat) - (5066198267 / 100000000 : Rat) /\
     (0 : Rat) < (165361570358584468169041058773 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4385,7 +4385,7 @@ theorem k11_row_valid_16524 : K11RowValid 16524 := by
     (1569892729079339680616943 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (356295447 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (471214383 / 50000000 : Rat) - (240397209 / 25000000 : Rat) /\
     (0 : Rat) < (1569892729079339680616943 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4394,7 +4394,7 @@ theorem k11_row_valid_16525 : K11RowValid 16525 := by
     (238115218909 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (58499847 / 6250000 : Rat) - (72849971 / 25000000 : Rat) /\
     (0 : Rat) < (238115218909 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4403,7 +4403,7 @@ theorem k11_row_valid_16526 : K11RowValid 16526 := by
     (2809751968044712788116118069 / 513931272100000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (182688951 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (14281101 / 2500000 : Rat) - (860485941 / 100000000 : Rat) /\
     (0 : Rat) < (2809751968044712788116118069 / 513931272100000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4412,7 +4412,7 @@ theorem k11_row_valid_16527 : K11RowValid 16527 := by
     (2287533634040611867122649 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (799156847 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (575740569 / 100000000 : Rat) - (175178563 / 25000000 : Rat) /\
     (0 : Rat) < (2287533634040611867122649 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4421,7 +4421,7 @@ theorem k11_row_valid_16528 : K11RowValid 16528 := by
     (701622526993 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (173047809 / 25000000 : Rat) - (215496767 / 100000000 : Rat) /\
     (0 : Rat) < (701622526993 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4430,7 +4430,7 @@ theorem k11_row_valid_16529 : K11RowValid 16529 := by
     (96688787780751004867447830519 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (7655141 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (499897151 / 100000000 : Rat) - (370686623 / 50000000 : Rat) /\
     (0 : Rat) < (96688787780751004867447830519 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4439,7 +4439,7 @@ theorem k11_row_valid_16530 : K11RowValid 16530 := by
     (391021192122834983165447 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (220293421 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (117819207 / 10000000 : Rat) - (149891347 / 12500000 : Rat) /\
     (0 : Rat) < (391021192122834983165447 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4448,7 +4448,7 @@ theorem k11_row_valid_16531 : K11RowValid 16531 := by
     (52092400737 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (255505961 / 50000000 : Rat) - (15909103 / 10000000 : Rat) /\
     (0 : Rat) < (52092400737 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4457,7 +4457,7 @@ theorem k11_row_valid_16532 : K11RowValid 16532 := by
     (1716453779084308321660446217 / 256965636050000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (174872919 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (8870593 / 1250000 : Rat) - (1052754663 / 100000000 : Rat) /\
     (0 : Rat) < (1716453779084308321660446217 / 256965636050000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4466,7 +4466,7 @@ theorem k11_row_valid_16533 : K11RowValid 16533 := by
     (2308687846885751994065711 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (359758439 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (758356591 / 100000000 : Rat) - (707259229 / 100000000 : Rat) /\
     (0 : Rat) < (2308687846885751994065711 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4475,7 +4475,7 @@ theorem k11_row_valid_16534 : K11RowValid 16534 := by
     (318256164267 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (156645023 / 25000000 : Rat) - (97535173 / 50000000 : Rat) /\
     (0 : Rat) < (318256164267 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4484,7 +4484,7 @@ theorem k11_row_valid_16535 : K11RowValid 16535 := by
     (948863682968241224827745607 / 321207045062500000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (51130167 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (4453903 / 1562500 : Rat) - (14521019 / 3125000 : Rat) /\
     (0 : Rat) < (948863682968241224827745607 / 321207045062500000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4493,7 +4493,7 @@ theorem k11_row_valid_16536 : K11RowValid 16536 := by
     (393578319364569139682843 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (779744857 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (30152283 / 20000000 : Rat) - (603846121 / 100000000 : Rat) /\
     (0 : Rat) < (393578319364569139682843 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4502,7 +4502,7 @@ theorem k11_row_valid_16537 : K11RowValid 16537 := by
     (209860937277 / 102786254420000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1030197781 / 100000000 : Rat) - (64145363 / 20000000 : Rat) /\
     (0 : Rat) < (209860937277 / 102786254420000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4511,7 +4511,7 @@ theorem k11_row_valid_16538 : K11RowValid 16538 := by
     (122782990286373237469430041711 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (217674947 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (572054519 / 100000000 : Rat) - (940285889 / 100000000 : Rat) /\
     (0 : Rat) < (122782990286373237469430041711 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4520,7 +4520,7 @@ theorem k11_row_valid_16539 : K11RowValid 16539 := by
     (2709508001098765278805053 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (24765137 / 1562500 : Rat) + (784931055601 / 1000000000000 : Rat) * (428791293 / 100000000 : Rat) - (415006273 / 50000000 : Rat) /\
     (0 : Rat) < (2709508001098765278805053 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4529,7 +4529,7 @@ theorem k11_row_valid_16540 : K11RowValid 16540 := by
     (64327560961 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (505414699 / 100000000 : Rat) - (19668559 / 12500000 : Rat) /\
     (0 : Rat) < (64327560961 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4538,7 +4538,7 @@ theorem k11_row_valid_16541 : K11RowValid 16541 := by
     (52183775328162977900433261791 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (180430971 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (243908839 / 100000000 : Rat) - (99824231 / 25000000 : Rat) /\
     (0 : Rat) < (52183775328162977900433261791 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4547,7 +4547,7 @@ theorem k11_row_valid_16542 : K11RowValid 16542 := by
     (451823448841377903502081 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (769058181 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (115482561 / 20000000 : Rat) - (17316409 / 2500000 : Rat) /\
     (0 : Rat) < (451823448841377903502081 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4556,7 +4556,7 @@ theorem k11_row_valid_16543 : K11RowValid 16543 := by
     (588297871793 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (115691121 / 10000000 : Rat) - (180087967 / 50000000 : Rat) /\
     (0 : Rat) < (588297871793 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4565,7 +4565,7 @@ theorem k11_row_valid_16544 : K11RowValid 16544 := by
     (27892758053661287042297217523 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (20638227 / 4000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (94443867 / 50000000 : Rat) - (426352153 / 100000000 : Rat) /\
     (0 : Rat) < (27892758053661287042297217523 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4574,7 +4574,7 @@ theorem k11_row_valid_16545 : K11RowValid 16545 := by
     (1670400310075436451361341 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (424635407 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (314522621 / 100000000 : Rat) - (511278057 / 100000000 : Rat) /\
     (0 : Rat) < (1670400310075436451361341 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4583,7 +4583,7 @@ theorem k11_row_valid_16546 : K11RowValid 16546 := by
     (461829251551 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (18263429 / 4000000 : Rat) - (142146769 / 100000000 : Rat) /\
     (0 : Rat) < (461829251551 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4592,7 +4592,7 @@ theorem k11_row_valid_16547 : K11RowValid 16547 := by
     (28533853348448790384097393317 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (274698793 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (143226493 / 20000000 : Rat) - (1092955953 / 100000000 : Rat) /\
     (0 : Rat) < (28533853348448790384097393317 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4601,7 +4601,7 @@ theorem k11_row_valid_16548 : K11RowValid 16548 := by
     (462746849919191055350791 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (139980591 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (135968071 / 20000000 : Rat) - (141589113 / 20000000 : Rat) /\
     (0 : Rat) < (462746849919191055350791 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4610,7 +4610,7 @@ theorem k11_row_valid_16549 : K11RowValid 16549 := by
     (886245354393 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (218611539 / 25000000 : Rat) - (272237367 / 100000000 : Rat) /\
     (0 : Rat) < (886245354393 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4619,7 +4619,7 @@ theorem k11_row_valid_16550 : K11RowValid 16550 := by
     (35938282251765069246247725183 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (731939 / 500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (189360007 / 20000000 : Rat) - (137750619 / 10000000 : Rat) /\
     (0 : Rat) < (35938282251765069246247725183 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4628,7 +4628,7 @@ theorem k11_row_valid_16551 : K11RowValid 16551 := by
     (458882945280470459318549 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (206702543 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (138208469 / 25000000 : Rat) - (281319869 / 50000000 : Rat) /\
     (0 : Rat) < (458882945280470459318549 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4637,7 +4637,7 @@ theorem k11_row_valid_16552 : K11RowValid 16552 := by
     (282807573653 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (278490883 / 25000000 : Rat) - (86701307 / 25000000 : Rat) /\
     (0 : Rat) < (282807573653 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4646,7 +4646,7 @@ theorem k11_row_valid_16553 : K11RowValid 16553 := by
     (89221741686798861238938166011 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (313086761 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (416029219 / 100000000 : Rat) - (682730211 / 100000000 : Rat) /\
     (0 : Rat) < (89221741686798861238938166011 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4655,7 +4655,7 @@ theorem k11_row_valid_16554 : K11RowValid 16554 := by
     (1550989737581649560699353 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (529023981 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (186429593 / 100000000 : Rat) - (475731571 / 100000000 : Rat) /\
     (0 : Rat) < (1550989737581649560699353 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4664,7 +4664,7 @@ theorem k11_row_valid_16555 : K11RowValid 16555 := by
     (1721858460419 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1695690523 / 100000000 : Rat) - (527911661 / 100000000 : Rat) /\
     (0 : Rat) < (1721858460419 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4673,7 +4673,7 @@ theorem k11_row_valid_16556 : K11RowValid 16556 := by
     (32689812790171341927404443831 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (7833661 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (172223999 / 20000000 : Rat) - (1250420733 / 100000000 : Rat) /\
     (0 : Rat) < (32689812790171341927404443831 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4682,7 +4682,7 @@ theorem k11_row_valid_16557 : K11RowValid 16557 := by
     (1795625927173999424286179 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (798873743 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (383806499 / 50000000 : Rat) - (274985599 / 25000000 : Rat) /\
     (0 : Rat) < (1795625927173999424286179 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4691,7 +4691,7 @@ theorem k11_row_valid_16558 : K11RowValid 16558 := by
     (571422345857 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (112192799 / 20000000 : Rat) - (174642383 / 100000000 : Rat) /\
     (0 : Rat) < (571422345857 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4700,7 +4700,7 @@ theorem k11_row_valid_16559 : K11RowValid 16559 := by
     (197660629742478808865315799423 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (9826953 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1041528967 / 100000000 : Rat) - (189268007 / 12500000 : Rat) /\
     (0 : Rat) < (197660629742478808865315799423 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4709,7 +4709,7 @@ theorem k11_row_valid_16560 : K11RowValid 16560 := by
     (1342368502216429356625101 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (21701119 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (386327181 / 100000000 : Rat) - (411337789 / 100000000 : Rat) /\
     (0 : Rat) < (1342368502216429356625101 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4718,7 +4718,7 @@ theorem k11_row_valid_16561 : K11RowValid 16561 := by
     (1400002254691 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (344035793 / 25000000 : Rat) - (428428429 / 100000000 : Rat) /\
     (0 : Rat) < (1400002254691 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4727,7 +4727,7 @@ theorem k11_row_valid_16562 : K11RowValid 16562 := by
     (44016231448914142322277424133 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (70588469 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (161934557 / 100000000 : Rat) - (84421243 / 25000000 : Rat) /\
     (0 : Rat) < (44016231448914142322277424133 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4736,7 +4736,7 @@ theorem k11_row_valid_16563 : K11RowValid 16563 := by
     (1587407676878610126901901 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1164887563 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (157947981 / 100000000 : Rat) - (486637373 / 100000000 : Rat) /\
     (0 : Rat) < (1587407676878610126901901 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4745,7 +4745,7 @@ theorem k11_row_valid_16564 : K11RowValid 16564 := by
     (818619050931 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (805937861 / 100000000 : Rat) - (250908989 / 100000000 : Rat) /\
     (0 : Rat) < (818619050931 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4754,7 +4754,7 @@ theorem k11_row_valid_16565 : K11RowValid 16565 := by
     (24628592124592124435265119761 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (24899381 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (112312969 / 25000000 : Rat) - (756024023 / 100000000 : Rat) /\
     (0 : Rat) < (24628592124592124435265119761 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4763,7 +4763,7 @@ theorem k11_row_valid_16566 : K11RowValid 16566 := by
     (438232510576474537286581 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (152847449 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (95027061 / 25000000 : Rat) - (5362851 / 1000000 : Rat) /\
     (0 : Rat) < (438232510576474537286581 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4772,7 +4772,7 @@ theorem k11_row_valid_16567 : K11RowValid 16567 := by
     (71002540089 / 30231251300000000 : Rat) = (1600000000 / 5139312721 : Rat) * (296577597 / 25000000 : Rat) - (369328647 / 100000000 : Rat) /\
     (0 : Rat) < (71002540089 / 30231251300000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4781,7 +4781,7 @@ theorem k11_row_valid_16568 : K11RowValid 16568 := by
     (27205280270061988573874319993 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (66390641 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (142488497 / 20000000 : Rat) - (130447807 / 12500000 : Rat) /\
     (0 : Rat) < (27205280270061988573874319993 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4790,7 +4790,7 @@ theorem k11_row_valid_16569 : K11RowValid 16569 := by
     (4436569297268075160271211 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (94840201 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1638002091 / 50000000 : Rat) - (1359533321 / 50000000 : Rat) /\
     (0 : Rat) < (4436569297268075160271211 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4799,7 +4799,7 @@ theorem k11_row_valid_16570 : K11RowValid 16570 := by
     (312443337893 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (123310007 / 20000000 : Rat) - (95973867 / 50000000 : Rat) /\
     (0 : Rat) < (312443337893 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4808,7 +4808,7 @@ theorem k11_row_valid_16571 : K11RowValid 16571 := by
     (30912083384779239145062965127 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (126300489 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (140987983 / 50000000 : Rat) - (237658531 / 50000000 : Rat) /\
     (0 : Rat) < (30912083384779239145062965127 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4817,7 +4817,7 @@ theorem k11_row_valid_16572 : K11RowValid 16572 := by
     (1316708740548896490051327 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (182609617 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (224295487 / 100000000 : Rat) - (201730243 / 50000000 : Rat) /\
     (0 : Rat) < (1316708740548896490051327 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4826,7 +4826,7 @@ theorem k11_row_valid_16573 : K11RowValid 16573 := by
     (436519172139 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (107917879 / 25000000 : Rat) - (134390341 / 100000000 : Rat) /\
     (0 : Rat) < (436519172139 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4835,7 +4835,7 @@ theorem k11_row_valid_16574 : K11RowValid 16574 := by
     (222919747254462805544419690671 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (239944367 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1160738359 / 100000000 : Rat) - (426898803 / 25000000 : Rat) /\
     (0 : Rat) < (222919747254462805544419690671 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4844,7 +4844,7 @@ theorem k11_row_valid_16575 : K11RowValid 16575 := by
     (47870195482497185505883 / 6424140901250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62421879 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (15578523 / 1250000 : Rat) - (1172579911 / 100000000 : Rat) /\
     (0 : Rat) < (47870195482497185505883 / 6424140901250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4853,7 +4853,7 @@ theorem k11_row_valid_16576 : K11RowValid 16576 := by
     (42336699961 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (83575293 / 20000000 : Rat) - (13009559 / 10000000 : Rat) /\
     (0 : Rat) < (42336699961 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4862,7 +4862,7 @@ theorem k11_row_valid_16577 : K11RowValid 16577 := by
     (372229106849550855481591041457 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (134335999 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1998048553 / 100000000 : Rat) - (1426310657 / 50000000 : Rat) /\
     (0 : Rat) < (372229106849550855481591041457 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4871,7 +4871,7 @@ theorem k11_row_valid_16578 : K11RowValid 16578 := by
     (2460873602198117748528197 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (101113963 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (760701957 / 100000000 : Rat) - (30179799 / 4000000 : Rat) /\
     (0 : Rat) < (2460873602198117748528197 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4880,7 +4880,7 @@ theorem k11_row_valid_16579 : K11RowValid 16579 := by
     (1579472431529 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (778792271 / 50000000 : Rat) - (484915751 / 100000000 : Rat) /\
     (0 : Rat) < (1579472431529 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4889,7 +4889,7 @@ theorem k11_row_valid_16580 : K11RowValid 16580 := by
     (32695865792483392253732509027 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (41149927 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (141771083 / 50000000 : Rat) - (501367393 / 100000000 : Rat) /\
     (0 : Rat) < (32695865792483392253732509027 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4898,7 +4898,7 @@ theorem k11_row_valid_16581 : K11RowValid 16581 := by
     (1766593373237459134443597 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (272944373 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (147449357 / 100000000 : Rat) - (540610191 / 100000000 : Rat) /\
     (0 : Rat) < (1766593373237459134443597 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4907,7 +4907,7 @@ theorem k11_row_valid_16582 : K11RowValid 16582 := by
     (43418911401 / 25696563605000000 : Rat) = (1600000000 / 5139312721 : Rat) * (428455747 / 50000000 : Rat) - (13338919 / 5000000 : Rat) /\
     (0 : Rat) < (43418911401 / 25696563605000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4916,7 +4916,7 @@ theorem k11_row_valid_16583 : K11RowValid 16583 := by
     (109830351298398853154542938749 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (7660549 / 5000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (564092821 / 100000000 : Rat) - (420624281 / 50000000 : Rat) /\
     (0 : Rat) < (109830351298398853154542938749 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4925,7 +4925,7 @@ theorem k11_row_valid_16584 : K11RowValid 16584 := by
     (98066340498725879477613 / 5139312721000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5639181073 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (15908653 / 1000000 : Rat) - (3004339523 / 100000000 : Rat) /\
     (0 : Rat) < (98066340498725879477613 / 5139312721000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4934,7 +4934,7 @@ theorem k11_row_valid_16585 : K11RowValid 16585 := by
     (561977709043 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (554630859 / 100000000 : Rat) - (172670717 / 100000000 : Rat) /\
     (0 : Rat) < (561977709043 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4943,7 +4943,7 @@ theorem k11_row_valid_16586 : K11RowValid 16586 := by
     (16023970143981743286436950821 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (33242751 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (83667709 / 10000000 : Rat) - (1228760621 / 100000000 : Rat) /\
     (0 : Rat) < (16023970143981743286436950821 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4952,7 +4952,7 @@ theorem k11_row_valid_16587 : K11RowValid 16587 := by
     (1495536144890109499627037 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (158389847 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (458667997 / 100000000 : Rat) - (114661029 / 25000000 : Rat) /\
     (0 : Rat) < (1495536144890109499627037 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4961,7 +4961,7 @@ theorem k11_row_valid_16588 : K11RowValid 16588 := by
     (746906611219 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (737546001 / 100000000 : Rat) - (229616861 / 100000000 : Rat) /\
     (0 : Rat) < (746906611219 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4970,7 +4970,7 @@ theorem k11_row_valid_16589 : K11RowValid 16589 := by
     (4791638834351666184197923473 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (77517189 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (17521417 / 10000000 : Rat) - (367151797 / 100000000 : Rat) /\
     (0 : Rat) < (4791638834351666184197923473 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4979,7 +4979,7 @@ theorem k11_row_valid_16590 : K11RowValid 16590 := by
     (1517241781993705395756401 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (218881311 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (158162481 / 100000000 : Rat) - (464863207 / 100000000 : Rat) /\
     (0 : Rat) < (1517241781993705395756401 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4988,7 +4988,7 @@ theorem k11_row_valid_16591 : K11RowValid 16591 := by
     (16118710447 / 15115625650000000 : Rat) = (1600000000 / 5139312721 : Rat) * (33787823 / 6250000 : Rat) - (84152081 / 50000000 : Rat) /\
     (0 : Rat) < (16118710447 / 15115625650000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -4997,7 +4997,7 @@ theorem k11_row_valid_16592 : K11RowValid 16592 := by
     (120557428167458392410139788987 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (94849977 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (614653923 / 50000000 : Rat) - (1847472921 / 100000000 : Rat) /\
     (0 : Rat) < (120557428167458392410139788987 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5006,7 +5006,7 @@ theorem k11_row_valid_16593 : K11RowValid 16593 := by
     (406288605099446050715169 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1397171047 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (47614689 / 20000000 : Rat) - (38865379 / 6250000 : Rat) /\
     (0 : Rat) < (406288605099446050715169 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5015,7 +5015,7 @@ theorem k11_row_valid_16594 : K11RowValid 16594 := by
     (55080168297 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (271110851 / 50000000 : Rat) - (16880743 / 10000000 : Rat) /\
     (0 : Rat) < (55080168297 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5024,7 +5024,7 @@ theorem k11_row_valid_16595 : K11RowValid 16595 := by
     (110592976033143054051445175647 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (73796453 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (537161063 / 100000000 : Rat) - (847562097 / 100000000 : Rat) /\
     (0 : Rat) < (110592976033143054051445175647 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5033,7 +5033,7 @@ theorem k11_row_valid_16596 : K11RowValid 16596 := by
     (554523729726669669735351 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (27541069 / 4000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (161757431 / 20000000 : Rat) - (849197663 / 100000000 : Rat) /\
     (0 : Rat) < (554523729726669669735351 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5042,7 +5042,7 @@ theorem k11_row_valid_16597 : K11RowValid 16597 := by
     (637178303259 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (627824047 / 50000000 : Rat) - (195457621 / 50000000 : Rat) /\
     (0 : Rat) < (637178303259 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5051,7 +5051,7 @@ theorem k11_row_valid_16598 : K11RowValid 16598 := by
     (48126443277322295192188542333 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (117913537 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (131742357 / 100000000 : Rat) - (184439461 / 50000000 : Rat) /\
     (0 : Rat) < (48126443277322295192188542333 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5060,7 +5060,7 @@ theorem k11_row_valid_16599 : K11RowValid 16599 := by
     (1514566070036914978684211 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (604410267 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (351455091 / 100000000 : Rat) - (92807231 / 20000000 : Rat) /\
     (0 : Rat) < (1514566070036914978684211 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5069,7 +5069,7 @@ theorem k11_row_valid_16600 : K11RowValid 16600 := by
     (57016203199 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (44759539 / 10000000 : Rat) - (17418481 / 12500000 : Rat) /\
     (0 : Rat) < (57016203199 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5078,7 +5078,7 @@ theorem k11_row_valid_16601 : K11RowValid 16601 := by
     (74125811796797630797894552501 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (176817707 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (384028429 / 50000000 : Rat) - (283882217 / 25000000 : Rat) /\
     (0 : Rat) < (74125811796797630797894552501 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5087,7 +5087,7 @@ theorem k11_row_valid_16602 : K11RowValid 16602 := by
     (3802776442261398396835427 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (562482 / 78125 : Rat) + (784931055601 / 1000000000000 : Rat) * (1199207587 / 100000000 : Rat) - (23308837 / 2000000 : Rat) /\
     (0 : Rat) < (3802776442261398396835427 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5096,7 +5096,7 @@ theorem k11_row_valid_16603 : K11RowValid 16603 := by
     (300215721603 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (589719531 / 100000000 : Rat) - (91797357 / 50000000 : Rat) /\
     (0 : Rat) < (300215721603 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5105,7 +5105,7 @@ theorem k11_row_valid_16604 : K11RowValid 16604 := by
     (39422932442337588845958011739 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1924397 / 1000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (209350531 / 12500000 : Rat) - (301997423 / 12500000 : Rat) /\
     (0 : Rat) < (39422932442337588845958011739 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5114,7 +5114,7 @@ theorem k11_row_valid_16605 : K11RowValid 16605 := by
     (35590134355884054024717 / 8030176126562500000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (981572257 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (7800077 / 1562500 : Rat) - (697429653 / 100000000 : Rat) /\
     (0 : Rat) < (35590134355884054024717 / 8030176126562500000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5123,7 +5123,7 @@ theorem k11_row_valid_16606 : K11RowValid 16606 := by
     (2315575912869 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2281031471 / 100000000 : Rat) - (710143211 / 100000000 : Rat) /\
     (0 : Rat) < (2315575912869 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5132,7 +5132,7 @@ theorem k11_row_valid_16607 : K11RowValid 16607 := by
     (338567084164588015076862752619 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (20426683 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1798028051 / 100000000 : Rat) - (2593009287 / 100000000 : Rat) /\
     (0 : Rat) < (338567084164588015076862752619 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5141,7 +5141,7 @@ theorem k11_row_valid_16608 : K11RowValid 16608 := by
     (1363428261744412998931677 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (26775573 / 4000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (266503837 / 100000000 : Rat) - (104396239 / 25000000 : Rat) /\
     (0 : Rat) < (1363428261744412998931677 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5150,7 +5150,7 @@ theorem k11_row_valid_16609 : K11RowValid 16609 := by
     (860718748561 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (847065141 / 100000000 : Rat) - (263712959 / 100000000 : Rat) /\
     (0 : Rat) < (860718748561 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5159,7 +5159,7 @@ theorem k11_row_valid_16610 : K11RowValid 16610 := by
     (107197251689550649576579814273 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (8127559 / 5000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (548074617 / 100000000 : Rat) - (821622441 / 100000000 : Rat) /\
     (0 : Rat) < (107197251689550649576579814273 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5168,7 +5168,7 @@ theorem k11_row_valid_16611 : K11RowValid 16611 := by
     (224566963376133798791183 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (898352507 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (69887823 / 5000000 : Rat) - (68841089 / 5000000 : Rat) /\
     (0 : Rat) < (224566963376133798791183 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5177,7 +5177,7 @@ theorem k11_row_valid_16612 : K11RowValid 16612 := by
     (4584586119 / 5139312721000000 : Rat) = (1600000000 / 5139312721 : Rat) * (452889693 / 100000000 : Rat) - (1409961 / 1000000 : Rat) /\
     (0 : Rat) < (4584586119 / 5139312721000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5186,7 +5186,7 @@ theorem k11_row_valid_16613 : K11RowValid 16613 := by
     (77428540678044165926504717171 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (25652701 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (407856859 / 50000000 : Rat) - (1187455053 / 100000000 : Rat) /\
     (0 : Rat) < (77428540678044165926504717171 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5195,7 +5195,7 @@ theorem k11_row_valid_16614 : K11RowValid 16614 := by
     (767068226481977315893443 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (401927561 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (219610883 / 50000000 : Rat) - (3759111 / 800000 : Rat) /\
     (0 : Rat) < (767068226481977315893443 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5204,7 +5204,7 @@ theorem k11_row_valid_16615 : K11RowValid 16615 := by
     (376840087003 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (739804261 / 100000000 : Rat) - (115159957 / 50000000 : Rat) /\
     (0 : Rat) < (376840087003 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5213,7 +5213,7 @@ theorem k11_row_valid_16616 : K11RowValid 16616 := by
     (18632894324404297374847404051 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (20492037 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (78368379 / 50000000 : Rat) - (3553623 / 1250000 : Rat) /\
     (0 : Rat) < (18632894324404297374847404051 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5222,7 +5222,7 @@ theorem k11_row_valid_16617 : K11RowValid 16617 := by
     (731205449313650906129623 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (443531879 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (65661463 / 25000000 : Rat) - (56035789 / 6250000 : Rat) /\
     (0 : Rat) < (731205449313650906129623 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5231,7 +5231,7 @@ theorem k11_row_valid_16618 : K11RowValid 16618 := by
     (26695503047 / 16060352253125000 : Rat) = (1600000000 / 5139312721 : Rat) * (52459523 / 6250000 : Rat) - (8165993 / 3125000 : Rat) /\
     (0 : Rat) < (26695503047 / 16060352253125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5240,7 +5240,7 @@ theorem k11_row_valid_16619 : K11RowValid 16619 := by
     (90539894222994991928512434779 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (158630401 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (423554691 / 100000000 : Rat) - (347308161 / 50000000 : Rat) /\
     (0 : Rat) < (90539894222994991928512434779 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5249,7 +5249,7 @@ theorem k11_row_valid_16620 : K11RowValid 16620 := by
     (1810419445149325660528723 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1005775223 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (507388563 / 50000000 : Rat) - (554826513 / 50000000 : Rat) /\
     (0 : Rat) < (1810419445149325660528723 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5258,7 +5258,7 @@ theorem k11_row_valid_16621 : K11RowValid 16621 := by
     (428527033081 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (105608799 / 25000000 : Rat) - (131514839 / 100000000 : Rat) /\
     (0 : Rat) < (428527033081 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5267,7 +5267,7 @@ theorem k11_row_valid_16622 : K11RowValid 16622 := by
     (82904395079045066772107609933 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (77639109 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (383542757 / 100000000 : Rat) - (636241407 / 100000000 : Rat) /\
     (0 : Rat) < (82904395079045066772107609933 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5276,7 +5276,7 @@ theorem k11_row_valid_16623 : K11RowValid 16623 := by
     (2826546254709842524395031 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (424362169 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (935111511 / 100000000 : Rat) - (433056177 / 50000000 : Rat) /\
     (0 : Rat) < (2826546254709842524395031 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5285,7 +5285,7 @@ theorem k11_row_valid_16624 : K11RowValid 16624 := by
     (3197109027261 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3147889689 / 100000000 : Rat) - (980018259 / 100000000 : Rat) /\
     (0 : Rat) < (3197109027261 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5294,7 +5294,7 @@ theorem k11_row_valid_16625 : K11RowValid 16625 := by
     (40555242258811099952156767119 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3886417 / 1000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (134998551 / 100000000 : Rat) - (310906267 / 100000000 : Rat) /\
     (0 : Rat) < (40555242258811099952156767119 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5303,7 +5303,7 @@ theorem k11_row_valid_16626 : K11RowValid 16626 := by
     (925992615802343617771817 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (84493683 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (193715177 / 50000000 : Rat) - (113431257 / 20000000 : Rat) /\
     (0 : Rat) < (925992615802343617771817 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5312,7 +5312,7 @@ theorem k11_row_valid_16627 : K11RowValid 16627 := by
     (215451306033 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (424575127 / 100000000 : Rat) - (66090527 / 50000000 : Rat) /\
     (0 : Rat) < (215451306033 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5321,7 +5321,7 @@ theorem k11_row_valid_16628 : K11RowValid 16628 := by
     (67082216083936684643675850451 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128720081 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (337073979 / 50000000 : Rat) - (514260133 / 50000000 : Rat) /\
     (0 : Rat) < (67082216083936684643675850451 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5330,7 +5330,7 @@ theorem k11_row_valid_16629 : K11RowValid 16629 := by
     (14286617381565140005389 / 2055725088400000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (244592831 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (4802509 / 400000 : Rat) - (68419061 / 6250000 : Rat) /\
     (0 : Rat) < (14286617381565140005389 / 2055725088400000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5339,7 +5339,7 @@ theorem k11_row_valid_16630 : K11RowValid 16630 := by
     (107181372277 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (211420943 / 50000000 : Rat) - (32910363 / 25000000 : Rat) /\
     (0 : Rat) < (107181372277 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5348,7 +5348,7 @@ theorem k11_row_valid_16631 : K11RowValid 16631 := by
     (107454396506509476677616640971 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (71844473 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (554067059 / 100000000 : Rat) - (206045037 / 25000000 : Rat) /\
     (0 : Rat) < (107454396506509476677616640971 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5357,7 +5357,7 @@ theorem k11_row_valid_16632 : K11RowValid 16632 := by
     (95058408818135130612883 / 32120704506250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (50156523 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (27245523 / 6250000 : Rat) - (18683741 / 4000000 : Rat) /\
     (0 : Rat) < (95058408818135130612883 / 32120704506250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5366,7 +5366,7 @@ theorem k11_row_valid_16633 : K11RowValid 16633 := by
     (486657360013 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (191786613 / 20000000 : Rat) - (149270147 / 50000000 : Rat) /\
     (0 : Rat) < (486657360013 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5375,7 +5375,7 @@ theorem k11_row_valid_16634 : K11RowValid 16634 := by
     (1363120573707043214992116193 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (23620223 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (6158297 / 3125000 : Rat) - (67210977 / 20000000 : Rat) /\
     (0 : Rat) < (1363120573707043214992116193 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5384,7 +5384,7 @@ theorem k11_row_valid_16635 : K11RowValid 16635 := by
     (1518625210001933582747703 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1021960393 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (187245943 / 100000000 : Rat) - (465137369 / 100000000 : Rat) /\
     (0 : Rat) < (1518625210001933582747703 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5393,7 +5393,7 @@ theorem k11_row_valid_16636 : K11RowValid 16636 := by
     (13057013623 / 8030176126562500 : Rat) = (1600000000 / 5139312721 : Rat) * (102573989 / 12500000 : Rat) - (3991737 / 1562500 : Rat) /\
     (0 : Rat) < (13057013623 / 8030176126562500 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5402,7 +5402,7 @@ theorem k11_row_valid_16637 : K11RowValid 16637 := by
     (102801018878224636667895454611 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (66550199 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (530138619 / 100000000 : Rat) - (787221799 / 100000000 : Rat) /\
     (0 : Rat) < (102801018878224636667895454611 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5411,7 +5411,7 @@ theorem k11_row_valid_16638 : K11RowValid 16638 := by
     (3276015780534575775076173 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1367822821 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (736032013 / 100000000 : Rat) - (100357211 / 10000000 : Rat) /\
     (0 : Rat) < (3276015780534575775076173 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5420,7 +5420,7 @@ theorem k11_row_valid_16639 : K11RowValid 16639 := by
     (609729181029 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (300338817 / 50000000 : Rat) - (187006251 / 100000000 : Rat) /\
     (0 : Rat) < (609729181029 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5429,7 +5429,7 @@ theorem k11_row_valid_16640 : K11RowValid 16640 := by
     (5053481725001504598316757217 / 513931272100000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (4163261 / 3125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (26789593 / 2500000 : Rat) - (96809393 / 6250000 : Rat) /\
     (0 : Rat) < (5053481725001504598316757217 / 513931272100000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5438,7 +5438,7 @@ theorem k11_row_valid_16641 : K11RowValid 16641 := by
     (435771362061466868709957 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (186779913 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (132864517 / 25000000 : Rat) - (33341023 / 6250000 : Rat) /\
     (0 : Rat) < (435771362061466868709957 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5447,7 +5447,7 @@ theorem k11_row_valid_16642 : K11RowValid 16642 := by
     (941595667957 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (926979333 / 100000000 : Rat) - (288592283 / 100000000 : Rat) /\
     (0 : Rat) < (941595667957 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5456,7 +5456,7 @@ theorem k11_row_valid_16643 : K11RowValid 16643 := by
     (4867230073880760061582471613 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (71840953 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (18443477 / 12500000 : Rat) - (74257459 / 25000000 : Rat) /\
     (0 : Rat) < (4867230073880760061582471613 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5465,7 +5465,7 @@ theorem k11_row_valid_16644 : K11RowValid 16644 := by
     (3052139234619075922927283 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2652542991 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (138311923 / 100000000 : Rat) - (467184733 / 50000000 : Rat) /\
     (0 : Rat) < (3052139234619075922927283 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5474,7 +5474,7 @@ theorem k11_row_valid_16645 : K11RowValid 16645 := by
     (193049067167 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (381338999 / 50000000 : Rat) - (59360273 / 25000000 : Rat) /\
     (0 : Rat) < (193049067167 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5483,7 +5483,7 @@ theorem k11_row_valid_16646 : K11RowValid 16646 := by
     (7479790549263260186837369631 / 642414090125000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (213470509 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (39292199 / 3125000 : Rat) - (229408039 / 12500000 : Rat) /\
     (0 : Rat) < (7479790549263260186837369631 / 642414090125000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5492,7 +5492,7 @@ theorem k11_row_valid_16647 : K11RowValid 16647 := by
     (755147775166814244742203 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (103758287 / 10000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (191800443 / 25000000 : Rat) - (57826631 / 6250000 : Rat) /\
     (0 : Rat) < (755147775166814244742203 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5501,7 +5501,7 @@ theorem k11_row_valid_16648 : K11RowValid 16648 := by
     (655669988483 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (51571 / 8000 : Rat) - (200692077 / 100000000 : Rat) /\
     (0 : Rat) < (655669988483 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5510,7 +5510,7 @@ theorem k11_row_valid_16649 : K11RowValid 16649 := by
     (75738154615153068748449789413 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (73497369 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (395679677 / 50000000 : Rat) - (14487819 / 1250000 : Rat) /\
     (0 : Rat) < (75738154615153068748449789413 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5519,7 +5519,7 @@ theorem k11_row_valid_16650 : K11RowValid 16650 := by
     (4909022150398205021606523 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (145786347 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1627890363 / 100000000 : Rat) - (150471591 / 10000000 : Rat) /\
     (0 : Rat) < (4909022150398205021606523 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5528,7 +5528,7 @@ theorem k11_row_valid_16651 : K11RowValid 16651 := by
     (1487684457 / 1027862544200000 : Rat) = (1600000000 / 5139312721 : Rat) * (366002009 / 50000000 : Rat) - (455783 / 200000 : Rat) /\
     (0 : Rat) < (1487684457 / 1027862544200000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5537,7 +5537,7 @@ theorem k11_row_valid_16652 : K11RowValid 16652 := by
     (46385953933666914468905924679 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (117989407 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (200171791 / 50000000 : Rat) - (355062321 / 50000000 : Rat) /\
     (0 : Rat) < (46385953933666914468905924679 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5546,7 +5546,7 @@ theorem k11_row_valid_16653 : K11RowValid 16653 := by
     (335794276648660706198037 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (332468397 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (64918997 / 25000000 : Rat) - (205419691 / 50000000 : Rat) /\
     (0 : Rat) < (335794276648660706198037 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5555,7 +5555,7 @@ theorem k11_row_valid_16654 : K11RowValid 16654 := by
     (471314958711 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (29119607 / 6250000 : Rat) - (145050809 / 100000000 : Rat) /\
     (0 : Rat) < (471314958711 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5564,7 +5564,7 @@ theorem k11_row_valid_16655 : K11RowValid 16655 := by
     (124330240626025624777689105007 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (102398127 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (654336503 / 50000000 : Rat) - (1904763053 / 100000000 : Rat) /\
     (0 : Rat) < (124330240626025624777689105007 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5573,7 +5573,7 @@ theorem k11_row_valid_16656 : K11RowValid 16656 := by
     (574246503199428136342881 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (540960237 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (170787361 / 25000000 : Rat) - (352319789 / 50000000 : Rat) /\
     (0 : Rat) < (574246503199428136342881 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5582,7 +5582,7 @@ theorem k11_row_valid_16657 : K11RowValid 16657 := by
     (366090263859 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (360038061 / 100000000 : Rat) - (112089021 / 100000000 : Rat) /\
     (0 : Rat) < (366090263859 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5591,7 +5591,7 @@ theorem k11_row_valid_16658 : K11RowValid 16658 := by
     (46148654761832776682568891081 / 5139312721000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (15836667 / 10000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (242469249 / 25000000 : Rat) - (1413699543 / 100000000 : Rat) /\
     (0 : Rat) < (46148654761832776682568891081 / 5139312721000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5600,7 +5600,7 @@ theorem k11_row_valid_16659 : K11RowValid 16659 := by
     (127923651643504957435409 / 25696563605000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (187394989 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (42514129 / 5000000 : Rat) - (49005903 / 6250000 : Rat) /\
     (0 : Rat) < (127923651643504957435409 / 25696563605000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5609,7 +5609,7 @@ theorem k11_row_valid_16660 : K11RowValid 16660 := by
     (1276309232909 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (251387053 / 10000000 : Rat) - (391315971 / 50000000 : Rat) /\
     (0 : Rat) < (1276309232909 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5618,7 +5618,7 @@ theorem k11_row_valid_16661 : K11RowValid 16661 := by
     (44879063246981250812421195183 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (228983313 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (192990007 / 100000000 : Rat) - (342781309 / 100000000 : Rat) /\
     (0 : Rat) < (44879063246981250812421195183 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5627,7 +5627,7 @@ theorem k11_row_valid_16662 : K11RowValid 16662 := by
     (1906004466331703967436931 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (304466529 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (140105411 / 100000000 : Rat) - (116782791 / 20000000 : Rat) /\
     (0 : Rat) < (1906004466331703967436931 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5636,7 +5636,7 @@ theorem k11_row_valid_16663 : K11RowValid 16663 := by
     (52961087539 / 25696563605000000 : Rat) = (1600000000 / 5139312721 : Rat) * (520450211 / 50000000 : Rat) - (16202941 / 5000000 : Rat) /\
     (0 : Rat) < (52961087539 / 25696563605000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5645,7 +5645,7 @@ theorem k11_row_valid_16664 : K11RowValid 16664 := by
     (68659408047273102946021049063 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (155324003 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (356644527 / 50000000 : Rat) - (262947877 / 25000000 : Rat) /\
     (0 : Rat) < (68659408047273102946021049063 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5654,7 +5654,7 @@ theorem k11_row_valid_16665 : K11RowValid 16665 := by
     (2321513675759904287922869 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (5859769571 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (325238389 / 25000000 : Rat) - (711363439 / 25000000 : Rat) /\
     (0 : Rat) < (2321513675759904287922869 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5663,7 +5663,7 @@ theorem k11_row_valid_16666 : K11RowValid 16666 := by
     (665685455221 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (656732307 / 100000000 : Rat) - (204457499 / 100000000 : Rat) /\
     (0 : Rat) < (665685455221 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5672,7 +5672,7 @@ theorem k11_row_valid_16667 : K11RowValid 16667 := by
     (122839721027107686041928730241 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (67405829 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (638848889 / 100000000 : Rat) - (47034257 / 5000000 : Rat) /\
     (0 : Rat) < (122839721027107686041928730241 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5681,7 +5681,7 @@ theorem k11_row_valid_16668 : K11RowValid 16668 := by
     (4368209251414294558643 / 1209250052000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (127374999 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (24965411 / 4000000 : Rat) - (284606507 / 50000000 : Rat) /\
     (0 : Rat) < (4368209251414294558643 / 1209250052000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5690,7 +5690,7 @@ theorem k11_row_valid_16669 : K11RowValid 16669 := by
     (806882660801 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (797228421 / 100000000 : Rat) - (248197519 / 100000000 : Rat) /\
     (0 : Rat) < (806882660801 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5699,7 +5699,7 @@ theorem k11_row_valid_16670 : K11RowValid 16670 := by
     (6657843325083543473127210391 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (23921797 / 3125000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (15158239 / 12500000 : Rat) - (204456193 / 50000000 : Rat) /\
     (0 : Rat) < (6657843325083543473127210391 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5708,7 +5708,7 @@ theorem k11_row_valid_16671 : K11RowValid 16671 := by
     (2636193729296812058881181 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2198093443 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (156589661 / 100000000 : Rat) - (807234499 / 100000000 : Rat) /\
     (0 : Rat) < (2636193729296812058881181 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5717,7 +5717,7 @@ theorem k11_row_valid_16672 : K11RowValid 16672 := by
     (208692671273 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (411672617 / 100000000 : Rat) - (64082087 / 50000000 : Rat) /\
     (0 : Rat) < (208692671273 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5726,7 +5726,7 @@ theorem k11_row_valid_16673 : K11RowValid 16673 := by
     (123980583937662502970330132391 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (321144829 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (639696239 / 50000000 : Rat) - (1899794297 / 100000000 : Rat) /\
     (0 : Rat) < (123980583937662502970330132391 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5735,7 +5735,7 @@ theorem k11_row_valid_16674 : K11RowValid 16674 := by
     (2986084271729891796755301 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1070327413 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (315673381 / 100000000 : Rat) - (914222067 / 100000000 : Rat) /\
     (0 : Rat) < (2986084271729891796755301 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5744,7 +5744,7 @@ theorem k11_row_valid_16675 : K11RowValid 16675 := by
     (1091514838771 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1075755033 / 100000000 : Rat) - (334909949 / 100000000 : Rat) /\
     (0 : Rat) < (1091514838771 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5753,7 +5753,7 @@ theorem k11_row_valid_16676 : K11RowValid 16676 := by
     (49610810166569644896054030669 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (203755411 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (248086501 / 50000000 : Rat) - (761436621 / 100000000 : Rat) /\
     (0 : Rat) < (49610810166569644896054030669 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5762,7 +5762,7 @@ theorem k11_row_valid_16677 : K11RowValid 16677 := by
     (1402487189158806354633391 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (428550481 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (462258671 / 50000000 : Rat) - (171820119 / 20000000 : Rat) /\
     (0 : Rat) < (1402487189158806354633391 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5771,7 +5771,7 @@ theorem k11_row_valid_16678 : K11RowValid 16678 := by
     (1113540180863 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1094742713 / 100000000 : Rat) - (340821297 / 100000000 : Rat) /\
     (0 : Rat) < (1113540180863 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5780,7 +5780,7 @@ theorem k11_row_valid_16679 : K11RowValid 16679 := by
     (111549009192288363422951852031 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (113629647 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (205441799 / 100000000 : Rat) - (85502267 / 10000000 : Rat) /\
     (0 : Rat) < (111549009192288363422951852031 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5789,7 +5789,7 @@ theorem k11_row_valid_16680 : K11RowValid 16680 := by
     (139813499875845901687311 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (35882487 / 5000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (26106191 / 10000000 : Rat) - (214169059 / 50000000 : Rat) /\
     (0 : Rat) < (139813499875845901687311 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5798,7 +5798,7 @@ theorem k11_row_valid_16681 : K11RowValid 16681 := by
     (19090832969 / 20557250884000000 : Rat) = (1600000000 / 5139312721 : Rat) * (58772003 / 12500000 : Rat) - (5855111 / 4000000 : Rat) /\
     (0 : Rat) < (19090832969 / 20557250884000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5807,7 +5807,7 @@ theorem k11_row_valid_16682 : K11RowValid 16682 := by
     (22731219180013265517817134893 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (76621411 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (117030597 / 20000000 : Rat) - (54430333 / 6250000 : Rat) /\
     (0 : Rat) < (22731219180013265517817134893 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5816,7 +5816,7 @@ theorem k11_row_valid_16683 : K11RowValid 16683 := by
     (4182146494370499448357143 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (896852903 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1276970583 / 100000000 : Rat) - (1281546389 / 100000000 : Rat) /\
     (0 : Rat) < (4182146494370499448357143 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5825,7 +5825,7 @@ theorem k11_row_valid_16684 : K11RowValid 16684 := by
     (411731363539 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (202757163 / 50000000 : Rat) - (126246941 / 100000000 : Rat) /\
     (0 : Rat) < (411731363539 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5834,7 +5834,7 @@ theorem k11_row_valid_16685 : K11RowValid 16685 := by
     (178100012654038662483919192677 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (82522829 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (951631933 / 50000000 : Rat) - (2728841553 / 100000000 : Rat) /\
     (0 : Rat) < (178100012654038662483919192677 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5843,7 +5843,7 @@ theorem k11_row_valid_16686 : K11RowValid 16686 := by
     (268689252577926072664329 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (530877879 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (78536649 / 12500000 : Rat) - (329221167 / 50000000 : Rat) /\
     (0 : Rat) < (268689252577926072664329 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5852,7 +5852,7 @@ theorem k11_row_valid_16687 : K11RowValid 16687 := by
     (1705707530273 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (419258241 / 25000000 : Rat) - (522103087 / 100000000 : Rat) /\
     (0 : Rat) < (1705707530273 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5861,7 +5861,7 @@ theorem k11_row_valid_16688 : K11RowValid 16688 := by
     (63229535892441286523317116021 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (69002533 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (283138509 / 100000000 : Rat) - (12106009 / 2500000 : Rat) /\
     (0 : Rat) < (63229535892441286523317116021 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5870,7 +5870,7 @@ theorem k11_row_valid_16689 : K11RowValid 16689 := by
     (130153071364363130534599 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (79872311 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (25408519 / 10000000 : Rat) - (49796189 / 12500000 : Rat) /\
     (0 : Rat) < (130153071364363130534599 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5879,7 +5879,7 @@ theorem k11_row_valid_16690 : K11RowValid 16690 := by
     (128871893619 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (507539073 / 50000000 : Rat) - (39502461 / 12500000 : Rat) /\
     (0 : Rat) < (128871893619 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5888,7 +5888,7 @@ theorem k11_row_valid_16691 : K11RowValid 16691 := by
     (41176406761398650201832140481 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (237415391 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (198161849 / 50000000 : Rat) - (39465663 / 6250000 : Rat) /\
     (0 : Rat) < (41176406761398650201832140481 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5897,7 +5897,7 @@ theorem k11_row_valid_16692 : K11RowValid 16692 := by
     (2050777646830323416664781 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (359261827 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (515461261 / 50000000 : Rat) - (314148007 / 25000000 : Rat) /\
     (0 : Rat) < (2050777646830323416664781 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5906,7 +5906,7 @@ theorem k11_row_valid_16693 : K11RowValid 16693 := by
     (4851058081 / 5139312721000000 : Rat) = (1600000000 / 5139312721 : Rat) * (239273543 / 50000000 : Rat) - (1489839 / 1000000 : Rat) /\
     (0 : Rat) < (4851058081 / 5139312721000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5915,7 +5915,7 @@ theorem k11_row_valid_16694 : K11RowValid 16694 := by
     (2600153752472756790353123103 / 321207045062500000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2480051 / 1562500 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (13627687 / 1562500 : Rat) - (1276361847 / 100000000 : Rat) /\
     (0 : Rat) < (2600153752472756790353123103 / 321207045062500000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5924,7 +5924,7 @@ theorem k11_row_valid_16695 : K11RowValid 16695 := by
     (1629455014466330808752769 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (84340737 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (503060289 / 100000000 : Rat) - (249948537 / 50000000 : Rat) /\
     (0 : Rat) < (1629455014466330808752769 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5933,7 +5933,7 @@ theorem k11_row_valid_16696 : K11RowValid 16696 := by
     (104516587279 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (10310753 / 1250000 : Rat) - (32100001 / 12500000 : Rat) /\
     (0 : Rat) < (104516587279 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5942,7 +5942,7 @@ theorem k11_row_valid_16697 : K11RowValid 16697 := by
     (34653027545091740558398788521 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (202423221 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (144391009 / 100000000 : Rat) - (266144759 / 100000000 : Rat) /\
     (0 : Rat) < (34653027545091740558398788521 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5951,7 +5951,7 @@ theorem k11_row_valid_16698 : K11RowValid 16698 := by
     (331631703338720817386839 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2785258651 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (18999959 / 10000000 : Rat) - (508129231 / 50000000 : Rat) /\
     (0 : Rat) < (331631703338720817386839 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5960,7 +5960,7 @@ theorem k11_row_valid_16699 : K11RowValid 16699 := by
     (427831626241 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (168380539 / 20000000 : Rat) - (131052879 / 50000000 : Rat) /\
     (0 : Rat) < (427831626241 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5969,7 +5969,7 @@ theorem k11_row_valid_16700 : K11RowValid 16700 := by
     (62759357041522434452595793477 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (218893811 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (317775133 / 50000000 : Rat) - (481110823 / 50000000 : Rat) /\
     (0 : Rat) < (62759357041522434452595793477 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5978,7 +5978,7 @@ theorem k11_row_valid_16701 : K11RowValid 16701 := by
     (546674272973556359957613 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3997056471 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (54788653 / 10000000 : Rat) - (1674438391 / 100000000 : Rat) /\
     (0 : Rat) < (546674272973556359957613 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5987,7 +5987,7 @@ theorem k11_row_valid_16702 : K11RowValid 16702 := by
     (424298985499 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (416195239 / 100000000 : Rat) - (129572181 / 100000000 : Rat) /\
     (0 : Rat) < (424298985499 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -5996,7 +5996,7 @@ theorem k11_row_valid_16703 : K11RowValid 16703 := by
     (2452935649680957481141396031 / 822290035360000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2797691 / 1562500 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (11817799 / 4000000 : Rat) - (58920911 / 12500000 : Rat) /\
     (0 : Rat) < (2452935649680957481141396031 / 822290035360000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6005,7 +6005,7 @@ theorem k11_row_valid_16704 : K11RowValid 16704 := by
     (3872117175854737028743291 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (342079709 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (1375760571 / 100000000 : Rat) - (14829683 / 1250000 : Rat) /\
     (0 : Rat) < (3872117175854737028743291 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6014,7 +6014,7 @@ theorem k11_row_valid_16705 : K11RowValid 16705 := by
     (94907147803 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (117060597 / 12500000 : Rat) - (29155157 / 10000000 : Rat) /\
     (0 : Rat) < (94907147803 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6023,7 +6023,7 @@ theorem k11_row_valid_16706 : K11RowValid 16706 := by
     (1985484199209067456137014207 / 822290035360000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (63426367 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (7983303 / 4000000 : Rat) - (379498431 / 100000000 : Rat) /\
     (0 : Rat) < (1985484199209067456137014207 / 822290035360000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6032,7 +6032,7 @@ theorem k11_row_valid_16707 : K11RowValid 16707 := by
     (2039676309323318732852509 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (802836223 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (478699229 / 100000000 : Rat) - (625689023 / 100000000 : Rat) /\
     (0 : Rat) < (2039676309323318732852509 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6041,7 +6041,7 @@ theorem k11_row_valid_16708 : K11RowValid 16708 := by
     (425174174209 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (418181873 / 50000000 : Rat) - (130190671 / 50000000 : Rat) /\
     (0 : Rat) < (425174174209 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6050,7 +6050,7 @@ theorem k11_row_valid_16709 : K11RowValid 16709 := by
     (17429613691385280538856514133 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (373405201 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (86544557 / 10000000 : Rat) - (333433823 / 25000000 : Rat) /\
     (0 : Rat) < (17429613691385280538856514133 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6059,7 +6059,7 @@ theorem k11_row_valid_16710 : K11RowValid 16710 := by
     (2489773980457648803484163 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (467849631 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (786139203 / 100000000 : Rat) - (47669887 / 6250000 : Rat) /\
     (0 : Rat) < (2489773980457648803484163 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6068,7 +6068,7 @@ theorem k11_row_valid_16711 : K11RowValid 16711 := by
     (96361838743 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (378318117 / 50000000 : Rat) - (29445017 / 12500000 : Rat) /\
     (0 : Rat) < (96361838743 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6077,7 +6077,7 @@ theorem k11_row_valid_16712 : K11RowValid 16712 := by
     (6649776218107937237936084753 / 1209250052000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (302132143 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (547759129 / 100000000 : Rat) - (86463373 / 10000000 : Rat) /\
     (0 : Rat) < (6649776218107937237936084753 / 1209250052000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6086,7 +6086,7 @@ theorem k11_row_valid_16713 : K11RowValid 16713 := by
     (105126691823856386434413 / 30231251300000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (41106629 / 6250000 : Rat) + (784931055601 / 1000000000000 : Rat) * (436360701 / 100000000 : Rat) - (273636751 / 50000000 : Rat) /\
     (0 : Rat) < (105126691823856386434413 / 30231251300000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6095,7 +6095,7 @@ theorem k11_row_valid_16714 : K11RowValid 16714 := by
     (109556643847 / 64241409012500000 : Rat) = (1600000000 / 5139312721 : Rat) * (432745733 / 50000000 : Rat) - (33681193 / 12500000 : Rat) /\
     (0 : Rat) < (109556643847 / 64241409012500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6104,7 +6104,7 @@ theorem k11_row_valid_16715 : K11RowValid 16715 := by
     (73404333538260334960463479081 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (327051391 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (254721249 / 100000000 : Rat) - (70246703 / 12500000 : Rat) /\
     (0 : Rat) < (73404333538260334960463479081 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6113,7 +6113,7 @@ theorem k11_row_valid_16716 : K11RowValid 16716 := by
     (874482667575479478609063 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (188935359 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (191856103 / 50000000 : Rat) - (536468999 / 100000000 : Rat) /\
     (0 : Rat) < (874482667575479478609063 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6122,7 +6122,7 @@ theorem k11_row_valid_16717 : K11RowValid 16717 := by
     (2069881550091 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (2037934817 / 100000000 : Rat) - (634461029 / 100000000 : Rat) /\
     (0 : Rat) < (2069881550091 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6131,7 +6131,7 @@ theorem k11_row_valid_16718 : K11RowValid 16718 := by
     (8047965085394357478535006667 / 2055725088400000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (77289161 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (40278643 / 10000000 : Rat) - (153688227 / 25000000 : Rat) /\
     (0 : Rat) < (8047965085394357478535006667 / 2055725088400000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6140,7 +6140,7 @@ theorem k11_row_valid_16719 : K11RowValid 16719 := by
     (3457679069376103095223439 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1091934689 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (484164559 / 100000000 : Rat) - (1059929733 / 100000000 : Rat) /\
     (0 : Rat) < (3457679069376103095223439 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6149,7 +6149,7 @@ theorem k11_row_valid_16720 : K11RowValid 16720 := by
     (1705948311 / 1889453206250000 : Rat) = (1600000000 / 5139312721 : Rat) * (45557739 / 10000000 : Rat) - (8864553 / 6250000 : Rat) /\
     (0 : Rat) < (1705948311 / 1889453206250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6158,7 +6158,7 @@ theorem k11_row_valid_16721 : K11RowValid 16721 := by
     (371081211163262047121636583961 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (13394423 / 6250000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (1973554769 / 100000000 : Rat) - (2843062323 / 100000000 : Rat) /\
     (0 : Rat) < (371081211163262047121636583961 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6167,7 +6167,7 @@ theorem k11_row_valid_16722 : K11RowValid 16722 := by
     (2142937711632421124830327 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (106731911 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (667394487 / 100000000 : Rat) - (656771779 / 100000000 : Rat) /\
     (0 : Rat) < (2142937711632421124830327 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6176,7 +6176,7 @@ theorem k11_row_valid_16723 : K11RowValid 16723 := by
     (685826810547 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (675365521 / 100000000 : Rat) - (210258493 / 100000000 : Rat) /\
     (0 : Rat) < (685826810547 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6185,7 +6185,7 @@ theorem k11_row_valid_16724 : K11RowValid 16724 := by
     (602890944072793681258703903 / 256965636050000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (395751259 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2190887 / 1250000 : Rat) - (184886879 / 50000000 : Rat) /\
     (0 : Rat) < (602890944072793681258703903 / 256965636050000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6194,7 +6194,7 @@ theorem k11_row_valid_16725 : K11RowValid 16725 := by
     (215638865823594513070837 / 64241409012500000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1192820731 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (24815797 / 12500000 : Rat) - (527184901 / 100000000 : Rat) /\
     (0 : Rat) < (215638865823594513070837 / 64241409012500000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6203,7 +6203,7 @@ theorem k11_row_valid_16726 : K11RowValid 16726 := by
     (30911693367 / 25696563605000000 : Rat) = (1600000000 / 5139312721 : Rat) * (611454807 / 100000000 : Rat) - (9518073 / 5000000 : Rat) /\
     (0 : Rat) < (30911693367 / 25696563605000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6212,7 +6212,7 @@ theorem k11_row_valid_16727 : K11RowValid 16727 := by
     (13244228280767440963962914317 / 1284828180250000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (87143607 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (67235493 / 6250000 : Rat) - (1621880423 / 100000000 : Rat) /\
     (0 : Rat) < (13244228280767440963962914317 / 1284828180250000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6221,7 +6221,7 @@ theorem k11_row_valid_16728 : K11RowValid 16728 := by
     (1502294932172566112810801 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (889761621 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (233168881 / 50000000 : Rat) - (920053681 / 100000000 : Rat) /\
     (0 : Rat) < (1502294932172566112810801 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6230,7 +6230,7 @@ theorem k11_row_valid_16729 : K11RowValid 16729 := by
     (438698044869 / 256965636050000000 : Rat) = (1600000000 / 5139312721 : Rat) * (215612311 / 25000000 : Rat) - (134251211 / 50000000 : Rat) /\
     (0 : Rat) < (438698044869 / 256965636050000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6239,7 +6239,7 @@ theorem k11_row_valid_16730 : K11RowValid 16730 := by
     (91307234433353842136144684453 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (128297733 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (468371837 / 100000000 : Rat) - (698834817 / 100000000 : Rat) /\
     (0 : Rat) < (91307234433353842136144684453 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6248,7 +6248,7 @@ theorem k11_row_valid_16731 : K11RowValid 16731 := by
     (1855064207461754300022719 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (317513101 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (661226239 / 50000000 : Rat) - (568441639 / 50000000 : Rat) /\
     (0 : Rat) < (1855064207461754300022719 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6257,7 +6257,7 @@ theorem k11_row_valid_16732 : K11RowValid 16732 := by
     (76963187349 / 51393127210000000 : Rat) = (1600000000 / 5139312721 : Rat) * (760051223 / 100000000 : Rat) - (23662331 / 10000000 : Rat) /\
     (0 : Rat) < (76963187349 / 51393127210000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6266,7 +6266,7 @@ theorem k11_row_valid_16733 : K11RowValid 16733 := by
     (6586058690229846371036517719 / 2569656360500000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (348451851 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (26305951 / 12500000 : Rat) - (404533777 / 100000000 : Rat) /\
     (0 : Rat) < (6586058690229846371036517719 / 2569656360500000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6275,7 +6275,7 @@ theorem k11_row_valid_16734 : K11RowValid 16734 := by
     (1722798987040195158685529 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (248652189 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (279053849 / 100000000 : Rat) - (528684939 / 100000000 : Rat) /\
     (0 : Rat) < (1722798987040195158685529 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6284,7 +6284,7 @@ theorem k11_row_valid_16735 : K11RowValid 16735 := by
     (14534228487 / 12848281802500000 : Rat) = (1600000000 / 5139312721 : Rat) * (573207569 / 100000000 : Rat) - (4461353 / 2500000 : Rat) /\
     (0 : Rat) < (14534228487 / 12848281802500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6293,7 +6293,7 @@ theorem k11_row_valid_16736 : K11RowValid 16736 := by
     (84264574511009841861853784553 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (62116289 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (447864737 / 20000000 : Rat) - (403446471 / 12500000 : Rat) /\
     (0 : Rat) < (84264574511009841861853784553 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6302,7 +6302,7 @@ theorem k11_row_valid_16737 : K11RowValid 16737 := by
     (342573102129778877616247 / 51393127210000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (760318701 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (103534007 / 10000000 : Rat) - (1639651 / 156250 : Rat) /\
     (0 : Rat) < (342573102129778877616247 / 51393127210000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6311,7 +6311,7 @@ theorem k11_row_valid_16738 : K11RowValid 16738 := by
     (35191664081 / 32120704506250000 : Rat) = (1600000000 / 5139312721 : Rat) * (17351357 / 3125000 : Rat) - (10803839 / 6250000 : Rat) /\
     (0 : Rat) < (35191664081 / 32120704506250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6320,7 +6320,7 @@ theorem k11_row_valid_16739 : K11RowValid 16739 := by
     (24291540245010798651630349769 / 1209250052000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (55789767 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (2223516817 / 100000000 : Rat) - (790679781 / 25000000 : Rat) /\
     (0 : Rat) < (24291540245010798651630349769 / 1209250052000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6329,7 +6329,7 @@ theorem k11_row_valid_16740 : K11RowValid 16740 := by
     (2704299501338844338782613 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (105449433 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (889613653 / 100000000 : Rat) - (829601321 / 100000000 : Rat) /\
     (0 : Rat) < (2704299501338844338782613 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6338,7 +6338,7 @@ theorem k11_row_valid_16741 : K11RowValid 16741 := by
     (1756377834609 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1730209413 / 100000000 : Rat) - (538658271 / 100000000 : Rat) /\
     (0 : Rat) < (1756377834609 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6347,7 +6347,7 @@ theorem k11_row_valid_16742 : K11RowValid 16742 := by
     (1265284289593753570886302313 / 513931272100000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1377797 / 625000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (5663777 / 2500000 : Rat) - (387336683 / 100000000 : Rat) /\
     (0 : Rat) < (1265284289593753570886302313 / 513931272100000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6356,7 +6356,7 @@ theorem k11_row_valid_16743 : K11RowValid 16743 := by
     (1689788067610168496526571 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1282618853 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (150526251 / 100000000 : Rat) - (25873229 / 5000000 : Rat) /\
     (0 : Rat) < (1689788067610168496526571 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6365,7 +6365,7 @@ theorem k11_row_valid_16744 : K11RowValid 16744 := by
     (23331669411 / 16060352253125000 : Rat) = (1600000000 / 5139312721 : Rat) * (736372397 / 100000000 : Rat) - (7164109 / 3125000 : Rat) /\
     (0 : Rat) < (23331669411 / 16060352253125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6374,7 +6374,7 @@ theorem k11_row_valid_16745 : K11RowValid 16745 := by
     (89477515661740805766579629267 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (133007661 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (457674043 / 100000000 : Rat) - (685251779 / 100000000 : Rat) /\
     (0 : Rat) < (89477515661740805766579629267 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6383,7 +6383,7 @@ theorem k11_row_valid_16746 : K11RowValid 16746 := by
     (91477391073828658495811 / 6424140901250000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (367711889 / 20000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (26594691 / 1250000 : Rat) - (1121194623 / 50000000 : Rat) /\
     (0 : Rat) < (91477391073828658495811 / 6424140901250000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6392,7 +6392,7 @@ theorem k11_row_valid_16747 : K11RowValid 16747 := by
     (424686670081 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (416663103 / 100000000 : Rat) - (129717839 / 100000000 : Rat) /\
     (0 : Rat) < (424686670081 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6401,7 +6401,7 @@ theorem k11_row_valid_16748 : K11RowValid 16748 := by
     (10651212429123698908614949403 / 822290035360000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (28361393 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (56760387 / 4000000 : Rat) - (1020185719 / 50000000 : Rat) /\
     (0 : Rat) < (10651212429123698908614949403 / 822290035360000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6410,7 +6410,7 @@ theorem k11_row_valid_16749 : K11RowValid 16749 := by
     (323561386913659117716343 / 128482818025000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (66896769 / 25000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (99865783 / 25000000 : Rat) - (396857493 / 100000000 : Rat) /\
     (0 : Rat) < (323561386913659117716343 / 128482818025000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6419,7 +6419,7 @@ theorem k11_row_valid_16750 : K11RowValid 16750 := by
     (30308463599 / 12848281802500000 : Rat) = (1600000000 / 5139312721 : Rat) * (1193102613 / 100000000 : Rat) - (9286081 / 2500000 : Rat) /\
     (0 : Rat) < (30308463599 / 12848281802500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6428,7 +6428,7 @@ theorem k11_row_valid_16751 : K11RowValid 16751 := by
     (28469189392805020072887768619 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (335347241 / 100000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (117892051 / 50000000 : Rat) - (109024163 / 25000000 : Rat) /\
     (0 : Rat) < (28469189392805020072887768619 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6437,7 +6437,7 @@ theorem k11_row_valid_16752 : K11RowValid 16752 := by
     (832064858923082089549163 / 256965636050000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (162420927 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (67404203 / 50000000 : Rat) - (255170709 / 50000000 : Rat) /\
     (0 : Rat) < (832064858923082089549163 / 256965636050000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6446,7 +6446,7 @@ theorem k11_row_valid_16753 : K11RowValid 16753 := by
     (605733410579 / 513931272100000000 : Rat) = (1600000000 / 5139312721 : Rat) * (595302071 / 100000000 : Rat) - (185332701 / 100000000 : Rat) /\
     (0 : Rat) < (605733410579 / 513931272100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6455,7 +6455,7 @@ theorem k11_row_valid_16754 : K11RowValid 16754 := by
     (86040815189856383244768573461 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (97714979 / 20000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (414300269 / 50000000 : Rat) - (1317757987 / 100000000 : Rat) /\
     (0 : Rat) < (86040815189856383244768573461 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6464,7 +6464,7 @@ theorem k11_row_valid_16755 : K11RowValid 16755 := by
     (4290816953869481580666903 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (3558568473 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (263501143 / 100000000 : Rat) - (657351563 / 50000000 : Rat) /\
     (0 : Rat) < (4290816953869481580666903 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6473,7 +6473,7 @@ theorem k11_row_valid_16756 : K11RowValid 16756 := by
     (124809335241 / 128482818025000000 : Rat) = (1600000000 / 5139312721 : Rat) * (491111481 / 100000000 : Rat) - (38223879 / 25000000 : Rat) /\
     (0 : Rat) < (124809335241 / 128482818025000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6482,7 +6482,7 @@ theorem k11_row_valid_16757 : K11RowValid 16757 := by
     (72182395116965678049612435387 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (130289969 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (335159523 / 100000000 : Rat) - (276309131 / 50000000 : Rat) /\
     (0 : Rat) < (72182395116965678049612435387 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6491,7 +6491,7 @@ theorem k11_row_valid_16758 : K11RowValid 16758 := by
     (2914771494457936690400313 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (412740873 / 100000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (974447353 / 100000000 : Rat) - (893370253 / 100000000 : Rat) /\
     (0 : Rat) < (2914771494457936690400313 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6500,7 +6500,7 @@ theorem k11_row_valid_16759 : K11RowValid 16759 := by
     (62326921833 / 25696563605000000 : Rat) = (1600000000 / 5139312721 : Rat) * (1228985637 / 100000000 : Rat) - (19130727 / 5000000 : Rat) /\
     (0 : Rat) < (62326921833 / 25696563605000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6509,7 +6509,7 @@ theorem k11_row_valid_16760 : K11RowValid 16760 := by
     (50104338322970455024659739519 / 20557250884000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (258152679 / 50000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (158358151 / 100000000 : Rat) - (383512851 / 100000000 : Rat) /\
     (0 : Rat) < (50104338322970455024659739519 / 20557250884000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6518,7 +6518,7 @@ theorem k11_row_valid_16761 : K11RowValid 16761 := by
     (1412291465860465273534189 / 513931272100000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (332167739 / 50000000 : Rat) + (784931055601 / 1000000000000 : Rat) * (287835309 / 100000000 : Rat) - (432755289 / 100000000 : Rat) /\
     (0 : Rat) < (1412291465860465273534189 / 513931272100000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6527,7 +6527,7 @@ theorem k11_row_valid_16762 : K11RowValid 16762 := by
     (25123295179 / 32120704506250000 : Rat) = (1600000000 / 5139312721 : Rat) * (6199381 / 1562500 : Rat) - (7720101 / 6250000 : Rat) /\
     (0 : Rat) < (25123295179 / 32120704506250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6536,7 +6536,7 @@ theorem k11_row_valid_16763 : K11RowValid 16763 := by
     (47544429510850929376506974517 / 4111450176800000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (24668073 / 12500000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (250161293 / 20000000 : Rat) - (1821038119 / 100000000 : Rat) /\
     (0 : Rat) < (47544429510850929376506974517 / 4111450176800000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6545,7 +6545,7 @@ theorem k11_row_valid_16764 : K11RowValid 16764 := by
     (822487463353849492880509 / 102786254420000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (75534999 / 12500000 : Rat) + (784931055601 / 1000000000000 : Rat) * (272967229 / 20000000 : Rat) - (157428669 / 12500000 : Rat) /\
     (0 : Rat) < (822487463353849492880509 / 102786254420000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6554,7 +6554,7 @@ theorem k11_row_valid_16765 : K11RowValid 16765 := by
     (26488018153 / 30231251300000000 : Rat) = (1600000000 / 5139312721 : Rat) * (220742807 / 50000000 : Rat) - (137445719 / 100000000 : Rat) /\
     (0 : Rat) < (26488018153 / 30231251300000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -6563,7 +6563,7 @@ theorem k11_row_valid_16766 : K11RowValid 16766 := by
     (179130053467831083253888797631 / 10278625442000000000000000000000000 : Rat) = (1600000000 / 5139312721 : Rat) * (44591101 / 25000000 : Rat) + (56270922444980089 / 40000000000000000 : Rat) * (955904199 / 50000000 : Rat) - (686252057 / 25000000 : Rat) /\
     (0 : Rat) < (179130053467831083253888797631 / 10278625442000000000000000000000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial⟩
 
 theorem k11_rows_shard_22 (index : Nat)
     (hlo : 16038 <= index) (hhi : index < 16767) :
@@ -7307,7 +7307,7 @@ theorem k11_auxiliary_valid_5346 : K11AuxiliaryValid 5346 := by
     (366124497 / 50000000 : Rat) <= (764637939 / 100000000 : Rat) /\
     (366124497 / 50000000 : Rat) <= (366124497 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7317,7 +7317,7 @@ theorem k11_auxiliary_valid_5347 : K11AuxiliaryValid 5347 := by
     (290388523 / 100000000 : Rat) <= (296685033 / 100000000 : Rat) /\
     (290388523 / 100000000 : Rat) <= (145194623 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7327,7 +7327,7 @@ theorem k11_auxiliary_valid_5348 : K11AuxiliaryValid 5348 := by
     (713748667 / 100000000 : Rat) <= (793485647 / 100000000 : Rat) /\
     (713748667 / 100000000 : Rat) <= (713748667 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7337,7 +7337,7 @@ theorem k11_auxiliary_valid_5349 : K11AuxiliaryValid 5349 := by
     (9925899 / 2500000 : Rat) <= (9925899 / 2500000 : Rat) /\
     (9925899 / 2500000 : Rat) <= (209796709 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7347,7 +7347,7 @@ theorem k11_auxiliary_valid_5350 : K11AuxiliaryValid 5350 := by
     (148350511 / 50000000 : Rat) <= (298529283 / 100000000 : Rat) /\
     (148350511 / 50000000 : Rat) <= (70072611 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7357,7 +7357,7 @@ theorem k11_auxiliary_valid_5351 : K11AuxiliaryValid 5351 := by
     (73072167 / 12500000 : Rat) <= (153227787 / 25000000 : Rat) /\
     (73072167 / 12500000 : Rat) <= (295286907 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7367,7 +7367,7 @@ theorem k11_auxiliary_valid_5352 : K11AuxiliaryValid 5352 := by
     (1153197483 / 100000000 : Rat) <= (1153197483 / 100000000 : Rat) /\
     (1153197483 / 100000000 : Rat) <= (1198779137 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7377,7 +7377,7 @@ theorem k11_auxiliary_valid_5353 : K11AuxiliaryValid 5353 := by
     (10595933 / 6250000 : Rat) <= (10595933 / 6250000 : Rat) /\
     (10595933 / 6250000 : Rat) <= (4510963 / 2500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7387,7 +7387,7 @@ theorem k11_auxiliary_valid_5354 : K11AuxiliaryValid 5354 := by
     (474425723 / 50000000 : Rat) <= (190383879 / 20000000 : Rat) /\
     (474425723 / 50000000 : Rat) <= (474425723 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7397,7 +7397,7 @@ theorem k11_auxiliary_valid_5355 : K11AuxiliaryValid 5355 := by
     (737030711 / 100000000 : Rat) <= (769150327 / 100000000 : Rat) /\
     (737030711 / 100000000 : Rat) <= (760172087 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7407,7 +7407,7 @@ theorem k11_auxiliary_valid_5356 : K11AuxiliaryValid 5356 := by
     (186318503 / 100000000 : Rat) <= (186318503 / 100000000 : Rat) /\
     (186318503 / 100000000 : Rat) <= (195739499 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7417,7 +7417,7 @@ theorem k11_auxiliary_valid_5357 : K11AuxiliaryValid 5357 := by
     (37822829 / 12500000 : Rat) <= (37822829 / 12500000 : Rat) /\
     (37822829 / 12500000 : Rat) <= (160233643 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7427,7 +7427,7 @@ theorem k11_auxiliary_valid_5358 : K11AuxiliaryValid 5358 := by
     (763358461 / 100000000 : Rat) <= (802963849 / 100000000 : Rat) /\
     (763358461 / 100000000 : Rat) <= (763358461 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7437,7 +7437,7 @@ theorem k11_auxiliary_valid_5359 : K11AuxiliaryValid 5359 := by
     (121670909 / 50000000 : Rat) <= (124308163 / 50000000 : Rat) /\
     (121670909 / 50000000 : Rat) <= (267309533 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7447,7 +7447,7 @@ theorem k11_auxiliary_valid_5360 : K11AuxiliaryValid 5360 := by
     (730087741 / 100000000 : Rat) <= (25341393 / 3125000 : Rat) /\
     (730087741 / 100000000 : Rat) <= (730087741 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7457,7 +7457,7 @@ theorem k11_auxiliary_valid_5361 : K11AuxiliaryValid 5361 := by
     (3440567 / 500000 : Rat) <= (3440567 / 500000 : Rat) /\
     (3440567 / 500000 : Rat) <= (381603397 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7467,7 +7467,7 @@ theorem k11_auxiliary_valid_5362 : K11AuxiliaryValid 5362 := by
     (16435717 / 12500000 : Rat) <= (16435717 / 12500000 : Rat) /\
     (16435717 / 12500000 : Rat) <= (70299101 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7477,7 +7477,7 @@ theorem k11_auxiliary_valid_5363 : K11AuxiliaryValid 5363 := by
     (2004857 / 500000 : Rat) <= (2004857 / 500000 : Rat) /\
     (2004857 / 500000 : Rat) <= (423990097 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7487,7 +7487,7 @@ theorem k11_auxiliary_valid_5364 : K11AuxiliaryValid 5364 := by
     (606528483 / 100000000 : Rat) <= (312793603 / 50000000 : Rat) /\
     (606528483 / 100000000 : Rat) <= (613017877 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7497,7 +7497,7 @@ theorem k11_auxiliary_valid_5365 : K11AuxiliaryValid 5365 := by
     (40338827 / 12500000 : Rat) <= (339743657 / 100000000 : Rat) /\
     (40338827 / 12500000 : Rat) <= (40338827 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7507,7 +7507,7 @@ theorem k11_auxiliary_valid_5366 : K11AuxiliaryValid 5366 := by
     (133019479 / 25000000 : Rat) <= (133019479 / 25000000 : Rat) /\
     (133019479 / 25000000 : Rat) <= (136769571 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7517,7 +7517,7 @@ theorem k11_auxiliary_valid_5367 : K11AuxiliaryValid 5367 := by
     (212056967 / 50000000 : Rat) <= (217789633 / 50000000 : Rat) /\
     (212056967 / 50000000 : Rat) <= (481165481 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7527,7 +7527,7 @@ theorem k11_auxiliary_valid_5368 : K11AuxiliaryValid 5368 := by
     (88118493 / 50000000 : Rat) <= (181509737 / 100000000 : Rat) /\
     (88118493 / 50000000 : Rat) <= (93580333 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7537,7 +7537,7 @@ theorem k11_auxiliary_valid_5369 : K11AuxiliaryValid 5369 := by
     (1674805719 / 100000000 : Rat) <= (517576393 / 25000000 : Rat) /\
     (1674805719 / 100000000 : Rat) <= (1674805719 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7547,7 +7547,7 @@ theorem k11_auxiliary_valid_5370 : K11AuxiliaryValid 5370 := by
     (2663393 / 390625 : Rat) <= (98659327 / 12500000 : Rat) /\
     (2663393 / 390625 : Rat) <= (2663393 / 390625 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7557,7 +7557,7 @@ theorem k11_auxiliary_valid_5371 : K11AuxiliaryValid 5371 := by
     (42914593 / 25000000 : Rat) <= (88341097 / 50000000 : Rat) /\
     (42914593 / 25000000 : Rat) <= (42914593 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7567,7 +7567,7 @@ theorem k11_auxiliary_valid_5372 : K11AuxiliaryValid 5372 := by
     (27746111 / 4000000 : Rat) <= (724410097 / 100000000 : Rat) /\
     (27746111 / 4000000 : Rat) <= (406435527 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7577,7 +7577,7 @@ theorem k11_auxiliary_valid_5373 : K11AuxiliaryValid 5373 := by
     (601973927 / 100000000 : Rat) <= (601973927 / 100000000 : Rat) /\
     (601973927 / 100000000 : Rat) <= (126673343 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7587,7 +7587,7 @@ theorem k11_auxiliary_valid_5374 : K11AuxiliaryValid 5374 := by
     (387074491 / 100000000 : Rat) <= (387074491 / 100000000 : Rat) /\
     (387074491 / 100000000 : Rat) <= (432921553 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7597,7 +7597,7 @@ theorem k11_auxiliary_valid_5375 : K11AuxiliaryValid 5375 := by
     (14144607 / 2500000 : Rat) <= (326075511 / 50000000 : Rat) /\
     (14144607 / 2500000 : Rat) <= (14144607 / 2500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7607,7 +7607,7 @@ theorem k11_auxiliary_valid_5376 : K11AuxiliaryValid 5376 := by
     (17319381 / 3125000 : Rat) <= (17319381 / 3125000 : Rat) /\
     (17319381 / 3125000 : Rat) <= (563774771 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7617,7 +7617,7 @@ theorem k11_auxiliary_valid_5377 : K11AuxiliaryValid 5377 := by
     (138715009 / 50000000 : Rat) <= (138979213 / 50000000 : Rat) /\
     (138715009 / 50000000 : Rat) <= (138715009 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7627,7 +7627,7 @@ theorem k11_auxiliary_valid_5378 : K11AuxiliaryValid 5378 := by
     (766403267 / 100000000 : Rat) <= (435873937 / 50000000 : Rat) /\
     (766403267 / 100000000 : Rat) <= (815968731 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7637,7 +7637,7 @@ theorem k11_auxiliary_valid_5379 : K11AuxiliaryValid 5379 := by
     (52895033 / 5000000 : Rat) <= (52895033 / 5000000 : Rat) /\
     (52895033 / 5000000 : Rat) <= (565719601 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7647,7 +7647,7 @@ theorem k11_auxiliary_valid_5380 : K11AuxiliaryValid 5380 := by
     (261461681 / 100000000 : Rat) <= (301503187 / 100000000 : Rat) /\
     (261461681 / 100000000 : Rat) <= (134011667 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7657,7 +7657,7 @@ theorem k11_auxiliary_valid_5381 : K11AuxiliaryValid 5381 := by
     (115322179 / 6250000 : Rat) <= (115322179 / 6250000 : Rat) /\
     (115322179 / 6250000 : Rat) <= (30260229 / 1562500 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7667,7 +7667,7 @@ theorem k11_auxiliary_valid_5382 : K11AuxiliaryValid 5382 := by
     (375727141 / 100000000 : Rat) <= (407895901 / 100000000 : Rat) /\
     (375727141 / 100000000 : Rat) <= (375727141 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7677,7 +7677,7 @@ theorem k11_auxiliary_valid_5383 : K11AuxiliaryValid 5383 := by
     (240389753 / 100000000 : Rat) <= (244161203 / 100000000 : Rat) /\
     (240389753 / 100000000 : Rat) <= (240389753 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7687,7 +7687,7 @@ theorem k11_auxiliary_valid_5384 : K11AuxiliaryValid 5384 := by
     (174607687 / 50000000 : Rat) <= (362882409 / 100000000 : Rat) /\
     (174607687 / 50000000 : Rat) <= (174607687 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7697,7 +7697,7 @@ theorem k11_auxiliary_valid_5385 : K11AuxiliaryValid 5385 := by
     (2312869 / 625000 : Rat) <= (74190539 / 20000000 : Rat) /\
     (2312869 / 625000 : Rat) <= (94292551 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7707,7 +7707,7 @@ theorem k11_auxiliary_valid_5386 : K11AuxiliaryValid 5386 := by
     (52084077 / 25000000 : Rat) <= (115152813 / 50000000 : Rat) /\
     (52084077 / 25000000 : Rat) <= (42322387 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7717,7 +7717,7 @@ theorem k11_auxiliary_valid_5387 : K11AuxiliaryValid 5387 := by
     (21042783 / 2500000 : Rat) <= (853128159 / 100000000 : Rat) /\
     (21042783 / 2500000 : Rat) <= (843908123 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7727,7 +7727,7 @@ theorem k11_auxiliary_valid_5388 : K11AuxiliaryValid 5388 := by
     (368108669 / 50000000 : Rat) <= (368108669 / 50000000 : Rat) /\
     (368108669 / 50000000 : Rat) <= (844608953 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7737,7 +7737,7 @@ theorem k11_auxiliary_valid_5389 : K11AuxiliaryValid 5389 := by
     (46655901 / 20000000 : Rat) <= (26733021 / 10000000 : Rat) /\
     (46655901 / 20000000 : Rat) <= (121011171 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7747,7 +7747,7 @@ theorem k11_auxiliary_valid_5390 : K11AuxiliaryValid 5390 := by
     (684947609 / 100000000 : Rat) <= (767587473 / 100000000 : Rat) /\
     (684947609 / 100000000 : Rat) <= (684947609 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7757,7 +7757,7 @@ theorem k11_auxiliary_valid_5391 : K11AuxiliaryValid 5391 := by
     (1258400473 / 100000000 : Rat) <= (636005143 / 50000000 : Rat) /\
     (1258400473 / 100000000 : Rat) <= (1258400473 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7767,7 +7767,7 @@ theorem k11_auxiliary_valid_5392 : K11AuxiliaryValid 5392 := by
     (100292319 / 50000000 : Rat) <= (100292319 / 50000000 : Rat) /\
     (100292319 / 50000000 : Rat) <= (26948647 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7777,7 +7777,7 @@ theorem k11_auxiliary_valid_5393 : K11AuxiliaryValid 5393 := by
     (802119877 / 100000000 : Rat) <= (879889507 / 100000000 : Rat) /\
     (802119877 / 100000000 : Rat) <= (114968171 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7787,7 +7787,7 @@ theorem k11_auxiliary_valid_5394 : K11AuxiliaryValid 5394 := by
     (21201891 / 6250000 : Rat) <= (17231937 / 5000000 : Rat) /\
     (21201891 / 6250000 : Rat) <= (22724667 / 6250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7797,7 +7797,7 @@ theorem k11_auxiliary_valid_5395 : K11AuxiliaryValid 5395 := by
     (199174979 / 100000000 : Rat) <= (199174979 / 100000000 : Rat) /\
     (199174979 / 100000000 : Rat) <= (111106477 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7807,7 +7807,7 @@ theorem k11_auxiliary_valid_5396 : K11AuxiliaryValid 5396 := by
     (706109179 / 50000000 : Rat) <= (300435213 / 20000000 : Rat) /\
     (706109179 / 50000000 : Rat) <= (159025093 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7817,7 +7817,7 @@ theorem k11_auxiliary_valid_5397 : K11AuxiliaryValid 5397 := by
     (52774819 / 4000000 : Rat) <= (1367389133 / 100000000 : Rat) /\
     (52774819 / 4000000 : Rat) <= (52774819 / 4000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7827,7 +7827,7 @@ theorem k11_auxiliary_valid_5398 : K11AuxiliaryValid 5398 := by
     (140910993 / 100000000 : Rat) <= (36389513 / 25000000 : Rat) /\
     (140910993 / 100000000 : Rat) <= (140910993 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7837,7 +7837,7 @@ theorem k11_auxiliary_valid_5399 : K11AuxiliaryValid 5399 := by
     (1732494443 / 50000000 : Rat) <= (730601317 / 20000000 : Rat) /\
     (1732494443 / 50000000 : Rat) <= (1031598731 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7847,7 +7847,7 @@ theorem k11_auxiliary_valid_5400 : K11AuxiliaryValid 5400 := by
     (319418631 / 50000000 : Rat) <= (323159477 / 50000000 : Rat) /\
     (319418631 / 50000000 : Rat) <= (319418631 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7857,7 +7857,7 @@ theorem k11_auxiliary_valid_5401 : K11AuxiliaryValid 5401 := by
     (8958247 / 2000000 : Rat) <= (59913817 / 12500000 : Rat) /\
     (8958247 / 2000000 : Rat) <= (8958247 / 2000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7867,7 +7867,7 @@ theorem k11_auxiliary_valid_5402 : K11AuxiliaryValid 5402 := by
     (185872957 / 50000000 : Rat) <= (200103127 / 50000000 : Rat) /\
     (185872957 / 50000000 : Rat) <= (185872957 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7877,7 +7877,7 @@ theorem k11_auxiliary_valid_5403 : K11AuxiliaryValid 5403 := by
     (248378423 / 50000000 : Rat) <= (248378423 / 50000000 : Rat) /\
     (248378423 / 50000000 : Rat) <= (552048511 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7887,7 +7887,7 @@ theorem k11_auxiliary_valid_5404 : K11AuxiliaryValid 5404 := by
     (229984059 / 100000000 : Rat) <= (260922457 / 100000000 : Rat) /\
     (229984059 / 100000000 : Rat) <= (131770951 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7897,7 +7897,7 @@ theorem k11_auxiliary_valid_5405 : K11AuxiliaryValid 5405 := by
     (749440989 / 100000000 : Rat) <= (749440989 / 100000000 : Rat) /\
     (749440989 / 100000000 : Rat) <= (378080737 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7907,7 +7907,7 @@ theorem k11_auxiliary_valid_5406 : K11AuxiliaryValid 5406 := by
     (459507823 / 25000000 : Rat) <= (1980463709 / 100000000 : Rat) /\
     (459507823 / 25000000 : Rat) <= (459507823 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7917,7 +7917,7 @@ theorem k11_auxiliary_valid_5407 : K11AuxiliaryValid 5407 := by
     (187936553 / 100000000 : Rat) <= (107574173 / 50000000 : Rat) /\
     (187936553 / 100000000 : Rat) <= (191511453 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7927,7 +7927,7 @@ theorem k11_auxiliary_valid_5408 : K11AuxiliaryValid 5408 := by
     (1983685529 / 100000000 : Rat) <= (1983685529 / 100000000 : Rat) /\
     (1983685529 / 100000000 : Rat) <= (2232141461 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7937,7 +7937,7 @@ theorem k11_auxiliary_valid_5409 : K11AuxiliaryValid 5409 := by
     (400767969 / 100000000 : Rat) <= (12554953 / 3125000 : Rat) /\
     (400767969 / 100000000 : Rat) <= (415717223 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7947,7 +7947,7 @@ theorem k11_auxiliary_valid_5410 : K11AuxiliaryValid 5410 := by
     (215161969 / 100000000 : Rat) <= (215161969 / 100000000 : Rat) /\
     (215161969 / 100000000 : Rat) <= (246995109 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7957,7 +7957,7 @@ theorem k11_auxiliary_valid_5411 : K11AuxiliaryValid 5411 := by
     (7024779 / 1562500 : Rat) <= (451339161 / 100000000 : Rat) /\
     (7024779 / 1562500 : Rat) <= (28985461 / 6250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7967,7 +7967,7 @@ theorem k11_auxiliary_valid_5412 : K11AuxiliaryValid 5412 := by
     (484485619 / 100000000 : Rat) <= (484485619 / 100000000 : Rat) /\
     (484485619 / 100000000 : Rat) <= (12440083 / 2500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7977,7 +7977,7 @@ theorem k11_auxiliary_valid_5413 : K11AuxiliaryValid 5413 := by
     (17673131 / 10000000 : Rat) <= (11520463 / 6250000 : Rat) /\
     (17673131 / 10000000 : Rat) <= (5831193 / 3125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7987,7 +7987,7 @@ theorem k11_auxiliary_valid_5414 : K11AuxiliaryValid 5414 := by
     (1634473523 / 100000000 : Rat) <= (451743609 / 25000000 : Rat) /\
     (1634473523 / 100000000 : Rat) <= (1634473523 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -7997,7 +7997,7 @@ theorem k11_auxiliary_valid_5415 : K11AuxiliaryValid 5415 := by
     (656464941 / 100000000 : Rat) <= (656464941 / 100000000 : Rat) /\
     (656464941 / 100000000 : Rat) <= (730214309 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8007,7 +8007,7 @@ theorem k11_auxiliary_valid_5416 : K11AuxiliaryValid 5416 := by
     (25496261 / 20000000 : Rat) <= (71559109 / 50000000 : Rat) /\
     (25496261 / 20000000 : Rat) <= (25496261 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8017,7 +8017,7 @@ theorem k11_auxiliary_valid_5417 : K11AuxiliaryValid 5417 := by
     (157363727 / 25000000 : Rat) <= (157363727 / 25000000 : Rat) /\
     (157363727 / 25000000 : Rat) <= (143958939 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8027,7 +8027,7 @@ theorem k11_auxiliary_valid_5418 : K11AuxiliaryValid 5418 := by
     (407227327 / 50000000 : Rat) <= (407227327 / 50000000 : Rat) /\
     (407227327 / 50000000 : Rat) <= (870378453 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8037,7 +8037,7 @@ theorem k11_auxiliary_valid_5419 : K11AuxiliaryValid 5419 := by
     (40928999 / 12500000 : Rat) <= (40928999 / 12500000 : Rat) /\
     (40928999 / 12500000 : Rat) <= (335191527 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8047,7 +8047,7 @@ theorem k11_auxiliary_valid_5420 : K11AuxiliaryValid 5420 := by
     (23139573 / 5000000 : Rat) <= (23139573 / 5000000 : Rat) /\
     (23139573 / 5000000 : Rat) <= (482265389 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8057,7 +8057,7 @@ theorem k11_auxiliary_valid_5421 : K11AuxiliaryValid 5421 := by
     (265013267 / 50000000 : Rat) <= (265013267 / 50000000 : Rat) /\
     (265013267 / 50000000 : Rat) <= (550548821 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8067,7 +8067,7 @@ theorem k11_auxiliary_valid_5422 : K11AuxiliaryValid 5422 := by
     (131722189 / 100000000 : Rat) <= (139881861 / 100000000 : Rat) /\
     (131722189 / 100000000 : Rat) <= (131722189 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8077,7 +8077,7 @@ theorem k11_auxiliary_valid_5423 : K11AuxiliaryValid 5423 := by
     (1370207017 / 100000000 : Rat) <= (1406556767 / 100000000 : Rat) /\
     (1370207017 / 100000000 : Rat) <= (1370207017 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8087,7 +8087,7 @@ theorem k11_auxiliary_valid_5424 : K11AuxiliaryValid 5424 := by
     (232779487 / 25000000 : Rat) <= (232779487 / 25000000 : Rat) /\
     (232779487 / 25000000 : Rat) <= (101716863 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8097,7 +8097,7 @@ theorem k11_auxiliary_valid_5425 : K11AuxiliaryValid 5425 := by
     (17828681 / 12500000 : Rat) <= (1205059 / 800000 : Rat) /\
     (17828681 / 12500000 : Rat) <= (144948707 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8107,7 +8107,7 @@ theorem k11_auxiliary_valid_5426 : K11AuxiliaryValid 5426 := by
     (1515499843 / 50000000 : Rat) <= (456043289 / 12500000 : Rat) /\
     (1515499843 / 50000000 : Rat) <= (1515499843 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8117,7 +8117,7 @@ theorem k11_auxiliary_valid_5427 : K11AuxiliaryValid 5427 := by
     (187931151 / 25000000 : Rat) <= (753510409 / 100000000 : Rat) /\
     (187931151 / 25000000 : Rat) <= (187931151 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8127,7 +8127,7 @@ theorem k11_auxiliary_valid_5428 : K11AuxiliaryValid 5428 := by
     (51887779 / 10000000 : Rat) <= (36460751 / 6250000 : Rat) /\
     (51887779 / 10000000 : Rat) <= (72268507 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8137,7 +8137,7 @@ theorem k11_auxiliary_valid_5429 : K11AuxiliaryValid 5429 := by
     (183072479 / 25000000 : Rat) <= (414187449 / 50000000 : Rat) /\
     (183072479 / 25000000 : Rat) <= (769650461 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8147,7 +8147,7 @@ theorem k11_auxiliary_valid_5430 : K11AuxiliaryValid 5430 := by
     (610046717 / 100000000 : Rat) <= (610046717 / 100000000 : Rat) /\
     (610046717 / 100000000 : Rat) <= (688925271 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8157,7 +8157,7 @@ theorem k11_auxiliary_valid_5431 : K11AuxiliaryValid 5431 := by
     (284263169 / 100000000 : Rat) <= (152886693 / 50000000 : Rat) /\
     (284263169 / 100000000 : Rat) <= (309549561 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8167,7 +8167,7 @@ theorem k11_auxiliary_valid_5432 : K11AuxiliaryValid 5432 := by
     (73717699 / 10000000 : Rat) <= (30746157 / 4000000 : Rat) /\
     (73717699 / 10000000 : Rat) <= (748796619 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8177,7 +8177,7 @@ theorem k11_auxiliary_valid_5433 : K11AuxiliaryValid 5433 := by
     (2895002523 / 100000000 : Rat) <= (3410321311 / 100000000 : Rat) /\
     (2895002523 / 100000000 : Rat) <= (3167680749 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8187,7 +8187,7 @@ theorem k11_auxiliary_valid_5434 : K11AuxiliaryValid 5434 := by
     (133144783 / 100000000 : Rat) <= (840503 / 625000 : Rat) /\
     (133144783 / 100000000 : Rat) <= (133144783 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8197,7 +8197,7 @@ theorem k11_auxiliary_valid_5435 : K11AuxiliaryValid 5435 := by
     (126667329 / 12500000 : Rat) <= (126667329 / 12500000 : Rat) /\
     (126667329 / 12500000 : Rat) <= (562447939 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8207,7 +8207,7 @@ theorem k11_auxiliary_valid_5436 : K11AuxiliaryValid 5436 := by
     (18856723 / 4000000 : Rat) <= (51471251 / 10000000 : Rat) /\
     (18856723 / 4000000 : Rat) <= (479489393 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8217,7 +8217,7 @@ theorem k11_auxiliary_valid_5437 : K11AuxiliaryValid 5437 := by
     (86854033 / 25000000 : Rat) <= (387645087 / 100000000 : Rat) /\
     (86854033 / 25000000 : Rat) <= (105479311 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8227,7 +8227,7 @@ theorem k11_auxiliary_valid_5438 : K11AuxiliaryValid 5438 := by
     (31902141 / 12500000 : Rat) <= (53307157 / 20000000 : Rat) /\
     (31902141 / 12500000 : Rat) <= (127680103 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8237,7 +8237,7 @@ theorem k11_auxiliary_valid_5439 : K11AuxiliaryValid 5439 := by
     (19809633 / 2500000 : Rat) <= (19809633 / 2500000 : Rat) /\
     (19809633 / 2500000 : Rat) <= (220641453 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8247,7 +8247,7 @@ theorem k11_auxiliary_valid_5440 : K11AuxiliaryValid 5440 := by
     (77050533 / 25000000 : Rat) <= (22806467 / 6250000 : Rat) /\
     (77050533 / 25000000 : Rat) <= (77050533 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8257,7 +8257,7 @@ theorem k11_auxiliary_valid_5441 : K11AuxiliaryValid 5441 := by
     (607719439 / 100000000 : Rat) <= (62162099 / 10000000 : Rat) /\
     (607719439 / 100000000 : Rat) <= (607719439 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8267,7 +8267,7 @@ theorem k11_auxiliary_valid_5442 : K11AuxiliaryValid 5442 := by
     (315478057 / 50000000 : Rat) <= (315478057 / 50000000 : Rat) /\
     (315478057 / 50000000 : Rat) <= (25631031 / 4000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8277,7 +8277,7 @@ theorem k11_auxiliary_valid_5443 : K11AuxiliaryValid 5443 := by
     (205305501 / 100000000 : Rat) <= (247477957 / 100000000 : Rat) /\
     (205305501 / 100000000 : Rat) <= (111746759 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8287,7 +8287,7 @@ theorem k11_auxiliary_valid_5444 : K11AuxiliaryValid 5444 := by
     (53867213 / 10000000 : Rat) <= (160074641 / 25000000 : Rat) /\
     (53867213 / 10000000 : Rat) <= (53867213 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8297,7 +8297,7 @@ theorem k11_auxiliary_valid_5445 : K11AuxiliaryValid 5445 := by
     (1042490903 / 100000000 : Rat) <= (1104047583 / 100000000 : Rat) /\
     (1042490903 / 100000000 : Rat) <= (1042490903 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8307,7 +8307,7 @@ theorem k11_auxiliary_valid_5446 : K11AuxiliaryValid 5446 := by
     (13776303 / 2500000 : Rat) <= (632376557 / 100000000 : Rat) /\
     (13776303 / 2500000 : Rat) <= (569936581 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8317,7 +8317,7 @@ theorem k11_auxiliary_valid_5447 : K11AuxiliaryValid 5447 := by
     (371897689 / 100000000 : Rat) <= (427252827 / 100000000 : Rat) /\
     (371897689 / 100000000 : Rat) <= (371897689 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8327,7 +8327,7 @@ theorem k11_auxiliary_valid_5448 : K11AuxiliaryValid 5448 := by
     (35562111 / 6250000 : Rat) <= (35562111 / 6250000 : Rat) /\
     (35562111 / 6250000 : Rat) <= (303543629 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8337,7 +8337,7 @@ theorem k11_auxiliary_valid_5449 : K11AuxiliaryValid 5449 := by
     (18626269 / 12500000 : Rat) <= (155113187 / 100000000 : Rat) /\
     (18626269 / 12500000 : Rat) <= (9409367 / 6250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8347,7 +8347,7 @@ theorem k11_auxiliary_valid_5450 : K11AuxiliaryValid 5450 := by
     (205685653 / 12500000 : Rat) <= (89192393 / 5000000 : Rat) /\
     (205685653 / 12500000 : Rat) <= (205685653 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8357,7 +8357,7 @@ theorem k11_auxiliary_valid_5451 : K11AuxiliaryValid 5451 := by
     (591219279 / 100000000 : Rat) <= (160744707 / 25000000 : Rat) /\
     (591219279 / 100000000 : Rat) <= (591219279 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8367,7 +8367,7 @@ theorem k11_auxiliary_valid_5452 : K11AuxiliaryValid 5452 := by
     (180533633 / 100000000 : Rat) <= (180533633 / 100000000 : Rat) /\
     (180533633 / 100000000 : Rat) <= (198928987 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8377,7 +8377,7 @@ theorem k11_auxiliary_valid_5453 : K11AuxiliaryValid 5453 := by
     (369016057 / 50000000 : Rat) <= (101585263 / 12500000 : Rat) /\
     (369016057 / 50000000 : Rat) <= (749447879 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8387,7 +8387,7 @@ theorem k11_auxiliary_valid_5454 : K11AuxiliaryValid 5454 := by
     (513945253 / 100000000 : Rat) <= (271086741 / 50000000 : Rat) /\
     (513945253 / 100000000 : Rat) <= (513945253 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8397,7 +8397,7 @@ theorem k11_auxiliary_valid_5455 : K11AuxiliaryValid 5455 := by
     (141490539 / 50000000 : Rat) <= (56665819 / 20000000 : Rat) /\
     (141490539 / 50000000 : Rat) <= (141490539 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8407,7 +8407,7 @@ theorem k11_auxiliary_valid_5456 : K11AuxiliaryValid 5456 := by
     (490369659 / 100000000 : Rat) <= (17991551 / 3125000 : Rat) /\
     (490369659 / 100000000 : Rat) <= (490369659 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8417,7 +8417,7 @@ theorem k11_auxiliary_valid_5457 : K11AuxiliaryValid 5457 := by
     (109343623 / 20000000 : Rat) <= (109343623 / 20000000 : Rat) /\
     (109343623 / 20000000 : Rat) <= (554875437 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8427,7 +8427,7 @@ theorem k11_auxiliary_valid_5458 : K11AuxiliaryValid 5458 := by
     (79713759 / 25000000 : Rat) <= (49926383 / 12500000 : Rat) /\
     (79713759 / 25000000 : Rat) <= (79713759 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8437,7 +8437,7 @@ theorem k11_auxiliary_valid_5459 : K11AuxiliaryValid 5459 := by
     (643447577 / 100000000 : Rat) <= (643447577 / 100000000 : Rat) /\
     (643447577 / 100000000 : Rat) <= (357756423 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8447,7 +8447,7 @@ theorem k11_auxiliary_valid_5460 : K11AuxiliaryValid 5460 := by
     (1084912897 / 100000000 : Rat) <= (1144809521 / 100000000 : Rat) /\
     (1084912897 / 100000000 : Rat) <= (1084912897 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8457,7 +8457,7 @@ theorem k11_auxiliary_valid_5461 : K11AuxiliaryValid 5461 := by
     (93954789 / 50000000 : Rat) <= (193565871 / 100000000 : Rat) /\
     (93954789 / 50000000 : Rat) <= (103594381 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8467,7 +8467,7 @@ theorem k11_auxiliary_valid_5462 : K11AuxiliaryValid 5462 := by
     (308081669 / 12500000 : Rat) <= (1297817283 / 50000000 : Rat) /\
     (308081669 / 12500000 : Rat) <= (308081669 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8477,7 +8477,7 @@ theorem k11_auxiliary_valid_5463 : K11AuxiliaryValid 5463 := by
     (104293343 / 25000000 : Rat) <= (3388671 / 781250 : Rat) /\
     (104293343 / 25000000 : Rat) <= (104293343 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8487,7 +8487,7 @@ theorem k11_auxiliary_valid_5464 : K11AuxiliaryValid 5464 := by
     (220822423 / 50000000 : Rat) <= (128060467 / 25000000 : Rat) /\
     (220822423 / 50000000 : Rat) <= (237793649 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8497,7 +8497,7 @@ theorem k11_auxiliary_valid_5465 : K11AuxiliaryValid 5465 := by
     (161524647 / 50000000 : Rat) <= (161524647 / 50000000 : Rat) /\
     (161524647 / 50000000 : Rat) <= (64785233 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8507,7 +8507,7 @@ theorem k11_auxiliary_valid_5466 : K11AuxiliaryValid 5466 := by
     (722231049 / 100000000 : Rat) <= (722231049 / 100000000 : Rat) /\
     (722231049 / 100000000 : Rat) <= (72807237 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8517,7 +8517,7 @@ theorem k11_auxiliary_valid_5467 : K11AuxiliaryValid 5467 := by
     (189893487 / 100000000 : Rat) <= (192498213 / 100000000 : Rat) /\
     (189893487 / 100000000 : Rat) <= (203388299 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8527,7 +8527,7 @@ theorem k11_auxiliary_valid_5468 : K11AuxiliaryValid 5468 := by
     (517634659 / 50000000 : Rat) <= (517634659 / 50000000 : Rat) /\
     (517634659 / 50000000 : Rat) <= (266897869 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8537,7 +8537,7 @@ theorem k11_auxiliary_valid_5469 : K11AuxiliaryValid 5469 := by
     (21202727 / 3125000 : Rat) <= (704122053 / 100000000 : Rat) /\
     (21202727 / 3125000 : Rat) <= (21202727 / 3125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8547,7 +8547,7 @@ theorem k11_auxiliary_valid_5470 : K11AuxiliaryValid 5470 := by
     (181106861 / 100000000 : Rat) <= (181106861 / 100000000 : Rat) /\
     (181106861 / 100000000 : Rat) <= (97308179 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8557,7 +8557,7 @@ theorem k11_auxiliary_valid_5471 : K11AuxiliaryValid 5471 := by
     (160585477 / 20000000 : Rat) <= (160585477 / 20000000 : Rat) /\
     (160585477 / 20000000 : Rat) <= (829095313 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8567,7 +8567,7 @@ theorem k11_auxiliary_valid_5472 : K11AuxiliaryValid 5472 := by
     (880149639 / 100000000 : Rat) <= (880149639 / 100000000 : Rat) /\
     (880149639 / 100000000 : Rat) <= (13926807 / 1562500 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8577,7 +8577,7 @@ theorem k11_auxiliary_valid_5473 : K11AuxiliaryValid 5473 := by
     (14770613 / 6250000 : Rat) <= (14770613 / 6250000 : Rat) /\
     (14770613 / 6250000 : Rat) <= (54607063 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8587,7 +8587,7 @@ theorem k11_auxiliary_valid_5474 : K11AuxiliaryValid 5474 := by
     (14371313 / 4000000 : Rat) <= (188895657 / 50000000 : Rat) /\
     (14371313 / 4000000 : Rat) <= (14371313 / 4000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8597,7 +8597,7 @@ theorem k11_auxiliary_valid_5475 : K11AuxiliaryValid 5475 := by
     (92672369 / 25000000 : Rat) <= (92672369 / 25000000 : Rat) /\
     (92672369 / 25000000 : Rat) <= (190860671 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8607,7 +8607,7 @@ theorem k11_auxiliary_valid_5476 : K11AuxiliaryValid 5476 := by
     (108466 / 78125 : Rat) <= (70300643 / 50000000 : Rat) /\
     (108466 / 78125 : Rat) <= (108466 / 78125 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8617,7 +8617,7 @@ theorem k11_auxiliary_valid_5477 : K11AuxiliaryValid 5477 := by
     (655159567 / 50000000 : Rat) <= (655159567 / 50000000 : Rat) /\
     (655159567 / 50000000 : Rat) <= (1486127363 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8627,7 +8627,7 @@ theorem k11_auxiliary_valid_5478 : K11AuxiliaryValid 5478 := by
     (1221154781 / 100000000 : Rat) <= (1221154781 / 100000000 : Rat) /\
     (1221154781 / 100000000 : Rat) <= (308996059 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8637,7 +8637,7 @@ theorem k11_auxiliary_valid_5479 : K11AuxiliaryValid 5479 := by
     (24584211 / 20000000 : Rat) <= (24584211 / 20000000 : Rat) /\
     (24584211 / 20000000 : Rat) <= (25261677 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8647,7 +8647,7 @@ theorem k11_auxiliary_valid_5480 : K11AuxiliaryValid 5480 := by
     (52458407 / 4000000 : Rat) <= (52458407 / 4000000 : Rat) /\
     (52458407 / 4000000 : Rat) <= (285699427 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8657,7 +8657,7 @@ theorem k11_auxiliary_valid_5481 : K11AuxiliaryValid 5481 := by
     (588606923 / 100000000 : Rat) <= (300817683 / 50000000 : Rat) /\
     (588606923 / 100000000 : Rat) <= (635125019 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8667,7 +8667,7 @@ theorem k11_auxiliary_valid_5482 : K11AuxiliaryValid 5482 := by
     (768800743 / 100000000 : Rat) <= (798174337 / 100000000 : Rat) /\
     (768800743 / 100000000 : Rat) <= (768800743 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8677,7 +8677,7 @@ theorem k11_auxiliary_valid_5483 : K11AuxiliaryValid 5483 := by
     (94809 / 25000 : Rat) <= (94809 / 25000 : Rat) /\
     (94809 / 25000 : Rat) <= (194159113 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8687,7 +8687,7 @@ theorem k11_auxiliary_valid_5484 : K11AuxiliaryValid 5484 := by
     (270196631 / 25000000 : Rat) <= (708947439 / 50000000 : Rat) /\
     (270196631 / 25000000 : Rat) <= (57449461 / 5000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8697,7 +8697,7 @@ theorem k11_auxiliary_valid_5485 : K11AuxiliaryValid 5485 := by
     (47296489 / 20000000 : Rat) <= (254908807 / 100000000 : Rat) /\
     (47296489 / 20000000 : Rat) <= (268393561 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8707,7 +8707,7 @@ theorem k11_auxiliary_valid_5486 : K11AuxiliaryValid 5486 := by
     (796161727 / 100000000 : Rat) <= (857134997 / 100000000 : Rat) /\
     (796161727 / 100000000 : Rat) <= (796161727 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8717,7 +8717,7 @@ theorem k11_auxiliary_valid_5487 : K11AuxiliaryValid 5487 := by
     (1246871921 / 100000000 : Rat) <= (1381230533 / 100000000 : Rat) /\
     (1246871921 / 100000000 : Rat) <= (1246871921 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8727,7 +8727,7 @@ theorem k11_auxiliary_valid_5488 : K11AuxiliaryValid 5488 := by
     (136135453 / 100000000 : Rat) <= (34810223 / 25000000 : Rat) /\
     (136135453 / 100000000 : Rat) <= (136135453 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8737,7 +8737,7 @@ theorem k11_auxiliary_valid_5489 : K11AuxiliaryValid 5489 := by
     (1331822539 / 100000000 : Rat) <= (88953461 / 6250000 : Rat) /\
     (1331822539 / 100000000 : Rat) <= (1536646089 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8747,7 +8747,7 @@ theorem k11_auxiliary_valid_5490 : K11AuxiliaryValid 5490 := by
     (426205039 / 100000000 : Rat) <= (426205039 / 100000000 : Rat) /\
     (426205039 / 100000000 : Rat) <= (427584773 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8757,7 +8757,7 @@ theorem k11_auxiliary_valid_5491 : K11AuxiliaryValid 5491 := by
     (190478973 / 100000000 : Rat) <= (96373073 / 50000000 : Rat) /\
     (190478973 / 100000000 : Rat) <= (195326767 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8767,7 +8767,7 @@ theorem k11_auxiliary_valid_5492 : K11AuxiliaryValid 5492 := by
     (176819593 / 50000000 : Rat) <= (176819593 / 50000000 : Rat) /\
     (176819593 / 50000000 : Rat) <= (23824199 / 6250000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8777,7 +8777,7 @@ theorem k11_auxiliary_valid_5493 : K11AuxiliaryValid 5493 := by
     (55700383 / 12500000 : Rat) <= (55700383 / 12500000 : Rat) /\
     (55700383 / 12500000 : Rat) <= (494586833 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8787,7 +8787,7 @@ theorem k11_auxiliary_valid_5494 : K11AuxiliaryValid 5494 := by
     (133816767 / 100000000 : Rat) <= (29743519 / 20000000 : Rat) /\
     (133816767 / 100000000 : Rat) <= (164371997 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8797,7 +8797,7 @@ theorem k11_auxiliary_valid_5495 : K11AuxiliaryValid 5495 := by
     (457509463 / 50000000 : Rat) <= (229214387 / 25000000 : Rat) /\
     (457509463 / 50000000 : Rat) <= (990982859 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8807,7 +8807,7 @@ theorem k11_auxiliary_valid_5496 : K11AuxiliaryValid 5496 := by
     (1027041589 / 100000000 : Rat) <= (1027041589 / 100000000 : Rat) /\
     (1027041589 / 100000000 : Rat) <= (1138086503 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8817,7 +8817,7 @@ theorem k11_auxiliary_valid_5497 : K11AuxiliaryValid 5497 := by
     (172261989 / 100000000 : Rat) <= (93093049 / 50000000 : Rat) /\
     (172261989 / 100000000 : Rat) <= (172261989 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8827,7 +8827,7 @@ theorem k11_auxiliary_valid_5498 : K11AuxiliaryValid 5498 := by
     (339535133 / 50000000 : Rat) <= (339535133 / 50000000 : Rat) /\
     (339535133 / 50000000 : Rat) <= (85883163 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8837,7 +8837,7 @@ theorem k11_auxiliary_valid_5499 : K11AuxiliaryValid 5499 := by
     (29596377 / 5000000 : Rat) <= (29596377 / 5000000 : Rat) /\
     (29596377 / 5000000 : Rat) <= (621450427 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8847,7 +8847,7 @@ theorem k11_auxiliary_valid_5500 : K11AuxiliaryValid 5500 := by
     (2417143 / 1000000 : Rat) <= (124145187 / 50000000 : Rat) /\
     (2417143 / 1000000 : Rat) <= (2417143 / 1000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8857,7 +8857,7 @@ theorem k11_auxiliary_valid_5501 : K11AuxiliaryValid 5501 := by
     (150886621 / 25000000 : Rat) <= (652238923 / 100000000 : Rat) /\
     (150886621 / 25000000 : Rat) <= (150886621 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8867,7 +8867,7 @@ theorem k11_auxiliary_valid_5502 : K11AuxiliaryValid 5502 := by
     (422121063 / 100000000 : Rat) <= (422121063 / 100000000 : Rat) /\
     (422121063 / 100000000 : Rat) <= (56393667 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8877,7 +8877,7 @@ theorem k11_auxiliary_valid_5503 : K11AuxiliaryValid 5503 := by
     (125859913 / 100000000 : Rat) <= (131790127 / 100000000 : Rat) /\
     (125859913 / 100000000 : Rat) <= (140244381 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8887,7 +8887,7 @@ theorem k11_auxiliary_valid_5504 : K11AuxiliaryValid 5504 := by
     (1200044149 / 100000000 : Rat) <= (1200044149 / 100000000 : Rat) /\
     (1200044149 / 100000000 : Rat) <= (1220083729 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8897,7 +8897,7 @@ theorem k11_auxiliary_valid_5505 : K11AuxiliaryValid 5505 := by
     (135226079 / 12500000 : Rat) <= (135226079 / 12500000 : Rat) /\
     (135226079 / 12500000 : Rat) <= (1119857251 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8907,7 +8907,7 @@ theorem k11_auxiliary_valid_5506 : K11AuxiliaryValid 5506 := by
     (188386113 / 100000000 : Rat) <= (40850121 / 20000000 : Rat) /\
     (188386113 / 100000000 : Rat) <= (196778597 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8917,7 +8917,7 @@ theorem k11_auxiliary_valid_5507 : K11AuxiliaryValid 5507 := by
     (413371729 / 50000000 : Rat) <= (965304191 / 100000000 : Rat) /\
     (413371729 / 50000000 : Rat) <= (413371729 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8927,7 +8927,7 @@ theorem k11_auxiliary_valid_5508 : K11AuxiliaryValid 5508 := by
     (206187911 / 25000000 : Rat) <= (206187911 / 25000000 : Rat) /\
     (206187911 / 25000000 : Rat) <= (187473137 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8937,7 +8937,7 @@ theorem k11_auxiliary_valid_5509 : K11AuxiliaryValid 5509 := by
     (312005529 / 50000000 : Rat) <= (778564917 / 100000000 : Rat) /\
     (312005529 / 50000000 : Rat) <= (312005529 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8947,7 +8947,7 @@ theorem k11_auxiliary_valid_5510 : K11AuxiliaryValid 5510 := by
     (61854357 / 12500000 : Rat) <= (2366072 / 390625 : Rat) /\
     (61854357 / 12500000 : Rat) <= (61854357 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8957,7 +8957,7 @@ theorem k11_auxiliary_valid_5511 : K11AuxiliaryValid 5511 := by
     (74823483 / 20000000 : Rat) <= (384850297 / 100000000 : Rat) /\
     (74823483 / 20000000 : Rat) <= (383382179 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8967,7 +8967,7 @@ theorem k11_auxiliary_valid_5512 : K11AuxiliaryValid 5512 := by
     (68722393 / 25000000 : Rat) <= (68722393 / 25000000 : Rat) /\
     (68722393 / 25000000 : Rat) <= (276769619 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8977,7 +8977,7 @@ theorem k11_auxiliary_valid_5513 : K11AuxiliaryValid 5513 := by
     (761051323 / 100000000 : Rat) <= (31510107 / 4000000 : Rat) /\
     (761051323 / 100000000 : Rat) <= (761051323 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8987,7 +8987,7 @@ theorem k11_auxiliary_valid_5514 : K11AuxiliaryValid 5514 := by
     (155811323 / 12500000 : Rat) <= (662124273 / 50000000 : Rat) /\
     (155811323 / 12500000 : Rat) <= (1423187249 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -8997,7 +8997,7 @@ theorem k11_auxiliary_valid_5515 : K11AuxiliaryValid 5515 := by
     (16774929 / 12500000 : Rat) <= (37758569 / 25000000 : Rat) /\
     (16774929 / 12500000 : Rat) <= (16774929 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9007,7 +9007,7 @@ theorem k11_auxiliary_valid_5516 : K11AuxiliaryValid 5516 := by
     (547201043 / 50000000 : Rat) <= (230521887 / 20000000 : Rat) /\
     (547201043 / 50000000 : Rat) <= (547201043 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9017,7 +9017,7 @@ theorem k11_auxiliary_valid_5517 : K11AuxiliaryValid 5517 := by
     (520688477 / 100000000 : Rat) <= (520688477 / 100000000 : Rat) /\
     (520688477 / 100000000 : Rat) <= (279151229 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9027,7 +9027,7 @@ theorem k11_auxiliary_valid_5518 : K11AuxiliaryValid 5518 := by
     (67833333 / 25000000 : Rat) <= (67833333 / 25000000 : Rat) /\
     (67833333 / 25000000 : Rat) <= (283949067 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9037,7 +9037,7 @@ theorem k11_auxiliary_valid_5519 : K11AuxiliaryValid 5519 := by
     (411500559 / 100000000 : Rat) <= (208050551 / 50000000 : Rat) /\
     (411500559 / 100000000 : Rat) <= (411500559 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9047,7 +9047,7 @@ theorem k11_auxiliary_valid_5520 : K11AuxiliaryValid 5520 := by
     (615933339 / 100000000 : Rat) <= (633792723 / 100000000 : Rat) /\
     (615933339 / 100000000 : Rat) <= (615933339 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9057,7 +9057,7 @@ theorem k11_auxiliary_valid_5521 : K11AuxiliaryValid 5521 := by
     (339490109 / 100000000 : Rat) <= (348330023 / 100000000 : Rat) /\
     (339490109 / 100000000 : Rat) <= (339490109 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9067,7 +9067,7 @@ theorem k11_auxiliary_valid_5522 : K11AuxiliaryValid 5522 := by
     (365093931 / 50000000 : Rat) <= (413837747 / 50000000 : Rat) /\
     (365093931 / 50000000 : Rat) <= (365093931 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9077,7 +9077,7 @@ theorem k11_auxiliary_valid_5523 : K11AuxiliaryValid 5523 := by
     (35896949 / 4000000 : Rat) <= (907862577 / 100000000 : Rat) /\
     (35896949 / 4000000 : Rat) <= (35896949 / 4000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9087,7 +9087,7 @@ theorem k11_auxiliary_valid_5524 : K11AuxiliaryValid 5524 := by
     (44670839 / 25000000 : Rat) <= (931807 / 500000 : Rat) /\
     (44670839 / 25000000 : Rat) <= (44670839 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9097,7 +9097,7 @@ theorem k11_auxiliary_valid_5525 : K11AuxiliaryValid 5525 := by
     (100869771 / 20000000 : Rat) <= (100869771 / 20000000 : Rat) /\
     (100869771 / 20000000 : Rat) <= (10536831 / 2000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9107,7 +9107,7 @@ theorem k11_auxiliary_valid_5526 : K11AuxiliaryValid 5526 := by
     (584387847 / 50000000 : Rat) <= (584387847 / 50000000 : Rat) /\
     (584387847 / 50000000 : Rat) <= (1512733161 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9117,7 +9117,7 @@ theorem k11_auxiliary_valid_5527 : K11AuxiliaryValid 5527 := by
     (14284287 / 3125000 : Rat) <= (285754311 / 50000000 : Rat) /\
     (14284287 / 3125000 : Rat) <= (237266133 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9127,7 +9127,7 @@ theorem k11_auxiliary_valid_5528 : K11AuxiliaryValid 5528 := by
     (487752161 / 100000000 : Rat) <= (278388643 / 50000000 : Rat) /\
     (487752161 / 100000000 : Rat) <= (487752161 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9137,7 +9137,7 @@ theorem k11_auxiliary_valid_5529 : K11AuxiliaryValid 5529 := by
     (19626753 / 2500000 : Rat) <= (488924209 / 50000000 : Rat) /\
     (19626753 / 2500000 : Rat) <= (19626753 / 2500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9147,7 +9147,7 @@ theorem k11_auxiliary_valid_5530 : K11AuxiliaryValid 5530 := by
     (21544481 / 10000000 : Rat) <= (227830969 / 100000000 : Rat) /\
     (21544481 / 10000000 : Rat) <= (21544481 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9157,7 +9157,7 @@ theorem k11_auxiliary_valid_5531 : K11AuxiliaryValid 5531 := by
     (140687379 / 12500000 : Rat) <= (10418757 / 781250 : Rat) /\
     (140687379 / 12500000 : Rat) <= (140687379 / 12500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9167,7 +9167,7 @@ theorem k11_auxiliary_valid_5532 : K11AuxiliaryValid 5532 := by
     (740098663 / 100000000 : Rat) <= (740098663 / 100000000 : Rat) /\
     (740098663 / 100000000 : Rat) <= (383218603 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9177,7 +9177,7 @@ theorem k11_auxiliary_valid_5533 : K11AuxiliaryValid 5533 := by
     (3227179 / 2000000 : Rat) <= (22750939 / 12500000 : Rat) /\
     (3227179 / 2000000 : Rat) <= (3227179 / 2000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9187,7 +9187,7 @@ theorem k11_auxiliary_valid_5534 : K11AuxiliaryValid 5534 := by
     (1426746581 / 100000000 : Rat) <= (1441875491 / 100000000 : Rat) /\
     (1426746581 / 100000000 : Rat) <= (160660227 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9197,7 +9197,7 @@ theorem k11_auxiliary_valid_5535 : K11AuxiliaryValid 5535 := by
     (147657129 / 20000000 : Rat) <= (771449567 / 100000000 : Rat) /\
     (147657129 / 20000000 : Rat) <= (407358259 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9207,7 +9207,7 @@ theorem k11_auxiliary_valid_5536 : K11AuxiliaryValid 5536 := by
     (147356179 / 50000000 : Rat) <= (7522529 / 2500000 : Rat) /\
     (147356179 / 50000000 : Rat) <= (31450403 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9217,7 +9217,7 @@ theorem k11_auxiliary_valid_5537 : K11AuxiliaryValid 5537 := by
     (382459229 / 100000000 : Rat) <= (84422967 / 20000000 : Rat) /\
     (382459229 / 100000000 : Rat) <= (382459229 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9227,7 +9227,7 @@ theorem k11_auxiliary_valid_5538 : K11AuxiliaryValid 5538 := by
     (443406941 / 100000000 : Rat) <= (453451561 / 100000000 : Rat) /\
     (443406941 / 100000000 : Rat) <= (443406941 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9237,7 +9237,7 @@ theorem k11_auxiliary_valid_5539 : K11AuxiliaryValid 5539 := by
     (24028093 / 6250000 : Rat) <= (24028093 / 6250000 : Rat) /\
     (24028093 / 6250000 : Rat) <= (82511431 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9247,7 +9247,7 @@ theorem k11_auxiliary_valid_5540 : K11AuxiliaryValid 5540 := by
     (587236401 / 100000000 : Rat) <= (587236401 / 100000000 : Rat) /\
     (587236401 / 100000000 : Rat) <= (19811113 / 3125000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9257,7 +9257,7 @@ theorem k11_auxiliary_valid_5541 : K11AuxiliaryValid 5541 := by
     (1221102589 / 100000000 : Rat) <= (1221102589 / 100000000 : Rat) /\
     (1221102589 / 100000000 : Rat) <= (1318065909 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9267,7 +9267,7 @@ theorem k11_auxiliary_valid_5542 : K11AuxiliaryValid 5542 := by
     (4571527 / 3125000 : Rat) <= (9495049 / 6250000 : Rat) /\
     (4571527 / 3125000 : Rat) <= (7429289 / 5000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9277,7 +9277,7 @@ theorem k11_auxiliary_valid_5543 : K11AuxiliaryValid 5543 := by
     (506049049 / 25000000 : Rat) <= (2340936101 / 100000000 : Rat) /\
     (506049049 / 25000000 : Rat) <= (108289309 / 5000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9287,7 +9287,7 @@ theorem k11_auxiliary_valid_5544 : K11AuxiliaryValid 5544 := by
     (152442711 / 20000000 : Rat) <= (152442711 / 20000000 : Rat) /\
     (152442711 / 20000000 : Rat) <= (901442377 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9297,7 +9297,7 @@ theorem k11_auxiliary_valid_5545 : K11AuxiliaryValid 5545 := by
     (228724141 / 100000000 : Rat) <= (229627539 / 100000000 : Rat) /\
     (228724141 / 100000000 : Rat) <= (240677281 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9307,7 +9307,7 @@ theorem k11_auxiliary_valid_5546 : K11AuxiliaryValid 5546 := by
     (308848981 / 100000000 : Rat) <= (309235609 / 100000000 : Rat) /\
     (308848981 / 100000000 : Rat) <= (308848981 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9317,7 +9317,7 @@ theorem k11_auxiliary_valid_5547 : K11AuxiliaryValid 5547 := by
     (623092519 / 100000000 : Rat) <= (623092519 / 100000000 : Rat) /\
     (623092519 / 100000000 : Rat) <= (630439617 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9327,7 +9327,7 @@ theorem k11_auxiliary_valid_5548 : K11AuxiliaryValid 5548 := by
     (316982729 / 100000000 : Rat) <= (398590271 / 100000000 : Rat) /\
     (316982729 / 100000000 : Rat) <= (316982729 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9337,7 +9337,7 @@ theorem k11_auxiliary_valid_5549 : K11AuxiliaryValid 5549 := by
     (518384617 / 50000000 : Rat) <= (263522701 / 25000000 : Rat) /\
     (518384617 / 50000000 : Rat) <= (518384617 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9347,7 +9347,7 @@ theorem k11_auxiliary_valid_5550 : K11AuxiliaryValid 5550 := by
     (417457319 / 50000000 : Rat) <= (417457319 / 50000000 : Rat) /\
     (417457319 / 50000000 : Rat) <= (919864569 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9357,7 +9357,7 @@ theorem k11_auxiliary_valid_5551 : K11AuxiliaryValid 5551 := by
     (13948491 / 5000000 : Rat) <= (155475863 / 50000000 : Rat) /\
     (13948491 / 5000000 : Rat) <= (308980483 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9367,7 +9367,7 @@ theorem k11_auxiliary_valid_5552 : K11AuxiliaryValid 5552 := by
     (187296487 / 25000000 : Rat) <= (772658593 / 100000000 : Rat) /\
     (187296487 / 25000000 : Rat) <= (187296487 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9377,7 +9377,7 @@ theorem k11_auxiliary_valid_5553 : K11AuxiliaryValid 5553 := by
     (193563341 / 20000000 : Rat) <= (193563341 / 20000000 : Rat) /\
     (193563341 / 20000000 : Rat) <= (985852431 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9387,7 +9387,7 @@ theorem k11_auxiliary_valid_5554 : K11AuxiliaryValid 5554 := by
     (56509579 / 25000000 : Rat) <= (22943947 / 10000000 : Rat) /\
     (56509579 / 25000000 : Rat) <= (56509579 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9397,7 +9397,7 @@ theorem k11_auxiliary_valid_5555 : K11AuxiliaryValid 5555 := by
     (400097317 / 100000000 : Rat) <= (424642343 / 100000000 : Rat) /\
     (400097317 / 100000000 : Rat) <= (400097317 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9407,7 +9407,7 @@ theorem k11_auxiliary_valid_5556 : K11AuxiliaryValid 5556 := by
     (42406197 / 10000000 : Rat) <= (42406197 / 10000000 : Rat) /\
     (42406197 / 10000000 : Rat) <= (17545979 / 4000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9417,7 +9417,7 @@ theorem k11_auxiliary_valid_5557 : K11AuxiliaryValid 5557 := by
     (59743237 / 50000000 : Rat) <= (119681947 / 100000000 : Rat) /\
     (59743237 / 50000000 : Rat) <= (59743237 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9427,7 +9427,7 @@ theorem k11_auxiliary_valid_5558 : K11AuxiliaryValid 5558 := by
     (129063083 / 5000000 : Rat) <= (1343138531 / 50000000 : Rat) /\
     (129063083 / 5000000 : Rat) <= (1427763639 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9437,7 +9437,7 @@ theorem k11_auxiliary_valid_5559 : K11AuxiliaryValid 5559 := by
     (542948581 / 50000000 : Rat) <= (90769 / 8000 : Rat) /\
     (542948581 / 50000000 : Rat) <= (542948581 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9447,7 +9447,7 @@ theorem k11_auxiliary_valid_5560 : K11AuxiliaryValid 5560 := by
     (56858981 / 50000000 : Rat) <= (63971359 / 50000000 : Rat) /\
     (56858981 / 50000000 : Rat) <= (56858981 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9457,7 +9457,7 @@ theorem k11_auxiliary_valid_5561 : K11AuxiliaryValid 5561 := by
     (2894927 / 156250 : Rat) <= (1008491407 / 50000000 : Rat) /\
     (2894927 / 156250 : Rat) <= (396538053 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9467,7 +9467,7 @@ theorem k11_auxiliary_valid_5562 : K11AuxiliaryValid 5562 := by
     (94142259 / 10000000 : Rat) <= (94142259 / 10000000 : Rat) /\
     (94142259 / 10000000 : Rat) <= (2273581 / 200000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9477,7 +9477,7 @@ theorem k11_auxiliary_valid_5563 : K11AuxiliaryValid 5563 := by
     (365874087 / 50000000 : Rat) <= (227581493 / 25000000 : Rat) /\
     (365874087 / 50000000 : Rat) <= (365874087 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9487,7 +9487,7 @@ theorem k11_auxiliary_valid_5564 : K11AuxiliaryValid 5564 := by
     (1767587 / 400000 : Rat) <= (251467293 / 50000000 : Rat) /\
     (1767587 / 400000 : Rat) <= (1767587 / 400000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9497,7 +9497,7 @@ theorem k11_auxiliary_valid_5565 : K11AuxiliaryValid 5565 := by
     (87923321 / 20000000 : Rat) <= (482237857 / 100000000 : Rat) /\
     (87923321 / 20000000 : Rat) <= (550395063 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9507,7 +9507,7 @@ theorem k11_auxiliary_valid_5566 : K11AuxiliaryValid 5566 := by
     (45924387 / 25000000 : Rat) <= (45924387 / 25000000 : Rat) /\
     (45924387 / 25000000 : Rat) <= (19231609 / 10000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9517,7 +9517,7 @@ theorem k11_auxiliary_valid_5567 : K11AuxiliaryValid 5567 := by
     (170875741 / 25000000 : Rat) <= (736055129 / 100000000 : Rat) /\
     (170875741 / 25000000 : Rat) <= (150505993 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9527,7 +9527,7 @@ theorem k11_auxiliary_valid_5568 : K11AuxiliaryValid 5568 := by
     (386182153 / 25000000 : Rat) <= (1618585351 / 100000000 : Rat) /\
     (386182153 / 25000000 : Rat) <= (1640234067 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9537,7 +9537,7 @@ theorem k11_auxiliary_valid_5569 : K11AuxiliaryValid 5569 := by
     (524451 / 400000 : Rat) <= (524451 / 400000 : Rat) /\
     (524451 / 400000 : Rat) <= (136793783 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9547,7 +9547,7 @@ theorem k11_auxiliary_valid_5570 : K11AuxiliaryValid 5570 := by
     (2451387213 / 100000000 : Rat) <= (158097 / 6250 : Rat) /\
     (2451387213 / 100000000 : Rat) <= (615336129 / 20000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9557,7 +9557,7 @@ theorem k11_auxiliary_valid_5571 : K11AuxiliaryValid 5571 := by
     (178025419 / 25000000 : Rat) <= (178025419 / 25000000 : Rat) /\
     (178025419 / 25000000 : Rat) <= (387496319 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9567,7 +9567,7 @@ theorem k11_auxiliary_valid_5572 : K11AuxiliaryValid 5572 := by
     (107984397 / 50000000 : Rat) <= (107984397 / 50000000 : Rat) /\
     (107984397 / 50000000 : Rat) <= (118900609 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9577,7 +9577,7 @@ theorem k11_auxiliary_valid_5573 : K11AuxiliaryValid 5573 := by
     (1502319 / 500000 : Rat) <= (315000139 / 100000000 : Rat) /\
     (1502319 / 500000 : Rat) <= (1502319 / 500000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9587,7 +9587,7 @@ theorem k11_auxiliary_valid_5574 : K11AuxiliaryValid 5574 := by
     (73223271 / 20000000 : Rat) <= (73223271 / 20000000 : Rat) /\
     (73223271 / 20000000 : Rat) <= (193130079 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9597,7 +9597,7 @@ theorem k11_auxiliary_valid_5575 : K11AuxiliaryValid 5575 := by
     (91864321 / 50000000 : Rat) <= (194392517 / 100000000 : Rat) /\
     (91864321 / 50000000 : Rat) <= (192279319 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9607,7 +9607,7 @@ theorem k11_auxiliary_valid_5576 : K11AuxiliaryValid 5576 := by
     (114635509 / 10000000 : Rat) <= (114635509 / 10000000 : Rat) /\
     (114635509 / 10000000 : Rat) <= (1286817743 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9617,7 +9617,7 @@ theorem k11_auxiliary_valid_5577 : K11AuxiliaryValid 5577 := by
     (1207915557 / 100000000 : Rat) <= (1207915557 / 100000000 : Rat) /\
     (1207915557 / 100000000 : Rat) <= (1248391047 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9627,7 +9627,7 @@ theorem k11_auxiliary_valid_5578 : K11AuxiliaryValid 5578 := by
     (98767059 / 50000000 : Rat) <= (100741943 / 50000000 : Rat) /\
     (98767059 / 50000000 : Rat) <= (98767059 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9637,7 +9637,7 @@ theorem k11_auxiliary_valid_5579 : K11AuxiliaryValid 5579 := by
     (13693409 / 2000000 : Rat) <= (13693409 / 2000000 : Rat) /\
     (13693409 / 2000000 : Rat) <= (35110741 / 5000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9647,7 +9647,7 @@ theorem k11_auxiliary_valid_5580 : K11AuxiliaryValid 5580 := by
     (184006071 / 25000000 : Rat) <= (75646717 / 10000000 : Rat) /\
     (184006071 / 25000000 : Rat) <= (416624591 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9657,7 +9657,7 @@ theorem k11_auxiliary_valid_5581 : K11AuxiliaryValid 5581 := by
     (423053657 / 100000000 : Rat) <= (505020419 / 100000000 : Rat) /\
     (423053657 / 100000000 : Rat) <= (434261337 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9667,7 +9667,7 @@ theorem k11_auxiliary_valid_5582 : K11AuxiliaryValid 5582 := by
     (157137093 / 50000000 : Rat) <= (173274667 / 50000000 : Rat) /\
     (157137093 / 50000000 : Rat) <= (6351899 / 2000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9677,7 +9677,7 @@ theorem k11_auxiliary_valid_5583 : K11AuxiliaryValid 5583 := by
     (370320797 / 100000000 : Rat) <= (370320797 / 100000000 : Rat) /\
     (370320797 / 100000000 : Rat) <= (187718547 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9687,7 +9687,7 @@ theorem k11_auxiliary_valid_5584 : K11AuxiliaryValid 5584 := by
     (37847521 / 25000000 : Rat) <= (32784963 / 20000000 : Rat) /\
     (37847521 / 25000000 : Rat) <= (160450661 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9697,7 +9697,7 @@ theorem k11_auxiliary_valid_5585 : K11AuxiliaryValid 5585 := by
     (359163467 / 25000000 : Rat) <= (359163467 / 25000000 : Rat) /\
     (359163467 / 25000000 : Rat) <= (823735697 / 50000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9707,7 +9707,7 @@ theorem k11_auxiliary_valid_5586 : K11AuxiliaryValid 5586 := by
     (869609219 / 100000000 : Rat) <= (454891759 / 50000000 : Rat) /\
     (869609219 / 100000000 : Rat) <= (869609219 / 100000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9717,7 +9717,7 @@ theorem k11_auxiliary_valid_5587 : K11AuxiliaryValid 5587 := by
     (33622637 / 25000000 : Rat) <= (8454307 / 6250000 : Rat) /\
     (33622637 / 25000000 : Rat) <= (33622637 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
@@ -9727,7 +9727,7 @@ theorem k11_auxiliary_valid_5588 : K11AuxiliaryValid 5588 := by
     (2649909361 / 50000000 : Rat) <= (1148746419 / 20000000 : Rat) /\
     (2649909361 / 50000000 : Rat) <= (1849691663 / 25000000 : Rat)
   norm_num1
-  simp
+  exact ⟨trivial, trivial, trivial, trivial⟩
 
 theorem k11_auxiliary_shard_22 (index : Nat)
     (hlo : 5346 <= index) (hhi : index < 5589) :

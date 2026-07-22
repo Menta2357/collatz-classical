@@ -283,7 +283,7 @@ def checker_shard_source(
         f"theorem k11_row_valid_{index} : K11RowValid {index} := by\n"
         f"  change {row_literal_statement(index, principal, auxiliary, slacks, a_coeff, b_lower, d_lower)}\n"
         "  norm_num1\n"
-        "  simp"
+        "  exact ⟨trivial, trivial, trivial⟩"
         for index in range(row_start, row_end)
     )
     auxiliary_facts = "\n\n".join(
@@ -292,7 +292,7 @@ def checker_shard_source(
         f"theorem k11_auxiliary_valid_{index} : K11AuxiliaryValid {index} := by\n"
         f"  change {auxiliary_literal_statement(index, principal, auxiliary)}\n"
         "  norm_num1\n"
-        "  simp"
+        "  exact ⟨trivial, trivial, trivial, trivial⟩"
         for index in range(auxiliary_start, auxiliary_end)
     )
     return f'''import CollatzClassical.KL2003.KL2003K11CertificateDataRouter
@@ -418,7 +418,11 @@ def audit_source() -> str:
 def write_manifest(paths: list[Path]) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     with MANIFEST_PATH.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["path", "sha256", "bytes"])
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["path", "sha256", "bytes"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         for path in paths:
             writer.writerow(
