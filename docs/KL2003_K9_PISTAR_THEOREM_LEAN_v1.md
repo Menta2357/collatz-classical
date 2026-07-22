@@ -148,3 +148,11 @@ NO_GLOBAL_COLLATZ_CLAIM
 This is a k=9 counting lower bound. It is not a k=11 theorem, not a proof of
 the `0.8418` endpoint in the KL2003 table, and not a proof of the global
 Collatz conjecture.
+
+## Integration artifact custody pointer
+
+The emitted nine-shard integration experiment is preserved separately under
+`docs/KL2003_F2_K9_LEAN_INTEGRATION_CUSTODY_v1.md`. Its exact path/hash
+manifest is `outputs/KL2003_F2_K9_LEAN_INTEGRATION_v1/manifest_sha256.csv`;
+the manifest was rechecked before custody and is not evidence replacing the
+accepted match-dispatch theorem.
