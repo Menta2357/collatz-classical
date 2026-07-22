@@ -10,6 +10,8 @@ Status: `DRAFT_PENDING_HOSTILE_REVIEW`.
 
 Submission status: `NOT_SUBMITTED`.
 
+SUPERSEDED_BY: `docs/KL2003_AUDITABLE_GENERATOR_VERIFIER_METHOD_PAPER_DRAFT_v3.md`
+
 This paper is deliberately about the house: source fidelity, certificate
 transport, kernel checking, and calibrated claims. It does not use the paper
 to make a claim about the separate F3 candidate.

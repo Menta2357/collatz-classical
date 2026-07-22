@@ -4,6 +4,8 @@ Date prepared: `2026-07-19`.
 
 Publication status: `DRAFT_NOT_PUBLISHED`.
 
+SUPERSEDED_BY: `docs/ELIAHOU1993_CC_CHALLENGE_AUDIT_REPORT_DRAFT_v2.md`
+
 Author-first decision time: `2026-07-21 01:21 CEST`.
 
 ## Audit target
