@@ -4,8 +4,17 @@
 'CollatzClassical.KL2003.F3SemanticBridge.frozen_rule_preserves' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'CollatzClassical.KL2003.F3SemanticBridge.frozen_rule_piStar_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3SemanticBridge.frozen_rule_piStar_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
 'CollatzClassical.KL2003.F3SemanticBridge.realized_row_channel_is_rule' does not depend on any axioms
 'CollatzClassical.KL2003.F3SemanticBridge.realized_row_piStar_bridge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3SemanticBridge.realized_row_piStar_card_bridge' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 real 3.88

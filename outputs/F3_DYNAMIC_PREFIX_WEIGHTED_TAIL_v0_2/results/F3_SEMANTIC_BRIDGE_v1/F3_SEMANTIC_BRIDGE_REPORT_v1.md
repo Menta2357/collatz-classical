@@ -42,3 +42,9 @@ señalada en la página, no escondida en un nombre.
 Esto es un puente semántico comprobado para todas las filas congeladas no
 estériles. No declara certificado de `rho`, teorema de densidad ni resultado
 global de Collatz.
+
+Además de la implicación miembro-a-miembro, el módulo prueba ahora la
+inclusión de `Finset` para cada regla y la desigualdad correspondiente de
+cardinalidades. Esto conecta formalmente una fila realizada con la masa
+`piStar` finita sin convertir todavía la suma de todas las filas en un
+teorema de crecimiento.

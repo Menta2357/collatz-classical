@@ -1,0 +1,9 @@
+Command: `lake env lean CollatzClassical/KL2003/F3ReturnExcursionRealIterateBridgeAxiomAudit.lean`
+Result: EXIT 0.
+
+'CollatzClassical.KL2003.F3RealIterateBridge.iteratePush_nonneg'
+  depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3RealIterateBridge.weighted_mass_iterate_lower_bound'
+  depends on axioms: [propext, Classical.choice, Quot.sound]
+
+No `sorryAx` appears.

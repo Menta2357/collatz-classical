@@ -37,19 +37,19 @@
       "sha256": "129fb85050c47a9095b6996cddc13024f13b37fbfe5c3b4697174099d8e02a17"
     },
     {
-      "bytes": 1555,
+      "bytes": 1872,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/F3_SEMANTIC_BRIDGE_REPORT_v1.md",
-      "sha256": "f8d3a04cede4571ad3fc73c289b94835f7a30ec5312bce5a4b1c987dbdef07e6"
+      "sha256": "7c136a00ca259ea23d9f10e276412e99cf3c59b80bbc7c90567bde37a9266f68"
     },
     {
-      "bytes": 29,
+      "bytes": 216,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/bridge_compile.txt",
-      "sha256": "4e648f627d5176f80076d362de825d5001b3f35e8380cbc06a7a98e52643ef26"
+      "sha256": "73b8f51e762169a4bc3f6ab9709c5b04b81c1cc9608fe4f19519fe8b5b66bf39"
     },
     {
-      "bytes": 525,
+      "bytes": 922,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_BRIDGE_v1/axiom_audit.txt",
-      "sha256": "ac245b13779668b5543af2d44916cf65de8ce4f0798294ac311146c69a704093"
+      "sha256": "27d8b3bd56b141ecebf458dbf5a179dcda0b8c865fc0bc7f813d02098ef25ec6"
     },
     {
       "bytes": 1370,
@@ -67,9 +67,9 @@
       "sha256": "8a1e2ee30c817afb415f8c4232bc6e956f831baadd60c78f42ab2d6a8c21c5ef"
     },
     {
-      "bytes": 1154,
+      "bytes": 1660,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/F3_REAL_OPERATOR_BRIDGE_REPORT_v1.md",
-      "sha256": "c65c4d804ea0c3b955c93d36202252d29a18f17ddf63c0d540ee76207092825a"
+      "sha256": "9f46ca1e326b52811ca5d8c032f70ffee9ace569d4f8aa1c89ba53803b1b1dc6"
     },
     {
       "bytes": 29,
@@ -80,6 +80,16 @@
       "bytes": 551,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/axiom_audit.txt",
       "sha256": "2468b860211830109311d49580f22f26bf9e80f54e5ea490fd8212d0d008b685"
+    },
+    {
+      "bytes": 315,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/iterate_bridge_compile.txt",
+      "sha256": "9994e8b253767142bd057b6a122850baf429d26ec3797031ff2cb5957ee02203"
+    },
+    {
+      "bytes": 406,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_REAL_OPERATOR_BRIDGE_v1/iterate_bridge_axiom_audit.txt",
+      "sha256": "35fca312c59c348dd21513366bd10edb5feca3c3ccd2d64d5aa6ddf20240dccb"
     },
     {
       "bytes": 1116,
@@ -162,9 +172,9 @@
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 7743,
+      "bytes": 8146,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "445eb2db5815068ce2c276bbd65c348f0d8df268a9ad5bfacad9a2cfa1ee1df5"
+      "sha256": "f0039faa76bef922ec6db59c3b8f096dd8c98d99cf1f9a9b60a97f44feb06d3c"
     },
     {
       "bytes": 6945,
@@ -182,14 +192,24 @@
       "sha256": "64c55965e6ba0fbc1582253175480c29a6139b8eaaeb75e4d405f4125df7350c"
     },
     {
-      "bytes": 4026,
+      "bytes": 6800,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticBridge.lean",
-      "sha256": "8d5d4bf10b5eaffec06fb3b422de470bd018a6d3a50ff97966a3c35ff88dc6d8"
+      "sha256": "fdaa98890feee9db73a41deb16be4f69e9cf356479ce7265e8a6b9a9844610f3"
     },
     {
-      "bytes": 357,
+      "bytes": 484,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticBridgeAxiomAudit.lean",
-      "sha256": "90319d3844b18b04380ff1ffd266c7547807aa305be5c8d6e5aa8d735606d023"
+      "sha256": "ff4c71e16cb6c9096fcdabd25345ee60d38db1d9d27de0ffb222141b7366f700"
+    },
+    {
+      "bytes": 2101,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionRealIterateBridge.lean",
+      "sha256": "089dd0621d0dc46dce172300c44a93df721295e9aa5a641bec5dab20153ab2bb"
+    },
+    {
+      "bytes": 280,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionRealIterateBridgeAxiomAudit.lean",
+      "sha256": "e4c75a6d61adec4ea60c301a20f682ef215345ddacf4eb5dfa177b7f6b8c9a35"
     },
     {
       "bytes": 128832,
@@ -285,11 +305,11 @@
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
     "global_collatz_claim": "NO",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
-    "real_operator_bridge": "REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN",
+    "real_operator_bridge": "REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
     "rho_certificate": "NO",
     "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
-    "semantic_bridge": "RULE_TO_PISTAR_BRIDGE_FINITE_INVENTORY_PASS",
+    "semantic_bridge": "RULE_TO_PISTAR_FINSET_CARD_BRIDGE_PASS_COVERAGE_OPEN",
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS"
   }
 }

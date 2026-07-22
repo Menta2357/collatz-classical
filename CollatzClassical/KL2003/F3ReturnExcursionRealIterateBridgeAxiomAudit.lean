@@ -1,0 +1,12 @@
+import CollatzClassical.KL2003.F3ReturnExcursionRealIterateBridge
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3RealIterateBridge
+
+#print axioms iteratePush_nonneg
+#print axioms weighted_mass_iterate_lower_bound
+
+end F3RealIterateBridge
+end KL2003
+end CollatzClassical

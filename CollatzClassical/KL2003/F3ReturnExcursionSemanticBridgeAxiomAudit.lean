@@ -6,8 +6,11 @@ namespace F3SemanticBridge
 
 #print axioms two_branch_parity_lift_injection
 #print axioms frozen_rule_preserves
+#print axioms frozen_rule_piStar_subset
+#print axioms frozen_rule_piStar_card_le
 #print axioms realized_row_channel_is_rule
 #print axioms realized_row_piStar_bridge
+#print axioms realized_row_piStar_card_bridge
 
 end F3SemanticBridge
 end KL2003

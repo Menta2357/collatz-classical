@@ -1,0 +1,5 @@
+Command: `lake env lean -o /private/tmp/F3ReturnExcursionRealIterateBridge.olean CollatzClassical/KL2003/F3ReturnExcursionRealIterateBridge.lean`
+Result: EXIT 0.
+
+The module formalizes finite iteration of the generic Real push-forward and
+the lower bound `(1 + delta)^n * weightedMass w mu` under member-wise rows.

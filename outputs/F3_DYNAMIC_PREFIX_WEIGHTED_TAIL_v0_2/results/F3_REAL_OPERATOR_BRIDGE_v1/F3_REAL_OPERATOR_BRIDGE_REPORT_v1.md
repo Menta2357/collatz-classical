@@ -1,6 +1,6 @@
 # F3 Real operator-to-functional bridge — informe v1
 
-Estado: `REAL_OPERATOR_ROW_MASS_BRIDGE_ORIENTATION_OPEN`.
+Estado: `REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN`.
 
 El módulo prueba en `ℝ`, para un tipo finito arbitrario de estados, la
 identidad de masa tras un push-forward y la implicación:
@@ -14,6 +14,19 @@ identidad de masa tras un push-forward y la implicación:
 También verifica preservación de no-negatividad para `M`, `μ` y el funcional
 ponderado. Esta es la interfaz algebraica que faltaba entre las desigualdades
 member-wise y la secuencia de masas usada por el lema renewal.
+
+El módulo separado `F3ReturnExcursionRealIterateBridge.lean` añade la
+iteración finita de `push`, prueba que la no-negatividad se conserva en cada
+nivel y demuestra, por inducción, la cota
+
+```text
+(1+δ)^n · weightedMass(w, μ)
+  ≤ weightedMass(w, iteratePush(M, μ, n)).
+```
+
+Esta es la parte algebraica del lema de conversión renewal ya conectada con
+una secuencia de operadores. La auditoría de axiomas termina limpia y no
+introduce ninguna afirmación sobre la matriz F3 concreta.
 
 ## Límite
 
