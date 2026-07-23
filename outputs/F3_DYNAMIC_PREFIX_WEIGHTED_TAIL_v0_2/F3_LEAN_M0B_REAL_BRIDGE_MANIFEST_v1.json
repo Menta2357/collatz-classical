@@ -189,6 +189,11 @@
       "sha256": "2fac2d15edf8a44d14f273ced656c4157d94df6b36228086ea9f561ee33f5563"
     },
     {
+      "bytes": 14548,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_SATURATION_DESIGN_v1.md",
+      "sha256": "ff98f16d1d62963f4a38b957c0007be023254a590c7922b8ebc784b420ea9f8d"
+    },
+    {
       "bytes": 1207,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_M0B_EXTENDED_PILOT_v1/F3_M0B_EXTENDED_PILOT_REPORT_v1.md",
       "sha256": "316424289f6a0845ce7927cbddbc3e8db21da00f8cce884f0a99e8d1c1e596bc"
@@ -359,9 +364,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 29948,
+      "bytes": 30209,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "88d352de2b04c80de83632d9f918cf80549138634ece4a762e714de4dbc1ac87"
+      "sha256": "1f9fb162cce79c67fcdd08778581deb3c484c6d71f7c386d9504aa7c920c2ffe"
     },
     {
       "bytes": 4253,
@@ -1154,10 +1159,12 @@
     "Real renewal pilot",
     "rule-to-piStar semantic bridge API",
     "exact 243-state core matrix representation",
-    "deterministic nine-block offline filter/remap shards"
+    "deterministic nine-block offline filter/remap shards",
+    "pre-Lean arithmetic codec and saturation design"
   ],
   "statuses": {
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
+    "arithmetic_codec_saturation_design": "PRE_LEAN_DESIGN_READY_FOR_REVIEW_NO_COMPILE",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
     "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
     "core_identity_reduction_v2": "STOP_AND_RECORD_REMAP_TABLE_HEARTBEAT_TIMEOUT",

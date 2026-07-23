@@ -47,6 +47,7 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_REDUCTION_V3.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_EXTENDED_BUDGET_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_EXTENDED_PRECHECK_v1.json",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_SATURATION_DESIGN_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_M0B_EXTENDED_PILOT_v1/F3_M0B_EXTENDED_PILOT_REPORT_v1.md",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_M0B_EXTENDED_PILOT_v1/extended_pilot_timeout.txt",
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_IDENTITY_SHARDS_M0B_V3_v1/F3_CORE_IDENTITY_SHARDS_M0B_V3_REPORT_v1.md",
@@ -266,7 +267,8 @@ def main() -> None:
             "Real renewal pilot",
             "rule-to-piStar semantic bridge API",
             "exact 243-state core matrix representation",
-            "deterministic nine-block offline filter/remap shards"
+            "deterministic nine-block offline filter/remap shards",
+            "pre-Lean arithmetic codec and saturation design"
         ],
         "statuses": {
             "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
@@ -278,6 +280,7 @@ def main() -> None:
             "core_identity_reduction_v2": "STOP_AND_RECORD_REMAP_TABLE_HEARTBEAT_TIMEOUT",
             "core_identity_reduction_v3": "STOP_AND_RECORD_PILOT_SHARD_TIMEOUT_NO_LEAN_PASS",
             "extended_campaign": "AUTHORIZED_EXTENDED_PILOT_TIMEOUT_STOP_AND_RECORD",
+            "arithmetic_codec_saturation_design": "PRE_LEAN_DESIGN_READY_FOR_REVIEW_NO_COMPILE",
             "semantic_first_orientation": "SEMANTIC_INTERFACE_COMPILES_AXIOM_AUDIT_PASS_OPERATOR_TO_FIBRE_OPEN",
             "lemma_a_expansion_invariant": "GENERIC_INDUCTIVE_INTERFACE_PASS_OPERATOR_INSTANTIATION_OPEN",
             "operator_fibre_comparison_contract": "CONTRACT_COMPILES_COMPARISON_HYPOTHESES_OPEN",
