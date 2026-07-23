@@ -152,6 +152,11 @@
       "sha256": "79ac3876bf7c17091dd54e9b6310daeae7950759479823b58b4b2163ca9f3de0"
     },
     {
+      "bytes": 2738,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/F3_OPERATOR_DATA_RECONCILIATION_REPORT_v1.md",
+      "sha256": "1f8b61f897e929ba654a95e13a0ab0d2a97c86358984f7066e09e1a04123464a"
+    },
+    {
       "bytes": 73,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_EXACT_CORE_MATRIX_v1/matrix_compile.txt",
       "sha256": "50736e3641e66d7619b2e69fae98a01059da91e0c5ab365fc54b9853d71c2e6d"
@@ -217,9 +222,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 23138,
+      "bytes": 23387,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "c3644279bb73ae19a59e373068e43b2049f641e6552dd6d2cf6dbf63aeb9c91f"
+      "sha256": "06b97b290d06020cd5e2e9baf8b3000ce4d7f4727738958d8c11305b07e88aa5"
     },
     {
       "bytes": 7548,
@@ -908,6 +913,7 @@
     "global_collatz_claim": "NO",
     "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
     "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
+    "operator_data_reconciliation": "OPEN_DATA_IDENTITY_GATE_RESTRICTED_CORE_FILTER_NOT_FORMALIZED",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
     "piStar_aggregate_bridge": "PISTAR_AGGREGATE_CARD_BRIDGE_PASS_F3_RULE_PARTITION_OPEN",
