@@ -18,6 +18,9 @@ origin/codex/mazur-density-fusion-custody =
   7f659eb482e5984a70b83fc7ab6e4548a3831596
 ```
 
+`STATUS.md` en `master@ccc561d...` ya no contiene
+`NO_K11_084_THEOREM_CLAIM`; la P1 K11 está cerrada en el remoto vivo.
+
 ## Source pin
 
 The only recovered first-party source package is ProofAtlas commit
