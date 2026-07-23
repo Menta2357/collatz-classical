@@ -5,9 +5,11 @@
 # excluded from the 151 count: compiler-generated constructors, recursors,
 # casesOn/noConfusion helpers, and deriving implementations attached to the two
 # inventoried inductives.  They are not separately written source declarations.
-# The inductive constants themselves are inventoried.  Generated helpers are not
-# labelled as individually audited; dependencies used by designated final public
-# theorems are covered transitively by those theorems' #print axioms results.
+# The inductive constants themselves are inventoried.  After elaboration, the
+# audit's environmental namespace enumerator separately logs Lean.collectAxioms
+# for every generated constant; that runtime layer is not part of this 151 count.
+# Dependencies used by designated final public theorems are also covered
+# transitively by those theorems' #print axioms results.
 # Any future explicit declaration changes this file and invalidates the freeze.
 ordinal	kind	name
 1	def	encodeNat

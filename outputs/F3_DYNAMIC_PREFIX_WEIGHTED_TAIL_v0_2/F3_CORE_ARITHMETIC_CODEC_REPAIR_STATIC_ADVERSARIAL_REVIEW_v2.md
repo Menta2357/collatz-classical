@@ -29,22 +29,22 @@ repair source:
 567d48c19b2b5bd2321e6a46b5a39dd9b54b8714adac7f6636a46405393bbf4d
 
 all-explicit-source audit:
-bbe454146b974795e7ff54412cbf5ff9cd1c6d11d03d39cb7c2425c1dff692a7
+a8e05246e9726afb79c25e206a90f86b12a50a0803251c50cf8b856eae40e0f1
 
 historical design, marked superseded for execution:
 79567ccc3c3556b13fea30be05499ff5ebfb00a50e280cc9f954693ff46e55d8
 
 repair contract:
-0e3f92fc93dd90f14adc143d1bcc0bc0fabfb376c4eafd3b0407bcf8596b1e27
+cd3cffcaa3a8cfec22b67f5411a01e8f79647bb4f274e1565cd333807a6ec7a4
 
 first-hit gate contract:
 b5f022271bbd696df2a1b2e9205a36d8ad134e058fe29adbf5b1565f167c44fa
 
 declaration inventory:
-d570b18203c9f3998765c6f606043173ec34e0fa8bd2e82d5f13b91e63a543e1
+611bfc53a028e224c71ceb9287a01dd3587e9300e889c7facbb21fb5183ce74f
 
 inventory checker:
-d30c3a336044f095ffec610acd5122c148f82021f9ea66f53baddea3e8b7134a
+18d2e368b5e73519ec5d701cee59177982bc1f6a750b1b5546d8568866761e9e
 ```
 
 Any source edit invalidates this static freeze and requires a new hash and
@@ -56,6 +56,13 @@ is `SUPERSEDED_FOR_EXECUTION — HISTORICAL_DESIGN_ONLY`, lines 5--13 name the
 300-second repair contract as the sole authority, and lines 428--450 mark the
 preserved Sections 7 and 8 as historical.  The exact successor file hash is
 recorded above.
+
+Authority is also separated from the spent pilot record:
+`F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2.md` supplies only the recalibrated
+resource envelope (300 seconds, 200000 heartbeats, one process).  Its source
+hashes and attempt authorization belong to the failed pilot, whose attempt is
+spent.  The Repair contract plus the hashes and review in this document govern
+the new sources and the separately granted single repair attempt.
 
 ## 2. Gate-zero findings
 
@@ -144,8 +151,7 @@ recursors, cases/no-confusion helpers and deriving implementations are
 excluded from the 151 count; both source inductive constants themselves are
 included.  Consequently, the label is
 `ALL_EXPLICIT_SOURCE_DECLARATIONS`, not all constants in an elaborated
-namespace.  Environmental enumeration of generated constants is
-`NOT_RUN_PRECOMPILE`.
+namespace.
 
 That exclusion does not create an axiom blind spot in the theorem boundary.
 Generated constructors and recursors are kernel/elaborator infrastructure,
@@ -156,6 +162,16 @@ designated final public theorems to occur in the audit: the codec inverses and
 cardinality, both target closed forms, realization injectivity, full and pilot
 formula cardinalities, the positional normalization, pilot permutation,
 pilot scope, and pilot matrix equality.
+
+Literal namespace coverage is now a distinct, post-elaboration layer in the
+same audit.  After all 151 `#print axioms` commands, a validated `run_meta`
+block enumerates every constant whose name has prefix
+`CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair`, including
+generated declarations, and calls `Lean.collectAxioms` on each one.  Before
+execution its honest status is `PRESENT_NOT_EXECUTED`.  In the conditional
+audit log, the declared namespace count must equal the number of
+`AXIOM_PROFILE` lines, and the log checker rejects any profile containing
+`Lean.ofReduceBool` or `sorryAx`.
 
 The repeatable static checker returned:
 
@@ -168,7 +184,8 @@ INVENTORY_AUDIT_DIFF=EMPTY
 DUPLICATES=NONE
 PRIVATE_EXPLICIT_DECLARATIONS=NONE
 FINAL_PUBLIC_THEOREMS_IN_AUDIT=12_OF_12
-GENERATED_NAMESPACE_ENUMERATION=NOT_RUN_PRECOMPILE
+ENVIRONMENTAL_NAMESPACE_ENUMERATOR=PRESENT_NOT_EXECUTED
+GENERATED_NAMESPACE_ENUMERATION=DEFERRED_TO_CONDITIONAL_AUDIT
 AUDIT_IMPORT_NAMESPACE=REPAIR_MODULE
 FORBIDDEN_SOURCE_SYNTAX=ABSENT
 STATIC_EXPLICIT_INVENTORY_CHECK=PASS
@@ -177,7 +194,8 @@ STATIC_EXPLICIT_INVENTORY_CHECK=PASS
 Thus each explicit inventoried constant has exactly one `#print axioms`
 command and every designated final theorem is present.  This is static
 explicit-source coverage, not an axiom PASS: those commands remain unopened
-until the compile succeeds.
+until the compile succeeds.  The environmental block is present but likewise
+has not run.
 
 ## 6. Execution request and decision rule
 
@@ -194,11 +212,13 @@ no retry and no resource increase after failure
 ```
 
 Compile failure, timeout, heartbeat exhaustion, a missing explicit source or
-designated final theorem audit command, or any final-theorem dependency on
-`Lean.ofReduceBool` or `sorryAx` gives
+designated final theorem audit command, a missing/mismatched environmental
+count, or any namespace profile containing `Lean.ofReduceBool` or `sorryAx`
+gives
 `ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD`.  A compile PASS followed by the
-all-explicit-source audit whose final-theorem axiom sets are subsets of
-`[propext, Classical.choice, Quot.sound]` closes only this pilot gate.
+all-explicit-source audit and a complete environmental log whose axiom sets
+are subsets of `[propext, Classical.choice, Quot.sound]` closes only this
+pilot gate.
 
 ```text
 NO_COMPILE_PASS_YET

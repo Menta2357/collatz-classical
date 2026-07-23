@@ -35,7 +35,8 @@ Section 7 of `F3_CORE_ARITHMETIC_CODEC_SATURATION_DESIGN_v1.md` recorded an
 obsolete 120-second total ceiling.  The independently measured cold import
 cost was 116.75 seconds, so that ceiling did not represent the intended
 elaboration budget.  The approved pre-execution recalibration in
-`F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2.md` is controlling:
+`F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2.md` supplies the controlling resource
+envelope:
 
 ```text
 maxHeartbeats = 200000
@@ -48,6 +49,13 @@ retry of the same frozen source = forbidden
 resource increase after failure = forbidden
 raw stdout and stderr capture = mandatory
 ```
+
+`F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2.md` controls only those resource
+figures: 300 seconds, 200000 heartbeats and one sequential process.  Its
+frozen source hashes and attempt authorization belong to the failed pilot;
+that old attempt was spent and cannot be reused.  The present Repair contract,
+the current source hashes and the static freeze/review control the new files
+and the separately granted single repair attempt.
 
 The 300-second ceiling includes import and elaboration.  It is not 300 seconds
 in addition to a separately prepaid import.  Nothing in this contract
@@ -95,7 +103,11 @@ Static review passes only if all of the following hold:
   `formulaEdge_card`, `pilotFormulaEdge_card`,
   `pilotFrozen_position_normalization`, `pilotFrozen_perm_formula`,
   `pilot_frozen_scope`, and `pilot_matrix_eq_formulaMatrix`, and every member
-  has a `#print axioms` command.
+  has a `#print axioms` command;
+- after those 151 commands, the same audit imports `Lean.Meta.Basic` and
+  `Lean.Util.CollectAxioms`, enumerates every environment constant under
+  `CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair`, and logs
+  `Lean.collectAxioms` for each one.
 
 The 151-entry label is
 
@@ -108,9 +120,10 @@ recursors, no-confusion helpers and deriving implementations created by the
 elaborator are not user-authored opaque theorem claims and are not counted as
 separate explicit source declarations.  If one is used by a designated final
 public theorem, its axioms are traversed transitively by that theorem's
-`#print axioms`.  Environmental enumeration of every generated namespace
-constant is explicitly `NOT_RUN_PRECOMPILE` and is not required for the
-151-entry claim.
+`#print axioms`.  Separately, the environmental `run_meta` closes literal
+namespace coverage after elaboration by including those generated constants.
+It is `PRESENT_NOT_EXECUTED` before the conditional audit and is not part of
+the 151-entry precompile claim.
 
 Static PASS label:
 
@@ -123,6 +136,10 @@ ARITHMETIC_CODEC_REPAIR_STATIC_PASS_AWAITING_HEAVY_SLOT
 A future authorized execution is GO only if the single compile exits zero
 within both limits and the subsequent all-explicit-source audit exits zero
 with no designated final public theorem dependency on `Lean.ofReduceBool` or
+`sorryAx`.  The same audit invocation must also emit exactly one
+`NAMESPACE_DECLARATION_COUNT=n` line and exactly `n` `AXIOM_PROFILE` lines.
+The execution-side checker must reject the log if `n = 0`, if the counts
+differ, or if any environmental profile contains `Lean.ofReduceBool` or
 `sorryAx`.
 
 The expected public profile is a subset of
@@ -132,8 +149,9 @@ The expected public profile is a subset of
 ```
 
 Any compile error, timeout, heartbeat exhaustion, missing explicit source
-declaration or designated final public theorem in the audit, forbidden axiom,
-placeholder, lookup representation or literal expected RHS is:
+declaration or designated final public theorem in the audit, absent or
+incomplete environmental namespace log, forbidden axiom in any logged
+profile, placeholder, lookup representation or literal expected RHS is:
 
 ```text
 ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD
