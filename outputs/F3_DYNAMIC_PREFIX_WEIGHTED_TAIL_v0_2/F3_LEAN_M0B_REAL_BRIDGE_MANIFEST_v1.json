@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 9886,
+      "bytes": 10490,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "38869e3452317af4ce5150411a45d1b166f9b313a7f0359dee050e4f72ae7859"
+      "sha256": "9759be55d629004b84e575614780f30589505cd27e6921e4c1d1876c519a5193"
     },
     {
       "bytes": 7548,
@@ -285,6 +285,31 @@
       "bytes": 334,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionBoundaryLeakageAxiomAudit.lean",
       "sha256": "9114f05f634a846e20f7057c2d3935aa614ec7d34cd7c87c9d4794c23cced211"
+    },
+    {
+      "bytes": 1419,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PATH_LEAKAGE_CONTRACT_v1/F3_PATH_LEAKAGE_CONTRACT_REPORT_v1.md",
+      "sha256": "fecaaec7cbc1b6c870006b3ec3b052d9cd9cb0a73c77e5804f7d0347fbbbbb2d"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PATH_LEAKAGE_CONTRACT_v1/contract_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 418,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PATH_LEAKAGE_CONTRACT_v1/contract_axiom_audit.txt",
+      "sha256": "2a0c6717b945d65111d27afec0506a60be6eb49789c57c0bdb200d5d703cbc4a"
+    },
+    {
+      "bytes": 4133,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionPathLeakageContract.lean",
+      "sha256": "cdd4de678941d0f4ee1b1044ddc497962d81ef59a311f438527ae14db86c731f"
+    },
+    {
+      "bytes": 298,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionPathLeakageContractAxiomAudit.lean",
+      "sha256": "95f61f7bb6b9bb37ae3b4802f75dcadbc8866136b9f4c58d342b6b147aeeba28"
     },
     {
       "bytes": 128832,
@@ -382,6 +407,7 @@
     "fiber_accounting": "ABSTRACT_FIBER_DISJOINTNESS_PASS_RENEWAL_LEAKAGE_INSTANTIATION_OPEN",
     "global_collatz_claim": "NO",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
+    "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
     "real_operator_bridge": "REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
     "renewal_interface": "REAL_RENEWAL_CONVERSION_INTERFACE_PASS_PATH_LEAKAGE_OPEN",

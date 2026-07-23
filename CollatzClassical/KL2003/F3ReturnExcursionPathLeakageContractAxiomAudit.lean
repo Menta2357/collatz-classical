@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.F3ReturnExcursionPathLeakageContract
+
+open CollatzClassical KL2003
+
+#print axioms F3PathLeakageContract.retained_plus_boundary_eq_root
+#print axioms F3PathLeakageContract.RouteIIContract.leakage
+#print axioms F3PathLeakageContract.RouteIIContract.renewal_lower_bound

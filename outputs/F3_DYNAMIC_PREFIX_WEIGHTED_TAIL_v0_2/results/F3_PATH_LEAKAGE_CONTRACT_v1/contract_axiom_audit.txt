@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3PathLeakageContract.retained_plus_boundary_eq_root' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3PathLeakageContract.RouteIIContract.leakage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3PathLeakageContract.RouteIIContract.renewal_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
