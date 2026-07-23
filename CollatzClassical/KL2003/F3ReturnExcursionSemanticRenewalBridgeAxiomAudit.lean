@@ -1,0 +1,6 @@
+import CollatzClassical.KL2003.F3ReturnExcursionSemanticRenewalBridge
+
+open CollatzClassical KL2003
+
+#print axioms F3SemanticRenewalBridge.operator_mass_le_piStar_mass
+#print axioms F3SemanticRenewalBridge.exponential_piStar_mass_lower_bound

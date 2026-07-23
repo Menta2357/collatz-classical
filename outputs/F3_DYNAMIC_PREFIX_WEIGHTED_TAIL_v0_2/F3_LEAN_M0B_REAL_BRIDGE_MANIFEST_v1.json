@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 13299,
+      "bytes": 13941,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "4390decedcbdb120e9f4be86437d82a613562c965bd61da5b3133cee6c587039"
+      "sha256": "18080910615ae131de825cc238ac1bd52fb91d873d269f8a53fb96ee74a3afed"
     },
     {
       "bytes": 7548,
@@ -432,6 +432,31 @@
       "sha256": "dbabd7784cf9f784bf76fb5b9edf127be98ba909bdd85c17084f8dd5dca65140"
     },
     {
+      "bytes": 1559,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_BRIDGE_v1/F3_SEMANTIC_RENEWAL_BRIDGE_REPORT_v1.md",
+      "sha256": "c0f7e2eef961fa1e692935dfdbd580c4f6550465b52c0b4afc574a24173b15d7"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_BRIDGE_v1/semantic_renewal_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 287,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_BRIDGE_v1/semantic_renewal_axiom_audit.txt",
+      "sha256": "9800167c98f56d3ebc903a115055a6462fabe02576d76000caf3eac043bdb567"
+    },
+    {
+      "bytes": 3140,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalBridge.lean",
+      "sha256": "16ec7214804cfdc62d3e479c0a5801c2a2e36f408fd3ac5b0db05cde0b0aa52e"
+    },
+    {
+      "bytes": 242,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalBridgeAxiomAudit.lean",
+      "sha256": "7793bbc89ab32ba384fb18ddd9592b627301ccd242381a20df95df021c94e57c"
+    },
+    {
       "bytes": 128832,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionFrozenSemanticInventory.lean",
       "sha256": "44dafc0de94f88b3e4fea69fd22fad228a3ae337f215ca123ce63ab343cbca3b"
@@ -537,6 +562,7 @@
     "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
     "semantic_bridge": "RULE_TO_PISTAR_FINSET_CARD_BRIDGE_PASS_COVERAGE_OPEN",
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
+    "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
 }

@@ -1,0 +1,6 @@
+'CollatzClassical.KL2003.F3SemanticRenewalBridge.operator_mass_le_piStar_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3SemanticRenewalBridge.exponential_piStar_mass_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
