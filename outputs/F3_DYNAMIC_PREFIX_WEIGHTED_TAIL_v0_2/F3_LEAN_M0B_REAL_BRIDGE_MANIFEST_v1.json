@@ -152,9 +152,24 @@
       "sha256": "79ac3876bf7c17091dd54e9b6310daeae7950759479823b58b4b2163ca9f3de0"
     },
     {
-      "bytes": 2738,
+      "bytes": 3444,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/F3_OPERATOR_DATA_RECONCILIATION_REPORT_v1.md",
-      "sha256": "1f8b61f897e929ba654a95e13a0ab0d2a97c86358984f7066e09e1a04123464a"
+      "sha256": "157ed9cf07c31ef66bfe2bdc1aba837f45c5edc046ad45982d3ef5c8587f5193"
+    },
+    {
+      "bytes": 2065,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/core_state_ids.csv",
+      "sha256": "60a3241e428ef05cedb531692467a024603fe9219e1020c90c359b721e9700d0"
+    },
+    {
+      "bytes": 10206,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/core_edge_identity.csv",
+      "sha256": "45a4297196e3f1ea767b0f4cfef8ebbbcf70f31547469fe22768cda9d971e35a"
+    },
+    {
+      "bytes": 697,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/summary_v1.json",
+      "sha256": "ef9320913c1f69c561ab29de0f6133af9f7e5347cd73df39f0458c1ea5dfbaa6"
     },
     {
       "bytes": 73,
@@ -222,9 +237,14 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 23387,
+      "bytes": 23823,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "06b97b290d06020cd5e2e9baf8b3000ce4d7f4727738958d8c11305b07e88aa5"
+      "sha256": "e04a49e80636ce4effa02d8e5a720bcf614b9365dbb95a0930939eceb09d9c6a"
+    },
+    {
+      "bytes": 4253,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_reconcile_core_operator_v1.py",
+      "sha256": "81567bb45ad2818a7fd8b2d1977ba0e9b979369b0f4fc132a7b47ba8bc16abde"
     },
     {
       "bytes": 7548,

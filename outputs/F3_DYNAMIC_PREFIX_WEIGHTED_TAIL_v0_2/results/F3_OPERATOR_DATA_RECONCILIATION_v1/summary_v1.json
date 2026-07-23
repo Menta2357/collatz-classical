@@ -1,0 +1,21 @@
+{
+  "status": "OFFLINE_DATA_IDENTITY_PASS_LEAN_THEOREM_OPEN",
+  "m0a_split_edges": 1215,
+  "selected_core_states": 243,
+  "filtered_internal_edges": 729,
+  "generated_lean_edges": 729,
+  "sequence_match": true,
+  "expected_channel_counts": {
+    "0": 243,
+    "1": 243,
+    "2": 243
+  },
+  "generated_channel_counts": {
+    "0": 243,
+    "1": 243,
+    "2": 243
+  },
+  "state_ids_sha256": "60a3241e428ef05cedb531692467a024603fe9219e1020c90c359b721e9700d0",
+  "edge_identity_sha256": "45a4297196e3f1ea767b0f4cfef8ebbbcf70f31547469fe22768cda9d971e35a",
+  "lean_obligation": "formalize the finite filter/remap equality and the transposed left-certificate orientation before using the Real operator"
+}
