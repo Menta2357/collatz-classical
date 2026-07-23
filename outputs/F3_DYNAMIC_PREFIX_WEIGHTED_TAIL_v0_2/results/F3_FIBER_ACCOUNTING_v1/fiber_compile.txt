@@ -1,0 +1,2 @@
+Command: `lake env lean -o /private/tmp/F3ReturnExcursionFiberAccounting.olean CollatzClassical/KL2003/F3ReturnExcursionFiberAccounting.lean`
+Result: EXIT 0; no warnings in the final run.

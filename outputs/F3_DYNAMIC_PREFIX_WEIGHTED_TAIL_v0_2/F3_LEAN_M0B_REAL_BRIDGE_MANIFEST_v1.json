@@ -107,6 +107,21 @@
       "sha256": "375348025a8bd2187ced689ddc9000ce53519d5dcfeb825f03df3742a49c7dae"
     },
     {
+      "bytes": 870,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/F3_FIBER_ACCOUNTING_REPORT_v1.md",
+      "sha256": "0d34f07aef6ce4a1ec0be60005a4c7b909edfe5ca7bbbeff24a116843bda0c51"
+    },
+    {
+      "bytes": 188,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/fiber_compile.txt",
+      "sha256": "677ca25021eeb8cc5d37c7c64fb2f83dcaf69eedf41124357b6de5c91ca1bde8"
+    },
+    {
+      "bytes": 416,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/fiber_axiom_audit.txt",
+      "sha256": "f156e7d6d187d14305551fb81737f4a925e2219a1cf71d8d46149681f4c58b64"
+    },
+    {
       "bytes": 1116,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_REAL_OPERATOR_INSTANCE_BUDGET_v1.md",
       "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
@@ -187,9 +202,9 @@
       "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
     },
     {
-      "bytes": 8723,
+      "bytes": 9296,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "84784da65624be3dd74cfeed0496e9ec779638d9bf9be84671ff743e5f50c5ca"
+      "sha256": "1b4a6945e7421991947ce49f6aebca2e853c260b250836aa83f1a8ae7c75bf57"
     },
     {
       "bytes": 6945,
@@ -235,6 +250,16 @@
       "bytes": 344,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionRenewalInterfaceAxiomAudit.lean",
       "sha256": "2600b61f1e89d9a1f7b167db3584ec074b866c28e2f5bf4bbe498abcfed5128d"
+    },
+    {
+      "bytes": 2293,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionFiberAccounting.lean",
+      "sha256": "4c803601b7540965b90dddb854e6c0de1876b5ab578fd84ac987dc7f399af06b"
+    },
+    {
+      "bytes": 290,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionFiberAccountingAxiomAudit.lean",
+      "sha256": "f022a215aad52519e5e02bf98bbbf0e78f0f53a8e18bb25f460200a9e0cb39f7"
     },
     {
       "bytes": 128832,
@@ -328,6 +353,7 @@
   "statuses": {
     "density_theorem": "NO",
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
+    "fiber_accounting": "ABSTRACT_FIBER_DISJOINTNESS_PASS_RENEWAL_LEAKAGE_INSTANTIATION_OPEN",
     "global_collatz_claim": "NO",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "real_operator_bridge": "REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN",

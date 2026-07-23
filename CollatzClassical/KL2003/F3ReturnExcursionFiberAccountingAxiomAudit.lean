@@ -1,0 +1,12 @@
+import CollatzClassical.KL2003.F3ReturnExcursionFiberAccounting
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3FiberAccounting
+
+#print axioms sum_fiber_card_le_root_card
+#print axioms sum_fiber_card_le_root_card_of_injective
+
+end F3FiberAccounting
+end KL2003
+end CollatzClassical
