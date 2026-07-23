@@ -1,0 +1,6 @@
+import CollatzClassical.KL2003.F3ReturnExcursionLayerNormalization
+
+open CollatzClassical KL2003
+
+#print axioms F3LayerNormalization.sum_contribution_le_sum_fibre_card
+#print axioms F3LayerNormalization.sum_fibre_card_cast_eq

@@ -1,0 +1,6 @@
+'CollatzClassical.KL2003.F3LayerNormalization.sum_contribution_le_sum_fibre_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3LayerNormalization.sum_fibre_card_cast_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
