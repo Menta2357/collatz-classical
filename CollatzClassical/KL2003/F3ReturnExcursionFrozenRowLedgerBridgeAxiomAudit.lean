@@ -1,0 +1,4 @@
+import CollatzClassical.KL2003.F3ReturnExcursionFrozenRowLedgerBridge
+
+#print axioms CollatzClassical.KL2003.F3FrozenRowLedgerBridge.childFiber_subset_parent
+#print axioms CollatzClassical.KL2003.F3FrozenRowLedgerBridge.operator_mass_le_piStar_of_frozen_rule_ledger

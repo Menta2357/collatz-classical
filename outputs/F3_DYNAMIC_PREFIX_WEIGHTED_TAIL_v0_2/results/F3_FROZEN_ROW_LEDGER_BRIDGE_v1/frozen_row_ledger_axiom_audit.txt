@@ -1,0 +1,6 @@
+'CollatzClassical.KL2003.F3FrozenRowLedgerBridge.childFiber_subset_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3FrozenRowLedgerBridge.operator_mass_le_piStar_of_frozen_rule_ledger' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
