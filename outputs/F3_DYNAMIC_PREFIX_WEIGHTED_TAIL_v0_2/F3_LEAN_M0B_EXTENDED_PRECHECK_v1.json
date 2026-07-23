@@ -1,0 +1,11 @@
+{
+  "schema": "F3_LEAN_M0B_EXTENDED_PRECHECK_v1",
+  "timestamp_local": "2026-07-23",
+  "free_disk_gib_observed": 13.414,
+  "free_disk_minimum_gib": 12.0,
+  "physical_memory_gib": 8.0,
+  "memory_pressure_note": true,
+  "execution_mode": "SEQUENTIAL_ONLY",
+  "status": "PASS_WITH_LOW_DISK_MARGIN_AND_PRESSURE_NOTE",
+  "policy": "STOP_AND_RECORD"
+}

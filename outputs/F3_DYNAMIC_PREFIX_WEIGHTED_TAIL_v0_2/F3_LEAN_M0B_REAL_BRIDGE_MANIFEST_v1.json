@@ -1,5 +1,7 @@
 {
   "base_commit": "f91927400c8e68a7c34c1458d301c55b3fabd0d9",
+  "extended_campaign_budget_seconds": 9000,
+  "extended_max_command_seconds": 900,
   "files": [
     {
       "bytes": 1837,
@@ -177,6 +179,16 @@
       "sha256": "875fec45cf952556089e2349e0ea6567ebe42dbe7e23200db1dc0f0dba97f12f"
     },
     {
+      "bytes": 2012,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_EXTENDED_BUDGET_v1.md",
+      "sha256": "c9c0deed7a397fea15b3470a9d3ba721c6ecd72f87cab6a30c45dbb49eb33e55"
+    },
+    {
+      "bytes": 346,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_EXTENDED_PRECHECK_v1.json",
+      "sha256": "2fac2d15edf8a44d14f273ced656c4157d94df6b36228086ea9f561ee33f5563"
+    },
+    {
       "bytes": 1297,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_IDENTITY_SHARDS_M0B_V3_v1/F3_CORE_IDENTITY_SHARDS_M0B_V3_REPORT_v1.md",
       "sha256": "04fb6517a668d3b84a2b98661cedeabc3833fa5bad6c7ef120d4855fc687870f"
@@ -337,9 +349,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 29368,
+      "bytes": 29715,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "82f96ccf15f5a18265a7a6baa181afdcaaf27a4d1eb7f065510b694f9ed82b01"
+      "sha256": "720190c2f7169eb7f0957ceeb8f8969edefe79e591e9d0bfefb24a140e3ae726"
     },
     {
       "bytes": 4253,
@@ -1123,7 +1135,7 @@
     }
   ],
   "full_m0b_budget_seconds": 2700,
-  "full_m0b_budget_status": "AUTHORIZED_STOPPED_THREE_FINITE_REDUCTIONS",
+  "full_m0b_budget_status": "AUTHORIZED_STAGED_PILOT",
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
   "max_command_seconds": 300,
   "operator_instance_budget_seconds": 600,
@@ -1145,6 +1157,7 @@
     "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
     "density_theorem": "NO",
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
+    "extended_campaign": "AUTHORIZED_STAGED_PILOT_PRECHECK_PASS_WITH_LOW_DISK_MARGIN",
     "fiber_accounting": "ABSTRACT_FIBER_DISJOINTNESS_PASS_RENEWAL_LEAKAGE_INSTANTIATION_OPEN",
     "frozen_row_ledger_bridge": "FROZEN_RULE_TO_PISTAR_LEDGER_PASS_OPERATOR_CONTRIBUTION_OPEN",
     "global_collatz_claim": "NO",
