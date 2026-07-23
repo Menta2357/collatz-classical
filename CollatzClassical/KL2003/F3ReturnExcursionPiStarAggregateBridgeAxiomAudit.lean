@@ -1,0 +1,6 @@
+import CollatzClassical.KL2003.F3ReturnExcursionPiStarAggregateBridge
+
+open CollatzClassical KL2003
+
+#print axioms F3PiStarAggregateBridge.aggregate_piStar_card_bound
+#print axioms F3PiStarAggregateBridge.aggregate_piStar_card_bound_of_frozen_rules

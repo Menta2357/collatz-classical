@@ -1,0 +1,2 @@
+CollatzClassical/KL2003/F3ReturnExcursionAdvancedDisjointness.lean:34:5: warning: unused variable `hax`
+note: this linter can be disabled with `set_option linter.unusedVariables false`

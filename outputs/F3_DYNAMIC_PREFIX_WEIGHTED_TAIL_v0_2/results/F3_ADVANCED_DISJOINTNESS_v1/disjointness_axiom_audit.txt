@@ -1,0 +1,12 @@
+'CollatzClassical.KL2003.F3AdvancedDisjointness.source_reaches_inverse_child' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3AdvancedDisjointness.source_preserves_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3AdvancedDisjointness.source_member_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3AdvancedDisjointness.source_pairwise_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

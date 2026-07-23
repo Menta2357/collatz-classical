@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 10490,
+      "bytes": 12361,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "9759be55d629004b84e575614780f30589505cd27e6921e4c1d1876c519a5193"
+      "sha256": "1c2b22f109b78978822728623167712c5581012d5562227d1e3c888d16fe8a30"
     },
     {
       "bytes": 7548,
@@ -312,6 +312,81 @@
       "sha256": "95f61f7bb6b9bb37ae3b4802f75dcadbc8866136b9f4c58d342b6b147aeeba28"
     },
     {
+      "bytes": 1054,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ADVANCED_DISJOINTNESS_v1/F3_ADVANCED_DISJOINTNESS_REPORT_v1.md",
+      "sha256": "b398170d8a257b6e3f05c7e4705d8a4dd48ade439cb76e03c56be38abea1314c"
+    },
+    {
+      "bytes": 185,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ADVANCED_DISJOINTNESS_v1/disjointness_compile.txt",
+      "sha256": "f1d040a8abab5ba340247a1aed2c6fb1ea808b1084cf8ed844cdb700ae364284"
+    },
+    {
+      "bytes": 541,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_ADVANCED_DISJOINTNESS_v1/disjointness_axiom_audit.txt",
+      "sha256": "9d7a0ef11e1892cc5fe21d98757af7f6b377ee7e17bbdbb7fc6b49e98a2d12fe"
+    },
+    {
+      "bytes": 5082,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionAdvancedDisjointness.lean",
+      "sha256": "953c8063da349e8ae4be09914444132ed4eb097fd64f7bd123445f6615d731a5"
+    },
+    {
+      "bytes": 349,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionAdvancedDisjointnessAxiomAudit.lean",
+      "sha256": "b2cc255b2c5547db7f1414a52658e7dc575346043dee5cd314e8d9a81ba0d3ea"
+    },
+    {
+      "bytes": 845,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TWO_BRANCH_PATH_INSTANCE_v1/F3_TWO_BRANCH_PATH_INSTANCE_REPORT_v1.md",
+      "sha256": "869c2962c816c42910ce61e9d3f95ff5e0f92a73eace0b04b0d600adebe4e24a"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TWO_BRANCH_PATH_INSTANCE_v1/instance_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 149,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TWO_BRANCH_PATH_INSTANCE_v1/instance_axiom_audit.txt",
+      "sha256": "8a239ffb5fec949e77d7b270a97a2aaf84c21d7677c13a7a3e4a903684c7085c"
+    },
+    {
+      "bytes": 3122,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTwoBranchPathInstance.lean",
+      "sha256": "8040ef8de6d6a5a4a666c4f094d948056ea8d5f5c31481dd3f6299d01ba3a569"
+    },
+    {
+      "bytes": 177,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTwoBranchPathInstanceAxiomAudit.lean",
+      "sha256": "bfdf9068f91db9641161db2e1c20b54c267eed3c2599a6cf6a5be872ef40b8c9"
+    },
+    {
+      "bytes": 1069,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/F3_PISTAR_AGGREGATE_BRIDGE_REPORT_v1.md",
+      "sha256": "f3010dd89ac665382737267320c9222737be8add754f7645bf2da0b18983c97b"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/aggregate_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 294,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/aggregate_axiom_audit.txt",
+      "sha256": "9281460104ed7689219d87ee50a016fd58f294ceaa03dbb8419fdf98970fed16"
+    },
+    {
+      "bytes": 2436,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridge.lean",
+      "sha256": "b43ca4cec5887759b075be30a47b556981bc1c158a79e6f38c7154c1568d2dfb"
+    },
+    {
+      "bytes": 249,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridgeAxiomAudit.lean",
+      "sha256": "30c89cef4dfd913f204056db25638503fddf3b9430de7d756174b0088d61882f"
+    },
+    {
       "bytes": 128832,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionFrozenSemanticInventory.lean",
       "sha256": "44dafc0de94f88b3e4fea69fd22fad228a3ae337f215ca123ce63ab343cbca3b"
@@ -401,6 +476,7 @@
     "exact 243-state core matrix representation"
   ],
   "statuses": {
+    "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
     "density_theorem": "NO",
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
@@ -408,12 +484,14 @@
     "global_collatz_claim": "NO",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
+    "piStar_aggregate_bridge": "PISTAR_AGGREGATE_CARD_BRIDGE_PASS_F3_RULE_PARTITION_OPEN",
     "real_operator_bridge": "REAL_OPERATOR_ITERATED_MASS_BRIDGE_PASS_ORIENTATION_OPEN",
     "real_pilot": "REAL_RENEWAL_LEMMA_PILOT_PASS",
     "renewal_interface": "REAL_RENEWAL_CONVERSION_INTERFACE_PASS_PATH_LEAKAGE_OPEN",
     "rho_certificate": "NO",
     "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
     "semantic_bridge": "RULE_TO_PISTAR_FINSET_CARD_BRIDGE_PASS_COVERAGE_OPEN",
-    "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS"
+    "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
+    "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
 }

@@ -1,0 +1,3 @@
+'CollatzClassical.KL2003.F3TwoBranchPathInstance.two_branch_stopped_path_card_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

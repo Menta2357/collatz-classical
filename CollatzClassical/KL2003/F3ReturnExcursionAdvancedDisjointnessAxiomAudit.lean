@@ -1,0 +1,8 @@
+import CollatzClassical.KL2003.F3ReturnExcursionAdvancedDisjointness
+
+open CollatzClassical KL2003
+
+#print axioms F3AdvancedDisjointness.source_reaches_inverse_child
+#print axioms F3AdvancedDisjointness.source_preserves_parent
+#print axioms F3AdvancedDisjointness.source_member_disjoint
+#print axioms F3AdvancedDisjointness.source_pairwise_disjoint

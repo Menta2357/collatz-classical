@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionTwoBranchPathInstance
+
+open CollatzClassical KL2003
+
+#print axioms F3TwoBranchPathInstance.two_branch_stopped_path_card_identity
