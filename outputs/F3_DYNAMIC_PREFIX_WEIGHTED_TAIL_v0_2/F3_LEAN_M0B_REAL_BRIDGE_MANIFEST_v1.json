@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 17838,
+      "bytes": 18509,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "f682ce7954f611a8cf4bc533c7a66d0c0a1598c9b91dc976a623f38e41019ece"
+      "sha256": "dee9c85a7ecdaa57dded4a2e386ba2903bb06081ebd51a2eef17309173848751"
     },
     {
       "bytes": 7548,
@@ -685,6 +685,31 @@
       "bytes": 332,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstanceAxiomAudit.lean",
       "sha256": "2bbab838f9130cb116c7bb6cce2904d0cc4ee2156d2deef5d3ec13e608afd659"
+    },
+    {
+      "bytes": 1062,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/F3_CUMULATIVE_FIRST_HIT_FIBERS_REPORT_v1.md",
+      "sha256": "f4b7bb7da07eb22003934c5a4755551c2a9da73110bc0b816cdd97366cb3e58d"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/cumulative_first_hit_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 463,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/cumulative_first_hit_axiom_audit.txt",
+      "sha256": "45d3110fced768c735e68df44665a660435dc9a21125068b6b3eb2cc51938b8e"
+    },
+    {
+      "bytes": 3890,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibers.lean",
+      "sha256": "681781745a9f35ddd91506b903e1399809fc2aae94ee841c2632f8857540f1fd"
+    },
+    {
+      "bytes": 390,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibersAxiomAudit.lean",
+      "sha256": "cc671d23ff980917054bbd3a9a1d7d717d679100fddca0f2c42c0e33752d5b64"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -698,6 +723,7 @@
   "statuses": {
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
+    "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
     "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
     "density_theorem": "NO",
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",

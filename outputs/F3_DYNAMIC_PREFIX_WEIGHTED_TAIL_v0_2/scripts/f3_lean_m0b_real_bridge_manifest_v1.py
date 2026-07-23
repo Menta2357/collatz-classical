@@ -147,6 +147,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/three_lift_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstanceAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/F3_CUMULATIVE_FIRST_HIT_FIBERS_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/cumulative_first_hit_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/cumulative_first_hit_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibers.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibersAxiomAudit.lean",
 )
 
 
@@ -192,6 +197,7 @@ def main() -> None:
             "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
             "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
             "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
+            "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",

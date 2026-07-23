@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_fibers_pairwise_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_fibers_subset_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_card_le_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

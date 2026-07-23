@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionCumulativeFirstHitFibers
+
+#print axioms CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_fibers_pairwise_disjoint
+#print axioms CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_fibers_subset_parent
+#print axioms CollatzClassical.KL2003.F3CumulativeFirstHitFibers.cumulative_advanced_card_le_parent
