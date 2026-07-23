@@ -9,6 +9,8 @@ namespace CollatzClassical
 namespace KL2003
 namespace F3PiStarAggregateBridge
 
+open F3SemanticBridge
+
 /-!
 Aggregate semantic bridge for a finite root block.
 
@@ -62,6 +64,57 @@ theorem aggregate_piStar_card_bound_of_frozen_rules
   have hsource' := hsource i
   rw [hparent a i hi] at hsource'
   exact hsource'
+
+def frozenRuleParent : FrozenRule → Nat
+  | .retarded a _ _ => a
+  | .advancedDirect a _ _ _ => a
+  | .parityLift a _ _ _ => a
+
+def frozenRuleWindow : FrozenRule → Nat
+  | .retarded _ x _ => x
+  | .advancedDirect _ _ x _ => x
+  | .parityLift _ _ x _ => x
+
+def frozenRuleSource : FrozenRule → Finset Nat
+  | .retarded a _ xRet => piStarFinset (4 * a) xRet
+  | .advancedDirect _ c _ xAdv => piStarFinset c xAdv
+  | .parityLift _ c _ xLift => piStarFinset (2 * c) xLift
+
+def frozenRuleValid : FrozenRule → Prop
+  | .retarded _ x xRet => xRet ≤ x
+  | .advancedDirect a c x xAdv => T c = a ∧ a ≤ x ∧ xAdv ≤ x
+  | .parityLift a c x xLift => T c = a ∧ a ≤ x ∧ xLift ≤ x
+
+theorem frozenRuleSource_subset_parent
+    (rule : FrozenRule) (hvalid : frozenRuleValid rule) :
+    frozenRuleSource rule ⊆
+      piStarFinset (frozenRuleParent rule) (frozenRuleWindow rule) := by
+  cases rule with
+  | retarded a x xRet =>
+      exact frozen_rule_piStar_subset (.retarded a x xRet) hvalid
+  | advancedDirect a c x xAdv =>
+      exact frozen_rule_piStar_subset (.advancedDirect a c x xAdv)
+        hvalid.1 hvalid.2.1 hvalid.2.2
+  | parityLift a c x xLift =>
+      exact frozen_rule_piStar_subset (.parityLift a c x xLift)
+        hvalid.1 hvalid.2.1 hvalid.2.2
+
+theorem aggregate_frozen_rule_piStar_card_bound
+    (A : Finset Nat) (x : Nat)
+    (I : Nat → Finset FrozenRule)
+    (hparent : ∀ a rule, rule ∈ I a → frozenRuleParent rule = a)
+    (hwindow : ∀ a rule, rule ∈ I a → frozenRuleWindow rule = x)
+    (hvalid : ∀ a rule, rule ∈ I a → frozenRuleValid rule)
+    (hdisj : ∀ a,
+      (I a : Set FrozenRule).PairwiseDisjoint frozenRuleSource) :
+    (∑ a ∈ A, ∑ rule ∈ I a, (frozenRuleSource rule).card) ≤
+      ∑ a ∈ A, (piStarFinset a x).card := by
+  apply aggregate_piStar_card_bound A x I
+    (fun _ rule => frozenRuleSource rule) hdisj
+  intro a rule hmem
+  have hsource := frozenRuleSource_subset_parent rule (hvalid a rule hmem)
+  rw [hparent a rule hmem, hwindow a rule hmem] at hsource
+  exact hsource
 
 end F3PiStarAggregateBridge
 end KL2003

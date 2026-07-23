@@ -362,9 +362,9 @@
       "sha256": "bfdf9068f91db9641161db2e1c20b54c267eed3c2599a6cf6a5be872ef40b8c9"
     },
     {
-      "bytes": 1069,
+      "bytes": 1383,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/F3_PISTAR_AGGREGATE_BRIDGE_REPORT_v1.md",
-      "sha256": "f3010dd89ac665382737267320c9222737be8add754f7645bf2da0b18983c97b"
+      "sha256": "53a42effaa30d67591ae04b8a7dc5cd44ef2b8ae473651ab953d3eb25b5295ed"
     },
     {
       "bytes": 0,
@@ -372,19 +372,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "bytes": 294,
+      "bytes": 587,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/aggregate_axiom_audit.txt",
-      "sha256": "9281460104ed7689219d87ee50a016fd58f294ceaa03dbb8419fdf98970fed16"
+      "sha256": "77d9e4d1e7f6843af65e447428a323a20780bedffdd0818b80f600ca3a55b04f"
     },
     {
-      "bytes": 2436,
+      "bytes": 4519,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridge.lean",
-      "sha256": "b43ca4cec5887759b075be30a47b556981bc1c158a79e6f38c7154c1568d2dfb"
+      "sha256": "92e8579ab09385b83bc02d4c1654cee67bea2d6756906a12a6c41d6dfc7bccb8"
     },
     {
-      "bytes": 249,
+      "bytes": 396,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridgeAxiomAudit.lean",
-      "sha256": "30c89cef4dfd913f204056db25638503fddf3b9430de7d756174b0088d61882f"
+      "sha256": "32663cd3af7956ab6f9c3d108e6c914ede413a0da32139771793776384053704"
     },
     {
       "bytes": 128832,

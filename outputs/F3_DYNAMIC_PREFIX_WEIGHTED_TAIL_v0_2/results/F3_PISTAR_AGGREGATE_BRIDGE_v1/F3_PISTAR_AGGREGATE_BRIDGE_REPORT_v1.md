@@ -22,6 +22,12 @@ supplies the member-wise predecessor argument needed for direct/lift pairs.
 The remaining F3 obligation is to instantiate the parent partition and prove
 its complete-block/first-hit disjointness uniformly in `y`.
 
+The specialized `FrozenRule` corollary now exposes exactly the required
+columns: `frozenRuleParent`, `frozenRuleWindow`, `frozenRuleSource`, rule
+validity, parent assignment, window equality, and pairwise disjointness.  A
+future generated table can therefore feed the theorem without an untyped
+conversion layer.
+
 This is a semantic counting bridge, not an operator-to-growth theorem and not
 a density result.
 
