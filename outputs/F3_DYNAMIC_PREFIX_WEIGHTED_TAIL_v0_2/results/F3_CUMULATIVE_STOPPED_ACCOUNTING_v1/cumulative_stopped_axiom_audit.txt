@@ -1,0 +1,6 @@
+'CollatzClassical.KL2003.F3CumulativeStoppedAccounting.cumulative_fibre_card_le_root_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CumulativeStoppedAccounting.cumulative_retainedMass_le_rootMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

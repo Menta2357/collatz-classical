@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 16463,
+      "bytes": 17151,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "657456feeb8047e19e078a05c151a9472e55a82319c92b5a776603762715a2ab"
+      "sha256": "7154e41c2cd71441e20a51bb94ac3cf676cfb7004f3b37431492974e6e2f893b"
     },
     {
       "bytes": 7548,
@@ -532,6 +532,31 @@
       "sha256": "b29d33b96bd5ca06c1ac71693c017bce8078bf784ea7584daecc446ee46dcdd1"
     },
     {
+      "bytes": 1255,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_STOPPED_ACCOUNTING_v1/F3_CUMULATIVE_STOPPED_ACCOUNTING_REPORT_v1.md",
+      "sha256": "d99f828db18a29b321b7c8b605e9664636772089dde78c03b74868d6977ed61a"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_STOPPED_ACCOUNTING_v1/cumulative_stopped_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 305,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_STOPPED_ACCOUNTING_v1/cumulative_stopped_axiom_audit.txt",
+      "sha256": "cf1e7b6207d70e0852b0570a7f78b4bb581b94191ba8401f47788a1101a63b48"
+    },
+    {
+      "bytes": 2937,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCumulativeStoppedAccounting.lean",
+      "sha256": "91d22acf253971b6de9b06a65f5dd2e0af74022acdde3f65a385842981020b41"
+    },
+    {
+      "bytes": 266,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCumulativeStoppedAccountingAxiomAudit.lean",
+      "sha256": "91e5d842d7c6ed417ffe46e6b9495b82d08841502bb7983e5a33487a9178b5ed"
+    },
+    {
       "bytes": 1489,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LAYER_NORMALIZATION_v1/F3_LAYER_NORMALIZATION_REPORT_v1.md",
       "sha256": "f46a2e5918b7bc05fed0c6fab1ef7b26d1534c950e6ed9b5d4139ffd42c9198d"
@@ -648,6 +673,7 @@
   "statuses": {
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
+    "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
     "density_theorem": "NO",
     "exact_core_matrix": "EXACT_MATRIX_DEFINED_ORIENTATION_AUDIT_REOPENED_SCALAR_COMPATIBILITY_PASS",
     "fiber_accounting": "ABSTRACT_FIBER_DISJOINTNESS_PASS_RENEWAL_LEAKAGE_INSTANTIATION_OPEN",

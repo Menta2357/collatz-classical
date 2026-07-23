@@ -1,0 +1,6 @@
+import CollatzClassical.KL2003.F3ReturnExcursionCumulativeStoppedAccounting
+
+open CollatzClassical KL2003
+
+#print axioms F3CumulativeStoppedAccounting.cumulative_fibre_card_le_root_card
+#print axioms F3CumulativeStoppedAccounting.cumulative_retainedMass_le_rootMass
