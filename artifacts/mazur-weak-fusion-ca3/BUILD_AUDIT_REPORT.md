@@ -30,7 +30,8 @@ The target was created from a fresh extraction of the ZIP with SHA-256
 `401a4674263112b81ff7e3c3eb43f3fca3d7eb320f418a39a5b606fb3b20bf09`.
 `apply_payload.sh` returned exit code `0`; its base checks passed and all 11
 candidate source/environment hashes passed. Before E1 the reconstructed tree
-will be committed as a local Git baseline solely to make the post-build diff
+was committed as local Git baseline
+`96fd91b910150c6e832dd9a889ddd01cad64b5f6`, solely to make the post-build diff
 auditable. No source edit is authorized after that baseline.
 
 ### E1 — dependency lock
