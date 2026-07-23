@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionSemanticFirstOrientation
+
+#print axioms CollatzClassical.KL2003.F3SemanticFirstOrientation.semanticOneStep_source_row
+#print axioms CollatzClassical.KL2003.F3SemanticFirstOrientation.weighted_mass_step_from_source_certificate
+#print axioms CollatzClassical.KL2003.F3SemanticFirstOrientation.semantic_static_specialization
