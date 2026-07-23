@@ -8,6 +8,20 @@ source_file="$repo_root/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticC
 audit_file="$repo_root/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepairAxiomAudit.lean"
 inventory_file="$repo_root/outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_PILOT_REPAIR_DECLARATION_INVENTORY_v1.tsv"
 expected_count=151
+final_public_theorems=(
+  decode_encode
+  encode_decode
+  coreCode_card
+  directTarget_closed_form
+  liftTarget_closed_form
+  realize_injective
+  formulaEdge_card
+  pilotFormulaEdge_card
+  pilotFrozen_position_normalization
+  pilotFrozen_perm_formula
+  pilot_frozen_scope
+  pilot_matrix_eq_formulaMatrix
+)
 
 source_names() {
   sed -nE \
@@ -53,6 +67,10 @@ grep -Fxq \
   'open CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair' \
   "$audit_file"
 
+for theorem_name in "${final_public_theorems[@]}"; do
+  grep -Fxq "#print axioms $theorem_name" "$audit_file"
+done
+
 if grep -Eq \
   '^private\b|\b(native_decide|Lean\.ofReduceBool|sorry|admit|find\?|HashMap|Array|CSV)\b|^[[:space:]]*axiom\b' \
   "$source_file"; then
@@ -60,13 +78,15 @@ if grep -Eq \
 fi
 
 printf '%s\n' \
-  'SOURCE_DECLARATIONS=151' \
-  'INVENTORY_DECLARATIONS=151' \
-  'AUDIT_COMMANDS=151' \
+  'ALL_EXPLICIT_SOURCE_DECLARATIONS=151' \
+  'EXPLICIT_INVENTORY_DECLARATIONS=151' \
+  'EXPLICIT_AUDIT_COMMANDS=151' \
   'SOURCE_INVENTORY_DIFF=EMPTY' \
   'INVENTORY_AUDIT_DIFF=EMPTY' \
   'DUPLICATES=NONE' \
   'PRIVATE_EXPLICIT_DECLARATIONS=NONE' \
+  'FINAL_PUBLIC_THEOREMS_IN_AUDIT=12_OF_12' \
+  'GENERATED_NAMESPACE_ENUMERATION=NOT_RUN_PRECOMPILE' \
   'AUDIT_IMPORT_NAMESPACE=REPAIR_MODULE' \
   'FORBIDDEN_SOURCE_SYNTAX=ABSENT' \
-  'STATIC_INVENTORY_CHECK=PASS'
+  'STATIC_EXPLICIT_INVENTORY_CHECK=PASS'

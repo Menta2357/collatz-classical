@@ -28,24 +28,34 @@ The static freeze reviewed here is:
 repair source:
 567d48c19b2b5bd2321e6a46b5a39dd9b54b8714adac7f6636a46405393bbf4d
 
-total audit source:
-700a321f0f70566ed2e5a8566c2329775c500f127782225f2993abf19a803cbc
+all-explicit-source audit:
+bbe454146b974795e7ff54412cbf5ff9cd1c6d11d03d39cb7c2425c1dff692a7
+
+historical design, marked superseded for execution:
+79567ccc3c3556b13fea30be05499ff5ebfb00a50e280cc9f954693ff46e55d8
 
 repair contract:
-b256d550aff5e497a66e3013bbb7812d2ffecde776b51867bdfde0376d9fa9b4
+0e3f92fc93dd90f14adc143d1bcc0bc0fabfb376c4eafd3b0407bcf8596b1e27
 
 first-hit gate contract:
 b5f022271bbd696df2a1b2e9205a36d8ad134e058fe29adbf5b1565f167c44fa
 
 declaration inventory:
-29bd1b22ef15148597c05d99f5bd209ac1839047abfd86c7d8c205d4c56a648d
+d570b18203c9f3998765c6f606043173ec34e0fa8bd2e82d5f13b91e63a543e1
 
 inventory checker:
-20fb2a96e142aa76225cc9767cb727eb052159ab686156e004dcab7bad22cf9c
+d30c3a336044f095ffec610acd5122c148f82021f9ea66f53baddea3e8b7134a
 ```
 
 Any source edit invalidates this static freeze and requires a new hash and
 review before requesting execution.
+
+The predecessor's 120-second budget is no longer concurrently live.  In the
+successor copy of `F3_CORE_ARITHMETIC_CODEC_SATURATION_DESIGN_v1.md`, line 3
+is `SUPERSEDED_FOR_EXECUTION — HISTORICAL_DESIGN_ONLY`, lines 5--13 name the
+300-second repair contract as the sole authority, and lines 428--450 mark the
+preserved Sections 7 and 8 as historical.  The exact successor file hash is
+recorded above.
 
 ## 2. Gate-zero findings
 
@@ -57,7 +67,7 @@ before any compile:
 2. the repair source opened `F3CoreArithmeticCodecPilotRepair` but originally
    closed `F3CoreArithmeticCodecPilot`;
 3. the old audit listed only 25 selected theorems while the repair source now
-   contains 151 explicit public declarations;
+   contains 151 explicit public source declarations;
 4. the symbolic `split_ifs; omega` proof of the positional decoder was still
    the exact proof block reported failing in the custodied attempt.  It is now
    a definitional exhaustive proof over the typed `Fin 27`, `Fin 9` and
@@ -125,33 +135,49 @@ the permutation and addition commutativity.  This is only the 27-source,
 81-edge pilot.  It is not the 243-source/729-edge identity and does not prove
 the real operator identity.
 
-## 5. Total audit coverage
+## 5. All-explicit-source audit coverage
 
 The frozen inventory contains every explicit public top-level `def`,
 `theorem`, named `instance`, `abbrev` and `inductive` in the repair source.
 There are no explicit private declarations.  Compiler-generated constructors,
 recursors, cases/no-confusion helpers and deriving implementations are
-excluded as generated definitional infrastructure; both source inductive
-constants themselves are included.
+excluded from the 151 count; both source inductive constants themselves are
+included.  Consequently, the label is
+`ALL_EXPLICIT_SOURCE_DECLARATIONS`, not all constants in an elaborated
+namespace.  Environmental enumeration of generated constants is
+`NOT_RUN_PRECOMPILE`.
+
+That exclusion does not create an axiom blind spot in the theorem boundary.
+Generated constructors and recursors are kernel/elaborator infrastructure,
+not user-authored opaque theorem claims.  A deriving implementation used by a
+designated final public theorem lies in that theorem's dependency graph and
+is traversed by `#print axioms`.  The checker separately requires all 12
+designated final public theorems to occur in the audit: the codec inverses and
+cardinality, both target closed forms, realization injectivity, full and pilot
+formula cardinalities, the positional normalization, pilot permutation,
+pilot scope, and pilot matrix equality.
 
 The repeatable static checker returned:
 
 ```text
-SOURCE_DECLARATIONS=151
-INVENTORY_DECLARATIONS=151
-AUDIT_COMMANDS=151
+ALL_EXPLICIT_SOURCE_DECLARATIONS=151
+EXPLICIT_INVENTORY_DECLARATIONS=151
+EXPLICIT_AUDIT_COMMANDS=151
 SOURCE_INVENTORY_DIFF=EMPTY
 INVENTORY_AUDIT_DIFF=EMPTY
 DUPLICATES=NONE
 PRIVATE_EXPLICIT_DECLARATIONS=NONE
+FINAL_PUBLIC_THEOREMS_IN_AUDIT=12_OF_12
+GENERATED_NAMESPACE_ENUMERATION=NOT_RUN_PRECOMPILE
 AUDIT_IMPORT_NAMESPACE=REPAIR_MODULE
 FORBIDDEN_SOURCE_SYNTAX=ABSENT
-STATIC_INVENTORY_CHECK=PASS
+STATIC_EXPLICIT_INVENTORY_CHECK=PASS
 ```
 
-Thus each inventoried constant has exactly one `#print axioms` command.  This
-is static coverage, not an axiom PASS: those commands remain unopened until
-the compile succeeds.
+Thus each explicit inventoried constant has exactly one `#print axioms`
+command and every designated final theorem is present.  This is static
+explicit-source coverage, not an axiom PASS: those commands remain unopened
+until the compile succeeds.
 
 ## 6. Execution request and decision rule
 
@@ -167,10 +193,11 @@ raw stdout/stderr captured in a new repair-results directory
 no retry and no resource increase after failure
 ```
 
-Compile failure, timeout, heartbeat exhaustion, missing audit declaration,
-or any public dependency on `Lean.ofReduceBool` or `sorryAx` gives
-`ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD`.  A compile PASS followed by a total
-audit whose axiom sets are subsets of
+Compile failure, timeout, heartbeat exhaustion, a missing explicit source or
+designated final theorem audit command, or any final-theorem dependency on
+`Lean.ofReduceBool` or `sorryAx` gives
+`ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD`.  A compile PASS followed by the
+all-explicit-source audit whose final-theorem axiom sets are subsets of
 `[propext, Classical.choice, Quot.sound]` closes only this pilot gate.
 
 ```text

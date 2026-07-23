@@ -1,12 +1,14 @@
-# F3 arithmetic-codec pilot repair declaration inventory v1
+# F3 arithmetic-codec pilot repair explicit-source declaration inventory v1
 # source: CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean
 # scope: every explicit public top-level def/theorem/named-instance/abbrev/inductive
 # private declarations: none
-# excluded: compiler-generated constructors, recursors, casesOn/noConfusion helpers,
-# and deriving implementations attached to the two inventoried inductives.  They
-# are generated definitional infrastructure, not separately written source
-# declarations or theorem proof obligations.  The inductive constants themselves
-# are inventoried and audited.  Any future explicit declaration changes this file.
+# excluded from the 151 count: compiler-generated constructors, recursors,
+# casesOn/noConfusion helpers, and deriving implementations attached to the two
+# inventoried inductives.  They are not separately written source declarations.
+# The inductive constants themselves are inventoried.  Generated helpers are not
+# labelled as individually audited; dependencies used by designated final public
+# theorems are covered transitively by those theorems' #print axioms results.
+# Any future explicit declaration changes this file and invalidates the freeze.
 ordinal	kind	name
 1	def	encodeNat
 2	theorem	encodeNat_lt_729

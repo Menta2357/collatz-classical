@@ -1,6 +1,16 @@
 # F3_CORE_ARITHMETIC_CODEC_SATURATION_DESIGN_v1
 
-Status: `PRE_LEAN_DESIGN_READY_FOR_REVIEW`
+Status: `SUPERSEDED_FOR_EXECUTION — HISTORICAL_DESIGN_ONLY`
+
+Successor notice (2026-07-24): this document preserves the original
+architecture and its original 120-second pilot budget as historical design
+evidence.  It is not an execution authorization at the successor HEAD.  The
+sole controlling execution contract is
+`F3_CORE_ARITHMETIC_CODEC_PILOT_REPAIR_CONTRACT_v1.md`, with 200000
+heartbeats, a 300-second total wall ceiling including import, one compile,
+and one conditional audit.  Sections 7 and 8 below are retained verbatim in
+substance so the superseded decision can be reconstructed; they cannot be
+combined with or override the successor contract.
 
 This document specifies a materially new proof architecture for the finite F3
 core identity.  It replaces filtering/remapping of large literal lists by an
@@ -415,7 +425,10 @@ If the inclusion cannot be proved arithmetically without unfolding the whole
 729-edge list into a giant decision problem, the pilot is STOP: the design has
 not yet replaced the old representation.
 
-## 7. Pilot budget
+## 7. Historical pilot budget — `SUPERSEDED`
+
+The following was the original pre-environment budget.  It is preserved for
+custody only and is not live at this successor HEAD.
 
 ```text
 maxHeartbeats = 200000       -- unchanged default
@@ -430,7 +443,11 @@ The 120 s ceiling includes elaboration of codec, formula edges, pilot
 saturation, and pilot matrix equality.  It does not authorize the 243-state
 extension.
 
-## 8. Acceptance contract
+## 8. Historical acceptance contract — `SUPERSEDED_FOR_EXECUTION`
+
+The mathematical acceptance criteria remain useful design provenance.  The
+120-second execution clause and the authority to run are superseded by the
+successor repair contract named at the top of this file.
 
 ### GO
 

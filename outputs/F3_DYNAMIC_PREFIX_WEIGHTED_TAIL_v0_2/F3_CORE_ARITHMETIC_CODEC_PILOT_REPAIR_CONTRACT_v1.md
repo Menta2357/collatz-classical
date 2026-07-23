@@ -52,6 +52,9 @@ raw stdout and stderr capture = mandatory
 The 300-second ceiling includes import and elaboration.  It is not 300 seconds
 in addition to a separately prepaid import.  Nothing in this contract
 authorizes execution; a heavy-compilation slot must be granted separately.
+At the successor HEAD the historical design file is explicitly labelled
+`SUPERSEDED_FOR_EXECUTION`; its preserved 120-second text has no concurrent
+authority.  This 300-second contract is the only live execution budget.
 
 ## 3. Fixed repair invoice
 
@@ -83,8 +86,31 @@ Static review passes only if all of the following hold:
   commutativity;
 - there is no `native_decide`, `Lean.ofReduceBool`, `sorry`, `admit`, `axiom`,
   or opaque F3 identity assumption in the repaired sources;
-- the axiom-audit module names every declaration introduced by the repaired
-  module, not merely its final theorems.
+- the axiom-audit module names every explicit public top-level `def`,
+  `theorem`, named `instance`, `abbrev`, and `inductive` introduced by the
+  repaired source, not merely selected theorems;
+- the designated final public theorem set is frozen as
+  `decode_encode`, `encode_decode`, `coreCode_card`,
+  `directTarget_closed_form`, `liftTarget_closed_form`, `realize_injective`,
+  `formulaEdge_card`, `pilotFormulaEdge_card`,
+  `pilotFrozen_position_normalization`, `pilotFrozen_perm_formula`,
+  `pilot_frozen_scope`, and `pilot_matrix_eq_formulaMatrix`, and every member
+  has a `#print axioms` command.
+
+The 151-entry label is
+
+```text
+ALL_EXPLICIT_SOURCE_DECLARATIONS
+```
+
+not “all declarations in the elaborated module namespace.”  Constructors,
+recursors, no-confusion helpers and deriving implementations created by the
+elaborator are not user-authored opaque theorem claims and are not counted as
+separate explicit source declarations.  If one is used by a designated final
+public theorem, its axioms are traversed transitively by that theorem's
+`#print axioms`.  Environmental enumeration of every generated namespace
+constant is explicitly `NOT_RUN_PRECOMPILE` and is not required for the
+151-entry claim.
 
 Static PASS label:
 
@@ -95,8 +121,9 @@ ARITHMETIC_CODEC_REPAIR_STATIC_PASS_AWAITING_HEAVY_SLOT
 ## 5. Runtime acceptance and STOP
 
 A future authorized execution is GO only if the single compile exits zero
-within both limits and the subsequent total-coverage audit exits zero with no
-public dependency on `Lean.ofReduceBool` or `sorryAx`.
+within both limits and the subsequent all-explicit-source audit exits zero
+with no designated final public theorem dependency on `Lean.ofReduceBool` or
+`sorryAx`.
 
 The expected public profile is a subset of
 
@@ -104,9 +131,9 @@ The expected public profile is a subset of
 [propext, Classical.choice, Quot.sound]
 ```
 
-Any compile error, timeout, heartbeat exhaustion, incomplete audit coverage,
-forbidden axiom, placeholder, lookup representation or literal expected RHS
-is:
+Any compile error, timeout, heartbeat exhaustion, missing explicit source
+declaration or designated final public theorem in the audit, forbidden axiom,
+placeholder, lookup representation or literal expected RHS is:
 
 ```text
 ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD

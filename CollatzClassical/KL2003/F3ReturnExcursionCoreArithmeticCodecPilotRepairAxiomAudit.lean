@@ -1,13 +1,18 @@
 import CollatzClassical.KL2003.F3ReturnExcursionCoreArithmeticCodecPilotRepair
 
 /-!
-Total axiom surface for the repaired 27-source arithmetic-codec pilot.
+Audit surface for all explicit source declarations in the repaired
+27-source arithmetic-codec pilot.
 
 The corresponding frozen inventory is
 `F3_CORE_ARITHMETIC_CODEC_PILOT_REPAIR_DECLARATION_INVENTORY_v1.tsv`.
 Every explicit public `def`, `theorem`, named `instance`, `abbrev`, and
 `inductive` in the source has exactly one command below.  The static checker
 compares this command list against the source inventory before execution.
+Elaborator-generated constructors, recursors, no-confusion helpers and
+deriving implementations are not claimed as separately inventoried source
+declarations.  Any such helper used by a designated final public theorem is
+covered transitively by that theorem's `#print axioms` result.
 This file is run only after the repaired module compiles within its fixed
 single-attempt gate.
 -/
