@@ -59,6 +59,18 @@ If the executable does not exist or the command fails, the result is
 authorized. If E1 exposes a different already-resolved cache route, execution
 stops for coordinator consultation before changing this contract.
 
+#### Enmienda coordinada — 2026-07-24
+
+E1 passed and its official Mathlib post-update hook itself built and executed
+the cache client, reported the Azure cache origin, decompressed 8283
+already-cached files, found no files to download, and completed successfully.
+After the contractually required consultation, the coordinator classified E2
+as `SATISFIED_BY_E1_OFFICIAL_POST_UPDATE_HOOK`. The independent E2 command is
+therefore deliberately not executed: it would repeat the same official cache
+route without buying additional environmental preparation. P1 is authorized
+under this explicit amendment; all other ceilings and no-retry rules remain
+unchanged.
+
 ### P1 — unique theorem build
 
 Only if E2 passes. Exactly one execution, ceiling 900 seconds:
