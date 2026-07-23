@@ -51,6 +51,12 @@ def main() -> None:
         rows = list(csv.DictReader(handle))
     if len(rows) != 1215:
         raise SystemExit(f"expected 1215 rows, got {len(rows)}")
+    frozen_keys = {
+        (int(row["source_id"]), int(row["target_id"]), row["channel"])
+        for row in rows
+    }
+    if len(frozen_keys) != len(rows):
+        raise SystemExit("frozen split-edge rows are not unique")
     entries = []
     for row in rows:
         source_id = int(row["source_id"])
@@ -125,6 +131,13 @@ def semanticEdges : List SemanticEdge :=
         kind_name = ["retarded", "advancedDirect", "parityLift"][kind]
         return f"    {{ edge := {{ source := {source_id}, target := {target_id}, channel := {kind} }}, kind := .{kind_name}, a := {a}, c := {c} }}"
     source += ",\n".join(lit(entry) for entry in entries)
+    semantic_keys = {
+        (source_id, target_id,
+         ["retarded", "advanced_direct_c2", "advanced_parity_lift_c1"][kind])
+        for source_id, target_id, kind, _a, _c in entries
+    }
+    if semantic_keys != frozen_keys:
+        raise SystemExit("semantic inventory does not cover frozen split-edge keys exactly")
     source += """
   ]
 
@@ -194,7 +207,7 @@ end CollatzClassical
 """
     OUT.write_text(source)
     SUMMARY.write_text(
-        "{\n  \"rows\": %d,\n  \"retarded\": %d,\n  \"advanced_direct\": %d,\n  \"parity_lift\": %d,\n  \"python_state_and_rule_checks\": \"PASS\",\n  \"coverage_status\": \"FINITE_INVENTORY_READY_FOR_LEAN\",\n  \"non_claims\": [\"NO_RHO_CERTIFICATE\", \"NO_DENSITY_THEOREM\", \"NO_GLOBAL_COLLATZ_CLAIM\"]\n}\n" % (len(entries), sum(e[2] == 0 for e in entries), sum(e[2] == 1 for e in entries), sum(e[2] == 2 for e in entries))
+        "{\n  \"rows\": %d,\n  \"retarded\": %d,\n  \"advanced_direct\": %d,\n  \"parity_lift\": %d,\n  \"python_state_and_rule_checks\": \"PASS\",\n  \"python_bidirectional_edge_coverage\": \"PASS\",\n  \"coverage_status\": \"FINITE_INVENTORY_READY_FOR_LEAN\",\n  \"non_claims\": [\"NO_RHO_CERTIFICATE\", \"NO_DENSITY_THEOREM\", \"NO_GLOBAL_COLLATZ_CLAIM\"]\n}\n" % (len(entries), sum(e[2] == 0 for e in entries), sum(e[2] == 1 for e in entries), sum(e[2] == 2 for e in entries))
     )
 
 

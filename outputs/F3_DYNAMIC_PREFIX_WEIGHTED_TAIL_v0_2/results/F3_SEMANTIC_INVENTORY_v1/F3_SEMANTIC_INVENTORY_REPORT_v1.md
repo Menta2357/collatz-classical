@@ -22,6 +22,12 @@ semantic_edges_valid = true
 semantic_edges_are_frozen = true
 ```
 
+El generador también verifica que las claves `(source_id, target_id,
+channel)` son únicas y que el conjunto de claves del inventario coincide
+exactamente con el conjunto de `split_edges.csv`:
+`python_bidirectional_edge_coverage = PASS`. Esta es una verificación de
+generador y no se presenta como un teorema Lean de igualdad de conjuntos.
+
 La validez incluye el ID de estado, el representante `a`, el objetivo `c` o
 `2c`, la ecuación `3c+1=2a` y el residuo del canal. El teorema
 `semantic_rule_piStar` usa las inyecciones de `piStarFinset` ya demostradas y

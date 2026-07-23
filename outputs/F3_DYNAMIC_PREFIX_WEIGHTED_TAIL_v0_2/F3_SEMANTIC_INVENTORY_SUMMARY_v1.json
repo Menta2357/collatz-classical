@@ -4,6 +4,7 @@
   "advanced_direct": 243,
   "parity_lift": 243,
   "python_state_and_rule_checks": "PASS",
+  "python_bidirectional_edge_coverage": "PASS",
   "coverage_status": "FINITE_INVENTORY_READY_FOR_LEAN",
   "non_claims": ["NO_RHO_CERTIFICATE", "NO_DENSITY_THEOREM", "NO_GLOBAL_COLLATZ_CLAIM"]
 }

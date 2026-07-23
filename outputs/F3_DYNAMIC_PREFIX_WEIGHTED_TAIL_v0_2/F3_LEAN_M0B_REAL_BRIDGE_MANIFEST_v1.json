@@ -52,9 +52,9 @@
       "sha256": "27d8b3bd56b141ecebf458dbf5a179dcda0b8c865fc0bc7f813d02098ef25ec6"
     },
     {
-      "bytes": 1370,
+      "bytes": 1713,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_INVENTORY_v1/F3_SEMANTIC_INVENTORY_REPORT_v1.md",
-      "sha256": "9a83b25a64546f12b54bac5385c35bd7f3ff1c325d59d90d66b1dc32cd276fad"
+      "sha256": "39e43bab51de66272210d26181956f28ed8e88e2a876986210ed32fdf05a441b"
     },
     {
       "bytes": 65,
@@ -212,9 +212,9 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "bytes": 273,
+      "bytes": 321,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_INVENTORY_SUMMARY_v1.json",
-      "sha256": "23cafbd27d37b36628c40e5de66f8e522e3eef5009445fe8194f370a659981f0"
+      "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
       "bytes": 9886,
@@ -222,9 +222,9 @@
       "sha256": "38869e3452317af4ce5150411a45d1b166f9b313a7f0359dee050e4f72ae7859"
     },
     {
-      "bytes": 6945,
+      "bytes": 7548,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_semantic_inventory_v1.py",
-      "sha256": "4e5c2a4e515bac0825e7a8e8823241450b8a70f500d20983ae8d141a23711c1a"
+      "sha256": "d37ef1117fcea0d79f17ba8d280323d61074f8dc1b999f33a6b70f8df23df9cd"
     },
     {
       "bytes": 3640,
