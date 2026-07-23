@@ -1,0 +1,134 @@
+{
+  "base_sequence_sha256": "45a4297196e3f1ea767b0f4cfef8ebbbcf70f31547469fe22768cda9d971e35a",
+  "block_size_states": 27,
+  "blocks": 9,
+  "budget_reference": "F3_LEAN_M0B_FULL_BUDGET_v1.md",
+  "channel_totals": {
+    "0": 243,
+    "1": 243,
+    "2": 243
+  },
+  "formal_status": "NO_LEAN_THEOREM_CLAIM",
+  "records": [
+    {
+      "block": 0,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_00.csv",
+      "sha256": "fa9037a7dc7e7870a7384f9299126b8c1b80ef520888e6a0fa6aa76e1f3dc390",
+      "source_max": 26,
+      "source_min": 0
+    },
+    {
+      "block": 1,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_01.csv",
+      "sha256": "89b0b7880083d6c3122180c0400a07195a55b6a825d9a3f680fa0c87d287db18",
+      "source_max": 53,
+      "source_min": 27
+    },
+    {
+      "block": 2,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_02.csv",
+      "sha256": "5fa38404588baeeff523e2a286a4f18fe3d312bb9ba3c28e7bf1f4082282ab71",
+      "source_max": 80,
+      "source_min": 54
+    },
+    {
+      "block": 3,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_03.csv",
+      "sha256": "46d8dec6876f83f00cbec348b6ebcbebcda72b928e4de755943f02c20c8ddb36",
+      "source_max": 107,
+      "source_min": 81
+    },
+    {
+      "block": 4,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_04.csv",
+      "sha256": "3defa6c5948f274e143d18a98170c6f04790120557cdd831f9cf4e0752c5d40a",
+      "source_max": 134,
+      "source_min": 108
+    },
+    {
+      "block": 5,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_05.csv",
+      "sha256": "ca695f4126733578443d4a31d896cdbc5b242be1234dc093e9b4a29c047e3cc5",
+      "source_max": 161,
+      "source_min": 135
+    },
+    {
+      "block": 6,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_06.csv",
+      "sha256": "f9ff1483256c55e1e3f2683b825553c896eaf627c2990c408c51b859b46a9df5",
+      "source_max": 188,
+      "source_min": 162
+    },
+    {
+      "block": 7,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_07.csv",
+      "sha256": "e9a28a9140f177dfcd0552799a22b33819dcc1e93eba30e57761a1dfcbddb54b",
+      "source_max": 215,
+      "source_min": 189
+    },
+    {
+      "block": 8,
+      "channel_counts": {
+        "0": 27,
+        "1": 27,
+        "2": 27
+      },
+      "edge_count": 81,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_08.csv",
+      "sha256": "083e6f753c0dba1dab5335680a1799f445f056e6cd113a19aa96c77bdf0fc2b1",
+      "source_max": 242,
+      "source_min": 216
+    }
+  ],
+  "state_sequence_sha256": "60a3241e428ef05cedb531692467a024603fe9219e1020c90c359b721e9700d0",
+  "status": "OFFLINE_SHARDS_READY_LEAN_FILTER_REMAP_OPEN",
+  "total_edges": 729
+}

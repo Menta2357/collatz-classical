@@ -1,5 +1,5 @@
 {
-  "base_commit": "ad1a1d7b9eb8cf5af7250fff951537c17aeee0fe",
+  "base_commit": "f91927400c8e68a7c34c1458d301c55b3fabd0d9",
   "files": [
     {
       "bytes": 1837,
@@ -142,6 +142,11 @@
       "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
     },
     {
+      "bytes": 4057,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_FULL_BUDGET_v1.md",
+      "sha256": "974931a803966521dd3fb890695440e47458a6b9765b858d488a2bec8ef011f7"
+    },
+    {
       "bytes": 474,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_EXACT_CORE_MATRIX_SUMMARY_v1.json",
       "sha256": "30fca77377d843a292e01da01469bc7e8af4d56c93013bd8c7be292863e512da"
@@ -170,6 +175,56 @@
       "bytes": 697,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/summary_v1.json",
       "sha256": "ef9320913c1f69c561ab29de0f6133af9f7e5347cd73df39f0458c1ea5dfbaa6"
+    },
+    {
+      "bytes": 986,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_00.csv",
+      "sha256": "fa9037a7dc7e7870a7384f9299126b8c1b80ef520888e6a0fa6aa76e1f3dc390"
+    },
+    {
+      "bytes": 1140,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_01.csv",
+      "sha256": "89b0b7880083d6c3122180c0400a07195a55b6a825d9a3f680fa0c87d287db18"
+    },
+    {
+      "bytes": 1126,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_02.csv",
+      "sha256": "5fa38404588baeeff523e2a286a4f18fe3d312bb9ba3c28e7bf1f4082282ab71"
+    },
+    {
+      "bytes": 1179,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_03.csv",
+      "sha256": "46d8dec6876f83f00cbec348b6ebcbebcda72b928e4de755943f02c20c8ddb36"
+    },
+    {
+      "bytes": 1204,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_04.csv",
+      "sha256": "3defa6c5948f274e143d18a98170c6f04790120557cdd831f9cf4e0752c5d40a"
+    },
+    {
+      "bytes": 1222,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_05.csv",
+      "sha256": "ca695f4126733578443d4a31d896cdbc5b242be1234dc093e9b4a29c047e3cc5"
+    },
+    {
+      "bytes": 1234,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_06.csv",
+      "sha256": "f9ff1483256c55e1e3f2683b825553c896eaf627c2990c408c51b859b46a9df5"
+    },
+    {
+      "bytes": 1219,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_07.csv",
+      "sha256": "e9a28a9140f177dfcd0552799a22b33819dcc1e93eba30e57761a1dfcbddb54b"
+    },
+    {
+      "bytes": 1240,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/core_edges_block_08.csv",
+      "sha256": "083e6f753c0dba1dab5335680a1799f445f056e6cd113a19aa96c77bdf0fc2b1"
+    },
+    {
+      "bytes": 4174,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_DATA_RECONCILIATION_v1/shards/shard_summary_v1.json",
+      "sha256": "6a6e3fb8b6c2c5d2304babcad1da925497b9c0e14a11bfb0c1635b2bdc8bb078"
     },
     {
       "bytes": 73,
@@ -237,14 +292,19 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 23823,
+      "bytes": 25472,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "e04a49e80636ce4effa02d8e5a720bcf614b9365dbb95a0930939eceb09d9c6a"
+      "sha256": "0ca4d28fd22c0583260a1a14d44d695ddae232f754897558fb4f15416e21d1ae"
     },
     {
       "bytes": 4253,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_reconcile_core_operator_v1.py",
       "sha256": "81567bb45ad2818a7fd8b2d1977ba0e9b979369b0f4fc132a7b47ba8bc16abde"
+    },
+    {
+      "bytes": 3801,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_reconcile_core_operator_shards_v1.py",
+      "sha256": "41e41c6197f7e6a1b444748ce16dd3fadf2daa5bc730ffe8294ab3ab7727354e"
     },
     {
       "bytes": 7548,
@@ -912,13 +972,17 @@
       "sha256": "3b9c23eacf58028b39730df519a0f4f7eef3e93a3148e206da63361591fb3479"
     }
   ],
+  "full_m0b_budget_seconds": 2700,
+  "full_m0b_budget_status": "PROPOSED_BEFORE_SECOND_ATTEMPT",
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
+  "max_command_seconds": 300,
   "operator_instance_budget_seconds": 600,
   "real_pilot_budget_seconds": 900,
   "scope": [
     "Real renewal pilot",
     "rule-to-piStar semantic bridge API",
-    "exact 243-state core matrix representation"
+    "exact 243-state core matrix representation",
+    "deterministic nine-block offline filter/remap shards"
   ],
   "statuses": {
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
@@ -933,7 +997,7 @@
     "global_collatz_claim": "NO",
     "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
     "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
-    "operator_data_reconciliation": "OPEN_DATA_IDENTITY_GATE_RESTRICTED_CORE_FILTER_NOT_FORMALIZED",
+    "operator_data_reconciliation": "OFFLINE_DATA_IDENTITY_PASS_LEAN_FILTER_REMAP_THEOREM_OPEN",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
     "piStar_aggregate_bridge": "PISTAR_AGGREGATE_CARD_BRIDGE_PASS_F3_RULE_PARTITION_OPEN",
