@@ -33,7 +33,10 @@ change `master`, or claim that its components prove natural density.
 4. **Dynamics:** prove the bounded Syracuse hit to reaches-one bridge using
    the finite base theorem.
 5. **Counting:** instantiate the source ND31 ratio and prove the natural
-   endpoint bridge with the source's inclusive/semi-open convention.
+   endpoint bridge with the source's inclusive/semi-open convention. The
+   convention has been inspected, but the current pinned Mathlib checkout
+   lacks the `FloorSemiring ℝ` instance exposed by the source's dependency
+   version; this is a version-alignment blocker, not a mathematical result.
 6. **Public density:** prove the odd-supported and odd-to-all counting
    theorems needed to move from eventual ratio bounds to the selected public
    density statement.
@@ -51,6 +54,7 @@ concrete base certificate; until then the status remains:
 ```text
 CONDITIONAL_CONTRACT_COMPILED
 F3_COMPONENTS_REUSABLE_NOT_ASSEMBLED
+COUNTING_ENDPOINT_VERSION_ALIGNMENT_PENDING
 NO_NATURAL_DENSITY_THEOREM
 NO_POSITIVE_DENSITY_CLAIM
 NO_GLOBAL_COLLATZ_CLAIM
