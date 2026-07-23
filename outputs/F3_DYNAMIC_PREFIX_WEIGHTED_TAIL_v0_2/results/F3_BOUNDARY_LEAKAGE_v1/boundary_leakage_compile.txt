@@ -1,0 +1,2 @@
+Command: `lake env lean -o /private/tmp/F3ReturnExcursionBoundaryLeakage.olean CollatzClassical/KL2003/F3ReturnExcursionBoundaryLeakage.lean`
+Result: EXIT 0.

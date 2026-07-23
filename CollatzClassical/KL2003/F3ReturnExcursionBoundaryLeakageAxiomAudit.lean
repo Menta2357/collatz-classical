@@ -1,0 +1,13 @@
+import CollatzClassical.KL2003.F3ReturnExcursionBoundaryLeakage
+
+namespace CollatzClassical
+namespace KL2003
+namespace F3BoundaryLeakage
+
+#print axioms retained_mass_of_boundary_fraction
+#print axioms boundary_budget_to_leakage
+#print axioms boundary_budget_to_qStar_certificate
+
+end F3BoundaryLeakage
+end KL2003
+end CollatzClassical

@@ -1,0 +1,11 @@
+Command: `lake env lean CollatzClassical/KL2003/F3ReturnExcursionBoundaryLeakageAxiomAudit.lean`
+Result: EXIT 0.
+
+'CollatzClassical.KL2003.F3BoundaryLeakage.retained_mass_of_boundary_fraction'
+  depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3BoundaryLeakage.boundary_budget_to_leakage'
+  depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzClassical.KL2003.F3BoundaryLeakage.boundary_budget_to_qStar_certificate'
+  depends on axioms: [propext, Classical.choice, Quot.sound]
+
+No `sorryAx` appears.
