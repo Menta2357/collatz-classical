@@ -47,14 +47,13 @@ def CoreCode :=
 
 def encode (i : Fin 243) : CoreCode :=
   ⟨⟨encodeNat i, encodeNat_lt_729 i⟩, by
-    have hm := encodeNat_mod9 i
     have hr : i.1 % 3 < 3 := Nat.mod_lt _ (by omega)
     have hcases : i.1 % 3 = 0 ∨ i.1 % 3 = 1 ∨ i.1 % 3 = 2 := by
       omega
     rcases hcases with h0 | h1 | h2
-    · exact Or.inl (by omega)
-    · exact Or.inr (Or.inl (by omega))
-    · exact Or.inr (Or.inr (by omega))⟩
+    · exact Or.inl (by simpa [h0] using encodeNat_mod9 i)
+    · exact Or.inr (Or.inl (by simpa [h1] using encodeNat_mod9 i))
+    · exact Or.inr (Or.inr (by simpa [h2] using encodeNat_mod9 i))⟩
 
 theorem encode_mem_coreCode (i : Fin 243) :
     (encode i).1.1 % 9 = 6 ∨
@@ -1086,15 +1085,7 @@ def pilotFrozenPos : PilotFormulaEdge → Fin 81
 theorem pilotFrozenPos_agrees (e : PilotFormulaEdge) :
     (pilotFrozenPos e).1 = (frozenPos (pilotEmbed e)).1 := by
   cases e with
-  | retarded i =>
-      have hi := i.2
-      have hb : i.1 % 3 < 3 := Nat.mod_lt _ (by omega)
-      have hq : (i.1 / 3) % 3 < 3 := Nat.mod_lt _ (by omega)
-      have h₃ := Nat.div_add_mod i.1 3
-      have h₉ := Nat.div_add_mod (i.1 / 3) 3
-      simp only [pilotFrozenPos, frozenPos, frozenPosNat, pilotEmbed,
-        fin27To243, rowStart]
-      split_ifs <;> omega
+  | retarded i => rfl
   | advancedDirect k ell =>
       have hk := k.2
       have he := ell.2
