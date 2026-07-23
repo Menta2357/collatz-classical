@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 19165,
+      "bytes": 19830,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "0da602c7c0e4f0a79026a22710839ab9ceb8d4d73389c9f53c3ceb5d82c80b72"
+      "sha256": "2f10b00c0c45ab2a03552a375adca296bdd3d055dfa467b5eb6294f081412b5f"
     },
     {
       "bytes": 7548,
@@ -735,6 +735,31 @@
       "bytes": 300,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHookAxiomAudit.lean",
       "sha256": "9e1d01d846ed5400c7eaf8245a6a54ac136fdd4f08471a3c3a5a09f1d00f7a1a"
+    },
+    {
+      "bytes": 1079,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/F3_SEMANTIC_RENEWAL_ROW_HOOK_REPORT_v1.md",
+      "sha256": "e07ea46f2e90e61ceab9c4c0f408741f2f5c4a1fae37e76abd0894127c8e47e9"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/semantic_renewal_row_hook_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 155,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/semantic_renewal_row_hook_axiom_audit.txt",
+      "sha256": "a22ad5806d5b5df01892c91f913324a3cb6fb9a14725a1179cd55af1b87364e0"
+    },
+    {
+      "bytes": 2390,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalRowHook.lean",
+      "sha256": "533a17e2dcfcd1d2e5c2a0881e444f4f122dca609aa5689998c8a158271d8c00"
+    },
+    {
+      "bytes": 178,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalRowHookAxiomAudit.lean",
+      "sha256": "1b708f0ef09541d98fc234db6a787c1895679d09e461e02ff634f32e9c74d64d"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -768,6 +793,7 @@
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
     "semantic_lower_hook_conversion": "CONTRIBUTION_TO_PISTAR_CONVERSION_PASS_OPERATOR_COMPARISON_OPEN",
     "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
+    "semantic_renewal_row_hook": "CONDITIONAL_RENEWAL_TO_PISTAR_PASS_F3_CONTRIBUTION_HOOK_OPEN",
     "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
     "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"

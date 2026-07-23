@@ -157,6 +157,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/operator_contribution_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHook.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHookAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/F3_SEMANTIC_RENEWAL_ROW_HOOK_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/semantic_renewal_row_hook_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_ROW_HOOK_v1/semantic_renewal_row_hook_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalRowHook.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalRowHookAxiomAudit.lean",
 )
 
 
@@ -204,6 +209,7 @@ def main() -> None:
             "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
             "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
             "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
+            "semantic_renewal_row_hook": "CONDITIONAL_RENEWAL_TO_PISTAR_PASS_F3_CONTRIBUTION_HOOK_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",

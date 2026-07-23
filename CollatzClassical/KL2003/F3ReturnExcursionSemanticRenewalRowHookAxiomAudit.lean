@@ -1,0 +1,3 @@
+import CollatzClassical.KL2003.F3ReturnExcursionSemanticRenewalRowHook
+
+#print axioms CollatzClassical.KL2003.F3SemanticRenewalRowHook.exponential_piStar_lower_bound_of_row_hook

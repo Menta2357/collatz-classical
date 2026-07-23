@@ -1,0 +1,3 @@
+'CollatzClassical.KL2003.F3SemanticRenewalRowHook.exponential_piStar_lower_bound_of_row_hook' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
