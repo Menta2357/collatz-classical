@@ -11,6 +11,15 @@ pairwise-disjoint fibers ⊆ root
 
 injective embeddings with pairwise-disjoint images
   ⟹ Σ_i card(domain_i) ≤ card(root).
+
+Además, la unión de las fibras y su frontera satisfacen la igualdad exacta
+
+```text
+Σ_i card(fiber_i) + card(root \ union_i fiber_i) = card(root).
+```
+
+Esta es la forma que puede alimentar una línea `Q_boundary` del contrato
+renewal sin convertir una cota de frontera en una pérdida agregada oculta.
 ```
 
 La prueba usa `Finset.card_biUnion` y no contiene datos F3, aproximaciones

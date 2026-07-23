@@ -34,6 +34,21 @@ theorem sum_fiber_card_le_root_card
       rcases Finset.mem_biUnion.mp ha with ⟨i, hi, hai⟩
       exact hsub i hi hai
 
+theorem sum_fiber_card_add_boundary_eq_root_card
+    {ι α : Type*} [DecidableEq ι] [DecidableEq α]
+    (I : Finset ι) (fiber : ι → Finset α) (root : Finset α)
+    (hdisj : (I : Set ι).PairwiseDisjoint fiber)
+    (hsub : ∀ i ∈ I, fiber i ⊆ root) :
+    (∑ i ∈ I, (fiber i).card) +
+        (root \ I.biUnion fiber).card = root.card := by
+  have hunion : I.biUnion fiber ⊆ root := by
+    intro a ha
+    rcases Finset.mem_biUnion.mp ha with ⟨i, hi, hai⟩
+    exact hsub i hi hai
+  have hcard := Finset.card_sdiff_add_card_eq_card hunion
+  rw [Finset.card_biUnion hdisj] at hcard
+  simpa [Nat.add_comm] using hcard
+
 theorem sum_fiber_card_le_root_card_of_injective
     {ι α : Type*} [DecidableEq ι] [DecidableEq α]
     (I : Finset ι) (domain : ι → Finset Nat) (root : Finset α)

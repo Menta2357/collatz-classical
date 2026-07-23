@@ -5,6 +5,7 @@ namespace KL2003
 namespace F3FiberAccounting
 
 #print axioms sum_fiber_card_le_root_card
+#print axioms sum_fiber_card_add_boundary_eq_root_card
 #print axioms sum_fiber_card_le_root_card_of_injective
 
 end F3FiberAccounting

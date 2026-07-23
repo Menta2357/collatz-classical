@@ -1,2 +1,4 @@
 Command: `lake env lean -o /private/tmp/F3ReturnExcursionFiberAccounting.olean CollatzClassical/KL2003/F3ReturnExcursionFiberAccounting.lean`
 Result: EXIT 0; no warnings in the final run.
+The final module also proves the exact root-minus-boundary cardinality
+decomposition for the disjoint union.

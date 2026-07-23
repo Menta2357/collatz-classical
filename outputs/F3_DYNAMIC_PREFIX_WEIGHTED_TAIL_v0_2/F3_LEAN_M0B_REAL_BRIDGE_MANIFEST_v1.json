@@ -107,19 +107,19 @@
       "sha256": "375348025a8bd2187ced689ddc9000ce53519d5dcfeb825f03df3742a49c7dae"
     },
     {
-      "bytes": 870,
+      "bytes": 1176,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/F3_FIBER_ACCOUNTING_REPORT_v1.md",
-      "sha256": "0d34f07aef6ce4a1ec0be60005a4c7b909edfe5ca7bbbeff24a116843bda0c51"
+      "sha256": "84de22a4c671da617a16d61bff8d4bcc14f4106de893013cab67ba6e84c0eead"
     },
     {
-      "bytes": 188,
+      "bytes": 297,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/fiber_compile.txt",
-      "sha256": "677ca25021eeb8cc5d37c7c64fb2f83dcaf69eedf41124357b6de5c91ca1bde8"
+      "sha256": "472cde406abb53d71ec4485b6663400d39ba58dfecbb2c44f378fd9e2a0295e8"
     },
     {
-      "bytes": 416,
+      "bytes": 562,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIBER_ACCOUNTING_v1/fiber_axiom_audit.txt",
-      "sha256": "f156e7d6d187d14305551fb81737f4a925e2219a1cf71d8d46149681f4c58b64"
+      "sha256": "7ed6c91123d29663e4dbe27f34ba91adaba47aaacbcf05574a1de68734dd83a7"
     },
     {
       "bytes": 1116,
@@ -252,14 +252,14 @@
       "sha256": "2600b61f1e89d9a1f7b167db3584ec074b866c28e2f5bf4bbe498abcfed5128d"
     },
     {
-      "bytes": 2293,
+      "bytes": 2929,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionFiberAccounting.lean",
-      "sha256": "4c803601b7540965b90dddb854e6c0de1876b5ab578fd84ac987dc7f399af06b"
+      "sha256": "25716eb1a834781c5806e2bf4bc68f6959c4bf3da0fa866123f6d55a53987d75"
     },
     {
-      "bytes": 290,
+      "bytes": 345,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionFiberAccountingAxiomAudit.lean",
-      "sha256": "f022a215aad52519e5e02bf98bbbf0e78f0f53a8e18bb25f460200a9e0cb39f7"
+      "sha256": "e9a8eb6057d9cb2577f3b8b8812a4b4748e8202b92dc2624362c76d8004287cf"
     },
     {
       "bytes": 128832,
