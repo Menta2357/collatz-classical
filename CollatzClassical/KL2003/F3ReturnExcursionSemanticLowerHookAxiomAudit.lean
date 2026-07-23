@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionSemanticLowerHook
+
+open CollatzClassical KL2003
+
+#print axioms F3SemanticLowerHook.operator_mass_le_piStar_mass_of_contribution_hook

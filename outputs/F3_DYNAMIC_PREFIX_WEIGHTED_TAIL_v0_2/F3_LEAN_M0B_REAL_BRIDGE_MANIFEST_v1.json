@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 15126,
+      "bytes": 15797,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "fe07c2bff03f642e67f8370dadcc3c799485d7b2006413b336e011bf22886e0f"
+      "sha256": "d38af520e0b9b91ba756a07cf094a5231856d64f49e139d5880dfe58978df3ae"
     },
     {
       "bytes": 7548,
@@ -482,6 +482,31 @@
       "sha256": "073aef1ac0ab1df75cef842844e22e55a9b53d01af5f3fdcb90637bc9968b6d7"
     },
     {
+      "bytes": 1529,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_CONVERSION_v1/F3_SEMANTIC_LOWER_HOOK_CONVERSION_REPORT_v1.md",
+      "sha256": "64c9ce62f0942af7b6a3edba3c38f3cb81072515cb10f8d448f5b5bf12931bf9"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_CONVERSION_v1/semantic_lower_hook_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 157,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_CONVERSION_v1/semantic_lower_hook_axiom_audit.txt",
+      "sha256": "7d264e37d894aebe0ed2f3ac914b00b70f78b57ec71538a9ffeb1a181a774024"
+    },
+    {
+      "bytes": 3583,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticLowerHook.lean",
+      "sha256": "13a0c2555c605b7e99bbfa9a33446a37c006244fbcd54733dc270322ea50682b"
+    },
+    {
+      "bytes": 181,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticLowerHookAxiomAudit.lean",
+      "sha256": "8933ab73d7bb02b62eb265ac7253dd497d33ffb4d08dd346d17a9abf16ced62a"
+    },
+    {
       "bytes": 1489,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LAYER_NORMALIZATION_v1/F3_LAYER_NORMALIZATION_REPORT_v1.md",
       "sha256": "f46a2e5918b7bc05fed0c6fab1ef7b26d1534c950e6ed9b5d4139ffd42c9198d"
@@ -613,6 +638,7 @@
     "row_certificate": "BLOCKED_BY_ORIENTATION_CONVENTION_AUDIT",
     "semantic_bridge": "RULE_TO_PISTAR_FINSET_CARD_BRIDGE_PASS_COVERAGE_OPEN",
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
+    "semantic_lower_hook_conversion": "CONTRIBUTION_TO_PISTAR_CONVERSION_PASS_OPERATOR_COMPARISON_OPEN",
     "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
