@@ -1,0 +1,26 @@
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:209:29: warning: try 'simp at hm' instead of 'simpa using hm'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:218:29: warning: try 'simp at hm' instead of 'simpa using hm'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:71:5: warning: unused variable `ha_pos`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:96:14: warning: 'change Disjoint (retardedSource a xRet) (firstHitSource .direct a c xAdv)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:105:14: warning: 'change Disjoint (retardedSource a xRet) ∅' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:113:14: warning: 'change Disjoint (retardedSource a xRet) (firstHitSource .parityLift a c xAdv)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:122:14: warning: 'change Disjoint (retardedSource a xRet) ∅' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:132:14: warning: 'change Disjoint (firstHitSource .direct a c xAdv) (retardedSource a xRet)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:141:14: warning: 'change Disjoint ∅ (retardedSource a xRet)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:154:14: warning: 'change Disjoint ∅ (if c % 3 = 1 then firstHitSource .parityLift a c xAdv else ∅)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:165:14: warning: 'change Disjoint (firstHitSource .parityLift a c xAdv) (retardedSource a xRet)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:174:14: warning: 'change Disjoint ∅ (retardedSource a xRet)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean:186:14: warning: 'change Disjoint ∅ (if c % 3 = 2 then firstHitSource .direct a c xAdv else ∅)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`

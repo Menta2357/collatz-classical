@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 17151,
+      "bytes": 17838,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "7154e41c2cd71441e20a51bb94ac3cf676cfb7004f3b37431492974e6e2f893b"
+      "sha256": "f682ce7954f611a8cf4bc533c7a66d0c0a1598c9b91dc976a623f38e41019ece"
     },
     {
       "bytes": 7548,
@@ -660,6 +660,31 @@
       "bytes": 336,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBoundsAxiomAudit.lean",
       "sha256": "fafb014b7f074a81106d21da1d41865f6ce0009d81b13b0809395d1c403d7797"
+    },
+    {
+      "bytes": 1457,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_REPORT_v1.md",
+      "sha256": "756bac54c95efbc8715036dcad23b2ad56e119522cf21ca72d29df16634b365c"
+    },
+    {
+      "bytes": 3199,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/three_lift_compile.txt",
+      "sha256": "0dca8707c623cdf920ed542e1d4e96b43aa51b6b152afcb0e3de6a10ccc8cfa8"
+    },
+    {
+      "bytes": 443,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/three_lift_axiom_audit.txt",
+      "sha256": "2432e460c1058e04a6c0660fac8f0904f2bd161d6250d2b3d06b3c5698b40f8c"
+    },
+    {
+      "bytes": 9028,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean",
+      "sha256": "a5d446b232ef3c5eb00da3d6d0a07522ca4311b046c9facf55b26a995022cee0"
+    },
+    {
+      "bytes": 332,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstanceAxiomAudit.lean",
+      "sha256": "2bbab838f9130cb116c7bb6cce2904d0cc4ee2156d2deef5d3ec13e608afd659"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -692,6 +717,7 @@
     "semantic_lower_hook_conversion": "CONTRIBUTION_TO_PISTAR_CONVERSION_PASS_OPERATOR_COMPARISON_OPEN",
     "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
     "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
+    "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
 }

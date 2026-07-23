@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3ThreeLiftStoppedPathInstance.firstHitFiltered_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ThreeLiftStoppedPathInstance.three_lift_stopped_path_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ThreeLiftStoppedPathInstance.three_lift_retained_plus_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

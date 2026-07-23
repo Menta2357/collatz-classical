@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.F3ReturnExcursionThreeLiftStoppedPathInstance
+
+open CollatzClassical KL2003
+
+#print axioms F3ThreeLiftStoppedPathInstance.firstHitFiltered_disjoint
+#print axioms F3ThreeLiftStoppedPathInstance.three_lift_stopped_path_data
+#print axioms F3ThreeLiftStoppedPathInstance.three_lift_retained_plus_boundary

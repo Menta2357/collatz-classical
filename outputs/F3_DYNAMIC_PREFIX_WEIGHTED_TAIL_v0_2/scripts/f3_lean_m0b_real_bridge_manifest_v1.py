@@ -142,6 +142,11 @@ FILES = (
     "CollatzClassical/KL2003/F3ReturnExcursionChannelBounds.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBounds.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrixChannelBoundsAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/three_lift_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_STOPPED_PATH_INSTANCE_v1/three_lift_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstance.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftStoppedPathInstanceAxiomAudit.lean",
 )
 
 
@@ -186,6 +191,7 @@ def main() -> None:
             "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
             "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
             "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
+            "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",
