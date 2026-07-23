@@ -1,0 +1,23 @@
+{
+  "a_interval": [
+    3,
+    128
+  ],
+  "csv_sha256": "a32c05e132476ed0bc918c8f74abd63984b3cc991dfe3fcd58f7b3a90b36629b",
+  "discarded_fraction": 0.0,
+  "discarded_total": 0,
+  "first_hit_total": 45017,
+  "no_claims": [
+    "NO_UNIFORM_LEAKAGE_BOUND",
+    "NO_OPERATOR_TO_PISTAR_GROWTH_THEOREM",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM"
+  ],
+  "raw_total": 45017,
+  "rows": 82,
+  "rows_sha256": "5397a194a1c97ac7ec9b351c9119ddea9b7e8af5b6edf5cee54565df11c7d396",
+  "status": "DIAGNOSTIC_ONLY",
+  "y_values": [
+    8
+  ]
+}

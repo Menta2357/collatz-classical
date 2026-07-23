@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 12837,
+      "bytes": 13299,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "6daae584db7757325512a6afae0891c001b9b1c09dd636be0d0d1a92a404c3ef"
+      "sha256": "4390decedcbdb120e9f4be86437d82a613562c965bd61da5b3133cee6c587039"
     },
     {
       "bytes": 7548,
@@ -410,6 +410,26 @@
       "bytes": 273,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionFirstHitFibersAxiomAudit.lean",
       "sha256": "4757f28153ce89dc135f8b83a8171e12904d1e1914c7787de12ec1ab7ab0ce83"
+    },
+    {
+      "bytes": 1686,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_LEAKAGE_DIAGNOSTIC_v1/F3_FIRST_HIT_LEAKAGE_DIAGNOSTIC_REPORT_v1.md",
+      "sha256": "748743d2097e4eff15a1d82c2101208b39062a7ee980f7e5e9dbe517e0b7664f"
+    },
+    {
+      "bytes": 2994,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_LEAKAGE_DIAGNOSTIC_v1/raw_vs_first_hit.csv",
+      "sha256": "a32c05e132476ed0bc918c8f74abd63984b3cc991dfe3fcd58f7b3a90b36629b"
+    },
+    {
+      "bytes": 534,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_LEAKAGE_DIAGNOSTIC_v1/summary.json",
+      "sha256": "94e0c6252e47e91819b013893f64887627051c975d005f2c1dee6888c33c6691"
+    },
+    {
+      "bytes": 5338,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_first_hit_leakage_diagnostic_v1.py",
+      "sha256": "dbabd7784cf9f784bf76fb5b9edf127be98ba909bdd85c17084f8dd5dca65140"
     },
     {
       "bytes": 128832,
