@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 14026,
+      "bytes": 14533,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "4294e597badbae82153dc9ac4b554296e4eeca21dcc1b6aea6b111ccd97c75b0"
+      "sha256": "156d55aa6bfc22128b95afd988be2f12a80f43c7d4218adbf370b5fdfcadc159"
     },
     {
       "bytes": 7548,
@@ -440,6 +440,26 @@
       "bytes": 1886,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_LOWER_HOOK_GAP_v1.md",
       "sha256": "df56315b6dc5455d39c7f23c71779ae0f6b5a468a1803f08ef4b56e534b8a815"
+    },
+    {
+      "bytes": 1878,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_FINITE_DIAGNOSTIC_v1/F3_SEMANTIC_LOWER_HOOK_FINITE_DIAGNOSTIC_REPORT_v1.md",
+      "sha256": "275b19e1649b5a99df932416aa6e32bbea8e7604ba4ccb9e3da67dc22ba16185"
+    },
+    {
+      "bytes": 3741,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_FINITE_DIAGNOSTIC_v1/finite_hook_rows.csv",
+      "sha256": "870e40c513dabc0669f08a8efc98386a2aaef4c7c4793ec25d7d6fae67b2faf1"
+    },
+    {
+      "bytes": 583,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_LOWER_HOOK_FINITE_DIAGNOSTIC_v1/summary.json",
+      "sha256": "93db01001163f80e1ff0f1fbb3cef0d86a1b23d461f35662ecb383490f014f95"
+    },
+    {
+      "bytes": 5857,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_semantic_lower_hook_finite_diagnostic_v1.py",
+      "sha256": "73c4f48b6aad988cba0c7df550c253d0364205c41d2b25e6375bfbab4a2db914"
     },
     {
       "bytes": 0,

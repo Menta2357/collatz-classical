@@ -1,0 +1,20 @@
+{
+  "a_interval": [
+    3,
+    128
+  ],
+  "all_fibre_sets_disjoint": true,
+  "csv_sha256": "870e40c513dabc0669f08a8efc98386a2aaef4c7c4793ec25d7d6fae67b2faf1",
+  "fibre_definition": "first predecessor of parent is the declared channel predecessor",
+  "min_fibre_total_over_lhs": 4217.992651058822,
+  "no_claims": [
+    "NO_UNIFORM_HSEMANTIC",
+    "NO_OPERATOR_TO_PISTAR_GROWTH_THEOREM",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM"
+  ],
+  "row_mass_definition": "frozen_w_core.csv lhs_wM_decimal per source state",
+  "rows": 41,
+  "status": "FINITE_DIAGNOSTIC_ONLY",
+  "y": 8
+}
