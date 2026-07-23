@@ -1,6 +1,10 @@
 # F3_LEAN_M0B_FULL_BUDGET_v1
 
-Status: `PROPOSED_BEFORE_SECOND_ATTEMPT`
+Status: `AUTHORIZED_STOPPED_FIRST_SHARD_TIMEOUT`
+
+Authorization: the user authorized this budget on 2026-07-23.  The first
+shard attempt below consumed the stop condition; no identical rerun is
+authorized.
 
 This document fixes the scope, resource envelope, shard layout, and stop
 semantics for the full M0-b attempt.  It is a governance artifact, not a
@@ -78,6 +82,17 @@ All of the following are required for an M0-b PASS:
 Any timeout, missing input, orientation mismatch, failed audit, or unproved
 operator-to-fibre implication is `STOP_AND_RECORD`.  A stopped attempt keeps
 all outputs and does not silently rerun the same command or burn a new claim.
+
+## Attempt 1 record
+
+The precheck met the recorded 12 GiB disk minimum, with pressure noted.  The
+first generated identity shard (`00`) produced no Lean diagnostics and was
+interrupted after the command reported 336.04 s, beyond the 300 s ceiling.
+Shards `01`–`08` and the aggregator were not started.  The generated Lean
+sources were removed after the stop; the CSV shards, generator, and timeout
+report remain in custody.  A second attempt must use a materially smaller
+finite reduction (a precomputed local remap table or smaller blocks), not a
+silent retry of the same reduction.
 
 ## What this budget does not buy
 

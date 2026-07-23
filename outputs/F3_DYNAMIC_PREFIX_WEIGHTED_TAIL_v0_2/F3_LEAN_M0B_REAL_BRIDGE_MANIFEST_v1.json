@@ -142,9 +142,19 @@
       "sha256": "9bded61449cc1b7058caa5fe4b1f3ca8f90e8f2a07355319e599eab7712f89cd"
     },
     {
-      "bytes": 4057,
+      "bytes": 4809,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEAN_M0B_FULL_BUDGET_v1.md",
-      "sha256": "974931a803966521dd3fb890695440e47458a6b9765b858d488a2bec8ef011f7"
+      "sha256": "296efdad984843157295fe3712c1c2bbea2e20f56a45abd51bee40df267d8a8c"
+    },
+    {
+      "bytes": 1464,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_IDENTITY_SHARDS_M0B_v1/F3_CORE_IDENTITY_SHARDS_M0B_REPORT_v1.md",
+      "sha256": "4a0dacddf2b993b804a481d2a01fe68eb0ad8c967ea894f930b4350ac3aa18d8"
+    },
+    {
+      "bytes": 224,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_IDENTITY_SHARDS_M0B_v1/shard_00_timeout.txt",
+      "sha256": "548cdb1efb9e061e24e9e976508d40da4b08ec651d3c16f0c3790037087be4be"
     },
     {
       "bytes": 474,
@@ -292,9 +302,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 27749,
+      "bytes": 28195,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "4463a765e4e31a2710f56a1706638ac6e47471cd78f584e1a9865b6e0d22be3b"
+      "sha256": "3e55773c16f6beebf153e2d17f407516d0739af09972cbcbb857058f9f50e331"
     },
     {
       "bytes": 4253,
@@ -305,6 +315,11 @@
       "bytes": 3801,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_reconcile_core_operator_shards_v1.py",
       "sha256": "41e41c6197f7e6a1b444748ce16dd3fadf2daa5bc730ffe8294ab3ab7727354e"
+    },
+    {
+      "bytes": 2980,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_generate_core_identity_shards_v1.py",
+      "sha256": "9b0749b26960dba545e072eaac9cde3c410000336557adbab3302604df9269a6"
     },
     {
       "bytes": 1685,
@@ -1063,7 +1078,7 @@
     }
   ],
   "full_m0b_budget_seconds": 2700,
-  "full_m0b_budget_status": "PROPOSED_BEFORE_SECOND_ATTEMPT",
+  "full_m0b_budget_status": "AUTHORIZED_STOPPED_FIRST_SHARD_TIMEOUT",
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
   "max_command_seconds": 300,
   "operator_instance_budget_seconds": 600,
@@ -1078,6 +1093,7 @@
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
     "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
+    "core_identity_shard_attempt": "STOP_AND_RECORD_FIRST_SHARD_TIMEOUT_NO_LEAN_PASS",
     "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
     "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
     "density_theorem": "NO",

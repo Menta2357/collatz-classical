@@ -1,0 +1,4 @@
+command: /usr/bin/time -p lake env lean CollatzClassical/KL2003/F3ReturnExcursionCoreIdentityShard00.lean
+observed: real 336.04
+exit_status: 130 (interrupted at the predeclared timeout)
+diagnostics: none before interruption
