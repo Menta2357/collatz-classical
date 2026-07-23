@@ -177,6 +177,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/tilted_live_comparison_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparison.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparisonAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/F3_TILTED_ITERATE_UPPER_BOUND_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/tilted_iterate_upper_bound_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/tilted_iterate_upper_bound_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBound.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBoundAxiomAudit.lean",
 )
 
 
@@ -228,6 +233,7 @@ def main() -> None:
             "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
             "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
             "tilted_live_comparison": "TILTED_PATH_COMPARISON_PASS_OPERATOR_TILTED_MASS_BOUND_OPEN",
+            "tilted_iterate_upper_bound": "TILTED_ITERATE_UPPER_BOUND_PASS_PATH_MASS_INSTANTIATION_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",

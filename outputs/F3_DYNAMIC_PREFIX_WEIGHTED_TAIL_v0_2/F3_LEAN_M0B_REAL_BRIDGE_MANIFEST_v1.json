@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 21822,
+      "bytes": 22496,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "b57dc506ac0372d92ea404fb4d36f131d9168e61608842fb8ebfc6af47a185b3"
+      "sha256": "093e88f681c3f711f8e6ec52196d9bde5fb3ecb2696374c77d436bd2876b3b94"
     },
     {
       "bytes": 7548,
@@ -835,6 +835,31 @@
       "bytes": 322,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparisonAxiomAudit.lean",
       "sha256": "191f9a66bc76f1db619dbfec050bb5f5bb287826ec764c6ab4b1b45d46735400"
+    },
+    {
+      "bytes": 626,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/F3_TILTED_ITERATE_UPPER_BOUND_REPORT_v1.md",
+      "sha256": "66b4e7df6aada49fa10318e47d52eb547fb4aac20a857c825997c1a6c3c3dcc7"
+    },
+    {
+      "bytes": 61,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/tilted_iterate_upper_bound_compile.txt",
+      "sha256": "945609f2da8fea19a3f40fcda78b04f24f8719435605448ea3c9c9b6077b2c49"
+    },
+    {
+      "bytes": 291,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/tilted_iterate_upper_bound_axiom_audit.txt",
+      "sha256": "dbdf90c71ddacf3c12730c5528220455fc64ef5932d363fb6fd79ccdc7a5b44e"
+    },
+    {
+      "bytes": 2416,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBound.lean",
+      "sha256": "61f21a42a9fdeac4c9cbba2322453a763e23f502ee6f295621edf570604b02f8"
+    },
+    {
+      "bytes": 266,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBoundAxiomAudit.lean",
+      "sha256": "36b3045fd19ef3c8f6162c33546eff008c361c7097eb822958ad2f3b417ea08b"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -873,6 +898,7 @@
     "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
     "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
     "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
+    "tilted_iterate_upper_bound": "TILTED_ITERATE_UPPER_BOUND_PASS_PATH_MASS_INSTANTIATION_OPEN",
     "tilted_live_comparison": "TILTED_PATH_COMPARISON_PASS_OPERATOR_TILTED_MASS_BOUND_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
