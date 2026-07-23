@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 13941,
+      "bytes": 14026,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "18080910615ae131de825cc238ac1bd52fb91d873d269f8a53fb96ee74a3afed"
+      "sha256": "4294e597badbae82153dc9ac4b554296e4eeca21dcc1b6aea6b111ccd97c75b0"
     },
     {
       "bytes": 7548,
@@ -435,6 +435,11 @@
       "bytes": 1815,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_RENEWAL_BRIDGE_v1/F3_SEMANTIC_RENEWAL_BRIDGE_REPORT_v1.md",
       "sha256": "502e16e3734ace402aa553609772b68b85bcd056da69d195787998cc4bd32179"
+    },
+    {
+      "bytes": 1886,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_SEMANTIC_LOWER_HOOK_GAP_v1.md",
+      "sha256": "df56315b6dc5455d39c7f23c71779ae0f6b5a468a1803f08ef4b56e534b8a815"
     },
     {
       "bytes": 0,
