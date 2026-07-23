@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionLemmaAExpansionInvariant
+
+#print axioms CollatzClassical.KL2003.F3LemmaAExpansionInvariant.layerBound_all_of_base_step
+#print axioms CollatzClassical.KL2003.F3LemmaAExpansionInvariant.cumulative_layer_mass_le_root_card
+#print axioms CollatzClassical.KL2003.F3LemmaAExpansionInvariant.operator_mass_le_root_of_layer_identification

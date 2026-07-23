@@ -292,9 +292,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 26213,
+      "bytes": 26945,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "c5547d06441eeda7b270d3374ab4a41e8d00699f2f12157f87492ebe19c36dda"
+      "sha256": "7ed6f7c012e913720057586e71f87d1fe3959ffc561d666b85be00ca5685e7ca"
     },
     {
       "bytes": 4253,
@@ -325,6 +325,26 @@
       "bytes": 109,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_SEMANTIC_FIRST_ORIENTATION_v1/orientation_axiom_audit.txt",
       "sha256": "64f485f2fbfa221b1db2dc36cccf4a153a0f343b756feeaf3e86fef94b05e919"
+    },
+    {
+      "bytes": 1097,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_LEMMA_A_EXPANSION_INVARIANT_v1.md",
+      "sha256": "a74747fcdab945f4d615b29a45308a480b686b49eb363b74cbcbb61eb493f70c"
+    },
+    {
+      "bytes": 1330,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEMMA_A_EXPANSION_INVARIANT_v1/F3_LEMMA_A_EXPANSION_INVARIANT_REPORT_v1.md",
+      "sha256": "dc7bdffd26dd27b3a502b6421a77be325bbc99dde66e6cfc9009701bd46dbd17"
+    },
+    {
+      "bytes": 99,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEMMA_A_EXPANSION_INVARIANT_v1/lemma_a_compile.txt",
+      "sha256": "d6737afdded3b1341d742c06115d2a30a875bcae8c7f9789369f1fcf0eb5f921"
+    },
+    {
+      "bytes": 109,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEMMA_A_EXPANSION_INVARIANT_v1/lemma_a_axiom_audit.txt",
+      "sha256": "bd97f5cfc0b81727580ce748ab244c4a9b1a1458a0458ffa3b09d09e6e65fda1"
     },
     {
       "bytes": 7548,
@@ -737,6 +757,16 @@
       "sha256": "2f0dff85f661ad9ed023cec7083ebb08f6bde73b4a9c5f610f25fec06614ddc7"
     },
     {
+      "bytes": 3034,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionLemmaAExpansionInvariant.lean",
+      "sha256": "dad60f7810a03b74550f09255b0273091bb66c804e3034dc9b0615b247b41cd7"
+    },
+    {
+      "bytes": 378,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionLemmaAExpansionInvariantAxiomAudit.lean",
+      "sha256": "55a13ec984e019e8e67f0ea4bc17a9f07cfed89a3ac0bdeca934dfc02174032a"
+    },
+    {
       "bytes": 1784,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/F3_CHANNEL_SCALAR_BOUNDS_REPORT_v1.md",
       "sha256": "426f8ebbe07f102e7ed1de516b9b3f2de4a46173f62d1a05ff88e9100e9589d2"
@@ -1026,6 +1056,7 @@
     "frozen_row_ledger_bridge": "FROZEN_RULE_TO_PISTAR_LEDGER_PASS_OPERATOR_CONTRIBUTION_OPEN",
     "global_collatz_claim": "NO",
     "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
+    "lemma_a_expansion_invariant": "GENERIC_INDUCTIVE_INTERFACE_PASS_OPERATOR_INSTANTIATION_OPEN",
     "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
     "operator_data_reconciliation": "OFFLINE_DATA_IDENTITY_PASS_LEAN_FILTER_REMAP_THEOREM_OPEN",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
