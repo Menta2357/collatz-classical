@@ -1,6 +1,6 @@
 # Mazur ND31 Parametric Density-Fusion Fidelity Audit v1
 
-Status: `FIDELITY_AUDIT_ADAPTER_COMPILED_BRIDGES_PENDING`
+Status: `FIDELITY_AUDIT_SURFACE_AND_CONTRACT_COMPILED_BRIDGES_PENDING`
 
 ## Scope and source pin
 
@@ -56,8 +56,9 @@ NO_GLOBAL_COLLATZ_CLAIM
 
 No implementation of these interfaces is included in this custody commit.
 
-The surface adapter theorem is now compiled and audited; the four concrete
-obligations above remain open by design.
+The surface adapter and the named conditional contract are now compiled and
+audited, but the concrete bridges remain open by design. The contract is a
+transport boundary, not evidence that those bridges exist.
 
 ## License boundary
 

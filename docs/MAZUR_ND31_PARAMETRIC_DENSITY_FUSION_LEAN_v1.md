@@ -1,6 +1,6 @@
 # Mazur ND31 Parametric Density-Fusion Algebra v1
 
-Status: `PARAMETRIC_FUSION_COMPILED_IN_ISOLATED_WORKTREE_NOT_YET_CUSTODIED`
+Status: `CONDITIONAL_CONTRACT_COMPILED_BRIDGES_UNINSTANTIATED`
 
 ## Scope
 
@@ -38,9 +38,10 @@ interface against Mazur's `Statement.lean`: the semi-open `D_X` counting
 convention, odd-input guards, and the exact ratio normalization must match
 literally. A near-match is a blocker, not an integration detail.
 
-Current repository status: the Mazur/ProofAtlas `Statement.lean` is not present
-in this tree, so this correspondence audit is pending and no external ND31
-claim is made.
+The pinned Mazur/ProofAtlas `Statement.lean` is not imported into this tree,
+so this correspondence audit remains explicit and no external ND31 claim is
+made. The source-facing adapter and the named conditional contract now compile
+in the isolated custody branch.
 
 The local source-surface adapter is now in
 `CollatzClassical.MazurND31SurfaceAdapter`. It mirrors the quantified shape
@@ -76,6 +77,12 @@ The first adapter theorem is compiled and audited, but it remains an interface
 theorem until a concrete `oddSyracuseBadRatio` and its endpoint bridge are
 instantiated.
 
+The companion `DensityFusionNamedContract` makes the three application
+obligations first-class fields: `baseBelow`, `syracuseToReachesOne`, and
+`oddToAll`. Its theorem consumes proofs of those fields only through an
+explicit `cover_of_bridges` function. This prevents a future instantiation
+from silently replacing the bridges with an unlabelled `hcover`.
+
 The intended named obligations are:
 
 ```text
@@ -109,6 +116,8 @@ naturals.
 ```text
 lake build CollatzClassical.DensityFusionParametric
 lake env lean CollatzClassical/DensityFusionParametricAxiomAudit.lean
+lake build CollatzClassical.DensityFusionNamedContract
+lake env lean CollatzClassical/DensityFusionNamedContractAxiomAudit.lean
 ```
 
 The source and proof term compile in a clean detached worktree based on
