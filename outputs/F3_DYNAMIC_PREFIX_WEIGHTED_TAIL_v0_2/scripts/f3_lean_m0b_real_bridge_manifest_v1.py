@@ -152,6 +152,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CUMULATIVE_FIRST_HIT_FIBERS_v1/cumulative_first_hit_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibers.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibersAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/F3_OPERATOR_CONTRIBUTION_HOOK_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/operator_contribution_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/operator_contribution_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHook.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHookAxiomAudit.lean",
 )
 
 
@@ -198,6 +203,7 @@ def main() -> None:
             "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
             "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
             "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
+            "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",

@@ -1,0 +1,4 @@
+import CollatzClassical.KL2003.F3ReturnExcursionOperatorContributionHook
+
+#print axioms CollatzClassical.KL2003.F3OperatorContributionHook.operator_mass_le_piStar_of_row_contribution
+#print axioms CollatzClassical.KL2003.F3OperatorContributionHook.weighted_iterate_mass_le_piStar_of_row_contribution

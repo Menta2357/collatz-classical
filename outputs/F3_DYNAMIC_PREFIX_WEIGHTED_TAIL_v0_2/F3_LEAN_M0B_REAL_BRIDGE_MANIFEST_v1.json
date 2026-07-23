@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 18509,
+      "bytes": 19165,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "dee9c85a7ecdaa57dded4a2e386ba2903bb06081ebd51a2eef17309173848751"
+      "sha256": "0da602c7c0e4f0a79026a22710839ab9ceb8d4d73389c9f53c3ceb5d82c80b72"
     },
     {
       "bytes": 7548,
@@ -710,6 +710,31 @@
       "bytes": 390,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionCumulativeFirstHitFibersAxiomAudit.lean",
       "sha256": "cc671d23ff980917054bbd3a9a1d7d717d679100fddca0f2c42c0e33752d5b64"
+    },
+    {
+      "bytes": 1082,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/F3_OPERATOR_CONTRIBUTION_HOOK_REPORT_v1.md",
+      "sha256": "dc6f3f8cd73ebb6a998c4e88cbec8b5440d4b61d8196a825d83b146087efb2b4"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/operator_contribution_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 324,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_CONTRIBUTION_HOOK_v1/operator_contribution_axiom_audit.txt",
+      "sha256": "f4c184e7aa5b034059ba55509b6967fa7b699d2b7d5aaae6ec29c3e32693f36b"
+    },
+    {
+      "bytes": 3438,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHook.lean",
+      "sha256": "87cb73cd41aa9e17c17316dca5e3a6f2f083a91ed4d9dd6963c7e6e08ec965a4"
+    },
+    {
+      "bytes": 300,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionOperatorContributionHookAxiomAudit.lean",
+      "sha256": "9e1d01d846ed5400c7eaf8245a6a54ac136fdd4f08471a3c3a5a09f1d00f7a1a"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -730,6 +755,7 @@
     "fiber_accounting": "ABSTRACT_FIBER_DISJOINTNESS_PASS_RENEWAL_LEAKAGE_INSTANTIATION_OPEN",
     "global_collatz_claim": "NO",
     "layer_normalization": "REAL_MEMBERWISE_SUM_NORMALIZATION_PASS",
+    "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
     "piStar_aggregate_bridge": "PISTAR_AGGREGATE_CARD_BRIDGE_PASS_F3_RULE_PARTITION_OPEN",
