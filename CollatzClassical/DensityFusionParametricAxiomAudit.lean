@@ -1,0 +1,8 @@
+import CollatzClassical.DensityFusionParametric
+
+namespace CollatzClassical
+
+#print axioms eventually_ratio_lower_bound_of_subtraction
+#print axioms nd31_fusion_eventual_lower_bound
+
+end CollatzClassical
