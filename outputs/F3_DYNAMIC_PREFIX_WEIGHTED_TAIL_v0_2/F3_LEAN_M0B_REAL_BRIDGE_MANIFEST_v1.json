@@ -292,9 +292,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 26945,
+      "bytes": 27749,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "7ed6f7c012e913720057586e71f87d1fe3959ffc561d666b85be00ca5685e7ca"
+      "sha256": "4463a765e4e31a2710f56a1706638ac6e47471cd78f584e1a9865b6e0d22be3b"
     },
     {
       "bytes": 4253,
@@ -345,6 +345,26 @@
       "bytes": 109,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LEMMA_A_EXPANSION_INVARIANT_v1/lemma_a_axiom_audit.txt",
       "sha256": "bd97f5cfc0b81727580ce748ab244c4a9b1a1458a0458ffa3b09d09e6e65fda1"
+    },
+    {
+      "bytes": 828,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_OPERATOR_FIBRE_COMPARISON_CONTRACT_v1.md",
+      "sha256": "122e788b1f942620a325d161af0adc83774629d8903855fbdef12cee0c73ae71"
+    },
+    {
+      "bytes": 1113,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_FIBRE_COMPARISON_CONTRACT_v1/F3_OPERATOR_FIBRE_COMPARISON_CONTRACT_REPORT_v1.md",
+      "sha256": "6fdba8327cab41c9d2e9fe0b7b7f1808e7c5ad69a8dc3d92ee51e16765cf6c75"
+    },
+    {
+      "bytes": 106,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_FIBRE_COMPARISON_CONTRACT_v1/operator_fibre_contract_compile.txt",
+      "sha256": "96c39fc61be247d13d0da3aa901308adb9a8fbfd14f07d7e09cbedcc7760aff2"
+    },
+    {
+      "bytes": 116,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_OPERATOR_FIBRE_COMPARISON_CONTRACT_v1/operator_fibre_contract_axiom_audit.txt",
+      "sha256": "df14ea3e99c54798c32a47419878537a3e06f273e44f656b767ad0c9a0dea387"
     },
     {
       "bytes": 7548,
@@ -767,6 +787,16 @@
       "sha256": "55a13ec984e019e8e67f0ea4bc17a9f07cfed89a3ac0bdeca934dfc02174032a"
     },
     {
+      "bytes": 1590,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionOperatorFibreComparisonContract.lean",
+      "sha256": "f0a4fde0336fcf62854a8701d2415080aa4ae398a4db1ea00e6b6d529f917227"
+    },
+    {
+      "bytes": 191,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionOperatorFibreComparisonContractAxiomAudit.lean",
+      "sha256": "00a526a61b3c4296013446b0cf6edd19dae488405ed111f46d7ab0ef3363a9ad"
+    },
+    {
       "bytes": 1784,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHANNEL_SCALAR_BOUNDS_v1/F3_CHANNEL_SCALAR_BOUNDS_REPORT_v1.md",
       "sha256": "426f8ebbe07f102e7ed1de516b9b3f2de4a46173f62d1a05ff88e9100e9589d2"
@@ -1059,6 +1089,7 @@
     "lemma_a_expansion_invariant": "GENERIC_INDUCTIVE_INTERFACE_PASS_OPERATOR_INSTANTIATION_OPEN",
     "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
     "operator_data_reconciliation": "OFFLINE_DATA_IDENTITY_PASS_LEAN_FILTER_REMAP_THEOREM_OPEN",
+    "operator_fibre_comparison_contract": "CONTRACT_COMPILES_COMPARISON_HYPOTHESES_OPEN",
     "orientation_audit": "ORIENTATION_CONVENTION_REOPENED",
     "path_leakage_contract": "STOPPED_PATH_FIBER_CONTRACT_PASS_F3_PATH_INSTANTIATION_OPEN",
     "piStar_aggregate_bridge": "PISTAR_AGGREGATE_CARD_BRIDGE_PASS_F3_RULE_PARTITION_OPEN",

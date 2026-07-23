@@ -1,0 +1,3 @@
+import CollatzClassical.KL2003.F3ReturnExcursionOperatorFibreComparisonContract
+
+#print axioms CollatzClassical.KL2003.F3OperatorFibreComparisonContract.cumulative_operator_mass_le_root_card
