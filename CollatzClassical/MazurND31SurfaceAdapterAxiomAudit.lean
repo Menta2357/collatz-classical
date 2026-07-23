@@ -1,0 +1,7 @@
+import CollatzClassical.MazurND31SurfaceAdapter
+
+namespace CollatzClassical
+
+#print axioms mazur_nd31_surface_to_eventual_nat_bad_bound
+
+end CollatzClassical

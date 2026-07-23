@@ -42,16 +42,21 @@ Current repository status: the Mazur/ProofAtlas `Statement.lean` is not present
 in this tree, so this correspondence audit is pending and no external ND31
 claim is made.
 
+The local source-surface adapter is now in
+`CollatzClassical.MazurND31SurfaceAdapter`. It mirrors the quantified shape
+and consumes an explicit endpoint bridge, but it deliberately parameterizes
+the source bound and does not import or assert the ProofAtlas namespace.
+
 ## License boundary
 
 ProofAtlas identifies the pinned first-party closure at commit
-`ca3dd0d63920411213403092aecc6946619eb082` and states that its download ZIP
-includes an Apache-2.0 license and a separate Advameg notice. The exact
-`LICENSE` file is not mirrored in this repository yet, so this is recorded as
-`LICENSE_DECLARED_BY_SOURCE_NOT_LOCALLY_VERIFIED`. This module imports no
-ProofAtlas/Mazur code or namespace and therefore does not copy external source;
-any future adapter or namespace extension must wait for the local license and
-notice to be custodied.
+`ca3dd0d63920411213403092aecc6946619eb082`. Its `LICENSE` and `NOTICE` were
+downloaded and inspected in the temporary audit environment: the closure is
+Apache-2.0, with a separate Advameg notice preserving the licenses of Mathlib,
+retained Formal Conjectures material, and cited papers. This is recorded as
+`LICENSE_APACHE_2_VERIFIED_SOURCE_PINNED`. This module imports no
+ProofAtlas/Mazur code or namespace and therefore does not copy the external
+closure.
 
 ## Concrete integration contract
 
@@ -66,6 +71,10 @@ The Mazur/ProofAtlas adapter must later provide:
    `0 < rho - C * (log N0)^(-d)`;
 4. an odd-to-all-natural bridge if the public conclusion is over all positive
    starts rather than odd starts.
+
+The first adapter theorem is compiled and audited, but it remains an interface
+theorem until a concrete `oddSyracuseBadRatio` and its endpoint bridge are
+instantiated.
 
 The intended named obligations are:
 

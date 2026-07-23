@@ -1,6 +1,6 @@
 # Mazur ND31 Parametric Density-Fusion Fidelity Audit v1
 
-Status: `FIDELITY_AUDIT_REQUIRES_ADAPTER_AND_BRIDGES`
+Status: `FIDELITY_AUDIT_ADAPTER_COMPILED_BRIDGES_PENDING`
 
 ## Scope and source pin
 
@@ -21,7 +21,7 @@ proof closure. The source defines `ND31Bounds c` using
 
 | Item | Result | Evidence | Consequence |
 | --- | --- | --- | --- |
-| (a) ND31 hypothesis is literal | `FAIL_AS_DIRECT_INTERFACE` | Local `hnd31` is an eventual pointwise bound `badRatio X <= q`; it does not define `oddSyracuseBadRatio`, expose `N0/x` guards, or quantify an explicit `C,d` expression. | Add a named adapter or prove an equivalence before composition. |
+| (a) ND31 hypothesis is literal | `SURFACE_MIRROR_COMPILED_NOT_LITERAL` | `MazurND31SurfaceAdapter` mirrors the quantified guards and endpoint shape, but keeps the source bound and ratio abstract. It does not define `oddSyracuseBadRatio` or import `ND31Bounds`. | Instantiate the concrete source ratio and prove the endpoint equivalence before composition. |
 | (b) Natural-density conclusion on all naturals | `NOT_PRESENT` | Local conclusion is `EventuallyRatioLowerBound goodRatio delta` over an arbitrary `R`; it is not `Terras.HasNatDensity` and has no all-natural domain. | Add a density-counting bridge and an odd-to-all bridge. |
 | (c) Dynamics/reaches-one alignment | `NOT_PRESENT` | The module intentionally has no Syracuse, Collatz, or `reaches_one` definition. | Supply the concrete Syracuse-to-Collatz and finite-base hypotheses at the adapter boundary. |
 | (d) Explicit delta | `PARAMETRIC_ONLY` | The local theorem returns `rho - q`; `q` and `rho` are parameters. | Instantiate `q := C * (log N0)^(-d)` and prove positivity separately. |
@@ -56,10 +56,14 @@ NO_GLOBAL_COLLATZ_CLAIM
 
 No implementation of these interfaces is included in this custody commit.
 
+The surface adapter theorem is now compiled and audited; the four concrete
+obligations above remain open by design.
+
 ## License boundary
 
-The ProofAtlas source page states that the pinned ZIP includes an Apache-2.0
-license and a separate Advameg notice. The exact license file has not yet been
-mirrored into this repository, so licensing remains
-`LICENSE_DECLARED_BY_SOURCE_NOT_LOCALLY_VERIFIED`. This module imports no
-ProofAtlas source or namespace.
+The pinned ProofAtlas `LICENSE` and `NOTICE` were downloaded and inspected in
+the temporary audit environment. The source closure is Apache-2.0, with the
+Advameg notice preserving the licenses of Mathlib, retained Formal Conjectures
+material, and cited papers. The local status is
+`LICENSE_APACHE_2_VERIFIED_SOURCE_PINNED`. This module imports no ProofAtlas
+source or namespace.
