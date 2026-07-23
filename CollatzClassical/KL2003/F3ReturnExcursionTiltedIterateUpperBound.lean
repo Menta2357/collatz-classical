@@ -1,4 +1,5 @@
 import CollatzClassical.KL2003.F3ReturnExcursionRealIterateBridge
+import CollatzClassical.KL2003.F3ReturnExcursionTiltedLiveComparison
 
 /-!
 Iterated upper bound for a nonnegative tilted operator.
@@ -18,6 +19,7 @@ namespace F3TiltedIterateUpperBound
 
 open F3RealIterateBridge
 open F3RealOperatorBridge
+open F3TiltedLiveComparison
 
 theorem weighted_mass_push_upper_bound
     {ι : Type*} [Fintype ι]
@@ -65,6 +67,43 @@ theorem weighted_mass_iterate_upper_bound
         _ = lambda ^ (n + 1) * weightedMass v μ := by
           rw [pow_succ]
           ring
+
+theorem tilted_live_path_bound_of_iterate_upper_bound
+    {ι κ : Type*} [Fintype ι] [DecidableEq ι] [DecidableEq κ]
+    (M : ι → ι → ℝ) (v μ : ι → ℝ) {lambda : ℝ}
+    (P : Finset κ) (endpoint : κ → ι)
+    (star tilt shift : κ → ℝ) (weight : ι → ℝ)
+    (n : Nat) (theta H K : ℝ)
+    (hθ : 0 ≤ theta)
+    (hK : 0 ≤ K)
+    (hrow : ∀ s, ∑ t, M s t * v t ≤ lambda * v s)
+    (hM : ∀ s t, 0 ≤ M s t)
+    (hμ : ∀ s, 0 ≤ μ s)
+    (hlambda : 0 ≤ lambda)
+    (hrel : ∀ p, star p = tilt p * Real.exp (-theta * shift p))
+    (hlive : ∀ p, -H ≤ shift p)
+    (htilt : ∀ p, 0 ≤ tilt p)
+    (hweight : ∀ i, 0 ≤ weight i)
+    (hwv : ∀ i, weight i ≤ K * v i)
+    (hpath : ∑ p ∈ P, tilt p * v (endpoint p) ≤
+      weightedMass v (iteratePush M μ n)) :
+    ∑ p ∈ P, star p * weight (endpoint p) ≤
+      K * Real.exp (theta * H) *
+        (lambda ^ n * weightedMass v μ) := by
+  have hweighted := tilted_live_weighted_sum_le
+    P endpoint star tilt shift weight v theta H K
+    (weightedMass v (iteratePush M μ n))
+    hθ hK hrel hlive htilt hweight hwv hpath
+  have hiterate := weighted_mass_iterate_upper_bound
+    M v μ hrow hM hμ hlambda n
+  calc
+    ∑ p ∈ P, star p * weight (endpoint p) ≤
+        K * Real.exp (theta * H) *
+          weightedMass v (iteratePush M μ n) := hweighted
+    _ ≤ K * Real.exp (theta * H) *
+        (lambda ^ n * weightedMass v μ) := by
+      exact mul_le_mul_of_nonneg_left hiterate
+        (mul_nonneg hK (Real.exp_nonneg _))
 
 end F3TiltedIterateUpperBound
 end KL2003

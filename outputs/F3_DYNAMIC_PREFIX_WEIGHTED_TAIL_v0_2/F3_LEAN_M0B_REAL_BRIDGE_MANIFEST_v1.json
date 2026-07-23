@@ -837,9 +837,9 @@
       "sha256": "191f9a66bc76f1db619dbfec050bb5f5bb287826ec764c6ab4b1b45d46735400"
     },
     {
-      "bytes": 626,
+      "bytes": 835,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/F3_TILTED_ITERATE_UPPER_BOUND_REPORT_v1.md",
-      "sha256": "66b4e7df6aada49fa10318e47d52eb547fb4aac20a857c825997c1a6c3c3dcc7"
+      "sha256": "792cbe1e66cae70455dba60f81bc7eb9adeb87c5ccd843e5b7d6d71e68d53cb8"
     },
     {
       "bytes": 61,
@@ -847,19 +847,19 @@
       "sha256": "945609f2da8fea19a3f40fcda78b04f24f8719435605448ea3c9c9b6077b2c49"
     },
     {
-      "bytes": 291,
+      "bytes": 450,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_ITERATE_UPPER_BOUND_v1/tilted_iterate_upper_bound_axiom_audit.txt",
-      "sha256": "dbdf90c71ddacf3c12730c5528220455fc64ef5932d363fb6fd79ccdc7a5b44e"
+      "sha256": "d70fadf2c6311c1f90444547d2f869bcfae17477285da3327d3af80ba47bbcf0"
     },
     {
-      "bytes": 2416,
+      "bytes": 4061,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBound.lean",
-      "sha256": "61f21a42a9fdeac4c9cbba2322453a763e23f502ee6f295621edf570604b02f8"
+      "sha256": "ac3b7deb7b95dae203e6835fc6a4ff1ba292bef4df9002155f2f5564467aebf0"
     },
     {
-      "bytes": 266,
+      "bytes": 376,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedIterateUpperBoundAxiomAudit.lean",
-      "sha256": "36b3045fd19ef3c8f6162c33546eff008c361c7097eb822958ad2f3b417ea08b"
+      "sha256": "67063263f772dcf4ae316d4a8bd6f02bbc2471ca2413407f220cb051bd6fb2bd"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",

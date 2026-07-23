@@ -2,3 +2,4 @@ import CollatzClassical.KL2003.F3ReturnExcursionTiltedIterateUpperBound
 
 #print axioms CollatzClassical.KL2003.F3TiltedIterateUpperBound.weighted_mass_push_upper_bound
 #print axioms CollatzClassical.KL2003.F3TiltedIterateUpperBound.weighted_mass_iterate_upper_bound
+#print axioms CollatzClassical.KL2003.F3TiltedIterateUpperBound.tilted_live_path_bound_of_iterate_upper_bound
