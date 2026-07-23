@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 15797,
+      "bytes": 16463,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "d38af520e0b9b91ba756a07cf094a5231856d64f49e139d5880dfe58978df3ae"
+      "sha256": "657456feeb8047e19e078a05c151a9472e55a82319c92b5a776603762715a2ab"
     },
     {
       "bytes": 7548,
@@ -507,6 +507,31 @@
       "sha256": "8933ab73d7bb02b62eb265ac7253dd497d33ffb4d08dd346d17a9abf16ced62a"
     },
     {
+      "bytes": 1137,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_STOPPED_PATH_PISTAR_BRIDGE_v1/F3_STOPPED_PATH_PISTAR_BRIDGE_REPORT_v1.md",
+      "sha256": "08351499417bb48f44b41e516d4f4def97b3d83476967a780499c44fa84555f2"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_STOPPED_PATH_PISTAR_BRIDGE_v1/stopped_path_pistar_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 283,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_STOPPED_PATH_PISTAR_BRIDGE_v1/stopped_path_pistar_axiom_audit.txt",
+      "sha256": "239e6e9009c993cf9863149993de2a335da0c72baecc70e1910945eca21d346e"
+    },
+    {
+      "bytes": 1779,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionStoppedPathPiStarBridge.lean",
+      "sha256": "7c0123711434186f873afdbb3df6c2224649101cae1bb3cabc05077624cbdd52"
+    },
+    {
+      "bytes": 240,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionStoppedPathPiStarBridgeAxiomAudit.lean",
+      "sha256": "b29d33b96bd5ca06c1ac71693c017bce8078bf784ea7584daecc446ee46dcdd1"
+    },
+    {
       "bytes": 1489,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_LAYER_NORMALIZATION_v1/F3_LAYER_NORMALIZATION_REPORT_v1.md",
       "sha256": "f46a2e5918b7bc05fed0c6fab1ef7b26d1534c950e6ed9b5d4139ffd42c9198d"
@@ -640,6 +665,7 @@
     "semantic_inventory": "1215_ROWS_NATIVE_DECIDE_PASS",
     "semantic_lower_hook_conversion": "CONTRIBUTION_TO_PISTAR_CONVERSION_PASS_OPERATOR_COMPARISON_OPEN",
     "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
+    "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
 }

@@ -1,0 +1,6 @@
+import CollatzClassical.KL2003.F3ReturnExcursionStoppedPathPiStarBridge
+
+open CollatzClassical KL2003
+
+#print axioms F3StoppedPathPiStarBridge.retainedMass_le_rootMass
+#print axioms F3StoppedPathPiStarBridge.retainedMass_le_piStar_rootMass
