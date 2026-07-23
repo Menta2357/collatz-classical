@@ -1,0 +1,15 @@
+$ git diff --stat
+[no output]
+
+$ git diff --name-only
+[no output]
+
+$ git diff --stat 96fd91b910150c6e832dd9a889ddd01cad64b5f6 -- ':(glob)**/*.lean' lakefile.lean lean-toolchain
+[no output]
+
+$ git diff --name-only 96fd91b910150c6e832dd9a889ddd01cad64b5f6 -- ':(glob)**/*.lean' lakefile.lean lean-toolchain
+[no output]
+
+Interpretation: no tracked file, including no Lean source, changed after the
+prebuild baseline. All listed post-build paths are untracked environmental or
+captured-log outputs.

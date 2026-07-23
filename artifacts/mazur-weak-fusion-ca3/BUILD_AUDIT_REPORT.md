@@ -1,9 +1,10 @@
 # H1 reconstructed-build and axiom-audit report
 
-Status: `RECONSTRUCTION_SMOKE_PASS_COMPILATION_PENDING_COORDINATOR_SLOT`
+Status: `PASS_WEAK_CONDITIONAL_API_BUILD_AND_AXIOM_AUDIT`
 
-The guarded reconstruction was exercised once against a fresh extraction. No
-Lean elaboration or build command has been run.
+The guarded reconstruction was exercised once against a fresh extraction. The
+frozen dependency, build, and axiom-audit sequence completed without retry,
+resource increase, source edit, push, or publication.
 
 ## Frozen execution contract — 2026-07-24
 
@@ -120,13 +121,25 @@ lake env lean FusionParametricAxiomAudit.lean
 ```text
 apply exit code: 0
 reconstruction candidate hashes: 11/11 PASS
-lake update exit code: PENDING
-build exit code: PENDING
-audit exit code: PENDING
-wall time: PENDING
-axiom profile: PENDING
-sorryAx: PENDING
-post-build diff: PENDING
+E1 lake update exit code: 0
+E1 timing: real 228.42s; user 75.97s; sys 53.22s
+E2: SATISFIED_BY_E1_OFFICIAL_POST_UPDATE_HOOK; independent command not run
+P1 build exit code: 0
+P1 timing: real 440.51s; user 26.36s; sys 80.46s
+P1 result: Build completed successfully (2962 jobs)
+A1 audit exit code: 0
+A1 timing: real 48.04s; user 1.82s; sys 6.71s
+captured real time total: 716.97s
+axiom coverage: 12/12 listed declarations
+axiom profile: [propext, Classical.choice, Quot.sound] for every declaration
+sorryAx: absent from every printed axiom profile
+Lean.ofReduceBool: absent from every printed axiom profile
+post-build tracked diff: empty
+post-build untracked outputs: .lake/, lake-manifest.json, logs/
 ```
 
-Promotion is forbidden until every field is replaced by captured evidence.
+Full combined stdout/stderr is preserved byte-for-byte under `logs/`. The
+resolved manifest and literal post-build Git evidence are under `evidence/`.
+This PASS validates the reconstructed conditional API and its stated axiom
+profile; it does not discharge any of the explicit mathematical hypotheses of
+the conditional fusion theorem.
