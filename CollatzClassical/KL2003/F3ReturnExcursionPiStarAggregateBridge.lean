@@ -1,6 +1,7 @@
 import Mathlib.Algebra.Order.BigOperators.Ring.Finset
 
 import CollatzClassical.KL2003.F3ReturnExcursionFiberAccounting
+import CollatzClassical.KL2003.F3ReturnExcursionFirstHitFibers
 import CollatzClassical.KL2003.F3ReturnExcursionSemanticBridge
 
 open scoped BigOperators
@@ -10,6 +11,7 @@ namespace KL2003
 namespace F3PiStarAggregateBridge
 
 open F3SemanticBridge
+open F3FirstHitFibers
 
 /-!
 Aggregate semantic bridge for a finite root block.
@@ -115,6 +117,42 @@ theorem aggregate_frozen_rule_piStar_card_bound
   have hsource := frozenRuleSource_subset_parent rule (hvalid a rule hmem)
   rw [hparent a rule hmem, hwindow a rule hmem] at hsource
   exact hsource
+
+theorem aggregate_firstHit_piStar_card_bound
+    {ι : Type*} [DecidableEq ι]
+    (A : Finset Nat) (x : Nat)
+    (I : Nat → Finset ι)
+    (parent c xChild : ι → Nat)
+    (kind : ι → F3AdvancedDisjointness.AdvancedSourceKind)
+    (hparent : ∀ a i, i ∈ I a → parent i = a)
+    (hax : ∀ a, a ≤ x)
+    (hcarith : ∀ a i, i ∈ I a → 3 * c i + 1 = 2 * parent i)
+    (hxChild : ∀ a i, i ∈ I a → xChild i ≤ x)
+    (hdistinct : ∀ a i, i ∈ I a → ∀ j ∈ I a, i ≠ j → c i ≠ c j) :
+    (∑ a ∈ A, ∑ i ∈ I a,
+        (firstHitSource (kind i) (parent i) (c i) (xChild i)).card) ≤
+      ∑ a ∈ A, (piStarFinset a x).card := by
+  apply aggregate_piStar_card_bound A x I
+    (fun a i => firstHitSource (kind i) (parent i) (c i) (xChild i))
+  · intro a
+    intro i hi j hj hij
+    change Disjoint
+      (firstHitSource (kind i) (parent i) (c i) (xChild i))
+      (firstHitSource (kind j) (parent j) (c j) (xChild j))
+    have hdisj := firstHitSource_disjoint
+      (kind₁ := kind i) (kind₂ := kind j)
+      (a := a) (c₁ := c i) (c₂ := c j)
+      (x₁ := xChild i) (x₂ := xChild j)
+      (hdistinct a i hi j hj hij)
+    simpa [hparent a i hi, hparent a j hj] using hdisj
+  · intro a i hi
+    have hcarith' := hcarith a i hi
+    rw [hparent a i hi] at hcarith'
+    have hs := firstHitSource_subset_parent
+      (kind := kind i) (a := a) (c := c i) (x := x)
+      (xChild := xChild i) hcarith' (hax a)
+      (hxChild a i hi)
+    simpa [hparent a i hi] using hs
 
 end F3PiStarAggregateBridge
 end KL2003

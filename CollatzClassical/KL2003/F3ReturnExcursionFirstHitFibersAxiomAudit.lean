@@ -1,0 +1,7 @@
+import CollatzClassical.KL2003.F3ReturnExcursionFirstHitFibers
+
+open CollatzClassical KL2003
+
+#print axioms F3FirstHitFibers.firstHitSource_disjoint
+#print axioms F3FirstHitFibers.firstHitSource_subset_parent
+#print axioms F3FirstHitFibers.firstHitSource_pairwise_disjoint

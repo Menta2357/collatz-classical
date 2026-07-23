@@ -6,3 +6,4 @@ open CollatzClassical KL2003
 #print axioms F3PiStarAggregateBridge.aggregate_piStar_card_bound_of_frozen_rules
 #print axioms F3PiStarAggregateBridge.frozenRuleSource_subset_parent
 #print axioms F3PiStarAggregateBridge.aggregate_frozen_rule_piStar_card_bound
+#print axioms F3PiStarAggregateBridge.aggregate_firstHit_piStar_card_bound

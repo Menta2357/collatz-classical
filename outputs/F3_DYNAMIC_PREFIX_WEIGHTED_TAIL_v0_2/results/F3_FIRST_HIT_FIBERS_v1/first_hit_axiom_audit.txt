@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3FirstHitFibers.firstHitSource_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3FirstHitFibers.firstHitSource_subset_parent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3FirstHitFibers.firstHitSource_pairwise_disjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

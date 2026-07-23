@@ -10,3 +10,6 @@
 'CollatzClassical.KL2003.F3PiStarAggregateBridge.aggregate_frozen_rule_piStar_card_bound' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'CollatzClassical.KL2003.F3PiStarAggregateBridge.aggregate_firstHit_piStar_card_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

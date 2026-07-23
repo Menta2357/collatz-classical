@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 12361,
+      "bytes": 12837,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "1c2b22f109b78978822728623167712c5581012d5562227d1e3c888d16fe8a30"
+      "sha256": "6daae584db7757325512a6afae0891c001b9b1c09dd636be0d0d1a92a404c3ef"
     },
     {
       "bytes": 7548,
@@ -362,9 +362,9 @@
       "sha256": "bfdf9068f91db9641161db2e1c20b54c267eed3c2599a6cf6a5be872ef40b8c9"
     },
     {
-      "bytes": 1383,
+      "bytes": 1628,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/F3_PISTAR_AGGREGATE_BRIDGE_REPORT_v1.md",
-      "sha256": "53a42effaa30d67591ae04b8a7dc5cd44ef2b8ae473651ab953d3eb25b5295ed"
+      "sha256": "4ecb42bc255e75fae838081ecb4317bab902a52c61fdd044d03a25bb40d869a3"
     },
     {
       "bytes": 0,
@@ -372,19 +372,44 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "bytes": 587,
+      "bytes": 735,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_PISTAR_AGGREGATE_BRIDGE_v1/aggregate_axiom_audit.txt",
-      "sha256": "77d9e4d1e7f6843af65e447428a323a20780bedffdd0818b80f600ca3a55b04f"
+      "sha256": "bd813e601acdd802171d90613c412acb944fe528ff6dc44583396b61c8f50e20"
     },
     {
-      "bytes": 4519,
+      "bytes": 6116,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridge.lean",
-      "sha256": "92e8579ab09385b83bc02d4c1654cee67bea2d6756906a12a6c41d6dfc7bccb8"
+      "sha256": "b3b1d4702c4b15c265c7827ab915611e8a67c86b34a90e2cb63b56ca2b83b160"
     },
     {
-      "bytes": 396,
+      "bytes": 471,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionPiStarAggregateBridgeAxiomAudit.lean",
-      "sha256": "32663cd3af7956ab6f9c3d108e6c914ede413a0da32139771793776384053704"
+      "sha256": "268316273ffd0f478b3e4191aa7f4bc7f168d773441887c562743a9b251f8fd2"
+    },
+    {
+      "bytes": 950,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_FIBERS_v1/F3_FIRST_HIT_FIBERS_REPORT_v1.md",
+      "sha256": "212c30b4e237251e8f80f730ebb9d6f337edc56302cbcc2592881bc1d51762e0"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_FIBERS_v1/first_hit_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 398,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_FIRST_HIT_FIBERS_v1/first_hit_axiom_audit.txt",
+      "sha256": "37a68e6be8ff77c05027dbcec8bfe714dec1938ecddc1b4d3dd952c91d192257"
+    },
+    {
+      "bytes": 2908,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionFirstHitFibers.lean",
+      "sha256": "3b36fa6cc66dfb45f1edf9826c21498e6cd9845b1c9588f5a4b1019025402bd5"
+    },
+    {
+      "bytes": 273,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionFirstHitFibersAxiomAudit.lean",
+      "sha256": "4757f28153ce89dc135f8b83a8171e12904d1e1914c7787de12ec1ab7ab0ce83"
     },
     {
       "bytes": 128832,

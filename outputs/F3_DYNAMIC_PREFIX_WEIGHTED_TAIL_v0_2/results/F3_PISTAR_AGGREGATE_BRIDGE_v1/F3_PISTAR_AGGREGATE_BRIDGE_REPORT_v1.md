@@ -28,6 +28,11 @@ validity, parent assignment, window equality, and pairwise disjointness.  A
 future generated table can therefore feed the theorem without an untyped
 conversion layer.
 
+The cycle-safe `aggregate_firstHit_piStar_card_bound` corollary additionally
+accepts first-hit fibres.  It removes the global `NotInCycle` requirement from
+the aggregate route; only the discarded raw members still need a uniform
+leakage bound.
+
 This is a semantic counting bridge, not an operator-to-growth theorem and not
 a density result.
 
