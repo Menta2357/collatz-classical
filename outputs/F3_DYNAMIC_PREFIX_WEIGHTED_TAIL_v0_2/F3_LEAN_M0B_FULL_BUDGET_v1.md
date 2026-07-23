@@ -1,6 +1,6 @@
 # F3_LEAN_M0B_FULL_BUDGET_v1
 
-Status: `AUTHORIZED_STOPPED_FIRST_SHARD_TIMEOUT`
+Status: `AUTHORIZED_STOPPED_THREE_FINITE_REDUCTIONS`
 
 Authorization: the user authorized this budget on 2026-07-23.  The first
 shard attempt below consumed the stop condition; no identical rerun is
@@ -93,6 +93,13 @@ sources were removed after the stop; the CSV shards, generator, and timeout
 report remain in custody.  A second attempt must use a materially smaller
 finite reduction (a precomputed local remap table or smaller blocks), not a
 silent retry of the same reduction.
+
+V2 then replaced the repeated lookup by a 243-case match table and stopped
+during `isDefEq` elaboration at 123.04 s.  V3 replaced that match by a literal
+pair table; the table compiled in 96.27 s, but its single pilot shard stopped
+at 330.32 s without diagnostics.  These three records are separate
+`STOP_AND_RECORD` outcomes.  No remaining shard was started, no heartbeat
+limit was increased, and no identical rerun is authorized.
 
 ## What this budget does not buy
 

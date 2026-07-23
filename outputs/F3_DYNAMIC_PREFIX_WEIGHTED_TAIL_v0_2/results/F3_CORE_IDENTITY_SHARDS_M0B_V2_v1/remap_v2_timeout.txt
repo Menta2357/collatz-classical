@@ -1,0 +1,4 @@
+command: lake env lean CollatzClassical/KL2003/F3ReturnExcursionCoreStateRemapV2.lean
+real_seconds: 123.04
+exit_status: 1
+diagnostic: deterministic timeout at isDefEq, maximum heartbeats 200000

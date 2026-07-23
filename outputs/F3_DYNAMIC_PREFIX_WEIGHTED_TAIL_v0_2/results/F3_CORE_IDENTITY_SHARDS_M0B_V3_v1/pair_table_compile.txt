@@ -1,0 +1,3 @@
+command: lake env lean -o .lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionCoreStateRemapV3.olean CollatzClassical/KL2003/F3ReturnExcursionCoreStateRemapV3.lean
+real_seconds: 96.27
+exit_status: 0
