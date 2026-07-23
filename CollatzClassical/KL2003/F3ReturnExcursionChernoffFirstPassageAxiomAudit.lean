@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionChernoffFirstPassage
+
+#print axioms CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_lower_bound_of_live_bound
+#print axioms CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_lower_bound_tendsto_initial
+#print axioms CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_eventually_exceeds_fraction

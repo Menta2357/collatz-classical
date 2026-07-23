@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 20570,
+      "bytes": 21183,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "5bcfd2d9898ec745c249a4e13d2871743289c8f209fc7c7fe2e2a41001572cca"
+      "sha256": "58d1a5376ec7f4712ed00d5ce68da063b970cd48f939eec20e21a0e7c8b071f9"
     },
     {
       "bytes": 7548,
@@ -785,6 +785,31 @@
       "bytes": 193,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftContributionInstantiationAxiomAudit.lean",
       "sha256": "a6d947ddfe4f830deed68f5858d2154e201feb982439325aa9f6d6fe788ae209"
+    },
+    {
+      "bytes": 632,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/F3_CHERNOFF_FIRST_PASSAGE_REPORT_v1.md",
+      "sha256": "355ddcfdf1e408bfbdbe6bd7cc3ed77b320415a0c7ff394b9ec5eca095562703"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/chernoff_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 436,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/chernoff_axiom_audit.txt",
+      "sha256": "2fc7a5542363364baa642ef23dda56f74fd3e635c8d5caaa98cf5e9853af410d"
+    },
+    {
+      "bytes": 2242,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassage.lean",
+      "sha256": "dcbfbcd1b536369aec3cbe4b2dcd1640e147d1d6e10f0e36db4162128b5810e6"
+    },
+    {
+      "bytes": 359,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassageAxiomAudit.lean",
+      "sha256": "59abf93c4464f0b4e2298222ee36f2768332d09ce0563d5e11c76971c1b5a481"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -798,6 +823,7 @@
   "statuses": {
     "advanced_disjointness": "ADVANCED_SOURCE_PAIRWISE_DISJOINTNESS_PASS_F3_AGGREGATE_INSTANTIATION_OPEN",
     "boundary_leakage": "ABSTRACT_BOUNDARY_BUDGET_TO_LEAKAGE_PASS_F3_INSTANTIATION_OPEN",
+    "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
     "cumulative_first_hit_fibers": "CUMULATIVE_FIRST_HIT_FIBRES_PASS_COMPOSED_PATH_HYPOTHESIS_OPEN",
     "cumulative_stopped_accounting": "CUMULATIVE_STOPPED_FIBRE_DISJOINTNESS_PASS_OPERATOR_COMPARISON_OPEN",
     "density_theorem": "NO",

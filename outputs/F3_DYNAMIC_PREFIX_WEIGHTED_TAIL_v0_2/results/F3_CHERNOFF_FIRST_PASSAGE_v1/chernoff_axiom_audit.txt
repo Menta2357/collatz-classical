@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_lower_bound_of_live_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_lower_bound_tendsto_initial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ChernoffFirstPassage.stopped_eventually_exceeds_fraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

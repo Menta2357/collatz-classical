@@ -167,6 +167,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_CONTRIBUTION_INSTANTIATION_v1/three_lift_contribution_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftContributionInstantiation.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftContributionInstantiationAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/F3_CHERNOFF_FIRST_PASSAGE_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/chernoff_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/chernoff_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassage.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassageAxiomAudit.lean",
 )
 
 
@@ -216,6 +221,7 @@ def main() -> None:
             "operator_contribution_hook": "ROW_CONTRIBUTION_TO_PISTAR_PASS_OPERATOR_HOOK_OPEN",
             "semantic_renewal_row_hook": "CONDITIONAL_RENEWAL_TO_PISTAR_PASS_F3_CONTRIBUTION_HOOK_OPEN",
             "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
+            "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",
