@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 21183,
+      "bytes": 21822,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "58d1a5376ec7f4712ed00d5ce68da063b970cd48f939eec20e21a0e7c8b071f9"
+      "sha256": "b57dc506ac0372d92ea404fb4d36f131d9168e61608842fb8ebfc6af47a185b3"
     },
     {
       "bytes": 7548,
@@ -810,6 +810,31 @@
       "bytes": 359,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassageAxiomAudit.lean",
       "sha256": "59abf93c4464f0b4e2298222ee36f2768332d09ce0563d5e11c76971c1b5a481"
+    },
+    {
+      "bytes": 689,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/F3_TILTED_LIVE_COMPARISON_REPORT_v1.md",
+      "sha256": "0e7e6c953090d91ca8039b425bf64aebc7b04bf40fc49d9e0f44cd26626d1eca"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/tilted_live_comparison_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 399,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/tilted_live_comparison_axiom_audit.txt",
+      "sha256": "c9a10a33887b751ccb27423af186969e02bdb9c4e4ba4ef1e086f240d446351d"
+    },
+    {
+      "bytes": 4247,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparison.lean",
+      "sha256": "a63e6adad344fad9adf84920148def142238f76e276d8546fdb51cd34ade78a5"
+    },
+    {
+      "bytes": 322,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparisonAxiomAudit.lean",
+      "sha256": "191f9a66bc76f1db619dbfec050bb5f5bb287826ec764c6ab4b1b45d46735400"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -848,6 +873,7 @@
     "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
     "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
     "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
+    "tilted_live_comparison": "TILTED_PATH_COMPARISON_PASS_OPERATOR_TILTED_MASS_BOUND_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
 }

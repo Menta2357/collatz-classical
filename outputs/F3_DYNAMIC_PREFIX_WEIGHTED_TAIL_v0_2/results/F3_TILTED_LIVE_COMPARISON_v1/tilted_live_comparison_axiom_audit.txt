@@ -1,0 +1,9 @@
+'CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_path_weight_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_live_sum_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_live_weighted_sum_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+import CollatzClassical.KL2003.F3ReturnExcursionTiltedLiveComparison
+
+#print axioms CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_path_weight_le
+#print axioms CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_live_sum_le
+#print axioms CollatzClassical.KL2003.F3TiltedLiveComparison.tilted_live_weighted_sum_le

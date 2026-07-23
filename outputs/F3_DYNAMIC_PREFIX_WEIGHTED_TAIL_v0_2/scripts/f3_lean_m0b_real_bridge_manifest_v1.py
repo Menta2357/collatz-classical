@@ -172,6 +172,11 @@ FILES = (
     "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CHERNOFF_FIRST_PASSAGE_v1/chernoff_axiom_audit.txt",
     "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassage.lean",
     "CollatzClassical/KL2003/F3ReturnExcursionChernoffFirstPassageAxiomAudit.lean",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/F3_TILTED_LIVE_COMPARISON_REPORT_v1.md",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/tilted_live_comparison_compile.txt",
+    "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_TILTED_LIVE_COMPARISON_v1/tilted_live_comparison_axiom_audit.txt",
+    "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparison.lean",
+    "CollatzClassical/KL2003/F3ReturnExcursionTiltedLiveComparisonAxiomAudit.lean",
 )
 
 
@@ -222,6 +227,7 @@ def main() -> None:
             "semantic_renewal_row_hook": "CONDITIONAL_RENEWAL_TO_PISTAR_PASS_F3_CONTRIBUTION_HOOK_OPEN",
             "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
             "chernoff_first_passage": "REAL_LIVE_BOUND_TO_STOPPED_MASS_PASS_OPERATOR_LIVE_BOUND_OPEN",
+            "tilted_live_comparison": "TILTED_PATH_COMPARISON_PASS_OPERATOR_TILTED_MASS_BOUND_OPEN",
             "rho_certificate": "NO",
             "density_theorem": "NO",
             "global_collatz_claim": "NO",
