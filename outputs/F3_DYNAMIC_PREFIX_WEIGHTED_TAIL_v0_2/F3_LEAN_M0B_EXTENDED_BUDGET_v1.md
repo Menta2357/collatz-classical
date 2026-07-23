@@ -1,6 +1,6 @@
 # F3_LEAN_M0B_EXTENDED_BUDGET_v1
 
-Status: `AUTHORIZED_STAGED_PILOT`
+Status: `AUTHORIZED_EXTENDED_PILOT_TIMEOUT`
 
 This is a new, explicitly authorized campaign after the three prior
 `STOP_AND_RECORD` outcomes.  It raises wall-clock allowance but does not
@@ -45,6 +45,14 @@ stage_3_aggregator          900 s   locked until all shards PASS
 
 This staged release is the safety mechanism: lifting the wall timeout does not
 commit the remaining 8100 s after a pilot failure.
+
+## Pilot result
+
+The V3 pilot ran alone under the 900 s ceiling and was stopped without Lean
+diagnostics.  The process reported 1020.22 s including interruption overhead.
+No remaining shard or aggregator was opened.  The extension therefore ends
+with `STOP_AND_RECORD`; increasing the timer again is not an adequate next
+step.
 
 Claims ledger remains unchanged:
 

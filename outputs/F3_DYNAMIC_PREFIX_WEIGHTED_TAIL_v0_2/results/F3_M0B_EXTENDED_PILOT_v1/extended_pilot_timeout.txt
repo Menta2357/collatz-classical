@@ -1,0 +1,5 @@
+command: /usr/bin/time -p lake env lean CollatzClassical/KL2003/F3ReturnExcursionCoreIdentityShardV300.lean
+ceiling_seconds: 900
+observed_real_seconds: 1020.22
+exit_status: 130 (interrupted)
+diagnostics: none before interruption
