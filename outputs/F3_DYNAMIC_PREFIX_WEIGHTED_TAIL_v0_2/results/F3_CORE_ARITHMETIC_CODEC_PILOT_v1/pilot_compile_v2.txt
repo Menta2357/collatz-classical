@@ -1,0 +1,63 @@
+F3_CORE_ARITHMETIC_CODEC_PILOT_v1
+DATE=2026-07-23
+CONTRACT=F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2
+AUTHORIZED_ELABORATION_ATTEMPT_COUNT=1
+RESULT=STOP_AND_RECORD
+FAILURE_CLASS=LEAN_ELABORATION_ERRORS
+EXIT_CODE=1
+REAL_SECONDS=152.87
+USER_SECONDS=16.85
+SYSTEM_SECONDS=14.61
+TIMEOUT=false
+HEARTBEAT_EXHAUSTION=false
+MAX_HEARTBEATS=200000
+WALL_CEILING_SECONDS=300
+EXECUTION=SEQUENTIAL_SINGLE_PROCESS
+RETRY=false
+SOURCE_EDIT_AFTER_FREEZE=false
+AUDIT_OPENED=false
+OLEAN_PRODUCED=false
+ILEAN_PRODUCED=false
+FULL_EXTENSION_OPENED=false
+RAW_STDERR_CAPTURED=false
+DIAGNOSTIC_RECORD=STRUCTURED_TRANSCRIPTION_FROM_RETURNED_TERMINAL_OUTPUT
+
+FROZEN_PILOT_SOURCE_SHA256=ce072461c6283044a651fd576df5342b0890981b26f776e3023413640d906230
+FROZEN_AXIOM_AUDIT_SOURCE_SHA256=c83c174b8e3ac61043f1054e0179b2e7b0dd936cea0c84b45e245f612ac03cf6
+EXACT_CORE_MATRIX_OLEAN_SHA256=34a6f1745a11dcfaaaf0bc72516c7f485711773531023979e237a4d3dfd46798
+
+COMMAND_SHAPE:
+/opt/homebrew/bin/gtimeout 300 /usr/bin/time -p env \
+  LEAN_PATH=<verified donor dependency paths> \
+  <Lean-4.21.0>/bin/lean \
+  --root=/Users/MoiTam/Documents/Codex/2026-07-21/f3-density-update \
+  -o .lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.olean \
+  -i .lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.ilean \
+  CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.lean
+
+PRIMARY_DIAGNOSTIC_CLASSES:
+- line 48: omega did not close the CoreCode residue witness for encode.
+- lines 119-123: Lean could not synthesize a Fintype CoreCode instance for
+  coreCode_card.
+- lines 132-134: the split/simp proof of bucketCode_lt_three left goals.
+- lines 224 and 230: tactic sequencing reached "no goals to be solved".
+- lines 689, 696, and 718: simplification reached maximum recursion depth in
+  formula rank/unrank and formulaCoreList length obligations.
+- lines 787 and 793: omega did not close pilot rank/unrank arithmetic goals.
+- lines 938-961 and 1013-1038: split_ifs/omega did not close frozen-position
+  arithmetic branches.
+- line 1079: dependent rewriting of pilotFrozen failed because the Fin index
+  type contains pilotFrozen.length.
+- lines 1120-1129: omega did not close pilot_frozen_scope.
+- lines 1140-1145: the foldr commutativity proof reached a branch where dsimp
+  made no progress.
+
+INTERPRETATION:
+The verified environment loaded the frozen dependency and Lean elaborated
+the pilot.  The nonzero result is therefore a source/proof elaboration STOP,
+not an environment failure or timeout.  It does not establish a mathematical
+counterexample.  Under the frozen single-attempt contract, the source and
+audit remain unedited, no retry is allowed, and the axiom audit is not opened.
+The invocation was not originally piped to a persistent raw-stderr file;
+therefore this file preserves timings, exit status, and the returned
+diagnostic classes, but is not represented as a byte-for-byte raw transcript.
