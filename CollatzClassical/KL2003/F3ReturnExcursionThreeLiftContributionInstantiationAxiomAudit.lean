@@ -1,0 +1,3 @@
+import CollatzClassical.KL2003.F3ReturnExcursionThreeLiftContributionInstantiation
+
+#print axioms CollatzClassical.KL2003.F3ThreeLiftContributionInstantiation.one_layer_operator_mass_le_piStar

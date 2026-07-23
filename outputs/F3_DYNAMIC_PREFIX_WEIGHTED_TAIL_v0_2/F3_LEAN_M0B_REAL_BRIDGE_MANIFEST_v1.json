@@ -217,9 +217,9 @@
       "sha256": "b9f380419909d5044a0a6a85422190b723f5351d82cd8ff58f3e3784a727b08b"
     },
     {
-      "bytes": 19830,
+      "bytes": 20570,
       "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_lean_m0b_real_bridge_manifest_v1.py",
-      "sha256": "2f10b00c0c45ab2a03552a375adca296bdd3d055dfa467b5eb6294f081412b5f"
+      "sha256": "5bcfd2d9898ec745c249a4e13d2871743289c8f209fc7c7fe2e2a41001572cca"
     },
     {
       "bytes": 7548,
@@ -760,6 +760,31 @@
       "bytes": 178,
       "path": "CollatzClassical/KL2003/F3ReturnExcursionSemanticRenewalRowHookAxiomAudit.lean",
       "sha256": "1b708f0ef09541d98fc234db6a787c1895679d09e461e02ff634f32e9c74d64d"
+    },
+    {
+      "bytes": 883,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_CONTRIBUTION_INSTANTIATION_v1/F3_THREE_LIFT_CONTRIBUTION_INSTANTIATION_REPORT_v1.md",
+      "sha256": "853cda8f9df075d6d7daeb7a890c7291a294e0f2fa338c3d2d5e2704f27b2994"
+    },
+    {
+      "bytes": 0,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_CONTRIBUTION_INSTANTIATION_v1/three_lift_contribution_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 158,
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_THREE_LIFT_CONTRIBUTION_INSTANTIATION_v1/three_lift_contribution_axiom_audit.txt",
+      "sha256": "ad92b582dc6d49194065670558e73f0da242c923741d63b91d3457cf1db09c29"
+    },
+    {
+      "bytes": 3202,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftContributionInstantiation.lean",
+      "sha256": "ab791910189cb8cd515e8df9dfdce7ab16b8cf78c0b71d8deaa812083a6c7770"
+    },
+    {
+      "bytes": 193,
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionThreeLiftContributionInstantiationAxiomAudit.lean",
+      "sha256": "a6d947ddfe4f830deed68f5858d2154e201feb982439325aa9f6d6fe788ae209"
     }
   ],
   "manifest_version": "F3_LEAN_M0B_REAL_BRIDGE_MANIFEST_v1",
@@ -795,6 +820,7 @@
     "semantic_renewal_bridge": "CONDITIONAL_OPERATOR_TO_PISTAR_BRIDGE_PASS_SEMANTIC_LOWER_HOOK_OPEN",
     "semantic_renewal_row_hook": "CONDITIONAL_RENEWAL_TO_PISTAR_PASS_F3_CONTRIBUTION_HOOK_OPEN",
     "stopped_path_pistar_bridge": "STOPPED_PATH_RETAINED_MASS_TO_PISTAR_PASS_OPERATOR_COMPARISON_OPEN",
+    "three_lift_contribution_instantiation": "ONE_LAYER_OPERATOR_TO_PISTAR_PASS_COMPOSED_RENEWAL_OPEN",
     "three_lift_stopped_path_instance": "THREE_CHANNEL_STOPPED_PATH_INSTANCE_PASS_OPERATOR_COMPARISON_OPEN",
     "two_branch_path_instance": "PISTAR_STOPPED_PATH_INSTANCE_PASS_F3_THREE_LIFT_INSTANCE_OPEN"
   }
