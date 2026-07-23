@@ -77,21 +77,21 @@ The first adapter theorem is compiled and audited, but it remains an interface
 theorem until a concrete `oddSyracuseBadRatio` and its endpoint bridge are
 instantiated.
 
-The companion `DensityFusionNamedContract` makes the three application
-obligations first-class fields: `baseBelow`, `syracuseToReachesOne`, and
-`oddToAll`. Its theorem consumes proofs of those fields only through an
-explicit `cover_of_bridges` function. This prevents a future instantiation
-from silently replacing the bridges with an unlabelled `hcover`.
+The companion `DensityFusionNamedContract` now uses the inclusive predicate
+`BaseThrough N0 reachesOne`, an explicit iterate-witness semantics for
+`syracuseHitsAtMost`, and a dynamic bridge typed by `N0`. Pointwise odd-source
+coverage is derived inside Lean. Counting remains split into two named
+obligations: coverage-to-odd-ratio and odd-to-all transport.
 
 The intended named obligations are:
 
 ```text
-base_below N0
+BaseThrough N0 reachesOne
 syracuse_to_collatz N0
 odd_to_all_natural
 ```
 
-`base_below` is the finite theorem that every positive value below `N0`
+`BaseThrough` is the finite theorem that every positive value at most `N0`
 reaches one. `syracuse_to_collatz` turns a bounded Syracuse hit into a
 reaches-one witness using that finite theorem. `odd_to_all_natural` transfers
 the odd-supported lower bound through the concrete 2-adic fibres. None of
@@ -106,7 +106,7 @@ naturals.
 ## Explicit non-claims
 
 - No explicit numerical `C_d` is extracted.
-- No finite base theorem below a concrete `N0` is proved.
+- No finite base theorem through a concrete `N0` is proved.
 - No Syracuse-to-Collatz or odd-to-all-natural bridge is asserted.
 - No positive-density theorem for starts reaching `1` is claimed.
 - No global Collatz theorem is claimed.

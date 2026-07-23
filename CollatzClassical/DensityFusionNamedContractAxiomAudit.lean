@@ -1,5 +1,9 @@
 import CollatzClassical.DensityFusionNamedContract
 
+#print axioms CollatzClassical.reachesOne_of_syracuseHitsAtMostSemantics
+#print axioms CollatzClassical.oddSourceCoverage_of_baseThrough
+#print axioms CollatzClassical.NamedDensityFusionContract.odd_source_coverage
+#print axioms CollatzClassical.NamedDensityFusionContract.eventual_cover
 #print axioms CollatzClassical.NamedDensityFusionContract.eventual_lower_bound
 #print axioms
   CollatzClassical.NamedDensityFusionContract.positive_eventual_ratio_lower_bound

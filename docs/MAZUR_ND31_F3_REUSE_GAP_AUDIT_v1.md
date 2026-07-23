@@ -23,8 +23,8 @@ change `master`, or claim that its components prove natural density.
 
 ## Open obligations for the density-fusion goal
 
-1. **Finite base:** construct the actual `baseBelow` proof for a concrete
-   threshold, covering every positive `n < N0`, not merely root membership.
+1. **Finite base:** construct the actual `BaseThrough` proof for a concrete
+   threshold, covering every positive `n <= N0`, not merely root membership.
 2. **F3 coverage:** supply witnesses for every frozen row and prove the
    operator-to-contribution inequality; the existing interfaces keep these
    obligations explicit.
@@ -47,12 +47,12 @@ change `master`, or claim that its components prove natural density.
 ## Current conclusion
 
 The F3 branch supplies substantial finite semantic machinery, but it is not
-yet the `baseBelow` theorem or the density theorem required by the named
+yet the `BaseThrough` theorem or the density theorem required by the named
 Mazur contract. The correct next implementation target is the smallest
 concrete base certificate; until then the status remains:
 
 ```text
-CONDITIONAL_CONTRACT_COMPILED
+TYPED_CONDITIONAL_CONTRACT_COMPILED
 F3_COMPONENTS_REUSABLE_NOT_ASSEMBLED
 COUNTING_ENDPOINT_VERSION_ALIGNMENT_PENDING
 NO_NATURAL_DENSITY_THEOREM
