@@ -19,7 +19,10 @@ semantic lower hook from numerical CSV data.
   of fibre cardinalities.
 
 The theorem `operator_mass_le_piStar_mass` combines the explicit semantic
-lower hook with the kernel-checked aggregate fibre theorem.  The theorem
+lower hook with the kernel-checked aggregate fibre theorem.  The specialized
+theorem `operator_mass_le_piStar_mass_of_firstHit` uses the cycle-safe
+`firstHitSource` family and the arithmetic hypotheses for the inverse child;
+it is the exact F3-shaped version of the bridge.  The theorem
 `exponential_piStar_mass_lower_bound` then combines it with the Real iterate
 bound and yields the conditional implication
 
@@ -30,8 +33,9 @@ The axioms audit reports only `propext`, `Classical.choice`, and `Quot.sound`.
 
 ## What remains open
 
-The missing field `operator_to_fibres` is the genuine F3 obligation: prove a
-lower bound from the frozen operator's iterates to first-hit fibre mass, with
+The missing field `operator_to_fibres` (or its specialized `hsemantic`
+argument) is the genuine F3 obligation: prove a lower bound from the frozen
+operator's iterates to first-hit fibre mass, with
 the discarded raw-source population and its leakage accounted for.  The
 first-hit fibre theorem and finite aggregate upper bound are already separate
 kernel-checked components.  This file is conditional and makes no rho,

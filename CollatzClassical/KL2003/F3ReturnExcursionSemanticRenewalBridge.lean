@@ -65,6 +65,45 @@ theorem operator_mass_le_piStar_mass
         (fun a i hi => witness.fibre_subset n a i hi)
       exact_mod_cast hnat
 
+theorem operator_mass_le_piStar_mass_of_firstHit
+    {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (matrix : ι → ι → ℝ) (weight initial : ι → ℝ)
+    (roots : Nat → Finset Nat)
+    (index : Nat → Nat → Finset ι)
+    (parent child xChild : Nat → ι → Nat)
+    (kind : ι → F3AdvancedDisjointness.AdvancedSourceKind)
+    (window : Nat → Nat) (n : Nat)
+    (hparent : ∀ a i, i ∈ index n a → parent n i = a)
+    (hax : ∀ a, a ≤ window n)
+    (hcarith : ∀ a i, i ∈ index n a →
+      3 * child n i + 1 = 2 * parent n i)
+    (hxChild : ∀ a i, i ∈ index n a → xChild n i ≤ window n)
+    (hdistinct : ∀ a i, i ∈ index n a → ∀ j, j ∈ index n a →
+      i ≠ j → child n i ≠ child n j)
+    (hsemantic : weightedMass weight (iteratePush matrix initial n) ≤
+      (((∑ a ∈ roots n, ∑ i ∈ index n a,
+        (F3FirstHitFibers.firstHitSource (kind i) (parent n i)
+          (child n i) (xChild n i)).card) : Nat) : ℝ)) :
+    weightedMass weight (iteratePush matrix initial n) ≤
+      (((∑ a ∈ roots n,
+        (piStarFinset a (window n)).card) : Nat) : ℝ) := by
+  calc
+    weightedMass weight (iteratePush matrix initial n) ≤
+        (((∑ a ∈ roots n, ∑ i ∈ index n a,
+          (F3FirstHitFibers.firstHitSource (kind i) (parent n i)
+            (child n i) (xChild n i)).card) : Nat) : ℝ) := hsemantic
+    _ ≤ (((∑ a ∈ roots n,
+        (piStarFinset a (window n)).card) : Nat) : ℝ) := by
+      have hnat := aggregate_firstHit_piStar_card_bound
+        (roots n) (window n) (index n)
+        (parent n) (child n) (xChild n) kind
+        (fun a i hi => hparent a i hi)
+        hax
+        (fun a i hi => hcarith a i hi)
+        (fun a i hi => hxChild a i hi)
+        (fun a i hi j hj hij => hdistinct a i hi j hj hij)
+      exact_mod_cast hnat
+
 theorem exponential_piStar_mass_lower_bound
     {ι : Type*} [Fintype ι] [DecidableEq ι]
     (witness : PiStarOperatorWitness ι)
