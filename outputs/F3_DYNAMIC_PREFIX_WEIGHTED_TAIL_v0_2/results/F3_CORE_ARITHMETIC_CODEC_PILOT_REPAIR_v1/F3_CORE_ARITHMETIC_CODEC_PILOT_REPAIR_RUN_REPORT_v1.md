@@ -1,6 +1,6 @@
 # F3 arithmetic-codec pilot repair run report v1
 
-Status: `FROZEN_PRE_EXECUTION — HEAVY_SLOT_GRANTED — RESULT_PENDING`
+Status: `ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD / LEAN_ELABORATION_ERRORS / NOT_MATHEMATICAL_COUNTEREXAMPLE — AUDIT_NOT_OPENED`
 
 Date: 2026-07-24.
 
@@ -92,15 +92,79 @@ push = forbidden
 
 ## 5. Result ledger
 
+The pre-execution report was frozen in commit
+`73767dd122663929fad9cbaf158d88b1021c0080`.  The sole compile command was
+invoked once and returned exit 1 after 117.56 seconds.  It did not time out or
+exhaust the heartbeat budget.  Lean emitted six arithmetic elaboration
+failures:
+
+- one `omega` failure at each of `55:23`, `56:31`, and `57:31` while
+  constructing the three residue alternatives of the `encode` subtype
+  witness;
+- three branch-specific `omega` failures at `1097:20` in
+  `pilotFrozenPos_agrees`.
+
+The log also contains three nonfatal `unnecessarySimpa` warnings.  No repair
+`.olean` or `.ilean` was produced.  Therefore the conditional audit command
+and the audit-log checker were not invoked.
+
+The complete combined compiler log has 75 lines, 3386 bytes, and hash
+
 ```text
-COMPILE_EXIT = PENDING
-COMPILE_WALL_SECONDS = PENDING
-COMPILE_OLEAN = PENDING
-COMPILE_ILEAN = PENDING
-AUDIT_EXIT = CONDITIONALLY_PENDING
-AUDIT_WALL_SECONDS = CONDITIONALLY_PENDING
-ENVIRONMENTAL_LOG_CHECK = CONDITIONALLY_PENDING
-POST_RUN_SOURCE_HASHES = PENDING
-POST_RUN_SOURCE_DIFF = PENDING
-FINAL_VERDICT = PENDING
+619fd7361557309f4f5519f22cba5fe304ac1c00409da62f5c170446290fcfc2
 ```
+
+Post-run hashing reproduced every frozen input hash in Section 1.  A targeted
+`git diff --exit-code` over the repair source, audit, checker and dependency
+source returned empty.  The donor dependency object retained its frozen hash.
+
+```text
+COMPILE_INVOCATIONS = 1
+COMPILE_EXIT = 1
+COMPILE_WALL_SECONDS = 117.56
+COMPILE_USER_SECONDS = 15.60
+COMPILE_SYS_SECONDS = 11.98
+COMPILE_TIMEOUT = false
+COMPILE_HEARTBEAT_EXHAUSTION = false
+COMPILE_FAILURE_CLASS = LEAN_ELABORATION_ERRORS
+COMPILE_OLEAN = ABSENT
+COMPILE_ILEAN = ABSENT
+AUDIT_INVOCATIONS = 0_BY_CONTRACT
+AUDIT_EXIT = NOT_RUN_BY_CONTRACT
+AUDIT_OLEAN = ABSENT
+AUDIT_ILEAN = ABSENT
+ENVIRONMENTAL_LOG_CHECK = NOT_RUN_BY_CONTRACT
+POST_RUN_SOURCE_HASHES = MATCH_FROZEN_INPUTS
+POST_RUN_SOURCE_DIFF = EMPTY
+RETRY = false
+SOURCE_EDIT_AFTER_ATTEMPT = false
+FULL_EXTENSION_OPENED = false
+FINAL_VERDICT = ARITHMETIC_CODEC_REPAIR_STOP_AND_RECORD / LEAN_ELABORATION_ERRORS / NOT_MATHEMATICAL_COUNTEREXAMPLE
+```
+
+This failure is an elaboration STOP for the frozen repair attempt.  It is not
+a mathematical counterexample and it does not establish any axiom profile,
+because the audit gate never opened.
+
+## 6. Diagnostic postmortem only
+
+This classification does not authorize a source edit or describe an
+executable repair for the spent gate.
+
+- At `55:23`, `56:31`, and `57:31`, the intended residue fact is already
+  represented by `encodeNat_mod9`, but the failed goals retain subtype
+  projections and quotient variables that `omega` did not identify with that
+  formula.  This is a need for explicit definitional reduction or named
+  projection/congruence lemmas, not a new mathematical mechanism.
+- The three goals at `1097:20` are the three retarded-position branches of
+  `pilotFrozenPos_agrees`.  Their constraints show the historical-position
+  subtype value remaining opaque to the arithmetic solver.  They likewise
+  require explicit definitional normalization or separately stated division
+  and remainder identities; they do not expose a new combinatorial or
+  dynamical obstruction.
+- The three `unnecessarySimpa` messages at lines 233, 236, and 241 are linter
+  warnings, not proof failures, and played no role in the exit code.
+
+Thus all six obligations are classified as proof-engineering/elaboration
+gaps.  No evidence from this run requires new mathematics, but the frozen
+single attempt is nevertheless spent and remains STOP.

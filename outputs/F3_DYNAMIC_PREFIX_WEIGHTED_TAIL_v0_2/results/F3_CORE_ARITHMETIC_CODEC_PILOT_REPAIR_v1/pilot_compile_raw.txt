@@ -1,0 +1,75 @@
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:55:23: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 728
+  0 ≤ c - 9*d ≤ 5
+  0 ≤ b ≤ 80
+  a ≥ 0
+where
+ a := ↑(encodeNat i) / 9
+ b := ↑↑i / 3
+ c := ↑↑⟨encodeNat i, ⋯⟩
+ d := ↑↑⟨encodeNat i, ⋯⟩ / 9
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:56:31: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 728
+  0 ≤ c - 9*d ≤ 6
+  0 ≤ b ≤ 80
+  a ≥ 0
+where
+ a := ↑(encodeNat i) / 9
+ b := ↑↑i / 3
+ c := ↑↑⟨encodeNat i, ⋯⟩
+ d := ↑↑⟨encodeNat i, ⋯⟩ / 9
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:57:31: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ c ≤ 728
+  0 ≤ c - 9*d ≤ 7
+  0 ≤ b ≤ 80
+  a ≥ 0
+where
+ a := ↑(encodeNat i) / 9
+ b := ↑↑i / 3
+ c := ↑↑⟨encodeNat i, ⋯⟩
+ d := ↑↑⟨encodeNat i, ⋯⟩ / 9
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:233:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:236:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:241:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:1097:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 80
+  d ≥ 0
+  0 ≤ b ≤ 26
+  0 ≤ b - 9*d ≤ 2
+  4*b - 9*d - e ≥ 1
+where
+ b := ↑↑i
+ d := ↑(↑i / 3) / 3
+ e := ↑↑⟨27 * (↑i / 3 / 3) + 4 * (↑i % 3), ⋯⟩
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:1097:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 80
+  d ≥ 0
+  0 ≤ b ≤ 26
+  3 ≤ b - 9*d ≤ 5
+  b + 18*d - e ≥ -8
+where
+ b := ↑↑i
+ d := ↑(↑i / 3) / 3
+ e := ↑↑⟨27 * (↑i / 3 / 3) + 12 + ↑i % 3, ⋯⟩
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:1097:20: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ e ≤ 80
+  d ≥ 0
+  0 ≤ b ≤ 26
+  6 ≤ b - 9*d ≤ 8
+  4*b - 9*d - e ≥ 10
+where
+ b := ↑↑i
+ d := ↑(↑i / 3) / 3
+ e := ↑↑⟨27 * (↑i / 3 / 3) + 15 + 4 * (↑i % 3), ⋯⟩
+real 117.56
+user 15.60
+sys 11.98
