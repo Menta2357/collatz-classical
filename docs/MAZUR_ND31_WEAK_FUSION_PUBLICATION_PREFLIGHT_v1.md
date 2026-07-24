@@ -10,7 +10,9 @@ REMOTE_AND_ANCESTRY_PASS
 CA3_PACKAGE_COMMIT_ROLE_VERIFIED
 F386_FROZEN_PAPER_ROLE_NOT_VERIFIED
 ROOT_AND_ARTIFACT_NOTICE_REMEDIATED
-PAYLOAD_MODIFIED_FILE_NOTICES_BLOCK_PUBLICATION
+PAYLOAD_MODIFIED_FILE_NOTICES_PASS
+SELF_CONTAINED_PUBLICATION_TAR_PASS
+FINAL_BUILD_STOP_ENVIRONMENTAL_NO_SPACE
 GH_CLI_MISSING_BLOCK_PUBLICATION
 ```
 
@@ -114,11 +116,13 @@ at repository root and exact upstream `LICENSE`/`NOTICE` copies under
 `artifacts/mazur-weak-fusion-ca3/upstream-licensing/`. Their hashes match the
 source ZIP byte for byte.
 
-The frozen 7+2 tar itself contains only its nine Lean paths and no
-`LICENSE`/`NOTICE`. It must not be released as a standalone archive. Repository
-distribution must retain the root and artifact-local copies added here. A
-future standalone archive must be regenerated to contain the applicable
-license and NOTICE itself.
+The historical tar at `58981ff...` contained only its nine Lean paths and no
+`LICENSE`/`NOTICE`; it remains recoverable from Git history and must not be
+released standalone. The publication tar at SHA-256
+`4ceeb087ec3faa9ec95566888b6487dbabbc6317714c0e080dc44fd3b4d45b25`
+is rebuilt reproducibly from extension commit `ef1a5a75...` and contains nine
+Lean paths plus exact `LICENSE` and `NOTICE` copies. Three independent rebuilds
+were byte-identical.
 
 ## Modified-file audit of the 7+2 payload
 
@@ -127,15 +131,15 @@ notices stating that they were changed. Current state:
 
 | Path | Relationship to ca3 | Current notice state |
 | --- | --- | --- |
-| `Erdos1135/ND/CountingCore.lean` | extracts definitions from `Conventions.lean` | prose says factored out and bodies unchanged; explicit dated modification notice still advisable |
-| `Erdos1135/ND/StatementCore.lean` | extracts definitions from `Statement.lean` | prose says factored out and bodies unchanged; explicit dated modification notice still advisable |
-| `Erdos1135/ND/FiniteBaseCertificate.lean` | new integration module | no copied body identified |
-| `Erdos1135/ND/FusionParametric.lean` | new integration module | no copied body identified |
-| `Erdos1135/ND/Conventions.lean` | upstream file changed to import core and remove moved definitions | no explicit modification notice |
-| `Erdos1135/ND/Statement.lean` | upstream file changed to import core and remove moved definitions | no explicit modification notice |
-| `FusionParametricAxiomAudit.lean` | new audit module | no copied body identified |
-| `Erdos1135/Basic.lean` | upstream import redirected | no explicit modification notice |
-| `FormalConjectures/Wikipedia/CollatzStep.lean` | definition-only extraction from `CollatzConjecture.lean` | original copyright/license header and explicit change notice are missing |
+| `Erdos1135/ND/CountingCore.lean` | extracts definitions from `Conventions.lean` | dated local-derivative notice; unchanged bodies stated |
+| `Erdos1135/ND/StatementCore.lean` | extracts definitions from `Statement.lean` | dated local-derivative notice; unchanged bodies stated |
+| `Erdos1135/ND/FiniteBaseCertificate.lean` | new integration module | dated local-addition notice |
+| `Erdos1135/ND/FusionParametric.lean` | new integration module | dated local-addition notice |
+| `Erdos1135/ND/Conventions.lean` | derived copy imports core and removes moved definitions | dated local-modification notice |
+| `Erdos1135/ND/Statement.lean` | derived copy imports core and removes moved definitions | dated local-modification notice |
+| `FusionParametricAxiomAudit.lean` | new audit module | dated local-addition notice |
+| `Erdos1135/Basic.lean` | derived copy redirects import | dated local-modification notice |
+| `FormalConjectures/Wikipedia/CollatzStep.lean` | definition-only extraction from `CollatzConjecture.lean` | exact original copyright/Apache header restored before dated local-modification notice |
 
 The original Formal Conjectures source literally carries:
 
@@ -146,28 +150,22 @@ Licensed under the Apache License, Version 2.0
 
 Its exact source file SHA-256 is
 `cc45c97c70147327f010caf8d827ad1eb5030ed5686872330188a13a3f6971c8`.
-The compatibility extraction is Apache-compatible, but its omitted header is
-a publication blocker. Therefore the final claim is not yet “all vendored
-licensing clean”; it is “no incompatible dependency tree is vendored, with a
-known attribution defect in one extracted compatibility file and missing
-change notices in three directly modified upstream files.”
+The compatibility extraction is Apache-compatible and its retained header and
+local change notice are now present. No incompatible dependency tree is
+vendored, and the publication tar is self-contained for the identified
+Apache/NOTICE obligations.
 
 ## Required remediation before push
 
-1. Restore the Formal Conjectures copyright/Apache header in
-   `CollatzStep.lean` and add a prominent definition-only extraction notice.
-2. Add explicit modification notices to `Conventions.lean`, `Statement.lean`,
-   and `Basic.lean`; make the existing extraction notices in the two core
-   modules unambiguous.
-3. Regenerate the 7+2 tar and every affected candidate/payload hash. Preserve
-   the current tar as historical evidence; do not overwrite custody history.
-4. Reconstruct from the ca3 ZIP and rerun the build/axiom gate against the
-   publication payload. Comments should be semantically inert, but the
-   published bytes must be the bytes that the final gate checks.
-5. Update or explicitly mark the Gate-1 “build pending” text as a historical
+1. Obtain explicit authorization for environmental capacity remediation. The
+   failed E1 left only 47 MiB available; no cleanup was performed automatically.
+2. After capacity is restored, freeze a new one-attempt gate and rebuild/audit
+   the immutable publication tar. The 2026-07-24 attempt stopped during cache
+   decompression; P1 and A1 were not run.
+3. Update or explicitly mark the Gate-1 “build pending” text as a historical
    snapshot so it cannot be mistaken for current status.
-6. Keep all `f386357d...` role and ancestry claims absent.
-7. Install and authenticate GitHub CLI, then repeat remote/base checks.
+4. Keep all `f386357d...` role and ancestry claims absent.
+5. Install and authenticate GitHub CLI, then repeat remote/base checks.
 
 ## Prepared branch and draft PR
 

@@ -1,6 +1,6 @@
 # H1 Apache-remediated publication build and axiom audit
 
-Status: `STATIC_PASS_EXECUTION_PENDING`
+Status: `STOP_ENVIRONMENTAL_E1_NO_SPACE_P1_A1_NOT_RUN`
 
 Frozen: 2026-07-24
 
@@ -103,13 +103,29 @@ that hook satisfies E2; no redundant independent cache command is run.
 ## Results
 
 ```text
-R0: PENDING
-R1: PENDING
-reconstruction baseline: PENDING
-E1: PENDING
-E2: PENDING
-P1: PENDING
-A1: PENDING
-axiom inventory: PENDING
-post-build source diff: PENDING
+R0: PASS; exit 0; real 0.18s; user 0.06s; sys 0.09s
+R1: PASS; exit 0; real 0.15s; user 0.07s; sys 0.03s
+candidate hashes: 13/13 PASS, including LICENSE and NOTICE
+reconstruction baseline: 8c51bd0cfcb98a556ea59e3377175c7c1e95b789
+E1: STOP_ENVIRONMENTAL; exit 1; real 170.46s; user 65.34s; sys 55.44s
+E1 cause: No space left on device (os error 28)
+E1 occurrences of exact error text: 876
+filesystem observation after STOP: 47 MiB available; 100% capacity
+E2: NOT SATISFIED; official cache decompression failed with exit 101
+P1: NOT RUN
+A1: NOT RUN
+axiom inventory: NOT RUN; historical 12/12 PASS is not promoted to new bytes
+post-E1 tracked source diff: empty
+post-E1 untracked environmental paths: .lake/, lake-manifest.json
 ```
+
+E1 reached the official Mathlib Azure cache, found no files to download, and
+attempted to decompress 8283 already-cached files. Decompression failed for
+environmental capacity, not Lean elaboration. The command returned exit code
+1. In accordance with the frozen contract, no cleanup, retry, resource change,
+P1 build, or A1 audit followed.
+
+The Apache-remediated payload therefore retains its static and reconstruction
+PASS, but it does **not** yet have a build/axiom PASS over the publication
+bytes. A future attempt requires explicit authorization after disk capacity is
+remediated; this report must remain the immutable receipt for the failed gate.

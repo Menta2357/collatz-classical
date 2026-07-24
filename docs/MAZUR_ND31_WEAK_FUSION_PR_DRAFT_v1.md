@@ -49,13 +49,15 @@ future quantitative witness would enter without asserting that witness.
   `Lean.ofReduceBool`.
 - [x] Exact Advameg NOTICE and upstream Apache-2.0 license copies are now
   custodied.
-- [ ] Restore Formal Conjectures header and all modified-file notices.
-- [ ] Regenerate tar and hash manifests without overwriting historical
+- [x] Restore Formal Conjectures header and all modified-file notices.
+- [x] Regenerate tar and hash manifests without overwriting historical
   evidence.
-- [ ] Repeat reconstruction, target build, and 12/12 axiom audit against the
-  publication bytes.
-- [ ] Confirm tar contents include or are inseparably accompanied by applicable
-  LICENSE/NOTICE; do not publish the current tar standalone.
+- [x] Confirm the publication tar itself contains exact `LICENSE`/`NOTICE`.
+- [x] Fresh publication reconstruction and 13/13 candidate hashes passed.
+- [ ] Restore disk capacity under explicit authorization. E1 stopped with
+  `No space left on device`; no cleanup or retry was performed.
+- [ ] Complete target build and 12/12 axiom audit against the publication
+  bytes. P1 and A1 remain not run for the remediated payload.
 - [ ] `git diff --check` on the final publication head.
 - [ ] Verify final diff contains no `.lake`, `.olean`, dependency checkout, or
   unrelated work.
