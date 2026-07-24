@@ -1,6 +1,6 @@
 # F3 forward-right certificate v3 — terminal report
 
-Status: `F3_FORWARD_RIGHT_CERTIFICATE_V3_C0_PROOF_STOP`
+Status: `F3_FORWARD_RIGHT_CERTIFICATE_V3_C0_LEAN_ELABORATION_DECIDABILITY_STOP`
 
 Date: 2026-07-24.
 
@@ -39,6 +39,10 @@ with wrapper exit status 1 after 110.32 seconds at the first finite-certificate
 proof:
 
 ```text
+bash outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/scripts/f3_forward_right_certificate_v3_executor.sh C0
+```
+
+```text
 CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:68:2:
 error: failed to synthesize
   Decidable forwardRightNatCertificate
@@ -50,8 +54,10 @@ The C0 raw-log SHA-256 is:
 6f6bfb1e59e822d58c53d8f3ca8bec090c8ec42c308cfd6122c2a947436fc009
 ```
 
-The raw log is 996 bytes.  No target `.olean` or `.ilean` was produced.  The
-frozen source and audit files remained unchanged, with SHA-256 values
+The raw log is 996 bytes.  The overlay remained at 209 `.olean` files, zero
+`.ilean` files and 209 regular files.  Neither target object nor either audit
+object was produced.  The frozen source and audit files remained unchanged,
+with SHA-256 values
 `37932fd8198e045c436c479455a362afb9b2ef720b2138c1f3308f552e16a4ab`
 and
 `fd9d431d4ce5657204e1b9fa98b8cfd2e8214454fee96bf4b042e0a8629432f2`,
@@ -75,10 +81,12 @@ public theorem or axiom-profile claim is made for this module under v3.
 S0_PASS
 D0_PASS
 G0_PUBLIC_PASS
+C0_PRECHECK_PASS
 C0_LEAN_ELABORATION_DECIDABILITY_STOP
 A1_NOT_RUN
 K1_NOT_RUN
 TARGET_OBJECTS_ABSENT
+AUDIT_OBJECTS_ABSENT
 THEOREM_STATUS_UNKNOWN_NOT_COMPILED
 AXIOM_PROFILE_UNKNOWN_NOT_AUDITED
 NO_BLOCK0_EXECUTION
