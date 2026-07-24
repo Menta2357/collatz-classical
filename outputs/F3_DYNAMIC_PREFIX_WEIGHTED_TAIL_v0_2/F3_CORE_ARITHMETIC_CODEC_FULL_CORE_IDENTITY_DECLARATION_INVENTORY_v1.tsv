@@ -1,0 +1,10 @@
+# ordinal	kind	name
+1	def	corePositionRealize
+2	theorem	coreEdges_position_normalization
+3	theorem	coreEdges_length_kernel
+4	theorem	core_position_at_formula
+5	theorem	realize_mem_coreEdges
+6	theorem	formulaCoreList_subset_coreEdges
+7	theorem	coreEdges_perm_formulaCoreList
+8	def	fullFormulaMatrix
+9	theorem	coreMatrix_eq_fullFormulaMatrix
