@@ -1,6 +1,6 @@
 # F3 arithmetic-codec pilot repair v5 audit-only run report
 
-Status: `FROZEN_PRE-RUN / AUDIT_NOT_EXECUTED`
+Status: `V5_AUDIT_MODULE_ROOT_RESOLUTION_STOP / CHECKER_NOT_RUN`
 
 Date: 2026-07-24.
 
@@ -12,6 +12,8 @@ V4_DRAFT_PR = https://github.com/Menta2357/collatz-classical/pull/8
 V5_PREPARED_COMMIT = 5b96a645eaad0a032c1e96d3390e588005b52462
 V5_BRANCH = codex/hilo2-f3-pilot-repair-v5-audit-only
 V5_EXECUTION_HEAD = THIS_REPORT_COMMIT
+V5_FROZEN_RUN_COMMIT = 89e577bfc1d4fd5d6f808add90acce4dc3153634
+V5_DRAFT_PR = https://github.com/Menta2357/collatz-classical/pull/10
 V5_PUBLIC_PRE_RUN_PUSH = REQUIRED_BEFORE_AUDIT
 ```
 
@@ -83,4 +85,59 @@ TERMINAL_PUBLIC_PUSH = REQUIRED_FOR_PASS_OR_STOP
 
 ## 7. Terminal result
 
-`PENDING_PUBLIC_PUSH_AND_SOLE_AUDIT`
+The sole audit invocation ran from frozen commit
+`89e577bfc1d4fd5d6f808add90acce4dc3153634` and exited 1 after 0.43 seconds.
+The corrected `LEAN_PATH` did contain the donor build root, but Lean still
+requested `F3ReturnExcursionExactCoreMatrix.olean` from the local project build
+root selected for the repair module and reported that local object absent.
+
+This is confirmed `LEAN_PATH` package-root shadowing. In Lean 4.21,
+`Lean/Util/Path.lean` selects the first search entry whose package-root
+directory `CollatzClassical/` exists and `Lean/Environment.lean` checks the
+requested object only afterward. The local entry is first and contains that
+package root, so the later donor entry is never considered for the missing
+ExactCoreMatrix object. V5 does not authorize reordering roots or copying an
+object to the local root.
+
+```text
+V5_COMPILE_INVOCATIONS = 0
+V5_LAKE_INVOCATIONS = 0
+V5_AUDIT_INVOCATIONS = 1
+V5_AUDIT_EXIT = 1
+V5_AUDIT_TIMEOUT = false
+V5_AUDIT_HEARTBEAT_EXHAUSTION = false
+V5_AUDIT_WALL_SECONDS = 0.43
+V5_AUDIT_USER_SECONDS = 0.02
+V5_AUDIT_SYS_SECONDS = 0.06
+V5_AUDIT_FAILURE_CLASS = LEAN_PATH_PACKAGE_ROOT_SHADOWING_CONFIRMED
+V5_AUDIT_LOG_LINES = 4
+V5_AUDIT_LOG_BYTES = 422
+V5_AUDIT_LOG_SHA256 = ef9affe2cc14ed88e85b23ce5827c237eb63954bcc9efe8188817d585ff3cf78
+V5_AUDIT_OLEAN = ABSENT
+V5_AUDIT_ILEAN = ABSENT
+V5_CHECKER_INVOCATIONS = 0
+V5_CHECKER_RESULT = NOT_RUN_BY_CONTRACT
+V5_AXIOM_PROFILE = UNKNOWN_NOT_AUDITED
+FROZEN_TRACKED_INPUTS = UNCHANGED
+```
+
+Post-run hashes remain:
+
+```text
+repair olean = 480e605a5e3db74a1edf9ecce7f535b8f8c057965498ac5f73e787322c144372
+repair ilean = 627ba7b79d66ab64a572a1ae53cf1d3cf0692cc7bd6f59078c3cf52208f28358
+donor ExactCoreMatrix olean = 34a6f1745a11dcfaaaf0bc72516c7f485711773531023979e237a4d3dfd46798
+```
+
+There was no source edit, regeneration, copy, retry, extension or first-hit
+execution.
+
+```text
+FINAL_VERDICT = V5_AUDIT_MODULE_ROOT_RESOLUTION_STOP
+PILOT_KERNEL_CLEAN_CLAIM = NOT_ESTABLISHED
+NO_RETRY
+NO_REGENERATION
+NO_243_SOURCE_EXTENSION
+NO_SEMANTIC_FIRST_HIT_EXECUTION
+TERMINAL_PUBLIC_CUSTODY = REQUIRED
+```
