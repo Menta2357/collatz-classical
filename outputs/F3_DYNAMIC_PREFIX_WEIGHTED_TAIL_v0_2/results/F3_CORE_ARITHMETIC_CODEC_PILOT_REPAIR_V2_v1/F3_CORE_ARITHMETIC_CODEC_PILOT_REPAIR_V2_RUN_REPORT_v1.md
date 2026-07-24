@@ -1,6 +1,6 @@
 # F3 arithmetic-codec pilot repair v2 run report v1
 
-Status: `FROZEN_PRE_EXECUTION — HUMAN_GATE_AUTHORIZED — RESULT_PENDING`
+Status: `ARITHMETIC_CODEC_REPAIR_V2_STOP_AND_RECORD / LEAN_ELABORATION_ERROR / NOT_MATHEMATICAL_COUNTEREXAMPLE — AUDIT_NOT_OPENED`
 
 Date: 2026-07-24.
 
@@ -126,18 +126,58 @@ No first-hit data are computed and the semantic gate remains closed.
 
 ## 6. Result ledger
 
+The pre-execution v2 report was frozen in commit
+`ec3890141e860e3b9239cc9ffe23724487c4db6d`.  The sole compile command was
+invoked once and returned exit 1 after 146.69 seconds.  It did not time out or
+exhaust the heartbeat budget.
+
+The three v1 encoder-witness errors are absent: Lean elaborated the new
+`encodeNat_mod9` proof branches.  The sole error is at `1088:18`:
+
 ```text
-COMPILE_INVOCATIONS = 0
-COMPILE_EXIT = PENDING
-COMPILE_WALL_SECONDS = PENDING
-COMPILE_OLEAN = PENDING
-COMPILE_ILEAN = PENDING
+tactic 'rfl' failed; the two retarded-position values were not recognized as
+definitionally equal.
+```
+
+The log also contains three nonfatal `unnecessarySimpa` warnings at lines 232,
+235, and 240.  No repair `.olean` or `.ilean` was produced, so the conditional
+audit and checker were not invoked.
+
+The complete combined compiler log has 16 lines, 1311 bytes, and hash:
+
+```text
+d1163ebb2de79f0dbbbb0affef58fab834a602cee5b0c1af535586cccb2aa8ef
+```
+
+Post-run hashing reproduced all frozen source, audit, checker, dependency and
+first-hit contract hashes.  Targeted `git diff --exit-code` over those inputs
+returned empty.  The first-hit document retained the exact lines recorded in
+Section 5 and no semantic computation was performed.
+
+```text
+COMPILE_INVOCATIONS = 1
+COMPILE_EXIT = 1
+COMPILE_WALL_SECONDS = 146.69
+COMPILE_USER_SECONDS = 16.13
+COMPILE_SYS_SECONDS = 13.97
+COMPILE_TIMEOUT = false
+COMPILE_HEARTBEAT_EXHAUSTION = false
+COMPILE_FAILURE_CLASS = LEAN_ELABORATION_ERROR
+COMPILE_OLEAN = ABSENT
+COMPILE_ILEAN = ABSENT
 AUDIT_INVOCATIONS = 0
-AUDIT_EXIT = CONDITIONALLY_PENDING
-ENVIRONMENTAL_CHECK = CONDITIONALLY_PENDING
-POST_RUN_HASHES = PENDING
-POST_RUN_SOURCE_DIFF = PENDING
-FINAL_VERDICT = PENDING
+AUDIT_EXIT = NOT_RUN_BY_CONTRACT
+AUDIT_OLEAN = ABSENT
+AUDIT_ILEAN = ABSENT
+ENVIRONMENTAL_CHECK = NOT_RUN_BY_CONTRACT
+POST_RUN_HASHES = MATCH_FROZEN_INPUTS
+POST_RUN_SOURCE_DIFF = EMPTY
+RETRY = false
+SOURCE_EDIT_AFTER_ATTEMPT = false
+SEMANTIC_FIRST_HIT_EXECUTION = false
+FULL_EXTENSION_OPENED = false
+PUSH = false
+FINAL_VERDICT = ARITHMETIC_CODEC_REPAIR_V2_STOP_AND_RECORD / LEAN_ELABORATION_ERROR / NOT_MATHEMATICAL_COUNTEREXAMPLE
 ```
 
 ```text
@@ -145,3 +185,36 @@ NO_243_SOURCE_EXTENSION
 NO_SEMANTIC_FIRST_HIT_EXECUTION
 NO_PUSH
 ```
+
+## 7. Static postmortem and minimal v3 proposal — not implemented
+
+The run separates the two v2 mechanisms cleanly:
+
+- theorem reuse with `simpa [h0/h1/h2] using encodeNat_mod9 i` discharged all
+  three encoder branches;
+- bare `rfl` is insufficient for the retarded position because Lean leaves the
+  wrapper definitions opaque at that proof boundary.
+
+This is a definitional-normalization mismatch, not a new arithmetic,
+combinatorial, or dynamical obstruction.  A minimal v3 candidate is the
+following explicit target normalization, without changing any statement,
+definition, or data:
+
+```lean
+| retarded i =>
+    change
+      (pilotFrozenPos (.retarded i)).1 = rowStart (fin27To243 i)
+    simp only [pilotFrozenPos, rowStart, fin27To243]
+```
+
+Equivalently, a v3 could first package that exact `change`/`simp only` proof as
+a named lemma and use it in the retarded branch; the proposed lemma statement
+would be:
+
+```lean
+theorem pilotRetardedPos_agrees (i : Fin 27) :
+    (pilotFrozenPos (.retarded i)).1 = rowStart (fin27To243 i)
+```
+
+Neither form is added to the source here.  Any v3 edit or invocation requires
+a new branch, contract, static review, and explicit human gate.
