@@ -1085,7 +1085,10 @@ def pilotFrozenPos : PilotFormulaEdge → Fin 81
 theorem pilotFrozenPos_agrees (e : PilotFormulaEdge) :
     (pilotFrozenPos e).1 = (frozenPos (pilotEmbed e)).1 := by
   cases e with
-  | retarded i => rfl
+  | retarded i =>
+      change
+        (pilotFrozenPos (.retarded i)).1 = rowStart (fin27To243 i)
+      simp only [pilotFrozenPos, rowStart, fin27To243]
   | advancedDirect k ell =>
       have hk := k.2
       have he := ell.2
