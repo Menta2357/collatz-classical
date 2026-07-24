@@ -1,0 +1,251 @@
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock_join' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal_join' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift_block_local' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_block_local' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge_edgeBlock_edgeLocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_div3' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_mod3' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.directSourceUnrank_shift' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftSourceUnrank_shift' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.formulaSource_liftPilotEdge' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_formulaSource_liftPilotEdge' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_liftPilotEdge' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_eq_joinPosition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank_frozenPos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank_frozenPos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+NAMESPACE_DECLARATION_COUNT=124
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_div3._proof_1_3	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge.eq_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank_frozenPos	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock.match_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_div3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_5	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftSourceUnrank_shift._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_10	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal.eq_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank.eq_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank_frozenPos	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock_join._proof_1_3	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal_join	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.directSourceUnrank_shift._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_6	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_3	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock_join	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge_edgeBlock_edgeLocal	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge.eq_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_liftPilotEdge._proof_1_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_liftPilotEdge	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_formulaSource_liftPilotEdge._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge.match_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal.eq_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge.match_1._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.directSourceUnrank_shift	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock.match_1._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_liftPilotEdge._proof_1_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_9	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionUnrank._cstage1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift_block_local	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_mod3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_formulaSource_liftPilotEdge	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeLocal.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_div3._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock_join._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.formulaSource_liftPilotEdge	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_block_local	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftSourceUnrank_shift	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_div3._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge._cstage1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_liftPilotEdge._proof_1_6	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.frozenPos_eq_joinPosition	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal_join._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock.eq_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin27Shift.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.liftPilotEdge._cstage2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Block._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionBlock_join._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_4	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.rowStart_shift._proof_1_11	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.positionLocal._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock.eq_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin9Shift_mod3._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Local._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.joinPosition.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin81Block._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.corePositionToRank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.fin243Local._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecFullBlockDecoder.edgeBlock._cstage2	[]
+real 241.12
+user 7.63
+sys 22.84

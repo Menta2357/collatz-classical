@@ -1,0 +1,3 @@
+NAMESPACE_DECLARATION_COUNT=1
+AXIOM_PROFILE	Example.wrapped	[propext,
+ Lean.ofReduceBool]
