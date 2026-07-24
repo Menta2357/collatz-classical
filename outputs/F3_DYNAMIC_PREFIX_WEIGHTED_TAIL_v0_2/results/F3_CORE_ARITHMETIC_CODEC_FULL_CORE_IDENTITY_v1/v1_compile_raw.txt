@@ -1,0 +1,69 @@
+FULL_CORE_IDENTITY_C0_PRECHECK_STATUS=0
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+FULL_CORE_IDENTITY_C0_PREFLIGHT=PASS
+FULL_CORE_IDENTITY_C0_SOURCE_SHA256=df1e2a1582e02c9c73c354ecb72705bd828a61ab53501bd88a7d2bf6e654937b
+FULL_CORE_IDENTITY_C0_EXACT_CORE_SHA256=34a6f1745a11dcfaaaf0bc72516c7f485711773531023979e237a4d3dfd46798
+FULL_CORE_IDENTITY_C0_REPAIR_SHA256=480e605a5e3db74a1edf9ecce7f535b8f8c057965498ac5f73e787322c144372
+FULL_CORE_IDENTITY_C0_DECODER_SHA256=225e7cbca64ec5d9ad7e609fdc08bcf60401cbd356f2d4bd20d74b51662bc8ec
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecFullCoreIdentity.lean:35:2: error: simp failed, maximum number of steps exceeded
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecFullCoreIdentity.lean:74:27: error: tactic 'rfl' failed, equality lhs
+  ?m.561 x✝² (?m.561 x✝⁴ x✝)
+is not definitionally equal to rhs
+  ?m.561 x✝⁴ (?m.561 x✝² x✝)
+s t : Fin 243
+x✝⁴ : CoreEdge
+x✝³ : x✝⁴ ∈ List.filter (fun e => decide (e.source = s ∧ e.target = t)) coreEdges
+x✝² : CoreEdge
+x✝¹ : x✝² ∈ List.filter (fun e => decide (e.source = s ∧ e.target = t)) coreEdges
+x✝ : ℕ
+⊢ ?m.561 x✝² (?m.561 x✝⁴ x✝) = ?m.561 x✝⁴ (?m.561 x✝² x✝)
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecFullCoreIdentity.lean:71:2: error: type mismatch
+  List.Perm.foldr_eq' (List.Perm.filter (fun e => decide (e.source = s ∧ e.target = t)) coreEdges_perm_formulaCoreList)
+    (fun x x_1 x_2 x_3 x_4 => ?m.579) 0
+has type
+  List.foldr ?m.561 0 (List.filter (fun e => decide (e.source = s ∧ e.target = t)) coreEdges) =
+    List.foldr ?m.561 0 (List.filter (fun e => decide (e.source = s ∧ e.target = t)) formulaCoreList) : Prop
+but is expected to have type
+  List.foldr (fun e acc => channelWeight e.channel + acc) 0
+      (List.filter (fun e => decide (e.source = s ∧ e.target = t)) coreEdges) =
+    List.foldr (fun e acc => channelWeight e.channel + acc) 0
+      (List.filter (fun e => decide (e.source = s ∧ e.target = t)) formulaCoreList) : Prop
+real 121.63
+user 6.37
+sys 10.86
+FULL_CORE_IDENTITY_C0_LEAN_EXIT_STATUS=1
+FULL_CORE_IDENTITY_C0_WRAPPER_EXIT_STATUS=1
