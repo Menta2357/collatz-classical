@@ -1,6 +1,6 @@
 # Rhin-anchored H1 successor gate v2 run report
 
-Status: `FROZEN_PRE-RUN / PHASES_NOT_EXECUTED`
+Status: `F0_CUSTODY_UPSTREAM_REF_STOP / D1_P1_A1_NOT_RUN`
 
 Date: 2026-07-24.
 
@@ -15,7 +15,10 @@ V1_STOP_PR = https://github.com/Menta2357/collatz-classical/pull/7
 V2_PREPARED_COMMIT = 804ababc1baa770e7e1e77fccd98e6a6c5bc2b9a
 V2_BRANCH = agent/mazur-rhin-anchored-warm-gate-v2
 V2_EXECUTION_HEAD = THIS_REPORT_COMMIT
-V2_PUBLIC_UPSTREAM_RECEIPT = REQUIRED_AND_CHECKED_BY_F0
+V2_FROZEN_RUN_COMMIT = d2c1792efd5e19382680e65151c7c8d90013e887
+V2_DRAFT_PR = https://github.com/Menta2357/collatz-classical/pull/9
+V2_PUBLIC_UPSTREAM_RECEIPT = PASS_EXTERNALLY_VERIFIED
+F0_LOCAL_UPSTREAM_RESOLUTION = STOP
 RECONSTRUCTION_COMMIT = b7da87864ced8abd6c3715b65320efc233c0d853
 NO_CONCURRENT_HEAVY_BUILD = CONFIRMED_BY_ROOT_PROCESS_AUDIT
 ```
@@ -95,4 +98,50 @@ TERMINAL_PUBLIC_PUSH = required_for_PASS_or_STOP
 
 ## 6. Terminal result
 
-`PENDING_SEQUENTIAL_EXECUTION_AFTER_PUBLIC_PUSH`
+F0 was invoked exactly once from frozen commit
+`d2c1792efd5e19382680e65151c7c8d90013e887`. It exited 1 after 0.02 seconds,
+before any candidate, dependency or target build.
+
+The local branch configuration names `origin` and
+`refs/heads/agent/mazur-rhin-anchored-warm-gate-v2`, but this custody clone's
+fetch refspec stores only
+`codex/mazur-density-fusion-custody`. Consequently `git rev-parse '@{u}'`
+could not resolve a remote-tracking ref and the frozen script stopped. The
+branch itself is publicly present in draft PR #9; the failure is the local
+upstream-receipt mechanism, not evidence that the push was absent.
+
+```text
+F0_INVOCATIONS = 1
+F0_EXIT = 1
+F0_WALL_SECONDS = 0.02
+F0_USER_SECONDS = 0.00
+F0_SYS_SECONDS = 0.01
+F0_FAILURE_CLASS = UPSTREAM_BRANCH_NOT_STORED_AS_REMOTE_TRACKING_REF
+F0_REMAINING_CHECKS = NOT_REACHED
+F0_LOG_LINES = 4
+F0_LOG_BYTES = 143
+F0_LOG_SHA256 = 28f95091aea6ce3e74f7a41378e982240267c0b866690b31e53f900ca5d3e22f
+D1_INVOCATIONS = 0
+P1_INVOCATIONS = 0
+A1_INVOCATIONS = 0
+```
+
+External read-only verification after the STOP found the exact public head at
+`d2c1792efd5e19382680e65151c7c8d90013e887` through the remote branch,
+`refs/pull/9/head` and the open draft PR. This verification classifies the
+failure but does not retroactively turn F0 into PASS or authorize D1.
+
+No dependency, target or audit phase was opened. No source, contract, script,
+budget or cache was changed after the STOP, and no retry was made. The
+candidate remains `UNKNOWN_NOT_AUDITED`.
+
+```text
+FINAL_VERDICT = F0_CUSTODY_UPSTREAM_REF_STOP
+THEOREM_COMPILED = false
+THEOREM_AXIOM_PROFILE = UNKNOWN_NOT_AUDITED
+NO_RETRY
+NO_DEPENDENCY_PREPAY
+NO_TARGET_BUILD
+NO_AUDIT
+TERMINAL_PUBLIC_CUSTODY = REQUIRED
+```
