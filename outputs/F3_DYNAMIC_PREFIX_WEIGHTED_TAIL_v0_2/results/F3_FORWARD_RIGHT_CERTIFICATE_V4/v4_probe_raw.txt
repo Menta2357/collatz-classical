@@ -1,0 +1,17 @@
+F3_FORWARD_V4_D0_PRECHECK_STATUS=0
+CollatzClassical.KL2003.F3CoreArithmeticCodecFullCoreIdentity.coreMatrix_eq_fullFormulaMatrix (s t : Fin 243) :
+  CollatzClassical.KL2003.F3ExactCoreMatrix.coreMatrix s t =
+    CollatzClassical.KL2003.F3CoreArithmeticCodecFullCoreIdentity.fullFormulaMatrix s t
+CollatzClassical.KL2003.F3ExactCoreMatrix.exact_channelWeight_one_lower :
+  469 / 1000 ≤ CollatzClassical.KL2003.F3ExactCoreMatrix.channelWeight 1
+CollatzClassical.KL2003.F3RealOperatorBridge.weighted_mass_push_lower_bound.{u_1} {ι : Type u_1} [Fintype ι]
+  (M : ι → ι → ℝ) (w μ : ι → ℝ) {δ : ℝ} (hrow : ∀ (s : ι), (1 + δ) * w s ≤ ∑ t, M s t * w t) (hμ : ∀ (s : ι), 0 ≤ μ s) :
+  (1 + δ) * CollatzClassical.KL2003.F3RealOperatorBridge.weightedMass w μ ≤
+    CollatzClassical.KL2003.F3RealOperatorBridge.weightedMass w (CollatzClassical.KL2003.F3RealOperatorBridge.push M μ)
+F3_FORWARD_V4_IMPORT_PROBE=PASS
+F3_FORWARD_V4_SINGLE_COLLATZ_ROOT=PASS
+F3_FORWARD_V4_TARGET_OBJECTS_AFTER_PROBE=ABSENT
+real 2473.98
+user 41.08
+sys 18.33
+F3_FORWARD_V4_D0_WRAPPER_EXIT_STATUS=0
