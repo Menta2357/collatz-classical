@@ -65,6 +65,7 @@ def forwardRightNatCertificate : Prop :=
     82500 * forwardRightWeightNat s ≤ lowerForwardRowNat s
 
 theorem forwardRightNatCertificate_proved : forwardRightNatCertificate := by
+  unfold forwardRightNatCertificate
   decide
 
 theorem lowerChannelCoeff_le_channelWeight (c : Nat) :
