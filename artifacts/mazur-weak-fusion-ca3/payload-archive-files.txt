@@ -1,0 +1,11 @@
+Erdos1135/Basic.lean
+Erdos1135/ND/Conventions.lean
+Erdos1135/ND/CountingCore.lean
+Erdos1135/ND/FiniteBaseCertificate.lean
+Erdos1135/ND/FusionParametric.lean
+Erdos1135/ND/Statement.lean
+Erdos1135/ND/StatementCore.lean
+FormalConjectures/Wikipedia/CollatzStep.lean
+FusionParametricAxiomAudit.lean
+LICENSE
+NOTICE

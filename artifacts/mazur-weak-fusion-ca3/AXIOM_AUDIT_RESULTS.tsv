@@ -1,0 +1,13 @@
+declaration	observed_axioms	result
+Erdos1135.ND.reachesOne_of_reachesOneWithin	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.finiteBase_of_verified	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fixedTargetDelta_pos	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_eventual_lower_bound_of_bad_ratio	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_of_bad_ratio_bound	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_eventual_lower_bound_of_density_bound	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_of_density_bound	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_of_nd31Bounds	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds_of_finiteBaseVerified	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.ND.fusion_of_nd31Bounds_of_finiteBaseVerified	propext;Classical.choice;Quot.sound	PASS
+Erdos1135.Tao.reaches_syracuse_iterate	propext;Classical.choice;Quot.sound	PASS

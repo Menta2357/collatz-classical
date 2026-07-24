@@ -1,0 +1,7 @@
+baseline commit: 96fd91b910150c6e832dd9a889ddd01cad64b5f6
+
+$ git status --short --branch
+## h1-prebuild
+?? .lake/
+?? lake-manifest.json
+?? logs/

@@ -1,0 +1,17 @@
+'Erdos1135.ND.reachesOne_of_reachesOneWithin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.finiteBase_of_verified' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fixedTargetDelta_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_eventual_lower_bound_of_bad_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_of_bad_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_eventual_lower_bound_of_density_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_of_density_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_of_nd31Bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds_of_finiteBaseVerified' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1135.ND.fusion_of_nd31Bounds_of_finiteBaseVerified' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1135.Tao.reaches_syracuse_iterate' depends on axioms: [propext, Classical.choice, Quot.sound]
+real 48.04
+user 1.82
+sys 6.71

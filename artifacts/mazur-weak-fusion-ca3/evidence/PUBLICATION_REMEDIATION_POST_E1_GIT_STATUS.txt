@@ -1,0 +1,15 @@
+baseline commit: 8c51bd0cfcb98a556ea59e3377175c7c1e95b789
+
+$ git status --short --branch
+## h1-publication-prebuild
+?? .lake/
+?? lake-manifest.json
+
+$ git diff --stat
+[no output]
+
+$ git diff --name-only
+[no output]
+
+Interpretation: E1 changed no tracked source. It created only untracked
+dependency/environment state before stopping for exhausted disk capacity.

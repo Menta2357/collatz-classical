@@ -1,0 +1,13 @@
+source	declaration	coverage
+Erdos1135/ND/FiniteBaseCertificate.lean	Erdos1135.ND.reachesOne_of_reachesOneWithin	#print axioms
+Erdos1135/ND/FiniteBaseCertificate.lean	Erdos1135.ND.finiteBase_of_verified	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fixedTargetDelta_pos	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_eventual_lower_bound_of_bad_ratio	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_of_bad_ratio_bound	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_eventual_lower_bound_of_density_bound	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_of_density_bound	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_of_nd31Bounds	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_eventual_lower_bound_of_nd31Bounds_of_finiteBaseVerified	#print axioms
+Erdos1135/ND/FusionParametric.lean	Erdos1135.ND.fusion_of_nd31Bounds_of_finiteBaseVerified	#print axioms
+Erdos1135/Tao/Syracuse/CollatzBridge.lean	Erdos1135.Tao.reaches_syracuse_iterate	#print axioms consumed bridge
