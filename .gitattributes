@@ -2,3 +2,8 @@
 # captured terminal line from whitespace diagnostics.  The file is immutable
 # evidence and its recorded SHA-256 must not be changed for cosmetic cleanup.
 artifacts/mazur-weak-fusion-ca3/publication-remediation-logs/E1_lake_update.full.log -whitespace
+
+# Preserve the two byte-exact successor inputs frozen before the sole build.
+# Their final blank records are part of the recorded SHA-256 values.
+artifacts/mazur-rhin-anchored-ca3/payload/Erdos1135/ND/FusionRhinAnchored.lean -whitespace
+artifacts/mazur-rhin-anchored-ca3/payload/FusionRhinAnchoredAxiomAudit.lean -whitespace

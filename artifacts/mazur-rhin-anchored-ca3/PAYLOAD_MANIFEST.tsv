@@ -1,0 +1,3 @@
+path	sha256	role
+payload/Erdos1135/ND/FusionRhinAnchored.lean	a7f3bef1c7184b514c3cc6833da03a3eefd5f41b3bea58bf4062885d7bfab7b1	candidate successor theorem
+payload/FusionRhinAnchoredAxiomAudit.lean	4c75fd87933592842a70a4f861f29fa685c73ea81a62ed359437b8170506f688	candidate producer and consumer axiom audit
