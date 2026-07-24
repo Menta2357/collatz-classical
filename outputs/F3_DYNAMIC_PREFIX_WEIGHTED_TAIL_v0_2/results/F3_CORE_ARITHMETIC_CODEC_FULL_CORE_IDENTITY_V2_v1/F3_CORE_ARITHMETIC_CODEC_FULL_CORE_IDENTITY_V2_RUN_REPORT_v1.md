@@ -1,6 +1,6 @@
 # F3 arithmetic-codec full core identity v2 run report v1
 
-Status: `PRE_RUN_DRAFT / NOT_EXECUTED / PUBLICATION_AND_GATE0_PENDING`
+Status: `PRE_RUN_FROZEN / NOT_EXECUTED / GATE0_PENDING`
 
 Date: 2026-07-24.
 
@@ -11,10 +11,10 @@ branch = codex/hilo2-f3-full-core-identity-v2
 parent terminal commit = 9ae5027f8e828fc3d42b099e6740e6665bce1831
 public parent PR = https://github.com/Menta2357/collatz-classical/pull/14
 required PR base = codex/hilo2-f3-full-core-identity-v1
-prepared-input commit = PENDING_FIRST_CUSTODY_COMMIT
-pre-run custody commit = PENDING_SECOND_CUSTODY_COMMIT
-public v2 draft PR = PENDING_PUBLICATION
-public v2 head = PENDING_PUBLICATION
+prepared-input commit = b18e664a3e2541f6715539680381b2bf71da84bd
+pre-run custody commit = SELF_REFERENCE_OMITTED_PUBLIC_HEAD_CONTAINING_THIS_REPORT
+public v2 draft PR = https://github.com/Menta2357/collatz-classical/pull/15
+public v2 prepared head = b18e664a3e2541f6715539680381b2bf71da84bd
 terminal commit = NOT_APPLICABLE_PRE_RUN
 ```
 
@@ -30,8 +30,8 @@ identity.  It would authorize only the preparation of a separate public
 first-hit execution contract, not first-hit itself, exponent 0.848, density,
 almost all, or Collatz.
 
-Execution is forbidden while the custody fields above remain pending or any
-publication/Gate-0 condition in the contract remains unmet.
+Execution is forbidden until the frozen-report commit is fast-forwarded to
+the draft PR and every remaining Gate-0 condition in the contract is met.
 
 ## 2. Frozen source and operational package
 
