@@ -7,3 +7,9 @@ artifacts/mazur-weak-fusion-ca3/publication-remediation-logs/E1_lake_update.full
 # Their final blank records are part of the recorded SHA-256 values.
 artifacts/mazur-rhin-anchored-ca3/payload/Erdos1135/ND/FusionRhinAnchored.lean -whitespace
 artifacts/mazur-rhin-anchored-ca3/payload/FusionRhinAnchoredAxiomAudit.lean -whitespace
+
+# Preserve byte-exact stdout/stderr from every Rhin v2 phase.
+artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/F0_preflight.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/D1_dependency_prepay.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/P1_target_build.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/A1_axiom_audit.full.log -whitespace
