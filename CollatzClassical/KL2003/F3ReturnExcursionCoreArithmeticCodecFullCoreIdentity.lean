@@ -32,7 +32,7 @@ theorem coreEdges_position_normalization :
 
 theorem coreEdges_length_kernel : coreEdges.length = 729 := by
   rw [coreEdges_position_normalization]
-  simp
+  exact List.length_ofFn
 
 /-! ## Coverage and saturation -/
 
@@ -68,10 +68,15 @@ noncomputable def fullFormulaMatrix (s t : Fin 243) : ℝ :=
 theorem coreMatrix_eq_fullFormulaMatrix (s t : Fin 243) :
     F3ExactCoreMatrix.coreMatrix s t = fullFormulaMatrix s t := by
   unfold F3ExactCoreMatrix.coreMatrix fullFormulaMatrix
-  exact
+  exact List.Perm.foldr_eq'
+    (f := fun (e : CoreEdge) (acc : ℝ) =>
+      channelWeight e.channel + acc)
     (coreEdges_perm_formulaCoreList.filter
-      (fun e => e.source = s ∧ e.target = t)).foldr_eq'
-      (fun _ _ _ _ _ => by ac_rfl) 0
+      (fun e => e.source = s ∧ e.target = t))
+    (fun x _ y _ z =>
+      add_left_comm (channelWeight y.channel)
+        (channelWeight x.channel) z)
+    (0 : ℝ)
 
 /-!
 Scope: exact finite core identity only.  This module proves no first-hit
