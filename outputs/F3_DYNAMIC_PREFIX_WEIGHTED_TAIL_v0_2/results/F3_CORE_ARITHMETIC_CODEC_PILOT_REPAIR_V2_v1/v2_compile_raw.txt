@@ -1,0 +1,16 @@
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:232:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:235:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:240:6: warning: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepair.lean:1088:18: error: tactic 'rfl' failed, the left-hand side
+  ↑(pilotFrozenPos (PilotFormulaEdge.retarded i))
+is not definitionally equal to the right-hand side
+  ↑(frozenPos (pilotEmbed (PilotFormulaEdge.retarded i)))
+case retarded
+i : Fin 27
+⊢ ↑(pilotFrozenPos (PilotFormulaEdge.retarded i)) = ↑(frozenPos (pilotEmbed (PilotFormulaEdge.retarded i)))
+real 146.69
+user 16.13
+sys 13.97

@@ -1,0 +1,35 @@
+F3_CORE_ARITHMETIC_CODEC_PILOT_v1
+DATE=2026-07-23
+AVAILABLE_DISK_GIB_APPROX=18
+MINIMUM_DISK_GIB=12
+DISK_GATE=PASS
+LEAN_TOOLCHAIN_MATCH_DEPENDENCY_WORKTREE=PASS
+LAKE_MANIFEST_MATCH_DEPENDENCY_WORKTREE=PASS
+EXACT_CORE_MATRIX_SOURCE_MTIME=2026-07-22T23:05:20
+EXACT_CORE_MATRIX_OLEAN_MTIME=2026-07-22T23:09:05
+EXACT_CORE_MATRIX_OLEAN_SHA256=34a6f1745a11dcfaaaf0bc72516c7f485711773531023979e237a4d3dfd46798
+ROOT_CONTAINMENT_CHECK=CORRECTED_ROUTE_IDENTIFIED
+DIRECT_LEAN_DEPS_PREFLIGHT=PASS_INDEPENDENT_NO_ELABORATION
+ENV_RESOLUTION_READY=true
+ENV_READY_BY_CUSTODY=AVAILABLE_IF_HUMAN_ACCEPTS_HISTORICAL_PACKAGE
+ENV_REBUILD_NOT_COMPLETED=true
+ENV_REBUILD_SECONDS=300
+ENV_REBUILD_EXIT_CODE=124
+ENV_REBUILD_DIAGNOSTIC=NONE
+ENV_REBUILD_OLEAN_PRODUCED=false
+ENV_REBUILD_ILEAN_PRODUCED=false
+ENV_REBUILD_CONTENTION_POSSIBLE=true
+ENV_READY_VERIFIED=false
+GOVERNANCE_STATUS=HOLD_FOR_HUMAN_REAUTHORIZATION
+
+The failed command exposed a missing gate-zero check: an input compiled via
+the dependency worktree's Lake environment must lie under that Lake root.
+The corrected route uses direct Lean 4.21 with `--root` at the F3 worktree
+and an explicit verified dependency path.  A new attempt still requires
+explicit human authorization; it must not raise heartbeats or wall time.
+
+An independent rebuild of only ExactCoreMatrix in
+`/tmp/f3_env_gate.sRowrU` timed out at 300 seconds while another substantial
+Lean compilation was active.  It did not run the pilot or touch its
+worktree.  This is recorded as an incomplete verification, not as a
+mathematical or reproducibility failure.

@@ -1,0 +1,9 @@
+F3_CORE_ARITHMETIC_CODEC_PILOT_v1
+AXIOM_AUDIT=NOT_RUN
+REASON=COMPILE_GATE_DID_NOT_PASS
+SORRY_AX_STATUS=UNKNOWN_NOT_AUDITED
+TRUST_COMPILER_STATUS=UNKNOWN_NOT_AUDITED
+
+The contract permits the axiom audit only after a successful pilot compile.
+No Lean command was run after the root-containment failure.
+

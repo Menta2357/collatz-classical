@@ -1,0 +1,24 @@
+F3_CORE_ARITHMETIC_CODEC_PILOT_v1
+PREFLIGHT_INVOCATION_COUNT=1
+AUTHORIZED_LEAN_ELABORATION_ATTEMPT_COUNT=0
+RESULT=STOP_BEFORE_ELABORATION
+EXIT_CODE=1
+REAL_SECONDS=4.20
+USER_SECONDS=0.34
+SYSTEM_SECONDS=0.69
+TIMEOUT=false
+HEARTBEAT_EXHAUSTION=false
+OLEAN_PRODUCED=false
+ILEAN_PRODUCED=false
+
+COMMAND:
+/opt/homebrew/bin/gtimeout 120 /usr/bin/time -p lake env lean -o <F3_WORKTREE>/.lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.olean -i <F3_WORKTREE>/.lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.ilean <F3_WORKTREE>/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.lean
+
+DIAGNOSTIC:
+input file '<F3_WORKTREE>/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.lean' must be contained in root directory (<DEPENDENCY_WORKTREE>/)
+
+INTERPRETATION:
+Lake rejected the absolute input before Lean elaborated the pilot.  This is
+an execution-root mismatch, not a theorem failure, timeout, heartbeat
+failure, or axiom-audit result.  It remains registered as
+STOP_BEFORE_ELABORATION.  A fresh attempt is on human-authorization HOLD.

@@ -1,0 +1,86 @@
+{
+  "schema": "F3_CORE_ARITHMETIC_CODEC_PILOT_MANIFEST_v2",
+  "date": "2026-07-23",
+  "branch": "codex/f3-density-capture-gate",
+  "verdict": "STOP_AND_RECORD_PILOT_COMPILE_EXIT_1",
+  "compile": {
+    "attempts": 1,
+    "exit_code": 1,
+    "real_seconds": 152.87,
+    "timeout": false,
+    "heartbeat_exhaustion": false,
+    "olean_produced": false,
+    "ilean_produced": false
+  },
+  "axiom_audit": {
+    "executed": false,
+    "reason": "compile_gate_did_not_pass"
+  },
+  "files": [
+    {
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilot.lean",
+      "sha256": "ce072461c6283044a651fd576df5342b0890981b26f776e3023413640d906230"
+    },
+    {
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotAxiomAudit.lean",
+      "sha256": "c83c174b8e3ac61043f1054e0179b2e7b0dd936cea0c84b45e245f612ac03cf6"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_ENVIRONMENT_CHECKPOINT_v1.md",
+      "sha256": "fad4904dbd908dd18d1c83f4ca25ab7149b35216f6b321553cfaf6542f6be8d0"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_PILOT_BUDGET_v2.md",
+      "sha256": "9f9bce6e8ed3a227a21e4f1890f54e78c8c670ba7b2e045adefac9abeb0d4b04"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_PILOT_REPORT_v1.md",
+      "sha256": "52be8fc0e637dee1ed1b79e1d01209dfe1f6f23810906129d5fb4c4ae01e9517"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_CORE_ARITHMETIC_CODEC_PILOT_REPORT_v2.md",
+      "sha256": "63a45a2ac545c3536166abd4bc0ada6a13bcf174be309a2ebfb6bf191f97e7cb"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_NATIVE_DECIDE_PROVENANCE_LEDGER_NOTE_v1.md",
+      "sha256": "e36fbf6997868e5508dff3905f75c80fc46e0835eb7ebf7723d64e84e779e7f8"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/axiom_audit.txt",
+      "sha256": "59518f11983d762e5b8be7da7d20a6cc4aa8b764980de736943459a9c8648b50"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/axiom_audit_v2.txt",
+      "sha256": "ec45bc4676ad49ad472dbefbb45e2da79f4e6dcace53ec1be67bcd02a1a31e16"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/environment_precheck.txt",
+      "sha256": "648bf0abf71f256144d34739d961115af7776fde04617bc746446722b06c8bae"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/environment_precheck_v2.txt",
+      "sha256": "52ebcd6418d39341a3a7ff75be1d25c4ac7d312824ae5b1fd73c27e66056ec2b"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/pilot_compile.txt",
+      "sha256": "4a8941757e17a5e13fcc7b1bbc6a355ed9c314f4637108ca97dfa70c9bce865e"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/pilot_compile_v2.txt",
+      "sha256": "b151f81f1ba11263402e528921e5fac97baa8fdab77ad56bb8e5981a34eb338d"
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/results/F3_CORE_ARITHMETIC_CODEC_PILOT_v1/source_contract_audit.txt",
+      "sha256": "342bc8e70ef10507b88d37f293b3eeab71b9ad9ba8d268f9fbff3d298a7d8b95"
+    }
+  ],
+  "non_claims": [
+    "NO_LEAN_PASS",
+    "NO_AXIOM_AUDIT_PASS",
+    "NO_243_STATE_EXTENSION",
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_ALMOST_ALL",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ]
+}
