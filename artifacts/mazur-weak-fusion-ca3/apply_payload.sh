@@ -48,6 +48,10 @@ verify_hash b445785f23832013be47e9309f0a3bf599120d5fb762a389dbe0dad1846673e3 \
   Erdos1135/ND/Conventions.lean
 verify_hash 963db56eac013f0319e6b32f32b8240a296c7d0f6f9ee83a594209a7f874c5d6 \
   Erdos1135/ND/Statement.lean
+verify_hash cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30 \
+  LICENSE
+verify_hash 78d24afa82e943d2bd65af48accb0a802d1debc12043394e398899fdaacb3a3c \
+  NOTICE
 
 if ! grep -q '"packageCommit": "ca3dd0d63920411213403092aecc6946619eb082"' \
     "$target_abs/proofatlas-source-manifest.json"; then
@@ -57,9 +61,16 @@ fi
 
 payload_hash=$(shasum -a 256 "$payload" | awk '{print $1}')
 if [ "$payload_hash" != \
-    "0079036461e8a7081a35bf9449561a924092e8185dc581f0a5fc8aae9ad36da2" ]; then
+    "4ceeb087ec3faa9ec95566888b6487dbabbc6317714c0e080dc44fd3b4d45b25" ]; then
   echo "payload hash mismatch" >&2
   exit 70
+fi
+
+archive_paths=$(tar -tzf "$payload" | sed '/\/$/d')
+expected_paths=$(cat "$script_dir/payload-archive-files.txt")
+if [ "$archive_paths" != "$expected_paths" ]; then
+  echo "payload path inventory mismatch" >&2
+  exit 71
 fi
 
 tar -xzf "$payload" -C "$target_abs"
