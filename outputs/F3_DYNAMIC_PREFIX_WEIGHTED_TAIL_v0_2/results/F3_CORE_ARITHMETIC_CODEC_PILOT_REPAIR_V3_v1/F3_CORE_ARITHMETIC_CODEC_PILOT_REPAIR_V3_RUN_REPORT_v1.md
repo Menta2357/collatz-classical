@@ -1,6 +1,6 @@
 # F3 arithmetic-codec pilot repair v3 run report v1
 
-Status: `FROZEN_PRE_RUN / CONDITIONAL_GO_MATERIALIZED / INVOCATIONS_ZERO`
+Status: `ARITHMETIC_CODEC_REPAIR_V3_STOP_AND_RECORD / LEAN_UNSOLVED_GOAL / NOT_MATHEMATICAL_COUNTEREXAMPLE — AUDIT_NOT_OPENED`
 
 Date: 2026-07-24.
 
@@ -142,6 +142,72 @@ FROZEN_INPUTS = MATCH
 GO_SCOPE = MATCH
 EXECUTION_GATE = OPEN_FOR_SOLE_COMPILE_AFTER_THIS_REPORT_COMMIT
 NO_RETRY
+NO_243_SOURCE_EXTENSION
+NO_SEMANTIC_FIRST_HIT_EXECUTION
+NO_RHO_CERTIFICATE
+NO_DENSITY_THEOREM
+NO_GLOBAL_COLLATZ_CLAIM
+```
+
+## 7. Terminal result
+
+The sole compile command was invoked once from frozen-run commit
+`005258d080260d5502b42bde03672ed4d8449f20`.  It returned exit 1 after
+140.37 seconds.  It did not time out or exhaust the heartbeat budget.
+
+The three nonfatal `unnecessarySimpa` warnings from v2 remain.  The only error
+is the retarded branch of `pilotFrozenPos_agrees`.  The explicit `change` and
+named unfolding expose the intended piecewise arithmetic expression, but the
+restricted `simp only` does not close the remaining equality between the
+`Fin` value projection and the same piecewise natural-number expression.
+This is a tactic/elaboration STOP, not a failed arithmetic instance or a
+counterexample to the pilot construction.
+
+The complete combined compiler log contains 17 lines and 1425 bytes:
+
+```text
+v3 compile log sha256 =
+3d9596ba1ebe3254b8cad9aba6219716629104847589f94c7f3612a51febd1c6
+```
+
+No repair `.olean` or `.ilean` was produced.  Therefore the conditional axiom
+audit and coverage checker were not invoked.  All frozen hashes were
+recomputed after the run and match; the source, audit, inventory and checker
+diff against custody commit `f30a300...` is empty.
+
+```text
+V3_COMPILE_INVOCATIONS = 1
+V3_COMPILE_EXIT = 1
+V3_COMPILE_WALL_SECONDS = 140.37
+V3_COMPILE_USER_SECONDS = 15.83
+V3_COMPILE_SYS_SECONDS = 13.45
+V3_COMPILE_TIMEOUT = false
+V3_COMPILE_HEARTBEAT_EXHAUSTION = false
+V3_COMPILE_FAILURE_CLASS = LEAN_UNSOLVED_GOAL
+V3_COMPILE_OLEAN = ABSENT
+V3_COMPILE_ILEAN = ABSENT
+V3_AUDIT_INVOCATIONS = 0
+V3_AUDIT_EXIT = NOT_RUN_BY_CONTRACT
+V3_AUDIT_OLEAN = ABSENT
+V3_AUDIT_ILEAN = ABSENT
+V3_CHECKER_INVOCATIONS = 0
+POST_RUN_HASHES = MATCH_FROZEN_INPUTS
+POST_RUN_SOURCE_DIFF = EMPTY
+RETRY = false
+SOURCE_EDIT_AFTER_ATTEMPT = false
+SEMANTIC_FIRST_HIT_EXECUTION = false
+FULL_EXTENSION_OPENED = false
+FINAL_VERDICT = ARITHMETIC_CODEC_REPAIR_V3_STOP_AND_RECORD / LEAN_UNSOLVED_GOAL / NOT_MATHEMATICAL_COUNTEREXAMPLE
+```
+
+No next repair is implemented or authorized here.  A future route would need
+a new branch and contract for a materially explicit treatment of the three
+piecewise cases or of the `Fin` value projection.  This report does not claim
+that either mechanism compiles.
+
+```text
+NO_RETRY
+NO_AUDIT
 NO_243_SOURCE_EXTENSION
 NO_SEMANTIC_FIRST_HIT_EXECUTION
 NO_RHO_CERTIFICATE
