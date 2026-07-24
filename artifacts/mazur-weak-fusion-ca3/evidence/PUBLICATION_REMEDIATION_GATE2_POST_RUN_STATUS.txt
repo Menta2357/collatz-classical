@@ -1,0 +1,29 @@
+baseline commit: b7da87864ced8abd6c3715b65320efc233c0d853
+
+$ git status --short --branch
+## h1-publication-gate2-prebuild
+?? .lake/
+?? lake-manifest.json
+
+$ git diff --stat
+[no output]
+
+$ git diff --name-only
+[no output]
+
+$ git diff --stat b7da87864ced8abd6c3715b65320efc233c0d853 -- ':(glob)**/*.lean' LICENSE NOTICE lakefile.lean lean-toolchain
+[no output]
+
+$ git diff --name-only b7da87864ced8abd6c3715b65320efc233c0d853 -- ':(glob)**/*.lean' LICENSE NOTICE lakefile.lean lean-toolchain
+[no output]
+
+Source-remediation comparison:
+
+```text
+6b06ae59d61e58f5173cbd863b3b2e274675b000..
+ef1a5a75d92f75c5550e2ba261726d7264005f4e
+9 files changed, 76 insertions(+), 0 deletions
+```
+
+Interpretation: the publication remediation added only calibrated comments and
+the retained license header. Gate 2 introduced no tracked source change.

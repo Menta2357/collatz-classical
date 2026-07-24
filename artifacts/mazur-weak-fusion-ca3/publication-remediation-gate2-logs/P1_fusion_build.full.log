@@ -1,0 +1,20 @@
+✔ [2947/2962] Built FormalConjectures.Wikipedia.CollatzStep (19s)
+✔ [2948/2962] Built Erdos1135.Terras.Density.NaturalDensity (37s)
+✔ [2949/2962] Built Erdos1135.ND.CountingCore (34s)
+✔ [2950/2962] Built Erdos1135.Basic (54s)
+✔ [2951/2962] Built Erdos1135.CollatzStep (49s)
+✔ [2952/2962] Built Erdos1135.Parity (44s)
+✔ [2953/2962] Built Erdos1135.Iterate (44s)
+✔ [2954/2962] Built Erdos1135.Division (51s)
+✔ [2955/2962] Built Erdos1135.Orbit (51s)
+✔ [2956/2962] Built Erdos1135.Terras.Core.Defs (41s)
+✔ [2957/2962] Built Erdos1135.ND.FiniteBaseCertificate (41s)
+✔ [2958/2962] Built Erdos1135.Tao.Syracuse.Defs (35s)
+✔ [2959/2962] Built Erdos1135.ND.StatementCore (40s)
+✔ [2960/2962] Built Erdos1135.Tao.Syracuse.Basic (41s)
+✔ [2961/2962] Built Erdos1135.Tao.Syracuse.CollatzBridge (36s)
+✔ [2962/2962] Built Erdos1135.ND.FusionParametric (33s)
+Build completed successfully (2962 jobs).
+real 414.04
+user 26.11
+sys 84.16

@@ -12,8 +12,8 @@ F386_FROZEN_PAPER_ROLE_NOT_VERIFIED
 ROOT_AND_ARTIFACT_NOTICE_REMEDIATED
 PAYLOAD_MODIFIED_FILE_NOTICES_PASS
 SELF_CONTAINED_PUBLICATION_TAR_PASS
-FINAL_BUILD_STOP_ENVIRONMENTAL_NO_SPACE
-GH_CLI_MISSING_BLOCK_PUBLICATION
+PUBLICATION_BYTES_BUILD_AND_AXIOM_AUDIT_PASS
+GH_AUTH_INVALID_BLOCK_PUBLICATION
 ```
 
 This is a publication preflight, not a publication authorization. It neither
@@ -157,15 +157,17 @@ Apache/NOTICE obligations.
 
 ## Required remediation before push
 
-1. Obtain explicit authorization for environmental capacity remediation. The
-   failed E1 left only 47 MiB available; no cleanup was performed automatically.
-2. After capacity is restored, freeze a new one-attempt gate and rebuild/audit
-   the immutable publication tar. The 2026-07-24 attempt stopped during cache
-   decompression; P1 and A1 were not run.
-3. Update or explicitly mark the Gate-1 “build pending” text as a historical
+1. Re-authenticate GitHub CLI and repeat `gh auth status`; the installed CLI
+   currently rejects the active `Menta2357` token.
+2. Update or explicitly mark the Gate-1 “build pending” text as a historical
    snapshot so it cannot be mistaken for current status.
-4. Keep all `f386357d...` role and ancestry claims absent.
-5. Install and authenticate GitHub CLI, then repeat remote/base checks.
+3. Keep all `f386357d...` role and ancestry claims absent.
+4. Obtain explicit human authorization for the prepared push/draft-PR step.
+
+The first publication execution gate remains an immutable environmental STOP.
+After capacity was restored, independent Gate 2 reconstructed the same tar,
+passed 13/13 hashes, built 2962 jobs, and audited all 12 declarations with only
+`propext`, `Classical.choice`, and `Quot.sound`.
 
 ## Prepared branch and draft PR
 
@@ -189,7 +191,7 @@ Required final checks are listed in
 
 ## Tooling gate
 
-`gh --version` failed with exit code 127 (`command not found`). Under the
-GitHub publication workflow, authentication cannot be checked and neither a
-push nor PR creation is permitted. No branch was created, no push occurred,
-and no PR was opened in this preflight.
+GitHub CLI `2.79.0` is now installed, but `gh auth status` returns exit code 1:
+the active `Menta2357` token is invalid. Under the GitHub publication workflow,
+neither a push nor PR creation is permitted until re-authentication succeeds.
+No push occurred and no PR was opened.

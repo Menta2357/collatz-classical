@@ -1,6 +1,6 @@
 # H1 publication-remediation execution Gate 2
 
-Status: `FROZEN_EXECUTION_PENDING`
+Status: `PASS_APACHE_REMEDIATED_PUBLICATION_BYTES_BUILD_AND_AXIOM_AUDIT`
 
 Frozen: 2026-07-24
 
@@ -125,15 +125,37 @@ successful cache preparation. No independent redundant cache command is run.
 ## Results
 
 ```text
-R0: PENDING
-R1: PENDING
-reconstruction baseline: PENDING
-E1/E2: PENDING
-P1: PENDING
-A1: PENDING
-audit coverage/profile: PENDING
-post-run source diff: PENDING
+R0: PASS; exit 0; real 0.21s; user 0.06s; sys 0.09s
+R1: PASS; exit 0; real 0.16s; user 0.07s; sys 0.04s
+candidate hashes: 13/13 PASS, including LICENSE and NOTICE
+reconstruction baseline: b7da87864ced8abd6c3715b65320efc233c0d853
+E1: PASS; exit 0; real 120.08s; user 66.52s; sys 35.25s
+E2: SATISFIED_BY_E1_OFFICIAL_POST_UPDATE_HOOK
+E2 detail: Azure cache; 8283 files decompressed; no files to download
+P1: PASS; exit 0; real 414.04s; user 26.11s; sys 84.16s
+P1 detail: Build completed successfully (2962 jobs)
+A1: PASS; exit 0; real 35.45s; user 1.71s; sys 5.88s
+captured real time total: 569.94s
+audit coverage: 12/12 listed declarations
+audit inventory: exact ordered match with AXIOM_AUDIT_RESULTS.tsv
+audit profile: [propext, Classical.choice, Quot.sound] for all 12
+sorryAx/Lean.ofReduceBool/native_decide/admit in audit output: absent
+post-run tracked source diff: empty
+post-run untracked environmental paths: .lake/, lake-manifest.json
+final capacity observation: 15 GiB available; 97% capacity
 ```
+
+The source-remediation diff against the previously built extension commit is
+exactly nine files and 76 inserted comment/header lines, with no deletions.
+The build and audit introduced no tracked source change relative to the Gate 2
+baseline. The publication tar still has SHA-256
+`4ceeb087ec3faa9ec95566888b6487dbabbc6317714c0e080dc44fd3b4d45b25`
+and exactly 11 regular files: nine Lean files, `LICENSE`, and `NOTICE`.
+
+This PASS validates the Apache-remediated publication bytes and the stated
+conditional API. It does not discharge the theorem's quantitative or finite-
+base hypotheses and does not assert a natural-density limit or the Collatz
+conjecture.
 
 ## Publication tooling boundary
 

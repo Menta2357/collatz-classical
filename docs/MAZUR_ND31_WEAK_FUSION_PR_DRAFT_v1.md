@@ -54,14 +54,17 @@ future quantitative witness would enter without asserting that witness.
   evidence.
 - [x] Confirm the publication tar itself contains exact `LICENSE`/`NOTICE`.
 - [x] Fresh publication reconstruction and 13/13 candidate hashes passed.
-- [ ] Restore disk capacity under explicit authorization. E1 stopped with
-  `No space left on device`; no cleanup or retry was performed.
-- [ ] Complete target build and 12/12 axiom audit against the publication
-  bytes. P1 and A1 remain not run for the remediated payload.
+- [x] Preserve the first environmental STOP without cleanup or retry.
+- [x] Independent Gate 2 rebuilt the immutable publication tar after capacity
+  was restored: 2962 jobs completed successfully.
+- [x] Gate 2 audited 12/12 declarations; each profile is exactly `propext`,
+  `Classical.choice`, and `Quot.sound`, with no `sorryAx` or
+  `Lean.ofReduceBool`.
 - [ ] `git diff --check` on the final publication head.
 - [ ] Verify final diff contains no `.lake`, `.olean`, dependency checkout, or
   unrelated work.
-- [ ] Install `gh`, run `gh auth status`, and reconfirm the intended scope.
+- [ ] Re-authenticate `gh`; version 2.79.0 is installed but the active token is
+  invalid. Reconfirm remote/base/scope after authentication.
 
 ## Reviewer focus
 
