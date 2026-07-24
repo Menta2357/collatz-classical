@@ -1089,6 +1089,7 @@ theorem pilotFrozenPos_agrees (e : PilotFormulaEdge) :
       change
         (pilotFrozenPos (.retarded i)).1 = rowStart (fin27To243 i)
       simp only [pilotFrozenPos, rowStart, fin27To243]
+      split_ifs <;> rfl
   | advancedDirect k ell =>
       have hk := k.2
       have he := ell.2
