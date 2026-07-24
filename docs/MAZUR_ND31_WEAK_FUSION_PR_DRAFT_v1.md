@@ -60,11 +60,12 @@ future quantitative witness would enter without asserting that witness.
 - [x] Gate 2 audited 12/12 declarations; each profile is exactly `propext`,
   `Classical.choice`, and `Quot.sound`, with no `sorryAx` or
   `Lean.ofReduceBool`.
-- [ ] `git diff --check` on the final publication head.
-- [ ] Verify final diff contains no `.lake`, `.olean`, dependency checkout, or
+- [x] `git diff --check` on the final publication head, with one path-scoped
+  whitespace exception for the immutable hashed environmental STOP log.
+- [x] Verify final diff contains no `.lake`, `.olean`, dependency checkout, or
   unrelated work.
-- [ ] Re-authenticate `gh`; version 2.79.0 is installed but the active token is
-  invalid. Reconfirm remote/base/scope after authentication.
+- [x] Re-authenticate `gh`; confirm `Menta2357` has repository-admin access,
+  reconfirm remote/base/scope, and pass a write-path `git push --dry-run`.
 
 ## Reviewer focus
 

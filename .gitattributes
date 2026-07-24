@@ -1,0 +1,4 @@
+# Preserve the byte-exact failed environmental run while excluding only its
+# captured terminal line from whitespace diagnostics.  The file is immutable
+# evidence and its recorded SHA-256 must not be changed for cosmetic cleanup.
+artifacts/mazur-weak-fusion-ca3/publication-remediation-logs/E1_lake_update.full.log -whitespace

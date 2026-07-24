@@ -5,7 +5,7 @@ Status:
 ```text
 PASS_WITH_CANONICAL_REPIN_TO_CA3
 NO_F386_ATTRIBUTION_AUTHORIZED
-SUCCESSOR_PAYLOAD_PREPARED_NOT_COMPILED
+GATE0_STATIC_SNAPSHOT_SUPERSEDED_BY_GATE2_BUILD_AND_AUDIT_PASS
 ```
 
 ## Remote custody anchors
@@ -43,7 +43,8 @@ custodied artifact is instead:
 2. exact base and candidate hash manifests;
 3. a toolchain/Mathlib pin;
 4. a guarded reconstruction script for a clean `ca3dd0d...` extract;
-5. a build/audit report which remains visibly pending.
+5. a build/audit report which was pending at Gate 0 and is now superseded by
+   the preserved Gate 2 build and axiom-audit PASS.
 
 The guarded reconstruction script was run against a fresh ZIP extraction and
 verified all eleven candidate source/environment hashes. It did not invoke
@@ -69,9 +70,12 @@ finite certificate.
 
 ## Non-claims
 
-- No reconstructed build has run.
-- No axiom output from the successor exists yet.
+- Gate 0 itself ran no reconstructed build; the later preserved Gate 2 run
+  built all 2962 jobs and audited all 12 declarations.
+- Gate 0 itself produced no axiom output; Gate 2 subsequently recorded exactly
+  `propext`, `Classical.choice`, and `Quot.sound` for each audited declaration.
 - No natural-density limit is claimed.
 - No unconditional positive-density result is claimed.
 - No global Collatz claim is made.
-- No push or publication has occurred.
+- No push or publication occurred at Gate 0; publication is governed by the
+  later publication preflight and explicit authorization.

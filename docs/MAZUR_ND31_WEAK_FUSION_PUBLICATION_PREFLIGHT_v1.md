@@ -5,7 +5,7 @@ Audit date: 2026-07-24
 Status:
 
 ```text
-STOP_NO_PUSH_NO_PR
+READY_FOR_AUTHORIZED_PUSH_AND_DRAFT_PR
 REMOTE_AND_ANCESTRY_PASS
 CA3_PACKAGE_COMMIT_ROLE_VERIFIED
 F386_FROZEN_PAPER_ROLE_NOT_VERIFIED
@@ -13,11 +13,15 @@ ROOT_AND_ARTIFACT_NOTICE_REMEDIATED
 PAYLOAD_MODIFIED_FILE_NOTICES_PASS
 SELF_CONTAINED_PUBLICATION_TAR_PASS
 PUBLICATION_BYTES_BUILD_AND_AXIOM_AUDIT_PASS
-GH_AUTH_INVALID_BLOCK_PUBLICATION
+GATE1_ENVIRONMENTAL_STOP_PRESERVED
+GH_AUTH_REPOSITORY_ADMIN_AND_PUSH_DRY_RUN_PASS
+IMMUTABLE_STOP_LOG_WHITESPACE_EXCEPTION_SCOPED
 ```
 
-This is a publication preflight, not a publication authorization. It neither
-creates nor pushes a branch and it does not open a pull request.
+This document originated as a publication preflight.  Its closure update
+records the later Gate 2 PASS, live GitHub authentication and repository-admin
+receipt, successful write-path dry run, and explicit human authorization.  It
+does not itself create or push a branch or open a pull request.
 
 ## Remote and ancestry receipts
 
@@ -155,14 +159,17 @@ local change notice are now present. No incompatible dependency tree is
 vendored, and the publication tar is self-contained for the identified
 Apache/NOTICE obligations.
 
-## Required remediation before push
+## Required remediation before push: closure record
 
-1. Re-authenticate GitHub CLI and repeat `gh auth status`; the installed CLI
-   currently rejects the active `Menta2357` token.
-2. Update or explicitly mark the Gate-1 “build pending” text as a historical
-   snapshot so it cannot be mistaken for current status.
-3. Keep all `f386357d...` role and ancestry claims absent.
-4. Obtain explicit human authorization for the prepared push/draft-PR step.
+1. GitHub CLI authentication, repository-admin access, and the write path were
+   rechecked successfully for `Menta2357`.
+2. Gate-0 “build pending” text is explicitly marked as a historical snapshot
+   superseded by the preserved Gate 2 PASS.
+3. All `f386357d...` role and ancestry claims remain absent.
+4. The human explicitly authorized the prepared push/draft-PR sequence.
+5. The only whole-branch whitespace diagnostic belongs to the byte-exact,
+   hashed environmental STOP log.  Root `.gitattributes` disables whitespace
+   diagnostics for that exact path only; the log itself remains unchanged.
 
 The first publication execution gate remains an immutable environmental STOP.
 After capacity was restored, independent Gate 2 reconstructed the same tar,
@@ -191,7 +198,9 @@ Required final checks are listed in
 
 ## Tooling gate
 
-GitHub CLI `2.79.0` is now installed, but `gh auth status` returns exit code 1:
-the active `Menta2357` token is invalid. Under the GitHub publication workflow,
-neither a push nor PR creation is permitted until re-authentication succeeds.
-No push occurred and no PR was opened.
+GitHub CLI `2.79.0` is authenticated through the keyring as `Menta2357` with
+`repo` access.  A live repository query reports `ADMIN` permission on
+`Menta2357/collatz-classical`; `git ls-remote` reconfirms `master@ccc561d...`,
+the custody base `7f659eb...`, and the F3 base `ed31d76...`.  Finally,
+`git push --dry-run` reports that the prepared H1 head can create
+`agent/mazur-weak-fixed-target-fusion-ca3`.  The dry run made no remote change.
