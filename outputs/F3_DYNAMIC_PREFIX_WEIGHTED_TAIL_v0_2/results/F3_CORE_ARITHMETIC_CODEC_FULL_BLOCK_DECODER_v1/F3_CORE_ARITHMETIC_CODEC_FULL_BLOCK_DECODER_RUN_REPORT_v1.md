@@ -1,6 +1,6 @@
 # F3 arithmetic-codec full block decoder run report v1
 
-Status: `PRE_RUN_FROZEN / NOT_EXECUTED`
+Status: `PASS / SYMBOLIC_DECODER_ONLY / LOCAL_ARTIFACT_CONTINUATION`
 
 Date: 2026-07-24.
 
@@ -11,7 +11,8 @@ branch = codex/hilo2-f3-full-block-decoder-v1
 public base PR = https://github.com/Menta2357/collatz-classical/pull/12
 public base head = ef39994163d7124b896aca32a02f3b452fd56637
 prepared-input commit = cb5a63537407bd59238a8bd365de23da2c4df668
-pre-run report commit = the public PR head containing this file
+pre-run report commit = 0eff966d51442b1e4daa21541265d4f9d90f2894
+public execution custody = https://github.com/Menta2357/collatz-classical/pull/13
 ```
 
 This is a symbolic decoder gate for the factorization `729 = 9 * 81`.  It
@@ -130,3 +131,78 @@ mismatch or forbidden occurrence is terminal STOP.  No retry, edit, alternate
 proof, budget change, cleanup, amend, force-push, retarget, merge or later
 phase is authorized after R0 begins.  PASS or STOP, the immutable logs and
 terminal report must be fast-forwarded to the same public draft PR.
+
+## 7. Terminal invocation ledger and phase results
+
+```text
+PRECONTRACT_STATIC_INVENTORY_CHECKS = 1
+PRECONTRACT_GUARD_REGRESSION_INVOCATIONS = 1
+R0_INVOCATIONS = 1
+S0_INVOCATIONS = 1
+C0_INVOCATIONS = 1
+A1_INVOCATIONS = 1
+K1_INVOCATIONS = 1
+LAKE_INVOCATIONS = 0
+RETRIES = 0
+POST_R0_SOURCE_EDITS = 0
+POST_R0_BUDGET_CHANGES = 0
+```
+
+All five authorized phases ran once, in order, from the public pre-run head.
+No phase failed or timed out, and no prohibited continuation occurred.
+
+```text
+R0 = PASS; exit 0; real 0.01s; 640/640/640; good log accepted; bad fixture rejected
+S0 = PASS; exit 0; real 0.10s; 2 regular files; 0 symlinks; 2/2 hashes exact
+C0 = PASS; exit 0; real 140.71s; 4 regular files; 0 symlinks
+A1 = PASS; exit 0; real 241.12s; audit objects present; terminal profiles emitted
+K1 = PASS; exit 0; real 0.03s; 30/30/30; 5/5; 124/124/124; forbidden axioms absent
+```
+
+After A1 the overlay contains exactly six regular files and zero symlinks.
+The two staged inputs retained their frozen hashes throughout.
+
+## 8. Terminal artifact hashes
+
+```text
+R0 log (11 lines, 258 bytes) = 64ca372320da664bde3065a826e4b9d2c86f53bb1ff30e8883adda23ab3853c7
+S0 log (37 lines, 1480 bytes) = 59a7134f62a11df5ea4a48871f78595fa6c5f324387620f299d616557c0d1b1a
+C0 log (3 lines, 32 bytes) = 5cbbd296d3893cb23c5f7dead6be5c7c0d35c5c31b03a80ab3b82c07809da3a3
+A1 log (251 lines, 18799 bytes) = cb1474bf1d70fbc336b3d2c21cf7d8b5dc4729edad8e6f8dbbe49b68faae68c8
+K1 log (18 lines, 544 bytes) = 045d55872b4465b326a025bc63ff592f185b80dbedf7f08e46eaca286570d846
+decoder olean = 225e7cbca64ec5d9ad7e609fdc08bcf60401cbd356f2d4bd20d74b51662bc8ec
+decoder ilean = 20cad64e00ba1826e30b7d686e03a1341516bb8e680fa03f8b0b2cf0e4222ffe
+audit olean = dba6fe1b8badd53ef43a5bce8717a7abcdc06c776fde830cd4d0840b6b9256f9
+audit ilean = 6b63ac833f29a942a656ebdd5a04354758c3cc19c4bd48650b7b71b909c95b55
+```
+
+## 9. Five designated terminal theorem profiles
+
+```text
+liftPilotEdge_edgeBlock_edgeLocal = [propext, Classical.choice, Quot.sound]
+frozenPos_liftPilotEdge = [propext, Quot.sound]
+frozenPos_eq_joinPosition = [propext, Classical.choice, Quot.sound]
+corePositionUnrank_frozenPos = [propext, Classical.choice, Quot.sound]
+corePositionToRank_frozenPos = [propext, Classical.choice, Quot.sound]
+```
+
+The whole A1 log has 124 environmental namespace declarations, 124 profiles
+and 124 unique profile names.  It contains zero occurrences of
+`Lean.ofReduceBool` and `sorryAx`.
+
+## 10. Calibrated verdict
+
+`FULL_BLOCK_SYMBOLIC_DECODER_GATE = PASS`.
+
+The machine-checked result is the symbolic decoder and its left-inverse law:
+it recovers every formula edge from that edge's frozen position in the
+243-source/729-edge type, using the audited 81-edge pilot blocks.  This
+removes that decoding risk before any full literal normalization is
+attempted.
+
+The gate remains dependent on two ignored staged objects and therefore is not
+a fresh-clone result.  It does not establish that the frozen 729-entry
+`coreEdges` literal is `List.ofFn corePositionRealize`; that normalization,
+the resulting permutation/matrix identity, and the predeclared first-hit gate
+remain separate future gates.  No F3 exponent or density theorem follows from
+this PASS alone.
