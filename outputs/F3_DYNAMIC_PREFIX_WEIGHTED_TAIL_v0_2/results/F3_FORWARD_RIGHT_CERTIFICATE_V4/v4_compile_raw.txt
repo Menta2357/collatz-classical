@@ -1,0 +1,14 @@
+F3_FORWARD_V4_C0_PRECHECK_STATUS=0
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:80:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:85:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+real 1109.31
+user 49.02
+sys 139.70
+F3_FORWARD_V4_C0=PASS
+F3_FORWARD_V4_C0_LEAN_EXIT_STATUS=0
+F3_FORWARD_V4_C0_HEAD=727e43fe3e739c8fbec428c30ada322415f1e1fb
+F3_FORWARD_V4_TARGET_OLEAN_SHA256=376390a3f8fc72d2058a19c2b0028d08280a210a074ec88fd60a942781f017af
+F3_FORWARD_V4_TARGET_ILEAN_SHA256=9a479f85f00eb0bafb48a8ccdb52ef044ab2188ca39a4b8c5451d2777089ef57
+F3_FORWARD_V4_C0_WRAPPER_EXIT_STATUS=0

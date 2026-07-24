@@ -1,0 +1,252 @@
+F3_FORWARD_V4_A1_PRECHECK_STATUS=0
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81' does not depend on any axioms
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeightNat' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff' does not depend on any axioms
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightNatCertificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightNatCertificate_proved' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff_le_channelWeight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listRowAction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listRowAction_eq_matrix_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerListRow_le_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forward_target_le_lower_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.coreMatrix_eq_formulaForwardMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix_row_action_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardFormula_row_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forward_weighted_mass_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+NAMESPACE_DECLARATION_COUNT=129
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_75._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_35._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_11._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_72._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_55._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.eq_4	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._proof_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_18._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_29._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_45._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_52._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_9._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_17._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_16._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_31._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_46._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_5._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_7._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.match_1._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff_le_channelWeight	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_56._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_47._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardFormula_row_certificate	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_43._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_23._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightNatCertificate_proved	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_28._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_81._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeightNat._cstage1	[propext,
+ Quot.sound,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_25._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.eq_2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerListRow_le_actual	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_61._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_48._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_38._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_51._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_14._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeightNat	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_40._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_8._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_49._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_27._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forward_target_le_lower_row	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_12._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_22._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_64._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_54._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_82._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listRowAction	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_4._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_69._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_6._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_33._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat._cstage2	[List.filterTR.loop._at.CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat._spec_1,
+ propext,
+ Quot.sound,
+ Classical.choice,
+ List.foldrTR._at.CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat._spec_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_57._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_65._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.eq_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_15._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix_nonneg	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_32._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightNatCertificate.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_10._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_71._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_78._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_58._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightNatCertificate	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_76._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_13._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_24._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_79._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_60._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_20._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_26._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listRowAction_eq_matrix_sum	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_53._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight_nonneg	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_74._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_41._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_30._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightBlock	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeightNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_59._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_34._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_36._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_70._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_37._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_80._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_39._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_68._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_77._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_66._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_21._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_67._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeight._cstage2	[propext,
+ Quot.sound,
+ Nat.cast._at.Real.instNatCast._spec_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_73._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_50._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_19._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listRowAction.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_44._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.listMatrix.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.coreMatrix_eq_formulaForwardMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_62._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forward_weighted_mass_step	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff.match_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerChannelCoeff._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.lowerForwardRowNat._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_42._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.formulaForwardMatrix_row_action_identity	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3ForwardFormulaRightCertificate.forwardRightWeights81._closed_63._cstage2	[]
+real 325.22
+user 13.38
+sys 29.80
+F3_FORWARD_V4_A1=PASS
+F3_FORWARD_V4_A1_LEAN_EXIT_STATUS=0
+F3_FORWARD_V4_A1_HEAD=727e43fe3e739c8fbec428c30ada322415f1e1fb
+F3_FORWARD_V4_AUDIT_OLEAN_SHA256=ca63fc1f43ae8da04347f2add16c8f42997cbd0bfdc6c39f886f067092148bba
+F3_FORWARD_V4_AUDIT_ILEAN_SHA256=55c10ae0d582ee52215ba5ae0ba26402466a3fccc32e2f82872903729f69aa31
+F3_FORWARD_V4_A1_WRAPPER_EXIT_STATUS=0
