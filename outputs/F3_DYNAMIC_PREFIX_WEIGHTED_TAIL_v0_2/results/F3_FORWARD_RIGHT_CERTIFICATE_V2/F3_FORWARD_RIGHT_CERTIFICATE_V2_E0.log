@@ -1,0 +1,42 @@
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+info: mathlib: checking out revision '308445d7985027f538e281e18df29ca16ede2ba3'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision 'c4aa78186d388e50a436e8362b947bae125a2933'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision '6c62474116f525d2814f0157bb468bf3a4f9f120'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'd07bd64f1910f1cc5e4cc87b6b9c590080e7a457'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '6980f6ca164de593cb77cd03d8eac549cc444156'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '8ff27701d003456fd59f13a9212431239d902aef'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'e9c65db4823976353cd0bb03199a172719efbeb7'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '8d2067bf518731a70a255d4a61b5c103922c772e'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '7c6aef5f75a43ebbba763b44d535175a1b04c9e0'
+Built Cache.Lean
+Built Cache.Lean:c.o
+Built Batteries.Data.String.Basic
+Built Cache.IO
+Built Batteries.Data.String.Basic:c.o
+Built Batteries.Data.Array.Match
+Built Batteries.Data.String.Matcher
+Built Batteries.Data.Array.Match:c.o
+Built Batteries.Data.String.Matcher:c.o
+Built Cache.Hashing
+Built Cache.IO:c.o
+Built Cache.Requests
+Built Cache.Hashing:c.o
+Built Cache.Main
+Built Cache.Main:c.o
+Built Cache.Requests:c.o
+Built cache
+downloaded leantar 0.1.15 archive (847k)
+installing leantar 0.1.15
+uncaught exception: failure in tar #[-xf, /Users/MoiTam/.cache/mathlib/leantar-0.1.15.tar.gz, -C, /Users/MoiTam/.cache/mathlib, --strip-components=1]:
+tar: Failed to set default locale
+real 120.51
+user 57.88
+sys 11.68
