@@ -1,0 +1,4 @@
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionCoreArithmeticCodecPilotRepairAxiomAudit.lean:1:0: error: object file '/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/.lake/build/lib/lean/CollatzClassical/KL2003/F3ReturnExcursionExactCoreMatrix.olean' of module CollatzClassical.KL2003.F3ReturnExcursionExactCoreMatrix does not exist
+real 0.13
+user 0.02
+sys 0.04
