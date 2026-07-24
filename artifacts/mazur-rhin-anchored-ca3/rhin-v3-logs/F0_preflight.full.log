@@ -1,0 +1,43 @@
+F0_LOCAL_EXECUTION_HEAD=c5f3c6989e19f1c228cfcf7fb04ba7b13957b194
+F0_PUBLIC_BRANCH_HEAD=c5f3c6989e19f1c228cfcf7fb04ba7b13957b194
+F0_PUBLIC_REF=refs/heads/agent/mazur-rhin-anchored-warm-gate-v3
+F0_PUBLIC_HEAD_EQUALS_LOCAL=PASS
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+F0_CUSTODY_TRACKED_DIFF=EMPTY
+F0_RECONSTRUCTION_COMMIT=PASS
+F0_RECONSTRUCTION_TRACKED_DIFF=EMPTY
+F0_UNTRACKED_SCOPE=EXPECTED_ONLY
+F0_CANDIDATE_HASHES=PASS
+F0_CANDIDATE_BYTE_IDENTITY=PASS
+F0_TOOLCHAIN=leanprover/lean4:v4.30.0
+F0_MATHLIB_REV=c5ea00351c28e24afc9f0f84379aa41082b1188f
+F0_MATHLIB_WORKTREE=TRACKED_CLEAN
+F0_AVAILABLE_KB=16530276
+F0_DISK_MINIMUM_12_GIB=PASS
+F0_FUSION_PARAMETRIC_CACHE=PRESENT
+F0_RHIN_AND_TARGET_ARTIFACTS=ABSENT
+F0_LATER_PHASE_LOGS=ABSENT
+F0_PREFLIGHT=PASS
+real 0.71
+user 0.07
+sys 0.17

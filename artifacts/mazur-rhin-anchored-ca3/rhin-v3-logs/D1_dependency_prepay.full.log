@@ -1,0 +1,293 @@
+⚠ [3382/3438] Replayed Erdos1135.NumberTheory.Rhin.LiteralSupport
+warning: Erdos1135/NumberTheory/Rhin/LiteralSupport.lean:273:28: This simp argument is unused:
+  Int.natAbs_pow
+
+Hint: Omit it from the simp argument list.
+  simp [Int.natAbs_mul,̵ ̵I̵n̵t̵.̵n̵a̵t̵A̵b̵s̵_̵p̵o̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3384/3438] Replayed Erdos1135.NumberTheory.Rhin.LiteralRemainder
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:42:4: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:42:4: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:54:4: `Polynomial.eval₂_finset_prod` has been deprecated: Use `Polynomial.eval₂_finsetProd` instead
+⚠ [3385/3438] Replayed Erdos1135.NumberTheory.Rhin.LcmGrowth
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:35: This simp argument is unused:
+  a
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a̵,̵ ̵b, c, d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:38: This simp argument is unused:
+  b
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b̵,̵ ̵c, d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:41: This simp argument is unused:
+  c
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b, c̵,̵ ̵d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:44: This simp argument is unused:
+  d
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b, c,̵ ̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:272:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:547:4: exponent 903 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:669:4: exponent 1805 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+⚠ [3388/3438] Replayed Erdos1135.Tao.Probability.Geom
+warning: Erdos1135/Tao/Probability/Geom.lean:18:2: `ProbabilityTheory.geometricPMF` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  {p : ℝ} → 0 < p → p ≤ 1 → PMF ℕ
+warning: Erdos1135/Tao/Probability/Geom.lean:26:26: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:29:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:31:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:125:2: `ProbabilityTheory.geometricPMF` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  {p : ℝ} → 0 < p → p ≤ 1 → PMF ℕ
+warning: Erdos1135/Tao/Probability/Geom.lean:133:26: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:136:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:138:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+⚠ [3394/3438] Replayed Erdos1135.Tao.Probability.AntitoneResidueSums
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:237:59: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:241:63: 'decide' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:241:63: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:245:63: 'decide' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:245:63: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [3398/3439] Built Erdos1135.Tao.Probability.Pascal (67s)
+✔ [3399/3442] Built Erdos1135.NumberTheory.Rhin.LiteralCoefficientBound (67s)
+✔ [3400/3451] Built Erdos1135.Tao.ColMin (67s)
+✔ [3401/3451] Built Erdos1135.Tao.Probability.LogWindowSourceIndex (67s)
+✔ [3402/3451] Built Erdos1135.Tao.Syracuse.TruncatedValuationPacking (67s)
+✔ [3403/3451] Built Erdos1135.Tao.Fourier.Section7ProductPenalty (67s)
+✔ [3408/3458] Built Erdos1135.Terras.Parity.Word (67s)
+✔ [3473/3529] Built Erdos1135.NumberTheory.Rhin.RemainderCells (87s)
+✔ [3474/3549] Built Erdos1135.Tao.Probability.LogWindowEndpoints (67s)
+✔ [3475/3549] Built Erdos1135.Residues (67s)
+✔ [3476/3549] Built Erdos1135.TwoAdic (67s)
+✔ [3478/3552] Built Erdos1135.Tao.Syracuse.ParityBridge (67s)
+✔ [3479/3552] Built Erdos1135.Tao.Probability.LogWindowMassLower (68s)
+✔ [3480/3552] Built Erdos1135.Tao.Probability.PascalPrime (71s)
+✔ [3482/3552] Built Erdos1135.Tao.Fourier.Section7Geometry (77s)
+✔ [3483/3552] Built Erdos1135.NumberTheory.Rhin.ContinuousRemainder (104s)
+✔ [3484/3552] Built Erdos1135.Tao.Probability.FullL1 (76s)
+✔ [3485/3552] Built Erdos1135.Tao.Syracuse.ValuationCylinder (76s)
+✔ [3486/3552] Built Erdos1135.Tao.Section5.Schedule (72s)
+✔ [3487/3552] Built Erdos1135.Tao.Probability.LogWindowFloorPerturbation (76s)
+✔ [3488/3552] Built Erdos1135.Terras.Parity.Residue (76s)
+✔ [3489/3552] Built Erdos1135.Tao.Syracuse.OffsetInjectivity (76s)
+✔ [3490/3552] Built Erdos1135.Tao.Probability.PascalPrimeList (97s)
+✔ [3491/3555] Built Erdos1135.Tao.Fourier.Section7WhiteHitSplit (82s)
+✔ [3492/3555] Built Erdos1135.Tao.Syracuse.Residue (63s)
+✔ [3493/3558] Built Erdos1135.ND.Conventions (63s)
+✔ [3494/3558] Built Erdos1135.Tao.Renewal.HoldPoint (63s)
+✔ [3495/3558] Built Erdos1135.Tao.Syracuse.AffineOdd (63s)
+✔ [3496/3558] Built Erdos1135.Tao.Section5.PassSchedule (63s)
+⚠ [3497/3558] Built Erdos1135.NumberTheory.Rhin.LargeHeight (72s)
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:237:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:237:47: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:263:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:263:47: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:307:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:307:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:323:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:329:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:329:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:335:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:335:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:483:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:483:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:486:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:1278:10: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:1279:8: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+✔ [3498/3558] Built Erdos1135.ND.Statement (54s)
+✔ [3499/3558] Built Erdos1135.ND.Band.OddHalfOpenNormalizer (86s)
+✔ [3500/3558] Built Erdos1135.Tao.Syracuse.ValuationCylinderResidue (55s)
+✔ [3501/3558] Built Erdos1135.Tao.Syracuse.AffineEnvelope (55s)
+✔ [3502/3558] Built Erdos1135.Tao.Probability.GatedSubmass (55s)
+✔ [3503/3563] Built Erdos1135.Tao.Renewal.QFinite (55s)
+✔ [3504/3563] Built Erdos1135.Tao.Renewal.HoldPMF (55s)
+✔ [3505/3563] Built Erdos1135.ND.Band.A5ReferenceSchedule (103s)
+✔ [3506/3563] Built Erdos1135.Tao.Renewal.SourceListBridge (77s)
+✔ [3507/3563] Built Erdos1135.Tao.Syracuse.AffineTrajectory (77s)
+✔ [3508/3563] Built Erdos1135.Tao.Syracuse.CylinderMass (78s)
+✔ [3509/3585] Built Erdos1135.ND.PhaseGap (78s)
+✔ [3510/3585] Built Erdos1135.NumberTheory.Rhin.FiniteAbsorption (78s)
+✔ [3511/3585] Built Erdos1135.NumberTheory.Rhin.LiteralLargeHeight (78s)
+✔ [3514/3627] Built Erdos1135.Tao.Section5.PassScheduleFacts (81s)
+⚠ [3641/3735] Built Erdos1135.Tao.Probability.CountableMarkov (49s)
+warning: Erdos1135/Tao/Probability/CountableMarkov.lean:115:10: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Erdos1135/Tao/Probability/CountableMarkov.lean:133:10: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+✔ [3642/3737] Built Erdos1135.Tao.Renewal.HoldExpectation (52s)
+✔ [3643/3737] Built Erdos1135.Tao.Syracuse.AffineReverse (52s)
+✔ [3644/3742] Built Erdos1135.Tao.Syracuse.ValuationDistribution (52s)
+✔ [3645/3742] Built Erdos1135.Tao.Syracuse.AffineResidue (52s)
+✔ [3646/3742] Built Erdos1135.ND.RhinPhaseGap (52s)
+✔ [3647/3742] Built Erdos1135.ND.Band.A5Sweep (52s)
+✔ [3648/3742] Built Erdos1135.Tao.Renewal.HoldIID (74s)
+✔ [3649/3742] Built Erdos1135.Tao.Renewal.QExpectation (69s)
+✔ [3650/3742] Built Erdos1135.Tao.Probability.Geom2ListProjectivity (69s)
+✔ [3651/3742] Built Erdos1135.Tao.Renewal.RenewalPathBasic (69s)
+✔ [3652/3742] Built Erdos1135.Tao.Renewal.Outer736SourceAlgebra (74s)
+✔ [3653/3742] Built Erdos1135.Tao.Renewal.Prop78Case1Scalar (74s)
+⚠ [3654/3745] Built Erdos1135.Tao.Probability.Geom2CenteredMoment (74s)
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:170:2: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:362:6: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:416:8: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:480:8: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3655/3745] Built Erdos1135.Tao.Syracuse.Syrac (74s)
+✔ [3656/3749] Built Erdos1135.Tao.Section6.Corollary63 (75s)
+✔ [3657/3803] Built Erdos1135.Tao.Renewal.QFiniteApprox (67s)
+✔ [3658/3803] Built Erdos1135.Tao.Section6.HeadGate (62s)
+✔ [3659/3803] Built Erdos1135.Tao.Probability.Geom2ListReverse (63s)
+✔ [3660/3803] Built Erdos1135.Tao.Renewal.VerticalFirstPassageBasic (63s)
+⚠ [3661/3803] Built Erdos1135.Tao.Renewal.Lemma77PotentialCore (67s)
+warning: Erdos1135/Tao/Renewal/Lemma77PotentialCore.lean:361:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3662/3803] Built Erdos1135.Tao.Renewal.SeparatedWindowSum (62s)
+✔ [3665/3803] Built Erdos1135.Tao.Fourier.Basic (62s)
+✔ [3666/3803] Built Erdos1135.ND.Band.A5Tube (67s)
+✔ [3667/3803] Built Erdos1135.Tao.Renewal.QActualRecursion (74s)
+✔ [3668/3803] Built Erdos1135.Tao.Probability.HoldMass (74s)
+✔ [3669/3803] Built Erdos1135.Tao.Renewal.QPrefixFactor (74s)
+✔ [3670/3803] Built Erdos1135.Tao.Renewal.Outer754HorizontalFactor (74s)
+✔ [3671/3803] Built Erdos1135.Tao.Renewal.HoldFirstPassagePMF (74s)
+✔ [3672/3803] Built Erdos1135.Tao.Renewal.HoldStoppedTail (74s)
+✔ [3673/3803] Built Erdos1135.Tao.Section6.HeadGateLocalization (75s)
+✔ [3674/3803] Built Erdos1135.Tao.Renewal.Lemma77PascalPotential (75s)
+✔ [3675/3803] Built Erdos1135.Tao.Renewal.QActualLimit (74s)
+✔ [3676/3803] Built Erdos1135.Tao.Renewal.CanonicalFirstPassageEndpoint (73s)
+✔ [3677/3803] Built Erdos1135.Tao.Renewal.Lemma710KernelWindow (73s)
+✔ [3678/3803] Built Erdos1135.Tao.Probability.HoldExpWeight (74s)
+✔ [3679/3810] Built Erdos1135.Tao.Fourier.TV (74s)
+ℹ [3680/3810] Built Erdos1135.Tao.Section6.FiniteFourierConvolution (74s)
+info: Erdos1135/Tao/Section6/FiniteFourierConvolution.lean:74:12: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [3681/3810] Built Erdos1135.Tao.Section6.FiniteFourierParseval (74s)
+info: Erdos1135/Tao/Section6/FiniteFourierParseval.lean:85:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [3682/3810] Built Erdos1135.ND.Band.A5Physical (89s)
+warning: Erdos1135/ND/Band/A5Physical.lean:1015:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/ND/Band/A5Physical.lean:1261:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/ND/Band/A5Physical.lean:1281:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3683/3818] Built Erdos1135.Tao.Renewal.Prop78Case2Discount (93s)
+✔ [3684/3818] Built Erdos1135.Tao.Renewal.HoldListHorizontalMoment (93s)
+✔ [3685/3857] Built Erdos1135.Tao.Fourier.DecayStatement (92s)
+✔ [3686/3857] Built Erdos1135.Tao.Section6.OptionHeadTailConvolution (93s)
+✔ [3687/3857] Built Erdos1135.Tao.Section6.HeadSubmass (93s)
+✔ [3688/3857] Built Erdos1135.Tao.Fourier.MixingStatement (92s)
+✔ [3689/3857] Built Erdos1135.Tao.Renewal.Lemma77PascalComposition (93s)
+✔ [3690/3877] Built Erdos1135.ND.Band.A5ReferenceIntegerRoom (98s)
+real 900.06
+user 399.35
+sys 646.62
