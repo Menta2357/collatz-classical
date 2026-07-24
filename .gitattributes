@@ -13,3 +13,9 @@ artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/F0_preflight.full.log -whitespace
 artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/D1_dependency_prepay.full.log -whitespace
 artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/P1_target_build.full.log -whitespace
 artifacts/mazur-rhin-anchored-ca3/rhin-v2-logs/A1_axiom_audit.full.log -whitespace
+
+# Preserve byte-exact stdout/stderr from every Rhin v3 phase.
+artifacts/mazur-rhin-anchored-ca3/rhin-v3-logs/F0_preflight.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v3-logs/D1_dependency_prepay.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v3-logs/P1_target_build.full.log -whitespace
+artifacts/mazur-rhin-anchored-ca3/rhin-v3-logs/A1_axiom_audit.full.log -whitespace
