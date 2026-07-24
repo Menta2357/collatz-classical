@@ -1,0 +1,13 @@
+F3_FORWARD_V3_C0_PRECHECK_STATUS=0
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:68:2: error: failed to synthesize
+  Decidable forwardRightNatCertificate
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:79:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Users/MoiTam/Documents/New project/coordinated/hilo2-f3/CollatzClassical/KL2003/F3ReturnExcursionForwardFormulaRightCertificate.lean:84:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+real 110.32
+user 3.57
+sys 10.97
+F3_FORWARD_V3_C0_WRAPPER_EXIT_STATUS=1
