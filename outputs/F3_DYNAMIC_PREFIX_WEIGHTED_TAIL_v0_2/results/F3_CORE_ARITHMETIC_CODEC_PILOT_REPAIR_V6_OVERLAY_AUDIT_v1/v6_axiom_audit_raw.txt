@@ -1,0 +1,1315 @@
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_lt_729' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_mod9' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.CoreCode' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_mem_coreCode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_encode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_injective' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_injective' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeFintype' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCode_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode_lt_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_lt_729' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_mod9' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_stateCode_affine_val' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.n0' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_zero_spec' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_one_spec' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_two_spec' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a_bucketCode' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_expanded' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_mod2' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.DirectSource' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.LiftSource' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_mod9' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_mod9' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat_lt_81' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat_lt_243' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank_eligible' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_rank_unrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_unrank_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat_lt_81' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat_lt_243' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank_eligible' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_rank_unrank' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_unrank_rank' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank_injective' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directOffset' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_mod3' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_c_mod3' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_mod3' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_bucket' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_bucket' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directStateCode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftStateCode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_affine' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_affine' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK_mod81' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK_mod81' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_closed_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_closed_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdge_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList_nodup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formula_channel_cardinality' depends on axioms: [propext]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_unrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank_rank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaEdge_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_channel_cardinality' depends on axioms: [propext]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_nodup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.rowStart' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPos' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank' depends on axioms: [propext, Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank_frozenPos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank_frozenPos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionRealize' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_position_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_position_at_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_frozen_at_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize_mem_frozen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_subset_frozen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.saturation_perm_of_subset_nodup_card' depends on axioms: [propext]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_perm_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_nodup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_toFinset_eq_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_source_lt_27' depends on axioms: [propext,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_frozen_scope' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.edgeMatches' does not depend on any axioms
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.matrixOf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.matrixOf_eq_of_perm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_matrix_eq_formulaMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+NAMESPACE_DECLARATION_COUNT=640
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2,
+ CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._closed_1._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank_eligible	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank_rank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.edgeMatches._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode._proof_1_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_18	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK_mod81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.casesOn	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat_lt_81._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_unrank_rank._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat_lt_243._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_lt_729._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv._cstage2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank.eq_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv._cstage2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_19	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge._cstage2	[Fintype.ofEquiv._at.CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge._spec_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._closed_2._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedParityLift.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat.eq_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.retarded.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_15	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_position_normalization	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_17	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2,
+ CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_closed_form._proof_1_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_closed_form	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedParityLift	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge._cstage2	[Fintype.ofEquiv._at.CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge._spec_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_20	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList_length	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_18	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv._closed_2._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_11	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge.match_3._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_14	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode._proof_1_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_c_mod3._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_22	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqFormulaEdge._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_15	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_9	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_unrank._proof_1_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243._proof_1_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_toFinset_eq_formula	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPos	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_stateCode_affine_val._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge.match_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_closed_form._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_frozen_scope	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directOffset	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.noConfusion	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_10	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.edgeMatches._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat.eq_2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK_mod81._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.edgeMatches	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_13	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode._cstage1	[lcProof,
+ propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank._proof_1_9	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.retarded.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.matrixOf_eq_of_perm	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedDirect.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_rank_unrank._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_closed_form._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_6	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_4	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_24	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_rank_unrank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._closed_1._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_two_spec._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_mod9	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729._cstage1	[propext,
+ Quot.sound,
+ Classical.choice,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_zero_spec	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_23	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_20	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode	[propext, Quot.sound, Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedParityLift.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat_lt_243	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprPilotFormulaEdge._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_mod9	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_source_lt_27._proof_1_16	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_c_mod3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_bucket._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_16	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqPilotFormulaEdge._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.recOn	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_injective	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_22	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank_rank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_unrank_rank._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCode_card	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_mod3._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_12	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directOffset._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directOffset._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.LiftSource	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedDirect	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqPilotFormulaEdge._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_9	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedParityLift.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_rank_unrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729._closed_1._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank_injective	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedParityLift.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_4	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.CoreCode	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_20	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_subset_frozen	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedDirect.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_10	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_13	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_7	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv._cstage1	[propext,
+ Quot.sound,
+ Classical.choice,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_14	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_affine._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprFormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank._proof_1_6	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_5	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_5	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_10	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.noConfusion	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos.eq_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank_eligible	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_affine._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPos._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_mod9._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_mod9._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed.eq_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_mod3._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_8	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedDirect.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen._closed_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_4	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_one_spec._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat_lt_243._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.retarded.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_17	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_one_spec	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.recOn	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_mod9._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedDirect.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_lt_729._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource.eq_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.noConfusionType.withCtor	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directStateCode	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_source_lt_27	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_closed_form	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_10	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaEdge_card	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.retarded	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList._closed_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_bucket._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_perm_formula	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_rank_unrank._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_9	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_21	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank._proof_1_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge._sizeOf_inst	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat.eq_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_9	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize	[propext, Quot.sound, Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_mod9._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_12	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank_eligible._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.rowStart	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_19	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize_mem_frozen	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_injective	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.saturation_perm_of_subset_nodup_card	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_affine	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_lt_729._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_encode._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat_lt_243	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_12	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.noConfusionType.withCtorType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.noConfusionType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_mod9._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_lt_729	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729._closed_2._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243._proof_1_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_unrank_rank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_16	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_6	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv._closed_1._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.noConfusionType.withCtorType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81._closed_1._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_mod9	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftStateCode._cstage1	[propext,
+ Quot.sound,
+ Classical.choice,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_25	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat_lt_81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.DirectSource	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_mem_coreCode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedParityLift.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrankNat_lt_243._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdge_card	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_6	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedDirect.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_25	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_bucket	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList._lambda_1._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge.match_3._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_expanded._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_affine._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionRealize._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_16	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.rowStart._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionRealize.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.noConfusionType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_3	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode._cstage1	[lcProof, propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionRealize._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formula_channel_cardinality	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_expanded._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank.eq_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_unrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqPilotFormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList._lambda_1._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_13	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_mod3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_14	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_7	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_18	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_5	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList._closed_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyType	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionRealize	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank._cstage1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_21	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin9To81._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_15	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_encode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_affine._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprFormulaEdge._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftStateCode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv._cstage1	[propext,
+ Quot.sound,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.retarded.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_11	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_5	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_7	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_rank_unrank._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_frozen_at_formula	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_7	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode._proof_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.retarded.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_12	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_mod3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_agrees._proof_1_20	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode_decode._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._cstage1	[lcProof,
+ propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedParityLift.sizeOf_spec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_zero_spec._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_position_at_formula	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_rank_unrank._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.realize._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._cstage1	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2,
+ CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.advancedParityLift	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget.eq_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_unrank._proof_1_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._cstage1	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_2,
+ CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_source_lt_27._proof_1_13	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.retardedTarget._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprPilotFormulaEdge._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._closed_2._cstage2	[CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource.eq_2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_mod9._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprFormulaEdge._closed_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprFormulaEdge._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_nodup	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_14	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqFormulaEdge._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget.eq_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_5	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge._sizeOf_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.n0._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeFintype	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_12	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat_lt_729._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceEquiv._closed_2._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.retarded.inj	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed._cstage1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed.eq_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_23	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.matrixOf	[propext, Quot.sound, Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_mod9._proof_1_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_1._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.proxyTypeEquiv._elambda_1._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK_mod81._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_mod9._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.lift_twice_c_bucket	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftStateCode	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_9	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_5	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81._closed_2._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge._sizeOf_inst	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEdgeEquivFin81._cstage1	[propext,
+ Quot.sound,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank_frozenPos	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_7	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_6	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.casesOn	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypePilotFormulaEdge.match_3	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directStateCode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_14	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget._cstage2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank.eq_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_11	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv._closed_1._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank.eq_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_15	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPos._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_6	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftK_mod81	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat_lt_243._proof_1_2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_injective._proof_1_17	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank_frozenPos	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_5	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directK	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._proof_4	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.direct_c_affine	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_channel_cardinality	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList._cstage1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_13	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_mod2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.rec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_mod9	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a_bucketCode._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprPilotFormulaEdge._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_27	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilot_matrix_eq_formulaMatrix	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedDirect	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust_two_spec	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_unrank_rank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_unrank._proof_1_7	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaTarget.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv._closed_3._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encodeNat_lt_729	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_6	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instReprPilotFormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.n0	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_stateCode_affine_val	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaEdgeEquivFin729	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat_lt_243._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv._closed_2._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instDecidableEqFormulaEdge	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat.eq_2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaCoreList_nodup	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSource_mod9._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotEmbed_source_lt_27._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceRankNat_lt_81	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos.eq_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.a_bucketCode	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_11	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceEquiv._closed_1._cstage2	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_2	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.rec	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.rowStart.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_5	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.adjust._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPos.eq_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank.eq_1	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos._proof_7	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.advancedDirect.injEq	[propext]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_10	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_11	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFormulaList_length	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTargetClosed._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.fin27To243	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_nodup	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_26	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.noConfusionType.withCtor	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTargetClosed._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRankNat_lt_81._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotUnrank._proof_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_13	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.encode._proof_3	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.coreCodeEquiv._cstage1	[propext,
+ Quot.sound,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_5	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_14	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge._sizeOf_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozenPos_lt_81._proof_1_21	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.instFintypeFormulaEdge	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode_encode._proof_1_2	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.n0._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.frozenPosNat_lt_729._proof_1_16	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSource_mod9._proof_1_3	[Classical.choice,
+ propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.PilotFormulaEdge.proxyTypeEquiv._elambda_2._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRank_injective_raw._proof_1_7	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_8	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directTarget_ell_injective._proof_1_5	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank._proof_19	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotPositionToRank	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_mod2._proof_1_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decodeNat	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceUnrankNat._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftSourceRank._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directStateCode._cstage1	[propext,
+ Quot.sound,
+ Classical.choice,
+ lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.FormulaEdge.retarded	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaSource.eq_1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotFrozen_length	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCodeNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaChannelNat._cstage2	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaUnrank._cstage1	[lcProof,
+ propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.decode._cstage1	[lcProof]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.rowStart._cstage1	[]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.pilotRealize_injective	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.c_expanded	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.directSourceUnrank_eligible._proof_1_1	[propext,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.bucketCode_lt_three	[propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.liftTarget_ell_injective._proof_1_3	[propext,
+ Quot.sound,
+ Classical.choice]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.stateCode._proof_1	[propext, Quot.sound]
+AXIOM_PROFILE	CollatzClassical.KL2003.F3CoreArithmeticCodecPilotRepair.formulaRank_injective_raw._proof_1_8	[propext,
+ Quot.sound,
+ Classical.choice]
+real 150.96
+user 17.82
+sys 14.49
