@@ -1,0 +1,466 @@
+✔ [3364/3406] Built Erdos1135.NumberTheory.Rhin.RangeLCM (36s)
+✔ [3366/3407] Built Erdos1135.NumberTheory.Rhin.LiteralPolynomial (36s)
+✔ [3367/3412] Built Erdos1135.NumberTheory.Rhin.Statement (57s)
+✔ [3368/3414] Built Erdos1135.Tao.Density.LogDensity (66s)
+✔ [3369/3414] Built Erdos1135.Tao.Probability.Finite (66s)
+⚠ [3370/3414] Built Erdos1135.NumberTheory.Rhin.LcmGrowth (44s)
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:35: This simp argument is unused:
+  a
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a̵,̵ ̵b, c, d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:38: This simp argument is unused:
+  b
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b̵,̵ ̵c, d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:41: This simp argument is unused:
+  c
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b, c̵,̵ ̵d]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:176:44: This simp argument is unused:
+  d
+
+Hint: Omit it from the simp argument list.
+  simp only [sylvesterMultinomial, a, b, c,̵ ̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:272:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:547:4: exponent 903 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+warning: Erdos1135/NumberTheory/Rhin/LcmGrowth.lean:669:4: exponent 1805 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+⚠ [3371/3417] Built Erdos1135.NumberTheory.Rhin.LiteralSupport (43s)
+warning: Erdos1135/NumberTheory/Rhin/LiteralSupport.lean:273:28: This simp argument is unused:
+  Int.natAbs_pow
+
+Hint: Omit it from the simp argument list.
+  simp [Int.natAbs_mul,̵ ̵I̵n̵t̵.̵n̵a̵t̵A̵b̵s̵_̵p̵o̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3372/3417] Built Erdos1135.Tao.Syracuse.FirstPassage (82s)
+✔ [3373/3417] Built Erdos1135.NumberTheory.Rhin.RemainderCore (82s)
+✔ [3374/3417] Built Erdos1135.Tao.Syracuse.Affine (82s)
+⚠ [3376/3417] Built Erdos1135.Tao.Probability.AntitoneResidueSums (40s)
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:237:59: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:241:63: 'decide' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:241:63: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:245:63: 'decide' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/AntitoneResidueSums.lean:245:63: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [3377/3417] Built Erdos1135.NumberTheory.Rhin.Irrationality (81s)
+✔ [3378/3417] Built Erdos1135.Tao.Probability.LogWindow (77s)
+⚠ [3379/3417] Built Erdos1135.NumberTheory.Rhin.LiteralRemainder (75s)
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:42:4: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:42:4: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LiteralRemainder.lean:54:4: `Polynomial.eval₂_finset_prod` has been deprecated: Use `Polynomial.eval₂_finsetProd` instead
+✔ [3380/3417] Built Erdos1135.Tao.Section5.PassLocationStepBack (75s)
+⚠ [3381/3417] Built Erdos1135.Tao.Probability.Geom (97s)
+warning: Erdos1135/Tao/Probability/Geom.lean:18:2: `ProbabilityTheory.geometricPMF` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  {p : ℝ} → 0 < p → p ≤ 1 → PMF ℕ
+warning: Erdos1135/Tao/Probability/Geom.lean:26:26: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:29:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:31:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:125:2: `ProbabilityTheory.geometricPMF` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  {p : ℝ} → 0 < p → p ≤ 1 → PMF ℕ
+warning: Erdos1135/Tao/Probability/Geom.lean:133:26: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:136:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+warning: Erdos1135/Tao/Probability/Geom.lean:138:11: `ProbabilityTheory.geometricPMFReal` has been deprecated: Use `ProbabilityTheory.geometricMeasure` instead
+
+Note: The updated constant has a different type:
+  ↑unitInterval → MeasureTheory.Measure ℕ
+instead of
+  ℝ → ℕ → ℝ
+✔ [3382/3417] Built Erdos1135.Tao.Statement (106s)
+✔ [3383/3417] Built Erdos1135.Tao.Syracuse.Statement (108s)
+✔ [3384/3417] Built Erdos1135.Tao.Syracuse.RealFirstPassage (128s)
+✔ [3385/3422] Built Erdos1135.Tao.Syracuse.OddSource (116s)
+✔ [3386/3430] Built Erdos1135.Tao.Probability.LogWindowPMF (98s)
+✔ [3387/3430] Built Erdos1135.Tao.Probability.LogSupportPerturbation (98s)
+✔ [3388/3430] Built Erdos1135.Tao.Probability.ReciprocalProgression (98s)
+✔ [3389/3434] Built Erdos1135.NumberTheory.Rhin.LiteralCoefficientBound (124s)
+✔ [3390/3439] Built Erdos1135.Tao.Probability.Truncation (98s)
+✔ [3391/3439] Built Erdos1135.NumberTheory.Rhin.RemainderCells (119s)
+✔ [3392/3439] Built Erdos1135.Tao.Probability.Pascal (82s)
+✔ [3393/3440] Built Erdos1135.Tao.ColMin (104s)
+✔ [3394/3440] Built Erdos1135.Tao.Probability.LogWindowSourceIndex (83s)
+✔ [3395/3440] Built Erdos1135.Tao.Fourier.Section7ProductPenalty (85s)
+✔ [3396/3440] Built Erdos1135.Terras.Parity.Word (83s)
+✔ [3398/3440] Built Erdos1135.Residues (115s)
+✔ [3399/3440] Built Erdos1135.TwoAdic (115s)
+✔ [3467/3521] Built Erdos1135.Tao.Syracuse.TruncatedValuationPacking (112s)
+✔ [3469/3544] Built Erdos1135.Tao.Probability.LogWindowMassLower (85s)
+✔ [3470/3544] Built Erdos1135.Tao.Syracuse.ParityBridge (85s)
+✔ [3471/3544] Built Erdos1135.Tao.Probability.LogWindowEndpoints (85s)
+✔ [3473/3544] Built Erdos1135.NumberTheory.Rhin.ContinuousRemainder (86s)
+✔ [3474/3544] Built Erdos1135.Tao.Probability.PascalPrime (87s)
+✔ [3475/3544] Built Erdos1135.Terras.Parity.Residue (89s)
+✔ [3476/3544] Built Erdos1135.Tao.Section5.Schedule (75s)
+✔ [3477/3544] Built Erdos1135.Tao.Syracuse.ValuationCylinder (75s)
+✔ [3478/3544] Built Erdos1135.Tao.Syracuse.OffsetInjectivity (75s)
+✔ [3479/3544] Built Erdos1135.Tao.Probability.LogWindowFloorPerturbation (74s)
+✔ [3480/3544] Built Erdos1135.Tao.Probability.FullL1 (81s)
+✔ [3481/3544] Built Erdos1135.Tao.Fourier.Section7Geometry (99s)
+⚠ [3482/3544] Built Erdos1135.NumberTheory.Rhin.LargeHeight (86s)
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:237:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:237:47: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:263:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:263:47: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:307:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:307:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:323:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:329:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:329:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:335:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:335:24: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:483:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:483:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:486:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:1278:10: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+warning: Erdos1135/NumberTheory/Rhin/LargeHeight.lean:1279:8: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead
+✔ [3483/3544] Built Erdos1135.Tao.Fourier.Section7WhiteHitSplit (103s)
+✔ [3484/3544] Built Erdos1135.Tao.Syracuse.Residue (103s)
+✔ [3485/3547] Built Erdos1135.ND.Conventions (103s)
+✔ [3486/3547] Built Erdos1135.Tao.Section5.PassSchedule (102s)
+✔ [3487/3547] Built Erdos1135.Tao.Renewal.HoldPoint (103s)
+✔ [3488/3547] Built Erdos1135.Tao.Probability.PascalPrimeList (110s)
+✔ [3489/3547] Built Erdos1135.Tao.Syracuse.AffineOdd (121s)
+✔ [3490/3550] Built Erdos1135.ND.Band.OddHalfOpenNormalizer (138s)
+✔ [3491/3550] Built Erdos1135.ND.Statement (91s)
+✔ [3492/3550] Built Erdos1135.Tao.Syracuse.ValuationCylinderResidue (92s)
+✔ [3493/3550] Built Erdos1135.Tao.Renewal.HoldPMF (92s)
+✔ [3494/3550] Built Erdos1135.Tao.Syracuse.AffineEnvelope (92s)
+✔ [3495/3550] Built Erdos1135.NumberTheory.Rhin.FiniteAbsorption (93s)
+✔ [3496/3550] Built Erdos1135.NumberTheory.Rhin.LiteralLargeHeight (93s)
+✔ [3497/3550] Built Erdos1135.Tao.Renewal.QFinite (108s)
+✔ [3498/3555] Built Erdos1135.ND.Band.A5ReferenceSchedule (113s)
+✔ [3499/3555] Built Erdos1135.Tao.Probability.GatedSubmass (78s)
+✔ [3500/3594] Built Erdos1135.Tao.Renewal.HoldExpectation (78s)
+✔ [3501/3594] Built Erdos1135.Tao.Syracuse.AffineTrajectory (78s)
+✔ [3509/3601] Built Erdos1135.ND.PhaseGap (79s)
+✔ [3510/3601] Built Erdos1135.Tao.Syracuse.CylinderMass (79s)
+✔ [3516/3617] Built Erdos1135.Tao.Section5.PassScheduleFacts (87s)
+✔ [3632/3722] Built Erdos1135.Tao.Renewal.HoldIID (130s)
+✔ [3634/3724] Built Erdos1135.Tao.Renewal.SourceListBridge (115s)
+✔ [3635/3724] Built Erdos1135.Tao.Syracuse.ValuationDistribution (105s)
+✔ [3636/3724] Built Erdos1135.Tao.Syracuse.AffineReverse (106s)
+✔ [3637/3724] Built Erdos1135.Tao.Syracuse.AffineResidue (105s)
+⚠ [3638/3724] Built Erdos1135.Tao.Probability.CountableMarkov (120s)
+warning: Erdos1135/Tao/Probability/CountableMarkov.lean:115:10: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+warning: Erdos1135/Tao/Probability/CountableMarkov.lean:133:10: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+✔ [3639/3729] Built Erdos1135.ND.RhinPhaseGap (127s)
+✔ [3640/3729] Built Erdos1135.ND.Band.A5Sweep (127s)
+✔ [3641/3729] Built Erdos1135.Tao.Renewal.QExpectation (131s)
+✔ [3642/3729] Built Erdos1135.Tao.Probability.Geom2ListProjectivity (113s)
+✔ [3643/3729] Built Erdos1135.Tao.Renewal.QFiniteApprox (114s)
+✔ [3644/3729] Built Erdos1135.Tao.Syracuse.Syrac (119s)
+✔ [3645/3729] Built Erdos1135.Tao.Section6.Corollary63 (119s)
+⚠ [3646/3734] Built Erdos1135.Tao.Probability.Geom2CenteredMoment (156s)
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:170:2: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:362:6: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:416:8: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/Tao/Probability/Geom2CenteredMoment.lean:480:8: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3647/3734] Built Erdos1135.Tao.Renewal.Outer736SourceAlgebra (156s)
+✔ [3648/3734] Built Erdos1135.Tao.Renewal.Prop78Case1Scalar (156s)
+✔ [3649/3741] Built Erdos1135.Tao.Renewal.QActualRecursion (131s)
+✔ [3650/3741] Built Erdos1135.Tao.Probability.Geom2ListReverse (131s)
+✔ [3651/3767] Built Erdos1135.Tao.Section6.HeadGate (126s)
+✔ [3652/3770] Built Erdos1135.ND.Band.A5Tube (132s)
+✔ [3653/3770] Built Erdos1135.Tao.Fourier.Basic (126s)
+✔ [3654/3770] Built Erdos1135.Tao.Renewal.RenewalPathBasic (128s)
+✔ [3655/3770] Built Erdos1135.Tao.Renewal.HoldStoppedTail (128s)
+✔ [3656/3770] Built Erdos1135.Tao.Renewal.SeparatedWindowSum (128s)
+✔ [3657/3770] Built Erdos1135.Tao.Renewal.QActualLimit (115s)
+✔ [3658/3770] Built Erdos1135.Tao.Probability.HoldMass (115s)
+✔ [3659/3770] Built Erdos1135.Tao.Section6.HeadGateLocalization (115s)
+ℹ [3660/3770] Built Erdos1135.Tao.Section6.FiniteFourierConvolution (115s)
+info: Erdos1135/Tao/Section6/FiniteFourierConvolution.lean:74:12: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [3661/3770] Built Erdos1135.Tao.Section6.FiniteFourierParseval (115s)
+info: Erdos1135/Tao/Section6/FiniteFourierParseval.lean:85:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [3662/3772] Built Erdos1135.Tao.Renewal.Lemma77PotentialCore (98s)
+warning: Erdos1135/Tao/Renewal/Lemma77PotentialCore.lean:361:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3663/3783] Built Erdos1135.Tao.Fourier.TV (98s)
+⚠ [3664/3783] Built Erdos1135.ND.Band.A5Physical (113s)
+warning: Erdos1135/ND/Band/A5Physical.lean:1015:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/ND/Band/A5Physical.lean:1261:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos1135/ND/Band/A5Physical.lean:1281:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3665/3783] Built Erdos1135.Tao.Renewal.VerticalFirstPassageBasic (122s)
+✔ [3666/3783] Built Erdos1135.Tao.Section6.OptionHeadTailConvolution (121s)
+✔ [3667/3783] Built Erdos1135.Tao.Section6.HeadSubmass (121s)
+✔ [3668/3783] Built Erdos1135.Tao.Renewal.Lemma710KernelWindow (122s)
+✔ [3669/3783] Built Erdos1135.Tao.Probability.HoldExpWeight (122s)
+✔ [3672/3795] Built Erdos1135.Tao.Fourier.MixingStatement (137s)
+✔ [3673/3795] Built Erdos1135.Tao.Renewal.Lemma77PascalPotential (137s)
+✔ [3674/3795] Built Erdos1135.Tao.Fourier.DecayStatement (140s)
+✔ [3675/3839] Built Erdos1135.ND.Band.A5BandNormalizer (133s)
+✔ [3676/3839] Built Erdos1135.ND.Band.A5ReferenceIntegerRoom (133s)
+⚠ [3677/3839] Built Erdos1135.ND.Band.A5PhysicalPaddingRate (133s)
+warning: Erdos1135/ND/Band/A5PhysicalPaddingRate.lean:100:10: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos1135/ND/Band/A5PhysicalPaddingRate.lean:100:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [3678/3839] Built Erdos1135.Tao.Renewal.HoldFirstPassagePMF (133s)
+✔ [3679/3839] Built Erdos1135.Tao.Renewal.QPrefixFactor (132s)
+✔ [3680/3843] Built Erdos1135.Tao.Renewal.Lemma77PascalComposition (126s)
+✔ [3681/3843] Built Erdos1135.Tao.Renewal.Outer754HorizontalFactor (126s)
+✔ [3682/3843] Built Erdos1135.Tao.Fourier.Section7Character (129s)
+✔ [3683/3843] Built Erdos1135.Tao.Renewal.CanonicalFirstPassageEndpoint (110s)
+✔ [3684/3843] Built Erdos1135.Tao.Renewal.HoldListHorizontalMoment (110s)
+✔ [3685/3843] Built Erdos1135.Tao.Renewal.QFiniteIteration (110s)
+✔ [3686/3843] Built Erdos1135.ND.Band.A5BandPartition (110s)
+⚠ [3687/3843] Built Erdos1135.ND.Band.A5PaddedBandDiameter (111s)
+warning: Erdos1135/ND/Band/A5PaddedBandDiameter.lean:102:4: 'push_cast at hfloor' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3688/3843] Built Erdos1135.Tao.Renewal.Lemma77PascalFormula (98s)
+✔ [3689/3843] Built Erdos1135.ND.Band.A5BandPMF (98s)
+✔ [3690/3843] Built Erdos1135.Tao.Section6.Cor63HeadPrefix (109s)
+✔ [3691/3851] Built Erdos1135.Tao.Renewal.Lemma79EndpointFreshCoordinates (110s)
+✔ [3692/3855] Built Erdos1135.Tao.Section6.ModulusProjection (111s)
+✔ [3693/3869] Built Erdos1135.Tao.Fourier.Section7SourceLaw (111s)
+✔ [3694/3869] Built Erdos1135.Tao.Fourier.Section7SourcePairing (111s)
+✔ [3695/3871] Built Erdos1135.Tao.Fourier.Section7Cancellation (111s)
+✔ [3696/3871] Built Erdos1135.Tao.Renewal.Prop78Case2Discount (153s)
+✔ [3697/3908] Built Erdos1135.Tao.Renewal.Lemma77PascalGaussian (153s)
+✔ [3698/3908] Built Erdos1135.ND.Band.A5SourceMixture (173s)
+✔ [3699/3911] Built Erdos1135.Tao.Renewal.PMFIntWindowUnion (140s)
+✔ [3700/3911] Built Erdos1135.Tao.Renewal.SeparatedWindowGeometry (139s)
+✔ [3701/3914] Built Erdos1135.Tao.Fourier.Section7SourceFThreeQFinite (139s)
+✔ [3702/3914] Built Erdos1135.Tao.Section5.AffineSourceLaw (140s)
+⚠ [3703/3922] Built Erdos1135.Tao.Section6.ConductorProjectivity (140s)
+warning: Erdos1135/Tao/Section6/ConductorProjectivity.lean:147:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3704/3924] Built Erdos1135.Tao.Fourier.Section7SourcePredicates (132s)
+✔ [3705/3928] Built Erdos1135.Tao.Section6.HeadGateIndex (132s)
+✔ [3706/3928] Built Erdos1135.Tao.Probability.GatedSubmassPartition (98s)
+✔ [3707/3928] Built Erdos1135.Tao.Section6.GlobalTypicalEvent (97s)
+✔ [3708/3928] Built Erdos1135.Tao.Section6.ConductorDFT (97s)
+✔ [3709/3928] Built Erdos1135.Tao.Section6.HeadEntropyScalar (104s)
+✔ [3710/3928] Built Erdos1135.Tao.Fourier.Section7PairFiber (98s)
+✖ [3711/3928] Building Erdos1135.Tao.Renewal.SourceRegeneration (259ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Renewal/SourceRegeneration.setup.json
+✖ [3712/3934] Building Erdos1135.Tao.Fourier.Section7PairExpansion (71ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Fourier/Section7PairExpansion.setup.json
+✖ [3714/3934] Building Erdos1135.Tao.Section5.ReversePrefix (74ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Section5/ReversePrefix.setup.json
+✔ [3715/3937] Built Erdos1135.Tao.Renewal.SeparatedWindowFlattening (103s)
+✔ [3716/3937] Built Erdos1135.Tao.Section6.InversePowerTail (69s)
+✔ [3717/3941] Built Erdos1135.Tao.Probability.GatedSubmassComplement (70s)
+✔ [3718/3945] Built Erdos1135.Tao.Fourier.Section7SourceDomain (93s)
+✔ [3719/3945] Built Erdos1135.Tao.Fourier.Lemma74ThetaArithmetic (94s)
+✔ [3720/3945] Built Erdos1135.Tao.Section5.FiveStepCompression (90s)
+✔ [3721/3945] Built Erdos1135.Tao.Section6.FirstCrossingPartition (93s)
+✔ [3722/3945] Built Erdos1135.Tao.Section6.ConductorIndex (107s)
+✖ [3723/3945] Building Erdos1135.Tao.Fourier.Lemma74SoutheastTransport (132ms)
+error: resource exhausted (error code: 28, no space left on device)
+✖ [3724/3946] Building Erdos1135.Tao.Section5.DescentScale (81ms)
+error: resource exhausted (error code: 28, no space left on device)
+✖ [3726/3947] Building Erdos1135.Tao.Section6.ConductorFrequency (108ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Section6/ConductorFrequency.setup.json
+✖ [3737/3947] Building Erdos1135.Tao.Probability.Geom2TerminalMoment (43ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Probability/Geom2TerminalMoment.setup.json
+✖ [3747/3951] Building Erdos1135.Tao.Probability.Geom2HighWeight (43ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Probability/Geom2HighWeight.setup.json
+✔ [3749/3952] Built Erdos1135.ND.Band.A5StrictBandLevels (132s)
+✔ [3750/3955] Built Erdos1135.Tao.Syracuse.AffineReciprocal (131s)
+✔ [3752/3958] Built Erdos1135.ND.Band.A5TerminalBoundaryShell (130s)
+✔ [3753/3965] Built Erdos1135.Tao.Renewal.GeometryBridge (138s)
+✔ [3755/3967] Built Erdos1135.Tao.Renewal.Prop78Case3Event (139s)
+✖ [3756/3967] Building Erdos1135.Tao.Renewal.SourceActualQ (153s)
+trace: .> LEAN_PATH=/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/Cli/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/batteries/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/Qq/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/aesop/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/importGraph/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/plausible/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/mathlib/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean /Users/MoiTam/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/Erdos1135/Tao/Renewal/SourceActualQ.lean -o /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Renewal/SourceActualQ.olean -i /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Renewal/SourceActualQ.ilean -c /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Renewal/SourceActualQ.c --setup /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Renewal/SourceActualQ.setup.json --json
+info: stderr:
+failed to write '/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Renewal/SourceActualQ.olean': failed to create file '/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Renewal/SourceActualQ.olean'
+error: Lean exited with code 1
+PANIC at _private.Lake.Build.Run.0.Lake.print! Lake.Build.Run:89:4: [_private.Lake.Build.Run.0.Lake.print! failed: resource exhausted (error code: 28, no space left on device)] "✖ [3904/3991] Building Erdos1135.Tao.Section5.PowerInteriorFacts (117ms)\n"
+backtrace:
+0   libleanshared.dylib                 0x0000000114187260 _ZN4leanL15print_backtraceEb + 60
+1   libleanshared.dylib                 0x000000011417dd6c _ZN4leanL15lean_panic_implEPKcmb + 176
+2   libleanshared.dylib                 0x000000011417de88 lean_panic_fn_borrowed + 64
+3   libLake_shared.dylib                0x000000010514dc10 Lake.Monitor.reportJob [private] + 3308
+4   libLake_shared.dylib                0x000000010514e8f4 Array.foldlMUnsafe.fold [private] spec at Lake.Monitor.poll + 476
+5   libLake_shared.dylib                0x000000010514ef58 Lake.Monitor.poll [private] + 208
+backtrace:
+backtrace:
+backtrace:
+backtrace:
+backtrace:
+backtrace:
+✖ [3757/3967] Building Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip (151s)
+trace: .> LEAN_PATH=/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/Cli/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/batteries/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/Qq/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/aesop/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/importGraph/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/plausible/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/packages/mathlib/.lake/build/lib/lean:/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean /Users/MoiTam/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.lean -o /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.olean -i /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.ilean -c /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.c --setup /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.setup.json --json
+info: stderr:
+failed to write '/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.olean': failed to create file '/Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/Tao/Fourier/Lemma74PrimitiveStrip.olean'
+error: Lean exited with code 1
+✖ [3783/3978] Building Erdos1135.Tao.Renewal.Prop78Case3TriangleExit (128ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Renewal/Prop78Case3TriangleExit.setup.json
+✖ [3804/3978] Building Erdos1135.Tao.Renewal.Prop78Case3EStarSupportProducer (150ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/ir/Erdos1135/Tao/Renewal/Prop78Case3EStarSupportProducer.setup.json
+✖ [3821/3978] Building Erdos1135.ND.Probability.TrueAbsorption (14ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstruction-publication-gate2-ef1a5a7/.lake/build/lib/lean/Erdos1135/ND/Probability
+✖ [3822/3978] Building Erdos1135.Tao.Probability.LogWindowPrefix (46ms)
+error: resource exhausted (error code: 28, no space left on device)
+  file: /Users/MoiTam/Documents/New project/coordinated/hilo1-fusion/reconstructio✔ [4035/4161] Built Erdos1135.Tao.Syracuse.AffineCoefficient (148s)
+✔ [4048/4161] Built Erdos1135.Tao.Section5.PayloadFreeCoefficient (139s)
+✔ [4050/4161] Built Erdos1135.Tao.Syracuse.FirstPassageInterval (103s)
+✔ [4051/4161] Built Erdos1135.Tao.Syracuse.ValuationCylinderCRT (103s)
+✔ [4065/4161] Built Erdos1135.Tao.Renewal.Outer754SourceWeight (101s)
+✔ [4117/4161] Built Erdos1135.Tao.Section5.WeightedMixing (103s)
+Some required targets logged failures:
+- Erdos1135.Tao.Renewal.SourceRegeneration
+- Erdos1135.Tao.Fourier.Section7PairExpansion
+- Erdos1135.Tao.Section5.ReversePrefix
+- Erdos1135.Tao.Fourier.Lemma74SoutheastTransport
+- Erdos1135.Tao.Section5.DescentScale
+- Erdos1135.Tao.Section6.ConductorFrequency
+- Erdos1135.Tao.Probability.Geom2TerminalMoment
+- Erdos1135.Tao.Probability.Geom2HighWeight
+- Erdos1135.Tao.Renewal.SourceActualQ
+- Erdos1135.Tao.Fourier.Lemma74PrimitiveStrip
+- Erdos1135.Tao.Renewal.Prop78Case3TriangleExit
+- Erdos1135.Tao.Renewal.Prop78Case3EStarSupportProducer
+- Erdos1135.ND.Probability.TrueAbsorption
+- Erdos1135.Tao.Probability.LogWindowPrefix
+- Erdos1135.Tao.Section5.PowerInteriorFacts
+- Erdos1135.ND.Band.A5BandNormalizerRatios
+- Erdos1135.ND.Band.A5AnalyticTube
+- Erdos1135.ND.Band.A6StrictMultiplicity
+- Erdos1135.ND.Discrepancy.LocalizedKoksma
+- Erdos1135.ND.Discrepancy.EmpiricalCDF
+- Erdos1135.ND.Discrepancy.Fejer
+- Erdos1135.ND.Discrepancy.PhaseRotation
+- Erdos1135.Tao.Syracuse.TruncatedValuationGeom2
+- Erdos1135.Tao.Syracuse.TruncatedValuationDecoder
+- Erdos1135.Tao.Section5.PassTypicalEvent
+- Erdos1135.Tao.Probability.Geom2PrefixTypical
+- Erdos1135.Tao.Syracuse.TruncatedValuationTV
+- Erdos1135.ND.Probability.Geom2FiniteTwoEventTail
+- Erdos1135.ND.Band.A5BandSourceWindow
+- Erdos1135.Tao.Probability.Geom2LowWeight
+- Erdos1135.ND.Probability.ComplementCharge
+- Erdos1135.ND.Band.A5HarmonicFullGoodRate
+- Erdos1135.Tao.Density.FiniteLogCountAlgebra
+- Erdos1135.Tao.ThresholdAssembly
+- Erdos1135.Tao.Section6.Prop117ToProp114
+- Erdos1135.Tao.Density.V2Layer
+error: build failed
+real 2277.39
+user 647.13
+sys 1578.02
