@@ -1,0 +1,283 @@
+{
+  "schema_version": "F3_R3_V6_ATOMIC_ADOPTION_RECEIPT_MANIFEST_v1",
+  "self_hash_policy": "MANIFEST_DOES_NOT_LIST_ITSELF",
+  "file_count": 46,
+  "files": [
+    {
+      "path": "COORDINATED_HANDOFF.json",
+      "sha256": "79929087398c8b56b31f5b96a4c415f1658942f052d625c2c64430fcb6359ba7",
+      "bytes": 2302,
+      "lines": 24
+    },
+    {
+      "path": "EXECUTION_ROOT_FREEZE.json",
+      "sha256": "19bc647b196e1860c711791ee1934da180021b48f6dbc7debd2919153b0eb5ec",
+      "bytes": 7000,
+      "lines": 148
+    },
+    {
+      "path": "EXECUTOR_V3.rb",
+      "sha256": "e5074646beb56292fee62cd51589be92aad2113f9f712519619178997fbff18b",
+      "bytes": 64096,
+      "lines": 1703
+    },
+    {
+      "path": "FINAL_PREWRITE_ABSENT_TARGET_IGNORE_STATES.json",
+      "sha256": "705816c5a3542add3adcac2c0f32e1d0698a6a49d43742d5563fbda5d068a0fc",
+      "bytes": 751,
+      "lines": 26
+    },
+    {
+      "path": "FINAL_PREWRITE_GATE_SUMMARY.json",
+      "sha256": "ab5964214289f18b675cfc654747ce2f27ee6ac6e9230713af73c8fcd8dce40c",
+      "bytes": 2965,
+      "lines": 85
+    },
+    {
+      "path": "FINAL_PREWRITE_GIT_CONTEXT.json",
+      "sha256": "90c0d38ce6dc81aa758f08182f8428380296a3a13d07139c1e1992fbb76a3f69",
+      "bytes": 432,
+      "lines": 13
+    },
+    {
+      "path": "FINAL_PREWRITE_GIT_DIFF_CHECK_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "FINAL_PREWRITE_GIT_DIFF_CHECK_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "FINAL_PREWRITE_GIT_STATUS_PORCELAIN_V1_Z.bin",
+      "sha256": "00a7fb9879dc1232bb4da91bf11fe7070268f4e79b2e27480bbbb958199ffd38",
+      "bytes": 64721,
+      "lines": 0
+    },
+    {
+      "path": "FINAL_PREWRITE_GIT_STATUS_RECORDS.json",
+      "sha256": "739d0d4c9001e4e801dd97886220db82a4534d530d1e1088733c825e48084049",
+      "bytes": 89337,
+      "lines": 501
+    },
+    {
+      "path": "FINAL_PREWRITE_NON_TARGET_GIT_VISIBLE_SNAPSHOT.json",
+      "sha256": "aa59a93c2f4bb7523820789c104fe5d5358ff2dd97838961007bbd329d9676f1",
+      "bytes": 460453,
+      "lines": 12242
+    },
+    {
+      "path": "FINAL_PREWRITE_PATCH_DRY_RUN_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "FINAL_PREWRITE_PATCH_DRY_RUN_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "FINAL_PREWRITE_PROCESS_CENSUS.json",
+      "sha256": "dd37291f846dc88942e5325bb67c31a1131d660832dee56ca614b836ad802e17",
+      "bytes": 884,
+      "lines": 33
+    },
+    {
+      "path": "FINAL_PREWRITE_TARGET_GIT_STATES.json",
+      "sha256": "ac4d103ce253162c3efd6aa04197e6498dfe67d4db26ff1edd52b3a9ff21f624",
+      "bytes": 1453,
+      "lines": 37
+    },
+    {
+      "path": "FINAL_PREWRITE_TARGET_PARENT_STATES.json",
+      "sha256": "0df23849d4af5f7e491093803e2650802edb11921906c2ccef779e3a84ee880c",
+      "bytes": 239,
+      "lines": 7
+    },
+    {
+      "path": "GIT_APPLY_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "GIT_APPLY_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_ABSENT_TARGET_IGNORE_STATES.json",
+      "sha256": "705816c5a3542add3adcac2c0f32e1d0698a6a49d43742d5563fbda5d068a0fc",
+      "bytes": 751,
+      "lines": 26
+    },
+    {
+      "path": "INITIAL_PREWRITE_GATE_SUMMARY.json",
+      "sha256": "226ae36c3717d2ba10956818112e3bfa805384768e7691b7f571538e6a149ad9",
+      "bytes": 2965,
+      "lines": 85
+    },
+    {
+      "path": "INITIAL_PREWRITE_GIT_CONTEXT.json",
+      "sha256": "90c0d38ce6dc81aa758f08182f8428380296a3a13d07139c1e1992fbb76a3f69",
+      "bytes": 432,
+      "lines": 13
+    },
+    {
+      "path": "INITIAL_PREWRITE_GIT_DIFF_CHECK_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_GIT_DIFF_CHECK_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_GIT_STATUS_PORCELAIN_V1_Z.bin",
+      "sha256": "00a7fb9879dc1232bb4da91bf11fe7070268f4e79b2e27480bbbb958199ffd38",
+      "bytes": 64721,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_GIT_STATUS_RECORDS.json",
+      "sha256": "739d0d4c9001e4e801dd97886220db82a4534d530d1e1088733c825e48084049",
+      "bytes": 89337,
+      "lines": 501
+    },
+    {
+      "path": "INITIAL_PREWRITE_NON_TARGET_GIT_VISIBLE_SNAPSHOT.json",
+      "sha256": "aa59a93c2f4bb7523820789c104fe5d5358ff2dd97838961007bbd329d9676f1",
+      "bytes": 460453,
+      "lines": 12242
+    },
+    {
+      "path": "INITIAL_PREWRITE_PATCH_DRY_RUN_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_PATCH_DRY_RUN_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "INITIAL_PREWRITE_PROCESS_CENSUS.json",
+      "sha256": "dc46d3dfeeaf88a7d52056a640a06977750bf1ddcf2a400cfcc9e72e5dc6c468",
+      "bytes": 884,
+      "lines": 33
+    },
+    {
+      "path": "INITIAL_PREWRITE_TARGET_GIT_STATES.json",
+      "sha256": "ac4d103ce253162c3efd6aa04197e6498dfe67d4db26ff1edd52b3a9ff21f624",
+      "bytes": 1453,
+      "lines": 37
+    },
+    {
+      "path": "INITIAL_PREWRITE_TARGET_PARENT_STATES.json",
+      "sha256": "0df23849d4af5f7e491093803e2650802edb11921906c2ccef779e3a84ee880c",
+      "bytes": 239,
+      "lines": 7
+    },
+    {
+      "path": "POSTWRITE_FORWARD_CHECK_STDERR.bin",
+      "sha256": "6dfe57df997e652bb655e87349e0fd6373160911b5158d6cc29d21e3a36891cd",
+      "bytes": 1185,
+      "lines": 10
+    },
+    {
+      "path": "POSTWRITE_FORWARD_CHECK_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_GATE_SUMMARY.json",
+      "sha256": "cbdc84216c8dc11058984fbca34e033815412a1cb38ce28e98dcf858f807b92e",
+      "bytes": 2013,
+      "lines": 53
+    },
+    {
+      "path": "POSTWRITE_GIT_CONTEXT.json",
+      "sha256": "90c0d38ce6dc81aa758f08182f8428380296a3a13d07139c1e1992fbb76a3f69",
+      "bytes": 432,
+      "lines": 13
+    },
+    {
+      "path": "POSTWRITE_GIT_DIFF_CHECK_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_GIT_DIFF_CHECK_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_GIT_STATUS_PORCELAIN_V1_Z.bin",
+      "sha256": "efc75b83fffdd494c77782a8b6e82ad9b2d590114bdd0ab66db4a4b02ff86e33",
+      "bytes": 65109,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_GIT_STATUS_RECORDS.json",
+      "sha256": "ed3b0db206d4ee293c37002637fe134290d89693411c98311958aa346ac76249",
+      "bytes": 89881,
+      "lines": 505
+    },
+    {
+      "path": "POSTWRITE_NON_TARGET_GIT_VISIBLE_SNAPSHOT.json",
+      "sha256": "aa59a93c2f4bb7523820789c104fe5d5358ff2dd97838961007bbd329d9676f1",
+      "bytes": 460453,
+      "lines": 12242
+    },
+    {
+      "path": "POSTWRITE_PROCESS_CENSUS.json",
+      "sha256": "18d4f993fb7cd5b3a0c24d15c18b53eac75305f5c34ee6472a851a8da39714b8",
+      "bytes": 884,
+      "lines": 33
+    },
+    {
+      "path": "POSTWRITE_REVERSE_CHECK_STDERR.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_REVERSE_CHECK_STDOUT.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "POSTWRITE_TARGET_GIT_STATES.json",
+      "sha256": "9349d365d51e062c4b4ddd0cedc56ee7b528756b85623f899f3af994f072407e",
+      "bytes": 1973,
+      "lines": 37
+    },
+    {
+      "path": "POSTWRITE_TARGET_PARENT_STATES.json",
+      "sha256": "5ccb2f320bb2e0f91bde2ab9a1ba4b26a11d3fcf63bf9ff2e07f87abcea0442f",
+      "bytes": 242,
+      "lines": 7
+    },
+    {
+      "path": "TRANSACTION_SUMMARY.json",
+      "sha256": "8188a79589b771cbf94996519f708919a2fa74628aedcb2ce99b5922f660a203",
+      "bytes": 9182,
+      "lines": 227
+    }
+  ]
+}

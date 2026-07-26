@@ -1,0 +1,113 @@
+{
+  "schema_version": "F3_R3_V6_ATOMIC_ADOPTION_ATTEMPT_02_POST_ADOPTION_FREEZE_v1",
+  "created_date": "2026-07-26",
+  "document_class": "LOCAL_POST_ADOPTION_CUSTODY_FREEZE",
+  "self_hash_policy": "EXCLUDED_TO_AVOID_RECURSION",
+  "attempt_id": "02",
+  "transaction_result": "PASS_ATOMIC_ADOPTION_TEXTUAL_7_OF_7",
+  "postwrite_audit_verdict": "PASS_2_OF_2",
+  "p1_residual": 0,
+  "p2_residual": 0,
+  "external_root": "/Users/MoiTam/Documents/New project/coordinated/hilo2-f3",
+  "external_branch": "codex/hilo2-f3-r3-reverse-first-hit-v1",
+  "external_head": "8765d7083906e7b3e3b03951da6331fcf1427e1b",
+  "commit_created": false,
+  "push_executed": false,
+  "core_identity": {
+    "executor_sha256": "e5074646beb56292fee62cd51589be92aad2113f9f712519619178997fbff18b",
+    "execution_freeze_sha256": "19bc647b196e1860c711791ee1934da180021b48f6dbc7debd2919153b0eb5ec",
+    "candidate_freeze_sha256": "65f369e8ca6dd66fcf7c7219b2a98388f662ad900ea341c672330ce83929dbcc",
+    "staging_manifest_sha256": "dfad18b07b72d6d77cd4d5bb668eb5cdfb913ba556bc4fa41461c65b26ecb256",
+    "patch_sha256": "4f278d3db6bc37572612c412947e9ae410b94ee928271298c419dd6953d592a9",
+    "handoff_sha256": "79929087398c8b56b31f5b96a4c415f1658942f052d625c2c64430fcb6359ba7",
+    "preflight_receipt_manifest_sha256": "31d633874ff86c87d597a486133d8862148e535715693c5842db58e59e3c82df",
+    "transaction_receipt_manifest_sha256": "e089cf5c702b42daac6d0415b8a2e82a1a38d899e5b4cee5ffa114b4d9b4d35f"
+  },
+  "postwrite_observations": {
+    "receipt_entries_verified": "46/46",
+    "postimages_verified": "7/7",
+    "pins_verified": "14/14",
+    "protected_absences_verified": "10/10+7/7+1/1",
+    "prewrite_status_records": 499,
+    "prewrite_status_sha256": "00a7fb9879dc1232bb4da91bf11fe7070268f4e79b2e27480bbbb958199ffd38",
+    "postwrite_status_records": 503,
+    "postwrite_status_sha256": "efc75b83fffdd494c77782a8b6e82ad9b2d590114bdd0ab66db4a4b02ff86e33",
+    "non_target_git_visible_count": 1748,
+    "non_target_git_visible_sha256": "59d37053198c0a82d20aec2331c13762e8041d8fbb9692b799a580adc4c87f83",
+    "expected_structural_parent_directories_created": 1,
+    "unexpected_custody_paths_written": 0,
+    "reverse_apply_check": "PASS",
+    "forward_apply_check": "FAIL_EXPECTED_ALREADY_APPLIED",
+    "git_diff_check": "PASS"
+  },
+  "targets": [
+    {
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionBlock0ReverseBFSCompleteness.lean",
+      "sha256": "9a5b885a7b27f54b9e1a6044fa956fc688f5dfb23c100d7ab6cefbf10a3e5eec",
+      "lines": 162
+    },
+    {
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionBlock0ReverseBFSCompletenessAxiomAudit.lean",
+      "sha256": "eb5f04aa57a9c690d0cbbb10b9e457746a9cfca31a85d31effb17576924d7f7e",
+      "lines": 97
+    },
+    {
+      "path": "CollatzClassical/KL2003/F3ReturnExcursionBlock0ReverseBFSMassIntegration.lean",
+      "sha256": "d1299e61e8074af271f2a4c4eef1baf2eedede950a8c1a6b9a753f504729eb7b",
+      "lines": 85
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_R3_REVERSE_BFS_PILOT_CONTRACT_v6.md",
+      "sha256": "b4f67e108938b66e93c15948bd8d2aa48fdcb6fd267f6ce75ad48c122ee08e6f",
+      "lines": 399
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/F3_R3_EXECUTION_REGISTRY_v10.md",
+      "sha256": "41b697b3d2cbe4561f5b9e0ab4fc84a895a23e9dd66e0bbcbad8ebf37d6510f6",
+      "lines": 376
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/templates/F3_R3_REVERSE_BFS_PILOT_V3_RUN_REPORT.template.md",
+      "sha256": "a5074cb91027233f0d4c15eff477d1765c79c9f9bcf785a4d24475ab9f63face",
+      "lines": 216
+    },
+    {
+      "path": "outputs/F3_DYNAMIC_PREFIX_WEIGHTED_TAIL_v0_2/templates/INVALID_R3_REVERSE_BFS_PILOT_V3_RUN_REPORT.template.md",
+      "sha256": "c8f3a8e389c7ef26f6ac966c92e6ce8b973a4ee56b925cba6381a0d47f2246c5",
+      "lines": 177
+    }
+  ],
+  "local_closure_artifacts": [
+    {
+      "path": "outputs/F3_BFS_READONLY_CHECKPOINT_v1/successor_v6_adoption_candidate/F3_R3_V6_ATOMIC_ADOPTION_ATTEMPT_02_POSTWRITE_ADVERSARIAL_AUDIT_PASS_v1.md",
+      "sha256": "d03e8130678123e3c8ddb3fe0cb42f4e7e1b6ef517f385f710ba0111bf74920f",
+      "lines": 80
+    },
+    {
+      "path": "outputs/F3_BFS_READONLY_CHECKPOINT_v1/successor_v6_adoption_candidate/F3_R3_V6_ATOMIC_ADOPTION_ATTEMPT_02_POSTWRITE_SEMANTIC_AUDIT_PASS_v1.md",
+      "sha256": "cf45e6555376b3abe0f6032cab4ef7d9803fa6efc7b089f169201e9a760b796e",
+      "lines": 65
+    },
+    {
+      "path": "outputs/F3_BFS_READONLY_CHECKPOINT_v1/successor_v6_adoption_candidate/F3_R3_V6_ATOMIC_ADOPTION_ATTEMPT_02_TERMINAL_REPORT_v1.md",
+      "sha256": "7864596b627d2688c67af0ec9e7e114e1ffcf9ca0b179a2fdf2b7fdb8b0534fc",
+      "lines": 71
+    }
+  ],
+  "execution_boundary": {
+    "lean_executed": false,
+    "lake_executed": false,
+    "reverse_bfs_executed": false,
+    "generator_executed": false,
+    "execution_authority": "NONE",
+    "pilot_execution_opened": false
+  },
+  "no_claims": [
+    "NO_RHO_CERTIFICATE",
+    "NO_DENSITY_THEOREM",
+    "NO_ALMOST_ALL",
+    "NO_GLOBAL_COLLATZ_CLAIM"
+  ],
+  "next_gate": "F3_R3_V3_INPUT_REGISTRY_AND_PREEXECUTION_REVIEW",
+  "verdict": "POST_ADOPTION_FREEZE_READY_FOR_INDEPENDENT_AUDIT"
+}
