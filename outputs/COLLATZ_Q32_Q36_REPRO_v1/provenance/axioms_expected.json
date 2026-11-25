@@ -170,5 +170,27 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2T42": {
+    "descends_265_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_89_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_41_mod_256": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_331_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }
