@@ -1,0 +1,132 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "row": "q=12+64*s; k=428769801+2^31*q; N=110482433359989887+2^58*k",
+  "whole_row_book_T60": [
+    60,
+    94,
+    "253163701604367108480427299121"
+  ],
+  "whole_row_T60_affine": [
+    "16161180670369550395566597319",
+    "84782316550432407028588866402"
+  ],
+  "T36_T60_word": [
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    6
+  ],
+  "T36_T60_book": [
+    24,
+    37,
+    "634691213573"
+  ],
+  "descent_guard": "s=3+4*t",
+  "T61_actual_valuation_lower_bound": 3,
+  "T61_strict_margin_8N_minus_3F_minus_1": [
+    "199623356940951646062839639856",
+    "250262801623040517153636808552"
+  ],
+  "T61_original_book": [
+    61,
+    "94+d",
+    "779298145441667409839667884947"
+  ],
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "Front4bT61S3.olean",
+        "Front4bT61S3.lean"
+      ],
+      "exit_code": 124,
+      "seconds": 111.016,
+      "started_utc": "2026-11-25T22:35:58.292570+00:00",
+      "source_sha256": "14a3dc325783748e42bde45c3b76eeb89ff01b9c61630b5d74d0df28e35a0d50"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "--profile",
+        "-o",
+        "Front4bT61S3.olean",
+        "Front4bT61S3.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 69.949,
+      "started_utc": "2026-11-25T22:39:11.966170+00:00",
+      "source_sha256": "4bf66e4ec7bc36a36222a6fb75c0228f0a225a329232103d771c8d7ba1529671"
+    }
+  ],
+  "successful_import_profile_seconds": 67.6,
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "--profile",
+      "-o",
+      "AuditFront4bT61S3.olean",
+      "AuditFront4bT61S3.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 27.593,
+    "started_utc": "2026-11-25T22:41:18.102739+00:00",
+    "source_sha256": "f4e1cbac3d60ebca201bad68773b3f8354889ccfe96e4fba4c4a67bbf20e9ce4",
+    "imported_object_sha256": "ee6b61f8df97a16be2098724bd84deca8fcc66fde58b5a49dac2c02815a17dc6"
+  },
+  "axioms": {
+    "index": [],
+    "checkpoint60": [],
+    "index_formula": [
+      "propext",
+      "Quot.sound"
+    ],
+    "seed_affine": [
+      "propext",
+      "Quot.sound"
+    ],
+    "history60": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descends_t61": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 120,
+  "sha256": {
+    "Front4bT61S3.lean": "4bf66e4ec7bc36a36222a6fb75c0228f0a225a329232103d771c8d7ba1529671",
+    "Front4bT61S3.olean": "ee6b61f8df97a16be2098724bd84deca8fcc66fde58b5a49dac2c02815a17dc6",
+    "AuditFront4bT61S3.lean": "f4e1cbac3d60ebca201bad68773b3f8354889ccfe96e4fba4c4a67bbf20e9ce4",
+    "AuditFront4bT61S3.olean": "05bff46adabe0e766b7cc53e776033b48de9630a207ed9f8e6d1bf68b2466446"
+  }
+}

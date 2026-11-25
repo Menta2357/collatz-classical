@@ -33,6 +33,8 @@ AUDIT_MODULES = (
     "AuditA2CenteredRecharge",
     "AuditA2LabelSwitch",
     "AuditFront4bEarlyMeeting",
+    "AuditFront4bT61S3",
+    "AuditFront4bValSixCut",
     "AuditFront4bPairExit",
     "AuditA2ThinDomain",
     "AuditT73Minimal",

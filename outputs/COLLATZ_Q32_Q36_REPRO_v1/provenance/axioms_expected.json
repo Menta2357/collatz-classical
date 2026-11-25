@@ -436,5 +436,38 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditFront4bT61S3": {
+    "index": [],
+    "checkpoint60": [],
+    "index_formula": [
+      "propext",
+      "Quot.sound"
+    ],
+    "seed_affine": [
+      "propext",
+      "Quot.sound"
+    ],
+    "history60": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descends_t61": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bValSixCut": {
+    "paid_row": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_row64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

@@ -1,0 +1,72 @@
+{
+  "H": 92,
+  "a1_inclusive": [
+    74,
+    74
+  ],
+  "projection_limit": 15000,
+  "time_limit_seconds": 20,
+  "explicit_projection_bound": 6885,
+  "tail_projection_bound": 2517,
+  "combinatorial_projection_bound": 9402,
+  "projector_parameter_changes": {
+    "FIRST": [
+      75,
+      74
+    ]
+  },
+  "verifier_sha256": "58996472281fd2df5ea11fc3b24f8e41be755b5aae41fe64647c4355e017e840",
+  "parent_sha256": {
+    "COLLATZ_Q39_20261125/TERRAS89_D5_H92_A75/check.py": "13d35385ed17685cb05c1d75e617e507ccd263044ead8938cec9057f79e21c1e",
+    "COLLATZ_Q44_20261125/TERRAS89_D3_HIGH/check.py": "e9b8b62a5c0dbbe62d573638a542619efde0bddf92317a30d1ba6f20a4a1b01d"
+  },
+  "status": "PASS",
+  "D3_gt_H": 5,
+  "D3_le_H_lt_D4": 78,
+  "independently_replayed_sources": 83,
+  "max_D5_when_D4_gt_H": 102,
+  "maximizing_sources": [
+    {
+      "source": 1983639485862360211303432191,
+      "D3_D4_D5": [
+        84,
+        100,
+        102
+      ],
+      "rise_gap_pairs": [
+        [
+          74,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    }
+  ],
+  "parent_summaries_sha256": "4339b4128a51a663f58de18298d8d98f2d66e3aea7a14f018f5fa4c6c3cc0866",
+  "independent_physical_records_sha256": "a8d34028d00d10274ef370bd987140b01040393bc0a32fac12cf877317a29b81",
+  "elapsed_seconds": 0.025446,
+  "counters": {
+    "projections": 8826,
+    "gap_tail": 1941,
+    "lifts": 9402,
+    "physical_replays": 5055,
+    "joint_rise": 576,
+    "fourth_long": 4368,
+    "exact_gap": 1941
+  }
+}

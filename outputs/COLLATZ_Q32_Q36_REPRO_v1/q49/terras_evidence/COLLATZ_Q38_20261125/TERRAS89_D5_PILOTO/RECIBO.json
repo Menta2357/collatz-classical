@@ -1,0 +1,20 @@
+{
+  "grade": "PAPER_PROJECTION_AND_EXACT_SMALL_PILOT",
+  "command": "python3 -B experiments/COLLATZ_Q38_20261125/TERRAS89_D5_PILOTO/check.py",
+  "pilot_executions": 1,
+  "timeout_seconds": 20,
+  "observed_tool_wall_seconds": 0.226840666,
+  "exit_code": 0,
+  "references_agree_on": "entire odd physical source set and each (D3,D4,D5) in D4>H",
+  "pilot": [
+    {"H": 12, "count": 126, "D3_gt_H": 27, "D3_le_H_lt_D4": 99, "max_D5": 23},
+    {"H": 16, "count": 323, "D3_gt_H": 63, "D3_le_H_lt_D4": 260, "max_D5": 26}
+  ],
+  "H92_proved": false,
+  "H146_proved": false,
+  "large_windows_executed": [],
+  "for_H92_candidate_refutation": "physical odd x>0, x+1<2^92, D4>92, D5>=238",
+  "H92_combinatorial_gap_slots_upper": 669240663,
+  "H92_combinatorial_gap_tails_upper": 46626034,
+  "terras89_status": "OPEN_Q0_DELTA_1"
+}

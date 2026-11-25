@@ -275,6 +275,16 @@
     "sha256": "166ca45fb17fd70bcb3d15cc687abbb8ae7c02824af43ed857ce82e845e716ef"
   },
   {
+    "module": "AuditFront4bT61S3",
+    "origin": "experiments/COLLATZ_Q49_20261125/LEAN/AuditFront4bT61S3.lean",
+    "sha256": "f4e1cbac3d60ebca201bad68773b3f8354889ccfe96e4fba4c4a67bbf20e9ce4"
+  },
+  {
+    "module": "AuditFront4bValSixCut",
+    "origin": "experiments/COLLATZ_Q49_20261125/LEAN_CUT/AuditFront4bValSixCut.lean",
+    "sha256": "73b8b90de4cf900dfdd9c30e04303afebf255b602f27d1053f526f25bd6bc59a"
+  },
+  {
     "module": "AuditP5J131EarlyCapture",
     "origin": "experiments/COLLATZ_ECO_20261125/Q32_P5_J131_EARLY_CAPTURE_LEAN/AuditP5J131EarlyCapture.lean",
     "sha256": "8668d8d60db35edee78843552ba5ff134ae94e4953c6f789c21c216f285eb78a"
@@ -338,6 +348,16 @@
     "module": "Front4bT60",
     "origin": "experiments/COLLATZ_Q44_20261125/FRONT4B_T60_LEAN/Front4bT60.lean",
     "sha256": "72dea50d2c90c76b7cf09521af94e3d428c5e775fa54aeb67563bd1e5d0f8b74"
+  },
+  {
+    "module": "Front4bT61S3",
+    "origin": "experiments/COLLATZ_Q49_20261125/LEAN/Front4bT61S3.lean",
+    "sha256": "4bf66e4ec7bc36a36222a6fb75c0228f0a225a329232103d771c8d7ba1529671"
+  },
+  {
+    "module": "Front4bValSixCut",
+    "origin": "experiments/COLLATZ_Q49_20261125/LEAN_CUT/Front4bValSixCut.lean",
+    "sha256": "029f31f60955af4ab3cdc176c5593994a6d976622dab1a15c5462d32bdd1631a"
   },
   {
     "module": "OddMap",

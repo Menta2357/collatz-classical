@@ -1,0 +1,7 @@
+# Terras 89 · Primer fragmento de \(a_1=71\)
+
+Se fija la ventana \(H=92\) y se estudian únicamente impares positivos \(x\) con \(x+1<2^{92}\), \(\nu_2(x+1)=71\), primer hueco par \(1\le b_1\le4\) y \(D_3\le92<D_4\). Las dos subramas restantes de ese tramo se consumen como insumos anteriores, con la recurrencia para \(D_4\le92\) y el certificado de Q44 para \(D_3>92\).
+
+El recuento de Q46 para anchura 21 da 20.712 congruencias si se desarrolla todo \(a_1=71\). Para \(b_1=1,2,3,4\) da, respectivamente, 4.882, 3.911, 3.093 y 2.411. La suma 14.297 es el mayor tramo iniciado en \(b_1=1\) que entra en el límite de 15.000. Incluir \(b_1=5\) daría 16.146. Se fija el límite de 14.297 congruencias y 20 s para este fragmento. La cola \(b_1\ge5\) queda separada con cota 6.415.
+
+Se reutiliza el proyector Q39 con el filtro exacto de hueco inicial de Q46. Se calcula la quinta racha únicamente después de comprobar \(D_3\le92<D_4\). Se refuta con una fuente física del fragmento con \(D_5\ge238\); la aceptación requiere cobertura completa y una segunda verificación literal de las cinco rachas de cada fuente retenida, con libro desde el mismo \(x\). No se ejecutan las bandas selladas ni \(H=146\). [Reducción Q37](../../COLLATZ_Q37_20261125/TERRAS89_PAPER/RESULTADO.md) · [Coste Q46](../../COLLATZ_Q46_20261125/TERRAS89_NEXT/RESULTADO.md) · [Última banda cubierta](../../COLLATZ_Q46_20261125/TERRAS89_A72_HIGH_GAPS/RECIBO_UNION.json)

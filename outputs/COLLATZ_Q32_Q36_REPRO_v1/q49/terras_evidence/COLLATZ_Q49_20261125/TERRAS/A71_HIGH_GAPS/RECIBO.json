@@ -1,0 +1,114 @@
+{
+  "scope": {
+    "H": 92,
+    "a1": 71,
+    "b1_minimum": 5,
+    "residual": "D3<=92<D4"
+  },
+  "first_gap_tail_b1_ge": 21,
+  "projection_limit": 6415,
+  "time_limit_seconds": 20,
+  "verifier_sha256": "6155b812f763f9685c0624ca7bf300f50c10c1eda4a4924a0adcd66ba1bb63cf",
+  "preregistration_sha256": "6ebb6599d5165e8789fc35d28c6c144d23968279b3700807f73251cfa74c6a4f",
+  "pinned_low_verifier_sha256": "8723d6483d8509de112c923f02f14a1a8a653c1867dc67b7ebea67291eccccb6",
+  "parent_sha256": {
+    "COLLATZ_Q39_20261125/TERRAS89_D5_H92_A75/check.py": "13d35385ed17685cb05c1d75e617e507ccd263044ead8938cec9057f79e21c1e",
+    "COLLATZ_Q44_20261125/TERRAS89_D3_HIGH/check.py": "e9b8b62a5c0dbbe62d573638a542619efde0bddf92317a30d1ba6f20a4a1b01d",
+    "COLLATZ_Q45_20261125/TERRAS89_D5_H92_A73/check.py": "ccf6da7369a64c7bce23e309c5277919759f03676b91e7e6aa2dee464fe05739",
+    "COLLATZ_Q46_20261125/TERRAS89_NEXT/check_cost.py": "45b2ab10616e3ef6a01163a434234dab880a960a518f4cf809f4c81dbce82785",
+    "COLLATZ_Q46_20261125/TERRAS89_A72_HIGH_GAPS/RECIBO_UNION.json": "8cf752993e609b3b21c011effc1150ccf635dfa3a3105290159f6722d2afd7e6",
+    "COLLATZ_Q44_20261125/TERRAS89_D3_HIGH/RECIBO.json": "354a8fba34f152b00c54f595713ebec5360a8ca051816ed75ab241e700a65a8c"
+  },
+  "status": "PASS",
+  "independently_replayed_sources": 4,
+  "retained_domains_by_physical_first_gap": {
+    "6": 2,
+    "7": 1,
+    "9": 1
+  },
+  "max_D5_on_residual": 100,
+  "maximizing_sources": [
+    {
+      "source": 3223985570870762570438934527,
+      "D3_D4_D5": [
+        86,
+        99,
+        100
+      ],
+      "rise_gap_pairs": [
+        [
+          71,
+          7
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "same_source_books": [
+        {
+          "run": 1,
+          "state": 80105532685038914252200698306878089897,
+          "k": 78,
+          "d": 71,
+          "C": 7509466514977363620705281135650699
+        },
+        {
+          "run": 2,
+          "state": 60079149513779185689150523730158567423,
+          "k": 80,
+          "d": 72,
+          "C": 22528399545234322317019500700628641
+        },
+        {
+          "run": 3,
+          "state": 274044713660021703716707793555367272447,
+          "k": 100,
+          "d": 86,
+          "C": 107752636650232309056200241451301908344089
+        },
+        {
+          "run": 4,
+          "state": 26667223511754564375899213839390491693793,
+          "k": 114,
+          "d": 99,
+          "C": 171792506924118985585598939280189379768719247003
+        },
+        {
+          "run": 5,
+          "state": 20000417633815923281924410379542868770345,
+          "k": 116,
+          "d": 100,
+          "C": 515377520772377725944230957151082261291474621393
+        }
+      ]
+    }
+  ],
+  "parent_projection_records_sha256": "eb8a866720c18aa27dbf8b202a36784156464162ef0213dd4e37606b1fb96a1c",
+  "independent_physical_records_sha256": "00d7e1b1b461580af347d7f689ec0810cb1b59f821e7968391f413f212c54209",
+  "elapsed_seconds": 0.040331,
+  "counters": {
+    "projections": 6415,
+    "gap_tail": 1471,
+    "lifts": 6885,
+    "physical_replays": 3883,
+    "joint_rise": 470,
+    "fourth_long": 3003,
+    "exact_gap": 1471
+  },
+  "root_b1_le_4_executed": false,
+  "A70_executed": false,
+  "H146_executed": false
+}
