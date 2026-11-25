@@ -10,6 +10,11 @@
     "sha256": "ce2939f99a27d1b511342799a2067cebbade7ed7d4797985f0cd631bc4bcdfeb"
   },
   {
+    "module": "A2Capture3049",
+    "origin": "experiments/COLLATZ_Q44_20261125/A2_3049_LEAN/A2Capture3049.lean",
+    "sha256": "04a4c37c9dde42d77a7095bf9cf1eb990c02732c7baf69b00d68b639d5aa69b0"
+  },
+  {
     "module": "A2CertifiedLanding",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2CertifiedLanding.lean",
     "sha256": "1c316aaf5020b4553ad950c8df1f258987023084e46d2ab60f9ed927be213213"
@@ -140,6 +145,11 @@
     "sha256": "2fad3379eb6b400507772cc35be3932d28569e750634f29c9273601bed5f5895"
   },
   {
+    "module": "AuditA2Capture3049",
+    "origin": "experiments/COLLATZ_Q44_20261125/A2_3049_LEAN/AuditA2Capture3049.lean",
+    "sha256": "26a54994e233ade7fa414445c0a67ac99c0802fcbbb41a643dbae1766f4b22f9"
+  },
+  {
     "module": "AuditA2R1Descents",
     "origin": "experiments/COLLATZ_Q38_20261125/Q38_A2_R1_LEAN/AuditA2R1Descents.lean",
     "sha256": "26456d8db27b6aa8deb681241f3ef217c1cda17a7142eecaffe44eef48c227a5"
@@ -190,6 +200,11 @@
     "sha256": "501882ca90cd348bf603acd6ad1b4cfc7d06bc54df8c964240bfb025ee3ebd1d"
   },
   {
+    "module": "AuditFront4bT60",
+    "origin": "experiments/COLLATZ_Q44_20261125/FRONT4B_T60_LEAN/AuditFront4bT60.lean",
+    "sha256": "166ca45fb17fd70bcb3d15cc687abbb8ae7c02824af43ed857ce82e845e716ef"
+  },
+  {
     "module": "AuditP5J131EarlyCapture",
     "origin": "experiments/COLLATZ_ECO_20261125/Q32_P5_J131_EARLY_CAPTURE_LEAN/AuditP5J131EarlyCapture.lean",
     "sha256": "8668d8d60db35edee78843552ba5ff134ae94e4953c6f789c21c216f285eb78a"
@@ -228,6 +243,11 @@
     "module": "FixedSourceRun",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_RACHA_FUENTE_FIJA_LEAN/FixedSourceRun.lean",
     "sha256": "1fc5ce0cc7d0e64cf576a7f5ca6d0751e0a64133d96f1198b2e124130bad6d7d"
+  },
+  {
+    "module": "Front4bT60",
+    "origin": "experiments/COLLATZ_Q44_20261125/FRONT4B_T60_LEAN/Front4bT60.lean",
+    "sha256": "72dea50d2c90c76b7cf09521af94e3d428c5e775fa54aeb67563bd1e5d0f8b74"
   },
   {
     "module": "OddMap",

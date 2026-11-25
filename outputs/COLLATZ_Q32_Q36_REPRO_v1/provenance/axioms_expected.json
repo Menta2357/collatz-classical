@@ -310,5 +310,19 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2Capture3049": {
+    "paid_3049": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT60": {
+    "descends_t60": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

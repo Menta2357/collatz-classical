@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "x positive odd; x+1 < 2^92; D3(x) > 92",
+  "height": 92,
+  "old_coverage": "Pinned exact Terras88 projection, retaining accepted physical sources",
+  "new_replay": "Five runs and their even gaps by the shortcut map",
+  "source_count": 2194,
+  "D2_gt_H": 39,
+  "D2_le_H_lt_D3": 2155,
+  "old_max_D4": 107,
+  "new_max_D5": 111,
+  "maximizer_witness": {
+    "source": 2830979310098318154216243199,
+    "rise_gap_pairs": [
+      [
+        47,
+        2
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        43,
+        1
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "sorted_physical_records_sha256": "20bbad54b7e829597a26285bc1f57c5bc437e1bbc28f38b10a06733097aa97ed",
+  "verifier_sha256": "e9b8b62a5c0dbbe62d573638a542619efde0bddf92317a30d1ba6f20a4a1b01d",
+  "parent_sha256": {
+    "TERRAS88_four_runs_107_170.py": "6ba30af9548240c470a7a4f61f3970566b473cdf8033a6653f6a61badba2b745",
+    "TERRAS88_four_runs_66_67.py": "b170d1c8810209779d6d58efe0cc907d05f30dbfea2ce24b9aee5d187a61fa06",
+    "TERRAS88_CIERRE_RECIBO.json": "5eabced486b6f05d06605b9adb29f77e936932133e4cc634e11aff1cec8f1293"
+  }
+}

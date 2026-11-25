@@ -28,6 +28,8 @@ AUDIT_MODULES = (
     "AuditA2WeakBreakDescent",
     "AuditA2WeakBreakExitCapture",
     "AuditA2WeakBreakReserve",
+    "AuditFront4bT60",
+    "AuditA2Capture3049",
 )
 STANDARD_MODULES = {"Std"}
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}

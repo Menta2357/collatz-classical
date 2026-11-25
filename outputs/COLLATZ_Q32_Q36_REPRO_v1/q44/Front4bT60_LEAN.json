@@ -1,0 +1,108 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "theorem": "CollatzCharacterBridge.Front4bT60.descends_t60",
+  "guard": {
+    "k": "428769801+2^31*(44+128*t)",
+    "k_residue": 94918050313,
+    "k_modulus": 274877906944,
+    "u": "392+1024*k"
+  },
+  "tail_from_T36": {
+    "word": [
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1
+    ],
+    "book": {
+      "returns": 23,
+      "division_sum": 31,
+      "additive": 210847909975
+    }
+  },
+  "J_T59": {
+    "original_book": {
+      "returns": 59,
+      "valuation_sum": 88,
+      "additive": 84284738864848587803900839355
+    },
+    "affine": [
+      1249116564172496083410368651093,
+      3617378839485116033219791633152
+    ]
+  },
+  "T60": {
+    "real_last_valuation_lower_bound": 8,
+    "strict_descent_below_same_N": true,
+    "original_book": {
+      "returns": 60,
+      "valuation_sum": "88+b",
+      "additive": 253163701604367108480427299121
+    }
+  },
+  "margin_256N_minus_3J_minus_1": [
+    3256366235908386456053685281024,
+    9430273085196322324287876386560
+  ],
+  "main_attempt": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "Front4bT60.olean",
+      "Front4bT60.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.263,
+    "started_utc": "2026-11-25T20:38:46.711623+00:00",
+    "source_sha256": "72dea50d2c90c76b7cf09521af94e3d428c5e775fa54aeb67563bd1e5d0f8b74"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditFront4bT60.olean",
+      "AuditFront4bT60.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.271,
+    "started_utc": "2026-11-25T20:38:48.975227+00:00",
+    "source_sha256": "166ca45fb17fd70bcb3d15cc687abbb8ae7c02824af43ed857ce82e845e716ef",
+    "imported_object_sha256": "e43ec1d3f963b394f2330d096ef13ebe41fcce9a542f4b1bb9eea6bfda0b79fb"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "frozen_parents_verified_before_and_after": 119,
+  "sha256": {
+    "Front4bT60.lean": "72dea50d2c90c76b7cf09521af94e3d428c5e775fa54aeb67563bd1e5d0f8b74",
+    "Front4bT60.olean": "e43ec1d3f963b394f2330d096ef13ebe41fcce9a542f4b1bb9eea6bfda0b79fb",
+    "AuditFront4bT60.lean": "166ca45fb17fd70bcb3d15cc687abbb8ae7c02824af43ed857ce82e845e716ef",
+    "AuditFront4bT60.olean": "e008f99921c01e94325c091f5f3bc9d2acd31524b1f0c86f0089cd748ee72a12"
+  }
+}
