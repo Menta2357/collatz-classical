@@ -1,0 +1,36 @@
+# Capturas en Collatz y primer descenso con 88 rachas
+
+Paquete de investigación reproducible de Collatz Classical. Reúne cinco unidades de prueba en Lean 4.21.0 y un verificador aritmético independiente para el resultado condicionado de Terras–Weaver. [Repositorio Collatz Classical](https://github.com/Menta2357/collatz-classical)
+
+## Qué acredita cada pieza
+
+Para impares positivos, \(T(x)=(3x+1)/2^{\nu_2(3x+1)}\) es el retorno impar. Un libro `j/S/B` representa \(j\) retornos físicos, suma \(S\) de las valoraciones reales y término aditivo \(B\), conservando \(2^S y=3^j x+B\). Un certificado `Paid` entrega un descenso bajo la semilla original \(N\) o la coincidencia física de dos trayectorias en un mismo impar, con una fuente impar positiva \(w<N\). La conclusión de llegada a 1 en el consumidor correspondiente usa la hipótesis inductiva para las semillas impares menores.
+
+| Pieza | Dominio y resultado |
+| --- | --- |
+| [Q32](lean/P5J131EarlyCapture.lean) | Para \(N=206466174079+2^{40}j\) y \(j\equiv131\pmod{4096}\), Lean certifica pago en el retorno 33. Es un descenso si \(j=131+256(32q)\) y una captura de fuente menor si \(j=131+256(16+32q)\). El caso de captura incluye toda la progresión Q29. |
+| [Q33](lean/P5J131Residual.lean) | Para \(j=131+256u\), la primera ruptura después de \(r\ge3\) unos desde \(H=T^{28}(N)\) da captura cuando su valoración física cumple \(b\ge3\). Esto incluye toda la guarda \(u\equiv2\pmod4\). Lean acredita además el descenso en T34 para \(u\equiv24\) o \(60\pmod{64}\). |
+| [Q34](lean/AB9T3Adapter.lean) | Para \(N=2^{64}(177+512t)-5\), el selector certifica una fuente menor que coincide en T3 cuando \(t\equiv1858\pmod{59049}\), \(9883\pmod{19683}\) o \(3007528\pmod{4782969}\). Los dos libros y la desigualdad estricta \(w<N\) se preservan en cada fila. |
+| [Q35](lean/P5J131T35.lean) | En el mismo origen de Q33, Lean certifica \(T^{35}(N)<N\) para \(u\equiv92\) o \(120\pmod{256}\). La última arista conserva su valoración física \(c\ge3\), con libro \(35/(53+c)/188961729523762715\) o \(35/(53+c)/192339429244290587\), respectivamente. |
+| [Q36](lean/P5U8Fold.lean) | Para el mismo origen de Q33, un lema de plegado de divisiones conserva las valoraciones reales y ambos libros. Las progresiones `u=40+128k` y `u=360+512k` dan captura pagada en T35 y T36. La progresión `u=904+1024k` da captura pagada y descenso estricto en T36. |
+| [Terras–Weaver 88](terras88/README.md) | Prueba y verificaciones aritméticas. Si el primer cruce del coeficiente \(3^{d_k}<2^k\) es finito y contiene hasta 88 rachas impares máximas en el mapa abreviado, coincide con el primer descenso estricto bajo la semilla original. La aparición de ese cruce y el caso general de Collatz siguen abiertos. |
+
+Las guardas explícitas reproducidas de Q32, Q33, Q35 y Q36 cubren 371 de las 1024 clases de `u` módulo 1024. Q36 aporta 11 clases disjuntas dentro de `u≡8 (mod 32)`, un subcanal de 32 clases. La guarda anterior Q22 `u=79 (mod 256)` añade otras cuatro clases al inventario del proyecto. Algunas clases restantes admiten la captura adaptable de Q33 cuando se demuestra su guarda física. El alcance de Q34 es la unión de sus tres guardas, en cada una de las cuales `N mod 9` vale, respectivamente, 0, 3 o 6. El recuento de novedad de Q34 depende de verificar la procedencia de la tabla anterior de 30 guardas en papel.
+
+## Verificar desde una copia limpia
+
+Requisitos para ejecutar ambos verificadores: Python 3.10 o posterior y Lean 4.21.0. El archivo [lean-toolchain](lean-toolchain) fija la versión que usa `elan`. La dependencia Lean externa es `Std`, que viene con ese toolchain. Desde la raíz de esta edición:
+
+```sh
+elan toolchain install leanprover/lean4:v4.21.0
+python3 -B scripts/verify.py --lean "$(elan which lean)"
+python3 -B terras88/verify.py
+```
+
+Con Lean 4.21.0 ya en `PATH`, basta ejecutar `python3 -B scripts/verify.py`. El script verifica los SHA-256, recorre la clausura de imports y reconstruye módulos y auditorías en un directorio temporal con un hilo por compilación. Usa un `LEAN_PATH` aislado de los objetos de otros proyectos. Las auditorías importan los módulos recién construidos y comparan la clausura de axiomas de cada declaración con el inventario fijado. Para verificar sólo las huellas y las fuentes incluidas, usa `python3 -B scripts/verify.py --hashes-only`. El modo rápido de Terras recalcula las cribas y desigualdades indicadas y comprueba los recibos de las búsquedas largas. [Alcance y opciones de Terras](terras88/README.md)
+
+## Proveniencia
+
+Las 44 fuentes Lean, incluidas las cinco auditorías de importación, se copiaron byte a byte desde las fuentes fijadas del proyecto. El [inventario](provenance/lean_sources.json) registra sus rutas relativas de procedencia y sus huellas, y [la tabla de axiomas](provenance/axioms_expected.json) fija las 20 declaraciones auditadas. Se mantienen separados los resultados Lean y aritméticos. Los objetos Lean se generan al verificar esta edición. El recibo de compilación aislada de Q36 identifica también sus objetos del entorno de investigación. [Recibo Q36](provenance/q36_frozen_build.json) · [Recibo de reconstrucción completa](provenance/clean_build.json)
+
+Las fuentes y los informes propios son una contribución al repositorio bajo sus condiciones de licencia. Terras 88 documenta las dependencias de la extensión y enlaza los suplementos externos. [Licencia Apache 2.0](../../LICENSE)

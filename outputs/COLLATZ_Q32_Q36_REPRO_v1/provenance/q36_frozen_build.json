@@ -1,0 +1,85 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "scope": {
+    "coordinate": "Q18 j=131+256*u",
+    "u=40+128*k": "physical paid capture by T35, actual c>=3",
+    "u=360+512*k": "physical paid capture by T36, actual c>=3",
+    "u=904+1024*k": "strict original descent and physical paid capture by T36, actual c>=5",
+    "families_are_disjoint_modulo_1024": true,
+    "residues_certified_of_32_with_u_congruent_8_mod_32": 11,
+    "certifies_universal_activation": false
+  },
+  "theorems": {
+    "fold_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capture40": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capture360": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends904": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "P5U8Fold.olean",
+        "P5U8Fold.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 2.522,
+      "started_utc": "2026-11-25T15:19:16.245916+00:00"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "P5U8Fold.olean",
+        "P5U8Fold.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.751,
+      "started_utc": "2026-11-25T15:19:29.859234+00:00"
+    }
+  ],
+  "initial_build_failure": "Rewriting a physical orbit endpoint under an unreduced let. Repaired using dsimp only.",
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditP5U8Fold.olean",
+      "AuditP5U8Fold.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.741,
+    "started_utc": "2026-11-25T15:19:49.941549+00:00"
+  },
+  "frozen_parents_verified_before_and_after": 83,
+  "frozen_parent_manifest_sha256": "2996972d9845b6bea67555224e2cbf23f478a8ee4451ec0273caa6040fc4bf2d",
+  "sha256": {
+    "P5U8Fold.lean": "b7c42b1106e1c3042eb8af201be4e60b1088c5a83df4eb0111fab107b2919845",
+    "P5U8Fold.olean": "86288836ab2a1579a0f4f0c3f4aec6e5ee30b3f59ac2f9c280609b2d072c8166",
+    "AuditP5U8Fold.lean": "7e269658f487bc86f3dfd6252001cbad20a802793bb4320966eae0d76df71b45",
+    "AuditP5U8Fold.olean": "47f94f880b75afbcfa9d385a8f5191191a772254b038f380e4574279e81ee398"
+  }
+}

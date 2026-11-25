@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "lean_version": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "parallel_jobs": 1,
+  "modules": {
+    "OddMap": 3.997,
+    "ParametricCapture": 5.12,
+    "A2Header": 4.406,
+    "DyadicCylinder": 0.904,
+    "FixedSourceRun": 3.039,
+    "CRTPhysicalBridge": 4.219,
+    "StagedCylinder": 2.309,
+    "Arrival": 1.418,
+    "P5R3S5": 8.281,
+    "P5CompensationMeetings": 15.156,
+    "A2HalfAdaptive": 5.734,
+    "A2WeakEntry": 3.609,
+    "A2BoundedReducer": 1.997,
+    "A2CertifiedLanding": 0.683,
+    "A2CertifiedLandingTrace": 0.835,
+    "P5ROddThreeReadmission": 1.479,
+    "P5OddExit": 2.464,
+    "P5RenewalRun": 1.203,
+    "P5RZeroA2": 1.643,
+    "A2SecondSwitchWordCompiler": 1.063,
+    "CRTWordSegment": 0.323,
+    "A2TwentySevenTerminal": 2.646,
+    "TwosCompression": 1.754,
+    "A2SecondOne": 4.742,
+    "A2C2Continuation": 13.774,
+    "A2MixedProgressCut": 1.351,
+    "A2LongDoseStrictReentry": 1.071,
+    "A2LongDosePhysicalWordBridge": 0.657,
+    "A2ThreeWeakCommonLongRate": 1.771,
+    "A2PhysicalPrefix": 0.525,
+    "A2FirstCrossingFusion": 0.468,
+    "A2FirstCrossingChronology": 0.524,
+    "P5J131Chronology": 0.417,
+    "P5RZeroJ131": 0.47,
+    "P5J131EarlyCapture": 1.317,
+    "AuditP5J131EarlyCapture": 0.837,
+    "P5J131Residual": 2.792,
+    "AuditP5J131Residual": 1.877,
+    "AB9T3Adapter": 0.596,
+    "AuditAB9T3Adapter": 0.25,
+    "P5J131T35": 0.433,
+    "AuditP5J131T35": 0.254,
+    "P5U8Fold": 0.898,
+    "AuditP5U8Fold": 0.302
+  },
+  "audits": {
+    "AuditP5J131EarlyCapture": {
+      "paid_one_return": [
+        "propext",
+        "Quot.sound"
+      ],
+      "capture33": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "pays33": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "q29_capture33": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "arrives_under_induction": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditP5J131Residual": {
+      "history28": [
+        "propext",
+        "Quot.sound"
+      ],
+      "strong_capture": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "paid_or_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "pays_mod_four_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "descends_mod_64_sixty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "descends_mod_64_twenty_four": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditAB9T3Adapter": {
+      "select_iff_guard": [
+        "propext"
+      ],
+      "guard_meeting": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "union_paid": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditP5J131T35": {
+      "descends_mod_256_ninety_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "descends_mod_256_one_twenty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditP5U8Fold": {
+      "fold_capture": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "capture40": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "capture360": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "descends904": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "clean_source_copy": true,
+  "worked_from_external_directory": true,
+  "external_lean_path_overridden": true,
+  "terras_verify": "PASS",
+  "lean_elapsed_seconds": 109.971,
+  "terras_elapsed_seconds": 2.528,
+  "full_elapsed_seconds": 112.561,
+  "detects_tampered_lean_source": true
+}

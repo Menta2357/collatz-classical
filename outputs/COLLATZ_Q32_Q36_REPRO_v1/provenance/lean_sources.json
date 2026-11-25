@@ -1,0 +1,222 @@
+[
+  {
+    "module": "A2BoundedReducer",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_STRICT_REENTRY_LEAN_20261123/A2BoundedReducer.lean",
+    "sha256": "bebbac37d2b9aa77c702ffbfa9fdcbd6c294c7f450085da561c57b1d4086f97f"
+  },
+  {
+    "module": "A2C2Continuation",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_C2_CONTINUACION_LEAN_20261123/A2C2Continuation.lean",
+    "sha256": "ce2939f99a27d1b511342799a2067cebbade7ed7d4797985f0cd631bc4bcdfeb"
+  },
+  {
+    "module": "A2CertifiedLanding",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2CertifiedLanding.lean",
+    "sha256": "1c316aaf5020b4553ad950c8df1f258987023084e46d2ab60f9ed927be213213"
+  },
+  {
+    "module": "A2CertifiedLandingTrace",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2CertifiedLandingTrace.lean",
+    "sha256": "97dfb00998e218ca5df9ba70b86c9e9740ad0d1c227e4558c6a7fa53ef186f86"
+  },
+  {
+    "module": "A2FirstCrossingChronology",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2FirstCrossingChronology.lean",
+    "sha256": "9f0099bba1b6062bfb28ac9c53aaac40c3898f76dd2af355609df381aaa71dc0"
+  },
+  {
+    "module": "A2FirstCrossingFusion",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2FirstCrossingFusion.lean",
+    "sha256": "27eb2f42507653353706dc25216530097a8529189864ff9dd3386146006ae88c"
+  },
+  {
+    "module": "A2HalfAdaptive",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_HALF_ADAPTIVE_LEAN/A2HalfAdaptive.lean",
+    "sha256": "19343963262dbc7d8875546c3144247b6ee2a318e8fb1c8e9d521432546d058f"
+  },
+  {
+    "module": "A2Header",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_HEADER_LEAN/A2Header.lean",
+    "sha256": "e7337f12cafb1828182cdfb76e5467d69133e071362ba54b7a879e3b6fad0d73"
+  },
+  {
+    "module": "A2LongDosePhysicalWordBridge",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_LONG_DOSE_TWOS_BRIDGE_LEAN/A2LongDosePhysicalWordBridge.lean",
+    "sha256": "f4a8a37e2ce50dda73333d7f36ccabb82dfc965defae5d5bf00b9c438cdc3632"
+  },
+  {
+    "module": "A2LongDoseStrictReentry",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_LONG_DOSE_STRICT_REENTRY_LEAN/A2LongDoseStrictReentry.lean",
+    "sha256": "330873a03dadf3e6f3955bcdb2503c2fd5ab24bd8cace852390e8ed9cf01e8dc"
+  },
+  {
+    "module": "A2MixedProgressCut",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_MIXED_PROGRESS_CUT_LEAN_20261123/A2MixedProgressCut.lean",
+    "sha256": "c5714f80231bf487464f3fa03663a949a67044f8c917aaf98c88bc8b6ce39009"
+  },
+  {
+    "module": "A2PhysicalPrefix",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2PhysicalPrefix.lean",
+    "sha256": "03e433b3db80669d0cf58834bddbf80304174a42e159a778e96124d4e161e412"
+  },
+  {
+    "module": "A2SecondOne",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_SECOND_ONE_LEAN/A2SecondOne.lean",
+    "sha256": "3e453976a44a682c90f81266ef24824d6c81adbfda2e31bb36dc97831984dbdc"
+  },
+  {
+    "module": "A2SecondSwitchWordCompiler",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_SECOND_SWITCH_WORD_COMPILER_LEAN/A2SecondSwitchWordCompiler.lean",
+    "sha256": "6b7fd4d933ac1648b49816659d5b8add182501865283472436a60658c4c7c81c"
+  },
+  {
+    "module": "A2ThreeWeakCommonLongRate",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_THREE_WEAK_COMMON_LONG_RATE_LEAN/A2ThreeWeakCommonLongRate.lean",
+    "sha256": "8ae4ab7ea59201a180ac0efea0f4797229e9b33bceb5d4a3f0ba95754fc44eb8"
+  },
+  {
+    "module": "A2TwentySevenTerminal",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_27_MOD32_LEAN/A2TwentySevenTerminal.lean",
+    "sha256": "259a82f62a84747adc4a16fa5d0838a952e592b2e7b2d149acfe8e755f5135ef"
+  },
+  {
+    "module": "A2WeakEntry",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_WEAK_ENTRY_LEAN/A2WeakEntry.lean",
+    "sha256": "80e1bb201ae29321c6c067202ce6ad2ac27820cb308bbf88a2c1f6fb49ddceb5"
+  },
+  {
+    "module": "AB9T3Adapter",
+    "origin": "experiments/COLLATZ_Q33_Q34_20261125/Q34_AB9_T3_LEAN/AB9T3Adapter.lean",
+    "sha256": "cb5a2cb91ad2ce52b2fcdad83c72f3c0393b81fce6c0a24a3c9d22d3c928d1d2"
+  },
+  {
+    "module": "Arrival",
+    "origin": "experiments/COLLATZ_DOS_FRENTES_20261121/integracion_lineal/FROZEN/Arrival.lean",
+    "sha256": "2fad3379eb6b400507772cc35be3932d28569e750634f29c9273601bed5f5895"
+  },
+  {
+    "module": "AuditAB9T3Adapter",
+    "origin": "experiments/COLLATZ_Q33_Q34_20261125/Q34_AB9_T3_LEAN/AuditAB9T3Adapter.lean",
+    "sha256": "501882ca90cd348bf603acd6ad1b4cfc7d06bc54df8c964240bfb025ee3ebd1d"
+  },
+  {
+    "module": "AuditP5J131EarlyCapture",
+    "origin": "experiments/COLLATZ_ECO_20261125/Q32_P5_J131_EARLY_CAPTURE_LEAN/AuditP5J131EarlyCapture.lean",
+    "sha256": "8668d8d60db35edee78843552ba5ff134ae94e4953c6f789c21c216f285eb78a"
+  },
+  {
+    "module": "AuditP5J131Residual",
+    "origin": "experiments/COLLATZ_Q33_Q34_20261125/Q33_P5_J131_RESIDUAL_LEAN/AuditP5J131Residual.lean",
+    "sha256": "2c778020db1ebb1f292e6697cd7f814c8e49ee62b562f3e0a9ffd67017ae534d"
+  },
+  {
+    "module": "AuditP5J131T35",
+    "origin": "experiments/COLLATZ_Q35_RELEASE_20261125/Q35_P5_J131_T35_LEAN/AuditP5J131T35.lean",
+    "sha256": "aea2951aeb83ccbda0e34cff04012a25e6d2289fd34fc01fee15b2bb8a09fa22"
+  },
+  {
+    "module": "AuditP5U8Fold",
+    "origin": "experiments/COLLATZ_Q36_20261125/Q36_P5_U8_LEAN/AuditP5U8Fold.lean",
+    "sha256": "7e269658f487bc86f3dfd6252001cbad20a802793bb4320966eae0d76df71b45"
+  },
+  {
+    "module": "CRTPhysicalBridge",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_CAPTURA_CRT_PHYSICAL_LEAN/CRTPhysicalBridge.lean",
+    "sha256": "9b10c569f8bafc1751c26a080ed4d9504ddad3f34cc667ee64e02a4e5593d132"
+  },
+  {
+    "module": "CRTWordSegment",
+    "origin": "experiments/COLLATZ_ECO_20261125/Q27_GENERIC_CRT_WORD_LEAN/CRTWordSegment.lean",
+    "sha256": "267cdaa2adcc4ebb94245d9fed8ecb7c9d2af0bed9b86ee40048ed67f8c86d9c"
+  },
+  {
+    "module": "DyadicCylinder",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_CAPTURA_CRT_DYADIC_LEAN/DyadicCylinder.lean",
+    "sha256": "56138a1d47db21a47cf7554d91fae5560acfc94b6d1e53a0b1dd5d6c56b19937"
+  },
+  {
+    "module": "FixedSourceRun",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_RACHA_FUENTE_FIJA_LEAN/FixedSourceRun.lean",
+    "sha256": "1fc5ce0cc7d0e64cf576a7f5ca6d0751e0a64133d96f1198b2e124130bad6d7d"
+  },
+  {
+    "module": "OddMap",
+    "origin": "experiments/COLLATZ_DOS_FRENTES_20261121/integracion_lineal/FROZEN/OddMap.lean",
+    "sha256": "496c3c168e65f4fd73ca8300406bf4be80ad75dfeb47a8ef4ea8f4c7eecc69e5"
+  },
+  {
+    "module": "P5CompensationMeetings",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_P5_COMPENSATION_MEETINGS_LEAN/P5CompensationMeetings.lean",
+    "sha256": "a72129d9b123e79744d653b0505d3dced9672f95d6be61abf7834af7ac80287e"
+  },
+  {
+    "module": "P5J131Chronology",
+    "origin": "experiments/COLLATZ_ECO_20261125/Q29_P5_J131_CHRONOLOGY_LEAN/P5J131Chronology.lean",
+    "sha256": "91d7a527ee112431ce65f39aeecbd7703f0724f9ce72143ac8b324de7301f735"
+  },
+  {
+    "module": "P5J131EarlyCapture",
+    "origin": "experiments/COLLATZ_ECO_20261125/Q32_P5_J131_EARLY_CAPTURE_LEAN/P5J131EarlyCapture.lean",
+    "sha256": "7591945571c9ff16ee0ac439b40af1dec5bfb1bb10bf0e7de0be00147992aeca"
+  },
+  {
+    "module": "P5J131Residual",
+    "origin": "experiments/COLLATZ_Q33_Q34_20261125/Q33_P5_J131_RESIDUAL_LEAN/P5J131Residual.lean",
+    "sha256": "7c2db7f66bac9edd01ef1f2d3ff2854aec553c238be1d26accf4491a0769b8fd"
+  },
+  {
+    "module": "P5J131T35",
+    "origin": "experiments/COLLATZ_Q35_RELEASE_20261125/Q35_P5_J131_T35_LEAN/P5J131T35.lean",
+    "sha256": "c1ff9a901bacd1f73521d71727006d3979d0d9e9262da1d67132e28abd1f42d0"
+  },
+  {
+    "module": "P5OddExit",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_P5_3X_MINUS4_20261123/P5OddExit.lean",
+    "sha256": "2f4d05a70fc840eca14f2207eacef1791ed88c451171461b22f6762a943f78ab"
+  },
+  {
+    "module": "P5R3S5",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_P5_R3_S5_LEAN/P5R3S5.lean",
+    "sha256": "555fe38400f1585fe38e4394474ca9c5dea5b8f91bcb54b587f096f2638b3756"
+  },
+  {
+    "module": "P5ROddThreeReadmission",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_P5_R_ODD_THREE_READMISSION_LEAN/P5ROddThreeReadmission.lean",
+    "sha256": "de211f3c1e2e00e74abd3991e765af525e0cc770c553d299542dc8a1dbe1c514"
+  },
+  {
+    "module": "P5RZeroA2",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q18_P5_R0_A2_LEAN/P5RZeroA2.lean",
+    "sha256": "6d6d6198077ef51a8c574f9d0f0d66c66d97b44ca565a98c22ef37b0394ec9da"
+  },
+  {
+    "module": "P5RZeroJ131",
+    "origin": "experiments/COLLATZ_ECO_20261125/Q20_P5_J131_LEAN/P5RZeroJ131.lean",
+    "sha256": "d25b2ee13e6fb5c1cb4267772a1afd6e6b8517d4050909c6128b394e78b8b84a"
+  },
+  {
+    "module": "P5RenewalRun",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_P5_RENEWAL_RUN_LEAN/P5RenewalRun.lean",
+    "sha256": "08c0bf251f60155f3b56d87309da319d5f73df614c73566ac42d6a171fd97bd8"
+  },
+  {
+    "module": "P5U8Fold",
+    "origin": "experiments/COLLATZ_Q36_20261125/Q36_P5_U8_LEAN/P5U8Fold.lean",
+    "sha256": "b7c42b1106e1c3042eb8af201be4e60b1088c5a83df4eb0111fab107b2919845"
+  },
+  {
+    "module": "ParametricCapture",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/PARAMETRICO_LEAN/ParametricCapture.lean",
+    "sha256": "2ede4b2b0c83abc0a2b4bcd6291ee1ffef3f8b05ef601c34bafd17795580baff"
+  },
+  {
+    "module": "StagedCylinder",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_CAPTURA_CRT_STAGED_LEAN/StagedCylinder.lean",
+    "sha256": "0598def27fb85ecb506105f16700e4567eb4123707ee8c5fbafce187cf3f7126"
+  },
+  {
+    "module": "TwosCompression",
+    "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_DOS_COMPRESION_LEAN/TwosCompression.lean",
+    "sha256": "d713b629b11b099c942efbed9336a4d4ec460e108845ed962131ef3414279a82"
+  }
+]

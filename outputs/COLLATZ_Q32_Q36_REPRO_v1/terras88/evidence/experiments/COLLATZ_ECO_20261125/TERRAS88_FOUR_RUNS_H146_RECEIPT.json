@@ -1,0 +1,19 @@
+{
+  "generatedUtc": "2026-11-25T01:52:08+00:00",
+  "status": "PASS",
+  "source": "TERRAS88_four_runs_66_67.py",
+  "sha256": "b170d1c8810209779d6d58efe0cc907d05f30dbfea2ce24b9aee5d187a61fa06",
+  "reproduction": "python3 -B -c 'import runpy; runpy.run_path(\"experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_66_67.py\")[\"run_certificate\"](146)'",
+  "height": 146,
+  "bounded_tuples": 111432838,
+  "long_pairs": 60,
+  "other_long_triples": 5157,
+  "max_D4_for_D3_gt_H": 162,
+  "max_D4_starts": [
+    18380016052274733332075537243702199939235839,
+    36760032104549466664151074487404399878471679
+  ],
+  "coverage_remaining": "D3<=H analytic by D4 < H + log2(3) D3",
+  "exitCode": 0,
+  "elapsedSeconds": 124.748
+}
