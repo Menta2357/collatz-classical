@@ -63,3 +63,32 @@ Para \(s=1\), incluso si \(m=0\), el primer uno del conector da \(T(X)>2N+1\) me
 Tras los dos unos obligatorios, el terminal es \(J=3^{2m+3}u-10\) y la reserva ternaria de \(J+10\) vale exactamente \(2m+4\), pues \(\nu_3(u)=1\) en la rama \(h=2\). Para las inversas hasta esa profundidad, escribimos el estado como \(2^A(J+10)/3^i-q\). El defecto entero positivo empieza en 10 y se transforma por \(q\mapsto(2^a q+1)/3\). Permanece al menos 5 y, en dos inversas físicas de exponentes \(a,b\), satisface \(q''\le 2^{a+b}q/8\). La última desigualdad sigue de \(q\ge10\) o de las valoraciones mínimas de los únicos defectos menores que 10 que admiten una arista, 5 y 7.
 
 La escalera que invierte \((1,1)\) y luego los pares alcanza simultáneamente la menor altura posible por profundidad hasta esa reserva. Con \(2m+2\) inversas da \(V\). Con \(2m+3\) da \((4V-1)/3\), y con \(2m+4\), \((8V-5)/9\). Este último coincide con el estado anterior a la última pareja original \((1,2)\) al llegar a \(V\); lo preceden \(R-1\) unos desde \(P>N\). Por tanto una fuente pagada directamente en \(J\) requiere **al menos \(2m+5\) retornos** en este dominio. Las nuevas capturas aprovechan un terminal posterior. Esta cota se comprobó en papel.
+
+## Realización de recarga arbitraria tras el conector completo
+
+La pérdida de la guarda de precio coexiste con una regeneración física de la reserva. En una fila de pendiente impar, fijemos \(R\) admisible, \(m\ge1\) y \(D=3m+1\). Dados cualquier longitud \(L\ge2\) y reserva deseada \(D'\ge1\), elegimos
+\[
+v'\equiv(2^{D'+2}-1)3^{-(L-1)}\pmod{2^{D'+3}},
+\qquad
+3^{2m+1}u\equiv1+2^{L-1}v'\pmod{2^{L+D'+2}}.
+\]
+Los residuos de \(v'\) y \(u\) son impares. Se levanta el segundo al parámetro de la primera racha por
+\[
+3^Rv\equiv2^{D+2}u-3\pmod{2^{D+L+D'+4}} .
+\]
+Como los coeficientes que se invierten son impares, cada congruencia selecciona una progresión física. La relación \(X+1=4(3^{2m+1}u-1)\) da una racha exacta de \(L\) unos desde \(X\) y su cofactor \(\widetilde v=(X+1)/2^{L+1}\equiv v'\pmod{2^{D'+3}}\). La relación \(3^{L-1}\widetilde v+1\equiv2^{D'+2}\pmod{2^{D'+3}}\) fuerza la nueva ruptura 2 y la nueva ruptura 3 en la mitad de \(X\). Al terminal auxiliar \(\widetilde W\) le queda \(\nu_2(\widetilde W+1)=D'\), porque \(\widetilde W+1=3(3^{L-1}\widetilde v+1)/4\).
+
+Así se puede aumentar arbitrariamente la reserva bruta aun fijando el primer origen de la fila, la primera longitud, el número de pares inicial y la longitud del conector. Las semillas varían dentro de la fila para realizar los distintos \(D'\). En cada realización, el mismo \(N\) rige todos los tramos. La nueva mitad de \(X\) supera \(N\), aunque la original fuese menor. Este fenómeno refuta una disminución automática basada en la reserva bruta, y deja abierta una disminución que incorpore el precio y la historia.
+
+La progresión dirigida \(k=428769801+2147483648q\) tiene \(R=5,m=1,L=2\) y cambia de reserva 4 a 7. El original realiza \((1,1,2,1,2,1,2)\) desde \(T^{50}\) hasta \(T^{57}\), siempre sobre \(N\), con libro absoluto \((57,86,9321986955841322940888318115)\). El verificador comprueba todos los levantamientos de esa progresión.
+
+## Contracción local con cambio de acoplamiento
+
+El hilo de presupuesto obtuvo para \(s=0\) y la valoración real \(a\) desde \(X\) un umbral exacto después de todo el conector. Si \(F=T(X)\), entonces
+\[
+F<N \quad\Longleftrightarrow\quad
+\frac{9^m}{8^m}<\frac{2^aN+14}{3(V+5)}.
+\]
+El libro de \(V\) hasta \(F\) es \((2m+1,3m+a,15\cdot9^m-14\cdot8^m)\).
+
+En \(k=308201+524288t\) se verificaron \(R=7,m=1,s=0\). Los sufijos \((1,2,2)\) originales y \((1,1,2)\) auxiliares dan terminales \(F,E\) con \(N<F<V\) y \(F+5=3(E+1)\). El libro original es \((49,74,1250265597169792119053251)\) y el auxiliar es \((10,13,65321)\). Aunque la reserva auxiliar baja de 3 a 2, el factor físico entre ambas trayectorias pasa de 6 a 3. Reconstruir una pareja de factor 6 requeriría \(W_*=(F-1)/6\), y se verifica \(4W_*+1\equiv1\pmod3\). Esto impide la readmisión en la misma guarda \(4W+1=3^{R}v\) con \(R\ge2\). La contracción y la menor reserva por sí solas no acreditan un paso recursivo.

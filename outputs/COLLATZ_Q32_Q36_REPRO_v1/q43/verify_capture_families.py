@@ -67,5 +67,28 @@ def check(case):
             "original_book": ledger, "source_book": aux_ledger}
 
 
+def check_reserve_regeneration():
+    residue, stride = 428769801, 2147483648
+    seed = (110482433359989887 + 288230376151711744 * residue,
+            288230376151711744 * stride)
+    values, word, ledger = trajectory(seed, 57)
+    assert word[42:50] == [1] * 5 + [2, 1, 2]
+    assert word[50:] == [1, 1, 2, 1, 2, 1, 2]
+    for pivot_clock, run, reserve in [(42, 5, 4), (50, 2, 7)]:
+        base, slope = values[pivot_clock]
+        companion = ((base - 1) // 2, slope // 2)
+        ends, valuation_word, _ = trajectory(companion, run)
+        assert valuation_word == [1] * (run - 1) + [3]
+        end, lift = ends[-1]
+        assert (end + 1) % 2 ** (reserve + 1) == 2**reserve
+        assert lift % 2 ** (reserve + 1) == 0
+        if pivot_clock == 50:
+            assert companion[0] > seed[0] and companion[1] >= seed[1]
+    assert all(value[0] > seed[0] and value[1] >= seed[1] for value in values[1:])
+    return {"k_residue": residue, "k_stride": stride, "reserves": [4, 7],
+            "first_new_pivot": values[50], "original_book": ledger}
+
+
 if __name__ == "__main__":
-    print(json.dumps({"status": "PASS", "families": [check(case) for case in CASES]}, indent=2))
+    print(json.dumps({"status": "PASS", "families": [check(case) for case in CASES],
+                      "reserve_regeneration": check_reserve_regeneration()}, indent=2))
