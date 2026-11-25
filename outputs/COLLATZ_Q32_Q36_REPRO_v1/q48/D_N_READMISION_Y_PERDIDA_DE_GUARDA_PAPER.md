@@ -1,8 +1,11 @@
 # Q48 Front4b · dominio repetible y primera pérdida de guarda
 
-25 de noviembre de 2026. **PAPER.** Una sola fila física; el origen `N`,
-los relojes y los costes se conservan. Se consume el prefijo certificado
-hasta `F=T^60(N)` sin reconstruirlo. No hay barrido orbital ni Lean nuevo.
+25 de noviembre de 2026. **PAPER: auditoría de guardas reutilizables.**
+Una sola fila física; el origen `N`, los relojes y los costes se conservan.
+Se consume el prefijo certificado hasta `F=T^60(N)` sin reconstruirlo.
+No hay barrido orbital ni Lean nuevo en este informe. La misma fila fue
+pagada posteriormente **ya en F**, antes de las salidas estudiadas aquí;
+véase el cierre al final.
 
 ## Dominio congelado
 
@@ -72,8 +75,11 @@ paso adicional `u<x≤F`; no se ha compilado una declaración restringida.
 alcanzables; un dominio más pequeño tendría que demostrar su propio
 cierre en cada primer cruce.
 El `paid_of_total_producer` Lean existente cuantifica sobre **todos**
-los `Admitted N`. Un productor sólo para `D_{N,F}` necesita esta versión
-restringida formalizada antes de invocarlo.
+los `Admitted N`. El adaptador Lean posterior `ThinAdmitted` formaliza
+un consumidor para `Admitted N x ... ∧ 11x<12N`, condición que todo
+`D_{N,F}` satisface. Aun así, un productor sólo para `D_{N,F}` no
+satisface automáticamente el cuantificador sobre todos los estados
+`ThinAdmitted`.
 
 ## Primer contraste: la guarda de par se pierde físicamente
 
@@ -143,15 +149,46 @@ y el término derecho positivo, por lo que **esa arista** no cruza
 bajo `x`. Un cruce físico de la tabla entra al consumidor, que paga
 o readmite en `D_{N,F}`; no garantiza que el sucesor conserve `G`.
 
-**STOP preciso.** Falta el productor para todos los estados de
-`D_{N,F}`, en particular para los que pierden `G`, como el `Y` anterior,
-y para salidas de bloques largos sin cruce en la primera arista.
-Desde un sucesor sin `G` se necesita un pago con fuente impar `w<N`
-y libros físicos independientes hasta un mismo terminal, o una cola
-real con `HitsBelow` del pivote **actual**. No se afirma ausencia de
-una captura posterior ni convergencia global.
+## Cierre posterior de esta fila y uso de las guardas
 
-Padres: `../COLLATZ_Q47_STRATEGY_20261125/TRANSFERENCIA_MAHLER_FRONT4B.md`,
-`../COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2FirstCrossingFusion.lean`,
-`../COLLATZ_CONTINUO_20261122/Q17_A2_FIRST_CROSSING_FUSION_LEAN/A2CertifiedLanding.lean`,
-`LEGACY/RESULTADO_D2.md`.
+La comprobación previa a cualquier ruptura es más corta. Para **todo**
+`s≥0` de `k=428769801+2^31(108+128s)`, no sólo `s≡7 (mod 8)`, `F`
+es impar, `F≡2 (mod 3)` y
+
+```text
+w=(2F−1)/3
+ =47778218498672720312816632307
+  +56521544366954938019059244268s,
+N−w=19194128103873021555380308620
+    +22706618147309399574484706068s>0.
+```
+
+Entonces `0<w<N`, `w` es impar y `3w+1=2F` tiene valoración real 1.
+Los libros físicos independientes son
+
+```text
+Segment N F 60 95 253163701604367108480427299121,
+Segment w F 1 1 1.
+```
+
+Esto da `PaidMeeting N` para **toda la fila en F**. El teorema
+`paid_t60` está compilado y auditado en Lean; su lema genérico
+`paid_of_small_two_mod_three` permite reutilizar la guarda
+`F impar ∧ F≡2 (mod 3) ∧ 2F<3N+1` en otros dominios con un
+`Segment N F` físico. Si se aplica inducción sobre semillas menores,
+la convergencia de `w<N` transmite llegada a 1 a `N`. La captura
+no prueba por sí sola convergencia incondicional.
+
+Por tanto, **se retira la búsqueda de salidas posteriores de esta
+fila**. El testigo `Y` conserva su valor como contraejemplo físico al
+cierre de una guarda de pares bajo readmisión. En otro dominio donde
+falte el pago temprano, un sucesor sin `G` necesitará una fuente impar
+menor que el mismo `N` y ambos libros hasta un terminal común, o una
+cola real con `HitsBelow` del pivote **actual**.
+
+Padres: `../q47/TRANSFERENCIA_MAHLER_FRONT4B.md`,
+`../lean/A2FirstCrossingFusion.lean`,
+`../lean/A2CertifiedLanding.lean`,
+`LEGACY/RESULTADO_D2.md`, `LEAN_THIN/RESULTADO.md`,
+`../lean/Front4bEarlyMeeting.lean`, `LEAN_PAID_EARLY/RECIBO.json`,
+`CIERRE_FRONT4B.md`.
