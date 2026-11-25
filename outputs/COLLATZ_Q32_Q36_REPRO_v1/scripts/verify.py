@@ -28,6 +28,9 @@ AUDIT_MODULES = (
     "AuditA2WeakBreakDescent",
     "AuditA2WeakBreakExitCapture",
     "AuditA2WeakBreakReserve",
+    "AuditT73Minimal",
+    "AuditA2TwoOnesMinimal",
+    "AuditT73Family",
     "AuditFront4bT60",
     "AuditA2Capture3049",
 )

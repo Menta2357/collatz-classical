@@ -324,5 +324,26 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditT73Family": {
+    "paid_t73": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2TwoOnesMinimal": {
+    "two_ones_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditT73Minimal": {
+    "minimum_two_returns_t73": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

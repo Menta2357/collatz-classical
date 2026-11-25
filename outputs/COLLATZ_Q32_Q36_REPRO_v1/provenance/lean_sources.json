@@ -105,6 +105,11 @@
     "sha256": "259a82f62a84747adc4a16fa5d0838a952e592b2e7b2d149acfe8e755f5135ef"
   },
   {
+    "module": "A2TwoOnesMinimal",
+    "origin": "experiments/COLLATZ_Q45_20261125/A2TwoOnesMinimal.lean",
+    "sha256": "687f7bc5b16cd150a04bc33c96b7cb57a889539f6931e7527b35cbb46604ef88"
+  },
+  {
     "module": "A2U392",
     "origin": "experiments/COLLATZ_Q37_20261125/Q37_A2_U392_LEAN/A2U392.lean",
     "sha256": "1004730443be279af6f04d7816be0519dcb07eb1d48dda76d7eb0341d44654d8"
@@ -170,6 +175,11 @@
     "sha256": "89d02d9c3876272310542f5c604aba2be0691e31dc1eeb373adb2d0011f3b932"
   },
   {
+    "module": "AuditA2TwoOnesMinimal",
+    "origin": "experiments/COLLATZ_Q45_20261125/AuditA2TwoOnesMinimal.lean",
+    "sha256": "15f936c199bdc17621fbe4a0e1fec5fe6e1ba47b99ed3381443ecfb5905a048b"
+  },
+  {
     "module": "AuditA2U392",
     "origin": "experiments/COLLATZ_Q37_20261125/Q37_A2_U392_LEAN/AuditA2U392.lean",
     "sha256": "7021c23bd67f7ec53672428d318ec3353e0755f76f80131c194253fcc8be0b1a"
@@ -223,6 +233,16 @@
     "module": "AuditP5U8Fold",
     "origin": "experiments/COLLATZ_Q36_20261125/Q36_P5_U8_LEAN/AuditP5U8Fold.lean",
     "sha256": "7e269658f487bc86f3dfd6252001cbad20a802793bb4320966eae0d76df71b45"
+  },
+  {
+    "module": "AuditT73Family",
+    "origin": "experiments/COLLATZ_Q45_20261125/T73_FAMILY_LEAN/AuditT73Family.lean",
+    "sha256": "393bd7d9c30bbe8e580ef2ca1e40158edf390cbf72b9a1e219224c9bd14a85be"
+  },
+  {
+    "module": "AuditT73Minimal",
+    "origin": "experiments/COLLATZ_Q45_20261125/AuditT73Minimal.lean",
+    "sha256": "66d7d732eda120a465cbefac52bbc579d208f71a7820248f8227704e76a9d5dd"
   },
   {
     "module": "CRTPhysicalBridge",
@@ -323,6 +343,16 @@
     "module": "StagedCylinder",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_CAPTURA_CRT_STAGED_LEAN/StagedCylinder.lean",
     "sha256": "0598def27fb85ecb506105f16700e4567eb4123707ee8c5fbafce187cf3f7126"
+  },
+  {
+    "module": "T73Family",
+    "origin": "experiments/COLLATZ_Q45_20261125/T73_FAMILY_LEAN/T73Family.lean",
+    "sha256": "4c640be2074d7177920a2c50a3b6b452fdc73599f91117f7b5192c9a5f11b021"
+  },
+  {
+    "module": "T73Minimal",
+    "origin": "experiments/COLLATZ_Q45_20261125/T73Minimal.lean",
+    "sha256": "6dc1271062d9ea25bf0b655c13822f37e80475e67e7d6718fee8d4745b2480cc"
   },
   {
     "module": "TwosCompression",
