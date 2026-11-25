@@ -256,5 +256,28 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2WeakBreakCapture": {
+    "history_two_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "history_two_one_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakDescent": {
+    "weak_two_local_book": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descends_after_weak_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

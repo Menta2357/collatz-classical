@@ -1,0 +1,45 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDITS",
+  "toolchain": "Lean 4.21.0",
+  "parallel_jobs_per_build": 1,
+  "frozen_q41_parents_verified_for_capture": 107,
+  "frozen_parents_verified_for_descent": 111,
+  "capture_main_attempts": 2,
+  "descent_main_attempts": 2,
+  "audits": {
+    "AuditA2WeakBreakCapture": {
+      "history_two_six": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "history_two_one_six": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditA2WeakBreakDescent": {
+      "weak_two_local_book": [
+        "propext",
+        "Quot.sound"
+      ],
+      "descends_after_weak_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "sha256": {
+    "A2WeakBreakCapture.lean": "da65754a639b00b450ebaf8dcb39a428effdf45bd2b442719404cf8572e62eb4",
+    "A2WeakBreakCapture.olean": "c7d5fae933ad893e8ca3b22c9b22fcf6bb3127d6035d194b72e82ae48333863d",
+    "AuditA2WeakBreakCapture.lean": "473af3c5a9b1bd95665a7d55689b03c874070283e2c10e710f56a60a122f14be",
+    "AuditA2WeakBreakCapture.olean": "3437e76cf553840f6bb7801dbc713b8759bb0ea7bf0875c55524c37d9b795154",
+    "A2WeakBreakDescent.lean": "71a34511713df2b74efaeead92a499624d5213fc4e48d370b009c0ef892d1765",
+    "A2WeakBreakDescent.olean": "e6fd4a08b8e39d69f73a58dbc460834c948c4c6ee4674ea363632290473c5274",
+    "AuditA2WeakBreakDescent.lean": "a2a46f9f388ca5b46d7b9be214d8482e14e452aa3c356a8c2e3e77294baf862d",
+    "AuditA2WeakBreakDescent.olean": "ef35a3213dae2334315104ee5a3bb6d8cc7824fd5936c80611671569e9a5d32e"
+  },
+  "certifies_activation_on_complement": false
+}

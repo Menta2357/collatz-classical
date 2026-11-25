@@ -1,0 +1,4 @@
+import A2WeakBreakCapture
+
+#print axioms CollatzCharacterBridge.A2WeakBreakCapture.history_two_six
+#print axioms CollatzCharacterBridge.A2WeakBreakCapture.history_two_one_six

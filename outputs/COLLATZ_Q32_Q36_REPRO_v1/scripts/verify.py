@@ -24,6 +24,8 @@ AUDIT_MODULES = (
     "AuditA2T42",
     "AuditA2T43",
     "AuditA2T43Inverse",
+    "AuditA2WeakBreakCapture",
+    "AuditA2WeakBreakDescent",
 )
 STANDARD_MODULES = {"Std"}
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
