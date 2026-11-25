@@ -1,0 +1,59 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean 4.21.0",
+  "scope": "Six exact T43 descents and three captures in A2, physical terminal valuation and ledgers",
+  "audit": {
+    "descends_9_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_169_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_217_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_361_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_393_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_857_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1193_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1241_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1417_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified": 99,
+  "sha256": {
+    "A2T43.lean": "86d7d46fbf244ab4b8a85c20aa6c771267bae5254b01cffa2a95daffdf8cac01",
+    "A2T43.olean": "4d7d1950dc980917c5d997f8e640b85734bac3b69ecad9c917c5deb268cccefb",
+    "AuditA2T43.lean": "b11eba2dd7460ce567038e53ee1341991783d549ca526634fdf6c630e7724852",
+    "AuditA2T43.olean": "ffc70870632bf428b80a55f4833f993b38751f714a6af4ba082a0536f9c9a583"
+  }
+}

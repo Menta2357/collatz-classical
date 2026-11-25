@@ -80,6 +80,11 @@
     "sha256": "bf4ecb0f4afaa178f55edddac7293948994c0ec2ec55a4c31df164eeda274211"
   },
   {
+    "module": "A2T43",
+    "origin": "experiments/COLLATZ_Q40_20261125/Q40_A2_T43_LEAN/A2T43.lean",
+    "sha256": "86d7d46fbf244ab4b8a85c20aa6c771267bae5254b01cffa2a95daffdf8cac01"
+  },
+  {
     "module": "A2ThreeWeakCommonLongRate",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_THREE_WEAK_COMMON_LONG_RATE_LEAN/A2ThreeWeakCommonLongRate.lean",
     "sha256": "8ae4ab7ea59201a180ac0efea0f4797229e9b33bceb5d4a3f0ba95754fc44eb8"
@@ -118,6 +123,11 @@
     "module": "AuditA2T42",
     "origin": "experiments/COLLATZ_Q39_20261125/Q39_A2_T42_LEAN/AuditA2T42.lean",
     "sha256": "a50f4d7d46548b2d68c5a0832293c1899a116b906cff2df93d23c5d269db54f7"
+  },
+  {
+    "module": "AuditA2T43",
+    "origin": "experiments/COLLATZ_Q40_20261125/Q40_A2_T43_LEAN/AuditA2T43.lean",
+    "sha256": "b11eba2dd7460ce567038e53ee1341991783d549ca526634fdf6c630e7724852"
   },
   {
     "module": "AuditA2U392",

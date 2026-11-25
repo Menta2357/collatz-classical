@@ -192,5 +192,52 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2T43": {
+    "descends_9_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_169_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_217_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_361_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_393_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_857_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1193_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1241_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1417_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }
