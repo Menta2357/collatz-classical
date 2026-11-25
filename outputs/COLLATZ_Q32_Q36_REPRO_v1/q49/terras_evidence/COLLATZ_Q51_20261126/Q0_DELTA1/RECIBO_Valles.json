@@ -1,0 +1,40 @@
+{
+  "status": "PASS_Q0_DELTA1_FIVE_RECIPROCAL_NECESSITY",
+  "scope": {
+    "shortcut_steps": 630118245525664765,
+    "odd_departures": 397560349370386783,
+    "maximal_odd_runs": 89,
+    "delta": 1
+  },
+  "critical_five_reciprocal_sum_strict_lower": [
+    1,
+    7000000000000000000
+  ],
+  "valley_rank_strict_upper_rational": {
+    "2": [
+      35000000000000000000,
+      1
+    ],
+    "3": [
+      112000000000000000000,
+      3
+    ],
+    "4": [
+      42000000000000000000,
+      1
+    ],
+    "5": [
+      56000000000000000000,
+      1
+    ]
+  },
+  "floor_1e30_positive_budget_margin": 2260750403,
+  "previous_bisection_reexecuted": false,
+  "orbit_runs": 0,
+  "weaver_enumerations": 0,
+  "verifier_sha256": "80113dcac447f0db059b935bf002fd581497ee8387883afde6ed2369cbb7be23",
+  "parent_sha256": {
+    "RECIBO.json": "00a375c544b79651d6b23157b50a7c3dc70342396454eea12beedcab67668e7b",
+    "check.py": "fb67b6bc180dd8182c4a4cb216180b56283aa085fc86f86fb836aca6a2fac516"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "imports": [
+    "Std"
+  ],
+  "definitions": 7,
+  "theorems": 14,
+  "scope": [
+    "physical shortcut orbit and its exact additive book",
+    "odd entries and starts of maximal odd runs in a finite prefix",
+    "exact composition of prefix and tail books",
+    "no descent before the supplied first contraction",
+    "last source state at a first contraction is even"
+  ],
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "--profile",
+        "-o",
+        "TerrasClock.olean",
+        "TerrasClock.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 7.581,
+      "started_utc": "2026-11-25T23:35:40.700320+00:00",
+      "source_sha256": "e0cbd31c1f6a1b78221b58d5bcd8a1eb9a962b79b9fa8b47a6d8567c3d48fa78"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "--profile",
+        "-o",
+        "TerrasClock.olean",
+        "TerrasClock.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 22.645,
+      "started_utc": "2026-11-25T23:36:05.733405+00:00",
+      "source_sha256": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2"
+    }
+  ],
+  "repair": "Adjust accumulated count composition and a linter diagnostic. No change to the API.",
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "--profile",
+      "-o",
+      "AuditTerrasClock.olean",
+      "AuditTerrasClock.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 92.202,
+    "started_utc": "2026-11-25T23:37:07.746389+00:00",
+    "source_sha256": "32c12d072e842e03d22a4347f01e37b212a72f283b03dfb722258ffcfa905d5a",
+    "imported_object_sha256": "55f2de3a0d2ed5ef5bbfb5b76660b738ca5ba55bed3c13495d2acbc828469e43"
+  },
+  "axiom_union": [
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms": {
+    "shortcut": [],
+    "orbit": [],
+    "oddCount": [],
+    "startsOddRun": [],
+    "oddRuns": [],
+    "additive": [],
+    "FirstContraction": [],
+    "orbit_succ": [],
+    "orbit_add": [],
+    "startsOddRun_iff": [
+      "propext"
+    ],
+    "oddRuns_succ": [
+      "propext"
+    ],
+    "oddRuns_le_oddCount": [
+      "propext",
+      "Quot.sound"
+    ],
+    "oddCount_add": [],
+    "shortcut_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "shortcut_odd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "exact_book": [
+      "propext",
+      "Quot.sound"
+    ],
+    "additive_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "no_descent_of_coefficient": [
+      "propext",
+      "Quot.sound"
+    ],
+    "prior_no_descent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_pos": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_last_even": [
+      "propext"
+    ]
+  },
+  "toolchain_hash_pins_verified_before_and_after": 3,
+  "sha256": {
+    "TerrasClock.lean": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2",
+    "TerrasClock.olean": "55f2de3a0d2ed5ef5bbfb5b76660b738ca5ba55bed3c13495d2acbc828469e43",
+    "AuditTerrasClock.lean": "32c12d072e842e03d22a4347f01e37b212a72f283b03dfb722258ffcfa905d5a",
+    "AuditTerrasClock.olean": "e2b29e02f61389b418f282e4e8cc71f00e36e2b37b1e8e66258549ad7706f3c9"
+  }
+}

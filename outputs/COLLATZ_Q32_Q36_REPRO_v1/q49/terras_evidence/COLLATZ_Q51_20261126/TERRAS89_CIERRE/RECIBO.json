@@ -1,0 +1,64 @@
+{
+  "status": "PASS_TERRAS89_PAPER_WITH_EXACT_CERTIFICATES",
+  "scope": "finite first coefficient crossing, at most 89 maximal odd runs",
+  "capacities": {
+    "92": {
+      "low": {
+        "candidates": 10,
+        "terminal_gaps": 15572,
+        "inverse_gaps": 41,
+        "inverse_branches": 21
+      },
+      "high": {
+        "physical_sources": 2194,
+        "D5_max": 111
+      },
+      "D5_bound": 237
+    },
+    "146": {
+      "low": {
+        "candidates": 24,
+        "terminal_gaps": 40447,
+        "inverse_gaps": 173,
+        "inverse_branches": 87
+      },
+      "high": {
+        "physical_sources": 5217,
+        "D5_max": 166
+      },
+      "D5_bound": 377
+    }
+  },
+  "q0_delta1": "excluded",
+  "q0_clocks": [
+    630118245525664765,
+    397560349370386783
+  ],
+  "rank_floors": [
+    92,
+    146,
+    146,
+    170,
+    231,
+    256
+  ],
+  "rank_cut": [
+    6,
+    10,
+    11,
+    146,
+    453027402666008300866
+  ],
+  "price_margin_floor_1e30": 2255671791,
+  "source_inclusive": [
+    28000000000000000001,
+    453027402666008300865
+  ],
+  "target_at_least": 89202980794122492566142873090593446023921663,
+  "blocks_at_most": 5,
+  "archived_weaver_shards": 913,
+  "local_five_run_proofs": true,
+  "requires_freelan_b5": false,
+  "all_proofs_formalized_in_lean": false,
+  "universal_first_crossing_proved": false
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "domain": "N>=3; FirstContraction N k; orbit N k=N+1",
+  "conclusions": [
+    "N odd and N mod 12 in {3,7}",
+    "orbit N (k+1)=(N+1)/2<N",
+    "orbit N i differs from orbit N j whenever i<j<=k"
+  ],
+  "build": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "--profile",
+      "-o",
+      "TerrasDeltaOne.olean",
+      "TerrasDeltaOne.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 67.693,
+    "started_utc": "2026-11-25T23:43:34.463623+00:00",
+    "source_sha256": "e734668c12e8a12cc04a6b4d2783ef2b2320d43f2e9e9dcdc299ccde6164214a"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "--profile",
+      "-o",
+      "AuditTerrasDeltaOne.olean",
+      "AuditTerrasDeltaOne.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 93.016,
+    "started_utc": "2026-11-25T23:45:19.982108+00:00",
+    "source_sha256": "b49241e15bdd282e85064f172f56d8c37a165ca75631b275d6179fa0a70eb3e9",
+    "imported_object_sha256": "35d7a25aff338aa8b4d4c5c630cefe5426bcdd216ce37c9a31b66626518297a6"
+  },
+  "axioms": {
+    "after_initial_odd_nonzero_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_physics": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_distinct": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 6,
+  "sha256": {
+    "TerrasDeltaOne.lean": "e734668c12e8a12cc04a6b4d2783ef2b2320d43f2e9e9dcdc299ccde6164214a",
+    "TerrasDeltaOne.olean": "35d7a25aff338aa8b4d4c5c630cefe5426bcdd216ce37c9a31b66626518297a6",
+    "AuditTerrasDeltaOne.lean": "b49241e15bdd282e85064f172f56d8c37a165ca75631b275d6179fa0a70eb3e9",
+    "AuditTerrasDeltaOne.olean": "f16ad3974196e5978690ab7fbea1fcf6ee4dbb3342720c78364a18b17fe73909"
+  }
+}

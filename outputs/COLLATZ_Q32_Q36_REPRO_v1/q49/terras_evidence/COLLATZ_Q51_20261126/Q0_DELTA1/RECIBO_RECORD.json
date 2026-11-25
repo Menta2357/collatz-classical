@@ -1,0 +1,35 @@
+{
+  "status": "PASS_SECOND_VALLEY_SPLIT_CONSTANTS",
+  "global_Q0": {
+    "steps": 630118245525664765,
+    "odds": 397560349370386783
+  },
+  "lower_basis_pair": {
+    "steps": 423372672964960618,
+    "odds": 267118416222671843
+  },
+  "determinant": 1,
+  "unique_first_case_suffix": {
+    "steps": 206745572560704147,
+    "odds": 130441933147714940
+  },
+  "floor_1e30_log_gap_lower_bounds": [
+    1641584451145,
+    151686631024
+  ],
+  "even_distance_lower_bounds": {
+    "unique_lower_basis_pair": 48,
+    "other_split": 98
+  },
+  "floor_1e12_distance_thresholds_before_even_rounding": [
+    46519920187631,
+    96731510488404
+  ],
+  "clock_enumerations": 0,
+  "orbit_runs": 0,
+  "verifier_sha256": "7f680c52842bb8ca362b8cd7c704abf35bd710f8cc5145a3fc5b38104db51291",
+  "preregistration_sha256": "1b9fe5a631efff39dc381b9de2d228beef197d1e648a47079e459fac7f30c3b6",
+  "parent_sha256": {
+    "COLLATZ_Q37_20261125/TERRAS89_PAPER/check.py": "70da49e25ded08f542ee969d1e2d8b243dc7d5fe5650e9e43ef765fa28a1233d"
+  }
+}

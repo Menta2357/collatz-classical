@@ -1,0 +1,70 @@
+{
+  "status": "PASS_PAPER_D4_EQ_96",
+  "scope": {
+    "N": "positive odd",
+    "height_guard": "N+1<2^92",
+    "a1_inclusive": [
+      3,
+      69
+    ],
+    "D3_upper": 92,
+    "D4": 96
+  },
+  "conclusion": "D5<=237, hence 2^D5<=6^92",
+  "same_source_tail_bound": "0<R4=E4/2^k4<2^95",
+  "counterassumption_terminal": "y4=t*2^142; t positive integer, possibly even",
+  "last_gap_b_ge_4": "EXCLUDED_BY_SIZE_WITHOUT_TRUNCATION",
+  "last_gap_small_cases": [
+    {
+      "b4": 1,
+      "t_minimum": 1,
+      "t_maximum": 4,
+      "coefficient_mod_81": 68,
+      "rhs_mod_81": 1,
+      "inverse_mod_81": 56,
+      "required_t_mod_81": 56,
+      "all_positive_t_in_interval_excluded": true
+    },
+    {
+      "b4": 2,
+      "t_minimum": 1,
+      "t_maximum": 2,
+      "coefficient_mod_81": 55,
+      "rhs_mod_81": 3,
+      "inverse_mod_81": 28,
+      "required_t_mod_81": 3,
+      "all_positive_t_in_interval_excluded": true
+    },
+    {
+      "b4": 3,
+      "t_minimum": 1,
+      "t_maximum": 1,
+      "coefficient_mod_81": 29,
+      "rhs_mod_81": 7,
+      "inverse_mod_81": 14,
+      "required_t_mod_81": 17,
+      "all_positive_t_in_interval_excluded": true
+    }
+  ],
+  "exact_constant": {
+    "3_power_94": 706965049015104706497203195837614914543357369,
+    "2_power_149": 713623846352979940529142984724747568191373312,
+    "strict_positive_margin": 6658797337875234031939788887132653648015943
+  },
+  "original_N_constructed": false,
+  "physical_counterexample_claimed": false,
+  "physical_sources_replayed": 0,
+  "congruence_projections_over_seeds": 0,
+  "seed_or_orbit_sweeps": 0,
+  "A70_A71_executed": false,
+  "a1_le_2_executed": false,
+  "H146_executed": false,
+  "lean_executed": false,
+  "parent_contrast_sha256": {
+    "COLLATZ_Q50_20261126/TERRAS_D495_GAPS_ORDINAL/RESULTADO.md": "f729bf190e6972d9bed98887abcc8e4a4fc55c965215283a99dae87975b3d427",
+    "COLLATZ_Q50_20261126/TERRAS_D495_GAPS_ORDINAL/RECIBO.json": "022db4ace4b9efcef3c351f5e52c69932937475057997ed00cb792b081a7cd48"
+  },
+  "verifier_sha256": "3df923e5ad648c6f49292c5dfcd1c5cf7b32c308fe58df00d7eb70bcf4933dfd",
+  "preregistration_sha256": "17ffd671fc3e57c48359d6bc3ee2f6616b8820972c020e0def947f06548118a2",
+  "elapsed_seconds": 0.009279
+}

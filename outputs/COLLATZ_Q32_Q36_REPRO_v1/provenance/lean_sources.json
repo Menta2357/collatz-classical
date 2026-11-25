@@ -340,6 +340,21 @@
     "sha256": "66d7d732eda120a465cbefac52bbc579d208f71a7820248f8227704e76a9d5dd"
   },
   {
+    "module": "AuditTerrasClock",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_CLOCK/AuditTerrasClock.lean",
+    "sha256": "32c12d072e842e03d22a4347f01e37b212a72f283b03dfb722258ffcfa905d5a"
+  },
+  {
+    "module": "AuditTerrasDeltaOne",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_Q0_PHYSICS/AuditTerrasDeltaOne.lean",
+    "sha256": "b49241e15bdd282e85064f172f56d8c37a165ca75631b275d6179fa0a70eb3e9"
+  },
+  {
+    "module": "AuditTerrasProofs",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_TERRAS89/AuditTerrasProofs.lean",
+    "sha256": "a5e01dac53a1d74bf63cc45a937dbe7bfaa16f126d1feb012b257e48eb93314c"
+  },
+  {
     "module": "CRTPhysicalBridge",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_CAPTURA_CRT_PHYSICAL_LEAN/CRTPhysicalBridge.lean",
     "sha256": "9b10c569f8bafc1751c26a080ed4d9504ddad3f34cc667ee64e02a4e5593d132"
@@ -493,6 +508,31 @@
     "module": "T73Minimal",
     "origin": "experiments/COLLATZ_Q45_20261125/T73Minimal.lean",
     "sha256": "6dc1271062d9ea25bf0b655c13822f37e80475e67e7d6718fee8d4745b2480cc"
+  },
+  {
+    "module": "Terras88",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_TERRAS88/Terras88.lean",
+    "sha256": "b47e422f455e187affd8b9cb27f7d809d5da235fac54239e23abb5f91ba54182"
+  },
+  {
+    "module": "Terras89",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_TERRAS89/Terras89.lean",
+    "sha256": "0d9ee6c4f05f376f6d6a14e8b92164fc53194ee88d449254b3a5c267153368db"
+  },
+  {
+    "module": "TerrasClock",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_CLOCK/TerrasClock.lean",
+    "sha256": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2"
+  },
+  {
+    "module": "TerrasDeltaOne",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_Q0_PHYSICS/TerrasDeltaOne.lean",
+    "sha256": "e734668c12e8a12cc04a6b4d2783ef2b2320d43f2e9e9dcdc299ccde6164214a"
+  },
+  {
+    "module": "TerrasValleyExtraction",
+    "origin": "experiments/COLLATZ_Q51_20261126/LEAN_VALLEYS/TerrasValleyExtraction.lean",
+    "sha256": "bedd8c7d537448b0867ddba9331ba112136b48f435a13391f1972ebeb2d419f6"
   },
   {
     "module": "TwosCompression",

@@ -1,0 +1,95 @@
+{
+  "status": "PASS_CONDITIONAL_LEAN_ASSEMBLY",
+  "lean_version": "4.21.0",
+  "parallel_jobs": 1,
+  "statements": 12,
+  "frozen_source_object_pins": 8,
+  "complete_terras_proof_in_lean": false,
+  "explicit_inputs": [
+    "Terras88.Inputs",
+    "Terras89.Inputs89",
+    "Terras89.FiveRunCapacity 92",
+    "Terras89.FiveRunCapacity 146"
+  ],
+  "sha256": {
+    "AUDIT.log": "25452a5fe8d8a4c3c5e732804ad970026449e41206eca211b01c9c17d351d682",
+    "AUDIT.json": "a5df558f0ffc003dcb7770539b9c62701978a8c90ee38e4f0809d4517483644e",
+    "PARENTS.sha256": "e7a5483f3838175a8735ddd3b97b3c02847103090959f0cb5f3254c0b19452fd",
+    "PARENTS_PRE.log": "b17122c02e0d96e7cf91a16b32267b4e29c03e270804e07f8a94d777cef4661c",
+    "PARENTS_POST.log": "b17122c02e0d96e7cf91a16b32267b4e29c03e270804e07f8a94d777cef4661c",
+    "RESULTADO.md": "b4256875611500219d9a0627850ded61bc80ac695f0eb41af933ec8fdc08d6eb",
+    "../LEAN_VALLEYS/TerrasValleyExtraction.lean": "bedd8c7d537448b0867ddba9331ba112136b48f435a13391f1972ebeb2d419f6",
+    "../LEAN_VALLEYS/TerrasValleyExtraction.olean": "442338e320cbefc9aae35864a7722f1725d7a68170d3f4f318b37d3e4fa5bbbd",
+    "../LEAN_TERRAS88/Terras88.lean": "b47e422f455e187affd8b9cb27f7d809d5da235fac54239e23abb5f91ba54182",
+    "../LEAN_TERRAS88/Terras88.olean": "6e22283e0c0e2ecd49b1b6e96a2f046a4e048361cd4e93797602eff6f8532650",
+    "Terras89.lean": "0d9ee6c4f05f376f6d6a14e8b92164fc53194ee88d449254b3a5c267153368db",
+    "Terras89.olean": "5a0e786bf77b0eb001e606fe0bb4f1d0a414d9694672712e893d32aac9a9e519",
+    "AuditTerrasProofs.lean": "a5e01dac53a1d74bf63cc45a937dbe7bfaa16f126d1feb012b257e48eb93314c",
+    "AuditTerrasProofs.olean": "25e2defd744f5f039d87e755cc1dd3bb129197989abff1fa92631da35ce6a9e8",
+    "../LEAN_VALLEYS/BUILD_03.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "../LEAN_TERRAS88/BUILD_01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BUILD_02.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit": {
+    "module": "AuditTerrasProofs",
+    "seconds": 3.438,
+    "exit_code": 0
+  },
+  "axioms": {
+    "TerrasValleyExtraction.find_chain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TerrasValleyExtraction.extract": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras88.valleyTimes_length": [
+      "propext"
+    ],
+    "Terras88.valleyTimes_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Terras88.physical_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras88.additive_at_crossing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Terras88.descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras88.first_descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras89.capacities_of_universal_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Terras89.first_descent89_from_capacities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras89.first_descent89": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Terras89.suffix_crossing_at_descent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

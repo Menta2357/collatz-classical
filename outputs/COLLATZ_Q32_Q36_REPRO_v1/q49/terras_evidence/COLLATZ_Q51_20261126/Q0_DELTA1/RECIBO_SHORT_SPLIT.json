@@ -1,0 +1,37 @@
+{
+  "status": "PASS_TWO_VALLEY_SHORT_SPLIT",
+  "scope": {
+    "steps": 630118245525664765,
+    "odds": 397560349370386783,
+    "runs": 89,
+    "delta": 1
+  },
+  "half_odds_upper": 28221897930,
+  "long_part_runs_lower": 80,
+  "short_part_runs_upper": 9,
+  "short_part_odds_upper": 2706,
+  "short_part_basis": [
+    [
+      1054,
+      665
+    ],
+    [
+      485,
+      306
+    ]
+  ],
+  "smallest_possible_even_distance_lower_by_side": {
+    "prefix_short": 1222315096482260,
+    "suffix_short": 24955750404019234
+  },
+  "global_lower_neighbor_split_excluded": [
+    423372672964960618,
+    267118416222671843
+  ],
+  "orbital_runs": 0,
+  "clock_enumerations": 0,
+  "verifier_sha256": "28b1777576d634503a0875f0127a93f3408b9b7a091070ed0d7bca3a3a310e23",
+  "parent_sha256": {
+    "COLLATZ_Q37_20261125/TERRAS89_PAPER/check.py": "70da49e25ded08f542ee969d1e2d8b243dc7d5fe5650e9e43ef765fa28a1233d"
+  }
+}

@@ -521,5 +521,129 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditTerrasClock": {
+    "shortcut": [],
+    "orbit": [],
+    "oddCount": [],
+    "startsOddRun": [],
+    "oddRuns": [],
+    "additive": [],
+    "FirstContraction": [],
+    "orbit_succ": [],
+    "orbit_add": [],
+    "startsOddRun_iff": [
+      "propext"
+    ],
+    "oddRuns_succ": [
+      "propext"
+    ],
+    "oddRuns_le_oddCount": [
+      "propext",
+      "Quot.sound"
+    ],
+    "oddCount_add": [],
+    "shortcut_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "shortcut_odd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "exact_book": [
+      "propext",
+      "Quot.sound"
+    ],
+    "additive_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "no_descent_of_coefficient": [
+      "propext",
+      "Quot.sound"
+    ],
+    "prior_no_descent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_pos": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_last_even": [
+      "propext"
+    ]
+  },
+  "AuditTerrasDeltaOne": {
+    "after_initial_odd_nonzero_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_physics": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_distinct": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "AuditTerrasProofs": {
+    "find_chain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "extract": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "valleyTimes_length": [
+      "propext"
+    ],
+    "valleyTimes_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "physical_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "additive_at_crossing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capacities_of_universal_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_descent89_from_capacities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_descent89": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "suffix_crossing_at_descent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }
