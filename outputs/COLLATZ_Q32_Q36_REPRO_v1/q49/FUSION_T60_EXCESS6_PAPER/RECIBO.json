@@ -1,0 +1,247 @@
+{
+  "F_affine_s": [
+    16161180670369550395566597319,
+    84782316550432407028588866402
+  ],
+  "N_affine_s": [
+    7551224716847488673038978175,
+    39614081257132168796771975168
+  ],
+  "fixed_symbolic_certificate": [
+    {
+      "allowed_children": [
+        2,
+        4,
+        6
+      ],
+      "book": [
+        0,
+        0,
+        0
+      ],
+      "excess": 0,
+      "inverse_word": [],
+      "state_residue_mod3": 1
+    },
+    {
+      "allowed_children": [],
+      "book": [
+        1,
+        2,
+        1
+      ],
+      "excess": 1,
+      "inverse_word": [
+        2
+      ],
+      "state_residue_mod3": 0
+    },
+    {
+      "allowed_children": [
+        2,
+        4
+      ],
+      "book": [
+        1,
+        4,
+        1
+      ],
+      "excess": 3,
+      "inverse_word": [
+        4
+      ],
+      "state_residue_mod3": 1
+    },
+    {
+      "allowed_children": [
+        1
+      ],
+      "book": [
+        1,
+        6,
+        1
+      ],
+      "excess": 5,
+      "inverse_word": [
+        6
+      ],
+      "state_residue_mod3": 2
+    },
+    {
+      "allowed_children": [
+        1,
+        3
+      ],
+      "book": [
+        2,
+        6,
+        7
+      ],
+      "excess": 4,
+      "inverse_word": [
+        4,
+        2
+      ],
+      "state_residue_mod3": 2
+    },
+    {
+      "allowed_children": [],
+      "book": [
+        2,
+        8,
+        19
+      ],
+      "excess": 6,
+      "inverse_word": [
+        4,
+        4
+      ],
+      "state_residue_mod3": 0
+    },
+    {
+      "allowed_children": [
+        1
+      ],
+      "book": [
+        2,
+        7,
+        5
+      ],
+      "excess": 5,
+      "inverse_word": [
+        6,
+        1
+      ],
+      "state_residue_mod3": 2
+    },
+    {
+      "allowed_children": [],
+      "book": [
+        3,
+        7,
+        23
+      ],
+      "excess": 4,
+      "inverse_word": [
+        4,
+        2,
+        1
+      ],
+      "state_residue_mod3": 0
+    },
+    {
+      "allowed_children": [],
+      "book": [
+        3,
+        9,
+        65
+      ],
+      "excess": 6,
+      "inverse_word": [
+        4,
+        2,
+        3
+      ],
+      "state_residue_mod3": 1
+    },
+    {
+      "allowed_children": [
+        2
+      ],
+      "book": [
+        3,
+        8,
+        19
+      ],
+      "excess": 5,
+      "inverse_word": [
+        6,
+        1,
+        1
+      ],
+      "state_residue_mod3": 1
+    },
+    {
+      "allowed_children": [
+        1
+      ],
+      "book": [
+        4,
+        10,
+        103
+      ],
+      "excess": 6,
+      "inverse_word": [
+        6,
+        1,
+        1,
+        2
+      ],
+      "state_residue_mod3": 2
+    },
+    {
+      "allowed_children": [],
+      "book": [
+        5,
+        11,
+        287
+      ],
+      "excess": 6,
+      "inverse_word": [
+        6,
+        1,
+        1,
+        2,
+        1
+      ],
+      "state_residue_mod3": 1
+    }
+  ],
+  "frontier": "p=14,e=7 is not excluded, not constructed",
+  "input_sha256": "96cef64e19ca9597ae038776ac73133bea991621bb682a7acf27d7ba6bffe62d",
+  "max_depth_excess_le5": 3,
+  "max_depth_excess_le6": 5,
+  "new_lean_builds": 0,
+  "orbits_replayed": 0,
+  "original_book": [
+    60,
+    94,
+    253163701604367108480427299121
+  ],
+  "paper_conclusion": "paid source implies p>=14 and e>=7; p=14 implies e=7",
+  "physical_prefix": "supplied, not reproduced; source words are inverse-oriented",
+  "proof_status_at_run": "PAPER_PENDING_INDEPENDENT_REVIEW",
+  "status": "PASS_FIXED_SYMBOLIC_EXCESS6_PRUNING_AND_TARIFF",
+  "tariff_cuts": [
+    {
+      "G": 143468435432174977472289266448,
+      "H": 4367531875726931086061012587280,
+      "d": 3,
+      "delta": 1,
+      "margin_at_Nmin": 1083362395722877705492886209216225846091625978243244359680
+    },
+    {
+      "G": 82003981274901226288467204212736,
+      "H": 260631205983070551469726322231296,
+      "d": 5,
+      "delta": 6,
+      "margin_at_Nmin": 619230490282932775682761752473378220374304668976619083268096
+    },
+    {
+      "G": 12871530743535740439916856705286144,
+      "H": -3692700805935587881756186282323607552,
+      "d": 13,
+      "delta": 7,
+      "margin_at_Nmin": 97195821094249416949080394416623241818662984733769196422299648
+    },
+    {
+      "G": -5835758948985884496454229472313344,
+      "H": -11364332986814403800924653367890804736,
+      "d": 14,
+      "delta": 7,
+      "margin_at_Nmin": -44067127217146133752597792499603803742975010907267867068071936
+    }
+  ],
+  "tariff_sha256": "a6a40ce453b79d73588a7c6cf150fe3a75d941be36e57369f92ec9987d97a137",
+  "words_searched_outside_certificate": 0
+}

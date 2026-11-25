@@ -1,0 +1,112 @@
+{
+  "scope": {
+    "H": 92,
+    "a1": 70,
+    "D3_upper": 92,
+    "D4_lower": 95,
+    "b1": ">=4"
+  },
+  "first_gap_tail_projected": true,
+  "projection_limit": 11919,
+  "time_limit_seconds": 20,
+  "verifier_sha256": "23b4b37bd3f4697fddbf89d113fa88404a1fd183bcc437e8896b1f3208df4cfa",
+  "preregistration_sha256": "84c45e026e5108468aa419d8b9fd0a7c5c0226c3fade591e6b7caf0e6d4b9668",
+  "parent_sha256": {
+    "COLLATZ_Q49_20261125/TERRAS/check.py": "8723d6483d8509de112c923f02f14a1a8a653c1867dc67b7ebea67291eccccb6",
+    "COLLATZ_Q49_20261125/TERRAS/A71_HIGH_GAPS/RECIBO_UNION.json": "af39a42368204b9b0d8e96d20d7bd58e97acd9ce7139d3d489e9f0ca5035c776",
+    "COLLATZ_Q49_20261125/TERRAS_A70_ORDINAL_ENVELOPE/RECIBO_COROLARIO94.json": "5404e36eff859e47b1cf20a92b853047c0554eb131e5aeb14c2763f2bfcc61fb"
+  },
+  "status": "PASS",
+  "independently_replayed_sources": 9,
+  "retained_by_physical_first_gap": {
+    "4": 4,
+    "5": 2,
+    "7": 1,
+    "8": 1,
+    "10": 1
+  },
+  "max_D5_on_residual": 100,
+  "maximizing_sources": [
+    {
+      "source": 1851896086314883566543044607,
+      "D3_D4_D5": [
+        80,
+        95,
+        100
+      ],
+      "rise_gap_pairs": [
+        [
+          70,
+          8
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "same_source_books": [
+        {
+          "run": 1,
+          "state": 15337860463968686175511049148820414847,
+          "k": 78,
+          "d": 70,
+          "C": 2503155504992061009694854574782425
+        },
+        {
+          "run": 2,
+          "state": 8189428914721561685996744259880431463,
+          "k": 90,
+          "d": 77,
+          "C": 5474401090039931993849277322729167571
+        },
+        {
+          "run": 3,
+          "state": 13819661293592635345119505938548228095,
+          "k": 94,
+          "d": 80,
+          "C": 147808829454599024580352712936770884673
+        },
+        {
+          "run": 4,
+          "state": 1512886311899264682403813893113527221407,
+          "k": 111,
+          "d": 95,
+          "C": 2120895147906462472811394540060447478385420587
+        },
+        {
+          "run": 5,
+          "state": 5744240215492520591001980875415423668783,
+          "k": 117,
+          "d": 100,
+          "C": 515377520941818168211744297549498704610389922769
+        }
+      ]
+    }
+  ],
+  "parent_projection_records_sha256": "711bf73d215b6ba18fe35f79add11d8b93c4587729cc303c4a1493273a76de4c",
+  "independent_physical_records_sha256": "05dc38f785de66bd03cb9f1f509924a71a3f606996caf20e972c1f9251f9fdcd",
+  "elapsed_seconds": 0.028078,
+  "counters": {
+    "projections": 11919,
+    "gap_tail": 2517,
+    "lifts": 12616,
+    "physical_replays": 6428,
+    "joint_rise": 697,
+    "fourth_long": 6188,
+    "exact_gap": 2517
+  },
+  "A69_executed": false,
+  "H146_executed": false
+}

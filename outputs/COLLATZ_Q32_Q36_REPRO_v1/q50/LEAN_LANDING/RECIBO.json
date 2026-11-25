@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "lean_version": "4.21.0",
+  "parallel_jobs": 1,
+  "scope": "s=29+32*u, all natural u; physical landing and either paid or bounded readmission",
+  "strict_decrease": "relative to T60; residual may equal T62",
+  "global_collatz": false,
+  "independent_mathematical_review": true,
+  "parents_frozen": 126,
+  "builds": [
+    {
+      "module": "Front4bS29Landing",
+      "seconds": 195.187,
+      "exit_code": 1
+    },
+    {
+      "module": "Front4bS29Landing",
+      "seconds": 102.015,
+      "exit_code": 0
+    },
+    {
+      "module": "AuditFront4bS29Landing",
+      "seconds": 73.339,
+      "exit_code": 0
+    }
+  ],
+  "audited": {
+    "CollatzCharacterBridge.Front4bS29Landing.history62": [
+      "propext",
+      "Quot.sound"
+    ],
+    "CollatzCharacterBridge.Front4bS29Landing.activates_wide": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "sha256": {
+    "Front4bS29Landing.lean": "22ac3911f7cb3b0c7bace23949bfc8277823e2882873d4a4ba6933c27ce3d62c",
+    "Front4bS29Landing.olean": "dcc185259bd61e68fe3a6cdd846a814940609a16d63a3fd8ac9c1ec11301428b",
+    "AuditFront4bS29Landing.lean": "d40c6c24c16434cb1b0f0a93735b76c69ad9418e7d1fe6895791ddbccdfd62ab",
+    "AuditFront4bS29Landing.olean": "cc1734957f4d93eb2a0b6103ecbe28715aea21533ed87ea8d66bf4eef422ef57",
+    "BUILD_01.json": "1b88aef161a7932bb34df71b669b32d1e6c9835a35e2391beb21f30827a417c5",
+    "BUILD_01.log": "9916148de8df24d85ef900fb20ec33856d441f9ea3fcb8a0eeb5089d73f03559",
+    "BUILD_02.json": "8844194c4c3b39504e5cebd72f215530580e54f5611f1a089af733c9d9723d58",
+    "BUILD_02.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "AUDIT.json": "3f76e8893d59fd6dc84cf672d9a42ad4a704335909d917522c3dedcc51a7914a",
+    "AUDIT.log": "0e8b024d1cfbd4bac636e954d05d39cd393b6f207d95168d01d26df7280f87a2",
+    "LEAN_PATH.txt": "312bc000f11fc5f61cd5bdc7fdd045793862b614a37dbe58b10f978eca16e680",
+    "PARENTS.sha256": "0477b2b8104287f523d344875019efe4a43fd5b4a3abfa1a7d6f71e2f07d10c5",
+    "PARENTS_PRE.log": "1d34af360f978d6c5ae5f8b62a08dd14edc9a8318255710654916ca9bef6ebd9",
+    "PARENTS_POST.log": "1d34af360f978d6c5ae5f8b62a08dd14edc9a8318255710654916ca9bef6ebd9",
+    "RESULTADO.md": "13083b12295b5d86cb3b4646eeca8d1dc1abb719709351a063abc4268ad1e160"
+  }
+}

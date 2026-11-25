@@ -260,6 +260,11 @@
     "sha256": "501882ca90cd348bf603acd6ad1b4cfc7d06bc54df8c964240bfb025ee3ebd1d"
   },
   {
+    "module": "AuditFront4bBoundedProducer",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_BOUNDED_DOMAIN/AuditFront4bBoundedProducer.lean",
+    "sha256": "b683edc9e641b51c90bba4001ff47d4ec96b8d981a4123fe7fa6fe75aafb83a0"
+  },
+  {
     "module": "AuditFront4bEarlyMeeting",
     "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_PAID_EARLY/AuditFront4bEarlyMeeting.lean",
     "sha256": "9af1abf65ff120f0b2e8af987c75fe54f7577e1faf7d5d62157d57085e47bcb1"
@@ -270,6 +275,11 @@
     "sha256": "340d63347c8c22335e65ed630d7486fdfd15f02190232fe9482a01cae4212a0b"
   },
   {
+    "module": "AuditFront4bS29Landing",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_LANDING/AuditFront4bS29Landing.lean",
+    "sha256": "d40c6c24c16434cb1b0f0a93735b76c69ad9418e7d1fe6895791ddbccdfd62ab"
+  },
+  {
     "module": "AuditFront4bT60",
     "origin": "experiments/COLLATZ_Q44_20261125/FRONT4B_T60_LEAN/AuditFront4bT60.lean",
     "sha256": "166ca45fb17fd70bcb3d15cc687abbb8ae7c02824af43ed857ce82e845e716ef"
@@ -278,6 +288,16 @@
     "module": "AuditFront4bT61S3",
     "origin": "experiments/COLLATZ_Q49_20261125/LEAN/AuditFront4bT61S3.lean",
     "sha256": "f4e1cbac3d60ebca201bad68773b3f8354889ccfe96e4fba4c4a67bbf20e9ce4"
+  },
+  {
+    "module": "AuditFront4bT64U1",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_T64_U1/AuditFront4bT64U1.lean",
+    "sha256": "72fdafc3db203246be737086f6b4e8b05aa3e0b3974c5dd47bc86e8b12b0392e"
+  },
+  {
+    "module": "AuditFront4bT65U6",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN/AuditFront4bT65U6.lean",
+    "sha256": "4318b553e7b46aeaccedecdb43aa02e43393f2601bc1baaec2f2a4de24367a71"
   },
   {
     "module": "AuditFront4bValSixCut",
@@ -335,6 +355,11 @@
     "sha256": "1fc5ce0cc7d0e64cf576a7f5ca6d0751e0a64133d96f1198b2e124130bad6d7d"
   },
   {
+    "module": "Front4bBoundedProducer",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_BOUNDED_DOMAIN/Front4bBoundedProducer.lean",
+    "sha256": "f0a44e0b7df56b68b5b93fe8f4e79ac46da52f186b8118ca19b5b116a2014a99"
+  },
+  {
     "module": "Front4bEarlyMeeting",
     "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_PAID_EARLY/Front4bEarlyMeeting.lean",
     "sha256": "815a27d61c62d156fb3ece96db9d401614e0d6aa003795a9d07b1f17b3114b28"
@@ -345,6 +370,11 @@
     "sha256": "0789f611b89526a6bcc9e4b0c3ab328c942dbac5631f6c1c2778acd85b8dd51b"
   },
   {
+    "module": "Front4bS29Landing",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_LANDING/Front4bS29Landing.lean",
+    "sha256": "22ac3911f7cb3b0c7bace23949bfc8277823e2882873d4a4ba6933c27ce3d62c"
+  },
+  {
     "module": "Front4bT60",
     "origin": "experiments/COLLATZ_Q44_20261125/FRONT4B_T60_LEAN/Front4bT60.lean",
     "sha256": "72dea50d2c90c76b7cf09521af94e3d428c5e775fa54aeb67563bd1e5d0f8b74"
@@ -353,6 +383,16 @@
     "module": "Front4bT61S3",
     "origin": "experiments/COLLATZ_Q49_20261125/LEAN/Front4bT61S3.lean",
     "sha256": "4bf66e4ec7bc36a36222a6fb75c0228f0a225a329232103d771c8d7ba1529671"
+  },
+  {
+    "module": "Front4bT64U1",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_T64_U1/Front4bT64U1.lean",
+    "sha256": "c6e4947147871904cf2bc8e961d3aa24f1273be444fd5af198408ea38a95504e"
+  },
+  {
+    "module": "Front4bT65U6",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN/Front4bT65U6.lean",
+    "sha256": "c0d42c695cde81ed1e7dbe91cc8c919de565734eb0a8fa59fcf8b5a2f27d271e"
   },
   {
     "module": "Front4bValSixCut",

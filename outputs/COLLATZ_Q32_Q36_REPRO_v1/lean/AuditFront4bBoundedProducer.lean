@@ -1,0 +1,5 @@
+import Front4bBoundedProducer
+
+#print axioms CollatzCharacterBridge.Front4bBoundedProducer.BoundedAdmitted
+#print axioms CollatzCharacterBridge.Front4bBoundedProducer.next_bounded_rank
+#print axioms CollatzCharacterBridge.Front4bBoundedProducer.paid_of_total_bounded_producer

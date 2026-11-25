@@ -1,0 +1,29 @@
+{
+  "status": "PASS_FULL_A70",
+  "scope": {
+    "H": 92,
+    "a1": 70
+  },
+  "certified_conclusion": "2^D5 <= 6^92",
+  "coverage": {
+    "D3>92": "sealed Q44 source family",
+    "D4<=94": "audited Q49 ordinal corollary",
+    "D3<=92 and D4>=95": "two disjoint Q50 physical first-gap shards"
+  },
+  "projections_by_shard": [
+    14817,
+    11919
+  ],
+  "total_projections": 26736,
+  "retained_residual_sources": 37,
+  "max_D5_on_residual": 101,
+  "pending_H92": [
+    "a1<=2 with D3<=92<D4",
+    "3<=a1<=69 with D3<=92 and D4>=95"
+  ],
+  "H146_executed": false,
+  "receipt_sha256": {
+    "RECIBO_LOW.json": "ae327ace53193b0a9d41d5a45820c4faf287c01a64a8db856f0255e7c623c745",
+    "RECIBO_HIGH.json": "fb650cac4a52827c951ec517bf97e2d4e29a0fb5eedb81a6b31d2740c88ec935"
+  }
+}

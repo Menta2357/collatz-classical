@@ -469,5 +469,50 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditFront4bT65U6": {
+    "history64": [
+      "propext",
+      "Quot.sound"
+    ],
+    "pays_t65": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT64U1": {
+    "descends_t64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bS29Landing": {
+    "history62": [
+      "propext",
+      "Quot.sound"
+    ],
+    "activates_wide": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bBoundedProducer": {
+    "BoundedAdmitted": [
+      "propext",
+      "Quot.sound"
+    ],
+    "next_bounded_rank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_of_total_bounded_producer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

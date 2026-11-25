@@ -1,0 +1,50 @@
+{
+  "status": "PASS_PAPER_D4_EQ_95",
+  "scope": {
+    "N": "positive odd",
+    "height_guard": "N+1<2^92",
+    "a1_minimum": 3,
+    "D3_upper": 92,
+    "D4": 95,
+    "a1_upper_implied_by_D3": 90
+  },
+  "conclusion": "D5<=237, hence 2^D5<=6^92",
+  "coverage_cases": [
+    "B4=4",
+    "B4=5",
+    "B4>=6"
+  ],
+  "target_D5_upper": 237,
+  "high_gap_factor": "9/25",
+  "high_gap_comparison": {
+    "lhs": 2199446819158103531324632164828135289690445400,
+    "rhs": 2230074519853062314153571827264836150598041600,
+    "strict_positive_margin": 30627700694958782828939662436700860907596200
+  },
+  "short_gap_additive_constant": "175/9",
+  "forced_values_under_negation_only": {
+    "y4": 11150372599265311570767859136324180752990208,
+    "u4": 825953525871504560797619195283272648369645,
+    "y3": 6607628206972036486380953562266181186957160,
+    "x3": 6607628206972036486380953562266181186957159,
+    "required_third_peak_plus_one": 13215256413944072972761907124532362373914319,
+    "last_value_mod_3": 1,
+    "original_N_constructed": false,
+    "physical_witness": false
+  },
+  "map": "shortcut S, not accelerated odd-return map",
+  "source": "same original N in both affine books",
+  "physical_sources_replayed": 0,
+  "congruence_projections": 0,
+  "orbital_sweeps": 0,
+  "A70_batch_executed": false,
+  "H146_executed": false,
+  "lean_executed": false,
+  "parent_sha256": {
+    "COLLATZ_Q49_20261125/TERRAS_A70_ORDINAL_ENVELOPE/RESULTADO.md": "ed8ca02d87cccae1f3bfc67bef2262ba7f76d095bb085f6a0b455e5711784e4c",
+    "COLLATZ_Q49_20261125/TERRAS_A70_ORDINAL_ENVELOPE/RECIBO_COROLARIO94.json": "5404e36eff859e47b1cf20a92b853047c0554eb131e5aeb14c2763f2bfcc61fb"
+  },
+  "verifier_sha256": "fad5503f84390a747e27747a5caa6108fbc739cc5c1443d9e60f5f211c489995",
+  "preregistration_sha256": "ad0b1df2ceb26e825e7a16fa0506d0a3a2c85ccd1fdf1e07c051d11e25285a02",
+  "elapsed_seconds": 0.00078
+}
