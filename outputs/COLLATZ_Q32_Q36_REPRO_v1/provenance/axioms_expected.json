@@ -239,5 +239,22 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2T43Inverse": {
+    "captures_873_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1385_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1897_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

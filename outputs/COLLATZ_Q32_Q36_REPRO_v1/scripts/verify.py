@@ -23,6 +23,7 @@ AUDIT_MODULES = (
     "AuditA2R1Descents",
     "AuditA2T42",
     "AuditA2T43",
+    "AuditA2T43Inverse",
 )
 STANDARD_MODULES = {"Std"}
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}

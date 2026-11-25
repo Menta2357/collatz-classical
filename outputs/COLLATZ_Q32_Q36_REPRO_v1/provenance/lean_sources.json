@@ -85,6 +85,11 @@
     "sha256": "86d7d46fbf244ab4b8a85c20aa6c771267bae5254b01cffa2a95daffdf8cac01"
   },
   {
+    "module": "A2T43Inverse",
+    "origin": "experiments/COLLATZ_Q41_20261125/Q41_A2_T43_INVERSAS_LEAN/A2T43Inverse.lean",
+    "sha256": "5a2615489b48fb607ef12b7fcd2864fa26e54ea235bae3fa04ad7c1dccda1572"
+  },
+  {
     "module": "A2ThreeWeakCommonLongRate",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_THREE_WEAK_COMMON_LONG_RATE_LEAN/A2ThreeWeakCommonLongRate.lean",
     "sha256": "8ae4ab7ea59201a180ac0efea0f4797229e9b33bceb5d4a3f0ba95754fc44eb8"
@@ -128,6 +133,11 @@
     "module": "AuditA2T43",
     "origin": "experiments/COLLATZ_Q40_20261125/Q40_A2_T43_LEAN/AuditA2T43.lean",
     "sha256": "b11eba2dd7460ce567038e53ee1341991783d549ca526634fdf6c630e7724852"
+  },
+  {
+    "module": "AuditA2T43Inverse",
+    "origin": "experiments/COLLATZ_Q41_20261125/Q41_A2_T43_INVERSAS_LEAN/AuditA2T43Inverse.lean",
+    "sha256": "89d02d9c3876272310542f5c604aba2be0691e31dc1eeb373adb2d0011f3b932"
   },
   {
     "module": "AuditA2U392",
