@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "entire u=11+16t progression: first physical crossing below T62 or rank response",
+  "global_collatz": false,
+  "lean_version": "4.21.0",
+  "parallel_jobs": 1,
+  "frozen_parents": 130,
+  "build": {
+    "module": "Front4bU11FirstCrossing",
+    "seconds": 25.4,
+    "exit_code": 0
+  },
+  "audit": {
+    "module": "AuditFront4bU11FirstCrossing",
+    "seconds": 21.277,
+    "exit_code": 0
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "Front4bU11FirstCrossing.lean": "e88a184000687fe63610d33b3c1bc5f1b7179dab86c71522ce100e5d2d0d4797",
+    "Front4bU11FirstCrossing.olean": "29bb6f280a505271e5a4661a486e622fdc02435e02373fd4670177dfb8b5ea88",
+    "AuditFront4bU11FirstCrossing.lean": "0453fb63003309302f6a2240d6f123de7ec44c6e2ab6477332f8e5e843b99bf5",
+    "AuditFront4bU11FirstCrossing.olean": "271496ce282f3cecd718d70c39d9a1b400cf422e838ab9709f327df6c3533956",
+    "BUILD_01.json": "05dd5162ed5968346c9484342cf1b63f681b7ed3122b408b643c88509e53c91b",
+    "BUILD_01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "AUDIT.json": "a0326e939c5903b5bbb9c126a2bfcfcf977b9e54d444af4acad523ab09f30973",
+    "AUDIT.log": "d0e366c1a9a435289298cf2592e4b1b83f027dc0897ca967f36a52367bff33f6",
+    "LEAN_PATH.txt": "7b371dcb19fa1588522b995bb2e0de1c286529270bbab102af7514972080e872",
+    "PARENTS.sha256": "9c0b23bd79507bfea3e4941722f2b737bb8cf90ff23311becc0292b12eb563c4",
+    "PARENTS_PRE.log": "e14b91945c4c9fe02e15f5e13ff7e3f5937e39d2da18080b2a2debae8b6f9f32",
+    "PARENTS_POST.log": "e14b91945c4c9fe02e15f5e13ff7e3f5937e39d2da18080b2a2debae8b6f9f32",
+    "RESULTADO.md": "fbd3abe10fd088e1f959af5885afdb072b1c04958054ed6ca219ff12ecaa9174"
+  }
+}

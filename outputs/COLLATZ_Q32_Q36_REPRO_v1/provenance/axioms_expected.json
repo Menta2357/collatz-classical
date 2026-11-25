@@ -514,5 +514,12 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditFront4bU11FirstCrossing": {
+    "crosses_t65": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

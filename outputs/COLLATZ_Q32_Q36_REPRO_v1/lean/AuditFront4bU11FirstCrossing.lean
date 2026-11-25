@@ -1,0 +1,2 @@
+import Front4bU11FirstCrossing
+#print axioms CollatzCharacterBridge.Front4bU11FirstCrossing.crosses_t65

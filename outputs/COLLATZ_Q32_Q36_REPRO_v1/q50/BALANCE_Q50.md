@@ -8,6 +8,8 @@ Para todo $s=29+32u$, $u\ge0$, el mismo original llega a $F=T^{60}(N)$ y luego, 
 
 El consumidor certificado necesita un productor sólo en el dominio admitido $N\le x\le V$, con $N,V$ fijos. Cada cruce físico bajo el pivote vigente devuelve un pago o readmite un pivote $u<x\le V$, conservando la historia. Para cerrar la progresión queda demostrar que **cada** pivote de ese dominio tiene pago o un cruce posterior bajo sí mismo. [Consumidor Lean](LEAN_BOUNDED_DOMAIN/RESULTADO.md)
 
+Para toda la clase $u\equiv11\pmod{16}$, Lean certifica el primer cruce estricto a $T^{65}$ tras $(1,2,2)$ y aplica el reductor. El resultado exhibe un pago o un pivote admitido menor con su libro desde $N$. Esta primera transición ya está demostrada en todo ese dominio. La iteración en los pivotes posteriores sigue pendiente. [Certificado del primer cruce](LEAN_CROSS_U11/RESULTADO.md) · [Cotejo afín](FRONT4B_CHECK/CRUCE_U11.md)
+
 ## Puentes y pruebas de refutación
 
 - Las guardas de reserva de A/B/C/D realizan las capturas de Q42 de valoración 6 en nuevas familias físicas. La reserva suficientemente grande paga por descenso tras una racha adaptativa de doses. La reserva 3 admite rachas de unos arbitrariamente largas en distintas semillas. [Pruebas y libros](APORTES_ABCD_PAPER.md)

@@ -61,6 +61,17 @@
           "Quot.sound"
         ]
       }
+    },
+    "Front4bU11FirstCrossing": {
+      "receipt": "q50/LEAN_CROSS_U11/RECIBO.json",
+      "sha256": "e99d8aca769bf1a4e0c9cdbc1a26e8319ea0e5242e5f196a70197796163c66d2",
+      "axioms": {
+        "crosses_t65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
     }
   }
 }

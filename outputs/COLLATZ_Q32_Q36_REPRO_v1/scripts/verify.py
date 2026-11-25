@@ -38,6 +38,7 @@ AUDIT_MODULES = (
     "AuditFront4bT65U6",
     "AuditFront4bT64U1",
     "AuditFront4bS29Landing",
+    "AuditFront4bU11FirstCrossing",
     "AuditFront4bBoundedProducer",
     "AuditFront4bPairExit",
     "AuditA2ThinDomain",

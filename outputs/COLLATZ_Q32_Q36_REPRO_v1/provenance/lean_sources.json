@@ -300,6 +300,11 @@
     "sha256": "4318b553e7b46aeaccedecdb43aa02e43393f2601bc1baaec2f2a4de24367a71"
   },
   {
+    "module": "AuditFront4bU11FirstCrossing",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_CROSS_U11/AuditFront4bU11FirstCrossing.lean",
+    "sha256": "0453fb63003309302f6a2240d6f123de7ec44c6e2ab6477332f8e5e843b99bf5"
+  },
+  {
     "module": "AuditFront4bValSixCut",
     "origin": "experiments/COLLATZ_Q49_20261125/LEAN_CUT/AuditFront4bValSixCut.lean",
     "sha256": "73b8b90de4cf900dfdd9c30e04303afebf255b602f27d1053f526f25bd6bc59a"
@@ -393,6 +398,11 @@
     "module": "Front4bT65U6",
     "origin": "experiments/COLLATZ_Q50_20261126/LEAN/Front4bT65U6.lean",
     "sha256": "c0d42c695cde81ed1e7dbe91cc8c919de565734eb0a8fa59fcf8b5a2f27d271e"
+  },
+  {
+    "module": "Front4bU11FirstCrossing",
+    "origin": "experiments/COLLATZ_Q50_20261126/LEAN_CROSS_U11/Front4bU11FirstCrossing.lean",
+    "sha256": "e88a184000687fe63610d33b3c1bc5f1b7179dab86c71522ce100e5d2d0d4797"
   },
   {
     "module": "Front4bValSixCut",
