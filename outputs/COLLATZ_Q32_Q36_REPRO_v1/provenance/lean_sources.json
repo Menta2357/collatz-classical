@@ -60,6 +60,11 @@
     "sha256": "03e433b3db80669d0cf58834bddbf80304174a42e159a778e96124d4e161e412"
   },
   {
+    "module": "A2R1Descents",
+    "origin": "experiments/COLLATZ_Q38_20261125/Q38_A2_R1_LEAN/A2R1Descents.lean",
+    "sha256": "1eb96ae75d2d4f0a387276bcf5f6be3bb3dec435b822a7bf6b645eb54f74dc76"
+  },
+  {
     "module": "A2SecondOne",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_SECOND_ONE_LEAN/A2SecondOne.lean",
     "sha256": "3e453976a44a682c90f81266ef24824d6c81adbfda2e31bb36dc97831984dbdc"
@@ -98,6 +103,11 @@
     "module": "Arrival",
     "origin": "experiments/COLLATZ_DOS_FRENTES_20261121/integracion_lineal/FROZEN/Arrival.lean",
     "sha256": "2fad3379eb6b400507772cc35be3932d28569e750634f29c9273601bed5f5895"
+  },
+  {
+    "module": "AuditA2R1Descents",
+    "origin": "experiments/COLLATZ_Q38_20261125/Q38_A2_R1_LEAN/AuditA2R1Descents.lean",
+    "sha256": "26456d8db27b6aa8deb681241f3ef217c1cda17a7142eecaffe44eef48c227a5"
   },
   {
     "module": "AuditA2U392",

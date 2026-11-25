@@ -148,5 +148,27 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2R1Descents": {
+    "descends_1_mod_16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_57_mod_64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_25_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_73_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }
