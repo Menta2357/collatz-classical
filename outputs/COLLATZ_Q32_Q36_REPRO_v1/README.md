@@ -61,3 +61,7 @@ Lean certifica una fuente menor que el mismo N que llega al terminal original T7
 ## Q46 · Capturas A2 y cambios de etiqueta
 
 Lean certifica toda la clase k≡473 módulo 16384, las dos guardas de T66 y la variación exacta de la reserva centrada para etiquetas iguales y distintas. Las comprobaciones aritméticas reproducen los libros de B y C y la realización de varios calendarios finitos. La banda a₁=72 de Terras 89 queda cubierta a altura 92. [Balance Q46](q46/BALANCE_Q46.md) · [Recibo Lean](provenance/q46_frozen_build.json)
+
+## Q47 · Transferencia de Mahler y profundidad de una fuente
+
+Una progresión física de Front4b alcanza T103 desde N, siempre por encima de N, y la fuente menor (T60−5)/2 alcanza el mismo terminal en 43 retornos. Se reutiliza la regla de coalescencia de Mahler y se certifican las guardas y ambos libros mediante aritmética afín. Una segunda prueba da una profundidad necesaria creciente para renovaciones de etiqueta variable y excluye captura de hasta 14 retornos en T62 bajo la guarda 1→2. Son pruebas en papel con verificadores. [Transferencia](q47/TRANSFERENCIA_MAHLER_FRONT4B.md) · [Profundidad](q47/PRUEBA_PROFUNDIDAD.md)
