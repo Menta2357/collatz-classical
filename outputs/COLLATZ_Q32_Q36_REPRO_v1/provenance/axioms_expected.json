@@ -104,5 +104,49 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2U392": {
+    "seed": [],
+    "pivot": [],
+    "landing": [],
+    "history36": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ordering": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "crossing_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_crossing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "chronological": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "even_descends37": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "strong_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "two_readmits": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

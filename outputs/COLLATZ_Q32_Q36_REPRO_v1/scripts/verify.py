@@ -19,11 +19,12 @@ AUDIT_MODULES = (
     "AuditAB9T3Adapter",
     "AuditP5J131T35",
     "AuditP5U8Fold",
+    "AuditA2U392",
 )
 STANDARD_MODULES = {"Std"}
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 VERSION = "4.21.0"
-AXIOM_REPORT = re.compile(r"'([^']+)' depends on axioms: \[([^\]]*)\]")
+AXIOM_REPORT = re.compile(r"'([^']+)' (?:depends on axioms: \[([^\]]*)\]|does not depend on any axioms)")
 
 
 def sha256(path):
@@ -118,7 +119,7 @@ def lean_build(executable, order):
 
             if module in expected:
                 axioms = {
-                    name.rsplit(".", maxsplit=1)[-1]: sorted(item.strip() for item in value.split(",") if item.strip())
+                    name.rsplit(".", maxsplit=1)[-1]: sorted(item.strip() for item in (value or "").split(",") if item.strip())
                     for name, value in AXIOM_REPORT.findall(output)
                 }
                 want = {name: sorted(values) for name, values in expected[module].items()}

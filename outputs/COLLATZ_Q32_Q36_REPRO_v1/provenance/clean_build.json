@@ -3,50 +3,52 @@
   "lean_version": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
   "parallel_jobs": 1,
   "modules": {
-    "OddMap": 3.997,
-    "ParametricCapture": 5.12,
-    "A2Header": 4.406,
-    "DyadicCylinder": 0.904,
-    "FixedSourceRun": 3.039,
-    "CRTPhysicalBridge": 4.219,
-    "StagedCylinder": 2.309,
-    "Arrival": 1.418,
-    "P5R3S5": 8.281,
-    "P5CompensationMeetings": 15.156,
-    "A2HalfAdaptive": 5.734,
-    "A2WeakEntry": 3.609,
-    "A2BoundedReducer": 1.997,
-    "A2CertifiedLanding": 0.683,
-    "A2CertifiedLandingTrace": 0.835,
-    "P5ROddThreeReadmission": 1.479,
-    "P5OddExit": 2.464,
-    "P5RenewalRun": 1.203,
-    "P5RZeroA2": 1.643,
-    "A2SecondSwitchWordCompiler": 1.063,
-    "CRTWordSegment": 0.323,
-    "A2TwentySevenTerminal": 2.646,
-    "TwosCompression": 1.754,
-    "A2SecondOne": 4.742,
-    "A2C2Continuation": 13.774,
-    "A2MixedProgressCut": 1.351,
-    "A2LongDoseStrictReentry": 1.071,
-    "A2LongDosePhysicalWordBridge": 0.657,
-    "A2ThreeWeakCommonLongRate": 1.771,
-    "A2PhysicalPrefix": 0.525,
-    "A2FirstCrossingFusion": 0.468,
-    "A2FirstCrossingChronology": 0.524,
-    "P5J131Chronology": 0.417,
-    "P5RZeroJ131": 0.47,
-    "P5J131EarlyCapture": 1.317,
-    "AuditP5J131EarlyCapture": 0.837,
-    "P5J131Residual": 2.792,
-    "AuditP5J131Residual": 1.877,
-    "AB9T3Adapter": 0.596,
-    "AuditAB9T3Adapter": 0.25,
-    "P5J131T35": 0.433,
-    "AuditP5J131T35": 0.254,
-    "P5U8Fold": 0.898,
-    "AuditP5U8Fold": 0.302
+    "OddMap": 3.443,
+    "ParametricCapture": 4.956,
+    "A2Header": 2.912,
+    "DyadicCylinder": 2.246,
+    "FixedSourceRun": 4.985,
+    "CRTPhysicalBridge": 3.79,
+    "StagedCylinder": 1.665,
+    "Arrival": 1.351,
+    "P5R3S5": 3.069,
+    "P5CompensationMeetings": 2.259,
+    "A2HalfAdaptive": 2.621,
+    "A2WeakEntry": 0.43,
+    "A2BoundedReducer": 1.515,
+    "A2CertifiedLanding": 0.565,
+    "A2CertifiedLandingTrace": 0.801,
+    "P5ROddThreeReadmission": 1.373,
+    "P5OddExit": 2.32,
+    "P5RenewalRun": 1.384,
+    "P5RZeroA2": 1.27,
+    "A2SecondSwitchWordCompiler": 1.317,
+    "CRTWordSegment": 0.743,
+    "A2TwentySevenTerminal": 3.946,
+    "TwosCompression": 5.766,
+    "A2SecondOne": 8.246,
+    "A2C2Continuation": 16.355,
+    "A2MixedProgressCut": 1.597,
+    "A2LongDoseStrictReentry": 1.218,
+    "A2LongDosePhysicalWordBridge": 0.616,
+    "A2ThreeWeakCommonLongRate": 1.959,
+    "A2PhysicalPrefix": 0.699,
+    "A2FirstCrossingFusion": 0.447,
+    "A2FirstCrossingChronology": 0.404,
+    "P5J131Chronology": 0.363,
+    "P5RZeroJ131": 0.514,
+    "P5J131EarlyCapture": 0.709,
+    "AuditP5J131EarlyCapture": 0.316,
+    "P5J131Residual": 0.872,
+    "AuditP5J131Residual": 0.35,
+    "AB9T3Adapter": 0.542,
+    "AuditAB9T3Adapter": 0.246,
+    "P5J131T35": 0.447,
+    "AuditP5J131T35": 0.225,
+    "P5U8Fold": 0.932,
+    "AuditP5U8Fold": 0.303,
+    "A2U392": 0.753,
+    "AuditA2U392": 0.581
   },
   "audits": {
     "AuditP5J131EarlyCapture": {
@@ -154,14 +156,50 @@
         "Classical.choice",
         "Quot.sound"
       ]
+    },
+    "AuditA2U392": {
+      "seed": [],
+      "pivot": [],
+      "landing": [],
+      "history36": [
+        "propext",
+        "Quot.sound"
+      ],
+      "ordering": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "crossing_exact": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "first_crossing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "chronological": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "even_descends37": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "strong_capture": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "two_readmits": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     }
-  },
-  "clean_source_copy": true,
-  "worked_from_external_directory": true,
-  "external_lean_path_overridden": true,
-  "terras_verify": "PASS",
-  "lean_elapsed_seconds": 109.971,
-  "terras_elapsed_seconds": 2.528,
-  "full_elapsed_seconds": 112.561,
-  "detects_tampered_lean_source": true
+  }
 }

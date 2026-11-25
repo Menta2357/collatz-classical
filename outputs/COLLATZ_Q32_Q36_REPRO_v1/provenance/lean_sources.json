@@ -80,6 +80,11 @@
     "sha256": "259a82f62a84747adc4a16fa5d0838a952e592b2e7b2d149acfe8e755f5135ef"
   },
   {
+    "module": "A2U392",
+    "origin": "experiments/COLLATZ_Q37_20261125/Q37_A2_U392_LEAN/A2U392.lean",
+    "sha256": "1004730443be279af6f04d7816be0519dcb07eb1d48dda76d7eb0341d44654d8"
+  },
+  {
     "module": "A2WeakEntry",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_WEAK_ENTRY_LEAN/A2WeakEntry.lean",
     "sha256": "80e1bb201ae29321c6c067202ce6ad2ac27820cb308bbf88a2c1f6fb49ddceb5"
@@ -93,6 +98,11 @@
     "module": "Arrival",
     "origin": "experiments/COLLATZ_DOS_FRENTES_20261121/integracion_lineal/FROZEN/Arrival.lean",
     "sha256": "2fad3379eb6b400507772cc35be3932d28569e750634f29c9273601bed5f5895"
+  },
+  {
+    "module": "AuditA2U392",
+    "origin": "experiments/COLLATZ_Q37_20261125/Q37_A2_U392_LEAN/AuditA2U392.lean",
+    "sha256": "7021c23bd67f7ec53672428d318ec3353e0755f76f80131c194253fcc8be0b1a"
   },
   {
     "module": "AuditAB9T3Adapter",
