@@ -52,6 +52,24 @@ sin inferir convergencia de la fila completa ni de Collatz.
 [Cálculo afín](verify_frontier.py) · [Libros y congruencias](RECIBO_FRONT4B.json)
 · [Recibo Lean de T61](LEAN/RECIBO.json) · [Recibo Lean del corte](LEAN_CUT/RECIBO.json)
 
+## Rupturas adaptativas y primer caso sin readmisión
+
+Para \(s\equiv0\pmod4\), una racha física de \(r\) unos seguida
+de la ruptura real \(b\ge\lceil2r/3\rceil+3\) da descenso
+respecto al mismo \(N\), para cualquier longitud \(r\ge2\).
+Una congruencia exacta realiza toda pareja \((r,b)\).
+El testigo \(s=380+4096t\) desciende en T66, fuera del corte Lean
+T64. Dos pliegues adicionales del hilo B también pagan guardas
+fuera de ese corte. Son resultados en papel.
+
+En el residual \(s\equiv29\pmod{32}\), las dos valoraciones
+posteriores a T60 son exactamente \((2,2)\). Hay un cruce físico
+bajo \(F\), pero los estados relevantes permanecen fuera de la
+ventana \(11P<12N\). El consumidor de readmisión estrecha aún
+requiere una entrada posterior válida o un pago físico distinto.
+[Prueba de las rachas](RACHA_UNOS_PAPER.md)
+· [Fallo preciso de readmisión](REGLA_COMUN_PAGO_TEMPRANO_RESIDUAL_THIN_PAPER.md)
+
 ## P5–R · Corrección de la cola de trabajo
 
 Q32 ya dispone de `q29_capture33`, para **todo** parámetro \(t\)
