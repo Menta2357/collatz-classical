@@ -279,5 +279,36 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2WeakBreakExitCapture": {
+    "captures_phase_one_zero_macros": [
+      "propext",
+      "Quot.sound"
+    ],
+    "captures_phase_one_one_macro": [
+      "propext",
+      "Quot.sound"
+    ],
+    "captures_phase_two_three_ones": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakReserve": {
+    "macro_segment": [
+      "propext",
+      "Quot.sound"
+    ],
+    "reserve_segments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paired_histories": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }

@@ -1,0 +1,48 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDITS",
+  "toolchain": "Lean 4.21.0",
+  "parallel_jobs_per_build": 1,
+  "audits": {
+    "AuditA2WeakBreakExitCapture": {
+      "captures_phase_one_zero_macros": [
+        "propext",
+        "Quot.sound"
+      ],
+      "captures_phase_one_one_macro": [
+        "propext",
+        "Quot.sound"
+      ],
+      "captures_phase_two_three_ones": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "AuditA2WeakBreakReserve": {
+      "macro_segment": [
+        "propext",
+        "Quot.sound"
+      ],
+      "reserve_segments": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "paired_histories": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "sha256": {
+    "A2WeakBreakExitCapture.lean": "e54d239d4a4e8abd4618bebb1d2addb948ee6035b280f3b5c82351b901b28f6e",
+    "A2WeakBreakExitCapture.olean": "bc2be3679c274d9a6fb91d583b9655a1f795ed491760ae873ed07c78b8301288",
+    "AuditA2WeakBreakExitCapture.lean": "6afdcd8f2479662da0926dc1806856032020130e00b4cc2c6179fd712d036e7c",
+    "AuditA2WeakBreakExitCapture.olean": "1118a2983251dc992c29005435ae79f79afc0a419676d583079a68fd4982d1ec",
+    "A2WeakBreakReserve.lean": "ad7a26720ab67dcd7b597cc73421b72df2548c752312e683d1c28259e2f55758",
+    "A2WeakBreakReserve.olean": "4a535fe1e1b28edd8908a9e3836e6277a97d32f0910969a172f422087e3a41e5",
+    "AuditA2WeakBreakReserve.lean": "df05e7b429698d9f5a7c6a60911f5973c9e0f50604a08ad0c3a1742b3c66e22b",
+    "AuditA2WeakBreakReserve.olean": "d275d1c92cfd035599bbb3e312b887237073e91193172c3be8f907ec3b9194d5"
+  }
+}
