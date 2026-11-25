@@ -95,3 +95,7 @@ En \(H=92\) quedan \(a_1\le70\). La segunda altura 146 o su
 sustituto y el caso global \(Q0,\Delta=1\) siguen abiertos.
 [Resultado](terras_evidence/COLLATZ_Q49_20261125/TERRAS/A71_HIGH_GAPS/RESULTADO.md)
 · [Recibo de unión](terras_evidence/COLLATZ_Q49_20261125/TERRAS/A71_HIGH_GAPS/RECIBO_UNION.json)
+
+### Reducción posterior de H92
+
+El corolario de cuatro rachas se cotejó en papel. Para \(3\le a_1\le89\) y \(D_4\le94\) se obtiene \(D_5\le237\). En el residual activo esto retira \(D_4=93,94\) para \(3\le a_1\le70\). Quedan \(a_1\le2\) en el residual previo y \(3\le a_1\le70,\ D_4\ge95\). [Cotejo del corolario](terras_evidence/COLLATZ_Q49_20261125/TERRAS_A70_ORDINAL_ENVELOPE/COTEJO_COROLARIO_94.md)
