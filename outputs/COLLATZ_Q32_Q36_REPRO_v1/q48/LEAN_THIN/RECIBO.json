@@ -1,0 +1,76 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "domain": "Admitted N x j S B and 11*x<12*N",
+  "rank": "x-N at fixed N",
+  "conditional_producer": "For every ThinAdmitted state, Paid N or a physical segment from x with a return below x.",
+  "activation": "OPEN",
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "A2ThinDomain.olean",
+        "A2ThinDomain.lean"
+      ],
+      "exit_code": 124,
+      "timeout_seconds": 60,
+      "source_sha256": "c384c846c2afad15423dec7084b9a591bf0ddb96f138ed230f70f554c262c009"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "A2ThinDomain.olean",
+        "A2ThinDomain.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 11.274,
+      "started_utc": "2026-11-25T22:07:42.723512+00:00",
+      "source_sha256": "4fc0ec36976d62960fd3bfe720039cd5d8e1d24e62663a00ec728b69b7651477"
+    }
+  ],
+  "repair": "Use direct strict multiplication and a named rank inequality after the initial timeout.",
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditA2ThinDomain.olean",
+      "AuditA2ThinDomain.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 21.888,
+    "started_utc": "2026-11-25T22:08:11.736035+00:00",
+    "source_sha256": "b54fbdd14a18e97a44b7acc0d80b69e044e9eebd4f84521c5fc6b52a29b102ee",
+    "imported_object_sha256": "acd5a1cd436a3d9069b6ca91e4a3e52237b9b8a41a5775fbd9618cf00c23bbf6"
+  },
+  "axioms": {
+    "ThinAdmitted": [
+      "propext",
+      "Quot.sound"
+    ],
+    "next_thin_rank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_of_total_thin_producer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 115,
+  "sha256": {
+    "A2ThinDomain.lean": "4fc0ec36976d62960fd3bfe720039cd5d8e1d24e62663a00ec728b69b7651477",
+    "A2ThinDomain.olean": "acd5a1cd436a3d9069b6ca91e4a3e52237b9b8a41a5775fbd9618cf00c23bbf6",
+    "AuditA2ThinDomain.lean": "b54fbdd14a18e97a44b7acc0d80b69e044e9eebd4f84521c5fc6b52a29b102ee",
+    "AuditA2ThinDomain.olean": "c3c69b86d6830cb3546ee20adf6218aaaab814ffcab010475ea7e8031322e0df"
+  }
+}

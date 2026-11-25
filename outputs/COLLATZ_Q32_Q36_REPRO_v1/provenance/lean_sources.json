@@ -115,6 +115,11 @@
     "sha256": "8fb900e66f7f016c8006fcea0e883e0be943520e6a8ca0cea7eaf45a7e7b2624"
   },
   {
+    "module": "A2ThinDomain",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_THIN/A2ThinDomain.lean",
+    "sha256": "4fc0ec36976d62960fd3bfe720039cd5d8e1d24e62663a00ec728b69b7651477"
+  },
+  {
     "module": "A2ThreeWeakCommonLongRate",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_A2_THREE_WEAK_COMMON_LONG_RATE_LEAN/A2ThreeWeakCommonLongRate.lean",
     "sha256": "8ae4ab7ea59201a180ac0efea0f4797229e9b33bceb5d4a3f0ba95754fc44eb8"
@@ -215,6 +220,11 @@
     "sha256": "af9c159d1f1a463b91a7e47946021119b146ac6cc4fe88b636995b45acff34f6"
   },
   {
+    "module": "AuditA2ThinDomain",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_THIN/AuditA2ThinDomain.lean",
+    "sha256": "b54fbdd14a18e97a44b7acc0d80b69e044e9eebd4f84521c5fc6b52a29b102ee"
+  },
+  {
     "module": "AuditA2TwoOnesMinimal",
     "origin": "experiments/COLLATZ_Q45_20261125/AuditA2TwoOnesMinimal.lean",
     "sha256": "15f936c199bdc17621fbe4a0e1fec5fe6e1ba47b99ed3381443ecfb5905a048b"
@@ -248,6 +258,16 @@
     "module": "AuditAB9T3Adapter",
     "origin": "experiments/COLLATZ_Q33_Q34_20261125/Q34_AB9_T3_LEAN/AuditAB9T3Adapter.lean",
     "sha256": "501882ca90cd348bf603acd6ad1b4cfc7d06bc54df8c964240bfb025ee3ebd1d"
+  },
+  {
+    "module": "AuditFront4bEarlyMeeting",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_PAID_EARLY/AuditFront4bEarlyMeeting.lean",
+    "sha256": "9af1abf65ff120f0b2e8af987c75fe54f7577e1faf7d5d62157d57085e47bcb1"
+  },
+  {
+    "module": "AuditFront4bPairExit",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN/AuditFront4bPairExit.lean",
+    "sha256": "340d63347c8c22335e65ed630d7486fdfd15f02190232fe9482a01cae4212a0b"
   },
   {
     "module": "AuditFront4bT60",
@@ -303,6 +323,16 @@
     "module": "FixedSourceRun",
     "origin": "experiments/COLLATZ_CONTINUO_20261122/Q17_RACHA_FUENTE_FIJA_LEAN/FixedSourceRun.lean",
     "sha256": "1fc5ce0cc7d0e64cf576a7f5ca6d0751e0a64133d96f1198b2e124130bad6d7d"
+  },
+  {
+    "module": "Front4bEarlyMeeting",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN_PAID_EARLY/Front4bEarlyMeeting.lean",
+    "sha256": "815a27d61c62d156fb3ece96db9d401614e0d6aa003795a9d07b1f17b3114b28"
+  },
+  {
+    "module": "Front4bPairExit",
+    "origin": "experiments/COLLATZ_Q48_FRONT4B_20261125/LEAN/Front4bPairExit.lean",
+    "sha256": "0789f611b89526a6bcc9e4b0c3ab328c942dbac5631f6c1c2778acd85b8dd51b"
   },
   {
     "module": "Front4bT60",

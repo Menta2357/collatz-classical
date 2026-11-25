@@ -1,0 +1,5 @@
+'CollatzCharacterBridge.Front4bEarlyMeeting.paid_of_small_two_mod_three' depends on axioms: [propext, Quot.sound]
+'CollatzCharacterBridge.Front4bEarlyMeeting.paid_t60' depends on axioms: [propext, Classical.choice, Quot.sound]
+real 13.30
+user 0.35
+sys 0.85

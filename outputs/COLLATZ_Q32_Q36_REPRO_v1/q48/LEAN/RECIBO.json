@@ -1,0 +1,112 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "conditional_domain": "N>=64; N<F; 11F<12N; exact physical bank (1,2)^m and direct rupture d",
+  "guards": [
+    [
+      1,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      13,
+      4
+    ]
+  ],
+  "guard_coordinates": [
+    "m_max",
+    "d_min"
+  ],
+  "same_origin_book": [
+    "j+2*m+1",
+    "S+3*m+d",
+    "3*(3^(2*m)*B+2^S*(5*(3^(2*m)-2^(3*m))))+2^(S+3*m)"
+  ],
+  "comparison_Q47_front4b_paper": {
+    "N_affine": [
+      "66972346602545741868196940927",
+      "79228162514264337593543950336"
+    ],
+    "F_affine": [
+      "71667327748009080469224948461",
+      "84782316550432407028588866402"
+    ],
+    "F_minus_N": [
+      "4694981145463338601028007534",
+      "5554154036168069435044916066"
+    ],
+    "12N_minus_11F": [
+      "15327554002449017256888858053",
+      "18132468116415573808049873610"
+    ],
+    "paper_reference_sha256": "260acff2ab3d106e1b9a6a1920b324ffb905504f801283909ec181e135584439"
+  },
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "Front4bPairExit.olean",
+        "Front4bPairExit.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 13.668,
+      "started_utc": "2026-11-25T22:01:18.676612+00:00",
+      "source_sha256": "5e657aa5e36888a5bf32cd700104540871bb3f53cab1f3863db0e8d257fc2e63"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "Front4bPairExit.olean",
+        "Front4bPairExit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 9.527,
+      "started_utc": "2026-11-25T22:02:08.400290+00:00",
+      "source_sha256": "0789f611b89526a6bcc9e4b0c3ab328c942dbac5631f6c1c2778acd85b8dd51b"
+    }
+  ],
+  "repair": "Imported the already frozen module that exports Descended. No proof condition changed.",
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditFront4bPairExit.olean",
+      "AuditFront4bPairExit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 39.112,
+    "started_utc": "2026-11-25T22:02:30.438410+00:00",
+    "source_sha256": "340d63347c8c22335e65ed630d7486fdfd15f02190232fe9482a01cae4212a0b",
+    "imported_object_sha256": "7b15f99bd01b3ad4543cac588dd89aba7bcb92285a4a9aec6cd37f4bc8844224"
+  },
+  "axioms": {
+    "descent_of_numerator_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_exit_descends": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 117,
+  "sha256": {
+    "Front4bPairExit.lean": "0789f611b89526a6bcc9e4b0c3ab328c942dbac5631f6c1c2778acd85b8dd51b",
+    "Front4bPairExit.olean": "7b15f99bd01b3ad4543cac588dd89aba7bcb92285a4a9aec6cd37f4bc8844224",
+    "AuditFront4bPairExit.lean": "340d63347c8c22335e65ed630d7486fdfd15f02190232fe9482a01cae4212a0b",
+    "AuditFront4bPairExit.olean": "5b8da87b956b3de7310f3acbd19a512e750636518e874280ec92b85a6fd8e58a"
+  }
+}

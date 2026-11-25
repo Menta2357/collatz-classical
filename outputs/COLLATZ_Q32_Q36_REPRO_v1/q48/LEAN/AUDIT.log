@@ -1,0 +1,4 @@
+'CollatzCharacterBridge.Front4bPairExit.descent_of_numerator_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CollatzCharacterBridge.Front4bPairExit.direct_exit_descends' depends on axioms: [propext, Classical.choice, Quot.sound]

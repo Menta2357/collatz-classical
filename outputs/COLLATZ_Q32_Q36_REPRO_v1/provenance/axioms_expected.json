@@ -397,5 +397,44 @@
       "propext",
       "Quot.sound"
     ]
+  },
+  "AuditFront4bEarlyMeeting": {
+    "paid_of_small_two_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "paid_t60": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bPairExit": {
+    "descent_of_numerator_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_exit_descends": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2ThinDomain": {
+    "ThinAdmitted": [
+      "propext",
+      "Quot.sound"
+    ],
+    "next_thin_rank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_of_total_thin_producer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   }
 }
