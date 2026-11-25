@@ -1,0 +1,22 @@
+{
+  "status": "PASS_LEAN_AND_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "parallel_jobs": 1,
+  "direct_parent": {
+    "file": "CENTERED_RECHARGE_LEAN/A2CenteredRecharge.olean",
+    "sha256": "a6a353828feaae8328da44ab3439ca4ae7c8e166c8e91e91fbe14f93487d7790"
+  },
+  "axioms": {
+    "switch_exact_reserve": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "sha256": {
+    "A2LabelSwitch.lean": "e1f43535f4b855c6b9673361b9518a281c7216bf698b66be0b9bff1c61218b22",
+    "A2LabelSwitch.olean": "8e86a759a4ba1b7b8706622b71d84d0588e95a898c46773ddbd031c24381ed34",
+    "AuditA2LabelSwitch.lean": "964146448b5e1958a4948d4704c60960bca63f0b03ca96bc722c0de6c16df2a1",
+    "AuditA2LabelSwitch.olean": "a58b6ec9a74c865aeb5d1a846eb9ef75f1985dc07c9c2bd31fb8fbf3ed6d177c",
+    "AUDIT_SWITCH.log": "3e56be3ccacf66ee0bfa1e85271acaf19c5a74e3e5417c26d5b22e8feaa5fa19"
+  }
+}

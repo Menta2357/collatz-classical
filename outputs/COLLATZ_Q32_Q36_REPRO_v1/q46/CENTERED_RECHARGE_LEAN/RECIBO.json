@@ -1,0 +1,72 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "m_domain": "all natural numbers",
+  "definitions": {
+    "U": "2^(3*m+4)",
+    "V": "3^(2*m+3)",
+    "K": "V-U"
+  },
+  "coefficient_lower_bound": 11,
+  "premise": "z,zNext positive and U*zNext+1=V*z with the same m",
+  "centered_identity": "U*(K*zNext-1)=V*(K*z-1)",
+  "exact_consumption": {
+    "initial": "K*z-1=2^(3*m+4+r)*v with v odd",
+    "final": "K*zNext-1=2^r*(V*v) with V*v odd",
+    "exact_divisibility": true
+  },
+  "scope": "Arithmetic conditional on a supplied equal-label relation. Variable-label activation is outside these theorems.",
+  "main_attempt": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "A2CenteredRecharge.olean",
+      "A2CenteredRecharge.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.342,
+    "started_utc": "2026-11-25T21:28:32.821349+00:00",
+    "source_sha256": "ec4035ed2c764bd3a63b6a8efface3f4978bfb70547ee61b35326f2202721673"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditA2CenteredRecharge.olean",
+      "AuditA2CenteredRecharge.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.365,
+    "started_utc": "2026-11-25T21:28:35.163979+00:00",
+    "source_sha256": "107a890419fd643abdd181649f41bfbe6b3dd34d99a41466324843d95e763bfa",
+    "imported_object_sha256": "a6a353828feaae8328da44ab3439ca4ae7c8e166c8e91e91fbe14f93487d7790"
+  },
+  "axioms": {
+    "U": [],
+    "V": [],
+    "K": [],
+    "coefficient_lower_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "centered_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "consumes_equal_label": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 126,
+  "sha256": {
+    "A2CenteredRecharge.lean": "ec4035ed2c764bd3a63b6a8efface3f4978bfb70547ee61b35326f2202721673",
+    "A2CenteredRecharge.olean": "a6a353828feaae8328da44ab3439ca4ae7c8e166c8e91e91fbe14f93487d7790",
+    "AuditA2CenteredRecharge.lean": "107a890419fd643abdd181649f41bfbe6b3dd34d99a41466324843d95e763bfa",
+    "AuditA2CenteredRecharge.olean": "13fae8db8f492721b811e67cc434e3a5e8a73544d83c5089dbc2978fffef0ad7"
+  }
+}

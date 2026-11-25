@@ -1,0 +1,130 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "coordinate": "u=392+1024*k; k=473+16384*t",
+  "whole_guard": "k=473 mod 16384",
+  "physical_tail_T36_to_T45": {
+    "word": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "book": [
+      9,
+      11,
+      34159
+    ]
+  },
+  "original_book_T40": [
+    40,
+    63,
+    58623480722993351585
+  ],
+  "original_book_T45": [
+    45,
+    68,
+    16191637315463742130643
+  ],
+  "descent": {
+    "k_residue": 473,
+    "k_modulus": 32768,
+    "last_valuation_lower_bound": 5,
+    "original_book": [
+      46,
+      "68+a",
+      48870059851570579217785
+    ],
+    "margin_32N_minus_3T45_minus_1": [
+      268957003606397024992,
+      18617435074777258606816
+    ]
+  },
+  "capture": {
+    "k_residue": 16857,
+    "k_modulus": 32768,
+    "last_exact_valuation": 4,
+    "T46_strictly_above_N": true,
+    "source": "(T^40(N)-1)/2",
+    "source_word": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "source_book": [
+      6,
+      8,
+      697
+    ],
+    "original_book": [
+      46,
+      72,
+      48870059851570579217785
+    ]
+  },
+  "coverage": {
+    "full_mod_16384_classes_promoted_from_paper": 1,
+    "full_mod_131072_lifts_promoted_from_paper": 8
+  },
+  "main_attempt": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "A2Capture473.olean",
+      "A2Capture473.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.341,
+    "started_utc": "2026-11-25T21:31:41.411635+00:00",
+    "source_sha256": "3e43274ca9f3dfc22d4e4b9825617d2ad03d9fa3c6df14e63223e2c29bc25a50"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditA2Capture473.olean",
+      "AuditA2Capture473.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.331,
+    "started_utc": "2026-11-25T21:31:43.753104+00:00",
+    "source_sha256": "a4bf7885f183b6454fa738b82adae23dd6d5381816c8a409083fdde393d3c2fc",
+    "imported_object_sha256": "08389258dbd5e9429584bb92c2bb11a6aa113c77b558ed843e7f0cda5231ddd8"
+  },
+  "axioms": {
+    "descends_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "pays_473": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 126,
+  "sha256": {
+    "A2Capture473.lean": "3e43274ca9f3dfc22d4e4b9825617d2ad03d9fa3c6df14e63223e2c29bc25a50",
+    "A2Capture473.olean": "08389258dbd5e9429584bb92c2bb11a6aa113c77b558ed843e7f0cda5231ddd8",
+    "AuditA2Capture473.lean": "a4bf7885f183b6454fa738b82adae23dd6d5381816c8a409083fdde393d3c2fc",
+    "AuditA2Capture473.olean": "9e42259a57c82cef41afb72e029fa265d127527d7c3095396843af055a898ace"
+  }
+}

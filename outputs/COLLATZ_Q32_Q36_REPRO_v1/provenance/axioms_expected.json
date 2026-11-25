@@ -345,5 +345,57 @@
       "Classical.choice",
       "Quot.sound"
     ]
+  },
+  "AuditA2T66": {
+    "descends_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2Capture473": {
+    "descends_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "pays_473": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2CenteredRecharge": {
+    "U": [],
+    "V": [],
+    "K": [],
+    "coefficient_lower_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "centered_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "consumes_equal_label": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2LabelSwitch": {
+    "switch_exact_reserve": [
+      "propext",
+      "Quot.sound"
+    ]
   }
 }
