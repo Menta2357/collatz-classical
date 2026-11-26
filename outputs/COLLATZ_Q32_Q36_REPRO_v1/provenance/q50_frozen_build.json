@@ -1,0 +1,77 @@
+{
+  "status": "PASS_FROZEN_PARENTS_AND_AXIOM_AUDITS",
+  "units": {
+    "Front4bT65U6": {
+      "receipt": "q50/LEAN/RECIBO.json",
+      "sha256": "88c5e927a61b5bdb7aee9dfdac405bfee598dbf11aa0cb790a964790eedbadf2",
+      "axioms": {
+        "history64": [
+          "propext",
+          "Quot.sound"
+        ],
+        "pays_t65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bT64U1": {
+      "receipt": "q50/LEAN_T64_U1/RECIBO.json",
+      "sha256": "e56f383c3e0207ffb88de0257498578fceaf68c47c6d30e06bfc4ff79a81b546",
+      "axioms": {
+        "descends_t64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bS29Landing": {
+      "receipt": "q50/LEAN_LANDING/RECIBO.json",
+      "sha256": "e4f01b7964f2968c34bc09447cd9a4af13edc51853c0daa7755d62f39acd62b8",
+      "axioms": {
+        "history62": [
+          "propext",
+          "Quot.sound"
+        ],
+        "activates_wide": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bBoundedProducer": {
+      "receipt": "q50/LEAN_BOUNDED_DOMAIN/RECIBO.json",
+      "sha256": "70c37b4c64e9ab8b7711af7c15341695f879b32d83b05836ca0f6fcf31bd7975",
+      "axioms": {
+        "BoundedAdmitted": [
+          "propext",
+          "Quot.sound"
+        ],
+        "next_bounded_rank": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "paid_of_total_bounded_producer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bU11FirstCrossing": {
+      "receipt": "q50/LEAN_CROSS_U11/RECIBO.json",
+      "sha256": "e99d8aca769bf1a4e0c9cdbc1a26e8319ea0e5242e5f196a70197796163c66d2",
+      "axioms": {
+        "crosses_t65": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  }
+}

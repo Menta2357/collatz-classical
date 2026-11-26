@@ -1,0 +1,142 @@
+{
+  "status": "PASS_LEAN_ASSEMBLY_WITH_EXPLICIT_INPUTS",
+  "audited": 36,
+  "units": {
+    "AuditTerrasClock": {
+      "receipt": "q51/LEAN_CLOCK/RECIBO.json",
+      "sha256": "f83392d8d31671a425ee97d9c31ca54ac7ed9f9daddf6c672fedf5fd1fdb88d2",
+      "axioms": {
+        "shortcut": [],
+        "orbit": [],
+        "oddCount": [],
+        "startsOddRun": [],
+        "oddRuns": [],
+        "additive": [],
+        "FirstContraction": [],
+        "orbit_succ": [],
+        "orbit_add": [],
+        "startsOddRun_iff": [
+          "propext"
+        ],
+        "oddRuns_succ": [
+          "propext"
+        ],
+        "oddRuns_le_oddCount": [
+          "propext",
+          "Quot.sound"
+        ],
+        "oddCount_add": [],
+        "shortcut_even": [
+          "propext",
+          "Quot.sound"
+        ],
+        "shortcut_odd": [
+          "propext",
+          "Quot.sound"
+        ],
+        "exact_book": [
+          "propext",
+          "Quot.sound"
+        ],
+        "additive_add": [
+          "propext",
+          "Quot.sound"
+        ],
+        "no_descent_of_coefficient": [
+          "propext",
+          "Quot.sound"
+        ],
+        "prior_no_descent": [
+          "propext",
+          "Quot.sound"
+        ],
+        "first_contraction_pos": [
+          "propext",
+          "Quot.sound"
+        ],
+        "first_contraction_last_even": [
+          "propext"
+        ]
+      }
+    },
+    "AuditTerrasDeltaOne": {
+      "receipt": "q51/LEAN_Q0_PHYSICS/RECIBO.json",
+      "sha256": "4b43c111b240cfcd5c314034987f6d63cf5dbd957576e66141bf672e613ce8ea",
+      "axioms": {
+        "after_initial_odd_nonzero_mod_three": [
+          "propext",
+          "Quot.sound"
+        ],
+        "delta_one_physics": [
+          "propext",
+          "Quot.sound"
+        ],
+        "delta_one_distinct": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    "AuditTerrasProofs": {
+      "receipt": "q51/LEAN_TERRAS89/RECIBO.json",
+      "sha256": "35aaff39f77979d8b8c2cf34470dca086ba06d441aec316d6b119419c6deab5c",
+      "axioms": {
+        "find_chain": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "extract": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "valleyTimes_length": [
+          "propext"
+        ],
+        "valleyTimes_mem": [
+          "propext",
+          "Quot.sound"
+        ],
+        "physical_window": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "additive_at_crossing": [
+          "propext",
+          "Quot.sound"
+        ],
+        "descent88": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "first_descent88": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "capacities_of_universal_bound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "first_descent89_from_capacities": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "first_descent89": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "suffix_crossing_at_descent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  }
+}

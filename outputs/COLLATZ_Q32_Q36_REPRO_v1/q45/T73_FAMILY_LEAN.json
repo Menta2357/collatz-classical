@@ -1,0 +1,142 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "theorem": "CollatzCharacterBridge.T73Family.paid_t73",
+  "guard": {
+    "k_residue": 365634215903753,
+    "k_modulus": 288230376151711744,
+    "u": "392+1024*k"
+  },
+  "tail_from_T36": {
+    "word": [
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      7
+    ],
+    "book": {
+      "returns": 37,
+      "division_sum": 58,
+      "additive": 1066156498015419935
+    }
+  },
+  "original_T73": {
+    "book": {
+      "returns": 73,
+      "valuation_sum": 115,
+      "additive": 411443494169899340644307646523772515
+    },
+    "terminal_strictly_above_N": true
+  },
+  "source": {
+    "z": "T(w)",
+    "z_strictly_below_N": true,
+    "w_strictly_below_N": true,
+    "z_and_w_positive_odd": true,
+    "price": "2*N<=3*z",
+    "entry_book_w_z": [
+      1,
+      1,
+      1
+    ],
+    "full_book_w_E": [
+      3,
+      3,
+      19
+    ],
+    "short_word": [
+      1,
+      1
+    ],
+    "short_book_z_E": [
+      2,
+      2,
+      5
+    ],
+    "paid_meeting": true
+  },
+  "margins": {
+    "N_minus_z": [
+      29177906761815420227181829776080,
+      23001017616719443624914213601461160
+    ],
+    "three_z_minus_two_N": [
+      17853167298428761362846774436879,
+      14073696886398911181745300463138056
+    ]
+  },
+  "main_attempt": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "T73Family.olean",
+      "T73Family.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 10.181,
+    "started_utc": "2026-11-25T20:47:34.123937+00:00",
+    "source_sha256": "4c640be2074d7177920a2c50a3b6b452fdc73599f91117f7b5192c9a5f11b021"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditT73Family.olean",
+      "AuditT73Family.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.503,
+    "started_utc": "2026-11-25T20:47:44.314557+00:00",
+    "source_sha256": "393bd7d9c30bbe8e580ef2ca1e40158edf390cbf72b9a1e219224c9bd14a85be",
+    "imported_object_sha256": "57d984ecd6b1585c0d572d52764d571b7f7ce8cbf7a82684468e720220d87a0d"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "frozen_parents_verified_before_and_after": 122,
+  "sha256": {
+    "T73Family.lean": "4c640be2074d7177920a2c50a3b6b452fdc73599f91117f7b5192c9a5f11b021",
+    "T73Family.olean": "57d984ecd6b1585c0d572d52764d571b7f7ce8cbf7a82684468e720220d87a0d",
+    "AuditT73Family.lean": "393bd7d9c30bbe8e580ef2ca1e40158edf390cbf72b9a1e219224c9bd14a85be",
+    "AuditT73Family.olean": "f337d2c60788a90f9a4c5e6a1b82a241787898dfcbd0cdd9b901284cad58be54"
+  }
+}

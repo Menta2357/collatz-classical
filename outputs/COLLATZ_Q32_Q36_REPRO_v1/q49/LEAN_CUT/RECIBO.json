@@ -1,0 +1,32 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "lean": "4.21.0",
+  "parallel_jobs": 1,
+  "domain": "q=12+64*s; 18/32 classes paid by T63, 39/64 by T64",
+  "parent_pins": 122,
+  "axioms": {
+    "paid_row": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_row64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "build_attempts": [
+    "failed elaboration",
+    "PASS T63 version",
+    "PASS T64 extension"
+  ],
+  "final_build_seconds": 3.73,
+  "final_audit_seconds": 1.48,
+  "sha256": {
+    "Front4bValSixCut.lean": "029f31f60955af4ab3cdc176c5593994a6d976622dab1a15c5462d32bdd1631a",
+    "Front4bValSixCut.olean": "cce93ddeb903e5c7acb9cb150f21ac5d7f21e930392e3994de6b39ff89cfdeb8",
+    "AuditFront4bValSixCut.lean": "73b8b90de4cf900dfdd9c30e04303afebf255b602f27d1053f526f25bd6bc59a",
+    "AuditFront4bValSixCut.olean": "fb0215aebb83cdde3638ca8892dbd3025116f9836cf45671c096c71833eaeded"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "domain": "q=12+64*s; s=29+32*u; u=1+4*t; equivalently s=61+128*t",
+  "physical_prefix_T60_T63": [
+    2,
+    2,
+    1
+  ],
+  "local_book": [
+    3,
+    5,
+    "37"
+  ],
+  "original_T63_book": [
+    63,
+    99,
+    "7568280446574857051711818616875"
+  ],
+  "original_T64_book": [
+    64,
+    "99+d",
+    "23338666639838685855883807453313"
+  ],
+  "actual_final_valuation_lower_bound": 3,
+  "strict_margin_8N_minus_3X_minus_1": [
+    "6260253897778201510012208105032",
+    "13095348644963240970631709857784"
+  ],
+  "builds": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "--profile",
+        "-o",
+        "Front4bT64U1.olean",
+        "Front4bT64U1.lean"
+      ],
+      "exit_code": 124,
+      "seconds": 175.128,
+      "started_utc": "2026-11-25T23:07:17.179863+00:00",
+      "source_sha256": "83f0ef1df6b48d8ee849154aef73eddbcd89273ddc51631158cbb2787dbc86cf"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "--profile",
+        "-o",
+        "Front4bT64U1.olean",
+        "Front4bT64U1.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 60.984,
+      "started_utc": "2026-11-25T23:10:52.912708+00:00",
+      "source_sha256": "c6e4947147871904cf2bc8e961d3aa24f1273be444fd5af198408ea38a95504e"
+    }
+  ],
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "--profile",
+      "-o",
+      "AuditFront4bT64U1.olean",
+      "AuditFront4bT64U1.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 77.377,
+    "started_utc": "2026-11-25T23:12:58.260475+00:00",
+    "source_sha256": "72fdafc3db203246be737086f6b4e8b05aa3e0b3974c5dd47bc86e8b12b0392e",
+    "imported_object_sha256": "4d6c48f966b68b00e597da327d4492d99dbd350c1870488301374bbe66111793"
+  },
+  "axioms": {
+    "descends_t64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 123,
+  "sha256": {
+    "Front4bT64U1.lean": "c6e4947147871904cf2bc8e961d3aa24f1273be444fd5af198408ea38a95504e",
+    "Front4bT64U1.olean": "4d6c48f966b68b00e597da327d4492d99dbd350c1870488301374bbe66111793",
+    "AuditFront4bT64U1.lean": "72fdafc3db203246be737086f6b4e8b05aa3e0b3974c5dd47bc86e8b12b0392e",
+    "AuditFront4bT64U1.olean": "28817d6008b5adbf68df7343313bd78f28145ea3d4ee6b2fd61d50b505b560a2"
+  }
+}

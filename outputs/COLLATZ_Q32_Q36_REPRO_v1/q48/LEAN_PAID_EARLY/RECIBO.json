@@ -1,0 +1,47 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "lean": "4.21.0",
+  "single_worker": true,
+  "q": "108+128*s, any natural s",
+  "pivot": "T^60(N)",
+  "original_book": [
+    60,
+    95,
+    253163701604367108480427299121
+  ],
+  "source_book": [
+    1,
+    1,
+    1
+  ],
+  "source_margin": [
+    19194128103873021555380308620,
+    22706618147309399574484706068
+  ],
+  "audit_seconds": 13.3,
+  "frozen_parents_verified_before_and_after": 117,
+  "axioms": {
+    "paid_of_small_two_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "paid_t60": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "sha256": {
+    "Front4bEarlyMeeting.lean": "815a27d61c62d156fb3ece96db9d401614e0d6aa003795a9d07b1f17b3114b28",
+    "Front4bEarlyMeeting.olean": "1bd79b489eacdab247f0ac99f81a187386e12835efe9deb2c549efc14606c1ad",
+    "AuditFront4bEarlyMeeting.lean": "9af1abf65ff120f0b2e8af987c75fe54f7577e1faf7d5d62157d57085e47bcb1",
+    "AuditFront4bEarlyMeeting.olean": "c09b2e0f240f760add94f70bb3a654df773341bad501871ed9ed547e7b9a00d6",
+    "AUDIT.log": "aacf6be1120179e36ec9785b4d1ee7a93b9d4b14e5ec144541df6b1c2cda1b1f",
+    "BUILD.log": "5c39246ec3132c77bce092993b37b2ca0ab181927621cea29809736f7fbe0b20",
+    "PARENTS.sha256": "db8a507225996f26b70f8d8f7dd97c4212b74424e1b1eca16d90086747462755"
+  },
+  "builds_seconds": [
+    28.33,
+    94.11
+  ]
+}

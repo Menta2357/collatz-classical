@@ -1,0 +1,3 @@
+import T73Minimal
+
+#print axioms CollatzCharacterBridge.T73Minimal.minimum_two_returns_t73

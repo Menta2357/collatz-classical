@@ -1,0 +1,34 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "scope": "Three exact A2 T42 descents and one capture, same N and physical valuation",
+  "audit": {
+    "descends_265_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_89_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_41_mod_256": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_331_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified": 95,
+  "sha256": {
+    "A2T42.lean": "bf4ecb0f4afaa178f55edddac7293948994c0ec2ec55a4c31df164eeda274211",
+    "A2T42.olean": "b161b953c3ee805f0da6be4ebf515a86cb6d594d39355e2279e5b9d034dc5de8",
+    "AuditA2T42.lean": "a50f4d7d46548b2d68c5a0832293c1899a116b906cff2df93d23c5d269db54f7",
+    "AuditA2T42.olean": "918ae59f4b5ef132f0b7997c74c500d462e375deba78634a88094a2a1ba7b8c8"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_IMPORT",
+  "toolchain": "Lean 4.21.0",
+  "scope": "A2 U392 physical first crossing, conditional exits and chronological disjunction",
+  "audit": {
+    "seed": [],
+    "pivot": [],
+    "landing": [],
+    "history36": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ordering": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "crossing_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_crossing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "chronological": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "even_descends37": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "strong_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "two_readmits": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified": 85,
+  "build_seconds": 4.05,
+  "audit_seconds": 1.41,
+  "sha256": {
+    "A2U392.lean": "1004730443be279af6f04d7816be0519dcb07eb1d48dda76d7eb0341d44654d8",
+    "A2U392.olean": "f2583ada8c4bd45a212d28307a3583106e11eacad5105b567979f6df1f786c8e",
+    "AuditA2U392.lean": "7021c23bd67f7ec53672428d318ec3353e0755f76f80131c194253fcc8be0b1a",
+    "AuditA2U392.olean": "c2038292124ceac1e5ad6309f2192203a03c770ddb8b0f6c67ee1f413dd2a235"
+  }
+}

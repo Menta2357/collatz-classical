@@ -1,0 +1,36 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_IMPORT",
+  "toolchain": "Lean 4.21.0",
+  "scope": "Four exact A2 r=1 descent guards, same N and physical valuation",
+  "audit": {
+    "descends_1_mod_16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_57_mod_64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_25_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_73_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified": 90,
+  "build_seconds": 21.913,
+  "audit_seconds": 3.38,
+  "sha256": {
+    "A2R1Descents.lean": "1eb96ae75d2d4f0a387276bcf5f6be3bb3dec435b822a7bf6b645eb54f74dc76",
+    "A2R1Descents.olean": "b120a4f1fc26db837501c15370168a8dccededc0d6f952e3f8097fb1fb184d3d",
+    "AuditA2R1Descents.lean": "26456d8db27b6aa8deb681241f3ef217c1cda17a7142eecaffe44eef48c227a5",
+    "AuditA2R1Descents.olean": "314ec140bd5e7699932290017bbf06f7a97c4e426774dff61981d1b206a79e5f"
+  }
+}

@@ -1,0 +1,4 @@
+import Front4bEarlyMeeting
+
+#print axioms CollatzCharacterBridge.Front4bEarlyMeeting.paid_of_small_two_mod_three
+#print axioms CollatzCharacterBridge.Front4bEarlyMeeting.paid_t60

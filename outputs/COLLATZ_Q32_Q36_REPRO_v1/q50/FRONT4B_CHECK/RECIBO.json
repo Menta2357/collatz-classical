@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "modulus": 1024,
+  "q49": 624,
+  "q50_lean": 636,
+  "q50_including_paper": 639,
+  "wide_landing_affine": [
+    1392102202856011511751362094175,
+    1526081697907783326514599595236
+  ],
+  "rows": [
+    {
+      "u": [
+        1,
+        4
+      ],
+      "s": [
+        61,
+        128
+      ],
+      "evidence": "LEAN",
+      "tail_prefix": [
+        2,
+        2,
+        1
+      ],
+      "last_valuation_at_least": 3,
+      "original_book": [
+        64,
+        "99+d",
+        23338666639838685855883807453313
+      ],
+      "descent_if_d_at_least": 3,
+      "descent_margin_affine": [
+        6260253897778201510012208105032,
+        13095348644963240970631709857784
+      ]
+    },
+    {
+      "u": [
+        6,
+        8
+      ],
+      "s": [
+        221,
+        256
+      ],
+      "evidence": "LEAN",
+      "tail_prefix": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "last_valuation_at_least": 3,
+      "original_book": [
+        65,
+        "100+d",
+        71283650519744286969148125565315
+      ],
+      "descent_if_d_at_least": 4,
+      "descent_margin_affine": [
+        68993212286145606255991350102104,
+        79850865142193063759789632145384
+      ],
+      "capture_if_d_equals": 3,
+      "source_book": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "u": [
+        3,
+        16
+      ],
+      "s": [
+        125,
+        512
+      ],
+      "evidence": "PAPER",
+      "tail_prefix": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "last_valuation_at_least": 3,
+      "original_book": [
+        65,
+        "101+d",
+        72551301119972516370644828770691
+      ],
+      "descent_if_d_at_least": 3,
+      "descent_margin_affine": [
+        19524568928911603673035119023792,
+        79850865142193063759789632145384
+      ]
+    },
+    {
+      "u": [
+        12,
+        32
+      ],
+      "s": [
+        413,
+        1024
+      ],
+      "evidence": "PAPER",
+      "tail_prefix": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "last_valuation_at_least": 4,
+      "original_book": [
+        66,
+        "101+d",
+        216386252759689319710437783106697
+      ],
+      "descent_if_d_at_least": 4,
+      "descent_margin_affine": [
+        62376707442886140499831443536240,
+        154586637194731655775581772296048
+      ]
+    }
+  ]
+}

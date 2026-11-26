@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "original_book": [
+    73,
+    108,
+    406394221359806431457452944840855139
+  ],
+  "checkpoints": [
+    {
+      "T": 53,
+      "renewals": 0,
+      "sum_labels": 0,
+      "lower_bound_symbolic": 7,
+      "lower_bound_whole_cylinder": 7,
+      "affine_margin_at_last_excluded_depth": [
+        609745319863765003165881037711426610,
+        6171366356165401265444105137906778112
+      ]
+    },
+    {
+      "T": 58,
+      "renewals": 1,
+      "sum_labels": 1,
+      "lower_bound_symbolic": 8,
+      "lower_bound_whole_cylinder": 9,
+      "affine_margin_at_last_excluded_depth": [
+        2526587868521020263188469128722936514,
+        25572150961601638315223306880971440128
+      ]
+    },
+    {
+      "T": 63,
+      "renewals": 2,
+      "sum_labels": 2,
+      "lower_bound_symbolic": 10,
+      "lower_bound_whole_cylinder": 11,
+      "affine_margin_at_last_excluded_depth": [
+        253285738831490557165477433655913682,
+        2563560614898043058041188037303468032
+      ]
+    },
+    {
+      "T": 66,
+      "renewals": 3,
+      "sum_labels": 2,
+      "lower_bound_symbolic": 11,
+      "lower_bound_whole_cylinder": 12,
+      "affine_margin_at_last_excluded_depth": [
+        46294017499156297589846190368790038134,
+        468551922874715450276534926242075377664
+      ]
+    },
+    {
+      "T": 73,
+      "renewals": 4,
+      "sum_labels": 4,
+      "lower_bound_symbolic": 13,
+      "lower_bound_whole_cylinder": 14,
+      "affine_margin_at_last_excluded_depth": [
+        229351349767239089667903622516700682790,
+        2321315404291921665298036350541710753792
+      ]
+    }
+  ]
+}

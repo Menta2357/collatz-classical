@@ -1,0 +1,46 @@
+{
+  "status": "PASS_FROZEN_PARENTS_AND_AXIOM_AUDITS",
+  "units": {
+    "Front4bT61S3": {
+      "receipt": "q49/LEAN/RECIBO.json",
+      "sha256": "ed591d3f352faacb2e84bf3fa66cd05c5057e0f8b23c8ce92aeaf194c2aad838",
+      "axioms": {
+        "index": [],
+        "checkpoint60": [],
+        "index_formula": [
+          "propext",
+          "Quot.sound"
+        ],
+        "seed_affine": [
+          "propext",
+          "Quot.sound"
+        ],
+        "history60": [
+          "propext",
+          "Quot.sound"
+        ],
+        "descends_t61": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bValSixCut": {
+      "receipt": "q49/LEAN_CUT/RECIBO.json",
+      "sha256": "0c772862134453cac4717e9044308023194cf0a94c82089ff5d3369d89d3c9bc",
+      "axioms": {
+        "paid_row": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "paid_row64": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  }
+}

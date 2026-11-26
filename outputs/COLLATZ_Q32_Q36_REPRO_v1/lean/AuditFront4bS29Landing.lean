@@ -1,0 +1,3 @@
+import Front4bS29Landing
+#print axioms CollatzCharacterBridge.Front4bS29Landing.history62
+#print axioms CollatzCharacterBridge.Front4bS29Landing.activates_wide

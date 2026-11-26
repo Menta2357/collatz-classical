@@ -1,0 +1,5 @@
+import A2WeakBreakExitCapture
+
+#print axioms CollatzCharacterBridge.A2WeakBreakExitCapture.captures_phase_one_zero_macros
+#print axioms CollatzCharacterBridge.A2WeakBreakExitCapture.captures_phase_one_one_macro
+#print axioms CollatzCharacterBridge.A2WeakBreakExitCapture.captures_phase_two_three_ones

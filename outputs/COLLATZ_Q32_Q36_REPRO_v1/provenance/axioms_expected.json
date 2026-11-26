@@ -1,0 +1,649 @@
+{
+  "AuditP5J131EarlyCapture": {
+    "paid_one_return": [
+      "propext",
+      "Quot.sound"
+    ],
+    "capture33": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "pays33": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "q29_capture33": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "arrives_under_induction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditP5J131Residual": {
+    "history28": [
+      "propext",
+      "Quot.sound"
+    ],
+    "strong_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_or_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "pays_mod_four_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_mod_64_sixty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_mod_64_twenty_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditAB9T3Adapter": {
+    "select_iff_guard": [
+      "propext"
+    ],
+    "guard_meeting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "union_paid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditP5J131T35": {
+    "descends_mod_256_ninety_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_mod_256_one_twenty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditP5U8Fold": {
+    "fold_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capture40": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capture360": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends904": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2U392": {
+    "seed": [],
+    "pivot": [],
+    "landing": [],
+    "history36": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ordering": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "crossing_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_crossing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "chronological": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "even_descends37": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "strong_capture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "two_readmits": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2R1Descents": {
+    "descends_1_mod_16": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_57_mod_64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_25_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_73_mod_128": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2T42": {
+    "descends_265_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_89_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_41_mod_256": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_331_mod_512": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2T43": {
+    "descends_9_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_169_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_217_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_361_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_393_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_857_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1193_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "descends_1241_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1417_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2T43Inverse": {
+    "captures_873_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1385_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1897_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakCapture": {
+    "history_two_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "history_two_one_six": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakDescent": {
+    "weak_two_local_book": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descends_after_weak_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakExitCapture": {
+    "captures_phase_one_zero_macros": [
+      "propext",
+      "Quot.sound"
+    ],
+    "captures_phase_one_one_macro": [
+      "propext",
+      "Quot.sound"
+    ],
+    "captures_phase_two_three_ones": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2WeakBreakReserve": {
+    "macro_segment": [
+      "propext",
+      "Quot.sound"
+    ],
+    "reserve_segments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paired_histories": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2Capture3049": {
+    "paid_3049": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT60": {
+    "descends_t60": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditT73Family": {
+    "paid_t73": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2TwoOnesMinimal": {
+    "two_ones_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditT73Minimal": {
+    "minimum_two_returns_t73": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2T66": {
+    "descends_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2Capture473": {
+    "descends_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t46": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "pays_473": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2CenteredRecharge": {
+    "U": [],
+    "V": [],
+    "K": [],
+    "coefficient_lower_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "centered_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "consumes_equal_label": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2LabelSwitch": {
+    "switch_exact_reserve": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bEarlyMeeting": {
+    "paid_of_small_two_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "paid_t60": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bPairExit": {
+    "descent_of_numerator_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_exit_descends": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditA2ThinDomain": {
+    "ThinAdmitted": [
+      "propext",
+      "Quot.sound"
+    ],
+    "next_thin_rank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_of_total_thin_producer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT61S3": {
+    "index": [],
+    "checkpoint60": [],
+    "index_formula": [
+      "propext",
+      "Quot.sound"
+    ],
+    "seed_affine": [
+      "propext",
+      "Quot.sound"
+    ],
+    "history60": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descends_t61": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bValSixCut": {
+    "paid_row": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_row64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT65U6": {
+    "history64": [
+      "propext",
+      "Quot.sound"
+    ],
+    "pays_t65": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bT64U1": {
+    "descends_t64": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bS29Landing": {
+    "history62": [
+      "propext",
+      "Quot.sound"
+    ],
+    "activates_wide": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bBoundedProducer": {
+    "BoundedAdmitted": [
+      "propext",
+      "Quot.sound"
+    ],
+    "next_bounded_rank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "paid_of_total_bounded_producer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditFront4bU11FirstCrossing": {
+    "crosses_t65": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "AuditTerrasClock": {
+    "shortcut": [],
+    "orbit": [],
+    "oddCount": [],
+    "startsOddRun": [],
+    "oddRuns": [],
+    "additive": [],
+    "FirstContraction": [],
+    "orbit_succ": [],
+    "orbit_add": [],
+    "startsOddRun_iff": [
+      "propext"
+    ],
+    "oddRuns_succ": [
+      "propext"
+    ],
+    "oddRuns_le_oddCount": [
+      "propext",
+      "Quot.sound"
+    ],
+    "oddCount_add": [],
+    "shortcut_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "shortcut_odd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "exact_book": [
+      "propext",
+      "Quot.sound"
+    ],
+    "additive_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "no_descent_of_coefficient": [
+      "propext",
+      "Quot.sound"
+    ],
+    "prior_no_descent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_pos": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_contraction_last_even": [
+      "propext"
+    ]
+  },
+  "AuditTerrasDeltaOne": {
+    "after_initial_odd_nonzero_mod_three": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_physics": [
+      "propext",
+      "Quot.sound"
+    ],
+    "delta_one_distinct": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "AuditTerrasProofs": {
+    "find_chain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "extract": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "valleyTimes_length": [
+      "propext"
+    ],
+    "valleyTimes_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "physical_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "additive_at_crossing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_descent88": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "capacities_of_universal_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "first_descent89_from_capacities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "first_descent89": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "suffix_crossing_at_descent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

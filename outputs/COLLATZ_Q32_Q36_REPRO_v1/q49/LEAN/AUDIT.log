@@ -1,0 +1,15 @@
+'CollatzCharacterBridge.Front4bT61S3.index' does not depend on any axioms
+'CollatzCharacterBridge.Front4bT61S3.checkpoint60' does not depend on any axioms
+'CollatzCharacterBridge.Front4bT61S3.index_formula' depends on axioms: [propext, Quot.sound]
+'CollatzCharacterBridge.Front4bT61S3.seed_affine' depends on axioms: [propext, Quot.sound]
+'CollatzCharacterBridge.Front4bT61S3.history60' depends on axioms: [propext, Quot.sound]
+'CollatzCharacterBridge.Front4bT61S3.descends_t61' depends on axioms: [propext, Classical.choice, Quot.sound]
+import took 24.5s
+cumulative profiling times:
+	.olean serialization 4.77ms
+	elaboration 213ms
+	import 24.5s
+	initialization 2.6s
+	interpretation 52.8ms
+	linting 9.43ms
+	parsing 3.3ms

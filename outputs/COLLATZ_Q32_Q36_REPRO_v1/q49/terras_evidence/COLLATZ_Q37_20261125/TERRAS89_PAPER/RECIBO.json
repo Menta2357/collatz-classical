@@ -1,0 +1,25 @@
+{
+  "grade": "PAPER_PARTIAL_REDUCTION_EXACT_ARITHMETIC",
+  "scope": "First finite coefficient crossing, exactly 89 maximal odd runs, same original N",
+  "pair_sieve": {
+    "odd_count_upper_exclusive": 1180591620717411303424,
+    "basis_h_upper_inclusive": 2797,
+    "visited": 5413,
+    "survivors": 7
+  },
+  "direct_exclusions_for_every_positive_delta": ["2Q0", "P", "3Q1", "J"],
+  "inclusions_in_inherited_Weaver_Q0": [
+    {"pair": "Q1", "delta_at_least": 1, "low": 2, "tail": 6, "target_rank": 7, "target_height": 170, "strict_source_cap": 148321243831049467988},
+    {"pair": "2Q1", "delta_at_least": 1, "low": 2, "tail": 4, "target_rank": 7, "target_height": 170, "strict_source_cap": 42408176569367664067},
+    {"pair": "Q0", "delta_at_least": 2, "low": 7, "tail": 11, "target_rank": 12, "target_height": 146, "strict_source_cap": 453027402666008300801}
+  ],
+  "remaining": {"steps": 630118245525664765, "odd_count": 397560349370386783, "delta": 1},
+  "sufficient_untested_D5_heights": [92, 146],
+  "single_D5_height_insufficient_in_tested_template": [69, 92, 146],
+  "conditional_Q0_D5_transfer": {"low": 6, "tail": 10, "target_rank": 11, "target_height": 146, "strict_source_cap": 453027402666008300866},
+  "commands_in_this_directory": ["python3 -B check.py", "python3 -OB check.py"],
+  "both_runs_exit_code": 0,
+  "matching_stdout": true,
+  "heavy_searches_reexecuted": false,
+  "lean_formally_verified": false
+}

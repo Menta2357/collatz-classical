@@ -1,0 +1,157 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "coordinate": "u=392+1024*k; k=3805769794057+2^44*t",
+  "guard_union": "t=2 mod 4",
+  "physical_tail_T36_to_T63": {
+    "word": [
+      1,
+      2,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      7,
+      1,
+      1,
+      2
+    ],
+    "book": [
+      27,
+      42,
+      22359342998407
+    ]
+  },
+  "original_book_T63": [
+    63,
+    99,
+    7588087487203423136110204604459
+  ],
+  "original_book_T65": [
+    65,
+    101,
+    71461913885401381728733599453571
+  ],
+  "descent": {
+    "t_residue": 2,
+    "t_modulus": 8,
+    "k_residue": 38990141882889,
+    "k_modulus": 140737488355328,
+    "last_valuation_lower_bound": 4,
+    "original_book": [
+      66,
+      "101+a",
+      216921042856660603989194204771465
+    ],
+    "margin_16N_minus_3T65_minus_1": [
+      42826932524216463328993709637472,
+      154586637194731655775581772296048
+    ]
+  },
+  "capture": {
+    "t_residue": 6,
+    "t_modulus": 8,
+    "k_residue": 109358886060553,
+    "k_modulus": 140737488355328,
+    "last_exact_valuation": 3,
+    "T66_strictly_above_N": true,
+    "source": "(T^63(N)-1)/2",
+    "source_word": [
+      1,
+      2,
+      1
+    ],
+    "source_book": [
+      3,
+      4,
+      23
+    ],
+    "original_book": [
+      66,
+      104,
+      216921042856660603989194204771465
+    ]
+  },
+  "main_attempts": [
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "A2T66.olean",
+        "A2T66.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 2.487,
+      "started_utc": "2026-11-25T21:24:58.120528+00:00",
+      "source_sha256": "2dea3fa9e009392de4eb28310320fa2636ce5a753ea084ee3a7ac04528cfff4e"
+    },
+    {
+      "command": [
+        "-j1",
+        "-s65536",
+        "-DwarningAsError=true",
+        "-o",
+        "A2T66.olean",
+        "A2T66.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.543,
+      "started_utc": "2026-11-25T21:25:43.010554+00:00",
+      "source_sha256": "8fb900e66f7f016c8006fcea0e883e0be943520e6a8ca0cea7eaf45a7e7b2624"
+    }
+  ],
+  "initial_build_failure": "The Lean command keyword prefix was used as a local declaration name.",
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditA2T66.olean",
+      "AuditA2T66.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.49,
+    "started_utc": "2026-11-25T21:25:45.562916+00:00",
+    "source_sha256": "af9c159d1f1a463b91a7e47946021119b146ac6cc4fe88b636995b45acff34f6",
+    "imported_object_sha256": "39ff41bc6e73557d93b2b437f08946e34753d962e81aea314a295fef1df323d5"
+  },
+  "axioms": {
+    "descends_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_t66": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified_before_and_after": 125,
+  "sha256": {
+    "A2T66.lean": "8fb900e66f7f016c8006fcea0e883e0be943520e6a8ca0cea7eaf45a7e7b2624",
+    "A2T66.olean": "39ff41bc6e73557d93b2b437f08946e34753d962e81aea314a295fef1df323d5",
+    "AuditA2T66.lean": "af9c159d1f1a463b91a7e47946021119b146ac6cc4fe88b636995b45acff34f6",
+    "AuditA2T66.olean": "9d9624200dabbdcee1e330fe35e692fb93effec52014f8cfd9df86a132f884d7"
+  }
+}

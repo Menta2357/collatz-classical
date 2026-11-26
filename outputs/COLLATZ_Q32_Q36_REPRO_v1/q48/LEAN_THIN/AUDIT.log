@@ -1,0 +1,5 @@
+'CollatzCharacterBridge.A2ThinDomain.ThinAdmitted' depends on axioms: [propext, Quot.sound]
+'CollatzCharacterBridge.A2ThinDomain.next_thin_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzCharacterBridge.A2ThinDomain.paid_of_total_thin_producer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

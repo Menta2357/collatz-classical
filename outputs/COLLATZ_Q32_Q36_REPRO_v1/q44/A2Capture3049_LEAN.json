@@ -1,0 +1,95 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)",
+  "theorem": "CollatzCharacterBridge.A2Capture3049.paid_3049",
+  "guard": {
+    "k_residue": 3049,
+    "k_modulus": 16384,
+    "u": "392+1024*k"
+  },
+  "pivot": "T^38(N)",
+  "original": {
+    "prefix_from_T36": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3
+    ],
+    "book": {
+      "returns": 46,
+      "division_sum": 70,
+      "additive": 45803288649316366261625
+    },
+    "terminal_strictly_above_N": true
+  },
+  "source": {
+    "value": "(T^38(N)-1)/2",
+    "positive_odd_strictly_below_N": true,
+    "exact_word": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    "book": {
+      "returns": 8,
+      "division_sum": 9,
+      "additive": 6433
+    }
+  },
+  "coverage": {
+    "full_mod_16384_classes_promoted_from_paper": 1,
+    "full_mod_131072_lifts_promoted_from_paper": 8
+  },
+  "main_attempt": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "A2Capture3049.olean",
+      "A2Capture3049.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.649,
+    "started_utc": "2026-11-25T20:26:54.513834+00:00",
+    "source_sha256": "04a4c37c9dde42d77a7095bf9cf1eb990c02732c7baf69b00d68b639d5aa69b0"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditA2Capture3049.olean",
+      "AuditA2Capture3049.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 0.434,
+    "started_utc": "2026-11-25T20:26:57.163674+00:00",
+    "source_sha256": "26a54994e233ade7fa414445c0a67ac99c0802fcbbb41a643dbae1766f4b22f9",
+    "imported_object_sha256": "b9f02f5d9bced6677431785b85c8f98dd006ccabf8b6ad161bc0f7570c5f27ee"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "frozen_parents_verified_before_and_after": 117,
+  "sha256": {
+    "A2Capture3049.lean": "04a4c37c9dde42d77a7095bf9cf1eb990c02732c7baf69b00d68b639d5aa69b0",
+    "A2Capture3049.olean": "b9f02f5d9bced6677431785b85c8f98dd006ccabf8b6ad161bc0f7570c5f27ee",
+    "AuditA2Capture3049.lean": "26a54994e233ade7fa414445c0a67ac99c0802fcbbb41a643dbae1766f4b22f9",
+    "AuditA2Capture3049.olean": "753f07a4180e17c39b37f94d40770fcb2fafe31286140d995c0ae27f1371ac80"
+  }
+}

@@ -1,0 +1,4 @@
+import Front4bValSixCut
+
+#print axioms CollatzCharacterBridge.Front4bValSixCut.paid_row
+#print axioms CollatzCharacterBridge.Front4bValSixCut.paid_row64

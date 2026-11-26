@@ -1,0 +1,3 @@
+import A2LabelSwitch
+
+#print axioms CollatzCharacterBridge.A2LabelSwitch.switch_exact_reserve

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_FULL_A72",
+  "scope": {
+    "H": 92,
+    "a1": 72,
+    "b1_minimum": 1
+  },
+  "certified_conclusion": "2^D5 <= 6^92",
+  "D4_le_H": "analytic recurrence",
+  "D4_gt_H": "two disjoint physical first-gap shards",
+  "projections_by_shard": [
+    7004,
+    8826
+  ],
+  "total_projections": 15830,
+  "retained_sources": 104,
+  "D3_gt_H": 8,
+  "D3_le_H_lt_D4": 96,
+  "max_D5_when_D4_gt_H": 104,
+  "read_only_aggregation": true,
+  "pending": [
+    "H92, a1<=71, D3<=92<D4",
+    "H146 or equivalent rank floor",
+    "Terras89 Q0 Delta=1"
+  ],
+  "receipt_sha256": {
+    "../TERRAS89_A72_LOW_GAPS/RECIBO.json": "78dd03630c530bbc9e19bc806a4d8c9d8563e6369d959c77af93d1ee69a521ae",
+    "RECIBO.json": "1acd4bb416e741d1cb7c00ce37b523d5b268adfb5896c7ed09bf732877688cab"
+  }
+}

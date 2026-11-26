@@ -1,0 +1,3 @@
+import A2TwoOnesMinimal
+
+#print axioms CollatzCharacterBridge.A2TwoOnesMinimal.two_ones_unique

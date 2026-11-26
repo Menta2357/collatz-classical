@@ -1,0 +1,148 @@
+{
+  "createdUtc": "2026-11-25T01:57:40+00:00",
+  "scope": "finite coefficient stopping time, at most 88 maximal odd runs of the shortcut map, all N>=2",
+  "conclusion": "The first coefficient crossing is a strict descent relative to the original N.",
+  "grade": "PAPER_WITH_EXACT_COMPUTATIONAL_CERTIFICATES",
+  "leanFormallyVerified": false,
+  "externalReviewOf88Complete": false,
+  "capacity": [
+    {
+      "H": 66,
+      "algorithm": "bounded tuples",
+      "long_pairs": 31,
+      "other_long_triples": 1075,
+      "max_D4_when_D3_gt_H": 80,
+      "elapsed_seconds": 1.971
+    },
+    {
+      "H": 67,
+      "algorithm": "bounded tuples",
+      "long_pairs": 26,
+      "other_long_triples": 1117,
+      "max_D4_when_D3_gt_H": 81,
+      "elapsed_seconds": 1.82
+    },
+    {
+      "H": 92,
+      "algorithm": "full masked projections",
+      "long_pairs": 39,
+      "other_long_triples": 2155,
+      "max_D4_when_D3_gt_H": 107,
+      "elapsed_seconds": 0.665,
+      "reproduce": "PYTHONPATH=experiments/COLLATZ_ECO_20261125 python3 -B -c 'from TERRAS88_four_runs_107_170 import mask_certificate; mask_certificate(92)'",
+      "additional_Front4b": {
+        "domain": "D2<=92<D3, a1<=83",
+        "physical_sources": 2133,
+        "max_D4": 107,
+        "arithmetic_candidates": 2923675,
+        "elapsed_seconds": 3.674,
+        "rows_sha256": "c0a9bec7eb55571f604910c8d41228f74b1d7ab852c493a06064ce97859f55aa",
+        "source_sha256": "7db6ea4557792c27a39cba1c52033544b35e00ff24200a177aacd5c9cbcc8f67"
+      }
+    },
+    {
+      "H": 107,
+      "algorithm": "bounded tuples",
+      "long_pairs": 57,
+      "other_long_triples": 2743,
+      "max_D4_when_D3_gt_H": 121,
+      "elapsed_seconds": 29.33
+    },
+    {
+      "H": 146,
+      "algorithm": "bounded tuples",
+      "long_pairs": 60,
+      "other_long_triples": 5157,
+      "max_D4_when_D3_gt_H": 162,
+      "elapsed_seconds": 124.748
+    },
+    {
+      "H": 170,
+      "algorithm": "full masked projections",
+      "long_pairs": 73,
+      "other_long_triples": 7209,
+      "max_D4_when_D3_gt_H": 189,
+      "elapsed_seconds": 21.509
+    }
+  ],
+  "Q0_delta1": {
+    "rank_floors": {
+      "10": 92,
+      "11": 146,
+      "12": 170,
+      "13": 231,
+      "14": 256
+    },
+    "strict_source_cap": 453027402666008300866,
+    "target": "2^146-1",
+    "max_complete_blocks": 5
+  },
+  "Q1_delta1": {
+    "rank_floors": {
+      "4": 67,
+      "5": 107,
+      "6": 170,
+      "7": 170,
+      "8": 256
+    },
+    "strict_source_cap": 99048017070889459170,
+    "target": "2^170-1",
+    "max_complete_blocks": 4
+  },
+  "imported_Weaver_reexecution": [
+    {
+      "query": 0,
+      "method": "progression",
+      "partitions": 845,
+      "matching_statistics": true,
+      "witnesses": 0
+    },
+    {
+      "query": 0,
+      "method": "affine",
+      "partitions": 68,
+      "matching_statistics": true,
+      "witnesses": 0
+    },
+    {
+      "query": 1,
+      "method": "progression",
+      "partitions": 780,
+      "matching_statistics": true,
+      "witnesses": 0
+    },
+    {
+      "query": 1,
+      "method": "affine",
+      "partitions": 66,
+      "matching_statistics": true,
+      "witnesses": 0
+    }
+  ],
+  "inputs_sha256": {
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_CIERRE.md": "341e1ed6db2906732de606e5a0fe11102d2ae489ed93991a8657bdb724828075",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_PAPER.md": "438457c731f4d4dca095fca1e9a9ab9b7c2c958352c7ae2d0e22ec3019440cde",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_check.py": "eb2beb2ef97361c11c235a4fa92d689fb4048ed431014baf62caf68e97aa95b0",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_66_67.py": "b170d1c8810209779d6d58efe0cc907d05f30dbfea2ce24b9aee5d187a61fa06",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_66_67.md": "3db1ef346fbcb5ab925675700eeca7883cf9de960dae95586f6e7dbc02851f84",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_107_170.py": "6ba30af9548240c470a7a4f61f3970566b473cdf8033a6653f6a61badba2b745",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_107.md": "0ad3fd6d4909730ee1851097a5c624f4a44bb3c7b42a6c1be47c7f4a5c6a13ac",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_FOUR_RUNS_H146_RECEIPT.json": "95b02e585403382760da434c38db3fbc5bf05cd2849f35ba4886b695d7078327",
+    "experiments/COLLATZ_ECO_20261125/TERRAS88_four_runs_170_Q1.md": "d557ccd9c7df2cd988d43fd1c738a12623103a74327242c2495a1f3d9ecb7f6d",
+    "experiments/COLLATZ_TERRAS_87_RUNS_20261125/WEAVER_REPLAY_20261125/RECIBO.json": "306389681bf20b6c7f004ff413b28963e0d9659929ea5bb9c6b3f3a0f0d19b40",
+    "/Users/MoiTam/Documents/Codex/2026-07-21/rev/terras88_q0_h92_unique_u.py": "7db6ea4557792c27a39cba1c52033544b35e00ff24200a177aacd5c9cbcc8f67",
+    "/Users/MoiTam/Documents/Codex/2026-07-21/rev/TERRAS88_Q0_H92_OPEN_ZONE_REPORT_v1.md": "2831213032c62a46de264e9be4c24287bd418558cc6a93f873e2c01e5567b168",
+    "/Users/MoiTam/Documents/Codex/2026-07-21/rev/TERRAS88_Q0_H92_EXECUTION_RECEIPT_v1.txt": "b6d743e5e0e83a0c06b107839f0c22d47b44682b91e0f96b1fe1ed251b476c80"
+  },
+  "unproved_here": "Universal occurrence of first coefficient crossing and all prefixes with more than 88 runs.",
+  "independent_result_review": {
+    "result": "ACCEPT_PAPER_EXACT_WITH_REPRODUCED_INPUTS",
+    "checked": [
+      "segment absorption including short segments",
+      "terminal displacement and q=2,3 cancellation",
+      "cyclic equality exclusion and first-crossing endpoint",
+      "Q0 and Q1 rank extraction in the physical path"
+    ],
+    "timeUtc": "2026-11-25T01:58:44+00:00"
+  }
+}

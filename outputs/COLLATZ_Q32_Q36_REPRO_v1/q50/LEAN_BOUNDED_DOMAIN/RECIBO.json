@@ -1,0 +1,74 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "lean": "4.21.0",
+  "single_worker": true,
+  "module_imports": [
+    "A2FirstCrossingFusion"
+  ],
+  "main_builds": 1,
+  "separate_audits": 1,
+  "parent_hashes_verified_before_and_after": 115,
+  "build": {
+    "module": "Front4bBoundedProducer",
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "Front4bBoundedProducer.olean",
+      "Front4bBoundedProducer.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 47.808796,
+    "source_sha256": "f0a44e0b7df56b68b5b93fe8f4e79ac46da52f186b8118ca19b5b116a2014a99"
+  },
+  "audit": {
+    "command": [
+      "-j1",
+      "-s65536",
+      "-DwarningAsError=true",
+      "-o",
+      "AuditFront4bBoundedProducer.olean",
+      "AuditFront4bBoundedProducer.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.083416,
+    "axioms": {
+      "CollatzCharacterBridge.Front4bBoundedProducer.BoundedAdmitted": [
+        "propext",
+        "Quot.sound"
+      ],
+      "CollatzCharacterBridge.Front4bBoundedProducer.next_bounded_rank": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "CollatzCharacterBridge.Front4bBoundedProducer.paid_of_total_bounded_producer": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "scope": {
+    "fixed_original": "N",
+    "fixed_upper_bound": "V",
+    "domain": "Admitted N x j S B and x <= V",
+    "rank": "u-N < x-N and u < x <= V",
+    "total_producer": "premise",
+    "landing_dependency": false
+  },
+  "sha256": {
+    "Front4bBoundedProducer.lean": "f0a44e0b7df56b68b5b93fe8f4e79ac46da52f186b8118ca19b5b116a2014a99",
+    "Front4bBoundedProducer.olean": "2732401bf67248c10b97a7bc00dca1aa78a64746bf6f83e68f2edc33f1d0505b",
+    "AuditFront4bBoundedProducer.lean": "b683edc9e641b51c90bba4001ff47d4ec96b8d981a4123fe7fa6fe75aafb83a0",
+    "AuditFront4bBoundedProducer.olean": "7d00bc1b6b8129aa6f89cbe7cb1c083ab500d6d45a8b7d1269b67c7b28a09f5b",
+    "PARENTS.sha256": "7f80d02f6948ff48949a75611a1d8a30ded5dd9f97efeb5cf6ec98970c82512c",
+    "LEAN_PATH.txt": "5558b232254bfe3608998ef0e271739058a493c3c323fc62427b41a942cf9434",
+    "BUILD_01.json": "401f8cb9679a3d681f4cdafa4b3028462af49c109ee319ef7aa0def11ede1e3c",
+    "BUILD_01.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "AUDIT.log": "451350d0e06bfa7c37cac8778370e754c5b55be11318b47a1d34271eb50ad9c7",
+    "PARENTS_PRE.log": "fa5e3c76620f7cfe7b8de325785a0a59b0bdb7708fc98b1ced4b16546a1bf9dc",
+    "PARENTS_POST.log": "48d716e24b427b5dc3f2a62c7a956853f7b1aa05b00c31a75f4e5d8a21208603"
+  }
+}

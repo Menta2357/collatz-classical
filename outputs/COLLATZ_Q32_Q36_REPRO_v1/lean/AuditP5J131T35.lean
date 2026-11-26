@@ -1,0 +1,4 @@
+import P5J131T35
+
+#print axioms CollatzCharacterBridge.P5J131T35.descends_mod_256_ninety_two
+#print axioms CollatzCharacterBridge.P5J131T35.descends_mod_256_one_twenty

@@ -1,0 +1,29 @@
+{
+  "status": "PASS_LEAN_AND_SEPARATE_AXIOM_AUDIT",
+  "toolchain": "Lean 4.21.0",
+  "scope": "Three four-return T43 source captures in A2, with both original and source ledgers",
+  "audit": {
+    "captures_873_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1385_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "captures_1897_mod_2048": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_parents_verified": 107,
+  "sha256": {
+    "A2T43Inverse.lean": "5a2615489b48fb607ef12b7fcd2864fa26e54ea235bae3fa04ad7c1dccda1572",
+    "A2T43Inverse.olean": "d65c75cfd591744fdcbb02977ba7d4a8ce94f0d7f9ac7990d41dd1a3bd643aae",
+    "AuditA2T43Inverse.lean": "89d02d9c3876272310542f5c604aba2be0691e31dc1eeb373adb2d0011f3b932",
+    "AuditA2T43Inverse.olean": "0d818c43712af6b4b7d6ec47eecc823047d104447a1545d4ac88fee15edd0246"
+  }
+}

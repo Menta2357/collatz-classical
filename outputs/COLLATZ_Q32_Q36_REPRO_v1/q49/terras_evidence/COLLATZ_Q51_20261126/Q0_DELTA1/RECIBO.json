@@ -1,0 +1,49 @@
+{
+  "status": "PASS_EXACT_Q0_DELTA1_UPPER_SOURCE_CUTOFF",
+  "scope": {
+    "shortcut_steps": 630118245525664765,
+    "odd_departures": 397560349370386783,
+    "maximal_odd_runs": 89,
+    "delta": 1
+  },
+  "source_lower_bound_inherited_strict": 28000000000000000000,
+  "excluded_original_N_greater_equal": 35000000000000000000,
+  "necessary_original_N_strict_upper": 35000000000000000000,
+  "necessary_first_odd_run_upper": 64,
+  "rank_extraction": {
+    "low": 7,
+    "tail_starts": 11,
+    "target_rank": 12,
+    "target_minimum": 89202980794122492566142873090593446023921663,
+    "blocks_at_most": 5
+  },
+  "weaver_strict_source_upper": 453027402666008300866,
+  "tail_floors_at_start": [
+    92,
+    146,
+    170,
+    231,
+    256,
+    256
+  ],
+  "floor_1e30_budget_margins": [
+    {
+      "L": 34999999999999999999,
+      "floor": -1638807902111
+    },
+    {
+      "L": 35000000000000000000,
+      "floor": 210283537342
+    }
+  ],
+  "bisection_iterations": 65,
+  "orbit_runs": 0,
+  "weaver_enumerations": 0,
+  "uses_new_five_run_capacities": false,
+  "verifier_sha256": "fb67b6bc180dd8182c4a4cb216180b56283aa085fc86f86fb836aca6a2fac516",
+  "preregistration_sha256": "b301549bb902bddad88b1fafb25394a1f047ba7fb95486403f47244468fa0165",
+  "parent_sha256": {
+    "COLLATZ_Q37_20261125/TERRAS89_PAPER/check.py": "70da49e25ded08f542ee969d1e2d8b243dc7d5fe5650e9e43ef765fa28a1233d",
+    "COLLATZ_Q37_20261125/TERRAS89_PAPER/RECIBO.json": "e678a72f91a885b7ea150c96a8f249829b1b525d8ffcc0487fb4e060729fc99d"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS_FROZEN_PARENTS_AND_AXIOM_AUDITS",
+  "units": {
+    "Front4bEarlyMeeting": {
+      "receipt": "q48/LEAN_PAID_EARLY/RECIBO.json",
+      "sha256": "1249cd4132f88513d4ffe38713d9a7d8717d2bd0e09e9cc3b43a4fbee685e416",
+      "axioms": {
+        "paid_of_small_two_mod_three": [
+          "propext",
+          "Quot.sound"
+        ],
+        "paid_t60": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "Front4bPairExit": {
+      "receipt": "q48/LEAN/RECIBO.json",
+      "sha256": "5b23c14515f84b0bfbf363980d90db52f22e085cfb3d0812e29fe288a595fcd2",
+      "axioms": {
+        "descent_of_numerator_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "direct_exit_descends": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "A2ThinDomain": {
+      "receipt": "q48/LEAN_THIN/RECIBO.json",
+      "sha256": "ac04ae415f9ec82360b0300e2f605c01d78e17b75ec3cbe4a6427d3906e8b67c",
+      "axioms": {
+        "ThinAdmitted": [
+          "propext",
+          "Quot.sound"
+        ],
+        "next_thin_rank": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "paid_of_total_thin_producer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  }
+}

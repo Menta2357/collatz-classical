@@ -1,0 +1,73 @@
+{
+  "status": "PASS_FROZEN_PARENTS_AND_AXIOM_AUDITS",
+  "units": {
+    "A2T66": {
+      "receipt": "q46/A2_T66_LEAN/RECIBO.json",
+      "sha256": "ff9ea001c5228c0f58c07b23f8e9986e12b614931628ff23344edbf324d62f30",
+      "axioms": {
+        "descends_t66": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "captures_t66": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "A2Capture473": {
+      "receipt": "q46/A2_473_LEAN/RECIBO.json",
+      "sha256": "9b063d5032619cf4a3a63c12042e2eb34568d50425b8242d5b2e69601d7518ce",
+      "axioms": {
+        "descends_t46": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "captures_t46": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "pays_473": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "A2CenteredRecharge": {
+      "receipt": "q46/CENTERED_RECHARGE_LEAN/RECIBO.json",
+      "sha256": "f77a6da607cabce35005e9d4056fe679f107067e555c019beaedf79406e2a42c",
+      "axioms": {
+        "U": [],
+        "V": [],
+        "K": [],
+        "coefficient_lower_bound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "centered_identity": [
+          "propext",
+          "Quot.sound"
+        ],
+        "consumes_equal_label": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    "A2LabelSwitch": {
+      "receipt": "q46/RECIBO_CAMBIO.json",
+      "sha256": "ba346cc429823ba8ce79a1d7e6863a72e849014b4577dd7a58885bebace8d5b1",
+      "axioms": {
+        "switch_exact_reserve": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    }
+  }
+}
