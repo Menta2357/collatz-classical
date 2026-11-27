@@ -1,0 +1,72 @@
+{
+  "BUDGET/Front4bWeakBudget.receipt.json": {
+    "parent_count": 98,
+    "artifacts": {
+      "Front4bWeakBudget.lean": "0cad967199fddb7f685cc1f3b9fd91bcc7cdc59cf77bc0e7a36cd27854cc7b1b",
+      "Front4bWeakBudget.olean": "1cf5ca1639c41eeddfbb27c49a5d1b0c3689216ed9a2c191b8f2ca3c114e06ad"
+    }
+  },
+  "COFACTOR/Front4bWeakCofactor.receipt.json": {
+    "parent_count": 100,
+    "artifacts": {
+      "Front4bWeakCofactor.lean": "b4ad637841abb3046a87065110fc059fc28ffb54b5437fe6f38ccbf9380f709c",
+      "Front4bWeakCofactor.olean": "32994d77eef82c9043d8fbc63988758c451559f198bc1698fd8dc5ca5835adec"
+    }
+  },
+  "INTEGRATION/Front4bWeakReentry.receipt.json": {
+    "parent_count": 108,
+    "artifacts": {
+      "Front4bWeakReentry.lean": "468dca9c37cfb541ecbe39789a2368429bed119c1dac6c542e99f16153fef986",
+      "Front4bWeakReentry.olean": "2d2ace90a1e1192a1d704a063a98062bac3ee9dcc6cb8e99dc8023e26e7ad4d8"
+    }
+  },
+  "INTEGRATION/Front4bWeakRowGrowth.receipt.json": {
+    "parent_count": 114,
+    "artifacts": {
+      "Front4bWeakRowGrowth.lean": "93e0492720a36e806120d9e501511da29555e3f4fa80cabd8b9ff690d471bbc9",
+      "Front4bWeakRowGrowth.olean": "761bbe4bc57dd66c14beb0cc646515336fd74c4f44bdf7942a62fa2e97ce33c9"
+    }
+  },
+  "RANK/RECIBO.json": {
+    "parent_count": 55,
+    "artifacts": {
+      "Front4bWeakRank.lean": "85f8b4d27703dfc80230d5442685e92b2864d027df523ca80883fbfb6f8240af",
+      "Front4bWeakRank.olean": "8462ff27978cea0e58ebfb7680496f987736a633bb1bea167df1bac55830e719"
+    }
+  },
+  "RANK/RECIBO_REALIZATION.json": {
+    "parent_count": 57,
+    "artifacts": {
+      "Front4bWeakRealization.lean": "2e57ec335bffa0d42f63a2ee383b00ecb9de69c79aa138c861f05fb2ab7d2f00",
+      "Front4bWeakRealization.olean": "eaa0e050ef32570f4d5d34e124baf310eb2be42f8b3ac5e1900d4db66f1a1d8a"
+    }
+  },
+  "RANK/RECIBO_ROWS.json": {
+    "parent_count": 106,
+    "artifacts": {
+      "Front4bWeakRows.lean": "d9bb14c13fd73e5527dccac2fd896bfe038ecb10e8cb30ccedaab14c9fba53f1",
+      "Front4bWeakRows.olean": "861194bb580f8ffc15792fd4cdbf7839a24ac43be890df229955f54aa6a77455"
+    }
+  },
+  "TAIL21/RECIBO.json": {
+    "parent_count": 94,
+    "artifacts": {
+      "Front4bQuarter21.lean": "fd98b46feaa987f8bf9c91d0bed8eba7e8ceb5905e0a347a063de72594f1517a",
+      "Front4bQuarter21.olean": "9a59e40278ee2f796a64c9de4e98d60b2c9ef2358e522002633b3aea454a6bac"
+    }
+  },
+  "TAIL22/RECIBO.json": {
+    "parent_count": 88,
+    "artifacts": {
+      "Front4bTail22.lean": "4428438f72b905ce97597563f6b6e3341b7e71b291f21b409fb0d33470ac4439",
+      "Front4bTail22.olean": "54f2dd235f72a235867b7eb98b4d306d89a3cf8ac40c8a970b4f1a5d1ac827e9"
+    }
+  },
+  "REPEAT/Front4bFixedWeakRepeat.receipt.json": {
+    "parent_count": 110,
+    "artifacts": {
+      "Front4bFixedWeakRepeat.lean": "4de125057b60efa662a73c05d44346eb7450c273da6b21ff31302f355663cd2d",
+      "Front4bFixedWeakRepeat.olean": "c349b4ddef35207e17533c5daf602fe270b2c35c00aa0cdda0b8a9454c002e97"
+    }
+  }
+}
