@@ -1,0 +1,100 @@
+{
+  "CollatzCharacterBridge.Front4bSwitchedCapture.oneThenTwo": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedCapture.twoThenOneFixed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedCapture.captureAtThree": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bPeriodicWeakRepeat.reserveStep": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bPeriodicWeakRepeat.affinePhysicalRepeat": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bPeriodicWeakRepeat.composePeriod": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bPeriodicWeakRepeat.periodicPhysicalRepeat": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bPeriodicWeakRepeat.noInfinitePeriodicRepeat": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakPriceExit.gainOfTrace": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakPriceExit.quarterExit3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakPriceExit.halfExit5": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRealization.physical": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRealization.finiteProgression": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.affineTrace": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.band3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.band5": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.binaryGrowing": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.finalCofactor": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedRows.alternatingGrowing": [
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchReserve.lengthSwitch": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchReserve.tailSwitch": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchReserve.switchHistory": [
+    "Quot.sound",
+    "propext"
+  ]
+}
