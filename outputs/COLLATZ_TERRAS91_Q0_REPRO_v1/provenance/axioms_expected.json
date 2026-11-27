@@ -1,0 +1,52 @@
+{
+  "Terras91Delay.aboveRecordAtQ0": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Delay.ordinaryAtShortcut": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Delay.shortcutHitOne": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0.excludesDeltaOne": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0.excludesPositiveShift": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0.firstDescentAtQ0": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0Floors.q0Arithmetic": [],
+  "Terras91Q0Floors.q0RankFloors": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0Floors.rankFloorOfSix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0Product.productStrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Q0Product.windowOfPositiveShift": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

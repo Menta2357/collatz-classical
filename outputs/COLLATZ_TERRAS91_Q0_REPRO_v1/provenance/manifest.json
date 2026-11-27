@@ -1,0 +1,208 @@
+{
+  "base_manifest_sha256": "e706b2ce077779c00a38c7d8db7883f128ce871396eebfa8cf3dbf05ef15bfda",
+  "modules": [
+    {
+      "imports": [
+        "TerrasClock",
+        "TerrasValleyExtraction"
+      ],
+      "module": "Terras88",
+      "origin": "terras90_v2",
+      "path": "lean/Terras88.lean",
+      "sha256": "b47e422f455e187affd8b9cb27f7d809d5da235fac54239e23abb5f91ba54182"
+    },
+    {
+      "imports": [
+        "Terras88"
+      ],
+      "module": "Terras89",
+      "origin": "terras90_v2",
+      "path": "lean/Terras89.lean",
+      "sha256": "0d9ee6c4f05f376f6d6a14e8b92164fc53194ee88d449254b3a5c267153368db"
+    },
+    {
+      "imports": [
+        "Terras89"
+      ],
+      "module": "Terras90",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90.lean",
+      "sha256": "9139904a217ad8be2b832b5e519624fbc67f14723165e00286d4a2b14cebf6e6"
+    },
+    {
+      "imports": [
+        "Terras90"
+      ],
+      "module": "Terras90Extension",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90Extension.lean",
+      "sha256": "b6a9672c009578ffd0bc82b844362b4804a89893547f8c27fc7d7d6de838674e"
+    },
+    {
+      "imports": [
+        "Terras90Extension"
+      ],
+      "module": "Terras90PublishedCapacity",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90PublishedCapacity.lean",
+      "sha256": "ee32a53ebe3e5ff913ddfea2a9010c62789a68d09c0d953a2ea07a13d1b58caa"
+    },
+    {
+      "imports": [
+        "Terras90",
+        "Terras90Q0Ratio"
+      ],
+      "module": "Terras90Q0PhysicalPrice",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90Q0PhysicalPrice.lean",
+      "sha256": "5b3195ea4bacc58c97d4de901d18ac5a93f46ca30fcb35a999f9293648ce5c35"
+    },
+    {
+      "imports": [
+        "Terras88"
+      ],
+      "module": "Terras90Q0Price",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90Q0Price.lean",
+      "sha256": "e0b7904770408c7fd0e8f31a7c5cacb9509441bd554415cf3159dd940fea2c24"
+    },
+    {
+      "imports": [
+        "Terras90Q0Price"
+      ],
+      "module": "Terras90Q0Ratio",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90Q0Ratio.lean",
+      "sha256": "820af2a3c5beaf329949394a23512943fac2ca7634b77c912d95d3938a129b40"
+    },
+    {
+      "imports": [
+        "Terras90",
+        "Terras90Q0PhysicalPrice",
+        "TerrasLocalProfiles"
+      ],
+      "module": "Terras90RankAssembly",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90RankAssembly.lean",
+      "sha256": "bbb63a0382647f2a81b9de65837b826af881d022b30d77e39025ce3db93a1288"
+    },
+    {
+      "imports": [
+        "TerrasCuts"
+      ],
+      "module": "Terras90WeaverEvidence",
+      "origin": "terras90_v2",
+      "path": "lean/Terras90WeaverEvidence.lean",
+      "sha256": "c7e512abfbbfb8403955a5b61000a2a2ae4fe6688f40d1fe298c110b0d36c9d1"
+    },
+    {
+      "imports": [
+        "Terras88"
+      ],
+      "module": "Terras91Delay",
+      "origin": "q0_overlay",
+      "path": "lean/Terras91Delay.lean",
+      "sha256": "972ea9f074490f37cc1aea4fdcde7a2438dfe7a9a00aada35fea5479460896ac"
+    },
+    {
+      "imports": [
+        "Terras91Q0Floors",
+        "Terras91Q0Product",
+        "Terras90WeaverEvidence",
+        "Terras90PublishedCapacity",
+        "TerrasCycleOfCrossing"
+      ],
+      "module": "Terras91Q0",
+      "origin": "q0_overlay",
+      "path": "lean/Terras91Q0.lean",
+      "sha256": "f8fee2e5bd088b08e6969a31b7a126bd4b2616aa551d8974b26984d9287dcd8d"
+    },
+    {
+      "imports": [
+        "TerrasLocalProfiles"
+      ],
+      "module": "Terras91Q0Floors",
+      "origin": "q0_overlay",
+      "path": "lean/Terras91Q0Floors.lean",
+      "sha256": "fdc0efc64206d495829c63f6825df449cb0596234ddff56ffc6effd93d0298ac"
+    },
+    {
+      "imports": [
+        "Terras91Delay",
+        "TerrasDisplacement"
+      ],
+      "module": "Terras91Q0Product",
+      "origin": "q0_overlay",
+      "path": "lean/Terras91Q0Product.lean",
+      "sha256": "c3c8401130e60c25d9214cac3f7f42e32f6e1483b9b8b37ac1c8b2071a5e2131"
+    },
+    {
+      "imports": [
+        "Std"
+      ],
+      "module": "TerrasCapacityAbsorption",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasCapacityAbsorption.lean",
+      "sha256": "dd5170d18a1febb47b4438ddeb38569104a2fe4c24830d9ba24e4a840483fb24"
+    },
+    {
+      "imports": [
+        "Std"
+      ],
+      "module": "TerrasClock",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasClock.lean",
+      "sha256": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2"
+    },
+    {
+      "imports": [
+        "Terras90",
+        "TerrasCapacityAbsorption"
+      ],
+      "module": "TerrasCuts",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasCuts.lean",
+      "sha256": "a9b75e72182981fc6dd2fac58cfd2f318eec207bde02dcd2a462cee3378dad17"
+    },
+    {
+      "imports": [
+        "TerrasDisplacement"
+      ],
+      "module": "TerrasCycleOfCrossing",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasCycleOfCrossing.lean",
+      "sha256": "db8ffabc73f9eb5a435e41c32665f77951afe7a2709136a1b1f21c2f3788614a"
+    },
+    {
+      "imports": [
+        "Terras90RankAssembly"
+      ],
+      "module": "TerrasDisplacement",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasDisplacement.lean",
+      "sha256": "347de5785dbcf52918103b8c929913de6a97694fdb2be89009b0f9ee66fa54c3"
+    },
+    {
+      "imports": [
+        "Terras90Extension",
+        "TerrasCuts"
+      ],
+      "module": "TerrasLocalProfiles",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasLocalProfiles.lean",
+      "sha256": "900ffdc84fa5f9d54625a0bb720a8b884e4daa9fc340176402cf10e5d0d06e7c"
+    },
+    {
+      "imports": [
+        "Std"
+      ],
+      "module": "TerrasValleyExtraction",
+      "origin": "terras90_v2",
+      "path": "lean/TerrasValleyExtraction.lean",
+      "sha256": "bedd8c7d537448b0867ddba9331ba112136b48f435a13391f1972ebeb2d419f6"
+    }
+  ],
+  "roots": [
+    "Terras91Q0"
+  ]
+}

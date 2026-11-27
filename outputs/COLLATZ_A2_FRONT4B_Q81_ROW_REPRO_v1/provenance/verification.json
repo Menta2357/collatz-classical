@@ -1,0 +1,141 @@
+{
+  "audited_declaration_count": 29,
+  "build": "Empty temporary LEAN_PATH. Each module rebuilt from distributed source with warningAsError.",
+  "module_count": 47,
+  "observed_axioms": {
+    "CollatzCharacterBridge.A2ShortcutClock.OddCompletion.noExtraIffOdd": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.completeShortcutPrefix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.firstOddOfShortcutFirst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.firstUnderPivot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.physicalShortcut": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.reduceFirstShortcutCrossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.segmentShortcut": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.A2ShortcutClock.shortcutFirstOfContraction": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowC7.firstC7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowC7.firstShortcutC7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowC7.paidOrAmbientC7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowC7.paidOrAmbientOfResidue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowC7.sealedFirstC7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowCoverage.ambientOnlyCount": [],
+    "CollatzCharacterBridge.Front4bRowCoverage.classify": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowCoverage.directCount": [],
+    "CollatzCharacterBridge.Front4bRowCoverage.openCount": [],
+    "CollatzCharacterBridge.Front4bRowCoverage.paidOfDirect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.band4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.band6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.band8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.band9": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.evenAndHighDescend": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowEven.originalSeedFormula": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowOdd.band3Capture": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowOdd.band3Strong": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowOdd.band5Strong": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowOdd.band7Strong": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CollatzCharacterBridge.Front4bRowOdd.smallerSourceCapture": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "paper_verifiers": {
+    "python3 -B paper/verificar.py": "PASS",
+    "python3 -B paper/verificar_inversas.py": "PASS",
+    "python3 -BO paper/verificar.py": "PASS",
+    "python3 -BO paper/verificar_inversas.py": "PASS"
+  },
+  "root_count": 5,
+  "status": "PASS",
+  "toolchain": "Lean (version 4.21.0, arm64-apple-darwin23.6.0, commit 6741444a63ee, Release)"
+}

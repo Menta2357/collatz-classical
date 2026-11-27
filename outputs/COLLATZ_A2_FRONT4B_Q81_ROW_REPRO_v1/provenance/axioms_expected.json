@@ -1,0 +1,127 @@
+{
+  "CollatzCharacterBridge.A2ShortcutClock.OddCompletion.noExtraIffOdd": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.completeShortcutPrefix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.firstOddOfShortcutFirst": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.firstUnderPivot": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.physicalShortcut": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.reduceFirstShortcutCrossing": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.segmentShortcut": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.A2ShortcutClock.shortcutFirstOfContraction": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowC7.firstC7": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowC7.firstShortcutC7": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowC7.paidOrAmbientC7": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowC7.paidOrAmbientOfResidue": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowC7.sealedFirstC7": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowCoverage.ambientOnlyCount": [],
+  "CollatzCharacterBridge.Front4bRowCoverage.classify": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowCoverage.directCount": [],
+  "CollatzCharacterBridge.Front4bRowCoverage.openCount": [],
+  "CollatzCharacterBridge.Front4bRowCoverage.paidOfDirect": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.band4": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.band6": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.band8": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.band9": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.evenAndHighDescend": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowEven.originalSeedFormula": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowOdd.band3Capture": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowOdd.band3Strong": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowOdd.band5Strong": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowOdd.band7Strong": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bRowOdd.smallerSourceCapture": [
+    "Quot.sound",
+    "propext"
+  ]
+}
