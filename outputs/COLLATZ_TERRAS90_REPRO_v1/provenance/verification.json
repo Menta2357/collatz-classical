@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "lean_toolchain": "leanprover/lean4:v4.21.0",
+  "mathlib_commit": "308445d7985027f538e281e18df29ca16ede2ba3",
+  "lean_module_count": 38,
+  "lean_build": "Recompiled all bundled modules from source against prebuilt, revision-checked dependencies. Reused the clean build outputs of 35 hash-matched sources when building the final three.",
+  "axiom_report": [
+    "'Terras90Physical.admissionWithRhin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Physical.sevenClocksWithRhin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90TwiceQ0.removeFromResidual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.excludesResidual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.noPositiveShift90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.firstDescentAtMost90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90FinalNumeric.rowsLiteral' does not depend on any axioms",
+    "'Terras90FinalNumeric.floorsLength' depends on axioms: [propext, Quot.sound]",
+    "'Terras90FinalNumeric.productStrict' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "numeric_check": {
+    "status": "PASS",
+    "method": "Exact Python fractions and upward-rounded binary normalization",
+    "rows": [
+      {
+        "clock": [
+          7984791619272937798,
+          5037842608667313239
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 7151224664223617500063231129236
+      },
+      {
+        "clock": [
+          22064020121241819099,
+          13920846777890779368
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 4519116689766066463222326877948
+      },
+      {
+        "clock": [
+          29418693494989092132,
+          18561129037187705824
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 10787394253779960442168179507976
+      },
+      {
+        "clock": [
+          43497921996957973433,
+          27444133206411171953
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 1012429176854944896050899888348
+      },
+      {
+        "clock": [
+          50852595370705246466,
+          32084415465708098409
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 3709278189635106620563060312096
+      },
+      {
+        "clock": [
+          58207268744452519499,
+          36724697725005024865
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 6406127202415268345002490789867
+      },
+      {
+        "clock": [
+          86995843993915946866,
+          54888266412822343906
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 2024860151050576247644847062004
+      }
+    ]
+  },
+  "input_sha256": {
+    "provenance/lean_sources.json": "c7f6b65c6a92b3c3ee7d7770b105e12f457d954a9d1a58a5071e0899b2d6cc94",
+    "provenance/axioms_expected.json": "cf67a075d57905e69f5973b7bf4021ff48a8527fe0866227fd1d85fb3ab506cf",
+    "lake-manifest.json": "20b6afb5410ac56ec19a850506779ed4ac6bdb7a6574929030e93151b34a58c8",
+    "scripts/verify.py": "794048ce7c6ed0ccfdbb7b87ba435c768cc861845bce5233491f6072e1cec347",
+    "scripts/check_numeric.py": "2345a2b954eb395493c18448c8bba97fec9ac95277f922bdcbe67555579fbc7b"
+  }
+}
