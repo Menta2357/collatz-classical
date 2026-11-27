@@ -1,0 +1,65 @@
+{
+  "ENUM/Terras91ClockSieve.receipt.json": {
+    "parent_count": 110,
+    "artifacts": {
+      "Terras91ClockSieve.lean": "9c2bb069b8bb33a1a8d7dd41535bb4928680ff2f37efb56e8ecc98d0b6f9a5a3",
+      "Terras91ClockSieve.olean": "6806086dc4f3b38c8a33d9c4b2e8410b37664280cc3b4c6af8d5db50db1c2c2e"
+    }
+  },
+  "ENUM/Terras91Cutoff.receipt.json": {
+    "parent_count": 118,
+    "artifacts": {
+      "Terras91Cutoff.lean": "9618acc447b9223cf05a75df2006230f13317abab14a6c9466a7dbb846198ea6",
+      "Terras91Cutoff.olean": "1697e35eb6bf339c45bef6d1526ee7842faa95b35e399b1fbc456db3d641b57e"
+    }
+  },
+  "ENUM/Terras91Gap.receipt.json": {
+    "parent_count": 116,
+    "artifacts": {
+      "Terras91Gap.lean": "6a2f936e5ac36b717ff333dbc0732459c5602c590561ed34f5476bd4022cc889",
+      "Terras91Gap.olean": "316ffeb644c420bf7593d0538e7e0856635dd3aea860b2132a6f6290f125f9d6"
+    }
+  },
+  "ENUM/Terras91OrdinaryRank.receipt.json": {
+    "parent_count": 112,
+    "artifacts": {
+      "Terras91OrdinaryRank.lean": "19054ff62047414e6798d6f469db290b5444ef1ff9854ba81853fe28f34955f6",
+      "Terras91OrdinaryRank.olean": "1a51937cda6634ebdbec6e127167ff274fe24ce24beb15acd42d64fd8f551fa9"
+    }
+  },
+  "ENUM/Terras91Physical.receipt.json": {
+    "parent_count": 120,
+    "artifacts": {
+      "Terras91Physical.lean": "31d041903d9987be7d6b104c33fbc4d9bcccb9372459ebbd208751f9e691c2e3",
+      "Terras91Physical.olean": "b7112b0d5b8538bee29a71267aa7232f3f40b4de0e15b4e826a215b6e1100a50"
+    }
+  },
+  "ENUM/Terras91Reciprocal.receipt.json": {
+    "parent_count": 114,
+    "artifacts": {
+      "Terras91Reciprocal.lean": "bfc15d75ae3acff3e1dc7dd477b574578df53b8e4fca619394cfaccc50c55353",
+      "Terras91Reciprocal.olean": "90b59a50cc7fc7e5de2b7b077d4b92666b9719ce97272028bf9d2d2ac5e0adc4"
+    }
+  },
+  "PRODUCTS/Terras91Products.receipt.json": {
+    "parent_count": 153,
+    "artifacts": {
+      "Terras91Products.lean": "fc8510efe5ebbd6b1d763ac7161e471ee55d1af88824f35fde5eb21a4119dde3",
+      "Terras91Products.olean": "7af26dfc6978657c5890a62940ba1666c41016f37640251793a01cd588905c8d"
+    }
+  },
+  "CONSUMER/Terras91ClockClosure.receipt.json": {
+    "parent_count": 267,
+    "artifacts": {
+      "Terras91ClockClosure.lean": "f626ace8f1d5819fede3f103c07cebefaa38859ade7f5212f575816912fef8ce",
+      "Terras91ClockClosure.olean": "3821c1638267433d2742e95beda7744f87aa2ccb1ba3dc3691202a161fb77d20"
+    }
+  },
+  "CONSUMER/TerrasUniform91.receipt.json": {
+    "parent_count": 269,
+    "artifacts": {
+      "TerrasUniform91.lean": "6c69bc68261f549c77052a2a69e4d8a76452a57070f83593fb271e983ffc4851",
+      "TerrasUniform91.olean": "dc0e23d6f812f77b727737a34b1f513fa342cb17f702efd9fe2b926d8890be88"
+    }
+  }
+}
