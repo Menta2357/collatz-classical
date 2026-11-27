@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "lean": "4.21.0",
+  "lean_commit": "6741444a63ee",
+  "rebuild": "All 21 module objects rebuilt in an empty temporary directory",
+  "project_module_count": 21,
+  "overlay_module_count": 4,
+  "audit_count": 11,
+  "nonstandard_axioms": [],
+  "module_manifest_sha256": "735203a2feb3d8c1da16bcd9a54a3dbcc3fe1c4697120b2fd097721c7f97a435",
+  "axioms_sha256": "0dead784c43a66a6fda03398b38dbae362e853d32c9af2ba405385c208664af8",
+  "arithmetic_sha256": "a668dbe0679b79b2126ddaaa35ea940f661834fb811311932567ed275dddbc67"
+}

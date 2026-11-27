@@ -1,0 +1,611 @@
+{
+  "roots": [
+    "Front4bSwitchedCapture",
+    "Front4bPeriodicWeakRepeat",
+    "Front4bWeakPriceExit",
+    "Front4bSwitchedRows",
+    "Front4bSwitchReserve"
+  ],
+  "modules": [
+    {
+      "module": "A2BoundedReducer",
+      "path": "lean/A2BoundedReducer.lean",
+      "origin": "row_v1",
+      "sha256": "bebbac37d2b9aa77c702ffbfa9fdcbd6c294c7f450085da561c57b1d4086f97f",
+      "imports": [
+        "A2WeakEntry"
+      ]
+    },
+    {
+      "module": "A2C2Continuation",
+      "path": "lean/A2C2Continuation.lean",
+      "origin": "row_v1",
+      "sha256": "ce2939f99a27d1b511342799a2067cebbade7ed7d4797985f0cd631bc4bcdfeb",
+      "imports": [
+        "A2TwentySevenTerminal",
+        "A2SecondOne"
+      ]
+    },
+    {
+      "module": "A2CertifiedLanding",
+      "path": "lean/A2CertifiedLanding.lean",
+      "origin": "row_v1",
+      "sha256": "1c316aaf5020b4553ad950c8df1f258987023084e46d2ab60f9ed927be213213",
+      "imports": [
+        "A2BoundedReducer"
+      ]
+    },
+    {
+      "module": "A2CertifiedLandingTrace",
+      "path": "lean/A2CertifiedLandingTrace.lean",
+      "origin": "row_v1",
+      "sha256": "97dfb00998e218ca5df9ba70b86c9e9740ad0d1c227e4558c6a7fa53ef186f86",
+      "imports": [
+        "A2CertifiedLanding"
+      ]
+    },
+    {
+      "module": "A2FirstCrossingChronology",
+      "path": "lean/A2FirstCrossingChronology.lean",
+      "origin": "row_v1",
+      "sha256": "9f0099bba1b6062bfb28ac9c53aaac40c3898f76dd2af355609df381aaa71dc0",
+      "imports": [
+        "A2FirstCrossingFusion",
+        "A2CertifiedLandingTrace"
+      ]
+    },
+    {
+      "module": "A2FirstCrossingFusion",
+      "path": "lean/A2FirstCrossingFusion.lean",
+      "origin": "row_v1",
+      "sha256": "27eb2f42507653353706dc25216530097a8529189864ff9dd3386146006ae88c",
+      "imports": [
+        "A2MixedProgressCut",
+        "A2ThreeWeakCommonLongRate",
+        "A2PhysicalPrefix",
+        "A2CertifiedLanding"
+      ]
+    },
+    {
+      "module": "A2HalfAdaptive",
+      "path": "lean/A2HalfAdaptive.lean",
+      "origin": "row_v1",
+      "sha256": "19343963262dbc7d8875546c3144247b6ee2a318e8fb1c8e9d521432546d058f",
+      "imports": [
+        "P5CompensationMeetings"
+      ]
+    },
+    {
+      "module": "A2Header",
+      "path": "lean/A2Header.lean",
+      "origin": "row_v1",
+      "sha256": "e7337f12cafb1828182cdfb76e5467d69133e071362ba54b7a879e3b6fad0d73",
+      "imports": [
+        "ParametricCapture"
+      ]
+    },
+    {
+      "module": "A2LongDosePhysicalWordBridge",
+      "path": "lean/A2LongDosePhysicalWordBridge.lean",
+      "origin": "row_v1",
+      "sha256": "f4a8a37e2ce50dda73333d7f36ccabb82dfc965defae5d5bf00b9c438cdc3632",
+      "imports": [
+        "A2LongDoseStrictReentry",
+        "A2HalfAdaptive",
+        "A2SecondOne"
+      ]
+    },
+    {
+      "module": "A2LongDoseStrictReentry",
+      "path": "lean/A2LongDoseStrictReentry.lean",
+      "origin": "row_v1",
+      "sha256": "330873a03dadf3e6f3955bcdb2503c2fd5ab24bd8cace852390e8ed9cf01e8dc",
+      "imports": [
+        "A2BoundedReducer"
+      ]
+    },
+    {
+      "module": "A2MixedProgressCut",
+      "path": "lean/A2MixedProgressCut.lean",
+      "origin": "row_v1",
+      "sha256": "c5714f80231bf487464f3fa03663a949a67044f8c917aaf98c88bc8b6ce39009",
+      "imports": [
+        "A2C2Continuation"
+      ]
+    },
+    {
+      "module": "A2PhysicalPrefix",
+      "path": "lean/A2PhysicalPrefix.lean",
+      "origin": "row_v1",
+      "sha256": "03e433b3db80669d0cf58834bddbf80304174a42e159a778e96124d4e161e412",
+      "imports": [
+        "StagedCylinder"
+      ]
+    },
+    {
+      "module": "A2SecondOne",
+      "path": "lean/A2SecondOne.lean",
+      "origin": "row_v1",
+      "sha256": "3e453976a44a682c90f81266ef24824d6c81adbfda2e31bb36dc97831984dbdc",
+      "imports": [
+        "StagedCylinder",
+        "TwosCompression"
+      ]
+    },
+    {
+      "module": "A2SecondSwitchWordCompiler",
+      "path": "lean/A2SecondSwitchWordCompiler.lean",
+      "origin": "row_v1",
+      "sha256": "6b7fd4d933ac1648b49816659d5b8add182501865283472436a60658c4c7c81c",
+      "imports": [
+        "P5R3S5"
+      ]
+    },
+    {
+      "module": "A2ShortcutClock",
+      "path": "lean/A2ShortcutClock.lean",
+      "origin": "row_v1",
+      "sha256": "b7f25cfa24ee808266f86883feff1550510cc84b28ea0de7f44dff2e3057fe42",
+      "imports": [
+        "TerrasClock",
+        "A2FirstCrossingFusion"
+      ]
+    },
+    {
+      "module": "A2ThreeWeakCommonLongRate",
+      "path": "lean/A2ThreeWeakCommonLongRate.lean",
+      "origin": "row_v1",
+      "sha256": "8ae4ab7ea59201a180ac0efea0f4797229e9b33bceb5d4a3f0ba95754fc44eb8",
+      "imports": [
+        "A2LongDosePhysicalWordBridge"
+      ]
+    },
+    {
+      "module": "A2TwentySevenTerminal",
+      "path": "lean/A2TwentySevenTerminal.lean",
+      "origin": "row_v1",
+      "sha256": "259a82f62a84747adc4a16fa5d0838a952e592b2e7b2d149acfe8e755f5135ef",
+      "imports": [
+        "A2BoundedReducer"
+      ]
+    },
+    {
+      "module": "A2U392",
+      "path": "lean/A2U392.lean",
+      "origin": "row_v1",
+      "sha256": "1004730443be279af6f04d7816be0519dcb07eb1d48dda76d7eb0341d44654d8",
+      "imports": [
+        "P5J131Residual",
+        "A2FirstCrossingChronology"
+      ]
+    },
+    {
+      "module": "A2WeakBreakReserve",
+      "path": "lean/A2WeakBreakReserve.lean",
+      "origin": "row_v1",
+      "sha256": "ad7a26720ab67dcd7b597cc73421b72df2548c752312e683d1c28259e2f55758",
+      "imports": [
+        "A2HalfAdaptive"
+      ]
+    },
+    {
+      "module": "A2WeakEntry",
+      "path": "lean/A2WeakEntry.lean",
+      "origin": "row_v1",
+      "sha256": "80e1bb201ae29321c6c067202ce6ad2ac27820cb308bbf88a2c1f6fb49ddceb5",
+      "imports": [
+        "A2HalfAdaptive"
+      ]
+    },
+    {
+      "module": "Arrival",
+      "path": "lean/Arrival.lean",
+      "origin": "row_v1",
+      "sha256": "2fad3379eb6b400507772cc35be3932d28569e750634f29c9273601bed5f5895",
+      "imports": [
+        "OddMap"
+      ]
+    },
+    {
+      "module": "CRTPhysicalBridge",
+      "path": "lean/CRTPhysicalBridge.lean",
+      "origin": "row_v1",
+      "sha256": "9b10c569f8bafc1751c26a080ed4d9504ddad3f34cc667ee64e02a4e5593d132",
+      "imports": [
+        "A2Header",
+        "FixedSourceRun"
+      ]
+    },
+    {
+      "module": "CRTWordSegment",
+      "path": "lean/CRTWordSegment.lean",
+      "origin": "row_v1",
+      "sha256": "267cdaa2adcc4ebb94245d9fed8ecb7c9d2af0bed9b86ee40048ed67f8c86d9c",
+      "imports": [
+        "A2SecondSwitchWordCompiler"
+      ]
+    },
+    {
+      "module": "DyadicCylinder",
+      "path": "lean/DyadicCylinder.lean",
+      "origin": "row_v1",
+      "sha256": "56138a1d47db21a47cf7554d91fae5560acfc94b6d1e53a0b1dd5d6c56b19937",
+      "imports": [
+        "A2Header"
+      ]
+    },
+    {
+      "module": "FixedSourceRun",
+      "path": "lean/FixedSourceRun.lean",
+      "origin": "row_v1",
+      "sha256": "1fc5ce0cc7d0e64cf576a7f5ca6d0751e0a64133d96f1198b2e124130bad6d7d",
+      "imports": [
+        "OddMap"
+      ]
+    },
+    {
+      "module": "Front4bE1",
+      "path": "lean/Front4bE1.lean",
+      "origin": "guards_v1",
+      "sha256": "b725c10e1793ae760295364501639039fa407678903c6e0a9bd26c424210bb39",
+      "imports": [
+        "Front4bRowEven",
+        "A2HalfAdaptive",
+        "A2SecondSwitchWordCompiler"
+      ]
+    },
+    {
+      "module": "Front4bFixedWeakRepeat",
+      "path": "lean/Front4bFixedWeakRepeat.lean",
+      "origin": "weak_v1",
+      "sha256": "4de125057b60efa662a73c05d44346eb7450c273da6b21ff31302f355663cd2d",
+      "imports": [
+        "Front4bWeakReentry"
+      ]
+    },
+    {
+      "module": "Front4bGuardRun",
+      "path": "lean/Front4bGuardRun.lean",
+      "origin": "guards_v1",
+      "sha256": "34ea4c06db96c38f88e87ef5e286ccaccca6b666a4aba1ef033302c262ba99b7",
+      "imports": [
+        "Front4bQuarterTail",
+        "Front4bE1"
+      ]
+    },
+    {
+      "module": "Front4bPairExit",
+      "path": "lean/Front4bPairExit.lean",
+      "origin": "row_v1",
+      "sha256": "0789f611b89526a6bcc9e4b0c3ab328c942dbac5631f6c1c2778acd85b8dd51b",
+      "imports": [
+        "A2WeakBreakReserve",
+        "A2CertifiedLanding"
+      ]
+    },
+    {
+      "module": "Front4bPeriodicWeakRepeat",
+      "path": "lean/Front4bPeriodicWeakRepeat.lean",
+      "origin": "switch_v1",
+      "sha256": "6b8f6a7dc7b4617cfa8ae913d2d9f0b4ff3a6106cff902dca3664b94c6d10c7d",
+      "imports": [
+        "Front4bFixedWeakRepeat"
+      ]
+    },
+    {
+      "module": "Front4bQuarter21",
+      "path": "lean/Front4bQuarter21.lean",
+      "origin": "weak_v1",
+      "sha256": "fd98b46feaa987f8bf9c91d0bed8eba7e8ceb5905e0a347a063de72594f1517a",
+      "imports": [
+        "Front4bQuarterTail"
+      ]
+    },
+    {
+      "module": "Front4bQuarterTail",
+      "path": "lean/Front4bQuarterTail.lean",
+      "origin": "guards_v1",
+      "sha256": "09a1b66c7fa79d769d9c7f5a98f0eb94fb0ecb223098d423115e9a1aa2ca9230",
+      "imports": [
+        "QuarterTwoSix",
+        "P5CompensationMeetings",
+        "A2CertifiedLanding"
+      ]
+    },
+    {
+      "module": "Front4bRowEven",
+      "path": "lean/Front4bRowEven.lean",
+      "origin": "row_v1",
+      "sha256": "28bb44cab396ade00a1edba72d039e382ce74b1b9434928c4afa329ac49f78f1",
+      "imports": [
+        "Front4bS29Landing"
+      ]
+    },
+    {
+      "module": "Front4bS29Landing",
+      "path": "lean/Front4bS29Landing.lean",
+      "origin": "row_v1",
+      "sha256": "22ac3911f7cb3b0c7bace23949bfc8277823e2882873d4a4ba6933c27ce3d62c",
+      "imports": [
+        "Front4bT61S3",
+        "A2FirstCrossingFusion"
+      ]
+    },
+    {
+      "module": "Front4bSwitchReserve",
+      "path": "lean/Front4bSwitchReserve.lean",
+      "origin": "switch_v1",
+      "sha256": "5d60cb51dbf8c54454cdf0da8d7efb5b66641422e96570a9e9b45533bb1149d8",
+      "imports": [
+        "Front4bWeakReentry"
+      ]
+    },
+    {
+      "module": "Front4bSwitchedCapture",
+      "path": "lean/Front4bSwitchedCapture.lean",
+      "origin": "switch_v1",
+      "sha256": "5839ba6343af936c8cc86355fe749124574d0dcef186e35da7bf5a69bd12c3c3",
+      "imports": [
+        "Front4bTail22",
+        "Front4bQuarter21"
+      ]
+    },
+    {
+      "module": "Front4bSwitchedRealization",
+      "path": "lean/Front4bSwitchedRealization.lean",
+      "origin": "switch_v1",
+      "sha256": "303c3a6371b63c944dad1a57bd7741c3d23a50281fdc4a1c94dace76a3f1db09",
+      "imports": [
+        "Front4bWeakRows"
+      ]
+    },
+    {
+      "module": "Front4bSwitchedRows",
+      "path": "lean/Front4bSwitchedRows.lean",
+      "origin": "switch_v1",
+      "sha256": "59d36dc772862ee9a8f2676dd2c157815ca194674f66bc36f7750b32639cbea7",
+      "imports": [
+        "Front4bSwitchedRealization"
+      ]
+    },
+    {
+      "module": "Front4bT61S3",
+      "path": "lean/Front4bT61S3.lean",
+      "origin": "row_v1",
+      "sha256": "4bf66e4ec7bc36a36222a6fb75c0228f0a225a329232103d771c8d7ba1529671",
+      "imports": [
+        "A2U392",
+        "Front4bPairExit"
+      ]
+    },
+    {
+      "module": "Front4bTail22",
+      "path": "lean/Front4bTail22.lean",
+      "origin": "weak_v1",
+      "sha256": "4428438f72b905ce97597563f6b6e3341b7e71b291f21b409fb0d33470ac4439",
+      "imports": [
+        "A2CertifiedLanding",
+        "A2SecondSwitchWordCompiler"
+      ]
+    },
+    {
+      "module": "Front4bWeakBudget",
+      "path": "lean/Front4bWeakBudget.lean",
+      "origin": "weak_v1",
+      "sha256": "0cad967199fddb7f685cc1f3b9fd91bcc7cdc59cf77bc0e7a36cd27854cc7b1b",
+      "imports": [
+        "Front4bGuardRun",
+        "A2LongDosePhysicalWordBridge"
+      ]
+    },
+    {
+      "module": "Front4bWeakCofactor",
+      "path": "lean/Front4bWeakCofactor.lean",
+      "origin": "weak_v1",
+      "sha256": "b4ad637841abb3046a87065110fc059fc28ffb54b5437fe6f38ccbf9380f709c",
+      "imports": [
+        "Front4bWeakBudget"
+      ]
+    },
+    {
+      "module": "Front4bWeakPriceExit",
+      "path": "lean/Front4bWeakPriceExit.lean",
+      "origin": "switch_v1",
+      "sha256": "95c8135faf6b66dd2a318e3723aabb0f2abba78e6ac027cf587aac21874fe80d",
+      "imports": [
+        "Front4bSwitchedRealization",
+        "Front4bGuardRun",
+        "Front4bWeakReentry"
+      ]
+    },
+    {
+      "module": "Front4bWeakRank",
+      "path": "lean/Front4bWeakRank.lean",
+      "origin": "weak_v1",
+      "sha256": "85f8b4d27703dfc80230d5442685e92b2864d027df523ca80883fbfb6f8240af",
+      "imports": [
+        "A2ShortcutClock"
+      ]
+    },
+    {
+      "module": "Front4bWeakRealization",
+      "path": "lean/Front4bWeakRealization.lean",
+      "origin": "weak_v1",
+      "sha256": "2e57ec335bffa0d42f63a2ee383b00ecb9de69c79aa138c861f05fb2ab7d2f00",
+      "imports": [
+        "Front4bWeakRank"
+      ]
+    },
+    {
+      "module": "Front4bWeakReentry",
+      "path": "lean/Front4bWeakReentry.lean",
+      "origin": "weak_v1",
+      "sha256": "468dca9c37cfb541ecbe39789a2368429bed119c1dac6c542e99f16153fef986",
+      "imports": [
+        "Front4bWeakCofactor",
+        "Front4bWeakRank"
+      ]
+    },
+    {
+      "module": "Front4bWeakRows",
+      "path": "lean/Front4bWeakRows.lean",
+      "origin": "weak_v1",
+      "sha256": "d9bb14c13fd73e5527dccac2fd896bfe038ecb10e8cb30ccedaab14c9fba53f1",
+      "imports": [
+        "Front4bWeakRealization",
+        "Front4bGuardRun"
+      ]
+    },
+    {
+      "module": "OddMap",
+      "path": "lean/OddMap.lean",
+      "origin": "row_v1",
+      "sha256": "496c3c168e65f4fd73ca8300406bf4be80ad75dfeb47a8ef4ea8f4c7eecc69e5",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "P5CompensationMeetings",
+      "path": "lean/P5CompensationMeetings.lean",
+      "origin": "row_v1",
+      "sha256": "a72129d9b123e79744d653b0505d3dced9672f95d6be61abf7834af7ac80287e",
+      "imports": [
+        "P5R3S5"
+      ]
+    },
+    {
+      "module": "P5J131Chronology",
+      "path": "lean/P5J131Chronology.lean",
+      "origin": "row_v1",
+      "sha256": "91d7a527ee112431ce65f39aeecbd7703f0724f9ce72143ac8b324de7301f735",
+      "imports": [
+        "P5RZeroA2",
+        "CRTWordSegment",
+        "A2FirstCrossingChronology"
+      ]
+    },
+    {
+      "module": "P5J131EarlyCapture",
+      "path": "lean/P5J131EarlyCapture.lean",
+      "origin": "row_v1",
+      "sha256": "7591945571c9ff16ee0ac439b40af1dec5bfb1bb10bf0e7de0be00147992aeca",
+      "imports": [
+        "P5J131Chronology",
+        "P5RZeroJ131"
+      ]
+    },
+    {
+      "module": "P5J131Residual",
+      "path": "lean/P5J131Residual.lean",
+      "origin": "row_v1",
+      "sha256": "7c2db7f66bac9edd01ef1f2d3ff2854aec553c238be1d26accf4491a0769b8fd",
+      "imports": [
+        "P5J131EarlyCapture"
+      ]
+    },
+    {
+      "module": "P5OddExit",
+      "path": "lean/P5OddExit.lean",
+      "origin": "row_v1",
+      "sha256": "2f4d05a70fc840eca14f2207eacef1791ed88c451171461b22f6762a943f78ab",
+      "imports": [
+        "P5R3S5"
+      ]
+    },
+    {
+      "module": "P5R3S5",
+      "path": "lean/P5R3S5.lean",
+      "origin": "row_v1",
+      "sha256": "555fe38400f1585fe38e4394474ca9c5dea5b8f91bcb54b587f096f2638b3756",
+      "imports": [
+        "StagedCylinder",
+        "Arrival"
+      ]
+    },
+    {
+      "module": "P5ROddThreeReadmission",
+      "path": "lean/P5ROddThreeReadmission.lean",
+      "origin": "row_v1",
+      "sha256": "de211f3c1e2e00e74abd3991e765af525e0cc770c553d299542dc8a1dbe1c514",
+      "imports": [
+        "A2CertifiedLandingTrace"
+      ]
+    },
+    {
+      "module": "P5RZeroA2",
+      "path": "lean/P5RZeroA2.lean",
+      "origin": "row_v1",
+      "sha256": "6d6d6198077ef51a8c574f9d0f0d66c66d97b44ca565a98c22ef37b0394ec9da",
+      "imports": [
+        "P5ROddThreeReadmission",
+        "P5RenewalRun"
+      ]
+    },
+    {
+      "module": "P5RZeroJ131",
+      "path": "lean/P5RZeroJ131.lean",
+      "origin": "row_v1",
+      "sha256": "d25b2ee13e6fb5c1cb4267772a1afd6e6b8517d4050909c6128b394e78b8b84a",
+      "imports": [
+        "P5RZeroA2"
+      ]
+    },
+    {
+      "module": "P5RenewalRun",
+      "path": "lean/P5RenewalRun.lean",
+      "origin": "row_v1",
+      "sha256": "08c0bf251f60155f3b56d87309da319d5f73df614c73566ac42d6a171fd97bd8",
+      "imports": [
+        "P5OddExit"
+      ]
+    },
+    {
+      "module": "ParametricCapture",
+      "path": "lean/ParametricCapture.lean",
+      "origin": "row_v1",
+      "sha256": "2ede4b2b0c83abc0a2b4bcd6291ee1ffef3f8b05ef601c34bafd17795580baff",
+      "imports": [
+        "OddMap"
+      ]
+    },
+    {
+      "module": "QuarterTwoSix",
+      "path": "lean/QuarterTwoSix.lean",
+      "origin": "guards_v1",
+      "sha256": "f61d99706ece463eda64a5251588bdbc41b93db56e69827b97f3edc4e1d71297",
+      "imports": [
+        "P5R3S5"
+      ]
+    },
+    {
+      "module": "StagedCylinder",
+      "path": "lean/StagedCylinder.lean",
+      "origin": "row_v1",
+      "sha256": "0598def27fb85ecb506105f16700e4567eb4123707ee8c5fbafce187cf3f7126",
+      "imports": [
+        "DyadicCylinder",
+        "CRTPhysicalBridge"
+      ]
+    },
+    {
+      "module": "TerrasClock",
+      "path": "lean/TerrasClock.lean",
+      "origin": "row_v1",
+      "sha256": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "TwosCompression",
+      "path": "lean/TwosCompression.lean",
+      "origin": "row_v1",
+      "sha256": "d713b629b11b099c942efbed9336a4d4ec460e108845ed962131ef3414279a82",
+      "imports": [
+        "FixedSourceRun",
+        "Arrival"
+      ]
+    }
+  ]
+}

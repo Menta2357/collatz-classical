@@ -1,0 +1,104 @@
+{
+  "Terras91Lattice.admitCoordinates": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Lattice.capacitiesChecked": [],
+  "Terras91Lattice.checkedClockTable": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Lattice.listedClocksPass": [],
+  "Terras91Lattice.clocksOfScaledEnvelope": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Cutoff.oddCutoff": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Gap.gapTimesSeed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Gap.gapStrip": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91OrdinaryRank.ordinarySourceBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91OrdinaryRank.ordinaryRankBoundOfCount": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91OrdinaryRank.ordinaryRankBoundOfSorted": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Physical.admissionOfRankBounds": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Physical.ScaledAdmission.memClocks": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Physical.admissionFromPhysical": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Physical.clocksFromPhysical": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Reciprocal.exactRankBudget": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Reciprocal.ordinaryReciprocalBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Products.directChecks": [],
+  "Terras91Products.windowChecks": [],
+  "Terras91Products.excludesDirect": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91Products.forcesWindow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras91ClockClosure.tableComplete": [],
+  "Terras91ClockClosure.excludesListedPositiveShift": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniform91.firstDescentAtExactly91": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniform91.firstDescentAtMost91FromWeaver": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

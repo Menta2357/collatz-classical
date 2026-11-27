@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "lean_toolchain": "leanprover/lean4:v4.21.0",
+  "mathlib_commit": "308445d7985027f538e281e18df29ca16ede2ba3",
+  "lean_module_count": 50,
+  "lean_build": {
+    "v1_rebuilt_outputs_reused": 38,
+    "v2_outputs_reused": 11,
+    "v2_precompiled_sources": [
+      "Terras90Hercher",
+      "Terras90PublishedCapacity",
+      "Terras90SourceBridge",
+      "Terras90UniformCutoff",
+      "Terras90UniformGap",
+      "Terras90UniformReciprocal",
+      "Terras90WeaverEvidence",
+      "TerrasCycleOfCrossing",
+      "TerrasUniformProducts",
+      "TerrasUniformRanks",
+      "TerrasUniformSix"
+    ],
+    "v2_sources_recompiled": [
+      "TerrasUniformFirstDescent"
+    ]
+  },
+  "axiom_report": [
+    "'Terras90Physical.admissionWithRhin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Physical.sevenClocksWithRhin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90TwiceQ0.removeFromResidual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.excludesResidual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.noPositiveShift90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Final.firstDescentAtMost90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90FinalNumeric.rowsLiteral' does not depend on any axioms",
+    "'Terras90FinalNumeric.floorsLength' depends on axioms: [propext, Quot.sound]",
+    "'Terras90FinalNumeric.productStrict' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Hercher.LeastReturn.indexInjective' depends on axioms: [propext, Quot.sound]",
+    "'Terras90Hercher.cycleLocalMinima_eq_valleyTimes' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Hercher.cycleOfFirstCrossingReturn' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Hercher.noEqualOfAtMost91' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Hercher.noEqual88' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90Hercher.noEqual90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.completePrefix' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.existsCompletion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.completionUnique' depends on axioms: [propext, Quot.sound]",
+    "'Terras90PublishedCapacity.completedBound_iff_prefixBound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.guardedCofactor' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.cofactorSound' depends on axioms: [propext, Quot.sound]",
+    "'Terras90PublishedCapacity.guardedPrefixBound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.sixRunCapacities' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.fiveOfSix' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90PublishedCapacity.fiveAndSixRunCapacities' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90WeaverEvidence.queryOfWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90WeaverEvidence.noWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90SourceBridge.rhinBoundOfPrinted' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90SourceBridge.firstDescentAtExactly90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90SourceBridge.firstDescentAtMost90' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformRanks.geom_mono' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformRanks.ordinarySourceBound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformRanks.ordinaryRankBoundOfCount' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformRanks.ordinaryRankBoundOfSorted' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformSix.capacitySixAbsorptionUpTo' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformSix.capacitySixMonoLong' depends on axioms: [propext, Quot.sound]",
+    "'TerrasUniformSix.rankFloorAtClock' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformSix.rankFloorOfSix' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90UniformGap.sortedLengthEq' depends on axioms: [propext, Quot.sound]",
+    "'Terras90UniformGap.discountedGap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90UniformGap.gapTimesSeed' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90UniformGap.gapStrip' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90UniformCutoff.oddCutoff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Terras90UniformReciprocal.ordinaryReciprocalBound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformProducts.q0Window' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformProducts.q1WindowOfStrict' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformProducts.noShiftOfFloor' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformProducts.excludesPositiveInRange' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformFirstDescent.admissionOfPhysicalRange' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'TerrasUniformFirstDescent.firstDescentAtMost90FromWeaver' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "numeric_check": {
+    "status": "PASS",
+    "method": "Exact Python fractions and upward-rounded binary normalization",
+    "rows": [
+      {
+        "clock": [
+          7984791619272937798,
+          5037842608667313239
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 7151224664223617500063231129236
+      },
+      {
+        "clock": [
+          22064020121241819099,
+          13920846777890779368
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 4519116689766066463222326877948
+      },
+      {
+        "clock": [
+          29418693494989092132,
+          18561129037187705824
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 10787394253779960442168179507976
+      },
+      {
+        "clock": [
+          43497921996957973433,
+          27444133206411171953
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 1012429176854944896050899888348
+      },
+      {
+        "clock": [
+          50852595370705246466,
+          32084415465708098409
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 3709278189635106620563060312096
+      },
+      {
+        "clock": [
+          58207268744452519499,
+          36724697725005024865
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 6406127202415268345002490789867
+      },
+      {
+        "clock": [
+          86995843993915946866,
+          54888266412822343906
+        ],
+        "discounted_margin_lower_bound_floor_scale_1e50": 2024860151050576247644847062004
+      }
+    ]
+  },
+  "guarded_h146_replay": {
+    "input_sha256": {
+      "evidence/h146/check.py": "806424830f9344282775154ab64d1876ba172fb57b39ee4ee61fb95cdad33343",
+      "evidence/h146/check_independent.py": "c116735148437ee958d80204fc1a1c011b184a28f9132e899d7134cd385a2ea1",
+      "evidence/h146/RECIBO.json": "9821b0c1bebb5060d3b11b8bc1979bc38206a18edc8e8217d40439f12dd69fc7",
+      "evidence/h146/RECIBO_INDEPENDIENTE.json": "8a7e41d323814ea5187088c489ba5041d5c8d361dac1bf2f2a28ecc70dffe944"
+    },
+    "full_replays_recorded": true
+  },
+  "input_sha256": {
+    "provenance/lean_sources.json": "e706b2ce077779c00a38c7d8db7883f128ce871396eebfa8cf3dbf05ef15bfda",
+    "provenance/axioms_expected.json": "05c59219e07775c8eddcffaa4b54ef039dd9745f9d7b8d57f202bfd6ae425184",
+    "lake-manifest.json": "20b6afb5410ac56ec19a850506779ed4ac6bdb7a6574929030e93151b34a58c8",
+    "scripts/verify.py": "794048ce7c6ed0ccfdbb7b87ba435c768cc861845bce5233491f6072e1cec347",
+    "scripts/check_numeric.py": "2345a2b954eb395493c18448c8bba97fec9ac95277f922bdcbe67555579fbc7b"
+  }
+}

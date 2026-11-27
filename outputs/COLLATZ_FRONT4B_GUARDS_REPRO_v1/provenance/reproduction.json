@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "lean_version": "4.21.0",
+  "clean_source_modules": 52,
+  "audited_new_declarations": 29,
+  "standard_axioms_only": true,
+  "arithmetic_audits": {
+    "e1": "PASS",
+    "quarter_tail": "PASS",
+    "directed_crt_captures": 48
+  }
+}

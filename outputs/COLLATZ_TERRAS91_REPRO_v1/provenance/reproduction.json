@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "lean_version": "4.21.0",
+  "clean_source_modules": 63,
+  "audited_new_declarations": 25,
+  "standard_axioms_only": true,
+  "rounding_audit": {
+    "status": "PASS",
+    "eligible_pairs": 22145,
+    "survivors": 18,
+    "direct_exclusions": 15,
+    "weaver_windows": 2
+  }
+}

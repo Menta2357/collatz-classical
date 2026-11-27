@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "lean": "4.21.0",
+  "project_modules": 80,
+  "audited_declarations": 74,
+  "new_audited_declarations": 23,
+  "inherited_audited_declarations": 51,
+  "standard_axioms_only": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build": "Clean temporary output, one Lean thread per source, three independent compilation slots",
+  "independent_replays": {
+    "paper/check_five_six.py": "9 exact physical trajectories; normal and optimized",
+    "paper/check_low_exit.py": "12 affine inverse audits and three first-crossing progressions; normal and optimized",
+    "paper/check_net_cofactor.py": "4 physical net drops after growth and 1 growing joint-CRT witness; normal and optimized",
+    "paper/check_reentry.py": "20 exact physical reentry and descent witnesses; normal run and byte-identical JSON"
+  }
+}

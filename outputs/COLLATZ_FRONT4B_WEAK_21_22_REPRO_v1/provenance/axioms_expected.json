@@ -1,0 +1,142 @@
+{
+  "CollatzCharacterBridge.Front4bWeakBudget.descentOfHighExit": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakBudget.descentOfLongTwos": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakBudget.guard3Budget": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakBudget.guard5Budget": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakCofactor.readmissionEquation": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakCofactor.rankOfReadmission": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakCofactor.noInfiniteRankDrops": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakReentry.weakBookOfRank": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakReentry.restart": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakReentry.growsAtTwo": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRowGrowth.bothBands": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRank.shortcutLowerOfOddLower": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRank.weakRank": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRank.attachOnes": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRank.attachOrigin": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRank.oddAffineLift": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRealization.weakRankOfFactors": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRealization.realizesOnesWeakOnes": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRows.entry3History": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRows.band3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bWeakRows.band5": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bQuarter21.phaseOfHead": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bQuarter21.payFromFour": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bQuarter21.paidFixed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bQuarter21.payAfterAdaptiveRun": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bQuarter21.paidAdaptive": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTail22.paysTwoTwoTen": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTail22.paysTwoTwoSixSix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bFixedWeakRepeat.repeatedDivisibility": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bFixedWeakRepeat.fixedPhysicalRepeat": [
+    "Quot.sound",
+    "propext"
+  ]
+}

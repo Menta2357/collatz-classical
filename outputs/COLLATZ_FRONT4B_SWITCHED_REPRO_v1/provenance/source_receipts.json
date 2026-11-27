@@ -1,0 +1,44 @@
+{
+  "CAPTURE/RECIBO.json": {
+    "parent_count": 100,
+    "artifacts": {
+      "Front4bSwitchedCapture.lean": "5839ba6343af936c8cc86355fe749124574d0dcef186e35da7bf5a69bd12c3c3",
+      "Front4bSwitchedCapture.olean": "e86e4f2312f1b67d263b55f5afdb7dcb55a20050225b65afad617508fea5d58d"
+    }
+  },
+  "PERIOD/RECIBO.json": {
+    "parent_count": 112,
+    "artifacts": {
+      "Front4bPeriodicWeakRepeat.lean": "6b8f6a7dc7b4617cfa8ae913d2d9f0b4ff3a6106cff902dca3664b94c6d10c7d",
+      "Front4bPeriodicWeakRepeat.olean": "cefac3cd5dde70ed70360fa6329449ef52e6aac33b379656187496f1fa9c2c85"
+    }
+  },
+  "PRICE/Front4bWeakPriceExit.receipt.json": {
+    "parent_count": 116,
+    "artifacts": {
+      "Front4bWeakPriceExit.lean": "95c8135faf6b66dd2a318e3723aabb0f2abba78e6ac027cf587aac21874fe80d",
+      "Front4bWeakPriceExit.olean": "ec06a7cf3f6a446ff5e59c9df96037eaffc1f39b69563beb7be03e8319cd6049"
+    }
+  },
+  "REALIZATION/RECIBO.json": {
+    "parent_count": 108,
+    "artifacts": {
+      "Front4bSwitchedRealization.lean": "303c3a6371b63c944dad1a57bd7741c3d23a50281fdc4a1c94dace76a3f1db09",
+      "Front4bSwitchedRealization.olean": "6597c54309f0bd061f9d216e24d3f735b6f934baf09b3ade5cf2db6b1c9c7881"
+    }
+  },
+  "REALIZATION/RECIBO_ROWS.json": {
+    "parent_count": 110,
+    "artifacts": {
+      "Front4bSwitchedRows.lean": "59d36dc772862ee9a8f2676dd2c157815ca194674f66bc36f7750b32639cbea7",
+      "Front4bSwitchedRows.olean": "678e0a7629ac665b182e30f321d8f74d7a652cc8ecaa6ce6b8c3aa75170a2bf2"
+    }
+  },
+  "SWITCH/Front4bSwitchReserve.receipt.json": {
+    "parent_count": 110,
+    "artifacts": {
+      "Front4bSwitchReserve.lean": "5d60cb51dbf8c54454cdf0da8d7efb5b66641422e96570a9e9b45533bb1149d8",
+      "Front4bSwitchReserve.olean": "db2c71a5fc57c0fbce14ae6ef2863462010753b91d82402b369f8f04f8136e4a"
+    }
+  }
+}

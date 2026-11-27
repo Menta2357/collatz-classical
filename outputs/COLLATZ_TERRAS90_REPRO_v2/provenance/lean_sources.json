@@ -1,0 +1,462 @@
+{
+  "roots": [
+    "Terras90PhysicalCertified",
+    "Terras90Final",
+    "Terras90SourceBridge",
+    "TerrasUniformFirstDescent"
+  ],
+  "modules": [
+    {
+      "module": "Terras2Q0Floors",
+      "path": "lean/Terras2Q0Floors.lean",
+      "sha256": "90aab6325f037fe75937c10cb77a1e5fadd08f1909c523a103a25ca27b60227e",
+      "imports": [
+        "TerrasLocalProfiles"
+      ]
+    },
+    {
+      "module": "Terras88",
+      "path": "lean/Terras88.lean",
+      "sha256": "b47e422f455e187affd8b9cb27f7d809d5da235fac54239e23abb5f91ba54182",
+      "imports": [
+        "TerrasClock",
+        "TerrasValleyExtraction"
+      ]
+    },
+    {
+      "module": "Terras89",
+      "path": "lean/Terras89.lean",
+      "sha256": "0d9ee6c4f05f376f6d6a14e8b92164fc53194ee88d449254b3a5c267153368db",
+      "imports": [
+        "Terras88"
+      ]
+    },
+    {
+      "module": "Terras90",
+      "path": "lean/Terras90.lean",
+      "sha256": "9139904a217ad8be2b832b5e519624fbc67f14723165e00286d4a2b14cebf6e6",
+      "imports": [
+        "Terras89"
+      ]
+    },
+    {
+      "module": "Terras90ClockSieve",
+      "path": "lean/Terras90ClockSieve.lean",
+      "sha256": "d1088e87f1accaac8056724d86aeba19aa417af8909fb49b4e59ce613bf7ba7d",
+      "imports": [
+        "Terras90ClockTable",
+        "Terras90Lattice"
+      ]
+    },
+    {
+      "module": "Terras90ClockTable",
+      "path": "lean/Terras90ClockTable.lean",
+      "sha256": "1eff56a0989c137fe9fa3a743a8ba0d9947976921f5d2e7b34d2f3bacf708147",
+      "imports": [
+        "Terras90LatticeData"
+      ]
+    },
+    {
+      "module": "Terras90Extension",
+      "path": "lean/Terras90Extension.lean",
+      "sha256": "b6a9672c009578ffd0bc82b844362b4804a89893547f8c27fc7d7d6de838674e",
+      "imports": [
+        "Terras90"
+      ]
+    },
+    {
+      "module": "Terras90Final",
+      "path": "lean/Terras90Final.lean",
+      "sha256": "7c2e00bc60406dd87e70b449898c85dc5c6e6e67f96f7cb90a0b1308661af8dc",
+      "imports": [
+        "Terras90FinalFloors",
+        "Terras90FinalNumeric",
+        "Terras90PhysicalCertified"
+      ]
+    },
+    {
+      "module": "Terras90FinalFloors",
+      "path": "lean/Terras90FinalFloors.lean",
+      "sha256": "34fb3c98addab387a98cfe6c850c1d8627c56671eab18174918b3637719e60eb",
+      "imports": [
+        "Terras90TwiceQ0"
+      ]
+    },
+    {
+      "module": "Terras90FinalNumeric",
+      "path": "lean/Terras90FinalNumeric.lean",
+      "sha256": "3f52954c024a3afb91d3a6d47fd1794d2ae922499c1aa2374726a545ab67a942",
+      "imports": [
+        "Terras90Q1Numeric"
+      ]
+    },
+    {
+      "module": "Terras90Hercher",
+      "path": "lean/Terras90Hercher.lean",
+      "sha256": "d5879c2b94f5462af3cc1fc08e060613087cbc41a8538d53a1705350c1251629",
+      "imports": [
+        "Terras90Final",
+        "TerrasCycleOfCrossing"
+      ]
+    },
+    {
+      "module": "Terras90IntegerFloors",
+      "path": "lean/Terras90IntegerFloors.lean",
+      "sha256": "63e6d36fb4b196d09c0a8319cf9f30ac5961b106c69148422dffa7cdbd58035c",
+      "imports": [
+        "Terras90LatticeData"
+      ]
+    },
+    {
+      "module": "Terras90Lattice",
+      "path": "lean/Terras90Lattice.lean",
+      "sha256": "015215938295d0081ca259c503b30dcda532d1f60fb7e1256bb2c0011b37040d",
+      "imports": [
+        "Terras90LatticeData"
+      ]
+    },
+    {
+      "module": "Terras90LatticeData",
+      "path": "lean/Terras90LatticeData.lean",
+      "sha256": "9d72e9bdd4c7f256456a6cd56e7368fc6b429f3ca3385e6fa86d8ee841e89347",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "Terras90LogBrackets",
+      "path": "lean/Terras90LogBrackets.lean",
+      "sha256": "89aa1d46762098e84e7ffaf4c2d043bbb8096e1c077f138e3740398e5b1e6086",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Terras90IntegerFloors"
+      ]
+    },
+    {
+      "module": "Terras90PhysicalAdmission",
+      "path": "lean/Terras90PhysicalAdmission.lean",
+      "sha256": "128a7369a1cd36d008defd97338dad28d54f61e828fd385a43a329cfbb7462e0",
+      "imports": [
+        "Terras90ClockSieve",
+        "Terras90PhysicalCutoff",
+        "Terras90Reciprocal",
+        "Terras90TwiceQ0",
+        "TerrasOrdinaryRank"
+      ]
+    },
+    {
+      "module": "Terras90PhysicalCertified",
+      "path": "lean/Terras90PhysicalCertified.lean",
+      "sha256": "520e1fe5f5ea85aa641bf1d4ae8916b33c02ead2a4206f388b24c90e1027c66f",
+      "imports": [
+        "Terras90LogBrackets",
+        "Terras90PhysicalAdmission"
+      ]
+    },
+    {
+      "module": "Terras90PhysicalCutoff",
+      "path": "lean/Terras90PhysicalCutoff.lean",
+      "sha256": "9edd4973eb82f2906c01d1b22e3035745841ad3574133a78e26799ae3734cb64",
+      "imports": [
+        "Terras90ClockTable",
+        "Terras90PhysicalGap"
+      ]
+    },
+    {
+      "module": "Terras90PhysicalGap",
+      "path": "lean/Terras90PhysicalGap.lean",
+      "sha256": "fdb1c3d0707fd55bed234af835d4fa3b1936e1e552c4a051959103620642041b",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Terras90Lattice",
+        "TerrasDisplacement"
+      ]
+    },
+    {
+      "module": "Terras90PublishedCapacity",
+      "path": "lean/Terras90PublishedCapacity.lean",
+      "sha256": "ee32a53ebe3e5ff913ddfea2a9010c62789a68d09c0d953a2ea07a13d1b58caa",
+      "imports": [
+        "Terras90Extension"
+      ]
+    },
+    {
+      "module": "Terras90Q0PhysicalPrice",
+      "path": "lean/Terras90Q0PhysicalPrice.lean",
+      "sha256": "5b3195ea4bacc58c97d4de901d18ac5a93f46ca30fcb35a999f9293648ce5c35",
+      "imports": [
+        "Terras90",
+        "Terras90Q0Ratio"
+      ]
+    },
+    {
+      "module": "Terras90Q0Price",
+      "path": "lean/Terras90Q0Price.lean",
+      "sha256": "e0b7904770408c7fd0e8f31a7c5cacb9509441bd554415cf3159dd940fea2c24",
+      "imports": [
+        "Terras88"
+      ]
+    },
+    {
+      "module": "Terras90Q0Ratio",
+      "path": "lean/Terras90Q0Ratio.lean",
+      "sha256": "820af2a3c5beaf329949394a23512943fac2ca7634b77c912d95d3938a129b40",
+      "imports": [
+        "Terras90Q0Price"
+      ]
+    },
+    {
+      "module": "Terras90Q1Numeric",
+      "path": "lean/Terras90Q1Numeric.lean",
+      "sha256": "8c8b7823a5ad103777f1209c4364090310ca734a3e4f94a1d5b32c0c7ec6d9aa",
+      "imports": [
+        "Terras90Q0Ratio"
+      ]
+    },
+    {
+      "module": "Terras90RankAssembly",
+      "path": "lean/Terras90RankAssembly.lean",
+      "sha256": "bbb63a0382647f2a81b9de65837b826af881d022b30d77e39025ce3db93a1288",
+      "imports": [
+        "Terras90",
+        "Terras90Q0PhysicalPrice",
+        "TerrasLocalProfiles"
+      ]
+    },
+    {
+      "module": "Terras90Reciprocal",
+      "path": "lean/Terras90Reciprocal.lean",
+      "sha256": "01a2814288bb175ab88062bc21f602f02270158a0512308268c528072d7e9df2",
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Data.Real.Basic",
+        "Terras90ClockTable"
+      ]
+    },
+    {
+      "module": "Terras90SourceBridge",
+      "path": "lean/Terras90SourceBridge.lean",
+      "sha256": "2ab7b75dfe8905a7b5c278a7bc6325e9b5e9d589a2b370051692f752d95a875f",
+      "imports": [
+        "Terras90Hercher",
+        "Terras90PublishedCapacity",
+        "Terras90WeaverEvidence"
+      ]
+    },
+    {
+      "module": "Terras90TwiceQ0",
+      "path": "lean/Terras90TwiceQ0.lean",
+      "sha256": "8af39f27f6e3053682d6aa50bc5c0c2e697bd5aea03e94ef48ec942a0f3630dc",
+      "imports": [
+        "Terras2Q0Floors",
+        "Terras90TwiceQ0Numeric",
+        "WeaverWindows90"
+      ]
+    },
+    {
+      "module": "Terras90TwiceQ0Numeric",
+      "path": "lean/Terras90TwiceQ0Numeric.lean",
+      "sha256": "cec3fd434d01b8b9afcb3d236aa4afe5cd5677d903be5d7640661a43eef81e47",
+      "imports": [
+        "Terras90Q0Ratio"
+      ]
+    },
+    {
+      "module": "Terras90UniformCutoff",
+      "path": "lean/Terras90UniformCutoff.lean",
+      "sha256": "3e1836a354e389d45255c994924820bc7f44078fd9afd03aadbe1fac4d37f62a",
+      "imports": [
+        "Terras90PhysicalCutoff",
+        "Terras90UniformGap"
+      ]
+    },
+    {
+      "module": "Terras90UniformGap",
+      "path": "lean/Terras90UniformGap.lean",
+      "sha256": "ea380c690760baa487b78f8bc1525d3eda27b1bfc52db8b237ee7b7a099def79",
+      "imports": [
+        "Terras90PhysicalGap"
+      ]
+    },
+    {
+      "module": "Terras90UniformReciprocal",
+      "path": "lean/Terras90UniformReciprocal.lean",
+      "sha256": "b1a5def5005e887b0c610341686c716efd11e40449dfe4aefbdd149a2428fb22",
+      "imports": [
+        "Terras90Reciprocal"
+      ]
+    },
+    {
+      "module": "Terras90WeaverEvidence",
+      "path": "lean/Terras90WeaverEvidence.lean",
+      "sha256": "c7e512abfbbfb8403955a5b61000a2a2ae4fe6688f40d1fe298c110b0d36c9d1",
+      "imports": [
+        "TerrasCuts"
+      ]
+    },
+    {
+      "module": "TerrasCapacityAbsorption",
+      "path": "lean/TerrasCapacityAbsorption.lean",
+      "sha256": "dd5170d18a1febb47b4438ddeb38569104a2fe4c24830d9ba24e4a840483fb24",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "TerrasClock",
+      "path": "lean/TerrasClock.lean",
+      "sha256": "ca487074c1ca709164295907d7a8bd110283a47014a67f8c351f2b42de6690d2",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "TerrasCuts",
+      "path": "lean/TerrasCuts.lean",
+      "sha256": "a9b75e72182981fc6dd2fac58cfd2f318eec207bde02dcd2a462cee3378dad17",
+      "imports": [
+        "Terras90",
+        "TerrasCapacityAbsorption"
+      ]
+    },
+    {
+      "module": "TerrasCycleOfCrossing",
+      "path": "lean/TerrasCycleOfCrossing.lean",
+      "sha256": "db8ffabc73f9eb5a435e41c32665f77951afe7a2709136a1b1f21c2f3788614a",
+      "imports": [
+        "TerrasDisplacement"
+      ]
+    },
+    {
+      "module": "TerrasDisplacement",
+      "path": "lean/TerrasDisplacement.lean",
+      "sha256": "347de5785dbcf52918103b8c929913de6a97694fdb2be89009b0f9ee66fa54c3",
+      "imports": [
+        "Terras90RankAssembly"
+      ]
+    },
+    {
+      "module": "TerrasDisplacementFloors",
+      "path": "lean/TerrasDisplacementFloors.lean",
+      "sha256": "bb2bd4427fd3e1da248ee67423f5fc3aac972946ad008deb75ffe772e9cdd661",
+      "imports": [
+        "TerrasDisplacement"
+      ]
+    },
+    {
+      "module": "TerrasLocalProfiles",
+      "path": "lean/TerrasLocalProfiles.lean",
+      "sha256": "900ffdc84fa5f9d54625a0bb720a8b884e4daa9fc340176402cf10e5d0d06e7c",
+      "imports": [
+        "Terras90Extension",
+        "TerrasCuts"
+      ]
+    },
+    {
+      "module": "TerrasOrdinaryLocal",
+      "path": "lean/TerrasOrdinaryLocal.lean",
+      "sha256": "828c3458a7ee9aab8cf2587a2270b5c0de5c68c8c954160433b5369ed2340d21",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "TerrasLocalProfiles"
+      ]
+    },
+    {
+      "module": "TerrasOrdinaryRank",
+      "path": "lean/TerrasOrdinaryRank.lean",
+      "sha256": "92a5180ae3699494892dd7aed9decaf35f1efefafb35446b15e6d81fb14d7e74",
+      "imports": [
+        "Terras90ClockTable",
+        "Terras90Q0Price",
+        "TerrasOrdinaryLocal"
+      ]
+    },
+    {
+      "module": "TerrasQ1Floors",
+      "path": "lean/TerrasQ1Floors.lean",
+      "sha256": "6e90a2da7007ee7da829f69595179f2ea6f01acbefb55fada09323a95587745d",
+      "imports": [
+        "TerrasLocalProfiles"
+      ]
+    },
+    {
+      "module": "TerrasUniformFirstDescent",
+      "path": "lean/TerrasUniformFirstDescent.lean",
+      "sha256": "3d49576195fe67156d01458326cf3b387968cf92a26150b07a5d0348752ecdf0",
+      "imports": [
+        "Terras90SourceBridge",
+        "Terras90UniformCutoff",
+        "Terras90UniformReciprocal",
+        "TerrasUniformProducts",
+        "TerrasUniformRanks"
+      ]
+    },
+    {
+      "module": "TerrasUniformProducts",
+      "path": "lean/TerrasUniformProducts.lean",
+      "sha256": "a10ad09031b5d44951a32299fcbc423324b3c9cc8996739bb7b0e8bb30492c79",
+      "imports": [
+        "Terras90FinalFloors",
+        "Terras90FinalNumeric",
+        "Terras90TwiceQ0Numeric",
+        "TerrasUniformSix",
+        "WeaverWindows90"
+      ]
+    },
+    {
+      "module": "TerrasUniformRanks",
+      "path": "lean/TerrasUniformRanks.lean",
+      "sha256": "e5b22c42afa1ecefb6419959f0b364a7a538ba0cdfd86553c229df221cee5464",
+      "imports": [
+        "TerrasOrdinaryRank"
+      ]
+    },
+    {
+      "module": "TerrasUniformSix",
+      "path": "lean/TerrasUniformSix.lean",
+      "sha256": "77dfe3958dd0a85010edab530cb615017a2f1ffc7158fd07920d726e3e375545",
+      "imports": [
+        "TerrasLocalProfiles"
+      ]
+    },
+    {
+      "module": "TerrasValleyExtraction",
+      "path": "lean/TerrasValleyExtraction.lean",
+      "sha256": "bedd8c7d537448b0867ddba9331ba112136b48f435a13391f1972ebeb2d419f6",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "WeaverWindows90",
+      "path": "lean/WeaverWindows90.lean",
+      "sha256": "fc54be737b0dd7cf7edf9822b8fb43e91160d42009f3513dcc3fdfa067efc009",
+      "imports": [
+        "Terras90ClockSieve",
+        "Terras90Q1Numeric",
+        "TerrasDisplacementFloors",
+        "TerrasQ1Floors",
+        "WeaverWindows90Base"
+      ]
+    },
+    {
+      "module": "WeaverWindows90Base",
+      "path": "lean/WeaverWindows90Base.lean",
+      "sha256": "d0fa0216d2e575ba93760df55b4d95250821df647011a2a7335e324eddd35a53",
+      "imports": [
+        "TerrasDisplacement"
+      ]
+    }
+  ]
+}

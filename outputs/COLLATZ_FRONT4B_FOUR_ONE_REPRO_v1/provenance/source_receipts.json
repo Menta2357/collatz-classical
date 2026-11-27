@@ -1,0 +1,44 @@
+{
+  "Front4bOneTwoRenewal": {
+    "artifact_sha256": {
+      "Front4bOneTwoRenewal.lean": "82f950ae864d3197902b95e5dcbbbcb541765e5dd6ce38fa719e5743daeb540a",
+      "Front4bOneTwoRenewal.olean": "fba08e3a8c5b041843d78617b9cf95320f9aa462664474035323adf56d7ca35f"
+    },
+    "verified_local_parent_files": 138
+  },
+  "Front4bAfterOneBarrier": {
+    "artifact_sha256": {
+      "Front4bAfterOneBarrier.lean": "47057df27d2da471df3f1819e32493f899a702a19283619327769cfbd15b55c1",
+      "Front4bAfterOneBarrier.olean": "692d1f8be683c64f1361fce56798f442a27f6f1a8d78895379a84f279cbd9b55"
+    },
+    "verified_local_parent_files": 138
+  },
+  "Front4bFourShortRank": {
+    "artifact_sha256": {
+      "Front4bFourShortRank.lean": "78acf91298592e4a9c0c98c3fc0988a7dd5f907728386f53b980c7fb64a7bfd3",
+      "Front4bFourShortRank.olean": "ed459716182ed4d26fa1ae6e00ffe1262a3921e3710d9439b4be202fb56a2c57"
+    },
+    "verified_local_parent_files": 123
+  },
+  "Front4bFourShortCrossing": {
+    "artifact_sha256": {
+      "Front4bFourShortCrossing.lean": "a809c35ca17ba1a472534cce607af9422f98ea77cbe04ccb391704129ee930d1",
+      "Front4bFourShortCrossing.olean": "7f909b7ee4fcbc95d22d490413f99a1e140bd8f533e804a9a69447c1360649cf"
+    },
+    "verified_local_parent_files": 125
+  },
+  "Front4bExitFourR01": {
+    "artifact_sha256": {
+      "Front4bExitFourR01.lean": "65be2f0bc821db3802dfd1b25296d1af32b45a06d9f9bc63cd53fb134bf12498",
+      "Front4bExitFourR01.olean": "2682680d50176d4bc834c3dde94d3757c5c459ea620ec9b186b9f6f8aa639238"
+    },
+    "verified_local_parent_files": 132
+  },
+  "Front4bShortR2Three": {
+    "artifact_sha256": {
+      "Front4bShortR2Three.lean": "87021f4604bd52fb12d9719691f14207bd284406199b016f0dba6dee3cdacb1a",
+      "Front4bShortR2Three.olean": "89125e8f2c8df2955bef5574c4943a393f5f04b1a7d9c07bbb0d22ad6ef7f90e"
+    },
+    "verified_local_parent_files": 132
+  }
+}

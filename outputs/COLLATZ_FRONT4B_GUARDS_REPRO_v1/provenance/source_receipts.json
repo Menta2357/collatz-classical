@@ -1,0 +1,44 @@
+{
+  "E1/RECIBO.json": {
+    "parent_count": 88,
+    "artifacts": {
+      "Front4bE1.lean": "b725c10e1793ae760295364501639039fa407678903c6e0a9bd26c424210bb39",
+      "Front4bE1.olean": "794902c82cc6848ad721fd93eb490b0b2c78be62a92b9758e74c039bc1e0c131"
+    }
+  },
+  "E2/RECIBO.json": {
+    "parent_count": 94,
+    "artifacts": {
+      "Front4bWeakTwo.lean": "3c99ae953ef1be7ec6c56f0d2fac350f01cd160c82d4048df66da947ecafe20a",
+      "Front4bWeakTwo.olean": "5b32a489cdc855f75610d856bb0d50f810e7f992daceca705a4fdc7bfa97a52c"
+    }
+  },
+  "E2/RECIBO_RESIDUES.json": {
+    "parent_count": 96,
+    "artifacts": {
+      "Front4bWeakTwoResidues.lean": "66f8ced3c7a5ebcd5b93a810a3cbd5821ba9e0dc87072df08e5f1425c264181e",
+      "Front4bWeakTwoResidues.olean": "cd052a3a68cac2a16aee38f0ff31fc56eafe45573f745878c9a0e6ef02f46ef3"
+    }
+  },
+  "TAIL/RECIBO.json": {
+    "parent_count": 92,
+    "artifacts": {
+      "Front4bQuarterTail.lean": "09a1b66c7fa79d769d9c7f5a98f0eb94fb0ecb223098d423115e9a1aa2ca9230",
+      "Front4bQuarterTail.olean": "ffce91de58355801eb9182d924b98cf1954c1f273018e7730df7fbc9173de119"
+    }
+  },
+  "CHECK/Front4bGuardRank.receipt.json": {
+    "parent_count": 100,
+    "artifacts": {
+      "Front4bGuardRank.lean": "5f0d080dfdc48bb8600a6ac686a6e372d98891455ef286413593f06859a36093",
+      "Front4bGuardRank.olean": "bcd75938d96a81d02048a00fc554db00cac095789bcd931c833f1fb004b1a38b"
+    }
+  },
+  "CHECK/Front4bGuardRun.receipt.json": {
+    "parent_count": 96,
+    "artifacts": {
+      "Front4bGuardRun.lean": "34ea4c06db96c38f88e87ef5e286ccaccca6b666a4aba1ef033302c262ba99b7",
+      "Front4bGuardRun.olean": "acaa0e05b038826e2a92db389009db288ceb61cb274e33efb3d316a4ae58a2fd"
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "Terras90Physical.admissionWithRhin": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Physical.sevenClocksWithRhin": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90TwiceQ0.removeFromResidual": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Final.excludesResidual": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Final.noPositiveShift90": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Final.firstDescentAtMost90": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90FinalNumeric.rowsLiteral": [],
+  "Terras90FinalNumeric.floorsLength": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90FinalNumeric.productStrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.LeastReturn.indexInjective": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.cycleLocalMinima_eq_valleyTimes": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.cycleOfFirstCrossingReturn": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.noEqualOfAtMost91": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.noEqual88": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90Hercher.noEqual90": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.completePrefix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.existsCompletion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.completionUnique": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.completedBound_iff_prefixBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.guardedCofactor": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.cofactorSound": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.guardedPrefixBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.sixRunCapacities": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.fiveOfSix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90PublishedCapacity.fiveAndSixRunCapacities": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90WeaverEvidence.queryOfWindow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90WeaverEvidence.noWindow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90SourceBridge.rhinBoundOfPrinted": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90SourceBridge.firstDescentAtExactly90": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90SourceBridge.firstDescentAtMost90": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformRanks.geom_mono": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformRanks.ordinarySourceBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformRanks.ordinaryRankBoundOfCount": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformRanks.ordinaryRankBoundOfSorted": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformSix.capacitySixAbsorptionUpTo": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformSix.capacitySixMonoLong": [
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformSix.rankFloorAtClock": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformSix.rankFloorOfSix": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformGap.sortedLengthEq": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformGap.discountedGap": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformGap.gapTimesSeed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformGap.gapStrip": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformCutoff.oddCutoff": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Terras90UniformReciprocal.ordinaryReciprocalBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformProducts.q0Window": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformProducts.q1WindowOfStrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformProducts.noShiftOfFloor": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformProducts.excludesPositiveInRange": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformFirstDescent.admissionOfPhysicalRange": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "TerrasUniformFirstDescent.firstDescentAtMost90FromWeaver": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

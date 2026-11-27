@@ -1,0 +1,13 @@
+{
+  "all_starts_below_record_coverage_replayed": false,
+  "clock": [
+    630118245525664765,
+    397560349370386783
+  ],
+  "confirmed_record_seed": 46645791847966786687,
+  "literal_ordinary_delay_at_record": 2480,
+  "rank_11_H92_slack": "1081288367886673.4684775424003235789",
+  "rank_12_H146_slack": "583690263533639.44790906957142214724",
+  "runs": 91,
+  "strict_gap_minus_reciprocal": "3.5666337386489414424052509874344032E-20"
+}

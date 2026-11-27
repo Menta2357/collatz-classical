@@ -1,0 +1,159 @@
+{
+  "CollatzCharacterBridge.Front4bSmallSource.toSegment": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.preserve": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.band3": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.band5": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.acrossTrace": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.band3Trace": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSmallSource.band5Trace": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTernarySwitch.afterOne": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTernarySwitch.afterTwo": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTernarySwitch.ternaryHistory": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bTernarySwitch.changeCanGrow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicCapture.sourceDepth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicCapture.noOnlyOnesAfterTwo": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicCapture.oneBreakGuard": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicCapture.affinePaidSubprogression": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.shiftFiveMinimal": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.budgetForWord": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.shiftedBook": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.reentryBound": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.originalReentryBound": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedEnvelope.noOversizedReentry": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.minimalRatio": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.optimalAtEpisode": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.optimalForWord": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.originalOptimalReentry": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.twoOneCharge": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.twoTwoNoCharge": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bSwitchedOptimal.twoOneResetPhase": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.modeResidue": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.chargeAtSwitch": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.chargeOfCompletedRun": [
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.prefixBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.completedRunBound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.noUnboundedExcess": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.noOverlongCompletedRuns": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "CollatzCharacterBridge.Front4bAperiodicAudit.noCommonAffineCharge": [
+    "Quot.sound",
+    "propext"
+  ]
+}
