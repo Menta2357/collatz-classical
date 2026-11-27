@@ -1,0 +1,44 @@
+{
+  "SMALL/Front4bSmallSource.receipt.json": {
+    "parent_count": 118,
+    "artifacts": {
+      "Front4bSmallSource.lean": "4749c61c0018bc52c765a066585124cf2d4e41633b299c913ef2451de899ed89",
+      "Front4bSmallSource.olean": "d9419ef3782e7ffe6d114920dee138c050d2343af58de81549fe3928a8dfdb57"
+    }
+  },
+  "TERNARY/Front4bTernarySwitch.receipt.json": {
+    "parent_count": 118,
+    "artifacts": {
+      "Front4bTernarySwitch.lean": "17de86df0cf63ea5f57653ac1ec71c45668407662a48f57d2bdbcb9f4b9c0031",
+      "Front4bTernarySwitch.olean": "2349fd0a34e43a94c752fae8f8ca8ee141250165173e978580583caa52d4ac33"
+    }
+  },
+  "CAPTURE/RECIBO.json": {
+    "parent_count": 126,
+    "artifacts": {
+      "Front4bAperiodicCapture.lean": "fa4816bdf741f2a293bdb523f6c95c5cfb3294656c1630298be7ab813fd5154b",
+      "Front4bAperiodicCapture.olean": "4bab361730872970cee16e8edac367c8c5cd102c6b298cd41ece9195bb848f99"
+    }
+  },
+  "ARITH/RECIBO.json": {
+    "parent_count": 114,
+    "artifacts": {
+      "Front4bSwitchedEnvelope.lean": "613d98d4a32a8f1e20da41edba758e653376a0495c3bf5b08c214ee7e0142da7",
+      "Front4bSwitchedEnvelope.olean": "1213a636203eb53abeacbdbabb3dd6796689f01d3379376befebb8bfc463f2ef"
+    }
+  },
+  "ARITH/RECIBO_OPTIMAL.json": {
+    "parent_count": 116,
+    "artifacts": {
+      "Front4bSwitchedOptimal.lean": "1952fe26e215d2edaf6186273407d19a826a8abf387eaa75fb31d04dc0326699",
+      "Front4bSwitchedOptimal.olean": "cbf55053183692313a0af744e977b90b1d90ab197554196fe3bc5075bedfe27f"
+    }
+  },
+  "AUDIT/RECIBO.json": {
+    "parent_count": 114,
+    "artifacts": {
+      "Front4bAperiodicAudit.lean": "9086796bd8c1ce071ac159f9c339de642c2a01d15757be84406e5243a940aee1",
+      "Front4bAperiodicAudit.olean": "ffd2094c6305a7a6e02ebfacf0ee62d235d4de888fe99c382dd3ff25cc091f44"
+    }
+  }
+}

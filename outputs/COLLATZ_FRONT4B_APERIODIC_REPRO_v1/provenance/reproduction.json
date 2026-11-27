@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "toolchain": "Lean 4.21.0",
+  "build": "Clean temporary output, frozen source SHA-256, one Lean thread per source, up to two independent builds in parallel",
+  "project_modules": 69,
+  "audited_declarations": 36,
+  "observed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "checks": {
+    "paper/check_envelope.py": "PASS, normal and optimized; five directed exact words",
+    "paper/check_sources_and_ternary.py": "PASS, normal and optimized; two exhausted inverse chains and ternary-switch witnesses, plus one exact separated-repeat witness",
+    "paper/check_capture.py": "PASS, normal and optimized; twelve directed refinements and two materialized paid sources"
+  }
+}
