@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "lean": "4.21.0",
+  "project_modules": 86,
+  "audited_declarations": 105,
+  "new_audited_declarations": 31,
+  "inherited_audited_declarations": 74,
+  "standard_axioms_only": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build": "Clean temporary output, one Lean thread per source, three independent compilation slots",
+  "independent_replays": {
+    "paper/check_renewals.py": "12 exact traces in both modes, including both verified ChatGPT examples",
+    "paper/check_row3_r01.py": "3 exact progressions and unresolved phases, normal and optimized",
+    "paper/check_row3_r2.py": "33 directed traces, normal and optimized",
+    "paper/check_row5.py": "10 cases including two main progressions and eight weak phases; byte-identical JSON"
+  }
+}
