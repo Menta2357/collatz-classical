@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "external_universal_bounds": {
+    "B7(100)_upper": 156,
+    "B5(229)": 254
+  },
+  "H92_D6_upper": 156,
+  "H146_D6_upper_a1_at_most_123": 377,
+  "H146_limit": 377,
+  "H146_long_first_rise": {
+    "minimum_a1": 124,
+    "maximum_a1": 145,
+    "cofactors_checked": 4194303,
+    "counts_by_a1": [
+      2097152,
+      1048576,
+      524288,
+      262144,
+      131072,
+      65536,
+      32768,
+      16384,
+      8192,
+      4096,
+      2048,
+      1024,
+      512,
+      256,
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+    ],
+    "maximum_D6": 166,
+    "minimum_cofactor_at_maximum": 3798656,
+    "witness_rises": [
+      131,
+      13,
+      1,
+      15,
+      4,
+      2
+    ]
+  },
+  "direct_replay_controls": 5
+}
