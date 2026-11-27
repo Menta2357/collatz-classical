@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "witnesses": {
+    "public": {
+      "t": 175094053,
+      "u": 5603009714,
+      "N": 7102658628193059534780114582476091280511,
+      "book": [
+        85,
+        129,
+        278494448288432869329185530758089506552883
+      ],
+      "start_positions": [
+        0,
+        3
+      ],
+      "repeated_word": [
+        [
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "terminal_run_lengths": [
+        2,
+        2
+      ],
+      "cofactor_difference": 12822431703548523903150832350144122249216,
+      "required_dyadic_exponent": 12,
+      "actual_dyadic_exponent": 13
+    },
+    "same_ending_b1": {
+      "t": 112933,
+      "u": 3613874,
+      "N": 4581130701608773473784880579051244671,
+      "book": [
+        77,
+        118,
+        42029149192825091688811104198754209107
+      ],
+      "start_positions": [
+        0,
+        2
+      ],
+      "repeated_word": [
+        [
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "terminal_run_lengths": [
+        2,
+        2
+      ],
+      "cofactor_difference": 2563539867339280847922612173591657280,
+      "required_dyadic_exponent": 6,
+      "actual_dyadic_exponent": 6
+    },
+    "same_ending_b2": {
+      "t": 290201,
+      "u": 9286450,
+      "N": 11771975072849022099209443260990213247,
+      "book": [
+        77,
+        119,
+        42988588296716230306545504973587909971
+      ],
+      "start_positions": [
+        0,
+        2
+      ],
+      "repeated_word": [
+        [
+          1,
+          1,
+          2,
+          2
+        ]
+      ],
+      "terminal_run_lengths": [
+        2,
+        2
+      ],
+      "cofactor_difference": 6587440826775582509681159670146323328,
+      "required_dyadic_exponent": 7,
+      "actual_dyadic_exponent": 7
+    },
+    "different_endings": {
+      "t": 71429,
+      "u": 2285746,
+      "N": 2897528445228855615233867144301628543,
+      "book": [
+        78,
+        119,
+        125434516248514520492145602682863200249
+      ],
+      "start_positions": [
+        0,
+        2
+      ],
+      "repeated_word": [
+        [
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "terminal_run_lengths": [
+        3,
+        2
+      ],
+      "cofactor_difference": 2800027570525240830316040747592236640,
+      "required_dyadic_exponent": 5,
+      "actual_dyadic_exponent": 5
+    }
+  }
+}

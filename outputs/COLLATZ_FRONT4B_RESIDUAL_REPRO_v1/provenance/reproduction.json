@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "lean": "4.21.0",
+  "project_modules": 74,
+  "audited_declarations": 51,
+  "new_audited_declarations": 15,
+  "inherited_audited_declarations": 36,
+  "standard_axioms_only": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build": "Clean temporary output, one Lean thread per compilation, three independent compilation slots",
+  "arithmetic_replays": {
+    "paper/check_witnesses.py": "three exact physical witnesses, normal and optimized",
+    "paper/check_separation.py": "four exact physical witnesses and byte-identical JSON",
+    "paper/check_multisource.py": "both modes, 32 affine boundary targets and late substitutions"
+  }
+}
